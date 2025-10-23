@@ -49,6 +49,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-10 | Kapittel 1--3 | FERDIG – Kartla tomrom i første tre kapitler og utvidet manus med historiske milepæler, politiske rammer, sirkulærøkonomi og nye caser før fagfelleløp. | `chapters/kapittel01-introduksjon.tex`, `chapters/kapittel02-systemtenkning.tex`, `chapters/kapittel03-data.tex`, `plan.md`, `support/referanser.bib`, `support/figurer/metadata/*` |
 | DT-APP-10 | Appendiks | FERDIG – Arbeidsark, lærerveiledning og ordliste oppdatert for å støtte fagfelleklarering og prosjektarbeid. | `chapters/appendiks.tex`, `support/larerveiledning.tex`, `support/ordliste.tex`, `plan.md`, `support/fagfellelogg.csv` |
 | DT-OPS-03 | Kvalitetssikring | FERDIG – Automatiserte LaTeX-kompileringstester i pytest slik at manus bygges og feiler ved faktiske kompilasjonsfeil. | `tests/test_latex_referanser.py` |
 | DT-04 | Kapittel 4 | FERDIG – Kartlagt figurbehov, opprettet metadata og fagfellepakke for simulering og analyse. | `support/illustrasjonsplan.md`, `support/figurer/metadata/kap04-*.alt.md`, `support/notater/kap04-fagfellepakke.md` |

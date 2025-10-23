@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=LaTeX, milestone/.style={circle, draw=petrol, fill=white, thick, minimum size=0.7cm}, label/.style={align=center, text width=3.5cm}]
+    \draw[thick, dypblaa, -{Latex[length=3mm]}] (0,0) -- (13,0);
+    \node[milestone] (apollo) at (1,0) {1969};
+    \node[label, above=0.6cm of apollo] {NASA simulerer Apollo-moduler for operasjonell beredskap\citep{glaessgen2012digital}};
+    \node[milestone] (plm) at (4,0) {2002};
+    \node[label, below=0.6cm of plm] {Grieves introduserer digital tvilling i PLM-litteraturen\citep{grieves2017digital}};
+    \node[milestone, fill=solgul!40, draw=solgul!80!black] (nasa) at (6.5,0) {2012};
+    \node[label, above=0.6cm of nasa] {NASA formaliserer digital tvilling-strategien for romfart\citep{glaessgen2012digital}};
+    \node[milestone] (industry) at (8.5,0) {2017};
+    \node[label, below=0.6cm of industry] {Equinor lanserer tvilling for Johan Sverdrup-feltet\citep{equinor2021johansverdrup}};
+    \node[milestone] (standard) at (10.5,0) {2021};
+    \node[label, above=0.6cm of standard] {DNV utgir anbefalt praksis for digitale tvillinger\citep{dnv2021rp}};
+    \node[milestone] (city) at (12.5,0) {2024};
+    \node[label, below=0.6cm of city] {Trondheim tester bytvilling for mobilitet og klima\citep{trondheim2024bytvilling}};
+\end{tikzpicture}
