@@ -9,7 +9,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | --- | -------- | ------ | ---------- |
 | I | Kapittel 1 | Helhetlig tekst med historikk, begreper, økosystem og verdiskaping. | Planlegg fagfellelesing og oppdater kildehenvisninger til de norske eksemplene. |
 | I | Kapittel 2 | Helhetlig utkast som beskriver systemkart, modelleringsparadigmer og kalibrering. | Produser ferdige figurer av systemkartene og kvalitetssikre referanser til standarder og verktøy. |
-| I | Kapittel 3 | Helhetlig utkast med dataflyt, integrasjonsarkitektur og øvinger. | Samordne fagfellelesing og ferdigstille resterende illustrasjoner; datapipeline-versjon 2 er klar med registrert alt-tekst. |
+| I | Kapittel 3 | Helhetlig utkast med dataflyt, integrasjonsarkitektur og øvinger. | Koordiner fagfelleinnspill (DI-03) og ferdigstille gjenværende illustrasjoner; datapipeline-versjon 2 deles med grafikkteam via `support/figurer/metadata/kap03-datapipeline-v2.alt.md`. |
 | II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
 | II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering og dataassimilering. | Samle utfyllende referanser og koordinere fagfellelesing; vurderingskriterier og algoritmematrise er beskrevet i Seksjon~«Vurderingskriterier for AI-drevne tvillinger». |
 | II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet og etikk. | Verifiser standardhenvisninger og vurder om kapitlet trenger støttediagrammer. |
@@ -39,7 +39,8 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 3. **Kapittel 3 – Data, integrasjon og infrastruktur**
    - Status: Helhetlig tekst med dataflyt, integrasjonsmønstre, figur og øvinger.
    - Læringsmål: Forstå dataflyt, integrasjonsmønstre og plattformvalg.
-   - Forfatteroppgaver (neste steg): Forberede fagfellelesing og beslutte hvilke illustrasjoner som skal ferdigstilles for publisering.
+   - Forfatteroppgaver (neste steg): Forberede fagfellelesing, dele datapipeline-figur versjon 2 med grafikkteamet og bruke delingsnotatet `support/notater/datastyringsforum-di03.md` til å svare ut DI-03.
+   - Notat: Alt-tekst og metadata for figuren ligger i `support/figurer/metadata/kap03-datapipeline-v2.alt.md`, og tiltakene er synkronisert med `support/illustrasjonsplan.md`.
    - Studentaktivitet: Kartlegge data- og systemkrav for en case.
 
 ## Del II: Metodikk og verktøy
@@ -157,7 +158,7 @@ aene i boken.
 | Uke | Kapitler | Intern ansvarlig | Industriell fagfelle | Akademisk fagfelle | Leveranse |
 | --- | -------- | ---------------- | -------------------- | ------------------ | --------- |
 | 1 | Kapittel 1–2 | Ingrid Lunde (redaksjon) | Equinor – leder for digitale tvillinger | NTNU – førsteamanuensis i industriell digitalisering | Notat med begrepsavklaringer og caseutvidelser |
-| 2 | Kapittel 3–4 | Ahmed Solheim (teknisk redaktør) | Kongsberg Digital – produkteier for Kognitwin | SINTEF Digital – seniorforsker innen simulering | Sammendrag av datakvalitetskrav og illustrasjoner |
+| 2 | Kapittel 3–4 | Ahmed Solheim (teknisk redaktør) | Kongsberg Digital – produkteier for Kognitwin | SINTEF Digital – seniorforsker innen simulering | Sammendrag av datakvalitetskrav, datapipeline-figur v2 (med alt-tekst) og øvrige illustrasjoner |
 | 3 | Kapittel 5–6 | Nora Aas (AI-ansvarlig) | Cognite – principal data scientist | Universitetet i Stavanger – professor i modellbasert overvåking | Matrise for algoritmevalg, usikkerhet og etikk |
 | 4 | Kapittel 7–9 | Leif Ødegaard (programledelse) | Statnett – leder for digitaliseringsprogram | Universitetet i Agder – faggruppeleder i prosjektstyring | Tiltakslogg for governance, sektorcase og forskning |
 | 4 | Appendiks, ordliste, lærerveiledning | Astrid Hauge (støtteredaktør) | Aker Solutions – rådgiver for kompetanseprogram | OsloMet – universitolektor i profesjonsdidaktikk | Oppdatert ressursliste og terminologi |
