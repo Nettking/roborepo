@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Utvidet `instruksjoner.md` og `plan.md` med nye tematiske prioriteringer og forslag til innhold for dt-boken. (Agent)
 - `FERDIG` – Reorganiserte arbeidslisten til en kanban-struktur med oppgave-ID-er og etablerte `support/oppgavetavle.md` for å sikre bedre synlighet av ansvar og avhengigheter.
 - `FERDIG` – Etablerte `AGENTS.md` med arbeidsinstruksjoner for hele manusmappen og flyttet oppgaven fra `task_queue.md`.
 

@@ -29,10 +29,5 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 *(ingen oppgaver for øyeblikket – endre status til `PÅGÅR` i tabellen over når arbeid starter)*
 
-## Ferdige oppgaver
-
-- `FERDIG` – Etablerte kanban-basert arbeidsliste og støttefil `support/oppgavetavle.md` for å gjøre oppgavehistorikk og planlegging mer oversiktlig.
-- `FERDIG` – Etablerte `AGENTS.md` for manusmappen slik at arbeidsinstruksjonene følger agent-standarden.
-- `FERDIG` – Skill ferdige oppgaver i en egen fil. Se `completed_tasks.md` for full historikk.
 
 Se `completed_tasks.md` for hele historikken over ferdige oppgaver.
