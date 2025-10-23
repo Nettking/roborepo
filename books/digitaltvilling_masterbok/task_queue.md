@@ -26,12 +26,16 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 ## Pågår
 
-*(ingen oppgaver for øyeblikket – endre status til `PÅGÅR` i tabellen over når arbeid starter)*
+| ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger |
+| --- | --- | --- | --- | --- | --- |
+
+> Kompileringsforsøk for oppgave `DT-APP-10` (`latexmk -pdf -interaction=nonstopmode -output-directory=build books/digitaltvilling_masterbok/main.tex`) feilet: `command not found: latexmk`. Alternativt kall `pdflatex -interaction=nonstopmode -output-directory=build books/digitaltvilling_masterbok/main.tex` feilet også: `command not found: pdflatex`. Vurder installasjon av LaTeX-verktøy før neste kontroll.
 
 ## Ferdige oppgaver
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-APP-10 | Appendiks | FERDIG – Arbeidsark, lærerveiledning og ordliste oppdatert for å støtte fagfelleklarering og prosjektarbeid. | `chapters/appendiks.tex`, `support/larerveiledning.tex`, `support/ordliste.tex`, `plan.md`, `support/fagfellelogg.csv` |
 | DT-OPS-03 | Kvalitetssikring | FERDIG – Automatiserte LaTeX-kompileringstester i pytest slik at manus bygges og feiler ved faktiske kompilasjonsfeil. | `tests/test_latex_referanser.py` |
 | DT-04 | Kapittel 4 | FERDIG – Kartlagt figurbehov, opprettet metadata og fagfellepakke for simulering og analyse. | `support/illustrasjonsplan.md`, `support/figurer/metadata/kap04-*.alt.md`, `support/notater/kap04-fagfellepakke.md` |
 
