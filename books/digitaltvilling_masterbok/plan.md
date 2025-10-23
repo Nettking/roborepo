@@ -126,9 +126,24 @@ nsvarlig person.
 - Meld fra innen tirsdag samme uke dersom fristen ikke kan holdes, slik at varalister (inkluderer DNV og Høgskulen på Vestlande
 t) kan aktiveres.
 
+## Tiltaksplan for fagfelleinnspill
+
+Fagfellelogg i `support/fagfellelogg.csv` er oppdatert med konkrete tiltak, frister og ansvarlige redaktører. Tabellen under gir en redigert oversikt som brukes i de ukentlige innsjekkene.
+
+| Kommentar | Tema | Tiltak | Ansvarlig | Frist | Status |
+| --- | --- | --- | --- | --- | --- |
+| KT-01 | Begrepsavklaring | Ferdigstille definisjonsnotat og avklare terminologi med ordliste-teamet før utsending. | Ingrid Lunde | 15.05 | Under arbeid |
+| KT-02 | Caseforslag | Gjennomføre workshop 16.05 for å prioritere to nye case til kapittel 2 og oppdatere manusdisposisjon. | Ingrid Lunde | 17.05 | Under vurdering |
+| DI-03 | Dataflyt | Dokumentere datakvalitetskrav i delingsnotat og avstemme tekniske avhengigheter i kapittel 3. | Ahmed Solheim | 22.05 | Planlagt oppfølging |
+| AI-04 | Algoritmevalg | Utarbeide algoritmematrise med vurderingskriterier og skisse til caseoppgave. | Nora Aas | 24.05 | Planlagt oppfølging |
+| GV-05 | Governance-tiltak | Lage tiltakslogg for gevinstoppfølging og integrere KPI-er i kapittel 7. | Leif Ødegaard | 29.05 | Planlagt oppfølging |
+| ST-06 | Terminologi | Oppdatere ordliste med nye begrep og engelske ekvivalenter etter fagfelleinnspill. | Astrid Hauge | 31.05 | Planlagt oppfølging |
+
+Tiltaksplanen revideres i forkant av ukevis innsjekk, og statusfeltet speiles i fagfelleloggen. Når tiltak er levert, flyttes kommentarene til «Løst»-arkfane i loggfilen og refereres i kapitlenes endringslogg.
+
 ## Videre arbeid
 
-1. Følge opp fagfelleplanen ovenfor, inkludert å oppdatere fagfellelogg og sende ut påminnelser to dager før levering.
+1. Følge opp fagfelleplanen og tiltaksoversikten ovenfor, inkludert å oppdatere fagfellelogg og sende ut påminnelser to dager før levering.
 2. Implementere illustrasjons- og grafikkplanen i `support/illustrasjonsplan.md` og koordinere produksjonen av prioriterte figurer.
 3. Konsolidere bibliografien i `support/referanser.bib`, sikre DOI/URL og harmonisere siteringsstil på tvers av kapitlene.
 4. Oppdatere appendiks, ordliste og lærerveiledning etter fagfelleinnspill og nye case.
