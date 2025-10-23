@@ -19,7 +19,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | III | Kapittel 9 | Helhetlig utkast om forskningslandskap og prosjektforslag. | Koordiner fagfellelesing og harmoniser referanser mot bibliografien. |
 | Appendiks | Ressurser | Første hele utkast – tabeller og arbeidsmåte skrevet. | Revider etter fagfelleinnspill fra kapitlene. |
 | Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk. | Oppdater når nye termer eller presiseringer oppstår under fagfellelesing. |
-| Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan og vurderingsforslag. | Legg inn vurderingsrubrikker og knytt mot kommende caseutvidelser. |
+| Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan og ferdige vurderingsrubrikker. | Utarbeid maler for prosjektkontrakt og koble rubrikkene til kommende caseutvidelser. |
 
 ## Del I: Fundamentet
 
