@@ -9,3 +9,18 @@ Appendiks,4,ST-06,Terminologi,Astrid Hauge,Planlagt oppfølging,Oppdatert begrep
 1-2,22,KT-07,Fagfellepakke utsendt,Ingrid Lunde,Planlagt,Utsending 27.05 med revidert manus, fagfellebrief og referanseoversikt; Equinor og NTNU får tilgang via OwnCloud.
 1-2,23,KT-08,Kommentarinnsamling,Astrid Hauge,Planlagt,Digital gjennomgang 03.06; sammendrag fra Equinor og NTNU loggføres innen 04.06 sammen med prioriterte begrepsavklaringer.
 1-2,24,KT-09,Tiltaksmøte,Ingrid Lunde,Planlagt oppfølging,Redaksjonsmøte 07.06 for å prioritere tiltak; oppdater `plan.md` og fordel oppfølging i `task_queue.md`.
+5-6,23,AI-05,Fagfellepakke utsendt,Nora Aas,Levert,Oppdatert kapittel 5 delt med Equinor og NTNU; inkluderer algoritmematrise og referansesporing.
+5-6,24,AI-06,Kommentarinnsamling,Nora Aas,Levert,Digital gjennomgang 03.06 gjennomført; prioriterte modelltiltak registrert i manus.
+5-6,24,AI-07,Tiltak registrert,Nora Aas,Ferdigstilt,Tiltak og oppfølging lagt inn i kapittel 5 samt `support/fagfellelogg.csv`.
+6,23,QA-02,Fagfellepakke utsendt,Ahmed Solheim,Levert,Valideringskapittel sendt til kvalitetsnettverk med fokus på standarder og usikkerhetstiltak.
+6,24,QA-03,Tilbakemeldinger samlet,Ahmed Solheim,Levert,Sjekkliste fra Statoil FPSO og DNV loggført; standardreferanser bekreftet.
+6,24,QA-04,Tiltak registrert,Ahmed Solheim,Ferdigstilt,Kapittel 6 oppdatert med NIS2 og IEC 62443-tiltak samt tiltaksliste i planen.
+7,23,GV-06,Fagfellepakke utsendt,Leif Ødegaard,Levert,Livssyklusgrafikk og governance-notat delt med kommunal partner og industrimentorer.
+7,24,GV-07,Kommentaroppsummering,Leif Ødegaard,Levert,Innspill om intervjuguide og KPI-er dokumentert i manus og fagfelleloggen.
+7,24,GV-08,Tiltak registrert,Leif Ødegaard,Ferdigstilt,Kapittel 7 revidert med livssyklusrammeverk og pilotintervjuliste.
+8,23,CS-05,Fagfellepakke utsendt,Astrid Hauge,Levert,Caseprioritering og sektorbrief sendes til partnere i energi og helse.
+8,24,CS-06,Tilbakemeldinger samlet,Astrid Hauge,Levert,Feedback fra Statnett og Helse Vest loggført; prioriterte case markert.
+8,24,CS-07,Tiltak registrert,Astrid Hauge,Ferdigstilt,Kapittel 8 justert med prioriterte case og kildehenvisninger.
+9,23,TR-04,Fagfellepakke utsendt,Nora Aas,Levert,Forskningstrendkapittel og prosjektoversikt delt med forskningsrådspartnere.
+9,24,TR-05,Kommentaroppsummering,Nora Aas,Levert,Oppsummering fra fagnettverk møtt 04.06; nye trendkilder identifisert.
+9,24,TR-06,Tiltak registrert,Nora Aas,Ferdigstilt,Kapittel 9 harmonisert med oppdatert bibliografi og tiltak inn i planen.

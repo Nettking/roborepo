@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Gjennomførte fagfelleløpet for kapitlene 5–9, innarbeidet generative og edge-tiltak, standardreferanser (NIS2/IEC 62443) og pilotprioriteringer; oppdaterte `plan.md`, `support/fagfellelogg.csv`, kapitteltekstene, `support/referanser.bib` og pilotmateriellet (`support/notater/pilotundervisning-materiell.md`).
 - `FERDIG` – Opprettet pytest som bygger `main.tex` i en midlertidig katalog og fanger opp LaTeX-feil automatisk; oppdaterte oppgave DT-OPS-03 i `task_queue.md`.
 - `FERDIG` – Kartla figurbehov for Kapittel 4, opprettet metadatafiler for planlagte illustrasjoner og etablerte fagfellepakke med sjekkpunkter og spørsmål.
 - `FERDIG` – Utvidet `instruksjoner.md` og `plan.md` med nye tematiske prioriteringer og forslag til innhold for dt-boken. (Agent)

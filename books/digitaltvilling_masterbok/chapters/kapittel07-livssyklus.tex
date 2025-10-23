@@ -25,6 +25,28 @@ Når tvillingen er i produksjon må datakvalitet, ytelse og sikkerhet følges op
 \subsection*{Avvikling og kunnskapsbevaring}
 Livssyklusen avsluttes med planlagt avvikling eller overgang til ny løsning. Et arkiveringsløp sikrer at modeller, data og beslutningsgrunnlag dokumenteres slik at erfaringer kan brukes i neste generasjon tvilling. Opprydding i integrasjoner hindrer at utdaterte tilkoblinger blir stående igjen og skaper teknisk gjeld.
 
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[node distance=2.6cm, every node/.style={rectangle, rounded corners, draw=dypblaa, fill=skygraa, text width=3.4cm, align=center, minimum height=1.2cm}]
+        \node (init) {Initiativ\\og konsept};
+        \node[right=of init] (design) {Design\\og arkitektur};
+        \node[right=of design] (implement) {Implementering\\og test};
+        \node[right=of implement] (operate) {Drift og\\forbedring};
+        \node[below=1.8cm of design, text width=3.8cm] (govern) {Styring,\\kompetanse\\og gevinstoppfølging};
+        \node[left=of govern] (retire) {Avvikling\\og læring};
+        \draw[->,>=Stealth,thick,dypblaa] (init) -- (design);
+        \draw[->,>=Stealth,thick,dypblaa] (design) -- (implement);
+        \draw[->,>=Stealth,thick,dypblaa] (implement) -- (operate);
+        \draw[->,>=Stealth,thick,dypblaa] (operate) .. controls +(0,-1.2) and +(1.2,0.8) .. (govern);
+        \draw[->,>=Stealth,thick,dypblaa] (govern) -- (retire);
+        \draw[->,>=Stealth,thick,dypblaa] (retire) .. controls +(-1.2,0.8) and +(-1.2,-0.8) .. (init);
+        \draw[->,>=Stealth,thick,petrol] (govern) -- (design);
+        \draw[->,>=Stealth,thick,petrol] (govern) -- (operate);
+    \end{tikzpicture}
+    \caption{Livssyklusrammeverket som brukes i fagfelleløpet viser hvordan styring og læring kobles til fasene i \autoref{tab:raci-maritim}.}
+    \label{fig:livssyklusramme}
+\end{figure}
+
 \section{Organisering og roller}
 Styringen av digitale tvillinger krever en tydelig governance-modell som balanserer sentral koordinering og lokal innovasjon. Mange virksomheter etablerer et kjerneteam som forvalter plattformen, mens forretningsområder eller prosjektteam bygger spesifikke tvillinger på toppen.
 
@@ -70,6 +92,19 @@ Gevinster må følges opp med både kvantitative og kvalitative indikatorer:
     \item \textbf{Lærings- og innovasjonsmål (OKR-er):} antall eksperimenter kjørt i tvillingen per kvartal, nye tjenester som lanseres basert på innsikt fra tvillingen, kompetanseløft i tverrfaglige team.
 \end{itemize}
 Indikatorene bør inngå i virksomhetens styringssystem, eksempelvis balansert målstyring eller kvartalsvise portefølgereview. For å sikre kontinuerlig forbedring kan teamet gjennomføre retrospektiv-møter der avvik analyseres og tiltak prioriteres.
+
+\section{Intervjuguide for governance-case}
+Tilbakemeldinger fra fagfellepanelet ba oss konkretisere hvordan intervjuer og workshops skal gjennomføres når governance-modellene testes i pilotundervisningen. Intervjuguiden i notatet `support/notater/pilotundervisning-materiell.md` brukes som grunnlag, og kobles til livssyklusfigur~\ref{fig:livssyklusramme} slik at hvert spørsmål peker til riktig fase og ansvar.
+
+En strukturert økt kan gjennomføres slik:
+\begin{enumerate}
+    \item \textbf{Innledning (5 minutter):} Presenter formålet med caset og hvilke leveranser som skal testes. Bekreft samtykke til notater og eventuell opptak.
+    \item \textbf{Fasevis dypdykk (20 minutter):} Bruk figuren til å kartlegge hendelser, beslutningspunkter og støtteverktøy i fasene initiativ, design, implementering og drift. Noter tydelige ansvar og avhengigheter.
+    \item \textbf{Styring og gevinstoppfølging (10 minutter):} Undersøk hvordan indikatorer, opplæring og beslutningsfora fungerer i praksis. Diskuter hvordan tiltakene skal dokumenteres i fagfelleloggen.
+    \item \textbf{Avslutning (5 minutter):} Oppsummer foreslåtte tiltak, avklar hvem som følger dem opp og hvilke data som kan deles videre i undervisningen.
+\end{enumerate}
+
+Resultatene bør overføres til fagfelleloggen og planens tiltaksoversikt slik at vi kan spore hvilke endringer som kreves før neste revisjon. Intervjuene danner også grunnlag for refleksjonsoppgaver i pilotundervisningen uke~5 og 6.
 
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}

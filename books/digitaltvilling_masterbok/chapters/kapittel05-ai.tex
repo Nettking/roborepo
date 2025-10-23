@@ -47,6 +47,15 @@ g fleksibilitet. Arkitekturmessig krever dette en oppdateringssløyfe som fanger
 iserer de oppdaterte modellene tilbake til tvillingen. Mange norske virksomheter har løst dette ved å kombinere Kubernetes-base
 rte mikrotjenester, strømmeplattformer som Apache Kafka og modellregister som MLflow for å sikre sporbarhet.
 
+\section{Fremvoksende praksiser for AI-drevne tvillinger}
+Fagfellekommentarene fremhevet behovet for å beskrive hvordan moderne AI-tvillinger håndterer både datatilgang og distribusjon. Generative modeller, syntetiske datasett og edge-distribuerte komponenter gjør det mulig å løse utfordringer som begrenset datastrøm, krav til personvern og sanntidsrespons. Dette avsnittet oppsummerer tiltakene som ble prioritert i fagfelleløpet for kapittel~5.
+
+\subsection{Generative modeller og syntetiske scenarier}
+Foundation-modeller og andre generative teknikker brukes til å lage scenarioer for test og finjustering når historiske data ikke dekker alle relevante tilstander.\citep{bommasani2021opportunities} I digitale tvillinger betyr dette at man kan simulere sjeldne driftshendelser, lage datagrunnlag for trygg forsterkende læring eller anonymisere sensitive datasett før de deles i fagfellesamarbeid. For å bevare tilliten må syntetiske datasett merkes tydelig, og datainntaksløpet dokumenteres slik at både modell-eiere og kontrollorgan kan se hvilke deler av pipeline som er basert på generativt materiale. Når generative modeller brukes til å foreslå nye styringsstrategier, bør de kobles til tiltakene i Kapittel~6 om validering for å sikre at anbefalinger testes mot fysiske begrensninger før utrulling.
+
+\subsection{Edge-distribuerte tvillinger}
+Edge-intelligens er nødvendig der beslutninger må tas på millisekunder og nettverkstilkoblingen er begrenset, for eksempel i maritime operasjoner eller energimikrogrids.\citep{shi2016edge} En vanlig arkitektur er å la den sentrale plattformen håndtere langsiktig læring og flåtestyring, mens edge-noder kjører lette versjoner av modellene for lokal optimalisering og avviksdeteksjon. Fagfellepanelet anbefalte at vi beskriver hvordan modellversjoner og dataflyt synkroniseres mellom edge og sky: DevOps-teamet må definere hvilke signaler som trigges ved modellavvik, hvilke målinger som replikkeres tilbake til sentral datasjø, og hvordan sikkerhetsoppdateringer distribueres uten å stoppe produksjonen. Ved pilotering i norsk industri har det vært nyttig å kombinere container-orienterte orkestratorer (for eksempel K3s) med hendelseslogg i datasjøen slik at datagovernance og revisjon kan følge edge-endringene.
+
 \section{Samspill mellom læring, optimalisering og assimilering}
 De tre byggesteinene virker sammen i en lukket sløyfe: maskinlæring gir prognoser og modeller som beskriver systemet, dataassi
 milering korrigerer modellen når virkeligheten avviker, og optimalisering omskaper innsikten til beslutninger. I praksis må sli
@@ -90,6 +99,8 @@ Forsterkende læring og MPC-hybrider & Autonome styringssløyfer, energibalanser
 Bayesiansk optimalisering og surrogatmodeller & Parameterfinjustering av simuleringsmodeller eller eksperimentdesign. & Vis forbedring i forventet gevinst, antall nødvendige eksperimenter og usikkerhetsmarginer rundt anbefalte parametere. \\
 \addlinespace
 Anomali- og driftsdeteksjon (autoencoder, isolation forest) & Overvåking av sensorer, logistikkflyt eller sikkerhetshendelser. & Mål falsk positiv-rate, deteksjonstid og hvordan alarmer eskaleres til operasjonelle team. Forklar hvilke signalforklaringer som deles med fagpersoner. \\
+\addlinespace
+Generative modeller og foundation-plattformer & Scenario-testing, syntetiske data og prototyping der reelle data er begrenset eller sensitive. & Dokumenter datasettets opphav, kvalitetskontroller og hvordan syntetiske resultater merkes. Beskriv governance for modellopprinnelse og hvordan output verifiseres før beslutninger tas i drift. \\
 \bottomrule
 \end{longtable}
 
@@ -100,6 +111,7 @@ Anomali- og driftsdeteksjon (autoencoder, isolation forest) & Overvåking av sen
     \item Legg ved en teknisk vedleggsdel som beskriver datakilder, hyperparametere, versjonskontroll og automatiserte tester i MLOps-løpet. Knyt tiltakene til styringsprinsippene i Kapittel~7.
     \item Reflekter i sluttrapporten over hvordan modellen skal videreføres etter prosjektet: hvem eier ansvaret, hvilke indikator
     er skal overvåkes og hvilke beslutningsgrenser krever menneskelig godkjenning.
+    \item Beskriv hvordan generative modeller, syntetiske datasett eller edge-komponenter eventuelt inngår i løsningen, og gjør rede for datasporing, ytelsesmålinger og kontroller som sikrer at tiltakene følger retningslinjene i Kapittel~6.
 \end{enumerate}
 
 \section{Industrieksempel: Optimal drift av et landbasert oppdrettsanlegg}

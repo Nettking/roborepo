@@ -11,11 +11,11 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | I | Kapittel 2 | Helhetlig utkast som beskriver systemkart, modelleringsparadigmer og kalibrering. | Produser ferdige figurer av systemkartene og kvalitetssikre referanser til standarder og verktøy. |
 | I | Kapittel 3 | Helhetlig utkast med dataflyt, integrasjonsarkitektur og øvinger. | Koordiner fagfelleinnspill (DI-03) og ferdigstille gjenværende illustrasjoner; datapipeline-versjon 2 deles med grafikkteam via `support/figurer/metadata/kap03-datapipeline-v2.alt.md`. |
 | II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
-| II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering og dataassimilering. | Samle utfyllende referanser og koordinere fagfellelesing; vurderingskriterier og algoritmematrise er beskrevet i Seksjon~«Vurderingskriterier for AI-drevne tvillinger». |
-| II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet og etikk. | Verifiser standardhenvisninger og vurder om kapitlet trenger støttediagrammer. |
-| III | Kapittel 7 | Helhetlig utkast med livssyklus, governance og RACI-eksempel. | Utarbeid grafisk fremstilling av livssyklus og planlegg caseintervjuer til videre arbeid. |
-| III | Kapittel 8 | Helhetlig utkast med narrative sektorseksjoner og casemal. | Identifiser hvilke case som skal utdypes videre og samle kildegrunnlag til hver sektor. |
-| III | Kapittel 9 | Helhetlig utkast om forskningslandskap og prosjektforslag. | Koordiner fagfellelesing og harmoniser referanser mot bibliografien. |
+| II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering, dataassimilering samt generative og edge-baserte tiltak. | Test pilotopplegg med vurderingsmatrise, sikre datasporing for syntetiske datasett og loggfør funn i fagfelleløpet. |
+| II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet, etikk og regulatoriske krav (NIS2, IEC 62443). | Følg opp pilotcase med oppdaterte sjekklister, dokumenter tilsynsprosedyrer og oppdater tiltak i fagfelleloggen. |
+| III | Kapittel 7 | Helhetlig utkast med livssyklus, governance, RACI-eksempel og ny figur for styringssløyfer. | Gjennomfør intervjuer etter guiden, koble funn til KPI-oppfølging og pilotlogg. |
+| III | Kapittel 8 | Helhetlig utkast med narrative sektorseksjoner, casemal og prioritert pilotliste. | Sikre dataspace-tilganger, distribuere casebriefs og oppdatere kildebank for hver sektor. |
+| III | Kapittel 9 | Helhetlig utkast om forskningslandskap, teknologitrender og dataspace-samarbeid. | Sammenstill pilotfeedback med forskningsideer, og oppdater bibliografien etter nye kilder. |
 | Appendiks | Ressurser | Første hele utkast – tabeller og arbeidsmåte skrevet. | Revider etter fagfelleinnspill fra kapitlene. |
 | Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk. | Oppdater når nye termer eller presiseringer oppstår under fagfellelesing. |
 | Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan og ferdige vurderingsrubrikker. | Utarbeid maler for prosjektkontrakt og koble rubrikkene til kommende caseutvidelser. |
@@ -61,36 +61,36 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
    - Studentaktivitet: Sammenligne to simuleringsverktøy.
 
 5. **Kapittel 5 – Læring, optimalisering og AI**
-   - Status: Helhetlig tekst som binder maskinlæring, optimalisering og dataassimilering, inkludert oppdrettscase.
+   - Status: Helhetlig tekst som binder maskinlæring, optimalisering, dataassimilering og prioriterte generative/edge-tiltak, inkludert oppdrettscase.
    - Læringsmål: Se sammenhengen mellom maskinlæring, optimalisering og digitale tvillinger.
-   - Forfatteroppgaver (neste steg): Samle tilleggsreferanser, beskrive vurderingskriterier for caseoppgaven og forberede fagfellelesing.
-   - Studentaktivitet: Designe et eksperiment som bruker online læring.
+   - Forfatteroppgaver (neste steg): Test pilotopplegg med generative datasett og edge-distribusjon, oppdater referanser i \S~«Fremvoksende praksiser» og loggfør erfaringene i `support/fagfellelogg.csv`.
+   - Studentaktivitet: Designe et eksperiment som kombinerer online læring, syntetiske scenarier og vurdering mot edge-deployert modell.
 
 6. **Kapittel 6 – Validering, verifikasjon og tillit**
-   - Status: Helhetlig tekst med rammeverk, usikkerhetsanalyse, etikk og refleksjonsspørsmål.
+   - Status: Helhetlig tekst med rammeverk, usikkerhetsanalyse, etikk og integrerte NIS2/IEC~62443-tiltak.
    - Læringsmål: Forstå prosesser for kvalitetssikring og usikkerhetsanalyse.
-   - Forfatteroppgaver (neste steg): Verifisere standardhenvisninger, vurdere behov for støttefigurer og planlegge fagfelleinnhenting fra industripartnere.
-   - Studentaktivitet: Utarbeide en plan for validering av en digital tvilling.
+   - Forfatteroppgaver (neste steg): Kvalitetssikre sjekklistene mot pilotcasene, verifisere at NIS2- og IEC~62443-referanser er dokumentert og koordinere videre fagfelleinnhenting med industripartnere.
+   - Studentaktivitet: Utarbeide en valideringsplan som viser samsvar med NIS2, IEC~62443 og DNV-RP-A204.
 
 ## Del III: Implementering og casearbeid
 
 7. **Kapittel 7 – Livssyklus og styring**
-   - Status: Helhetlig tekst med livssyklusfaser, governance-modeller, RACI-eksempel og gevinstindikatorer.
+   - Status: Helhetlig tekst med livssyklusfaser, governance-modeller, RACI-eksempel, gevinstindikatorer og nytt livssyklusdiagram.
    - Læringsmål: Lære om governance, endringsledelse og livssyklus.
-   - Forfatteroppgaver (neste steg): Utvikle grafisk fremstilling av livssyklus og planlegge eksterne intervjuer for flere caseeksempler.
-   - Studentaktivitet: Lage RACI-matrise for et prosjekt.
+   - Forfatteroppgaver (neste steg): Gjennomføre intervjurunden etter den oppdaterte guiden, koble funn til KPI-settet og justere tiltakslisten før pilot.
+   - Studentaktivitet: Lage RACI-matrise og intervjuguide for et valgt case, med referanse til livssyklusdiagrammet.
 
 8. **Kapittel 8 – Bruksområder og sektorspesifikke case**
-   - Status: Helhetlig tekst med narrative sektorseksjoner, casemal og øvinger.
+   - Status: Helhetlig tekst med narrative sektorseksjoner, casemal, øvinger og prioritert pilotliste.
    - Læringsmål: Illustrere variasjon mellom industri, energi, helse, transport.
-   - Forfatteroppgaver (neste steg): Velge hvilke case som skal utdypes videre, samle kildemateriale, bruke vurderingsmatrisen i Kapittel~8 til å begrunne prioriteringen og planlegge visuelle elementer.
-   - Studentaktivitet: Presentere en caseanalyse.
+   - Forfatteroppgaver (neste steg): Følge opp dataspace-tilganger, distribuere casebriefs og oppdatere kildebanken i tråd med tabellen «Prioritering for pilotundervisningen».
+   - Studentaktivitet: Presentere en caseanalyse som inkluderer dataspace-tilgang, governance og vurdering mot pilotkriteriene.
 
 9. **Kapittel 9 – Fremtidstrender og forskning**
-   - Status: Helhetlig tekst om forskningsfront, teknologitrender og prosjektforslag.
+   - Status: Helhetlig tekst om forskningsfront, teknologitrender, dataspace-samarbeid og forskningscase.
    - Læringsmål: Se forskningsfronten og nye teknologier.
-   - Forfatteroppgaver (neste steg): Harmoniser referanser med bibliografien, planlegg fagfellelesing og vurder behov for figur- eller tabelltillegg.
-   - Studentaktivitet: Lage forskningsspørsmål.
+   - Forfatteroppgaver (neste steg): Oppdatere bibliografien med nye dataspace- og standardreferanser, og forankre forskningsforslagene i pilotens læringsutbytte.
+   - Studentaktivitet: Lage forskningsspørsmål som kobler dataspace-økosystemer, bærekraft og regulatoriske krav.
 
 ## Leseplan for studenter
 
@@ -149,6 +149,7 @@ Vektleggingen summerer til 100\% (45\% underveisleveranser, 55\% sluttvurdering)
 - **Digital infrastruktur:** Teams for kommunikasjon, OneDrive for dokumentdeling, JupyterHub for dataanalyse, og GitLab-gruppe for kode og modeller. All tilgang settes opp i uke -2.
 - **Mentoroppsett:** Tre mentorer (modellering, data, governance) deler på ukentlige kontortimer. Industripartnere inviteres til uke 4–6 for å gi caserelatert feedback.
 - **Ressurser:** Lisenspakker for AnyLogic og Simulink, skybudsjett i Azure (10 000 NOK), samt datasett fra energisektoren og maritim industri. Biblioteket tilrettelegger for nødvendig litteratur.
+- **Pilotmateriell:** Følg sjekklisten i `support/notater/pilotundervisning-materiell.md` for å sikre at casepakker, intervjuguide og datasett distribueres i forkant av hver uke.
 - **Kommunikasjon:** Ukentlig nyhetsbrev til deltakerne med agenda, forberedelser og lenker til støtteinnhold. Programleder rapporterer status til instituttleder etter ukene 2 og 5.
 
 ### Evaluering og videreføring
