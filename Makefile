@@ -1,4 +1,4 @@
-BOOK ?= sample_book
+BOOK ?= tides_of_marisport
 PROJECT ?= main
 BOOK_DIR := books/$(BOOK)
 IMAGE = latex-builder
