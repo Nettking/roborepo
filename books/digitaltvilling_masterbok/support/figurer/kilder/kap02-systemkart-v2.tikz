@@ -1,0 +1,150 @@
+% TikZ-figur: Systemkart for produksjonslinje med digital tvilling (versjon 2)
+\begin{tikzpicture}[x=1cm, y=1cm, >=Stealth]
+    \tikzset{
+        module/.style={
+            draw=grafitt,
+            rounded corners=4pt,
+            text width=3.3cm,
+            minimum height=1.7cm,
+            align=center,
+            font=\small\sffamily,
+            fill=#1!22
+        },
+        module/.default=skygraa,
+        group/.style={
+            draw=skygraa!70,
+            rounded corners=6pt,
+            inner sep=0.5cm
+        },
+        role/.style={
+            font=\scriptsize\sffamily,
+            text=grafitt
+        },
+        flow/.style={
+            ->,
+            line width=1.1pt,
+            draw=grafitt
+        }
+    }
+
+    \newcommand{\moduleicon}[3][0.55]{%%
+        \node[anchor=north west, inner sep=1.8pt, xshift=2pt, yshift=-2pt] at (#2.north west) {%%
+            \tikz[scale=#1, line cap=round, line join=round]{#3}
+        };
+    }
+
+    % Noder
+    \node[module=dypblaa]             (sensors)     at (0,  1.8) {IoT-sensorer\\\footnotesize Tilstandsm\aa linger};
+    \node[module=dypblaa]             (plc)         at (0, -1.8) {PLC og lokale styringer\\\footnotesize Sekvens- og sikkerhetslogikk};
+    \node[module=petrol]              (edge)        at (3,  0.0) {Edge-gateway\\\footnotesize Filtrering, buffering, protokoller};
+    \node[module=havgronn]            (mes)         at (6,  2.4) {MES\\\footnotesize Ordreutf\o relse, sporbarhet};
+    \node[module=havgronn]            (historian)   at (6, -2.4) {Prosesshistorian\\\footnotesize Tidsserier, hendelser};
+    \node[module=solgul]              (analytics)   at (9,  0.0) {Analyse- og ML-plattform\\\footnotesize Feature store, modelltrening};
+    \node[module=koral]               (dt)          at (12, 0.0) {Digital tvilling\\\footnotesize Simulering, beslutningsst\o tte};
+    \node[module=solgul]              (dashboard)   at (12, 3.0) {Operat\o rdashboard\\\footnotesize KPI-er, alarmer};
+    \node[module=solgul]              (maintenance) at (12,-3.0) {Vedlikeholdsteam\\\footnotesize Arbeidsordre, reservedeler};
+    \node[module=solgul]              (management)  at (6,  4.6) {Ledelsesrapporter\\\footnotesize Energi- og produksjons-KPI};
+
+    % Ikoner for modulene
+    \moduleicon{sensors}{
+        \draw[draw=dypblaa, line width=0.8pt] (0,0) circle (0.28);
+        \draw[draw=dypblaa, line width=0.8pt] (0.42,0) arc (0:180:0.42);
+        \draw[draw=dypblaa, line width=0.8pt] (0.6,0) arc (0:180:0.6);
+        \fill[dypblaa] (0,0) circle (0.1);
+    }
+    \moduleicon[0.52]{plc}{
+        \draw[draw=dypblaa, line width=0.85pt] (-0.36,-0.26) rectangle (0.36,0.26);
+        \draw[draw=dypblaa, line width=0.65pt] (-0.26,0.12) -- (0.26,0.12);
+        \draw[draw=dypblaa, line width=0.65pt] (-0.26,-0.02) -- (0.26,-0.02);
+        \draw[draw=dypblaa, line width=0.65pt] (-0.26,-0.16) -- (0.26,-0.16);
+        \fill[dypblaa] (-0.44,0.18) circle (0.08);
+        \fill[dypblaa] (-0.44,-0.18) circle (0.08);
+        \fill[dypblaa] (0.44,0.18) circle (0.08);
+        \fill[dypblaa] (0.44,-0.18) circle (0.08);
+    }
+    \moduleicon{edge}{
+        \draw[draw=petrol, line width=0.8pt] (-0.36,-0.24) rectangle (0.36,0.24);
+        \draw[draw=petrol, line width=0.75pt] (-0.18,0.24) -- (-0.18,0.44);
+        \draw[draw=petrol, line width=0.75pt] (0.18,0.24) -- (0.18,0.44);
+        \fill[petrol] (-0.18,0.44) circle (0.08);
+        \fill[petrol] (0.18,0.44) circle (0.08);
+        \draw[draw=petrol, line width=0.65pt] (-0.26,-0.08) -- (0.26,-0.08);
+        \draw[draw=petrol, line width=0.65pt] (-0.26,0.0) -- (0.26,0.0);
+        \draw[draw=petrol, line width=0.65pt] (-0.26,0.08) -- (0.26,0.08);
+    }
+    \moduleicon{mes}{
+        \draw[draw=havgronn, line width=0.75pt] (-0.32,-0.22) rectangle (0.32,0.22);
+        \draw[draw=havgronn, line width=0.75pt] (-0.12,0.22) -- (-0.12,0.34) -- (0.12,0.34) -- (0.12,0.22);
+        \draw[draw=havgronn, line width=0.6pt] (-0.26,0.08) -- (0.26,0.08);
+        \draw[draw=havgronn, line width=0.6pt] (-0.26,-0.02) -- (0.26,-0.02);
+        \draw[draw=havgronn, line width=0.6pt] (-0.26,-0.12) -- (0.26,-0.12);
+    }
+    \moduleicon{historian}{
+        \draw[draw=havgronn, line width=0.75pt] (0,0.2) ellipse (0.34 and 0.12);
+        \draw[draw=havgronn, line width=0.75pt] (0,-0.2) ellipse (0.34 and 0.12);
+        \draw[draw=havgronn, line width=0.75pt] (-0.34,-0.2) -- (-0.34,0.2);
+        \draw[draw=havgronn, line width=0.75pt] (0.34,-0.2) -- (0.34,0.2);
+        \draw[dashed, draw=havgronn, line width=0.6pt] (-0.34,-0.2) arc[start angle=180, end angle=0, x radius=0.34, y radius=0.12];
+    }
+    \moduleicon{analytics}{
+        \fill[solgul!65!black] (-0.3,-0.18) circle (0.1);
+        \fill[solgul!65!black] (0.3,-0.12) circle (0.1);
+        \fill[solgul!65!black] (0.02,0.32) circle (0.1);
+        \draw[draw=solgul!70!black, line width=0.75pt] (-0.3,-0.18) -- (0.02,0.32) -- (0.3,-0.12) -- cycle;
+    }
+    \moduleicon{dt}{
+        \draw[draw=koral, line width=0.75pt] (-0.34,-0.22) rectangle (0.34,0.22);
+        \draw[draw=koral, line width=0.75pt] (-0.12,-0.04) rectangle (0.12,0.26);
+        \draw[draw=koral, line width=0.6pt] (-0.34,-0.22) -- (-0.12,-0.04);
+        \draw[draw=koral, line width=0.6pt] (0.34,-0.22) -- (0.12,-0.04);
+        \draw[draw=koral, line width=0.6pt] (-0.34,0.22) -- (-0.12,0.26);
+        \draw[draw=koral, line width=0.6pt] (0.34,0.22) -- (0.12,0.26);
+        \draw[draw=koral, line width=0.6pt] (-0.12,-0.04) -- (0.12,-0.04);
+    }
+    \moduleicon{dashboard}{
+        \draw[draw=solgul!70!black, line width=0.75pt] (-0.36,-0.24) rectangle (0.36,0.24);
+        \draw[draw=solgul!70!black, line width=0.6pt] (-0.3,-0.12) -- (-0.06,0.12) -- (0.12,-0.02) -- (0.28,0.16);
+        \fill[solgul!70!black] (-0.3,-0.12) circle (0.08);
+        \fill[solgul!70!black] (-0.06,0.12) circle (0.08);
+        \fill[solgul!70!black] (0.12,-0.02) circle (0.08);
+        \fill[solgul!70!black] (0.28,0.16) circle (0.08);
+        \draw[draw=solgul!70!black, line width=0.6pt] (-0.36,-0.24) -- (-0.36,0.24);
+        \draw[draw=solgul!70!black, line width=0.6pt] (-0.36,-0.24) -- (0.36,-0.24);
+    }
+    \moduleicon{maintenance}{
+        \foreach \angle in {0,60,...,300}{
+            \draw[draw=solgul!70!black, line width=0.65pt] (\angle:0.26) -- (\angle:0.36);
+        }
+        \draw[draw=solgul!70!black, line width=0.75pt] (0,0) circle (0.26);
+        \fill[solgul!70!black] (0,0) circle (0.1);
+    }
+    \moduleicon[0.5]{management}{
+        \fill[solgul!50!white] (-0.3,-0.24) rectangle (-0.18,0.08);
+        \fill[solgul!50!white] (-0.1,-0.24) rectangle (0.02,0.24);
+        \fill[solgul!50!white] (0.08,-0.24) rectangle (0.2,-0.02);
+        \fill[solgul!50!white] (0.26,-0.24) rectangle (0.38,0.16);
+        \draw[draw=solgul!70!black, line width=0.75pt] (-0.36,-0.26) rectangle (0.36,0.26);
+        \draw[draw=solgul!70!black, line width=0.6pt] (-0.36,-0.26) -- (-0.36,0.26);
+        \draw[draw=solgul!70!black, line width=0.6pt] (-0.36,-0.26) -- (0.36,-0.26);
+    }
+
+    % Grupper
+    \node[group, label={[role]north:Feltniv\aa}]                      at (0, 0)     (fieldbox)     [fit=(sensors)(plc)] {};
+    \node[group, label={[role]north:Edge og datainntak}]              at (3, 0)     (edgebox)      [fit=(edge)] {};
+    \node[group, label={[role]north:Produksjonsstyring og historikk}] at (6, 0.8)   (mesbox)       [fit=(mes)(historian)(management)] {};
+    \node[group, label={[role]north:Analyse og modellering}]          at (9, 0)     (analyticsbox) [fit=(analytics)] {};
+    \node[group, label={[role]north:Tvilling og beslutningsflater}]   at (12, 0)    (dtbox)        [fit=(dt)(dashboard)(maintenance)] {};
+
+    % Piler
+    \draw[flow] (sensors.east)     to[out=10,  in=150] node[role, pos=0.55, above] {Tilstandsm\aa linger} (edge.north west);
+    \draw[flow] (plc.east)         to[out=-10, in=210] node[role, pos=0.55, below] {Status og kommandoer} (edge.south west);
+    \draw[flow] (edge.north east)  to[out=25, in=180]  node[role, pos=0.55, above] {Normaliserte hendelser} (mes.west);
+    \draw[flow] (edge.south east)  to[out=-25,in=180]  node[role, pos=0.6, below] {R\aa tidsserier} (historian.west);
+    \draw[flow] (mes.east)         to[out=0,   in=140] node[role, pos=0.52, above] {Plan- og produksjonsdata} (analytics.north west);
+    \draw[flow] (historian.east)   to[out=0,   in=-140] node[role, pos=0.52, below] {Historikk og kontekst} (analytics.south west);
+    \draw[flow] (analytics.east)   --                         node[role, pos=0.55, above] {Modeller og prediksjoner} (dt.west);
+    \draw[flow] (dt.north)         --                         node[role, pos=0.55, right] {Anbefalinger} (dashboard.south);
+    \draw[flow] (dt.south)         --                         node[role, pos=0.55, right] {Planlagte tiltak} (maintenance.north);
+    \draw[flow] (maintenance.west) to[out=180, in=-40] node[role, pos=0.6, below] {Tilbakemeldte avvik} (mes.south);
+    \draw[flow] (mes.north)        --                         node[role, pos=0.55, right] {KPI-er og status} (management.south);
+\end{tikzpicture}

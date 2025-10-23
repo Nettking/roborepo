@@ -3,7 +3,6 @@
 Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefølge. Ta alltid den øverste oppgaven merket `TODO` når du blir bedt om å «ta neste oppgave på dt-boken».
 
 ## Aktive oppgaver
-`TODO` Ferdigstill systemkartfigurene for Kapittel 2 i TikZ og registrer alt-tekst i `support/figurer/metadata/`.
 `TODO` Koordiner illustrasjoner og fagfelleavklaringer for datapipeline i Kapittel 3, inkludert oppdatering av referanser i `plan.md`.
 `TODO` Skill ferdige oppgaver i en egen fil
 `TODO` Alle instruksjoner i AGENTS instructions
@@ -13,6 +12,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Ferdige oppgaver
 
+- `FERDIG` – Ferdigstill systemkartfigurene for Kapittel 2 i TikZ og registrer alt-tekst i `support/figurer/metadata/`.
 - `FERDIG` – Planlagt fagfellelesingsrunde for Kapittel 1–2, oppdatert fagfellelogg med tidsplan og ansvarlige, og forankret plan i fremdriftsdokumentet.
  
 - `FERDIG` – Fjernet datostemplede notat-/oppdatert-kommentarer fra manus og støttefiler og la inn instruksjon som forbyr praksisen videre.
