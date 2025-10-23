@@ -57,7 +57,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 4. **Kapittel 4 – Simulering og analyse**
    - Status: Helhetlig tekst med simuleringsmetoder, analyser, verktøyskart og fjernvarmeeksempel.
    - Læringsmål: Skille mellom ulike simuleringsmetoder og analyseteknikker.
-   - Forfatteroppgaver (neste steg): Planlegg fagfellelesing, vurder behov for supplerende figurer og dokumenter hvordan kapitlet kobles til øvingene.
+   - Forfatteroppgaver (neste steg): Ferdigstille storyboard og metadata for de planlagte figurene (se `support/illustrasjonsplan.md`, DT-04), sende fagfellepakke (`support/notater/kap04-fagfellepakke.md`) og dokumentere koblingen til øvingene.
    - Studentaktivitet: Sammenligne to simuleringsverktøy.
 
 5. **Kapittel 5 – Læring, optimalisering og AI**
