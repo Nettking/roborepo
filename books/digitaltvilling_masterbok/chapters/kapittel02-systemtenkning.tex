@@ -73,13 +73,55 @@ driftsendringer og må overvåkes for skjevheter.
 I mange digitale tvillinger kombineres fysikkbaserte og datadrevne komponenter. En hybrid modell kan bruke førsteprinsipper for
 energi- og materialbalanser, mens maskinlæring estimerer friksjonstap eller operatørpåvirkning som er vanskelig å beskrive
 analytisk. Ko-simulering gjør det mulig å koble sammen flere spesialiserte modeller i en helhetlig tidslinje, for eksempel når
-mekanikk, termodynamikk og styringslogikk må løses samtidig. Denne kombinasjonen gir robusthet og fleksibilitet, men krever
-god styring av grensesnitt og versjoner.
+mekanikk, termodynamikk og styringslogikk må løses samtidig \citep{boschert2018digital}. Denne kombinasjonen gir robusthet og
+fleksibilitet, men krever tydelige API-kontrakter, delte dataskjema og versjonskontroll av hvert delsystem.
+
+\subsection{Flerfidelitetsstrategier}
+Flerfidelitetsmodellering kombinerer raske, grovkornede modeller med detaljerte høyfidelitetsmodeller for kritiske delsystemer.
+Lavfidelitetsmodellen gir raske scenarioberegninger og støtte til beslutninger med stramme tidsfrister, mens høyfidelitetsmodellen
+brukes til kalibrering og validering av sentrale parametere \citep{kennedy2000predicting}. Strategien er særlig nyttig i norsk
+prosess- og energisektor der tilgangen til sensordata varierer mellom installasjoner \citep{sintef2021digital}. Et vellykket
+flerfidelitetsoppsett krever at teamet:
+\begin{itemize}
+    \item definerer hvilke variabler som skal utveksles mellom modellene og hvordan usikkerhet skal rapporteres,
+    \item etablerer en synkroniseringsplan for når høyfidelitetsmodellen skal oppdateres og hvordan endringene mates inn i
+    lavfidelitetsmodellen,
+    \item dokumenterer toleranser for avvik slik at driftsorganisasjonen vet når det er nødvendig med ny kalibrering eller
+    eksperimentelle målinger.
+\end{itemize}
+
+\subsection{Case: Flerfidel modell for subsea-kompressorer}
+Et norsk leverandørkonsortium har utviklet en digital tvilling for subsea-kompressorer på sokkelen. Plattformen kombinerer en
+hurtig maskinlæringsmodell som estimerer produksjon og energiforbruk fra tilgjengelige trykk- og temperaturmålinger, med en
+høyfidel CFD-modell som simulerer detaljerte turbulenseffekter i kompressoren. Hver natt kjøres CFD-modellen mot oppdaterte
+operasjonsdata for å korrigere parametere i hurtigmodellen. Resultatene deles med driftsteamet gjennom et dashboard der
+avvik merkes når usikkerheten overstiger definerte grenser. Prosjektet viser hvordan flerfidelitetsstrategier gir bedre
+tilgjengelighet og vedlikeholdsplanlegging samtidig som modellene er dokumentert og revideres i samarbeid mellom operatør og
+teknologipartnere \citep{sintef2021digital}.
 
 \subsection{Vurdering av modellvalg}
 Når et paradigme skal velges, bør teamet diskutere hvor kritisk forklarbarhet er, hvilke datakilder som er tilgjengelige og hvor
-raskt modellen må oppdateres. Dokumentér alltid hvilke antagelser som ligger til grunn og hvilke måledata som trengs for å holde
-modellen presis over tid.
+raskt modellen må oppdateres. Tabell~\ref{tab:kap02-modellvalg} gir et utgangspunkt for å sammenligne alternativer og velge en
+portefølje av modeller som utfyller hverandre.
+
+\begin{table}[ht]
+    \centering
+    \caption{Sammenligning av modelleringsparadigmer for digitale tvillinger.}
+    \label{tab:kap02-modellvalg}
+    \begin{tabular}{p{0.2\textwidth}p{0.27\textwidth}p{0.24\textwidth}p{0.23\textwidth}}
+        \toprule
+        \textbf{Paradigme} & \textbf{Styrker} & \textbf{Utfordringer} & \textbf{Typisk norsk case} \\
+        \midrule
+        Fysikkbasert & Forklarbare sammenhenger og mulighet for sensitivitetstester. & Krever detaljerte parametere og høy beregningskostnad. & Energiproduksjon med krav til termisk balanse. \\
+        Datadrevet & Rask modellering når historiske data er rike. & Sårbar for konseptdrift og bias i data. & Produksjonslinjer med omfattende sensordekning. \\
+        Hybrid & Kombinerer robusthet og fleksibilitet gjennom ko-simulering. & Krever koordinering av grensesnitt og felles semantikk. & Integrerte olje- og gassanlegg med flere disipliner. \\
+        Agent-/hendelsesbasert & Fanger interaksjon mellom aktører og logistikkflyt. & Vanskelig å kalibrere uten detaljerte prosesslogger. & Transport- og beredskapsøvelser på lufthavner. \\
+    \end{tabular}
+\end{table}
+
+I praksis bør valget dokumenteres i en modelljournal som beskriver antagelser, datakrav og ansvarlige personer for videre vedlikehold
+\citep{iso23247-2021}. Dokumentér alltid hvilke måledata som trengs for å holde modellen presis over tid og hvordan modellene skal
+gjennomgås i fagfelleprosesser.
 
 \section{Modellintegrasjon og kalibrering}
 Valgt modell må kobles til dataflyten som ble kartlagt tidligere. Integrasjon handler både om teknisk infrastruktur og
@@ -99,7 +141,26 @@ beregningstider. Viktige indikatorer er latens fra sensor til modell, datakvalit
 Parameteridentifikasjon kan gjøres manuelt ved å justere parameterne basert på eksperterfaring, eller automatisk ved hjelp av
 optimaliseringsalgoritmer som minimerer forskjellen mellom modell og målinger. Vanlige metoder er minste kvadrater,
 Bayesiansk oppdatering eller Kalman-filtre. For systemer som endrer seg gradvis kan modellreduksjon og adaptive filtre holde
-beregningstidene nede uten å tape presisjon.
+beregningstidene nede uten å tape presisjon. Tabell~\ref{tab:kap02-kalibrering} viser hvordan ulike kalibreringsteknikker kan
+kombineres for å støtte flerfidelitetsmodeller og operativ drift \citep{kennedy2000predicting}.
+
+\begin{table}[ht]
+    \centering
+    \caption{Oversikt over kalibreringsmetoder for digitale tvillinger.}
+    \label{tab:kap02-kalibrering}
+    \begin{tabular}{p{0.2\textwidth}p{0.32\textwidth}p{0.2\textwidth}p{0.22\textwidth}}
+        \toprule
+        \textbf{Metode} & \textbf{Formål} & \textbf{Når brukes den?} & \textbf{Typisk dokumentasjon} \\
+        \midrule
+        Minste kvadrater & Justere parametere basert på referansemålinger. & Ved innkjøring av nye sensorer eller komponenter. & Måleserier, residuallogg og parameteroversikt. \\
+        Bayesiansk oppdatering & Kombinere historisk kunnskap med nye observasjoner. & Når usikkerhet skal uttrykkes eksplisitt og modeller skal sammenliknes. & Prior- og posteriorfordelinger samt versjonslogg. \\
+        Kalman-filtre & Sanntidsestimater av tilstand og støy. & I operativ drift med streamingdata og krav til rask respons. & Konfigurasjon av filter, kovariansmatriser og alarmintervaller. \\
+        Eksperimentell design & Planlegge testkampanjer for flerfidelitetsmodeller. & Før modelloppdateringer i laboratorier eller testfelt. & Testplan, datakvalitetsprotokoll og risikovurdering. \\
+    \end{tabular}
+\end{table}
+
+Dokumentasjonen må vise hvilke datasett som ligger til grunn, hvordan datakvalitet er vurdert og hvilke roller som godkjenner nye
+parameterverdier før de tas i bruk i produksjon.
 
 \subsection{Case: Digital tvilling for fjernvarme i Oslo}
 Fortum Oslo Varme har utviklet en digital tvilling for å optimalisere energiproduksjon og distribusjon i fjernvarmenettet.
@@ -114,6 +175,30 @@ teknologipartnere og kommune gir en robust modell som støtter både operativ dr
     \item Kartlegg hvilke datakilder som skal kobles til og etabler nødvendige API-er eller databrokere.
     \item Implementer monitorering som fanger avvik mellom modell og observasjoner i sanntid.
     \item Planlegg regelmessige kalibreringssykluser og dokumentér endringer i parametere og antagelser.
+\end{enumerate}
+
+\section{Modelldokumentasjon og styring}
+God dokumentasjon sikrer at digitale tvillinger kan forvaltes over tid og at beslutninger er etterprøvbare. ISO~23247 beskriver hvordan modellbeskrivelser, datakataloger og styringsrutiner bør struktureres for produksjonsnære tvillinger \citep{iso23247-2021}. Ved å etablere en felles dokumentasjonsprosess blir det enklere å dele modeller på tvers av fagmiljø og følge opp krav fra myndigheter og industripartnere.
+
+\subsection{Kjerneartefakter}
+Hvert modelloppsett bør følges av en artefaktsamling som minimum inneholder:
+\begin{itemize}
+    \item \textbf{Modelljournal} med formål, antagelser, matematiske representasjoner og referanse til opplæringsdata.
+    \item \textbf{Datakatalog} som beskriver kilder, oppdateringsfrekvens, kvalitetsindikatorer og tilgangsnivå.
+    \item \textbf{Beslutningslogg} som kobler modellresultater til tiltak, ansvarlige personer og godkjenningstidspunkt.
+    \item \textbf{Risikovurdering} som fanger opp driftsavvik, cybersikkerhetskrav og konsekvenser av modellfeil.
+\end{itemize}
+
+\subsection{Versjonskontroll og sporbarhet}
+Alle modeller bør ligge i et versjonsstyrt repositorium der kode, parametere og dokumentasjon utvikles samlet. Metadata for hver versjon må beskrive hvilke datasett og kalibreringsmetoder som er brukt, samt referanser til godkjenning og testresultater. For hybride og flerfidelitetsmodeller innebærer dette at også grensesnittfiler og transformasjoner sjekkes inn, slik at ko-simulering kan reproduseres ved behov \citep{boschert2018digital}. Kombiner gjerne Git-baserte prosesser med automatisert rapportering fra modellovervåkingen for å vise status i sanntid.
+
+\subsection{Sjekkliste før fagfellegjennomgang}
+Før en modell distribueres til undervisning eller pilotering, bør teamet kontrollere følgende punkter:
+\begin{enumerate}
+    \item Alle kilder og referanser er oppdatert i modelljournalen, og versjonsnummer samsvarer med distribuerte pakker.
+    \item Kalibreringsresultater og usikkerhetsanalyser er lagret sammen med underliggende datasett og beskrivelser av kvalitetssikring.
+    \item Tiltak for sikker tilgang, personvern og beredskap er dokumentert, inkludert roller og kontaktpunkter for hendelseshåndtering.
+    \item Plan for kontinuerlig forbedring er definert med milepæler, måleparametere og ansvarlig fagressurs.
 \end{enumerate}
 
 \section{Norske politiske rammer}
