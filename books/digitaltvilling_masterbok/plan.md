@@ -3,6 +3,7 @@
 Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og for studenter som skal arbeide seg gjennom boken.
 
 > Notat (2024-05-08): Oppdatert med lenke til illustrasjons- og grafikkplan som beskriver leveranser per kapittel.
+> Notat (2024-07-15): Datapipeline-illustrasjonen i Kapittel 3 er harmonisert med fargepaletten og dokumentert i metadatafil `kap03-datapipeline-v2.alt.md`.
 
 ## Statusoversikt
 
@@ -10,7 +11,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | --- | -------- | ------ | ---------- |
 | I | Kapittel 1 | Helhetlig tekst med historikk, begreper, økosystem og verdiskaping. | Planlegg fagfellelesing og oppdater kildehenvisninger til de norske eksemplene. |
 | I | Kapittel 2 | Helhetlig utkast som beskriver systemkart, modelleringsparadigmer og kalibrering. | Produser ferdige figurer av systemkartene og kvalitetssikre referanser til standarder og verktøy. |
-| I | Kapittel 3 | Helhetlig utkast med dataflyt, integrasjonsarkitektur og øvinger. | Samordne fagfellelesing og avklar hvilke illustrasjoner som skal ferdigstilles for publisering. |
+| I | Kapittel 3 | Helhetlig utkast med dataflyt, integrasjonsarkitektur og øvinger. | Samordne fagfellelesing og ferdigstille resterende illustrasjoner; datapipeline-versjon 2 er klar med registrert alt-tekst. |
 | II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
 | II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering og dataassimilering. | Samle utfyllende referanser og etabler vurderingskriterier før fagfellelesing. |
 | II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet og etikk. | Verifiser standardhenvisninger og vurder om kapitlet trenger støttediagrammer. |
