@@ -1,5 +1,7 @@
 \chapter{Systemtenkning og modellering}
 
+% Notat (2024-07-16): Konvertert systemkart og kausalsløyfe til TikZ med tilhørende metadata og alt-tekst.
+
 \section{Læringsmål}
 \begin{itemize}
     \item Analysere komplekse systemer ved hjelp av systemtenkning.
@@ -17,53 +19,27 @@ Systemtenkning starter med å forstå hvilke deler av virkeligheten som påvirke
     \item Hvilke målkonflikter kan oppstå mellom interessentene?
 \end{itemize}
 
-\subsection{Figur 2.1 -- Systemkart for produksjonslinje med digital tvilling}
-\begin{verbatim}
-flowchart LR
-    subgraph Felt
-        Sensorer["IoT-sensorer i utstyr"]
-        Styring["PLC og lokale styringer"]
-    end
-    Edge["Edge-gateway"]
-    Mes["MES"]
-    Historian["Prosesshistorian"]
-    Analyse["Analyse- og ML-plattform"]
-    DT["Digital tvilling"]
-    Dashboard["Operatørdashboard"]
-    Vedlikehold["Vedlikeholdsteam"]
-    Ledelse["Ledelsesrapporter"]
+\subsection{Systemkart for produksjonslinje med digital tvilling}
+% Alt-tekst: support/figurer/metadata/kap02-systemkart-v1.alt.md
+\begin{figure}[ht]
+    \centering
+    \resizebox{\textwidth}{!}{\input{../support/figurer/kilder/kap02-systemkart-v1.tikz}}
+    \caption{Systemkart som viser hvordan data flyter fra felt via edge- og produksjonsstyringslag til analyseplattformer og digitale tvillingtjenester.}
+    \label{fig:kap02-systemkart}
+\end{figure}
 
-    Sensorer --> Edge --> Mes
-    Styring --> Mes
-    Edge --> Historian
-    Mes --> Ledelse
-    Historian --> Analyse --> DT
-    DT --> Dashboard
-    DT --> Vedlikehold
-    Vedlikehold --> Mes
-\end{verbatim}
+Figur~\ref{fig:kap02-systemkart} illustrerer et typisk informasjonsløp der feltnivå, edge-infrastruktur og produksjonsstyringssystemer er tydelig gruppert. Historiske data kombineres med analyseplattformen for å oppdatere den digitale tvillingen, som igjen leverer beslutningsstøtte til operatører, vedlikeholdsteam og ledelse. Når du lager et eget systemkart, noter eksplisitt hvilke datatyper som flyter mellom nodene, og marker hvor ansvar og eierskap ligger i hvert lag.
 
-Figuren illustrerer et typisk informasjonsløp der feltdata fra sensorer strømmer via en edge-gateway inn i produksjonsstyringssystemet. Historiske data kombineres med analyseplattformen for å oppdatere den digitale tvillingen, som igjen leverer beslutningsstøtte til operatører, vedlikeholdsteam og ledelsen. Når du lager et eget systemkart, noter eksplisitt hvilke datatyper som flyter mellom nodene, og marker hvor ansvar og eierskap ligger.
+\subsection{Kausalsløyfe mellom vedlikehold og energibruk}
+% Alt-tekst: support/figurer/metadata/kap02-kausal-v1.alt.md
+\begin{figure}[ht]
+    \centering
+    \resizebox{0.92\textwidth}{!}{\input{../support/figurer/kilder/kap02-kausal-v1.tikz}}
+    \caption{Forsterkende (grønn) og dempende (oransje) sammenhenger mellom planlagt vedlikehold, tilstandsovervåkning, nedetid, energiforbruk og produktkvalitet.}
+    \label{fig:kap02-kausal}
+\end{figure}
 
-\subsection{Figur 2.2 -- Kausalsløyfe mellom vedlikehold og energibruk}
-\begin{verbatim}
-graph LR
-    Vedlikeholdsfrekvens((Planlagt vedlikehold))
-    SensorStatus((Tilstandsovervåkning))
-    Nedetid((Planlagt nedetid))
-    Energiforbruk((Energiforbruk))
-    Produksjonskvalitet((Produktkvalitet))
-    Overforbruk((Uplanlagt stopp))
-
-    Vedlikeholdsfrekvens -- øker --> SensorStatus
-    SensorStatus -- reduserer --> Overforbruk
-    Overforbruk -- øker --> Nedetid
-    Nedetid -- reduserer --> Energiforbruk
-    Energiforbruk -- påvirker --> Produksjonskvalitet
-    Produksjonskvalitet -- påvirker --> Vedlikeholdsfrekvens
-\end{verbatim}
-
-Kausalsløyfen viser hvordan systemkart kan brukes til å fange både ønskede og uønskede tilbakemeldinger. Økt planlagt vedlikehold forbedrer sensorenes status, som reduserer risiko for uplanlagte stopp. Lavere uplanlagt nedetid gir stabilt energiforbruk og høyere produktkvalitet, noe som igjen påvirker vedlikeholdsstrategien. Når slike forhold beskrives eksplisitt, blir det enklere å diskutere scenarier med interessenter og identifisere hvor den digitale tvillingen bør levere mest verdi.
+Kausalsløyfen i figur~\ref{fig:kap02-kausal} viser hvordan systemkart kan brukes til å fange både ønskede og uønskede tilbakemeldinger. Økt planlagt vedlikehold forbedrer sensorenes status, som reduserer risiko for uplanlagte stopp og stabiliserer energibruken. Et stabilt energinivå gir høyere produktkvalitet, noe som igjen påvirker vedlikeholdsstrategien gjennom læring og prioritering av tiltak. Når slike forhold beskrives eksplisitt, blir det enklere å diskutere scenarier med interessenter og identifisere hvor den digitale tvillingen bør levere mest verdi.
 
 \textbf{Arbeidsmåte for å utvikle systemkart:}
 \begin{enumerate}

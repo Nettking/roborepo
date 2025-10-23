@@ -4,6 +4,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 
 > Notat (2024-05-08): Oppdatert med lenke til illustrasjons- og grafikkplan som beskriver leveranser per kapittel.
 > Notat (2024-07-15): Datapipeline-illustrasjonen i Kapittel 3 er harmonisert med fargepaletten og dokumentert i metadatafil `kap03-datapipeline-v2.alt.md`.
+> Notat (2024-07-16): Systemkart og kausalsløyfe i Kapittel 2 er konvertert til TikZ og dokumentert i figurmetadata.
 
 ## Statusoversikt
 
