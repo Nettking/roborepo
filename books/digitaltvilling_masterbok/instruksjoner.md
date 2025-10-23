@@ -17,10 +17,10 @@ Denne filen beskriver hvordan neste oppgave skal velges og hvordan bidrag organi
 ## Stil og formatering
 
 - Bruk norsk bokmål.
-- Kapittelfiler skrives i Markdown (`.md`).
-- Strukturér kapitler med nivå 1-overskrift for kapittelets tittel og nivå 2-overskrifter for hovedseksjoner.
+- Kapittelfiler og frontmatter skrives i LaTeX (`.tex`) og inkluderes via `main.tex`.
+- Strukturér kapitler med `\chapter{...}`, `\section{...}` og `\subsection{...}`. Bruk `\begin{itemize}`/`\begin{enumerate}` for lister og `\begin{tabular}` for tabeller.
 - Hvert kapittel bør inneholde læringsmål, hovedinnhold og forslag til øvingsoppgaver eller refleksjonsspørsmål.
-- Bruk tabeller eller punktlister for å tydeliggjøre konsepter når det er hensiktsmessig.
+- Kontroller at nye pakker eller kommandoer er kompatible med den eksisterende LaTeX-oppsettet i `main.tex`.
 
 ## Oppdatering av plan
 

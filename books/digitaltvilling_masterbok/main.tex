@@ -1,0 +1,44 @@
+% main.tex – LaTeX-prosjekt for Digitale tvillinger i praksis for masterstudenter
+\documentclass[12pt]{book}
+
+% Pakker
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\geometry{margin=1in}
+\setlist{itemsep=0.5em}
+
+% Metadata
+\title{Digitale tvillinger i praksis for masterstudenter}
+\author{Redaksjonen}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+\include{frontmatter/forord}
+
+\mainmatter
+\include{chapters/kapittel01-introduksjon}
+\include{chapters/kapittel02-systemtenkning}
+\include{chapters/kapittel03-data}
+\include{chapters/kapittel04-simulering}
+\include{chapters/kapittel05-ai}
+\include{chapters/kapittel06-validering}
+\include{chapters/kapittel07-livssyklus}
+\include{chapters/kapittel08-case}
+\include{chapters/kapittel09-fremtid}
+
+\backmatter
+% Plass for appendiks, referanser eller andre ressurser.
+
+\end{document}
