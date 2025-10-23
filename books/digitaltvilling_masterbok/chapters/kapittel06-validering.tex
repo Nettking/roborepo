@@ -1,5 +1,7 @@
 \chapter{Validering, verifikasjon og tillit}
 
+% Notat: Kapittel 6 er utvidet med rammeverk, usikkerhetsanalyse og etikk for å støtte helhetlig kvalitetsstyring.
+
 \section{Læringsmål}
 \begin{itemize}
     \item Etablere prosesser for validering og verifikasjon av digitale tvillinger.
@@ -8,29 +10,29 @@
 \end{itemize}
 
 \section{Valideringsrammeverk}
-\begin{itemize}
-    \item Forskjell mellom verifikasjon og validering.
-    \item Standarder og beste praksis (ISO 9001, ASME V\&V, NASA).
-    \item Kontinuerlig validering gjennom livssyklusen.
-\end{itemize}
+Validering og verifikasjon er to komplementære kontrollsløyfer som må inngå i samme kvalitetsledelsessystem. \textit{Verifikasjon} handler om å teste at den digitale tvillingen er riktig implementert i henhold til spesifikasjoner, for eksempel ved å sjekke at koden følger modellgrunnlaget og at grensesnittene mot sensorer er konsistente. \textit{Validering} handler om å demonstrere at tvillingen er egnet til formålet den skal støtte, ved å sammenligne modellens resultater med observasjoner, operatørkunnskap og forretningsmessige krav. I praksis bør disse aktivitetene planlegges i et V\&V-program med tydelige akseptkriterier, roller og beslutningspunkter.
+
+Flere etablerte standarder kan brukes som rammeverk. ISO~9001 gir føringer for styring av kvalitetsprosesser og dokumentasjon, mens DNV-RP-A204 og ASME V\&V 40 beskriver hvordan digitale tvillinger og prediktive modeller kan kvalifiseres i sikkerhetskritiske domener. Offentlige aktører som Avinor og Statnett krever at leverandører følger slike prinsipper når nye tvillinger skal tas i bruk. Prosjekter med stor usikkerhet kan også hente metodikk fra NASA sin modellmodenhetsskala, der testplaner og datakvalitetskrav utvikles trinnvis i takt med at tvillingen utvides.
+
+Validering er ikke en engangsaktivitet, men en kontinuerlig praksis gjennom tvillingens livsløp. Hver gang modellen får nye data, algoritmer eller styringsparametere må baseline-modeller, referansescenarier og feltmålinger brukes til å bekrefte at presisjonen er innenfor toleranse. Dette krever en styrt datastrøm inn i DevOps- og MLOps-prosessene, versjonskontroll av modellartefakter, og periodiske revisjoner der både tekniske og domeneeksperter signerer på at tvillingen fortsatt er egnet.
 
 \section{Usikkerhetsanalyse og robusthet}
-\begin{itemize}
-    \item Typer usikkerhet: epistemisk og aleatorisk.
-    \item Sensitivitetsanalyser, Monte Carlo og scenario-testing.
-    \item Robust design og feiltoleranse.
-\end{itemize}
+Usikkerhetsanalyse gjør det mulig å forstå hvor pålitelig tvillingens prediksjoner er. En viktig første aktivitet er å klassifisere usikkerhet som \textit{aleatorisk} (tilfeldige variasjoner i prosessen) eller \textit{epistemisk} (mangel på kunnskap). For eksempel vil en energitvilling for et fjernvarmenett ha aleatorisk usikkerhet knyttet til vær og forbruksmønstre, mens epistemisk usikkerhet kan skyldes ufullstendige rørdata eller sjeldne feilmodi. Klassifiseringen påvirker hvilke tiltak som settes inn: bedre sensorer og datakvalitetsrutiner for epistemisk usikkerhet, og probabilistiske metoder for aleatorisk variasjon.
+
+Konkrete metoder for kvantifisering inkluderer sensitivitetsanalyse for å identifisere hvilke inputvariabler som styrer resultatene, Monte Carlo-simuleringer for å beregne sannsynlighetsfordelinger, og Bayesiansk oppdatering når feltmålinger gradvis forbedrer modellparametrene. Scenario-testing mot historiske driftsforstyrrelser, som produksjonsavvik i prosessindustrien eller værrelaterte avbrudd i kraftnettet, bidrar til å teste modellens robusthet. Resultatene bør uttrykkes gjennom konfidensintervaller, prediksjonsbånd og risikoindikatorer som kan deles med beslutningstakere.
+
+Robust design handler også om å gjøre tvillingen og den fysiske prosessen motstandsdyktig mot feil. Dette omfatter redundante sensorer, feiltolerante algoritmer og beredskapsprosedyrer når modellen oppdager avvik. I industrielle DevOps-team betyr det at valideringsresultater må integreres i sprint- og releaseritualer, slik at usikkerhet blir aktivt styrt og ikke bare rapportert.
 
 \section{Etikk, transparens og forklarbarhet}
-\begin{itemize}
-    \item Krav til sporbarhet og revisjon.
-    \item Forklarbar AI og ansvarlig bruk av data.
-    \item Kommunikasjon med ledelse, operatører og myndigheter.
-\end{itemize}
+Tillit til den digitale tvillingen forutsetter at både data og beslutninger er sporbare. Prosjektet bør etablere en styringsmodell for datasett, med kildebeskrivelser, behandlingsgrunnlag og kontroll av personvern i tråd med GDPR og den kommende EUs AI-forordning. Revisjonsspor i form av dataversjoner, modellkonfigurasjoner og brukerhandlinger gjør det mulig å rekonstruere hvorfor en anbefaling ble gitt og hvem som godkjente den.
+
+Forklarbarhet er spesielt viktig når tvillingen benytter maskinlæring. Kombiner visuelle dashboards med tekstlige forklaringer som gjør det klart hvilke faktorer som påvirker en prediksjon, og hvilke begrensninger som gjelder. For operatører kan dette være interaktive «hva om»-analyser, mens ledelsen trenger oversikter over KPI-er, sikkerhetsmarginer og regulatorisk etterlevelse. For offentlige aktører som helseforetak eller samferdselsmyndigheter er det også nødvendig å kommunisere åpent med borgere om hvordan data brukes og hvilke rettigheter de har.
+
+Etikk omfatter også vurdering av konsekvenser for arbeidstakere, leverandører og miljø. En digital tvilling kan flytte beslutningsmyndighet fra erfarne fagarbeidere til automatiserte systemer; derfor bør organisasjonen ha tiltak for kompetansebygging, brukermedvirkning og varsling av uønskede hendelser. En klar etikkpolicy med kontaktpunkter for spørsmål og avvik styrker opplevd integritet og reduserer motstand mot innføringen.
 
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}
-    \item Definer en valideringsstrategi for en digital tvilling i helsevesenet.
-    \item Beskriv hvordan du ville gjennomføre en usikkerhetsanalyse for en energimodell.
-    \item Diskuter tiltak for å ivareta etikk og personvern i prosjektet.
+    \item Definer en valideringsstrategi for en digital tvilling i helsevesenet, og identifiser hvilke standarder og datasett som må håndteres for å dokumentere pasientsikkerhet.
+    \item Beskriv hvordan du ville gjennomføre en usikkerhetsanalyse for en energimodell, inkludert valg av statistiske metoder og hvordan resultatene skal presenteres for driftsorganisasjonen.
+    \item Diskuter tiltak for å ivareta etikk og personvern i prosjektet, og foreslå hvordan funnene kan formidles til både tekniske team og eksterne tilsynsmyndigheter.
 \end{enumerate}
