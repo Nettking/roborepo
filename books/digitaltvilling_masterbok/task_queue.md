@@ -4,7 +4,6 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Aktive oppgaver
 
-- `TODO` – Utvikle Kapittel 9 til en helhetlig tekst om forskningsfront, trender og forslag til masterprosjekter.
 - `TODO` – Opprette en begrepsliste/ordliste i støttefilene som samler norske og engelske uttrykk brukt i boken.
 - `TODO` – Etablere et BibTeX-bibliotek og beskrive siteringspraksis slik at kapitlene kan referere til kilder.
 
@@ -30,3 +29,4 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 - `FERDIG` – Utarbeidet casestudie-mal i Kapittel 8 med fokus på batteriproduksjon i Mo i Rana.
 - `FERDIG` – Fullført Kapittel 1 med prosa om nøkkelbegreper, økosystem og verdiskaping, og supplert med norske eksempler.
 - `FERDIG` – Skrev Kapittel 4 med helhetlig tekst om simuleringsmetoder, analyseprosesser, verktøy og praksiseksempel fra fjernvarme.
+- `FERDIG` – Utviklet Kapittel 9 til en helhetlig tekst om forskningslandskap, trender og prosjektforslag.
