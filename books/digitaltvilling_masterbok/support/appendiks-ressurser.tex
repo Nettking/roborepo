@@ -69,6 +69,30 @@ Norsk Helsenett – Norm for informasjonssikkerhet & Retningslinjer, maler og ri
 \bottomrule
 \end{longtable}
 
+\section{Transport- og logistikkressurser}
+% Notat (2025-10-23): Lagt til sektoroversikt for å støtte casearbeid i kapittel~8.
+\label{sec:transportressurser}
+\begin{longtable}{p{0.28\textwidth}p{0.32\textwidth}p{0.30\textwidth}}
+\toprule
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i transport?} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i transport?} \\
+\midrule
+\endhead
+Entur – Mobilitetsdata (GTFS/NeTEx) & Nasjonal plattform for kollektivtrafikkdata med ruteplaner, stoppesteder og sanntidsavvik tilgjengelig via åpne API-er. & Modellér passasjerflyt, koordinér multimodale reiser og test scenarioer for kapasitetsstyring i by- og regiontvillinger. \\
+\addlinespace
+Bane NOR – Banedata og arbeidsplan-API & Datasett over infrastruktur, kapasitet, vedlikeholdsplaner og operative meldinger for jernbanenettet. & Synkroniser vedlikeholdsplanlegging med simulerte togbevegelser og vurder effekten av avvik på punktlighet og ressursbruk. \\
+\addlinespace
+Avinor – Operasjonelle flyplassdata & Åpne data om ankomster, avganger, stand-tildeling og passasjerstatistikk for norske lufthavner. & Bygg digitale tvillinger av terminallogistikk, analysér bakketjenester og optimaliser ressursallokering gjennom dagen. \\
+\addlinespace
+Kystverket/BarentsWatch – AIS og havneoversikt & Sanntidsposisjoner, farleder, havneinformasjon og sikkerhetsmeldinger for norskekysten tilgjengelig via API og nedlasting. & Simuler seilingsmønstre, planlegg kaiutnyttelse og vurder beredskapstiltak i maritime tvillinger. \\
+\addlinespace
+Statens vegvesen – Nasjonal vegdatabank (NVDB) & Objektdata om vegnett, fartsgrenser, tunneler og tilstandsanalyser, eksponert som REST-API og nedlastbare datasett. & Kombiner statiske vegdata med trafikkstrømmer for å analysere vedlikeholdsetterslep, kapasitetsutvidelser og sikkerhetstiltak. \\
+\bottomrule
+\end{longtable}
+
 \section{Personvern og bruk av sensitive data}
 \begin{enumerate}
     \item Kartlegg behandlingsgrunnlag i henhold til GDPR artikkel~6 og 9 før datainnsamling. For forskningsprosjekter bør det innhentes godkjenning via \emph{Helsedataservice} og relevant etisk komité.

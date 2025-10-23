@@ -12,6 +12,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Ferdige oppgaver
 
+- `FERDIG` – Utvidet `support/appendiks-ressurser.tex` med transport- og logistikkressurser og refererte dem fra Kapittel 8 for å støtte sektorarbeidet.
 - `FERDIG` – Harmoniserte datapipeline-illustrasjonen i Kapittel 3 med fargepalett, definerte farger i `main.tex` og registrerte alt-tekst i `support/figurer/metadata/kap03-datapipeline-v2.alt.md`.
 
 - `FERDIG` – Integrerte vurderingsmatrisen for casevalg i `support/larerveiledning.tex` slik at undervisningsopplegget bruker de samme kriteriene som Kapittel 8.
