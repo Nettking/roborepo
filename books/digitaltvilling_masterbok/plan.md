@@ -94,6 +94,60 @@ En anbefalt 6-ukersmodul:
 | 5 | Kapittel 6 og 7 | Utarbeide valideringsplan og governance-oversikt |
 | 6 | Kapittel 8 og 9 | Presentere norsk case, skrive forskningsidé |
 
+## Plan for pilotundervisning
+
+Pilotgjennomføringen skal teste leseplanen i en seksukers intensivmodul med én tverrfaglig studentkohort (ca. 24 deltakere) og tre faglige mentorer. Målet er å verifisere at progresjon, oppgavebelastning og vurderingsformer fungerer før fullskalarulling i studieåret 2025/26.
+
+### Overordnet tidslinje
+
+| Tidspunkt | Aktivitet | Ansvarlig |
+| --- | --- | --- |
+| Uke -4 | Rekruttere deltakere fra informatikk-, teknologi- og økonomimiljøer; sende ut forkunnskapsskjema. | Programleder og studieadministrasjon |
+| Uke -3 | Planleggingsmøte med mentorene for å avstemme læringsmål, ressurser og vurderingskriterier. | Programleder |
+| Uke -2 | Tilgang til læringsplattform, distribusjon av forhåndslesing og oppsett av prosjektcaser. | Fagteam |
+| Uke -1 | Teknisk prøverunde (videoverktøy, dataservere, JupyterHub) og romreservasjoner. | IT-drift |
+| Uke 0 (fredag) | Kick-off-workshop (3 timer) med introduksjon, forventningsavklaringer og teaminndeling. | Programleder |
+| Uke 1–6 | Undervisningsuker iht. leseplanen under, inkludert mentorstøtte og ukentlige innsjekk. | Mentorteam |
+| Uke 6 (fredag) | Sluttpresentasjoner, individuell muntlig vurdering og innsamling av tilbakemeldinger. | Sensorpanel |
+| Uke 7 | Evalueringsmøte: analysere data, identifisere forbedringer og oppdatere læremateriell. | Programleder og fagteam |
+
+### Undervisningsdesign per uke
+
+| Uke | Kapitler og fokus | Fysiske/ digitale arenaer | Leveranser og vurdering | Støttetiltak |
+| --- | --- | --- | --- | --- |
+| 1 | Kapittel 1–2: begreper og modellering. | Auditorium (2 timer), prosjektrom (2 timer), Teams-kanal. | Individuelt refleksjonsnotat vurdert til bestått/ikke bestått. | Mentorvakt digitalt tirsdag, ressursbibliotek i Teams. |
+| 2 | Kapittel 3: dataflyt og integrasjon. | Laboratorieverksted med whiteboard og datalab. | Gruppelevert dataflytdiagram (10\%) med rubrikkvurdering. | IT-støtte for integrasjonsverktøy, skyressurser reservert. |
+| 3 | Kapittel 4: simulering. | Hybridlab (AnyLogic/Modelica) + opptak av demonstrasjon. | Kort laboratorierapport (10\%) per gruppe. | Tilgang til lisensiert simuleringsverktøy, felles veiledning torsdag. |
+| 4 | Kapittel 5: ML og optimalisering. | Seminarrom, breakout-økter i Zoom. | Gruppepitch (10\%) og fagfellekommentar. | Datasettpakker og modellmaler i Git-repo. |
+| 5 | Kapittel 6–7: kvalitet og styring. | Rollespillrom, digital tavle (Miro). | RACI-matrise + valideringsplan (15\%) per gruppe. | Juridisk rådgiver tilgjengelig for spørsmål om personvern. |
+| 6 | Kapittel 8–9: casepresentasjoner og trender. | Auditorium med streaming. | Sluttpresentasjon (25\%), skriftlig rapport (20\%), individuell muntlig prøve (10\%). | Eksternt sensorpanel, opptak for etterprøving. |
+
+Vektleggingen summerer til 100\% (45\% underveisleveranser, 55\% sluttvurdering) og kombinerer gruppe- og individuelle elementer. Ukentlige leveranser vurderes primært formativt, men inngår i sluttkarakteren der vekting er angitt.
+
+### Vurderingsmetoder og kvalitetskriterier
+
+1. **Underveisvurdering (45\%):** Rubrikk for refleksjonsnotat, dataflytdiagram, laboratorierapport og RACI-matrise. Rubrikkene beskriver læringsnivå (intro–avansert) og kobles til læringsmålene i kapittelbeskrivelsene.
+2. **Prosjektpresentasjon (25\%):** Flerdimensjonal rubrikk med kriterier for problemforståelse, metodikk, dataforvaltning, gevinstplan og formidling. Sensorpanel bestående av en faglærer, industrimentor og ekstern akademisk sensor.
+3. **Skriftlig rapport (20\%):** Vurderes etter struktur, bruk av data, faglig dybde og kobling til teori. Leveres gruppevis med individuell ansvarsfordeling synliggjort i vedlegg.
+4. **Individuell muntlig prøve (10\%):** 10 minutter per student (5 minutter presentasjon av eget bidrag, 5 minutter spørsmål). Fokus på refleksjon, kritisk tenkning og videre forbedringer.
+5. **Tilbakemeldingssløyfe:** Mentorene gir skriftlig tilbakemelding i læringsplattformen innen 48 timer etter hver ukeaktivitet. Summative vurderinger ferdigstilles innen 5 arbeidsdager etter avsluttet pilot.
+
+### Logistikk og støtteapparat
+
+- **Rombestillinger:** Fast auditorium (torsdager 09–11), prosjektrom (mandager 13–15) og datalab (onsdager 12–16). Reservasjoner legges i Outlook-kalenderen «DT Pilot 2025».
+- **Digital infrastruktur:** Teams for kommunikasjon, OneDrive for dokumentdeling, JupyterHub for dataanalyse, og GitLab-gruppe for kode og modeller. All tilgang settes opp i uke -2.
+- **Mentoroppsett:** Tre mentorer (modellering, data, governance) deler på ukentlige kontortimer. Industripartnere inviteres til uke 4–6 for å gi caserelatert feedback.
+- **Ressurser:** Lisenspakker for AnyLogic og Simulink, skybudsjett i Azure (10 000 NOK), samt datasett fra energisektoren og maritim industri. Biblioteket tilrettelegger for nødvendig litteratur.
+- **Kommunikasjon:** Ukentlig nyhetsbrev til deltakerne med agenda, forberedelser og lenker til støtteinnhold. Programleder rapporterer status til instituttleder etter ukene 2 og 5.
+
+### Evaluering og videreføring
+
+- **Datainnsamling:** Kursundersøkelse (Likert + åpne spørsmål), fokusgrupper med studentrepresentanter og logganalyse fra digitale verktøy.
+- **Analyse:** Fagteamet sammenstiller funn i en evalueringsrapport innen uke 8. Rapporten skal foreslå konkrete endringer i kapittelinndeling, aktivitetstyngde og vurderingsvekter.
+- **Oppfølging:** Tiltak prioriteres i redaksjonens arbeidsmøte og følges opp i `task_queue.md`. Oppdaterte anbefalinger innarbeides i `support/larerveiledning.tex` og kommende utgave av planen.
+
+> Notat (2024-05-08): Seksjonen er lagt til for å dokumentere pilotopplegget og knytte vurderingsmetoder/logistikk til leseplanen.
+
 ## Plan for fagfellelesing
 
 Fagfelleløpet organiseres over fire uker, med felles vurderingsmal og digital tilbakemeldingsportal (OwnCloud-skjema). Interne
