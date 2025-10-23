@@ -26,12 +26,14 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
    - Status: Helhetlig tekst med historiske linjer, nøkkelbegreper, økosystem og verdiskapingscase.
    - Læringsmål: Forstå grunnbegreper, historikk og sentrale drivere.
    - Forfatteroppgaver (neste steg): Planlegg fagfellelesing, gjennomfør språkvask og oppdater referanseliste med kilder til norske eksempler.
+   - Fagfelleplan: Fagfellepakke sendes 27.05 (Ingrid Lunde), digital gjennomgang 03.06 med Equinor og NTNU, tiltaksmøte i redaksjonen 07.06 for prioritering.
    - Studentaktivitet: Kort refleksjon over egen fagbakgrunn og relevans.
 
 2. **Kapittel 2 – Systemtenkning og modellering**
    - Status: Helhetlig tekst med systemperspektiv, modelleringsparadigmer, integrasjon og norsk case.
    - Læringsmål: Kjenne til modelleringsteknikker (fysikkbasert, datadrevet, hybride).
    - Forfatteroppgaver (neste steg): Lage ferdige figurer basert på systemkartene, kvalitetssikre referanser og vurdere behov for supplerende eksempler.
+   - Koordinering med Kapittel 1: Delta i fagfelleløp med utsendelse 27.05, workshop 03.06 og tiltaksoppfølging 07.06 for å samkjøre endringer i begrepsbruk og case.
    - Studentaktivitet: Lag en konseptuell modell for en valgt prosess.
 
 3. **Kapittel 3 – Data, integrasjon og infrastruktur**
