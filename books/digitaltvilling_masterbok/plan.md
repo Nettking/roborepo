@@ -188,10 +188,19 @@ Fagfellelogg i `support/fagfellelogg.csv` er oppdatert med konkrete tiltak, fris
 | --- | --- | --- | --- | --- | --- |
 | KT-01 | Begrepsavklaring | Ferdigstille definisjonsnotat og avklare terminologi med ordliste-teamet før utsending. | Ingrid Lunde | 15.05 | Under arbeid |
 | KT-02 | Caseforslag | Gjennomføre workshop 16.05 for å prioritere to nye case til kapittel 2 og oppdatere manusdisposisjon. | Ingrid Lunde | 17.05 | Under vurdering |
-| DI-03 | Dataflyt | Dokumentere datakvalitetskrav i delingsnotat og avstemme tekniske avhengigheter i kapittel 3. | Ahmed Solheim | 22.05 | Planlagt oppfølging |
+| DI-03 | Dataflyt | Dokumentere datakvalitetskrav i delingsnotat og avstemme tekniske avhengigheter i kapittel 3. | Ahmed Solheim | 22.05 | Under arbeid |
 | AI-04 | Algoritmevalg | Utarbeide algoritmematrise med vurderingskriterier og skisse til caseoppgave. | Nora Aas | 24.05 | Planlagt oppfølging |
 | GV-05 | Governance-tiltak | Lage tiltakslogg for gevinstoppfølging og integrere KPI-er i kapittel 7. | Leif Ødegaard | 29.05 | Planlagt oppfølging |
 | ST-06 | Terminologi | Oppdatere ordliste med nye begrep og engelske ekvivalenter etter fagfelleinnspill. | Astrid Hauge | 31.05 | Planlagt oppfølging |
+
+> Notat (2024-05-11): Oppdatert med arbeidsflyt for fagfellekommentar DI-03 om datakvalitet i kapittel 3.
+
+### Oppfølging av DI-03 – datakvalitet for Kapittel 3
+Tiltaket skal dokumentere hvordan kapittel 3 håndterer datakvalitet og governance etter fagfelleinnspillene. Arbeidet følger tre del-leveranser frem mot fristen 22.05:
+
+1. **Datastyringsforum etablert (uke 1):** Produkteier, data steward og plattformteam samordner møtearena og referatmal. Prinsippene er beskrevet i Kapittel 3, seksjonen «Datastyring og kontinuerlig forbedring».
+2. **Overvåking og hendelseshåndtering (uke 2):** Datakvalitetsdashbord og avvikssporing defineres, med alarmgrenser og roller som speiler hendelsesprosessen i Kapittel 6.
+3. **Personvern- og etikkgjennomgang (uke 2):** Oppdater datakatalog og dokumentasjon av behandlingsgrunnlag, med referanse til Helsedirektoratet og Normen før deling med fagfeller.
 
 Tiltaksplanen revideres i forkant av ukevis innsjekk, og statusfeltet speiles i fagfelleloggen. Når tiltak er levert, flyttes kommentarene til «Løst»-arkfane i loggfilen og refereres i kapitlenes endringslogg.
 

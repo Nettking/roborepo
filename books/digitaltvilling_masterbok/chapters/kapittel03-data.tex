@@ -2,6 +2,7 @@
 
 % Notat (2024-05-08): Utdypet kapittelet med sammenhengende tekst om dataflyt, integrasjon og sikkerhetstiltak i norske kontekster.
 % Notat (2024-05-09): Lagt til illustrasjon av datapipeline og integrasjonslag for \aa synliggj\o re samspillet mellom arkitekturelementene.
+% Notat (2024-05-11): Beskrevet datastyring og kvalitetsrutiner knyttet til fagfellekommentar DI-03.
 \section{L\ae ringsm\aa l}
 \begin{itemize}
     \item Beskrive arkitekturen for datafangst, lagring og distribusjon i digitale tvillinger.
@@ -70,6 +71,27 @@ Zero-trust inneb\ae rer at alle foresp\o rsler autentiseres og autoriseres, uans
 
 \subsection{Juridiske hensyn}
 GDPR krever at personopplysninger behandles med tydelig hjemmel og strenge tilgangsregler. Selv n\a r dataene i utgangspunktet er tekniske, kan kombinasjonen av sensorinformasjon og arbeidsplaner gj\o re dem identifiserbare. Datasuverenitet har f\aa tt \o kt fokus etter Schrems II-dommen; virksomheter m\aa vite hvor dataene fysisk lagres og hvilke underleverand\o rer som involveres. Mange velger \aa knytte seg til norske eller europeiske skyer, eller \aa bruke konfigurerbare sovereign cloud-l\o sninger.
+
+\section{Datastyring og kontinuerlig forbedring}
+For \aa sikre at datapipelinen leverer konsistent kvalitet m\aa tekniske tiltak kobles til tydelige roller og arbeidsprosesser. Norske virksomheter etablerer ofte et datastyringsforum som samler produkteier, data steward, sikkerhetsansvarlig og representanter fra drift. Forumet prioriterer tiltak basert p\aa indikatorer for datakvalitet, hendelseslogger og fagfelleinnspill.
+
+\subsection{Roller og m\o tearenaer}
+\begin{itemize}
+    \item \textbf{Data steward:} Overv\aa ker datakvalitet og initierer korrigerende tiltak n\aa r regler brytes, for eksempel ved \aa sende saker til endringsstyret eller oppdatere datakontrakter.
+    \item \textbf{Produkteier for tvillingen:} Sikrer at hendelser med h\o y forretningsrisiko f\o lges opp og at prioriteringene synkroniseres med gevinstplaner i Kapittel~7.
+    \item \textbf{Teknisk plattformteam:} Forvalter overv\aa kingsdashbord, versjonering av dataprosesser og automatiserte tester som kj\o res hver gang datastrukturer endres.
+\end{itemize}
+Forumet kan m\o tes ukentlig i innf\o ringsfasen og deretter m\aa nedlig for moden drift. Referat og tiltak registreres i fagfelleloggen (DI-03) slik at status er synlig for hele redaksjonen.
+
+\subsection{Operasjonelle kontrollpunkter}
+\begin{enumerate}
+    \item \textbf{Datakvalitetsdashbord:} Visualiserer fullstendighet, tidsforsinkelser og valideringsfeil for hver datastr\o m. Alarmgrenser defineres i samarbeid med domeneeksperter og dokumenteres i styringspakken til Kapittel~6.
+    \item \textbf{Hendelsesrespons:} Avvik loggf\o res i samme system som sikkerhetshendelser. Hvert avvik f\aa r ansvarlig person, frist og forslag til kompenserende tiltak (for eksempel fallback-modell eller manuelt kontrollsteg).
+    \item \textbf{L\ae ringssl\o yfe:} Kvartalsvise retrospektiv analyserer m\o nstre i datakvalitetsavvik og oppdaterer pipeline-design eller oppl\ae ringsprogram for operat\o rer.
+\end{enumerate}
+
+\subsection{Samsvar med personvern og etikk}
+N\aa r nye datakilder tas i bruk b\o r datastyringsforumet sjekke behandlingsgrunnlag, vurdering av dataminimering og rutiner for sletting. Et eget sjekkpunkt sikrer at dokumentasjonen speiler kravene fra Helsedirektoratet, Normen og Kapittel~6 om validering og tillit. N\aa r tvillingen skaleres p\aa tvers av anlegg, anbefales det \aa utvide datakatalogen med tydelige beskrivelser av form\aa l og kontaktpunkt for hvert datasett.
 
 \section{Refleksjonssp\o rsm\aa l og \o vinger}
 \begin{enumerate}
