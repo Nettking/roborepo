@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Latex, stage/.style={circle, draw=havgronn!80!black, fill=havgronn!25, minimum size=2.4cm, align=center}, arrow/.style={-Latex, thick, petrol}]
+    \node[stage] (design) {Design\nMaterialdata};
+    \node[stage, right=3.4cm of design] (produksjon) {Produksjon\nProsessdata};
+    \node[stage, below=2.8cm of produksjon] (bruk) {Bruk\nSensor- og driftstall};
+    \node[stage, left=3.4cm of bruk] (retur) {Retur\nSporbarhet og logistikk};
+    \node[stage, above=2.8cm of retur] (resirk) {Resirkulasjon\nKvalitetstesting};
+
+    \draw[arrow] (design) -- node[above, font=\scriptsize]{Digital tvilling for produktstruktur} (produksjon);
+    \draw[arrow] (produksjon) -- node[right, font=\scriptsize]{Tilstand og ytelse} (bruk);
+    \draw[arrow] (bruk) -- node[below, font=\scriptsize]{Returordre og sensordata} (retur);
+    \draw[arrow] (retur) -- node[left, font=\scriptsize]{Materialsporing} (resirk);
+    \draw[arrow] (resirk) -- node[left, font=\scriptsize]{Kvalitetssertifikat} (design);
+    \draw[arrow, dashed] (bruk) to[out=160, in=-20] node[below=0.1cm, font=\scriptsize]{Vedlikehold og reparasjon} (design);
+\end{tikzpicture}

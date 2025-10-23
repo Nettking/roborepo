@@ -56,6 +56,19 @@ r som påvirker beslutningene, og varslingsmekanismer når usikkerheten overstig
 ig å bygge tillit, for eksempel ved å dokumentere hvordan et bestemt sett med sensordata utløste en ny optimaliseringsstrategi
 .
 
+\section{Utvidet analyseeksempel: Immersiv AI-coach}
+For å støtte operatører i komplekse situasjoner bygges en AI-coach som kombinerer simulering, maskinlæring og samarbeid i et immersivt miljø. Figur~\ref{fig:kap05-operator-coach} illustrerer hvordan sensorer, taleinstruksjoner og historiske hendelser kobles til anbefalinger som vises i AR/VR. Operatøren kan stille oppfølgingsspørsmål, trigge what-if-simuleringer og dele tiltakslister direkte i kontrolltårnet. Ved å bruke multimodale modeller kobles tekst, lyd og visuelle observasjoner, og anbefalingene dokumenteres automatisk i beslutningsloggen.
+
+Algoritmene som benyttes må håndtere både tidsserier og kontekstuell informasjon. Støttenotatet \textit{kap05-algoritmematrise-utvidelse.md} beskriver hvilke kombinasjoner av modeller og verktøy som egner seg for slike scenarioer. Eksemplet knytter også anbefalingene til sikkerhetskrav, slik at tiltakene kan vurderes opp mot \citet{iec62443-2-1} og \citet{eu2022nis2} før de settes i drift. Slik bygges en helhetlig kjede fra datafangst via analyse til operasjonell beslutning.
+
+\begin{figure}[htbp]
+    \centering
+    % Alt-tekst: kap05-operator-coach-v1.alt.md
+    \fbox{\parbox{0.9\textwidth}{\centering\textit{Plassholder for AI-coach som viser AR/VR-panel, modellstrømmer og tiltaksliste.}}}
+    \caption{Immersiv AI-coach som kobler multimodale datakilder til anbefalinger i sanntid.}
+    \label{fig:kap05-operator-coach}
+\end{figure}
+
 \section{Vurderingskriterier for AI-drevne tvillinger}
 For å gjøre caseoppgaven i dette kapittelet etterprøvbar må studentene beskrive hvordan algoritmevalgene deres oppfyller krav t
 il ytelse, robusthet og ansvarlighet. Rammeverk som \citet{ec2020trustworthyai} anbefaler at tekniske måltall kombineres med pro
@@ -101,6 +114,17 @@ Anomali- og driftsdeteksjon (autoencoder, isolation forest) & Overvåking av sen
     \item Reflekter i sluttrapporten over hvordan modellen skal videreføres etter prosjektet: hvem eier ansvaret, hvilke indikator
     er skal overvåkes og hvilke beslutningsgrenser krever menneskelig godkjenning.
 \end{enumerate}
+
+\section{Laboratorieøving: Multimodal AI-trening}
+Laboratorieøvelsen for denne seksjonen kombinerer tidsserie-, bilde- og tekstdata i et immersivt kontrollrom. Studentene bruker matrisen i \textit{kap05-algoritmematrise-utvidelse.md} for å velge algoritmer og dokumentere beslutninger.
+
+\begin{enumerate}
+    \item \textbf{Scoping:} Hver gruppe velger to modaliteter (for eksempel tidsserier + tale) og begrunner valget med referanse til produksjonsscenarioet sitt.
+    \item \textbf{Implementering:} Modellene trenes i en delt notebook med støtte for versjonskontroll. Resultatene eksporteres til AR/VR-panelet slik at operatørene kan teste anbefalingene.
+    \item \textbf{Evaluering:} Gruppene fyller ut rubrikken fra støttenotatet og beskriver hvordan tiltakene etterlever kravene i \citet{iec62443-2-1} og \citet{eu2022nis2}.
+\end{enumerate}
+
+Rubrikken gir poeng for datasamsvar, algoritmevalg, operatøropplevelse, etterlevelse og refleksjon. En poengsum på 12 eller mer regnes som godkjent og brukes både av faglærer og medstudent i fagfellevurderingen.
 
 \section{Industrieksempel: Optimal drift av et landbasert oppdrettsanlegg}
 Et norsk oppdrettsanlegg med resirkulerende akvakultur (RAS) kombinerer sensorer for vannkvalitet, fôringssystem og fiskevelfe

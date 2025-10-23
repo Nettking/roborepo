@@ -116,6 +116,62 @@ teknologipartnere og kommune gir en robust modell som støtter både operativ dr
     \item Planlegg regelmessige kalibreringssykluser og dokumentér endringer i parametere og antagelser.
 \end{enumerate}
 
+\section{Norske politiske rammer}
+Digitale tvillinger i Norge utvikles innenfor et politisk landskap som legger tydelige føringer for hvordan data skal forvaltes, deles og brukes. Regjeringens datastrategi for offentlig sektor legger vekt på åpne, tilgjengelige og gjenbrukbare data som skal styrke innovasjon og effektivisering \citep{regjeringen2022datastrategi}. I tillegg beskriver stortingsmeldingen \emph{Data som ressurs} hvordan sektorer må samhandle gjennom felles prinsipper for datadeling, sikkerhet og personvern \citep{meldst22datasomressurs}. Figuren under viser hvordan europeiske, nasjonale og sektorspesifikke initiativ henger sammen når virksomheter planlegger digitale tvillinger.
+
+\begin{figure}[ht]
+    \centering
+    \resizebox{0.9\textwidth}{!}{\input{../support/figurer/kilder/kap02-politikk-ramme-v1.tikz}}
+    \caption{Sammenhengen mellom europeiske initiativ, nasjonale strategier og sektorspesifikke reguleringer som påvirker digitale tvillingprosjekter.}
+    \label{fig:kap02-politikk}
+\end{figure}
+
+\subsection{Statlige føringer og standardisering}
+EU sitt arbeid med datarom og Gaia-X gir retningslinjer for interoperabilitet, sikker tilgang og styring av dataøkosystem \citep{eu2020circulareconomy}. Disse prinsippene videreføres i nasjonale strategier og i oppfølgingen av personvern-, sikkerhets- og energilovgivning. For digitaliseringsprosjekter i offentlig sektor betyr det at arkitekturen må støtte datadeling på tvers av etater, samtidig som den ivaretar krav til informasjonssikkerhet gjennom standarder som ISO~27001 og NIS2. NVE og Samferdselsdepartementet stiller tilsvarende krav i sektorveiledninger for energi og transport \citep{nve2023nettplan,avinor2022digital}.
+
+\subsection{Case: Statnett sitt nettplanleggingsprogram}
+Statnett bruker digitale tvillinger til å planlegge nettutbygging og driftsoptimalisering i takt med økende elektrifisering. Plattformen integrerer kraftsystemmodeller, sanntidsmålinger og scenarioer for energioverganger og må følge både energiloven og nye EØS-krav til datasamarbeid \citep{statnett2023digital}. Caset illustrerer hvordan politiske føringer styrer både modellstrukturen og arbeidsprosessene.
+
+\begin{table}[ht]
+    \centering
+    \caption{Regulatoriske og tekniske komponenter i Statnett sitt nettplanleggingsprogram.}
+    \label{tab:kap02-statnett}
+    \begin{tabular}{p{0.33\textwidth}p{0.57\textwidth}}
+        \toprule
+        \textbf{Komponent} & \textbf{Beskrivelse} \\
+        \midrule
+        Regulatorisk ramme & Energimyndighetenes konsesjonskrav, NVE sin veileder for nettplanlegging og krav til samfunnsøkonomiske analyser. \\
+        Dataintegrasjon & PMU-målinger og SCADA-data kobles med langsiktige forbruksprognoser og markedsdata. \\
+        Beslutningsfora & Tverretatlige møter med NVE og OED hver kvartal for å evaluere scenarioer og prioriteringer. \\
+        Effektmåling & Reduserte flaskehalser, bedre koordinering med regionale nettselskap og dokumentert klimanytte i investeringsbeslutninger. \\
+        Kompetansebygging & Kurs i regulatoriske krav og modellbruk for Statnett-ansatte og samarbeidspartnere. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Caset viser hvordan systemkart og modellvalg må reflektere både tekniske og regulatoriske perspektiver. Ved å knytte datastrømmer til konkrete konsesjonsprosesser kan Statnett dokumentere hvordan tiltak gir effekt og samtidig ivareta krav til forsyningssikkerhet.
+
+\subsection{Case: Avinor sin lufthavntvilling}
+Avinor utvikler digitale tvillinger for å koordinere kapasitetsplanlegging, energibruk og passasjerlogistikk på tvers av norske lufthavner \citep{avinor2022digital}. Modellene bygger på reiseinformasjon, værdata og sanntidsmålinger fra terminalene, og må samsvare med nasjonale mål om utslippskutt og universell utforming. I tillegg følges kravene i nasjonal transportplan og EASA-regelverk for sikkerhet.
+
+\begin{table}[ht]
+    \centering
+    \caption{Nøkkelfunn fra Avinor sitt fagprogram for digitale tvillinger.}
+    \label{tab:kap02-avinor}
+    \begin{tabular}{p{0.34\textwidth}p{0.56\textwidth}}
+        \toprule
+        \textbf{Dimensjon} & \textbf{Observasjoner} \\
+        \midrule
+        Datagrunnlag & Kombinerer passasjerdata, bagasjehåndtering, energimålinger og værvarsel i felles dataplattform. \\
+        Politisk kobling & Understøtter nasjonalt klimamål om 50\% reduksjon i utslipp fra lufthavndrift innen 2030 og krav om universell utforming. \\
+        Operativ bruk & Scenarioanalyse for terminaldrift, bemanning og nye ruteplaner, samt simulering av beredskap. \\
+        Resultater & 15\% redusert energibruk i utvalgte terminaler og bedre flyt for passasjerer ved toppbelastning. \\
+        Deling & Faglig nettverk med regionale lufthavner og internasjonale partnere for å dele modeller og indikatorer. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Eksemplet fremhever hvordan digitale tvillinger i transportsektoren må koordineres med både nasjonale strategier og europeiske sikkerhetskrav, og hvordan modellene blir en arena for samarbeid mellom ingeniører, planleggere og myndigheter.
 
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}

@@ -106,6 +106,63 @@ som deles med fagfeller i arbeidet med kommentar DI-03.
 \subsection{Samsvar med personvern og etikk}
 N\aa r nye datakilder tas i bruk b\o r datastyringsforumet sjekke behandlingsgrunnlag, vurdering av dataminimering og rutiner for sletting. Et eget sjekkpunkt sikrer at dokumentasjonen speiler kravene fra Helsedirektoratet, Normen og Kapittel~6 om validering og tillit. N\aa r tvillingen skaleres p\aa tvers av anlegg, anbefales det \aa utvide datakatalogen med tydelige beskrivelser av form\aa l og kontaktpunkt for hvert datasett.
 
+\section{Sirkul\ae r\o konomi og materialsl\o yfer}
+Sirkul\ae r\o konomi krever at data f\o lger materialene gjennom hele verdikjeden slik at gjenbruk, reparasjon og resirkulasjon kan dokumenteres. Den nasjonale strategien for sirkul\ae r \o konomi fremhever digitale tvillinger som en n\o kkel for \aa spore klimaavtrykk og ressursbruk \citep{regjeringen2021sirkulaer}. EU sitt handlingsprogram for sirkul\ae r\o konomi understreker behovet for \aa pne standarder, produktpass og datadeling mellom produsenter, brukere og resirkuleringsakt\o rer \citep{eu2020circulareconomy}. Figuren under viser hvordan data flyter i en materialsl\o yfe n\aa r en digital tvilling kobler sammen design, produksjon, bruk og retur.
+
+\begin{figure}[ht]
+    \centering
+    \resizebox{0.85\textwidth}{!}{\input{../support/figurer/kilder/kap03-sirkular-dataflyt-v1.tikz}}
+    \caption{Datapunkter som deles i en sirkul\ae r materialsl\o yfe, fra design og produksjon via bruk og retur til resirkulasjon.}
+    \label{fig:kap03-sirkular}
+\end{figure}
+
+\subsection{Indikatorer og datakilder}
+For \aa st\o tte sirkul\ae re beslutninger b\o r digitale tvillinger fange indikatorer for materialinnhold, karbonavtrykk, levetid og restverdi. Dataene m\aa v\ae re tilgjengelige i produktpass eller digitale loggb\o ker slik at b\aa de produsenter og resirkulat\o rer vet hvilke komponenter som kan demonteres og gjenbrukes. Kombinasjonen av sensorinformasjon, ERP-data og kvalitetstester gj\o r det mulig \aa beregne hvor mye av en komponent som kan gjenbrukes uten ytterligere bearbeiding. Norske virksomheter som deltar i gr\o nn plattform-programmet rapporterer at slike indikatorer er n\o dvendige for \aa f\aa st\o tte til pilotering \citep{miljodir2022sirkular}.
+
+\subsection{Case: Hydro CIRCAL og materialsporing}
+Hydro har etablert en digital tvilling for \aa dokumentere innholdet av resirkulert aluminium i CIRCAL-produktene sine. Plattformen kobler produksjonsdata fra pressverkene med kvalitetstester og kundesertifikater, slik at hele verdikjeden kan verifisere klimap\aa standen \citep{hydro2023traceability}. Tvillingen gj\o r det mulig \aa f\o lge materialet fra innsamling av skrap via smelteprosesser til ferdig profil, og bidrar til \aa oppn\aa tredjeparts verifisering i henhold til EN~15088.
+
+\begin{table}[ht]
+    \centering
+    \caption{Datakomponenter i Hydro sitt CIRCAL-program.}
+    \label{tab:kap03-hydro}
+    \begin{tabular}{p{0.34\textwidth}p{0.56\textwidth}}
+        \toprule
+        \textbf{Komponent} & \textbf{Beskrivelse} \\
+        \midrule
+        Materialpass & Digitalt pass med andel resirkulert aluminium, partinummer og opprinnelse. \\
+        Prosessdata & Temperatur- og energilogger fra smelteovner og presslinjer, koblet til kvalitetstester. \\
+        Kunderapportering & Automatisk generering av sertifikater og CO$_2$-beregninger til arkitekter og byggherrer. \\
+        Effekter & 75\% resirkulert innhold dokumentert og redusert tid p\aa revisjoner med 40\%. \\
+        Samarbeid & Deler data med partnere i EU sitt Circular Aluminium-program for \aa harmonisere indikatorer. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Caset viser hvordan en industriell akt\o r bruker digitale tvillinger til \aa skape tillit i markedet og m\o te regulatoriske krav om \aa penhet.
+
+\subsection{Case: Loopfront og Statsbyggs ombruksprosjekter}
+Loopfront leverer en plattform for ombruk av byggematerialer som brukes av Statsbygg og flere kommuner til \aa kartlegge materialbanker f\o r rehabilitering \citep{statsbygg2023loopfront}. Gjennom digitale tvillinger av bygningsmassen kombineres BIM-modeller, tilstandsanalyser og logistikkdata for \aa planlegge demontering og ny bruk. Systemet beregner potensielle CO$_2$-besparelser og \o konomiske gevinster per komponent, og gj\o r det mulig \aa reservere materialer direkte i prosjektportef\o ljen.
+
+\begin{table}[ht]
+    \centering
+    \caption{N\o kkelindikatorer i Statsbyggs ombruksportef\o lje.}
+    \label{tab:kap03-loopfront}
+    \begin{tabular}{p{0.36\textwidth}p{0.54\textwidth}}
+        \toprule
+        \textbf{Indikator} & \textbf{Resultater fra pilotprosjekter} \\
+        \midrule
+        Kartlagt volum & 28\,000 m$^2$ bygningsmasse med digitalt materialkart i 2024. \\
+        Datakilder & BIM-modeller, laserskanning, materialpass og logistikkdata fra entrepren\o r. \\
+        Beslutningsst\o tte & Dashboard som viser CO$_2$-besparelser, kostnader og tilgjengelighet per komponent. \\
+        Effekt & 1\,200 tonn materialer ombrukt med estimert 1,9 kilotonn CO$_2$ spart i f\o rste fase. \\
+        Samhandling & Deling av datagrunnlag med kommuner og private eiendomsforvaltere for \aa koordinere ettersp\o rsel. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Eksemplet illustrerer hvordan kombinasjonen av digitale tvillinger og sirkul\ae r\o konomi gir nye arbeidsprosesser for offentlige byggherrer og leverand\o rer.
+
 \section{Refleksjonssp\o rsm\aa l og \o vinger}
 \begin{enumerate}
     \item Tegn et dataflytdiagram for en digital tvilling i en norsk industribedrift.
