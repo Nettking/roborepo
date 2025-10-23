@@ -3,7 +3,6 @@
 Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefølge. Ta alltid den øverste oppgaven merket `TODO` når du blir bedt om å «ta neste oppgave på dt-boken».
 
 ## Aktive oppgaver
-`TODO` Planlegg fagfellelesingsrunde for Kapittel 1–2 og oppdater `support/fagfellelogg.csv` med tidsplan og ansvarlige.
 `TODO` Ferdigstill systemkartfigurene for Kapittel 2 i TikZ og registrer alt-tekst i `support/figurer/metadata/`.
 `TODO` Koordiner illustrasjoner og fagfelleavklaringer for datapipeline i Kapittel 3, inkludert oppdatering av referanser i `plan.md`.
 `TODO` Skill ferdige oppgaver i en egen fil
@@ -14,6 +13,8 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Ferdige oppgaver
 
+- `FERDIG` – Planlagt fagfellelesingsrunde for Kapittel 1–2, oppdatert fagfellelogg med tidsplan og ansvarlige, og forankret plan i fremdriftsdokumentet.
+ 
 - `FERDIG` – Fjernet datostemplede notat-/oppdatert-kommentarer fra manus og støttefiler og la inn instruksjon som forbyr praksisen videre.
 
 - `FERDIG` – Dokumenterte vurderingskriterier og algoritmematrise for AI-drevne tvillinger i Kapittel 5, oppdaterte plan og fagfellelogg for å klargjøre fagfellelesing (oppgaven ble satt til `PÅGÅR` 2025-10-25 for koordinering).
