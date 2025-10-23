@@ -17,8 +17,27 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | III | Kapittel 8 | Helhetlig utkast med narrative sektorseksjoner og casemal. | Identifiser hvilke case som skal utdypes videre og samle kildegrunnlag til hver sektor. |
 | III | Kapittel 9 | Helhetlig utkast om forskningslandskap og prosjektforslag. | Koordiner fagfellelesing og harmoniser referanser mot bibliografien. |
 | Appendiks | Ressurser | Første hele utkast – tabeller og arbeidsmåte skrevet. | Revider etter fagfelleinnspill fra kapitlene. |
+| Appendiks | Arbeidsark | Ny seksjon med maler, arbeidsark og fagfelleklarering i `chapters/appendiks.tex`. | Test arbeidsarkene i pilot og samle fagfelleinnspill før endelig publisering. |
 | Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk. | Oppdater når nye termer eller presiseringer oppstår under fagfellelesing. |
-| Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan og ferdige vurderingsrubrikker. | Utarbeid maler for prosjektkontrakt og koble rubrikkene til kommende caseutvidelser. |
+| Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan og ferdige vurderingsrubrikker. | Harmoniser læringsaktiviteter med arbeidsark og oppdater vurderingskriterier etter pilot. |
+
+### Omfang per kapittel (august 2024)
+
+Omfangstallene under er beregnet ved å kjøre en enkel ordtelling (LaTeX-kommandoer er filtrert ut) og dele på et estimat på 400 ord per bokside i det planlagte formatet.
+
+| Kapittel/element | Nåværende omfang (ord) | Anslåtte sider i dag | Kommentar |
+| --- | --- | --- | --- |
+| Kapittel 1 – Introduksjon | 1020 | ≈2,6 | Gir et overblikk, men mangler fordyping i norske verdikjeder og begrepsavklaringer. |
+| Kapittel 2 – Systemtenkning | 1104 | ≈2,8 | Grunnleggende beskrivelser av modelltyper er på plass, men metodiske sammenligninger er korte. |
+| Kapittel 3 – Data og integrasjon | 1373 | ≈3,4 | Datapipeline og integrasjonsmønstre er beskrevet, men dataspace- og beredskapsstoff er minimalt. |
+| Kapittel 4 – Simulering og analyse | 945 | ≈2,4 | Metodeoversikten er komprimert og trenger flere eksempler og casesammenhenger. |
+| Kapittel 5 – Læring, optimalisering og AI | 1281 | ≈3,2 | Dekker hovedsløyfen, men mangler generative/edge-baserte perspektiver og vurderingsmaler. |
+| Kapittel 6 – Validering og tillit | 705 | ≈1,8 | Kortfattet omtale av rammeverk; usikkerhets- og etikkstoff er overflatisk. |
+| Kapittel 7 – Livssyklus og styring | 819 | ≈2,0 | RACI og governance nevnes, men livssyklusforløp og bærekraftstyring er ikke utdypet. |
+| Kapittel 8 – Bruksområder | 1996 | ≈5,0 | Gir sektorreiser, men hvert case er kun introduksjon uten fordypende analyser. |
+| Kapittel 9 – Fremtidstrender | 953 | ≈2,4 | Trendliste finnes, men forskningsprogram og scenarioer er korte. |
+| Appendiks – Ressurser | 1477 | ≈3,7 | Ressurslisten er etablert, men mangler kategorisering og veiledning til bruk. |
+| Appendiks – Begrepsliste | 741 | ≈1,9 | Basistabell finnes, men uten utvidede definisjoner, oversettelser og referanser. |
 
 ### Nye tematiske prioriteringer
 
@@ -28,6 +47,109 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 - Beskrive datasamarbeid, Gaia-X/IDSA og norske dataspace-initiativ i kapittel 3 og 7.
 - Planlegge nye klimacaser (havvind, landbruk, batteri) i kapittel 8 og støttefilene.
 - Oppdatere kapittel 5 og 9 med fremvoksende AI-verktøy, generative modeller og edge-baserte tvillinger.
+
+## Omfangsmål og læringsmål per kapittel
+
+Anslagene nedenfor tar utgangspunkt i 400 ord per side og supplerer statusoversikten. Læringsmålene er strammet inn slik at hvert kapittel gir tydelig progresjon fra begrepsforståelse til anvendelse.
+
+### Kapittel 1 – Introduksjon til digitale tvillinger
+- **Ønsket omfang:** 14 sider (~5 600 ord) med balansert dekning av historikk, økosystem, verdikjedeanalyse og norske case.
+- **Oppdaterte læringsmål:**
+  1. Analysere hvordan digitale tvillinger skaper verdi i norske verdikjeder og vurdere modenhetsnivåer.
+  2. Skille mellom modell, skygge og tvilling ved å bruke konkrete beslutningssituasjoner.
+  3. Reflektere over etiske og organisatoriske implikasjoner ved innføring av digitale tvillinger.
+- **Volumbehov:** +11,4 sider (~4 600 ord).
+- **Prioriterte utvidelser:** Utvide verdikjedekartet med olje og gass, samferdsel og bygg; legge inn eksempler på gevinstrealisering; integrere et sammendrag av nøkkelbegreper med tabell for norsk/engelsk terminologi.
+
+### Kapittel 2 – Systemtenkning og modellering
+- **Ønsket omfang:** 16 sider (~6 400 ord) som binder sammen modellparadigmer, flerfidelitet og modellforvaltning.
+- **Oppdaterte læringsmål:**
+  1. Velge passende modelleringsstrategi for ulike typer tvillinger med begrunnede kriterier.
+  2. Designe kombinasjoner av fysikkbaserte og datadrevne modeller med tydelige antakelser og datakrav.
+  3. Planlegge verifikasjon av modeller gjennom eksperimenter, sensitivitet og parameterkalibrering.
+- **Volumbehov:** +13,2 sider (~5 300 ord).
+- **Prioriterte utvidelser:** Lage sammenligningstabeller for modelltilnærminger, beskrive modelloppsett for energi- og produksjonscase, samt utvikle en referanseseksjon om modellstyring og dokumentasjon.
+
+### Kapittel 3 – Data, integrasjon og infrastruktur
+- **Ønsket omfang:** 20 sider (~8 000 ord) med fokus på datastrømmer, dataspace-samarbeid og beredskap.
+- **Oppdaterte læringsmål:**
+  1. Designe ende-til-ende dataarkitektur som kombinerer sanntid, historikk og syntetiske datasett.
+  2. Etablere governance-mekanismer for dataspace og Gaia-X/IDSA-samarbeid i norsk kontekst.
+  3. Utarbeide beredskaps- og sikkerhetsplaner for kritisk infrastruktur med referanse til NIS2 og IEC 62443.
+- **Volumbehov:** +16,6 sider (~6 600 ord).
+- **Prioriterte utvidelser:** Legge inn case om kraftnett og landbruk med konkrete API- og datastrømsdiagram, dokumentere beredskapsøvelser, samt utarbeide indikator-dashboard for bærekraft og datasikkerhet.
+
+### Kapittel 4 – Simulering og analyse
+- **Ønsket omfang:** 15 sider (~6 000 ord) med tydelig kobling mellom simuleringsmetoder, analyser og AR/VR-støtte.
+- **Oppdaterte læringsmål:**
+  1. Vurdere og begrunne valg av simuleringsteknikk (diskret, kontinuerlig, stokastisk) for ulike bransjecase.
+  2. Tolke simuleringsresultater med sensitivitet, scenarioanalyse og usikkerhetspropagering.
+  3. Designe AR/VR-baserte beslutningsstøtteoppsett som bygger på simuleringsdata.
+- **Volumbehov:** +12,6 sider (~5 100 ord).
+- **Prioriterte utvidelser:** Integrere fjernvarme- og havvindsimuleringer, beskrive modellkalibrering i praksis og vise hvordan AR/VR-labben brukes i undervisning og drift.
+
+### Kapittel 5 – Læring, optimalisering og AI
+- **Ønsket omfang:** 18 sider (~7 200 ord) med helhetlig dekning av læringssløyfer, generative metoder og edge-implementering.
+- **Oppdaterte læringsmål:**
+  1. Designe samspillet mellom dataassimilering, maskinlæring og optimalisering i operative tvillinger.
+  2. Evaluere bruk av generative modeller og foundation-modeller for syntetiske data og scenariobygging.
+  3. Planlegge edge- og skystrategier for kontinuerlig læring med tydelige MLOps-rutiner.
+- **Volumbehov:** +14,8 sider (~5 900 ord).
+- **Prioriterte utvidelser:** Utvikle nye eksempler fra havbruk og batteriproduksjon, utdype vurderingskriterier og rubrikker, samt beskrive generativt AI-verkstøy i norske piloter.
+
+### Kapittel 6 – Validering, verifikasjon og tillit
+- **Ønsket omfang:** 14 sider (~5 600 ord) med operative rammeverk for kvalitet, sikkerhet og etikk.
+- **Oppdaterte læringsmål:**
+  1. Anvende standarder (ISO 23247, NIS2, IEC 62443) for å strukturere validering og revisjon.
+  2. Bygge helhetlige usikkerhets- og risikoanalyser som kombinerer statistikk, scenario og ekspertvurdering.
+  3. Etablere etiske vurderingsprosesser, inkludert krav til transparens og ansvarlighet.
+- **Volumbehov:** +12,2 sider (~4 900 ord).
+- **Prioriterte utvidelser:** Beskrive kontrolltårn-konseptet i detalj, dokumentere et case fra helse/energi, og utvikle sjekklister for personvern, sikkerhet og compliance.
+
+### Kapittel 7 – Livssyklus og styring
+- **Ønsket omfang:** 16 sider (~6 400 ord) med fokus på styringsmodeller, gevinstplaner og sirkulærøkonomi.
+- **Oppdaterte læringsmål:**
+  1. Utforme styringsmodeller (sentralisert, føderert, produktlinje) for komplekse tvillingprogram.
+  2. Koble livssyklusfaser til måltall for bærekraft, sikkerhet og gevinstrealisering.
+  3. Planlegge endringsledelse, kompetansebygging og samarbeid med eksterne aktører.
+- **Volumbehov:** +14,0 sider (~5 600 ord).
+- **Prioriterte utvidelser:** Utvikle livssyklus-case fra samferdsel, beskrive beslutningsfora og kontrollpunkter, og inkludere nye KPI-tabeller for sirkulærøkonomi.
+
+### Kapittel 8 – Bruksområder og caser
+- **Ønsket omfang:** 22 sider (~8 800 ord) med fordypede sektoranalyser og klimaorienterte case.
+- **Oppdaterte læringsmål:**
+  1. Analysere hvordan digitale tvillinger brukes i industri, energi, helse, transport og offentlig sektor.
+  2. Vurdere klima- og sirkulærøkonomiindikatorer for hvert case og knytte dem til nasjonale strategier.
+  3. Utforme casemaler og presentasjoner som kan brukes i prosjekt- og undervisningsopplegg.
+- **Volumbehov:** +17,0 sider (~6 800 ord).
+- **Prioriterte utvidelser:** Fordype havvind-, landbruks- og battericase, lage sammenlignende tabeller for sektorutfordringer og utvikle nye eksempelsamlinger for undervisningsopplegg.
+
+### Kapittel 9 – Fremtidstrender og forskning
+- **Ønsket omfang:** 14 sider (~5 600 ord) som kobler forskning, politikk og industriprioriteringer.
+- **Oppdaterte læringsmål:**
+  1. Kartlegge forsknings- og innovasjonsprogrammer nasjonalt og internasjonalt.
+  2. Identifisere fremvoksende teknologier (generative tvillinger, autonome agentkollektiv, kvanteforsterkede simuleringer).
+  3. Utvikle prosjekt- og søknadsidéer som bygger på bokas tidligere kapitler.
+- **Volumbehov:** +11,6 sider (~4 600 ord).
+- **Prioriterte utvidelser:** Lage roadmap med tidshorisonter, beskrive finansieringsmuligheter, og inkludere forskningsdesign-eksempler knyttet til nye teknologier.
+
+### Appendiks – Ressurser
+- **Ønsket omfang:** 12 sider (~4 800 ord) som kategoriserer verktøy, datasett, nettverk og kurs.
+- **Oppdaterte læringsmål:**
+  1. Navigere raskt mellom ressurskategorier og vurdere lisens- og tilgangsbehov.
+  2. Velge riktige data- og verktøypakker for ulike prosjekttyper.
+  3. Planlegge evaluering av ressursbruk i undervisning og forskning.
+- **Volumbehov:** +8,3 sider (~3 300 ord).
+- **Prioriterte utvidelser:** Strukturere ressurslisten etter modenhetsnivå, legge til beskrivelser og kontaktpunkter, samt utvikle bruksscenarier for lærere og studenter.
+
+### Appendiks – Begrepsliste og ordliste
+- **Ønsket omfang:** 10 sider (~4 000 ord) med fordypede definisjoner, oversettelser og referanser.
+- **Oppdaterte læringsmål:**
+  1. Definere sentrale begreper på norsk og engelsk med kontekst og brukseksempler.
+  2. Knytte begrepene til relevante standarder og forskrifter.
+  3. Bruke ordlisten som referanse i prosjektarbeid og fagfellekommunikasjon.
+- **Volumbehov:** +8,1 sider (~3 300 ord).
+- **Prioriterte utvidelser:** Utvide tabellen med kildehenvisninger, legge inn forkortelsesregister og utvikle tematiske grupperinger (data, modellering, styring, sikkerhet).
 
 ## Del I: Fundamentet
 
