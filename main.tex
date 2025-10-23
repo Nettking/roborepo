@@ -1,0 +1,30 @@
+% main.tex - Primary document for the LaTeX project
+\documentclass[12pt]{book}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Document metadata
+\title{Sample Book Title}
+\author{Author Name}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+
+\backmatter
+% Additional appendices or references can be added here.
+
+\end{document}
