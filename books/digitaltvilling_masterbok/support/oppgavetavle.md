@@ -18,6 +18,7 @@ oppgaver opprettes i arbeidslisten, skal de også beskrives her med samme ID.
 | ID | Status | Prioritet | Tema | Beskrivelse | Ansvar | Avhengigheter | Notater |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | DT-12 | PÅGÅR | Kritisk | Kapittel 3 | Etablere nye seksjoner om dataspace-arkitektur, beredskap og bærekraftsindikatorer. | Kapittelredaktør Kapittel 3 + dataarkitekt | `plan.md`, `support/illustrasjonsplan.md`, `support/notater/datastyringsforum-di03.md` | Sikre koordinering med grafikkteam for nye dashboard-figurer og oppdatere API-eksempler. |
+| DT-OPS-02 | FERDIG | Lav | Oppgavestruktur | Definere og teste månedlig revisjonsritual for task queue og oppgavetavle. | Redaksjonen + programleder | `task_queue.md`, `plan.md`, `support/oppgavetavle.md` | Rutine og sjekkliste publisert; evaluering loggføres etter første måned. |
 | DT-10 | TODO | Middels | Kapittel 1 | Utvide verdikjedekart, modenhetsanalyse og etiske refleksjoner for norske case. | Kapittelredaktør Kapittel 1 + redaksjonen | `plan.md`, `support/illustrasjonsplan.md`, intervjunotater fra Equinor/Statnett | Krever avklaringer om hvilke case som skal fremheves i hovedfortellingen. |
 | DT-11 | TODO | Høy | Kapittel 2 | Bygge ut modelleringskapittelet med flerfidelitetscase, metodetabeller og dokumentasjonseksempler. | Kapittelredaktør Kapittel 2 + modelleringsteam | `plan.md`, `support/illustrasjonsplan.md` | Harmoniser språk og symbolbruk med kapittel 1 og 3 for å sikre røde tråder. |
 | DT-13 | TODO | Høy | Kapittel 4 | Integrere AR/VR-baserte beslutningsstøtteeksempler og utvidede simuleringscase. | Kapittelredaktør Kapittel 4 + grafikkteam | `plan.md`, `support/illustrasjonsplan.md`, `support/notater/kap04-fagfellepakke.md` | Planlegg AR/VR-workshop og sikre datagrunnlag til nye figurer. |
@@ -36,3 +37,27 @@ oppgaver opprettes i arbeidslisten, skal de også beskrives her med samme ID.
    eller fagfelleløp, noter endringen i planen eller loggen samme dag.
 3. **Bruk notatene aktivt.** Feltet «Notater» skal beskrive hva som er viktig å huske til
    neste innsjekk, for eksempel koordinering med andre kapitler eller behov for beslutninger.
+
+## Månedlig revisjonsrutine
+For å sikre at arbeidsstrømmen er oppdatert før hver fagfelle- og pilotrunde gjennomføres
+en fast revisjon den første hele uken i hver måned. Programleder kaller inn redaksjonen til
+et 45-minutters tavlemøte hvor beslutninger fattes og oppfølgingspunkter loggføres.
+
+### Fasetidslinje
+1. **Dag 1 – Forberedelse:** Gjennomgå endringslogg i `git` og siste kommentarer i
+   `support/fagfellelogg.csv`. Marker kandidater for nye oppgaver eller oppdateringer.
+2. **Dag 2 – Datavask:** Sammenlign `task_queue.md` og denne tavlen, fjern duplikater og
+   noter uavklarte eiere. Oppdater `plan.md` med statusendringer som påvirker fremdrifts-
+   eller leseplanen.
+3. **Dag 3 – Beslutning:** Hold tavlemøte for å fastsette prioriteringer, avklare
+   avhengigheter og tildele ansvar. Registrer eventuelle figurbestillinger i
+   `support/illustrasjonsplan.md`.
+4. **Dag 4 – Publisering:** Send kort sammendrag til fagfelle- og pilotteam, oppdater
+   `completed_tasks.md` ved behov og forbered eventuelle kommunikasjonsinnlegg.
+
+### Sjekkliste for månedsoppfølging
+- [ ] Datohjul oppdatert i kalenderen til programleder og kapittelredaktører.
+- [ ] Statusfelt i `task_queue.md` og `support/oppgavetavle.md` samsvarer.
+- [ ] `plan.md` inneholder oppdatert «Neste steg» for kapitler som har fått nye tiltak.
+- [ ] Nye eller endrede oppgaver har tydelig ansvarlig og koblinger til relevante støttefiler.
+- [ ] Eventuelle kildebehov eller referanser lagt til i `support/referanser.bib`.

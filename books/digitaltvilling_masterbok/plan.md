@@ -20,6 +20,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | Appendiks | Arbeidsark | Ny seksjon med maler, arbeidsark og fagfelleklarering i `chapters/appendiks.tex`. | Test arbeidsarkene i pilot og samle fagfelleinnspill før endelig publisering. |
 | Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk. | Oppdater når nye termer eller presiseringer oppstår under fagfellelesing. |
 | Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan og ferdige vurderingsrubrikker. | Harmoniser læringsaktiviteter med arbeidsark og oppdater vurderingskriterier etter pilot. |
+| Støtte | Oppgavetavle og task queue | Månedlig revisjonsrutine definert og forankret i redaksjonen. | Pilotere første revisjonssyklus, dokumentere forbedringspunkter og justere kalender for høstsemesteret. |
 ### Omfang per kapittel (august 2024)
 
 Omfangstallene under er beregnet ved å kjøre en enkel ordtelling (LaTeX-kommandoer er filtrert ut) og dele på et estimat på 400 ord per bokside i det planlagte formatet.
@@ -46,6 +47,11 @@ Omfangstallene under er beregnet ved å kjøre en enkel ordtelling (LaTeX-komman
 - Beskrive datasamarbeid, Gaia-X/IDSA og norske dataspace-initiativ i kapittel 3 og 7.
 - Prioritere klimacaser (havvind, landbruk, batteri) i kapittel 8, med tilhørende notater i `support/notater/` og KPI-tabeller i kapitteltekstene.
 - Oppdatere kapittel 5 og 9 med fremvoksende AI-verktøy, generative modeller og edge-baserte tvillinger.
+
+### Operativ koordinering
+- Gjennomføre månedlig revisjon av `task_queue.md` og `support/oppgavetavle.md` i henhold til den nye rutinen med forberedelses-, beslutnings- og publiseringsdager.
+- Sørge for at tavlemøtet dokumenteres i `support/fagfellelogg.csv` med beslutninger, ansvarlige og eventuelle behov for illustrasjoner eller kilder.
+- Evaluere sjekklisten etter første iterasjon og justere kalenderpåminnelser for høstsemesterets sprintplan.
 
 ## Omfangsmål og læringsmål per kapittel
 
