@@ -40,6 +40,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-FIG-01 | Kapittel 1 | FERDIG – Tidslinjefiguren er produsert som to-spors TikZ-grafikk med sektorikoner og legende for fagfellepakke. | `support/figurer/kilder/kap01-tidslinje-v1.tikz`, `plan.md`, `completed_tasks.md` |
 | DT-OPS-02 | Oppgavestruktur | FERDIG – Etablerte månedlig revisjonsrutine for tavle og arbeidsliste med sjekkliste og fasetidslinje. | `support/oppgavetavle.md`, `plan.md`, `completed_tasks.md` |
 | DT-11 | Kapittel 2 | FERDIG – Utvidet modelleringskapittelet med flerfidelitetscase, metodetabeller og dokumentasjonskrav. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/referanser.bib` |
 | DT-08 | Kapittel 8 | FERDIG – Prioriterte pilotcase, etablerte dataspace-tilganger og oppdaterte sektoravsnitt etter fagfellefeedback. | `chapters/kapittel08-case.tex`, `support/notater/pilotundervisning-materiell.md`, `plan.md` |
