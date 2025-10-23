@@ -21,6 +21,7 @@ Denne filen beskriver hvordan neste oppgave skal velges og hvordan bidrag organi
 - Strukturér kapitler med `\chapter{...}`, `\section{...}` og `\subsection{...}`. Bruk `\begin{itemize}`/`\begin{enumerate}` for lister og `\begin{tabular}` for tabeller.
 - Hvert kapittel bør inneholde læringsmål, hovedinnhold og forslag til øvingsoppgaver eller refleksjonsspørsmål.
 - Kontroller at nye pakker eller kommandoer er kompatible med den eksisterende LaTeX-oppsettet i `main.tex`.
+- Ikke legg inn datostemplede «Notat»-/«Oppdatert»-kommentarer i LaTeX- eller Markdown-filer. Historikk håndteres gjennom Git og `task_queue.md`; dokumenter endringer direkte i teksten eller i strukturerte logger uten dato-kommentarer.
 
 ## Siteringspraksis og referansehåndtering
 

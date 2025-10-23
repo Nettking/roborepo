@@ -1,6 +1,5 @@
 # Mappe for figurer til dt-boken
 
-> Notat (2024-05-08): Opprettet struktur for kildesfiler og eksporterte figurer i forbindelse med illustrasjonsplanen.
 
 Denne mappen organiserer arbeid med grafikk slik at alle figurer kan versjonskontrolleres.
 

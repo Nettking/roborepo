@@ -1,8 +1,5 @@
 # Illustrasjons- og grafikkplan
 
-> Notat (2024-05-08): Utarbeidet plan for å løfte kladdeillustrasjoner til ferdige figurer og etablere felles stil på tvers av kapitlene.
-> Notat (2024-05-10): Oppdatert etter gjennomgang av kapitteltekstene for å fange nye illustrasjonsbehov og avstemme ansvar.
-> Notat (2024-07-15): Datapipeline-illustrasjonen i Kapittel 3 er oppdatert til definert fargepalett og alt-tekst er registrert som versjon 2.
 
 ## Formål
 

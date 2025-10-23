@@ -2,11 +2,6 @@
 
 Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og for studenter som skal arbeide seg gjennom boken.
 
-> Notat (2024-05-08): Oppdatert med lenke til illustrasjons- og grafikkplan som beskriver leveranser per kapittel.
-> Notat (2024-07-15): Datapipeline-illustrasjonen i Kapittel 3 er harmonisert med fargepaletten og dokumentert i metadatafil `kap03-datapipeline-v2.alt.md`.
-> Notat (2024-07-16): Systemkart og kausalsløyfe i Kapittel 2 er konvertert til TikZ og dokumentert i figurmetadata.
-> Notat (2024-07-17): Delingsnotat for datastyringsforumet (DI-03) er publisert i `support/notater/datastyringsforum-di03.md` og referert fra Kapittel~3.
-> Notat (2025-10-25): Kapittel 5 har fått vurderingsramme og algoritmematrise som støtter fagfellelesing og vurderingsarbeid.
 
 ## Statusoversikt
 
@@ -150,7 +145,6 @@ Vektleggingen summerer til 100\% (45\% underveisleveranser, 55\% sluttvurdering)
 - **Analyse:** Fagteamet sammenstiller funn i en evalueringsrapport innen uke 8. Rapporten skal foreslå konkrete endringer i kapittelinndeling, aktivitetstyngde og vurderingsvekter.
 - **Oppfølging:** Tiltak prioriteres i redaksjonens arbeidsmøte og følges opp i `task_queue.md`. Oppdaterte anbefalinger innarbeides i `support/larerveiledning.tex` og kommende utgave av planen.
 
-> Notat (2024-05-08): Seksjonen er lagt til for å dokumentere pilotopplegget og knytte vurderingsmetoder/logistikk til leseplanen.
 
 ## Plan for fagfellelesing
 
@@ -197,7 +191,6 @@ Fagfellelogg i `support/fagfellelogg.csv` er oppdatert med konkrete tiltak, fris
 | GV-05 | Governance-tiltak | Lage tiltakslogg for gevinstoppfølging og integrere KPI-er i kapittel 7. | Leif Ødegaard | 29.05 | Planlagt oppfølging |
 | ST-06 | Terminologi | Oppdatere ordliste med nye begrep og engelske ekvivalenter etter fagfelleinnspill. | Astrid Hauge | 31.05 | Planlagt oppfølging |
 
-> Notat (2024-05-11): Oppdatert med arbeidsflyt for fagfellekommentar DI-03 om datakvalitet i kapittel 3.
 
 ### Oppfølging av DI-03 – datakvalitet for Kapittel 3
 Tiltaket skal dokumentere hvordan kapittel 3 håndterer datakvalitet og governance etter fagfelleinnspillene. Arbeidet følger tre del-leveranser frem mot fristen 22.05:

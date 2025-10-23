@@ -12,6 +12,8 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Ferdige oppgaver
 
+- `FERDIG` – Fjernet datostemplede notat-/oppdatert-kommentarer fra manus og støttefiler og la inn instruksjon som forbyr praksisen videre.
+
 - `FERDIG` – Dokumenterte vurderingskriterier og algoritmematrise for AI-drevne tvillinger i Kapittel 5, oppdaterte plan og fagfellelogg for å klargjøre fagfellelesing (oppgaven ble satt til `PÅGÅR` 2025-10-25 for koordinering).
 
 - `FERDIG` – Registrerte kilder for autonome ferger i Kapittel 8 og oppdaterte bibliografien (oppgaven ble satt til `PÅGÅR` 2025-10-24 for koordinering).
