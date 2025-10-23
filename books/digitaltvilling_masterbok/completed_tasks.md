@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-FIG-01: Produserte to-spors tidslinje med sektorikoner for kapittel 1, la til egen legende i `support/figurer/kilder/kap01-tidslinje-v1.tikz` og oppdaterte plan- og arbeidsstatus.
 - `FERDIG` – Leveranse for DT-OPS-02: Definerte månedlig revisjonsrutine for oppgavetavle og task queue, oppdaterte plan og støttefiler samt etablerte sjekkliste for videre revisjoner.
 
 - `FERDIG` – Leveranse for DT-11: Utvidet Kapittel 2 med flerfidelitetscase, metode- og kalibreringstabeller samt dokumentasjonsseksjon; oppdaterte `plan.md`, `task_queue.md` og `support/referanser.bib`.

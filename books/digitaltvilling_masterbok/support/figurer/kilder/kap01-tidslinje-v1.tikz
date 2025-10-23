@@ -1,15 +1,77 @@
-\begin{tikzpicture}[>=LaTeX, milestone/.style={circle, draw=petrol, fill=white, thick, minimum size=0.7cm}, label/.style={align=center, text width=3.5cm}]
-    \draw[thick, dypblaa, -{Latex[length=3mm]}] (0,0) -- (13,0);
-    \node[milestone] (apollo) at (1,0) {1969};
-    \node[label, above=0.6cm of apollo] {NASA simulerer Apollo-moduler for operasjonell beredskap\citep{glaessgen2012digital}};
-    \node[milestone] (plm) at (4,0) {2002};
-    \node[label, below=0.6cm of plm] {Grieves introduserer digital tvilling i PLM-litteraturen\citep{grieves2017digital}};
-    \node[milestone, fill=solgul!40, draw=solgul!80!black] (nasa) at (6.5,0) {2012};
-    \node[label, above=0.6cm of nasa] {NASA formaliserer digital tvilling-strategien for romfart\citep{glaessgen2012digital}};
-    \node[milestone] (industry) at (8.5,0) {2017};
-    \node[label, below=0.6cm of industry] {Equinor lanserer tvilling for Johan Sverdrup-feltet\citep{equinor2021johansverdrup}};
-    \node[milestone] (standard) at (10.5,0) {2021};
-    \node[label, above=0.6cm of standard] {DNV utgir anbefalt praksis for digitale tvillinger\citep{dnv2021rp}};
-    \node[milestone] (city) at (12.5,0) {2024};
-    \node[label, below=0.6cm of city] {Trondheim tester bytvilling for mobilitet og klima\citep{trondheim2024bytvilling}};
+\begin{tikzpicture}[
+    >=LaTeX,
+    timeline/.style={-{Latex[length=3mm]}, thick, dypblaa},
+    marker/.style={circle, draw=petrol, fill=white, very thick, minimum size=0.75cm, font=\scriptsize\bfseries},
+    event/.style={rounded corners=3pt, fill=skygraa!60, draw=grafitt!60, align=left, text width=3.9cm, font=\scriptsize, inner sep=4pt},
+    icon/.style={circle, fill=petrol!75, text=white, font=\scriptsize\bfseries, minimum size=0.55cm, inner sep=1pt},
+    connector/.style={dashed, grafitt!70}
+]
+    % Tidslinjer
+    \draw[timeline] (0.3,1.5) -- (13.4,1.5);
+    \draw[timeline] (0.3,-1.5) -- (13.4,-1.5);
+
+    % Aksetekster
+    \node[anchor=east, font=\bfseries\small, text=grafitt] at (0.15,1.5) {Internasjonalt};
+    \node[anchor=east, font=\bfseries\small, text=grafitt] at (0.15,-1.5) {Norge};
+
+    % Internasjonale milepæler
+    \node[marker] (m1969) at (1.2,1.5) {1969};
+    \node[event, above=0.55cm of m1969] (e1969) {
+        \textbf{Apollo-simulatorer}\\
+        NASA utvikler speilende simulatorer for misjonsstyring og legger grunnlaget for tvilling-tankegangen.\citep{glaessgen2012digital}
+    };
+    \node[icon, left=0.15cm of e1969] {ROM};
+
+    \node[marker] (m2002) at (4.4,1.5) {2002};
+    \node[event, above=0.55cm of m2002] (e2002) {
+        \textbf{PLM-begrepet utvides}\\
+        Michael Grieves beskriver digitale tvillinger som en kjerne i produktlivssyklusstyring.\citep{grieves2017digital}
+    };
+    \node[icon, left=0.15cm of e2002] {PLM};
+
+    \node[marker, fill=solgul!40, draw=solgul!70!black] (m2012) at (7.1,1.5) {2012};
+    \node[event, above=0.55cm of m2012] (e2012) {
+        \textbf{NASA digital tvilling-strategi}\\
+        Strategidokumentet for romfart formaliserer krav til datakvalitet, modeller og styringssløyfer.\citep{glaessgen2012digital}
+    };
+    \node[icon, left=0.15cm of e2012, fill=solgul!80!black!60] {AERO};
+
+    % Norske milepæler
+    \node[marker] (n2017) at (8.8,-1.5) {2017};
+    \node[event, below=0.55cm of n2017] (ne2017) {
+        \textbf{Johan Sverdrup-programmet}\\
+        Equinor kobler sanntid, historikk og simulering i en operasjonell tvilling for offshorefeltet.\citep{equinor2021johansverdrup}
+    };
+    \node[icon, left=0.15cm of ne2017, fill=havgronn!80!black!60] {ENE};
+
+    \node[marker] (n2021) at (10.7,-1.5) {2021};
+    \node[event, below=0.55cm of n2021] (ne2021) {
+        \textbf{DNV anbefalt praksis}\\
+        DNV publiserer styrende krav til modellkvalitet, sikkerhet og livssyklus for digitale tvillinger.\citep{dnv2021rp}
+    };
+    \node[icon, left=0.15cm of ne2021, fill=dypblaa] {MAR};
+
+    \node[marker] (n2024) at (12.8,-1.5) {2024};
+    \node[event, below=0.55cm of n2024] (ne2024) {
+        \textbf{Trondheim bytvilling}\\
+        Trondheim kommune tester mobilitetstvilling med klimadata, scenarioer og medvirkning.\citep{trondheim2024bytvilling}
+    };
+    \node[icon, left=0.15cm of ne2024, fill=koral] {BY};
+
+    % Krysskoblinger
+    \draw[connector] (m2012.south) -- (n2017.north);
+    \draw[connector] (m2002.south) -- (n2017.north);
+    \draw[connector] (m1969.south) -- (n2017.north);
+    \draw[connector] (m2012.south) -- (n2021.north);
+    \draw[connector] (m2012.south) -- (n2024.north);
+
+    % Legende
+    \node[rounded corners=2pt, fill=white, draw=grafitt!50, font=\scriptsize, inner sep=4pt, align=left, anchor=north west] at (0.3,-0.2) {
+        \textbf{Ikoner}\\
+        \tikz{\node[icon] {ROM};} Romfart og luftfart\\
+        \tikz{\node[icon, fill=solgul!80!black!60] {AERO};} Aerospace-strategi\\
+        \tikz{\node[icon, fill=havgronn!80!black!60] {ENE};} Energi og prosessindustri\\
+        \tikz{\node[icon, fill=dypblaa] {MAR};} Maritim og standardisering\\
+        \tikz{\node[icon, fill=koral] {BY};} Smart by og mobilitet
+    };
 \end{tikzpicture}
