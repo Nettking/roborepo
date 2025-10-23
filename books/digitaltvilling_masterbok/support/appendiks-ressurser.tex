@@ -1,0 +1,60 @@
+\chapter{Datasett og verktøyressurser}
+\label{appendix:ressurser}
+
+Dette appendikset samler forslag til datasett og verktøy som kan brukes i prosjekt-
+eller masteroppgaver knyttet til digitale tvillinger. Ressursene er valgt med tanke på norske forhold, åpen tilgang der det er mulig, og relevans for modellering, overvåking og analyse.
+
+\section{Åpne datasett}
+\begin{longtable}{p{0.28\textwidth}p{0.32\textwidth}p{0.30\textwidth}}
+\toprule
+\textbf{Datasett} & \textbf{Beskrivelse} & \textbf{Hvordan bruke i digital tvilling?} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Datasett} & \textbf{Beskrivelse} & \textbf{Hvordan bruke i digital tvilling?} \\
+\midrule
+\endhead
+Felles datakatalog (Digdir) & Samleportal for over 2000 offentlige norske datasett på tvers av sektorer. Metadata inkluderer format, API-endepunkter og lisens. & Brukes til å finne referansedata for scenariomodellering, for eksempel demografi, infrastruktur eller miljøvariabler. \\
+\addlinespace
+Statnett – Åpne nettdata & Tidsserier for kraftforbruk og produksjon, netttopologi og flaskehalser. Tilgjengelig via \href{https://www.statnett.no/vare-tjenester/elanett/}{Statnett elhub} og \href{https://transparency.entsoe.eu/}{ENTSO-E Transparency}. & Understøtter energitvillingers prognosemodeller, belastningsanalyse og sanntidsvisualisering av strømnettet. \\
+\addlinespace
+Meteorologisk institutt – Frost API & Historiske og sanntids værmålinger fra norske stasjoner, tilgjengelig via REST-API etter registrering. & Knyt værpåvirkning til modeller for bygg, transport og fornybar energi, og test robusthet mot klimavariasjoner. \\
+\addlinespace
+Statens vegvesen – Trafikkdata & Åpne trafikk- og sensordata (veglys, trafikkmengde, hendelser) via \href{https://developer.vegdata.no/}{Vegdata API}. & Modellér logistikk- og mobilitetsløsninger, optimaliser ruter og vedlikehold basert på sanntidssignaler. \\
+\addlinespace
+Norsk Petroleumsdirektorat – Oljedata & Brønndata, produksjonsprofiler og reservoarmodeller. Åpne datasett finnes via \href{https://factpages.npd.no/en/}{FactPages}. & Brukes til å bygge tvillinger av subsurface-systemer, planlegge boreprogram eller analysere produksjonsoptimalisering. \\
+\bottomrule
+\end{longtable}
+
+\section{Verktøy og plattformer}
+\begin{longtable}{p{0.28\textwidth}p{0.32\textwidth}p{0.30\textwidth}}
+\toprule
+\textbf{Verktøy} & \textbf{Type} & \textbf{Relevans for studenter} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Verktøy} & \textbf{Type} & \textbf{Relevans for studenter} \\
+\midrule
+\endhead
+Azure Digital Twins & Skyplattform for modellering av komplekse miljøer med graforienterte tvillingmodeller og live dataingest. Studentabonnement gir gratis kvoter. & Hurtig prototyping av bygnings- eller campus-tvilling, med integrasjon mot IoT Hub og Power BI for visualisering. \\
+\addlinespace
+OpenModelica & Åpen kildekode-MBSE-verktøy basert på Modelica-standarden. Støtter fysiske modeller og co-simulering. & Utvikle detaljerte prosess- og energimodeller som kan kobles til sanntidsdata gjennom FMI/FMUs. \\
+\addlinespace
+Apache Kafka + ksqlDB & Distribuert hendelsesstrøm-plattform for sanntidsdata. & Bygg data pipelines mellom sensorer og digitale tvillinger, implementer streaming-analytics og integrer med verktøy som Spark eller Flink. \\
+\addlinespace
+Siemens Industrial Edge Trial & Industrinær plattform med støtte for OPC UA, containerdeployering og analysetjenester. Gratis testlisens via partnerprogram. & Evaluér edge-arkitekturer, test maskinlæring nær produksjonsutstyr og sammenlign med skybaserte tvillinger. \\
+\addlinespace
+CesiumJS & Bibliotek for 3D-geovisualisering i nettleser. Støtter tidsdimensjon og streaming av sensordata. & Lag interaktive dashboards for digitale tvillinger av byrom, transport og offshore installasjoner. \\
+\bottomrule
+\end{longtable}
+
+\section{Forslag til arbeidsmåte}
+\begin{enumerate}
+    \item Definér et konkret problem (for eksempel energistyring i en campusbygning) og velg hvilke datasett som best dekker behovet for historiske, sanntids- og kontekstdata.
+    \item Etabler en pipeline med streamingverktøy (Kafka eller tilsvarende) og en modell- eller visualiseringsplattform (Azure Digital Twins, OpenModelica, CesiumJS).
+    \item Dokumenter datakvalitet, lisenskrav og eventuelle personvernhensyn i prosjektets styringsdokumenter.
+    \item Lag forslag til videre arbeid i prosjektet, for eksempel supplering med syntetiske data eller integrasjon mot læringsmoduler i Kapittel~5.
+\end{enumerate}
+
+\section{Notater}
+Denne ressursoversikten ble opprettet for å støtte oppgaveløsning og casestudier. Oppdater listen ved nye sektorkrav eller når verktøy får endret lisens.

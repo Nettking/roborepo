@@ -4,7 +4,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Aktive oppgaver
 
-1. `TODO` – Lage forslag til datasett og verktøyressurser i en vedleggsfil.
+*(ingen oppgaver)*
 
 ## Pågår
 
@@ -12,6 +12,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Ferdige oppgaver
 
+- `FERDIG` – Lage forslag til datasett og verktøyressurser i `support/appendiks-ressurser.tex`.
 - `FERDIG` – Utarbeidet forslag til lærerveiledning i `support/larerveiledning.tex`.
 - `FERDIG` – La til illustrative figurer og beskrivelser av systemkart i Kapittel 2.
 - Opprettet grunnstruktur for boken, inkludert frontmatter, kapittelskisser og arbeidsprosess.
