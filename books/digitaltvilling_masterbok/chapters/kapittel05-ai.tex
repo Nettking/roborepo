@@ -8,29 +8,70 @@
 \end{itemize}
 
 \section{Maskinlæring i digitale tvillinger}
-\begin{itemize}
-    \item Overvåket, ikke-overvåket og forsterkende læring.
-    \item Bruk av surrogate modeller og metamodeller.
-    \item Transfer learning og federated learning i industrien.
-\end{itemize}
+Maskinlæring gir digitale tvillinger evnen til å lære direkte fra data og forutse hvordan en fysisk prosess vil utvikle seg. I
+starten av et prosjekt brukes ofte overvåket læring for å bygge en modell som kan estimere tilstandsvariabler eller nøkkelpara
+metere som er vanskelige å måle direkte. Etter hvert som tvillingen tas i drift kan ikke-overvåket læring brukes til å oppdag
+e nye driftstilstander og identifisere avvik som indikerer behov for justeringer i modellen. Forsterkende læring egner seg når
+tvillingen skal anbefale beslutninger i et system med mange kombinasjoner av tiltak, slik som energistyring eller ruteplanlegg
+ing. 
+
+Når simuleringsmodeller er tunge å kjøre, benyttes surrogate modeller eller metamodeller for å approksimere resultatene raskt.
+Disse bygges gjerne ved å trene en maskinlæringsmodell på data fra simuleringer og reelle observasjoner, slik at tvillingen kan
+gi raske svar i interaktive situasjoner. Transfer learning gjør det mulig å gjenbruke læring fra én fabrikk til en annen ved å
+tilpasse modellene til nye sensorer og prosessparametere. I norske konsern med flere lokasjoner er også federated learning aktu
+elt; data forblir på hvert anlegg, men modeller oppdateres felles gjennom sikre aggregeringsmekanismer som ivaretar personvern
+og forretningssensitiv informasjon.
 
 \section{Optimalisering og beslutningsstøtte}
-\begin{itemize}
-    \item Kombinasjon av modellprediktiv kontroll og digitale tvillinger.
-    \item Bayesiansk optimalisering, genetiske algoritmer og gradientbaserte metoder.
-    \item Håndtering av målkonflikter og begrensninger.
-\end{itemize}
+Optimalisering utnytter innsikten fra maskinlæringsmodellene og den fysiske simuleringen til å foreslå hvilke handlinger som gi
+r best mulig resultat under gitte begrensninger. Modellprediktiv kontroll (MPC) er et sentralt rammeverk for digitale tvillinge
+r fordi det kombinerer dynamiske prognoser med eksplisitte restriksjoner på produksjonskapasitet, energi og kvalitet. Maskinlær
+ingen bidrar med oppdaterte prediksjoner av hvordan systemet reagerer, mens MPC-formuleringen sørger for at anbefalingene er go
+dt innenfor sikkerhetsmarginer.
+
+Når målfunksjonen er ujevn eller ikke-differensierbar, kan Bayesiansk optimalisering og genetiske algoritmer brukes for å finne
+gode løsninger med få simuleringskjøringer. I scenarioer der optimalisering må skje kontinuerlig, eksempelvis i smart grid-drif
+t, brukes gradientbaserte metoder og konveks optimalisering for å sikre responstid i sanntid. Å håndtere målkonflikter er ofte p
+åkrevd: en digital tvilling for en industriell ovn må balansere energibruk, utslipp og produktkvalitet. Multiobjektiv-tilnærmin
+ger og pareto-analyser gir beslutningstakere innsikt i hvilke kompromisser som er mulige.
 
 \section{Dataassimilering og online oppdatering}
-\begin{itemize}
-    \item Filtreringsteknikker (Kalman, partikkelfiltre, ensemblestøtte).
-    \item Kontinuerlig kalibrering og konseptdrift.
-    \item Arkitektur for sanntidsoppdateringer.
-\end{itemize}
+Dataassimilering gjør at digitale tvillinger holder tritt med den faktiske prosessen. Filtreringsteknikker som Kalman-filter, e
+nssemble-Kalman og partikkelfilter kombinerer sensormålinger, historikk og modellprediksjoner til et best mulig estimat av til
+standen. Når dataene er komplekse og høyfrekvente, kan hybride løsninger der filtrene opererer på aggregerte signaler supplert
+med nevrale nettverk for feature-uttrekk holde beregningstiden nede.
+
+Et sentralt tema er å håndtere konseptdrift, altså at relasjonene mellom variabler endrer seg over tid. Ved å overvåke performa
+nce-metrikker og trigge re-trening av maskinlæringsmodellene i kontrollerte vinduer, opprettholdes balansen mellom stabilitet o
+g fleksibilitet. Arkitekturmessig krever dette en oppdateringssløyfe som fanger opp nye datapakker, kvalitetssikrer dem og publ
+iserer de oppdaterte modellene tilbake til tvillingen. Mange norske virksomheter har løst dette ved å kombinere Kubernetes-base
+rte mikrotjenester, strømmeplattformer som Apache Kafka og modellregister som MLflow for å sikre sporbarhet.
+
+\section{Samspill mellom læring, optimalisering og assimilering}
+De tre byggesteinene virker sammen i en lukket sløyfe: maskinlæring gir prognoser og modeller som beskriver systemet, dataassi
+milering korrigerer modellen når virkeligheten avviker, og optimalisering omskaper innsikten til beslutninger. I praksis må sli
+ke sløyfer designes slik at dataflyten er robust, at prosesseringen skjer i riktig rekkefølge, og at menneskelige operatører ha
+r innsyn i hvorfor anbefalingene endres. En moden digital tvilling bør derfor inkludere dashboards som visualiserer hvilke måle
+r som påvirker beslutningene, og varslingsmekanismer når usikkerheten overstiger forhåndsdefinerte terskler. Dette gjør det mul
+ig å bygge tillit, for eksempel ved å dokumentere hvordan et bestemt sett med sensordata utløste en ny optimaliseringsstrategi
+.
+
+\section{Industrieksempel: Optimal drift av et landbasert oppdrettsanlegg}
+Et norsk oppdrettsanlegg med resirkulerende akvakultur (RAS) kombinerer sensorer for vannkvalitet, fôringssystem og fiskevelfe
+rd med en digital tvilling som simulerer både biologiske og tekniske prosesser. Maskinlæring benyttes til å predikere vekstrate
+r og oksygenbehov basert på kameradata og historiske fôringsmønstre. Optimaliseringslaget bruker disse prediksjonene til å best
+emme fôringsstrategi og justering av vannstrømmer, innenfor begrensninger for energibruk og biosikkerhet. Dataassimilering fore
+går gjennom en utvidet Kalman-prosess som oppdaterer tvillingens tilstandsestimat hver gang nye sensordata kommer inn. Når sili
+konnivået stiger raskere enn forventet, flagger modellen avviket og justerer samtidig anbefalingene for filtreringskapasitet og
+temperaturstyring. Operatører kan dermed ta informerte grep for å forhindre stress hos fisken og redusere utslipp til miljøet, s
+amtidig som produksjonen holdes oppe.
 
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}
-    \item Velg et case og beskriv hvordan du ville brukt maskinlæring i den digitale tvillingen.
-    \item Forklar hvordan modellprediktiv kontroll kan kombineres med digitale tvillinger.
-    \item Lag et forslag til eksperimentoppsett for online læring med begrenset datatilgang.
+    \item Velg et case og lag et dataflytskjema som viser hvordan maskinlæring, dataassimilering og optimalisering henger samm
+en i tvillingen.
+    \item Forklar med egne ord hvordan modellprediktiv kontroll kan dra nytte av oppdaterte maskinlæringsmodeller og filtrering
+sdata.
+    \item Lag et forslag til eksperimentoppsett for online læring med begrenset datatilgang, inkludert kriterier for når modell
+ene skal re-trenes.
 \end{enumerate}
