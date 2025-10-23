@@ -3,9 +3,8 @@
 Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefølge. Ta alltid den øverste oppgaven merket `TODO` når du blir bedt om å «ta neste oppgave på dt-boken».
 
 ## Aktive oppgaver
-
-*(ingen oppgaver)*
-
+`TODO` Her må nye oppgaver legges til.
+`TODO` Skill ferdige oppgaver i en egen fil
 ## Pågår
 
 *(ingen oppgaver)*
