@@ -16,6 +16,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | III | Kapittel 8 | Delvis utkast – casemal er detaljert, men sektorseksjonene er punktlister. | Utdype sektorseksjonene med narrativ tekst og knytte mal til flere norske eksempler. |
 | III | Kapittel 9 | Første hele utkast – helhetlig tekst om forskning, trender og masterprosjekter. | Planlegge fagfellelesing, samle referanser og koble mot kommende ordliste og bibliografi. |
 | Appendiks | Ressurser | Første hele utkast – tabeller og arbeidsmåte skrevet. | Holdes oppdatert etter hvert som nye kapittelbehov oppstår. |
+| Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk samt bruksanvisning. | Utvides når kapitlene introduserer nye termer eller presiseringer trengs. |
 | Støtte | Lærerveiledning | Første hele utkast – strukturert undervisningsopplegg. | Utvides med vurderingsrubrikker og flere case etter hvert. |
 
 ## Del I: Fundamentet
@@ -95,6 +96,6 @@ En anbefalt 6-ukersmodul:
 
 1. Fullføre pågående kapitler i Del I og Del II ved å skrive sammenhengende tekst og eksempler for Kapittel 1, 2, 4 og 6, og planlegge fagfellevurdering for Kapittel 5.
 2. Utvikle Del III ved å ferdigstille Kapittel 7–9 med governance-modeller, sektoranalyser og forskningsperspektiv.
-3. Etablere supplerende støttefiler som en begrepsliste/ordliste og et referansesystem (BibTeX) som kan brukes gjennom hele boken.
+3. Vedlikeholde den nye begrepslisten og etablere et referansesystem (BibTeX) som kan brukes gjennom hele boken.
 4. Planlegge fagfellelesing og illustrasjoner når hovedtekstene er skrevet.
 5. Holde ressursappendiks og lærerveiledning oppdatert i takt med nye kapitler og caser.
