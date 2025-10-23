@@ -12,6 +12,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Ferdige oppgaver
 
+- `FERDIG` – Registrerte kilder for autonome ferger i Kapittel 8 og oppdaterte bibliografien (oppgaven ble satt til `PÅGÅR` 2025-10-24 for koordinering).
 - `FERDIG` – Dokumenterte maritim casebrief for autonome ferger i Trondheimsfjorden og forankret nøkkeldata i Kapittel 8.
 - `FERDIG` – Utvidet `support/appendiks-ressurser.tex` med maritime og offshore-ressurser, la til sektorhenvisning i Kapittel 8 og dokumenterte caseprioritering i nytt støtte-notat.
 - `FERDIG` – Leveranse for DI-03: Opprettet delingsnotat `support/notater/datastyringsforum-di03.md`, refererte det fra Kapittel 3 og oppdaterte fagfelleloggen med status.
