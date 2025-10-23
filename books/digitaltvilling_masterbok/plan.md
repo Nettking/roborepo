@@ -20,6 +20,15 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk. | Oppdater når nye termer eller presiseringer oppstår under fagfellelesing. |
 | Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan og ferdige vurderingsrubrikker. | Utarbeid maler for prosjektkontrakt og koble rubrikkene til kommende caseutvidelser. |
 
+### Nye tematiske prioriteringer
+
+- Integrere sirkulærøkonomi og bærekraftindikatorer i kapittel 3, 4 og 7 med konkrete måltall og dashboards.
+- Utvide kapittel 3, 6 og 7 med beredskaps- og sikkerhetsperspektiv (NIS2, IEC 62443) samt scenarioøvelser for kritisk infrastruktur.
+- Legge til seksjoner om AR/VR-basert beslutningsstøtte og operatøropplæring i kapittel 4, 5 og 8.
+- Beskrive datasamarbeid, Gaia-X/IDSA og norske dataspace-initiativ i kapittel 3 og 7.
+- Planlegge nye klimacaser (havvind, landbruk, batteri) i kapittel 8 og støttefilene.
+- Oppdatere kapittel 5 og 9 med fremvoksende AI-verktøy, generative modeller og edge-baserte tvillinger.
+
 ## Del I: Fundamentet
 
 1. **Kapittel 1 – Introduksjon til digitale tvillinger**

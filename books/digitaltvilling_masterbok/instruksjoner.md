@@ -40,4 +40,25 @@ Denne filen beskriver hvordan neste oppgave skal velges og hvordan bidrag organi
 - Knyt teori til praksis med konkrete verktøy (simulatorer, IoT-plattformer, dataintegrasjon).
 - Husk å dekke etiske og juridiske aspekter ved bruk av digitale tvillinger.
 
+## Nye tematiske prioriteringer og innholdsforslag
+
+For å fylle boken med ferske perspektiver og holde stoffet oppdatert, skal kommende oppgaver hente inn følgende temaer. Opprett egne `TODO`-oppgaver i `task_queue.md` når du starter hvert initiativ, og oppdater `plan.md` når strukturen justeres.
+
+### Temaer som må innarbeides i kapittelteksene
+
+- **Sirkulærøkonomi og bærekraftindikatorer:** Beskriv hvordan digitale tvillinger støtter materialgjenvinning, energioptimalisering og klimaregnskap i norske verdikjeder (industri, bygg, kommuner). Foreslå måltall og dashboards for kapittel 3, 4 og 7.
+- **Digitale tvillinger for beredskap og sikkerhet:** Utdyp scenarioanalyse for kritisk infrastruktur, inkludert cyber-fysisk sikkerhet, nøkkelstandarder (NIS2, IEC 62443) og beredskapsøvelser. Koble innholdet til kapittel 3, 6 og 7.
+- **Menneske–maskin-samhandling og visualisering:** Legg inn stoff om AR/VR, beslutningsstøtte og operatøropplæring. Sett av plass til norske pilotprosjekter (f.eks. offshore, helse) og vurder hvordan det kan integreres i kapittel 4, 5 og 8.
+- **Datasamarbeid og digitale dataspace-modeller:** Forklar Gaia-X, IDSA og norske dataøkosystem (f.eks. MobilityLab, HealthData). Angi hvordan datasamarbeid påvirker datadeling, kontrakter og styring i kapittel 3 og 7.
+- **Tverrsektorielle klimacaser:** Planlegg nye caser for havvind, landbruk og batteriverdikjeden som komplementerer dagens industri-, transport- og helseeksempler i kapittel 8.
+- **Fremvoksende teknologier og AI-verktøy:** Oppdater kapittel 5 og 9 med bruk av foundation-modeller, generativ simulering, agentbasert AI og digitale tvillinger som kjører på kant/edge.
+
+### Elementer som kan berike bokas støtteapparat
+
+- **Øvingsbank og prosjektmaler:** Utvid støttefilene med komplette prosjektoppgaver (data, vurderingskriterier, forslag til presentasjoner) som bygger på hvert nytt tema.
+- **Intervjuer og ekspertkommentarer:** Planlegg korte tekstbokser eller marginalkommentarer med sitater fra norske fagfolk (energi, bygg, helse, mobilitet) for å gi autentiske stemmer.
+- **Figur- og dataressurser:** Opprett illustrasjonsplaner for nye caser, inkludert krav til 3D-modeller, tidsserier og sanntidsdashboards. Registrer alt-tekst og metadata i `support/figurer/` samtidig.
+- **Regelverksoppsummeringer:** Lag tabeller i appendiks som sammenligner lover, standarder og tilsynsmyndigheter per sektor (personvern, sikkerhet, miljø). Referer til relevant kapittel når tabellen oppdateres.
+- **Verktøykasser for implementering:** Sammensett sjekklister, modenhetsmålinger og gevinstrealiseringsplaner som kan legges inn i kapittel 7, appendiks og lærerveiledningen.
+
 Med denne strukturen kan du enkelt be assistenten om å «ta neste oppgave på dt-boken». Assistenten vil da lese `task_queue.md`, plukke første `TODO`-oppgave og utføre den.
