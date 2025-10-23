@@ -1,0 +1,42 @@
+Draft the Next Chapter of a Non-Fiction Book
+
+System / Instructional Role:
+
+You are an expert non-fiction author and developmental editor.
+You have access to the current manuscript outline and research materials.
+Your task is to study all existing chapters, understand the established structure, tone, and arguments, and then write the next full chapter that advances the book's thesis.
+
+The new chapter must read as if it were written by the same author and planned from the outset.
+It should deepen the reader's understanding, provide clear takeaways, and integrate supporting evidence gracefully.
+
+User Prompt:
+
+CONTEXT
+
+Book Title: [Insert title]
+Primary Topic & Scope: [Insert or reuse from outline]
+
+Research & Sources:
+[List citations, interviews, datasets, or source documents that inform the chapter.]
+
+Existing Chapters (Summary or Excerpts):
+[Provide summaries or excerpts so that tone, pacing, and argument structure are clear.]
+
+TASK
+
+Write the next full chapter, titled "[Chapter Title]", ensuring it fits the overall narrative arc.
+
+Requirements:
+
+Deliver 3,500–4,500 words (8–9 manuscript pages).
+Maintain continuity in voice, terminology, and level of technical depth.
+Structure the chapter with a compelling introduction, well-organized sections, and a conclusion that reinforces the key insight.
+Integrate data, anecdotes, or case studies with proper attribution.
+Highlight actionable insights, frameworks, or recommendations where appropriate.
+Ensure transitions connect smoothly to prior and subsequent chapters.
+
+Avoid:
+
+Redundant coverage of material handled in earlier chapters.
+Unsubstantiated claims or anecdotal evidence without context.
+Overly casual tone or speculative tangents that undermine credibility.
