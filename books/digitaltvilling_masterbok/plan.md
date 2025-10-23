@@ -10,7 +10,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | I | Kapittel 2 | Delvis utkast – systemkart og arbeidsmåte er beskrevet, men modell- og integrasjonsseksjonene er punkter. | Skrive prosa for modelleringsparadigmer og kalibrering samt legge til case. |
 | I | Kapittel 3 | Første hele utkast – tekst, figurer og øvinger er på plass. | Fagfellelesing og finpuss når resten av boken er mer moden. |
 | II | Kapittel 4 | Første hele utkast – beskriver simuleringsmetoder, analyser, verktøyskart og fjernvarmeeksempel. | Fagfellelese og identifisere behov for illustrasjoner eller utdypende referanser. |
-| II | Kapittel 5 | Skjelett – læringsmål og punktlister uten utdyping eller case. | Utvikle tekst om ML, optimalisering, dataassimilering og eksempler fra norsk industri. |
+| II | Kapittel 5 | Første hele utkast – sammenhengende tekst som binder ML, optimalisering og dataassimilering, inkludert oppdrettscase. | Planlegge fagfellevurdering og vurdere behov for illustrasjoner og referanser. |
 | II | Kapittel 6 | Skjelett – læringsmål og stikkord for validering, usikkerhet og etikk. | Utdype rammeverk, standarder og praktiske prosedyrer med case. |
 | III | Kapittel 7 | Skjelett – punkter om livssyklus, roller og endringsledelse. | Skrive tekst med governance-modeller, RACI-eksempel og modenhetsmodeller. |
 | III | Kapittel 8 | Delvis utkast – casemal er detaljert, men sektorseksjonene er punktlister. | Utdype sektorseksjonene med narrativ tekst og knytte mal til flere norske eksempler. |
@@ -47,9 +47,9 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
    - Studentaktivitet: Sammenligne to simuleringsverktøy.
 
 5. **Kapittel 5 – Læring, optimalisering og AI**
-   - Status: Skjelett med punktlister.
+   - Status: Første hele utkast med prosa, samspillseksjon og norsk oppdrettscase.
    - Læringsmål: Se sammenhengen mellom maskinlæring, optimalisering og digitale tvillinger.
-   - Forfatteroppgaver (neste steg): Skrive tekst som binder sammen maskinlæring, beslutningsstøtte og dataassimilering med konkrete industriscenarioer.
+   - Forfatteroppgaver (neste steg): Forberede fagfellelesing, identifisere eventuelle illustrasjonsbehov og samle referanser til metoder og case.
    - Studentaktivitet: Designe et eksperiment som bruker online læring.
 
 6. **Kapittel 6 – Validering, verifikasjon og tillit**
@@ -93,7 +93,7 @@ En anbefalt 6-ukersmodul:
 
 ## Videre arbeid
 
-1. Fullføre pågående kapitler i Del I og Del II ved å skrive sammenhengende tekst og eksempler for Kapittel 1, 2, 4, 5 og 6.
+1. Fullføre pågående kapitler i Del I og Del II ved å skrive sammenhengende tekst og eksempler for Kapittel 1, 2, 4 og 6, og planlegge fagfellevurdering for Kapittel 5.
 2. Utvikle Del III ved å ferdigstille Kapittel 7–9 med governance-modeller, sektoranalyser og forskningsperspektiv.
 3. Etablere supplerende støttefiler som en begrepsliste/ordliste og et referansesystem (BibTeX) som kan brukes gjennom hele boken.
 4. Planlegge fagfellelesing og illustrasjoner når hovedtekstene er skrevet.
