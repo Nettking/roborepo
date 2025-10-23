@@ -5,6 +5,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 ## Aktive oppgaver
 `TODO` Her må nye oppgaver legges til.
 `TODO` Skill ferdige oppgaver i en egen fil
+`TODO` Alle instruksjoner i AGENTS instructions
 ## Pågår
 
 *(ingen oppgaver)*
