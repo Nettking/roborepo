@@ -1,43 +1,24 @@
-# Project Overview
+# Manuscript Workspace
 
-This repository now organizes each LaTeX book inside the `books/` directory. Every book contains its own `main.tex`, chapter files, and supporting material so they can be managed independently.
+## Purpose
+This repository houses a collection of long-form manuscripts written in LaTeX. Each book lives in its own subdirectory under `books/`, complete with its own `main.tex`, chapter files, and supporting materials so stories can evolve independently while sharing the same build tooling.
 
-## Available Books
+## Build Commands
+All build automation is provided through the top-level `Makefile` and Docker image defined in the repository.
 
-- **tides_of_marisport** – The existing fantasy manuscript with ten chapters and supporting front matter. Its entry point is `books/tides_of_marisport/main.tex`.
-- **placeholder_book** – A blank template ready for new content, located at `books/placeholder_book/main.tex`.
+| Command | Description |
+| --- | --- |
+| `make build-image` | Builds the local Docker image (`latex-builder`) used for all LaTeX compilation. Run this once before generating PDFs. |
+| `make pdf [BOOK=<name>] [PROJECT=main]` | Compiles the selected book inside the Docker container. Defaults to `BOOK=tides_of_marisport` and `PROJECT=main`. |
+| `make clean [BOOK=<name>]` | Removes LaTeX auxiliary files for the chosen book. |
+| `make clean-all [BOOK=<name>]` | Runs `make clean` and deletes the generated PDF for the selected book. |
 
-## Building a PDF
+> **Tip:** Override `BOOK` to compile an alternate manuscript, e.g. `make pdf BOOK=placeholder_book`.
 
-Use the `BOOK` variable with the provided `Makefile` to choose which book to compile:
+## Repository Layout
+- `books/` – Individual manuscripts and templates. See `books/readme.md` for summaries of each title.
+- `Dockerfile` – Minimal image definition used by the Makefile to compile LaTeX safely in Docker.
+- `Makefile` – Convenience targets for building and cleaning book outputs.
+- `instructions.txt` – Background instructions for future writing tasks.
 
-```bash
-make pdf                 # builds books/tides_of_marisport/main.tex by default
-make pdf BOOK=placeholder_book
-```
-
-The generated PDF and auxiliary files are stored next to the selected book's `main.tex` file. Run the corresponding clean targets to remove build artifacts:
-
-```bash
-make clean BOOK=tides_of_marisport        # remove auxiliary files for Tides of Marisport
-make clean-all BOOK=tides_of_marisport    # also remove the compiled PDF
-```
-
-## Tides of Marisport Table of Contents
-
-- **Front Matter**
-  - Title Page
-  - Table of Contents
-- **Main Matter**
-  1. [Chapter 1 – Low Tide](books/tides_of_marisport/chapters/chapter1.tex)
-  2. [Chapter 2 – Undertow](books/tides_of_marisport/chapters/chapter2.tex)
-  3. [Chapter 3 – Crosscurrents](books/tides_of_marisport/chapters/chapter3.tex)
-  4. [Chapter 4 – Stormglass](books/tides_of_marisport/chapters/chapter4.tex)
-  5. [Chapter 5 – Eyewall](books/tides_of_marisport/chapters/chapter5.tex)
-  6. [Chapter 6 – Driftline](books/tides_of_marisport/chapters/chapter6.tex)
-  7. [Chapter 7 – Soundings](books/tides_of_marisport/chapters/chapter7.tex)
-  8. [Chapter 8 – Moorings](books/tides_of_marisport/chapters/chapter8.tex)
-  9. [Chapter 9 – Crosscurrents](books/tides_of_marisport/chapters/chapter9.tex)
-  10. [Chapter 10 – Outbound](books/tides_of_marisport/chapters/chapter10.tex)
-- **Back Matter**
-  - Appendices or References (to be added)
+Happy writing! Explore each book's folder for chapter outlines, dispositions, and development notes.
