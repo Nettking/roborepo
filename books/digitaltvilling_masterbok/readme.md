@@ -6,13 +6,14 @@ Denne mappen inneholder grunnstrukturen til en norsk lærebok om digitale tvilli
 
 - **Tittel (arbeidstittel):** *Digitale tvillinger i praksis for masterstudenter*
 - **Målgruppe:** Masterstudenter som arbeider med system- og produktutvikling, dataanalyse eller industrielle prosesser.
-- **Format:** Modulært læremiddel med frontmatter, kapitler, vedlegg og støttefiler.
+- **Format:** LaTeX-basert læremiddel med frontmatter, kapitler, vedlegg og støttefiler.
 - **Språk:** Norsk bokmål.
 
 ## Mappeinnhold
 
-- `frontmatter/` – forord, takksigelser og andre innledende elementer.
-- `chapters/` – kapittelinndelinger med strukturerte Markdown-filer.
+- `main.tex` – inngangspunktet for å kompilere boken.
+- `frontmatter/` – forord og andre innledende elementer i LaTeX-format.
+- `chapters/` – kapittelinndelinger skrevet som `.tex`-filer.
 - `plan.md` – overordnet fremdriftsplan og forslag til leseplan.
 - `instruksjoner.md` – retningslinjer for videre arbeid og hvordan neste oppgave velges.
 - `task_queue.md` – prioriterte oppgaver for videre utvikling.
@@ -26,7 +27,7 @@ Denne mappen inneholder grunnstrukturen til en norsk lærebok om digitale tvilli
 ## Status
 
 - Frontmatter er etablert med et førsteutkast til forord.
-- Kapitler er opprettet med skjelett og læringsmål.
+- Kapitler er opprettet med skjelett og læringsmål i LaTeX-format.
 - Detaljert arbeidsliste ligger i `task_queue.md`.
 
 Boken er under utvikling. Fremtidige iterasjoner vil fylle ut innholdet og tilføre casestudier, øvinger og illustrasjoner.

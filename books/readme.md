@@ -13,6 +13,6 @@ A blank manuscript scaffold that provides title, table of contents, and structur
 Entry point: `placeholder_book/main.tex`
 
 ## digitaltvilling_masterbok
-Norwegian-language graduate-level textbook project on digital twins. Contains structured front matter, chapter outlines, development instructions, and a task queue for iterative content creation. Start here when contributing to the digital twin curriculum.
+Norwegian-language graduate-level textbook project on digital twins, maintained as a LaTeX manuscript with structured front matter, chapter outlines, development instructions, and a task queue for iterative content creation. Start here when contributing to the digital twin curriculum.
 
-Entry point: `digitaltvilling_masterbok/readme.md`
+Entry point: `digitaltvilling_masterbok/main.tex`
