@@ -2,6 +2,7 @@ Kapittel,Uke,Kommentar-ID,Type innspill,Ansvarlig redaktør,Status,Notater
 1-2,1,KT-01,Begrepsavklaring,Ingrid Lunde,Under arbeid,Definisjonsnotat ferdigstilles innen 24.05 for utsending i fagfellepakke 27.05; involverer ordliste-team.
 1-2,1,KT-02,Caseforslag,Ingrid Lunde,Under vurdering,Workshop med kapittelansvarlige 29.05 for å velge to nye case før felles gjennomgang 03.06.
 3-4,2,DI-03,Dataflyt,Ahmed Solheim,Levert,Delingsnotat publisert (`support/notater/datastyringsforum-di03.md`); indikatorer og responssløyfe oppdatert i Kapittel 3.
+3-4,2,DI-03-FIG,Illustrasjonskoordinering,Ahmed Solheim,Planlagt oppfølging,Datapipeline-figur v2 deles med grafikkteam; alt-tekst i `support/figurer/metadata/kap03-datapipeline-v2.alt.md` og referanser oppdatert i `plan.md`.
 5-6,3,AI-04,Algoritmevalg,Nora Aas,Levert,Matrise og vurderingskriterier publisert i Kapittel 5 (seksjon «Vurderingskriterier for AI-drevne tvillinger», oppdatert 2025-10-25).
 7-9,4,GV-05,Governance-tiltak,Leif Ødegaard,Planlagt oppfølging,Utarbeider tiltakslogg og KPI-oppsett til 29.05.
 Appendiks,4,ST-06,Terminologi,Astrid Hauge,Planlagt oppfølging,Oppdatert begrepsliste og engelske ekvivalenter ferdig 31.05.
