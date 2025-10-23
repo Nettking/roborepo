@@ -2,6 +2,7 @@
 % Denne filen gir undervisere et utgangspunkt for planlegging av kursopplegg.
 % Notat (2024-05-15): Oppdatert med vurderingsrubrikker for underveisleveranser, prosjektpresentasjon, rapport og muntlig prøve.
 % Notat (2024-06-15): Lagt til mal for prosjektkontrakt mellom studentgrupper og eksterne partnere.
+% Notat (2024-07-01): Integrert vurderingsmatrise for casevalg og harmonisert kriteriesett med Kapittel 8.
 
 \chapter{Lærerveiledning}
 
@@ -47,6 +48,41 @@ Hver uke kan organiseres rundt tre faste elementer:
     \item \textbf{Forelesning/innledning (2 timer):} Oppsummer hovedteori fra kapitlene, vis norske bransjeeksempler og introduksjon til ukens oppgave.
     \item \textbf{Arbeidsseminar (2 timer):} Studentene jobber i grupper med å anvende teorien på eget case. Underviser og eventuelle mentorer gir veiledning.
     \item \textbf{Refleksjon eller faglig journal (30 minutter):} Individuell innsending med læringspunkter, spørsmål og planer for neste uke.
+\end{enumerate}
+
+\section{Casevalg og modenhetsvurdering}
+Planen for caser bør bygge på de samme kriteriene som presenteres i Kapittel~8, slik at studenter, fagfeller og eksterne partnere får et felles språk for prioritering. Introduser matrisen under allerede i uke~1 når gruppene kartlegger mulige caser, og bruk den aktivt når dere beslutter hvilke prosjekter som skal videreføres i undervisningen.
+
+\subsection*{Vurderingsmatrise for casevalg}
+Hvert case skåres fra 1 (lav modenhet) til 5 (høy modenhet). Noter begrunnelse for hver skår og lenk til dokumentasjon slik at vurderingen kan etterprøves.
+
+\begin{longtable}{p{0.23\textwidth}p{0.26\textwidth}p{0.45\textwidth}}
+\toprule
+\textbf{Kriterium} & \textbf{Hva vurderes?} & \textbf{Eksempel på skåringsskala (1--5)} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Kriterium} & \textbf{Hva vurderes?} & \textbf{Eksempel på skåringsskala (1--5)} \\
+\midrule
+\endhead
+Datagrunnlag og tilgang & Tilgjengelighet, kvalitet og rettigheter til data som trengs for tvillingen. & 1~= fragmenterte kilder uten tilgangsavklaringer. 3~= etablerte datastrømmer, men mangler kvalitetssikring. 5~= sanntidsdata med avtalte API-er, eierskap og datakvalitetsrutiner. \\
+\addlinespace
+Organisatorisk forankring & Hvor godt caset er støttet av ledelse, fagmiljø og brukere. & 1~= initiativ fra enkeltperson uten mandat. 3~= prosjektgruppe med midlertidig finansiering. 5~= tverrfaglig styringsmodell med dedikerte roller og gevinstansvar. \\
+\addlinespace
+Teknologisk modenhet & Modenhet på modeller, integrasjonsplattform og driftsoppsett. & 1~= konseptskisse uten implementert plattform. 3~= pilot i begrenset produksjon. 5~= robust løsning med DevOps-/MLOps-sløyfer og overvåkning i drift. \\
+\addlinespace
+Gevinst- og læringspotensial & Forventet effekt for virksomheten og læringsverdi for studenter. & 1~= uklare mål og lite overføringsverdi. 3~= tydelige KPI-er, men begrenset dokumentasjon. 5~= målbare gevinster, åpne data/artefakter og tydelig kobling til læringsmål. \\
+\addlinespace
+Risiko og etterlevelse & Regulatoriske, sikkerhets- og etiske forutsetninger. & 1~= ukjente krav eller høy personvernrisiko. 3~= identifiserte tiltak, men ufullstendig dokumentasjon. 5~= komplette risikovurderinger, etterlevelsesplan og jevnlig revisjon. \\
+\bottomrule
+\end{longtable}
+
+\paragraph{Arbeidsprosess}
+\begin{enumerate}
+    \item Sett sammen et tverrfaglig vurderingsteam (for eksempel faglærer, dataarkitekt og representant fra partnerbedrift) og avklar beslutningen som skal tas.
+    \item Samle prosjektmandat, tekniske beskrivelser, datalister og gevinstplaner før vurderingen. Bruk ressursoversikten i \autoref{appendix:ressurser} dersom caset mangler støttedata eller verktøy.
+    \item La studentgruppene skåre caset sitt individuelt før dere gjør en felles vurdering i plenum. Diskuter avvik og dokumenter en enighet i fagfellelogg eller læringsplattform.
+    \item Identifiser tiltak for kriterier som får skår 1--2, og kommuniser tydelig om caset skal prioriteres, videreutvikles eller settes på vent. Del resultatet med studentene slik at forventninger og forberedelser blir transparente.
 \end{enumerate}
 
 \section{Vurderingsdesign}
