@@ -4,7 +4,6 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Aktive oppgaver
 
-- `TODO` – Utdype Kapittel 8 ved å skrive narrative sektorseksjoner, knytte casemalen til flere norske case og foreslå øvingsoppgaver.
 - `TODO` – Utvikle Kapittel 9 til en helhetlig tekst om forskningsfront, trender og forslag til masterprosjekter.
 - `TODO` – Opprette en begrepsliste/ordliste i støttefilene som samler norske og engelske uttrykk brukt i boken.
 - `TODO` – Etablere et BibTeX-bibliotek og beskrive siteringspraksis slik at kapitlene kan referere til kilder.
@@ -15,6 +14,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Ferdige oppgaver
 
+- `FERDIG` – Utdype Kapittel 8 ved å skrive narrative sektorseksjoner, knytte casemalen til flere norske case og foreslå øvingsoppgaver.
 - `FERDIG` – Skrive Kapittel 7 med livssyklusfaser, governance-modeller, RACI-eksempel og måleindikatorer for gevinstrealisering.
 - `FERDIG` – Ferdigstilt Kapittel 6 med utdypende tekst om valideringsrammeverk, usikkerhetsanalyse, etikk og kommunikasjon av tillit.
 - `FERDIG` – Evaluert fremdriftsplanen, dokumenterte status i `plan.md` og etablerte nye TODO-oppgaver for å sikre komplett bok.
