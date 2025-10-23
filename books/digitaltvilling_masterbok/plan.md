@@ -96,6 +96,6 @@ En anbefalt 6-ukersmodul:
 
 1. Fullføre pågående kapitler i Del I og Del II ved å skrive sammenhengende tekst og eksempler for Kapittel 1, 2, 4 og 6, og planlegge fagfellevurdering for Kapittel 5.
 2. Utvikle Del III ved å ferdigstille Kapittel 7–9 med governance-modeller, sektoranalyser og forskningsperspektiv.
-3. Vedlikeholde den nye begrepslisten og etablere et referansesystem (BibTeX) som kan brukes gjennom hele boken.
+3. Vedlikeholde den nye begrepslisten og det etablerte referansesystemet (BibTeX) som kan brukes gjennom hele boken.
 4. Planlegge fagfellelesing og illustrasjoner når hovedtekstene er skrevet.
 5. Holde ressursappendiks og lærerveiledning oppdatert i takt med nye kapitler og caser.
