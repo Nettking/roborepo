@@ -4,9 +4,8 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Aktive oppgaver
 
-1. `TODO` – Skrive en casestudie-mal i Kapittel 8 basert på et norsk industriprosjekt.
-2. `TODO` – Utarbeide forslag til lærerveiledning i egen fil under `support/` (mappen må opprettes).
-3. `TODO` – Lage forslag til datasett og verktøyressurser i en vedleggsfil.
+1. `TODO` – Utarbeide forslag til lærerveiledning i egen fil under `support/` (mappen må opprettes).
+2. `TODO` – Lage forslag til datasett og verktøyressurser i en vedleggsfil.
 
 ## Pågår
 
@@ -17,3 +16,4 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 - `FERDIG` – La til illustrative figurer og beskrivelser av systemkart i Kapittel 2.
 - Opprettet grunnstruktur for boken, inkludert frontmatter, kapittelskisser og arbeidsprosess.
 - `FERDIG` – Utdype historiske eksempler i Kapittel 1 med referanser til norske initiativer.
+- `FERDIG` – Utarbeidet casestudie-mal i Kapittel 8 med fokus på batteriproduksjon i Mo i Rana.
