@@ -11,6 +11,11 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | I | Kapittel 2 | Oppdatert med politiske rammer, Statnett- og Avinor-caser og ny illustrasjon. | Starte fagfelleløp for policyseksjonen og verifisere regulatoriske referanser. |
 | I | Kapittel 3 | Supplert med sirkulærøkonomi, materialsløyfefigur og to datadrevne caser. | Samordne sirkulærøkonomi-innspill med grafikk- og datastyringsteamet før fagfelleutsending. |
 | II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
+| II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering, dataassimilering samt generative og edge-baserte tiltak. | Test pilotopplegg med vurderingsmatrise, sikre datasporing for syntetiske datasett og loggfør funn i fagfelleløpet. |
+| II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet, etikk og regulatoriske krav (NIS2, IEC 62443). | Følg opp pilotcase med oppdaterte sjekklister, dokumenter tilsynsprosedyrer og oppdater tiltak i fagfelleloggen. |
+| III | Kapittel 7 | Helhetlig utkast med livssyklus, governance, RACI-eksempel og ny figur for styringssløyfer. | Gjennomfør intervjuer etter guiden, koble funn til KPI-oppfølging og pilotlogg. |
+| III | Kapittel 8 | Helhetlig utkast med narrative sektorseksjoner, casemal og prioritert pilotliste. | Sikre dataspace-tilganger, distribuere casebriefs og oppdatere kildebank for hver sektor. |
+| III | Kapittel 9 | Helhetlig utkast om forskningslandskap, teknologitrender og dataspace-samarbeid. | Sammenstill pilotfeedback med forskningsideer, og oppdater bibliografien etter nye kilder. |
 | II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering og dataassimilering. | Samle utfyllende referanser og koordinere fagfellelesing; vurderingskriterier og algoritmematrise er beskrevet i Seksjon~«Vurderingskriterier for AI-drevne tvillinger». |
 | II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet og etikk. | Verifiser standardhenvisninger og vurder om kapitlet trenger støttediagrammer. |
 | III | Kapittel 7 | Helhetlig utkast med livssyklus, governance og RACI-eksempel. | Integrere RACI-S-variant, gevinstplan og dataspace-arkitektur i manus og grafikk. |
@@ -192,34 +197,44 @@ Anslagene nedenfor tar utgangspunkt i 400 ord per side og supplerer statusoversi
    - Studentaktivitet: Gjennomføre immersiv beslutningslab og sammenligne to simuleringsverktøy.
 
 5. **Kapittel 5 – Læring, optimalisering og AI**
-   - Status: Helhetlig tekst som binder maskinlæring, optimalisering og dataassimilering, inkludert oppdrettscase.
+   - Status: Helhetlig tekst som binder maskinlæring, optimalisering, dataassimilering og prioriterte generative/edge-tiltak, inkludert oppdrettscase.
    - Læringsmål: Se sammenhengen mellom maskinlæring, optimalisering og digitale tvillinger.
+   - Forfatteroppgaver (neste steg): Test pilotopplegg med generative datasett og edge-distribusjon, oppdater referanser i \S~«Fremvoksende praksiser» og loggfør erfaringene i `support/fagfellelogg.csv`.
+   - Studentaktivitet: Designe et eksperiment som kombinerer online læring, syntetiske scenarier og vurdering mot edge-deployert modell.
    - Forfatteroppgaver (neste steg): Fagfellekoordinere den multimodale AI-coach-seksjonen, publisere algoritmematrise-notatet (`support/notater/kap05-algoritmematrise-utvidelse.md`) og sikre at laboratorierubrikken brukes i læringsplattformen.
    - Studentaktivitet: Designe og teste en multimodal AI-lab med AR/VR-støtte.
 
 6. **Kapittel 6 – Validering, verifikasjon og tillit**
-   - Status: Helhetlig tekst med rammeverk, usikkerhetsanalyse, etikk og refleksjonsspørsmål.
+   - Status: Helhetlig tekst med rammeverk, usikkerhetsanalyse, etikk og integrerte NIS2/IEC~62443-tiltak.
    - Læringsmål: Forstå prosesser for kvalitetssikring og usikkerhetsanalyse.
+   - Forfatteroppgaver (neste steg): Kvalitetssikre sjekklistene mot pilotcasene, verifisere at NIS2- og IEC~62443-referanser er dokumentert og koordinere videre fagfelleinnhenting med industripartnere.
+   - Studentaktivitet: Utarbeide en valideringsplan som viser samsvar med NIS2, IEC~62443 og DNV-RP-A204.
    - Forfatteroppgaver (neste steg): Teste sikkerhetscase-øvingen (`support/notater/kap06-sikkerhetscase.md`), dokumentere standardkartet og samle revisjonsinnspill fra governance-teamet.
    - Studentaktivitet: Utarbeide en kombinert validerings- og etterlevelsesplan for en digital tvilling.
 
 ## Del III: Implementering og casearbeid
 
 7. **Kapittel 7 – Livssyklus og styring**
-   - Status: Helhetlig tekst med livssyklusfaser, governance-modeller, RACI-eksempel og gevinstindikatorer.
+   - Status: Helhetlig tekst med livssyklusfaser, governance-modeller, RACI-eksempel, gevinstindikatorer og nytt livssyklusdiagram.
    - Læringsmål: Lære om governance, endringsledelse og livssyklus.
+   - Forfatteroppgaver (neste steg): Gjennomføre intervjurunden etter den oppdaterte guiden, koble funn til KPI-settet og justere tiltakslisten før pilot.
+   - Studentaktivitet: Lage RACI-matrise og intervjuguide for et valgt case, med referanse til livssyklusdiagrammet.
    - Forfatteroppgaver (neste steg): Integrere RACI-S-variant og gevinstplan i teksten, beskrive dataspace-arkitektur og koordinere grafisk fremstilling før fagfellegjennomgang.
    - Studentaktivitet: Lage RACI-matrise for et prosjekt.
 
 8. **Kapittel 8 – Bruksområder og sektorspesifikke case**
-   - Status: Helhetlig tekst med narrative sektorseksjoner, casemal og øvinger.
+   - Status: Helhetlig tekst med narrative sektorseksjoner, casemal, øvinger og prioritert pilotliste.
    - Læringsmål: Illustrere variasjon mellom industri, energi, helse, transport.
+   - Forfatteroppgaver (neste steg): Følge opp dataspace-tilganger, distribuere casebriefs og oppdatere kildebanken i tråd med tabellen «Prioritering for pilotundervisningen».
+   - Studentaktivitet: Presentere en caseanalyse som inkluderer dataspace-tilgang, governance og vurdering mot pilotkriteriene.
    - Forfatteroppgaver (neste steg): Ferdigstille havvind-, landbruks- og battericase med KPI-tabeller, kildegrunnlag og dataspace-beskrivelser samt oppdatere støttefilene.
    - Studentaktivitet: Presentere en caseanalyse.
 
 9. **Kapittel 9 – Fremtidstrender og forskning**
-   - Status: Helhetlig tekst om forskningsfront, teknologitrender og prosjektforslag.
+   - Status: Helhetlig tekst om forskningsfront, teknologitrender, dataspace-samarbeid og forskningscase.
    - Læringsmål: Se forskningsfronten og nye teknologier.
+   - Forfatteroppgaver (neste steg): Oppdatere bibliografien med nye dataspace- og standardreferanser, og forankre forskningsforslagene i pilotens læringsutbytte.
+   - Studentaktivitet: Lage forskningsspørsmål som kobler dataspace-økosystemer, bærekraft og regulatoriske krav.
    - Forfatteroppgaver (neste steg): Oppdatere AI- og edge-trender, legge inn forsknings-KPI-tabell, koordinere dataspace-perspektiver og harmonisere nye referanser før fagfelleløpet.
    - Studentaktivitet: Lage forskningsspørsmål.
 
@@ -280,6 +295,7 @@ Vektleggingen summerer til 100\% (45\% underveisleveranser, 55\% sluttvurdering)
 - **Digital infrastruktur:** Teams for kommunikasjon, OneDrive for dokumentdeling, JupyterHub for dataanalyse, og GitLab-gruppe for kode og modeller. All tilgang settes opp i uke -2.
 - **Mentoroppsett:** Tre mentorer (modellering, data, governance) deler på ukentlige kontortimer. Industripartnere inviteres til uke 4–6 for å gi caserelatert feedback.
 - **Ressurser:** Lisenspakker for AnyLogic og Simulink, skybudsjett i Azure (10 000 NOK), samt datasett fra energisektoren og maritim industri. Biblioteket tilrettelegger for nødvendig litteratur.
+- **Pilotmateriell:** Følg sjekklisten i `support/notater/pilotundervisning-materiell.md` for å sikre at casepakker, intervjuguide og datasett distribueres i forkant av hver uke.
 - **Kommunikasjon:** Ukentlig nyhetsbrev til deltakerne med agenda, forberedelser og lenker til støtteinnhold. Programleder rapporterer status til instituttleder etter ukene 2 og 5.
 
 ### Evaluering og videreføring

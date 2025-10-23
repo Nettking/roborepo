@@ -84,6 +84,19 @@ For å sammenligne case på tvers av sektorer, start med å beskrive hvorfor tvi
     \item Reflekter over etiske og samfunnsmessige hensyn, inkludert personvern, arbeidstakerperspektiv og miljøpåvirkning.
 \end{itemize}
 
+\subsection{Prioritering for pilotundervisningen}
+Fagfelleinnspillene fra Statnett, Equinor og Helse Vest anbefalte at vi velger et begrenset sett case til pilotundervisningen slik at studentene kan fordype seg i datastrømmer og styringsprosesser. Prioriteringen nedenfor bygger på vurderingsmatrisen og de datadelingstiltakene som er tilgjengelige gjennom Gaia-X og norske dataspace-initiativer.\citep{gaiax2022architecture} Oversikten dokumenteres også i `support/notater/pilotundervisning-materiell.md` slik at mentorene har oppdaterte kontaktpunkter og lisenskrav.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{3.2cm}p{2.2cm}p{4.5cm}p{4.5cm}}
+        \toprule
+        \textbf{Case} & \textbf{Prioritet} & \textbf{Datastrømmer} & \textbf{Tiltak fra fagfelleløpet} \\n        \midrule
+        Autonome ferger (Trondheim) & Høy & AIS, værdata, operativ logg, sikkerhetsrapporter & Datasett deles via kommunens dataspace; intervjuguide for fjernoperasjon oppdatert med sikkerhetsindikatorer. \\n        Kraftnett i Nord-Norge & Høy & SCADA, flaskehalsmodellering, energimarked & Avklarte tilgang til Statnetts sandkasse; tiltak for beredskap og NIS2-rapportering dokumentert. \\n        Batteriproduksjon Mo i Rana & Middels & MES, energi- og logistikkdata, kvalitetsmålinger & Datasamarbeid med industriparkens datasjø; plan for syntetiske datasett der produksjonsdata er sensitive. \\n        Virtuell pasientflyt (Helse Vest) & Middels & Kliniske registre, ressursplanlegging, ventelistestatistikk & Tidsluker for pseudonymisering av data avtalt; etikk- og samtykkestrømmer koblet til Kapittel~6. \\n        Smarte bygg (Oslo kommune) & Utforsk & Energi- og inneklimadata, arbeidsordre & Pilot holdes i reserve; krever videre avklaringer om deling via kommunal dataspace. \\n        \bottomrule
+    \end{tabular}
+    \caption{Prioritert caseliste for pilotundervisningen basert på fagfelleinnspill og tilgjengelige datastrømmer.}
+\end{table}
+
 \subsection*{Vurderingsmatrise for modenhet og prioritering}
 Når flere potensielle case konkurrerer om oppmerksomhet eller undervisningsressurser, kan en vurderingsmatrise gi et felles
 beslutningsgrunnlag. Tabellen under brukes til å skåre hvert case fra~1 (lav modenhet) til~5 (høy modenhet) på fem dimensjoner.

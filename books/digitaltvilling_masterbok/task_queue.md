@@ -33,6 +33,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 ## Pågår
 
+*(ingen oppgaver for øyeblikket – oppdater tabellen når nye leveranser starter)*
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger |
 | --- | --- | --- | --- | --- | --- |
 | DT-04 | Høy | Kapittel 4 | Reåpnet – ferdigstille immersivt beslutningsrom og laboratoriepakke for simulering. | Storyboard for `kap04-immersiv-beslutning-v1` og labbeskrivelse. | `support/illustrasjonsplan.md`, `support/notater/kap04-immersiv-case.md` |
@@ -47,6 +48,11 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-09 | Kapittel 9 | FERDIG – Harmoniserte forskningskapitlet med dataspace-trender og oppdatert bibliografi etter fagfelleinnspill. | `chapters/kapittel09-fremtid.tex`, `support/referanser.bib`, `plan.md` |
+| DT-08 | Kapittel 8 | FERDIG – Prioriterte pilotcase, etablerte dataspace-tilganger og oppdaterte sektoravsnitt etter fagfellefeedback. | `chapters/kapittel08-case.tex`, `support/notater/pilotundervisning-materiell.md`, `plan.md` |
+| DT-07 | Kapittel 7 | FERDIG – Tegnet livssyklusdiagram, utarbeidet intervjuguide og koblet tiltak til pilotlogg. | `chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/notater/pilotundervisning-materiell.md` |
+| DT-06 | Kapittel 6 | FERDIG – Integrerte NIS2/IEC 62443-tiltak, oppdatert sjekklister og referanser. | `chapters/kapittel06-validering.tex`, `support/referanser.bib`, `plan.md` |
+| DT-05 | Kapittel 5 | FERDIG – Innarbeidet generative og edge-baserte tiltak, utvidet vurderingsmatrise og pilotkrav. | `chapters/kapittel05-ai.tex`, `support/referanser.bib`, `plan.md` |
 | DT-09 | Kapittel 9 | FERDIG – Harmoniserte forskningskapitlet med generativ AI, edge-native tvillinger, dataspace-regulering og forsknings-KPI-tabell. | `chapters/kapittel09-fremtid.tex`, `support/referanser.bib` |
 | DT-08C | Kapittel 8 | FERDIG – Prioriterte batteriverdikjede-case, oppdaterte KPI-er og dataspace-krav, og la inn støtte-notat. | `chapters/kapittel08-case.tex`, `support/notater/case-batteri.md` |
 | DT-08B | Kapittel 8 | FERDIG – Dokumenterte landbrukscase med KPI-tabell, dataspace-implikasjoner og kildeoversikt. | `chapters/kapittel08-case.tex`, `support/notater/case-landbruk.md` |

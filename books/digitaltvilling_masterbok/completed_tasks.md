@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Gjennomførte fagfelleløpet for kapitlene 5–9, innarbeidet generative og edge-tiltak, standardreferanser (NIS2/IEC 62443) og pilotprioriteringer; oppdaterte `plan.md`, `support/fagfellelogg.csv`, kapitteltekstene, `support/referanser.bib` og pilotmateriellet (`support/notater/pilotundervisning-materiell.md`).
 - `FERDIG` – Leveranse for DT-09: Harmoniserte Kapittel 9 med generativ AI- og edge-trender, dataspace-regulering og ny KPI-tabell, samt oppdaterte kilder i `support/referanser.bib`.
 - `FERDIG` – Leveranse for DT-08C: Prioriterte batteriverdikjede-case i Kapittel 8 med KPI-tabell, dataspace-beskrivelse og nytt støtte-notat.
 - `FERDIG` – Leveranse for DT-08B: Dokumenterte landbrukscase med KPI-tabell og dataspace-implikasjoner i Kapittel 8, og opprettet støtte-notat.
