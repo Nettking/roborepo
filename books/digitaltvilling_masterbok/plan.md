@@ -9,7 +9,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | I | Kapittel 1 | Delvis utkast – bakgrunn er skrevet, men seksjonene om nøkkelbegreper, økosystem og verdiskaping står som punktlister. | Utarbeide sammenhengende tekst med norske eksempler og grunnbegreper. |
 | I | Kapittel 2 | Delvis utkast – systemkart og arbeidsmåte er beskrevet, men modell- og integrasjonsseksjonene er punkter. | Skrive prosa for modelleringsparadigmer og kalibrering samt legge til case. |
 | I | Kapittel 3 | Første hele utkast – tekst, figurer og øvinger er på plass. | Fagfellelesing og finpuss når resten av boken er mer moden. |
-| II | Kapittel 4 | Skjelett – består av læringsmål og punktlister uten forklarende tekst. | Skrive hovedtekst om simuleringsmetoder, verktøy, arbeidsflyter og norsk bransjeeksempel. |
+| II | Kapittel 4 | Første hele utkast – beskriver simuleringsmetoder, analyser, verktøyskart og fjernvarmeeksempel. | Fagfellelese og identifisere behov for illustrasjoner eller utdypende referanser. |
 | II | Kapittel 5 | Skjelett – læringsmål og punktlister uten utdyping eller case. | Utvikle tekst om ML, optimalisering, dataassimilering og eksempler fra norsk industri. |
 | II | Kapittel 6 | Skjelett – læringsmål og stikkord for validering, usikkerhet og etikk. | Utdype rammeverk, standarder og praktiske prosedyrer med case. |
 | III | Kapittel 7 | Skjelett – punkter om livssyklus, roller og endringsledelse. | Skrive tekst med governance-modeller, RACI-eksempel og modenhetsmodeller. |
@@ -41,9 +41,9 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 ## Del II: Metodikk og verktøy
 
 4. **Kapittel 4 – Simulering og analyse**
-   - Status: Skjelett med punktlister.
+   - Status: Første hele utkast med beskrivelser av simuleringsmetoder, analyser og praksiseksempel fra fjernvarme.
    - Læringsmål: Skille mellom ulike simuleringsmetoder og analyseteknikker.
-   - Forfatteroppgaver (neste steg): Utvikle narrativ tekst som beskriver deterministiske og stokastiske metoder, arbeidsflyter fra modelloppsett til analyse og et norsk bransjeeksempel.
+   - Forfatteroppgaver (neste steg): Gjennomføre fagfellelesing, vurdere behov for figurer og supplere referanser til norsk bransjepraksis.
    - Studentaktivitet: Sammenligne to simuleringsverktøy.
 
 5. **Kapittel 5 – Læring, optimalisering og AI**

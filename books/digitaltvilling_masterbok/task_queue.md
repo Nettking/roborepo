@@ -4,7 +4,6 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Aktive oppgaver
 
-- `TODO` – Skrive Kapittel 4 ferdig med beskrivelser av simuleringsmetoder, analyseprosesser, verktøyskart og et praksiseksempel.
 - `TODO` – Utarbeide Kapittel 5 med tekst som binder sammen maskinlæring, optimalisering og dataassimilering, samt et industrieksempel.
 - `TODO` – Ferdigstille Kapittel 6 med utdypende innhold om valideringsrammeverk, usikkerhetsanalyse, etikk og kommunikasjon av tillit.
 - `TODO` – Skrive Kapittel 7 med livssyklusfaser, governance-modeller, RACI-eksempel og måleindikatorer for gevinstrealisering.
@@ -30,3 +29,4 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 - `FERDIG` – Utdype historiske eksempler i Kapittel 1 med referanser til norske initiativer.
 - `FERDIG` – Utarbeidet casestudie-mal i Kapittel 8 med fokus på batteriproduksjon i Mo i Rana.
 - `FERDIG` – Fullført Kapittel 1 med prosa om nøkkelbegreper, økosystem og verdiskaping, og supplert med norske eksempler.
+- `FERDIG` – Skrev Kapittel 4 med helhetlig tekst om simuleringsmetoder, analyseprosesser, verktøy og praksiseksempel fra fjernvarme.
