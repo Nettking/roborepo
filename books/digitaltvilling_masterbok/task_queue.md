@@ -3,7 +3,9 @@
 Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefølge. Ta alltid den øverste oppgaven merket `TODO` når du blir bedt om å «ta neste oppgave på dt-boken».
 
 ## Aktive oppgaver
-`TODO` Her må nye oppgaver legges til.
+`TODO` Planlegg fagfellelesingsrunde for Kapittel 1–2 og oppdater `support/fagfellelogg.csv` med tidsplan og ansvarlige.
+`TODO` Ferdigstill systemkartfigurene for Kapittel 2 i TikZ og registrer alt-tekst i `support/figurer/metadata/`.
+`TODO` Koordiner illustrasjoner og fagfelleavklaringer for datapipeline i Kapittel 3, inkludert oppdatering av referanser i `plan.md`.
 `TODO` Skill ferdige oppgaver i en egen fil
 `TODO` Alle instruksjoner i AGENTS instructions
 ## Pågår
@@ -60,3 +62,4 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 - `FERDIG` – Fullført Kapittel 1 med prosa om nøkkelbegreper, økosystem og verdiskaping, og supplert med norske eksempler.
 - `FERDIG` – Skrev Kapittel 4 med helhetlig tekst om simuleringsmetoder, analyseprosesser, verktøy og praksiseksempel fra fjernvarme.
 - `FERDIG` – Utviklet Kapittel 9 til en helhetlig tekst om forskningslandskap, trender og prosjektforslag.
+- `FERDIG` – La til prioriterte oppgaver for kommende fagfelleløp og illustrasjonsleveranser i arbeidslisten.
