@@ -1,0 +1,61 @@
+% TikZ-figur: Systemkart for produksjonslinje med digital tvilling (versjon 1)
+\begin{tikzpicture}[x=1cm, y=1cm, >=Stealth]
+    \tikzset{
+        module/.style={
+            draw=grafitt,
+            rounded corners=4pt,
+            text width=3.3cm,
+            minimum height=1.6cm,
+            align=center,
+            font=\small\sffamily,
+            fill=#1!20
+        },
+        module/.default=skygraa,
+        group/.style={
+            draw=skygraa!70,
+            rounded corners=6pt,
+            inner sep=0.45cm
+        },
+        role/.style={
+            font=\scriptsize\sffamily,
+            text=grafitt
+        },
+        flow/.style={
+            ->,
+            very thick,
+            draw=grafitt
+        }
+    }
+
+    % Noder
+    \node[module=dypblaa]            (sensors)    at (0,  1.8) {IoT-sensorer\\\footnotesize Tilstandsm\aa linger};
+    \node[module=dypblaa]            (plc)        at (0, -1.8) {PLC og lokale styringer\\\footnotesize Sekvens- og sikkerhetslogikk};
+    \node[module=petrol]             (edge)       at (3,  0.0) {Edge-gateway\\\footnotesize Filtrering, buffering, protokoller};
+    \node[module=havgronn]           (mes)        at (6,  2.4) {MES\\\footnotesize Ordreutf\o relse, sporbarhet};
+    \node[module=havgronn]           (historian)  at (6, -2.4) {Prosesshistorian\\\footnotesize Tidsserier, hendelser};
+    \node[module=solgul]             (analytics)  at (9,  0.0) {Analyse- og ML-plattform\\\footnotesize Feature store, modelltrening};
+    \node[module=koral]              (dt)         at (12, 0.0) {Digital tvilling\\\footnotesize Simulering, beslutningsst\o tte};
+    \node[module=solgul]             (dashboard)  at (12, 3.0) {Operat\o rdashboard\\\footnotesize KPI-er, alarmer};
+    \node[module=solgul]             (maintenance)at (12,-3.0) {Vedlikeholdsteam\\\footnotesize Arbeidsordre, reservedeler};
+    \node[module=solgul]             (management) at (6,  4.6) {Ledelsesrapporter\\\footnotesize Energi- og produksjons-KPI};
+
+    % Grupper
+    \node[group, label={[role]north:Feltniv\aa}]                      at (0, 0)     (fieldbox)      [fit=(sensors)(plc)] {};
+    \node[group, label={[role]north:Edge og datainntak}]              at (3, 0)     (edgebox)       [fit=(edge)] {};
+    \node[group, label={[role]north:Produksjonsstyring og historikk}] at (6, 0.6)   (mesbox)        [fit=(mes)(historian)(management)] {};
+    \node[group, label={[role]north:Analyse og modellering}]          at (9, 0)     (analyticsbox)  [fit=(analytics)] {};
+    \node[group, label={[role]north:Tvilling og beslutningsflater}]   at (12, 0)    (dtbox)         [fit=(dt)(dashboard)(maintenance)] {};
+
+    % Piler
+    \draw[flow] (sensors.east)   to[out=10,  in=150] node[role, pos=0.55, above] {Tilstandsm\aa linger} (edge.north west);
+    \draw[flow] (plc.east)       to[out=-10, in=210] node[role, pos=0.55, below] {Status og kommandoer} (edge.south west);
+    \draw[flow] (edge.north east) to[out=25, in=180] node[role, pos=0.55, above] {Normaliserte hendelser} (mes.west);
+    \draw[flow] (edge.south east) to[out=-25,in=180] node[role, pos=0.6, below] {R\aa tidsserier} (historian.west);
+    \draw[flow] (mes.east)       to[out=0,   in=140] node[role, pos=0.52, above] {Plan- og produksjonsdata} (analytics.north west);
+    \draw[flow] (historian.east) to[out=0,   in=-140] node[role, pos=0.52, below] {Historikk og kontekst} (analytics.south west);
+    \draw[flow] (analytics.east) -- node[role, pos=0.55, above] {Modeller og prediksjoner} (dt.west);
+    \draw[flow] (dt.north)       -- node[role, pos=0.55, right] {Anbefalinger} (dashboard.south);
+    \draw[flow] (dt.south)       -- node[role, pos=0.55, right] {Planlagte tiltak} (maintenance.north);
+    \draw[flow] (maintenance.west) to[out=180, in=-40] node[role, pos=0.6, below] {Tilbakemeldte avvik} (mes.south);
+    \draw[flow] (mes.north)      -- node[role, pos=0.55, right] {KPI-er og status} (management.south);
+\end{tikzpicture}
