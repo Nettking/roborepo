@@ -13,6 +13,9 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
 | II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering og dataassimilering. | Samle utfyllende referanser og koordinere fagfellelesing; vurderingskriterier og algoritmematrise er beskrevet i Seksjon~«Vurderingskriterier for AI-drevne tvillinger». |
 | II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet og etikk. | Verifiser standardhenvisninger og vurder om kapitlet trenger støttediagrammer. |
+| III | Kapittel 7 | Helhetlig utkast med livssyklus, governance og RACI-eksempel. | Integrere RACI-S-variant, gevinstplan og dataspace-arkitektur i manus og grafikk. |
+| III | Kapittel 8 | Helhetlig utkast med narrative sektorseksjoner og casemal. | Ferdigstille prioriterte case (havvind, landbruk, batteri) med KPI-er, kilder og dataspace-beskrivelser. |
+| III | Kapittel 9 | Helhetlig utkast om forskningslandskap og prosjektforslag. | Oppdatere AI- og edge-trender, dataspace-regulering og forsknings-KPI-er samt harmonisere referanser. |
 | I | Kapittel 1 | Helhetlig tekst med historikk, begreper, økosystem og verdiskaping. | Planlegg fagfellelesing og oppdater kildehenvisninger til de norske eksemplene. |
 | I | Kapittel 2 | Helhetlig utkast som beskriver systemkart, modelleringsparadigmer og kalibrering. | Produser ferdige figurer av systemkartene og kvalitetssikre referanser til standarder og verktøy. |
 | I | Kapittel 3 | Helhetlig utkast med dataflyt, integrasjonsarkitektur og øvinger. | Koordiner fagfelleinnspill (DI-03) og ferdigstille gjenværende illustrasjoner; datapipeline-versjon 2 deles med grafikkteam via `support/figurer/metadata/kap03-datapipeline-v2.alt.md`. |
@@ -51,7 +54,7 @@ Omfangstallene under er beregnet ved å kjøre en enkel ordtelling (LaTeX-komman
 - Utvide kapittel 3, 6 og 7 med beredskaps- og sikkerhetsperspektiv (NIS2, IEC 62443) samt scenarioøvelser for kritisk infrastruktur.
 - Legge til seksjoner om AR/VR-basert beslutningsstøtte og operatøropplæring i kapittel 4, 5 og 8.
 - Beskrive datasamarbeid, Gaia-X/IDSA og norske dataspace-initiativ i kapittel 3 og 7.
-- Planlegge nye klimacaser (havvind, landbruk, batteri) i kapittel 8 og støttefilene.
+- Prioritere klimacaser (havvind, landbruk, batteri) i kapittel 8, med tilhørende notater i `support/notater/` og KPI-tabeller i kapitteltekstene.
 - Oppdatere kapittel 5 og 9 med fremvoksende AI-verktøy, generative modeller og edge-baserte tvillinger.
 
 ## Omfangsmål og læringsmål per kapittel
@@ -205,19 +208,19 @@ Anslagene nedenfor tar utgangspunkt i 400 ord per side og supplerer statusoversi
 7. **Kapittel 7 – Livssyklus og styring**
    - Status: Helhetlig tekst med livssyklusfaser, governance-modeller, RACI-eksempel og gevinstindikatorer.
    - Læringsmål: Lære om governance, endringsledelse og livssyklus.
-   - Forfatteroppgaver (neste steg): Utvikle grafisk fremstilling av livssyklus og planlegge eksterne intervjuer for flere caseeksempler.
+   - Forfatteroppgaver (neste steg): Integrere RACI-S-variant og gevinstplan i teksten, beskrive dataspace-arkitektur og koordinere grafisk fremstilling før fagfellegjennomgang.
    - Studentaktivitet: Lage RACI-matrise for et prosjekt.
 
 8. **Kapittel 8 – Bruksområder og sektorspesifikke case**
    - Status: Helhetlig tekst med narrative sektorseksjoner, casemal og øvinger.
    - Læringsmål: Illustrere variasjon mellom industri, energi, helse, transport.
-   - Forfatteroppgaver (neste steg): Velge hvilke case som skal utdypes videre, samle kildemateriale, bruke vurderingsmatrisen i Kapittel~8 til å begrunne prioriteringen og planlegge visuelle elementer.
+   - Forfatteroppgaver (neste steg): Ferdigstille havvind-, landbruks- og battericase med KPI-tabeller, kildegrunnlag og dataspace-beskrivelser samt oppdatere støttefilene.
    - Studentaktivitet: Presentere en caseanalyse.
 
 9. **Kapittel 9 – Fremtidstrender og forskning**
    - Status: Helhetlig tekst om forskningsfront, teknologitrender og prosjektforslag.
    - Læringsmål: Se forskningsfronten og nye teknologier.
-   - Forfatteroppgaver (neste steg): Harmoniser referanser med bibliografien, planlegg fagfellelesing og vurder behov for figur- eller tabelltillegg.
+   - Forfatteroppgaver (neste steg): Oppdatere AI- og edge-trender, legge inn forsknings-KPI-tabell, koordinere dataspace-perspektiver og harmonisere nye referanser før fagfelleløpet.
    - Studentaktivitet: Lage forskningsspørsmål.
 
 ## Leseplan for studenter

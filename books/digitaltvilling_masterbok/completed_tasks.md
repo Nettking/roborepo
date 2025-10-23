@@ -4,6 +4,11 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-09: Harmoniserte Kapittel 9 med generativ AI- og edge-trender, dataspace-regulering og ny KPI-tabell, samt oppdaterte kilder i `support/referanser.bib`.
+- `FERDIG` – Leveranse for DT-08C: Prioriterte batteriverdikjede-case i Kapittel 8 med KPI-tabell, dataspace-beskrivelse og nytt støtte-notat.
+- `FERDIG` – Leveranse for DT-08B: Dokumenterte landbrukscase med KPI-tabell og dataspace-implikasjoner i Kapittel 8, og opprettet støtte-notat.
+- `FERDIG` – Leveranse for DT-08A: Utdypet havvind-caset i Kapittel 8 med KPI-tabell, dataspace-arkitektur og oppdatert støtte-notat.
+- `FERDIG` – Leveranse for DT-07: Innførte RACI-S-variant, gevinstplan og dataspace-arkitektur i Kapittel 7 og la til styringsmaler i appendikset.
 - `FERDIG` – Oppdatert kapittel 1–3 med historiske milepæler, norske politiske rammer, sirkulærøkonomi og nye caser; flyttet oppgave DT-10 til ferdig kolonne i `task_queue.md`.
 - `FERDIG` – Opprettet `chapters/appendiks.tex` med arbeidsark, maler og fagfelleklarering, reviderte `support/larerveiledning.tex` med nye læringsaktiviteter og vurderingskrav, oppdaterte ordliste, plan og fagfellelogg for å forankre leveransen.
 - `FERDIG` – Opprettet pytest som bygger `main.tex` i en midlertidig katalog og fanger opp LaTeX-feil automatisk; oppdaterte oppgave DT-OPS-03 i `task_queue.md`.
