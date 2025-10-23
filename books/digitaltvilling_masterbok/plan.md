@@ -6,77 +6,77 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 
 | Del | Kapittel | Status | Neste steg |
 | --- | -------- | ------ | ---------- |
-| I | Kapittel 1 | Delvis utkast – bakgrunn er skrevet, men seksjonene om nøkkelbegreper, økosystem og verdiskaping står som punktlister. | Utarbeide sammenhengende tekst med norske eksempler og grunnbegreper. |
-| I | Kapittel 2 | Delvis utkast – systemkart og arbeidsmåte er beskrevet, men modell- og integrasjonsseksjonene er punkter. | Skrive prosa for modelleringsparadigmer og kalibrering samt legge til case. |
-| I | Kapittel 3 | Første hele utkast – tekst, figurer og øvinger er på plass. | Fagfellelesing og finpuss når resten av boken er mer moden. |
-| II | Kapittel 4 | Første hele utkast – beskriver simuleringsmetoder, analyser, verktøyskart og fjernvarmeeksempel. | Fagfellelese og identifisere behov for illustrasjoner eller utdypende referanser. |
-| II | Kapittel 5 | Første hele utkast – sammenhengende tekst som binder ML, optimalisering og dataassimilering, inkludert oppdrettscase. | Planlegge fagfellevurdering og vurdere behov for illustrasjoner og referanser. |
-| II | Kapittel 6 | Skjelett – læringsmål og stikkord for validering, usikkerhet og etikk. | Utdype rammeverk, standarder og praktiske prosedyrer med case. |
-| III | Kapittel 7 | Skjelett – punkter om livssyklus, roller og endringsledelse. | Skrive tekst med governance-modeller, RACI-eksempel og modenhetsmodeller. |
-| III | Kapittel 8 | Delvis utkast – casemal er detaljert, men sektorseksjonene er punktlister. | Utdype sektorseksjonene med narrativ tekst og knytte mal til flere norske eksempler. |
-| III | Kapittel 9 | Første hele utkast – helhetlig tekst om forskning, trender og masterprosjekter. | Planlegge fagfellelesing, samle referanser og koble mot kommende ordliste og bibliografi. |
-| Appendiks | Ressurser | Første hele utkast – tabeller og arbeidsmåte skrevet. | Holdes oppdatert etter hvert som nye kapittelbehov oppstår. |
-| Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk samt bruksanvisning. | Utvides når kapitlene introduserer nye termer eller presiseringer trengs. |
-| Støtte | Lærerveiledning | Første hele utkast – strukturert undervisningsopplegg. | Utvides med vurderingsrubrikker og flere case etter hvert. |
+| I | Kapittel 1 | Helhetlig tekst med historikk, begreper, økosystem og verdiskaping. | Planlegg fagfellelesing og oppdater kildehenvisninger til de norske eksemplene. |
+| I | Kapittel 2 | Helhetlig utkast som beskriver systemkart, modelleringsparadigmer og kalibrering. | Produser ferdige figurer av systemkartene og kvalitetssikre referanser til standarder og verktøy. |
+| I | Kapittel 3 | Helhetlig utkast med dataflyt, integrasjonsarkitektur og øvinger. | Samordne fagfellelesing og avklar hvilke illustrasjoner som skal ferdigstilles for publisering. |
+| II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
+| II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering og dataassimilering. | Samle utfyllende referanser og etabler vurderingskriterier før fagfellelesing. |
+| II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet og etikk. | Verifiser standardhenvisninger og vurder om kapitlet trenger støttediagrammer. |
+| III | Kapittel 7 | Helhetlig utkast med livssyklus, governance og RACI-eksempel. | Utarbeid grafisk fremstilling av livssyklus og planlegg caseintervjuer til videre arbeid. |
+| III | Kapittel 8 | Helhetlig utkast med narrative sektorseksjoner og casemal. | Identifiser hvilke case som skal utdypes videre og samle kildegrunnlag til hver sektor. |
+| III | Kapittel 9 | Helhetlig utkast om forskningslandskap og prosjektforslag. | Koordiner fagfellelesing og harmoniser referanser mot bibliografien. |
+| Appendiks | Ressurser | Første hele utkast – tabeller og arbeidsmåte skrevet. | Revider etter fagfelleinnspill fra kapitlene. |
+| Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk. | Oppdater når nye termer eller presiseringer oppstår under fagfellelesing. |
+| Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan og vurderingsforslag. | Legg inn vurderingsrubrikker og knytt mot kommende caseutvidelser. |
 
 ## Del I: Fundamentet
 
 1. **Kapittel 1 – Introduksjon til digitale tvillinger**
-   - Status: Delvis utkast; bakgrunn og historikk er skrevet, men nøkkelbegreper, økosystem og verdiskaping trenger fortløpende tekst.
+   - Status: Helhetlig tekst med historiske linjer, nøkkelbegreper, økosystem og verdiskapingscase.
    - Læringsmål: Forstå grunnbegreper, historikk og sentrale drivere.
-   - Forfatteroppgaver (neste steg): Utarbeide sammenhengende tekst som forklarer sentrale begreper, beskriver økosystemet og gir norske verdiskapingseksempler.
+   - Forfatteroppgaver (neste steg): Planlegg fagfellelesing, gjennomfør språkvask og oppdater referanseliste med kilder til norske eksempler.
    - Studentaktivitet: Kort refleksjon over egen fagbakgrunn og relevans.
 
 2. **Kapittel 2 – Systemtenkning og modellering**
-   - Status: Delvis utkast; systemperspektivet er utdypet, men modell- og kalibreringsseksjonene er stikkordsform.
+   - Status: Helhetlig tekst med systemperspektiv, modelleringsparadigmer, integrasjon og norsk case.
    - Læringsmål: Kjenne til modelleringsteknikker (fysikkbasert, datadrevet, hybride).
-   - Forfatteroppgaver (neste steg): Skrive prosa om modelleringsparadigmer, integrasjon mot sanntidsdata og kalibreringsstrategier, supplert med norsk industrieksempel.
+   - Forfatteroppgaver (neste steg): Lage ferdige figurer basert på systemkartene, kvalitetssikre referanser og vurdere behov for supplerende eksempler.
    - Studentaktivitet: Lag en konseptuell modell for en valgt prosess.
 
 3. **Kapittel 3 – Data, integrasjon og infrastruktur**
-   - Status: Første hele utkast med sammenhengende tekst, figur og øvinger.
+   - Status: Helhetlig tekst med dataflyt, integrasjonsmønstre, figur og øvinger.
    - Læringsmål: Forstå dataflyt, integrasjonsmønstre og plattformvalg.
-   - Forfatteroppgaver (neste steg): Planlegge fagfellevurdering og potensielle illustrasjoner som støtter senere kapitler.
+   - Forfatteroppgaver (neste steg): Forberede fagfellelesing og beslutte hvilke illustrasjoner som skal ferdigstilles for publisering.
    - Studentaktivitet: Kartlegge data- og systemkrav for en case.
 
 ## Del II: Metodikk og verktøy
 
 4. **Kapittel 4 – Simulering og analyse**
-   - Status: Første hele utkast med beskrivelser av simuleringsmetoder, analyser og praksiseksempel fra fjernvarme.
+   - Status: Helhetlig tekst med simuleringsmetoder, analyser, verktøyskart og fjernvarmeeksempel.
    - Læringsmål: Skille mellom ulike simuleringsmetoder og analyseteknikker.
-   - Forfatteroppgaver (neste steg): Gjennomføre fagfellelesing, vurdere behov for figurer og supplere referanser til norsk bransjepraksis.
+   - Forfatteroppgaver (neste steg): Planlegg fagfellelesing, vurder behov for supplerende figurer og dokumenter hvordan kapitlet kobles til øvingene.
    - Studentaktivitet: Sammenligne to simuleringsverktøy.
 
 5. **Kapittel 5 – Læring, optimalisering og AI**
-   - Status: Første hele utkast med prosa, samspillseksjon og norsk oppdrettscase.
+   - Status: Helhetlig tekst som binder maskinlæring, optimalisering og dataassimilering, inkludert oppdrettscase.
    - Læringsmål: Se sammenhengen mellom maskinlæring, optimalisering og digitale tvillinger.
-   - Forfatteroppgaver (neste steg): Forberede fagfellelesing, identifisere eventuelle illustrasjonsbehov og samle referanser til metoder og case.
+   - Forfatteroppgaver (neste steg): Samle tilleggsreferanser, beskrive vurderingskriterier for caseoppgaven og forberede fagfellelesing.
    - Studentaktivitet: Designe et eksperiment som bruker online læring.
 
 6. **Kapittel 6 – Validering, verifikasjon og tillit**
-   - Status: Skjelett med punktlister.
+   - Status: Helhetlig tekst med rammeverk, usikkerhetsanalyse, etikk og refleksjonsspørsmål.
    - Læringsmål: Forstå prosesser for kvalitetssikring og usikkerhetsanalyse.
-   - Forfatteroppgaver (neste steg): Utdype rammeverk, standarder, sjekklister og kommunikasjon av tillit med case fra kritisk infrastruktur.
+   - Forfatteroppgaver (neste steg): Verifisere standardhenvisninger, vurdere behov for støttefigurer og planlegge fagfelleinnhenting fra industripartnere.
    - Studentaktivitet: Utarbeide en plan for validering av en digital tvilling.
 
 ## Del III: Implementering og casearbeid
 
 7. **Kapittel 7 – Livssyklus og styring**
-   - Status: Skjelett med punktlister.
+   - Status: Helhetlig tekst med livssyklusfaser, governance-modeller, RACI-eksempel og gevinstindikatorer.
    - Læringsmål: Lære om governance, endringsledelse og livssyklus.
-   - Forfatteroppgaver (neste steg): Utarbeide tekst om livssyklusfaser, organisering og modenhetsutvikling, inkludert eksempel på RACI og gevinstoppfølging.
+   - Forfatteroppgaver (neste steg): Utvikle grafisk fremstilling av livssyklus og planlegge eksterne intervjuer for flere caseeksempler.
    - Studentaktivitet: Lage RACI-matrise for et prosjekt.
 
 8. **Kapittel 8 – Bruksområder og sektorspesifikke case**
-   - Status: Delvis utkast; casemal er ferdig, men sektorkapitlene er stikkordsform.
+   - Status: Helhetlig tekst med narrative sektorseksjoner, casemal og øvinger.
    - Læringsmål: Illustrere variasjon mellom industri, energi, helse, transport.
-   - Forfatteroppgaver (neste steg): Utdype sektorkapitlene med narrative beskrivelser og flere norske eksempler, samt koble til casemalen.
+   - Forfatteroppgaver (neste steg): Velge hvilke case som skal utdypes videre, samle kildemateriale og planlegge visuelle elementer.
    - Studentaktivitet: Presentere en caseanalyse.
 
 9. **Kapittel 9 – Fremtidstrender og forskning**
-   - Status: Første hele utkast med prosa om forskningsfront, teknologitrender og prosjektforslag.
+   - Status: Helhetlig tekst om forskningsfront, teknologitrender og prosjektforslag.
    - Læringsmål: Se forskningsfronten og nye teknologier.
-   - Forfatteroppgaver (neste steg): Kvalitetssikre kildereferanser, innarbeide fremtidig Bib\TeX-struktur og forberede fagfellelesing som vurderer balansen mellom teknologi og samfunnseffekter.
+   - Forfatteroppgaver (neste steg): Harmoniser referanser med bibliografien, planlegg fagfellelesing og vurder behov for figur- eller tabelltillegg.
    - Studentaktivitet: Lage forskningsspørsmål.
 
 ## Leseplan for studenter
@@ -94,8 +94,8 @@ En anbefalt 6-ukersmodul:
 
 ## Videre arbeid
 
-1. Fullføre pågående kapitler i Del I og Del II ved å skrive sammenhengende tekst og eksempler for Kapittel 1, 2, 4 og 6, og planlegge fagfellevurdering for Kapittel 5.
-2. Utvikle Del III ved å ferdigstille Kapittel 7–9 med governance-modeller, sektoranalyser og forskningsperspektiv.
-3. Vedlikeholde den nye begrepslisten og det etablerte referansesystemet (BibTeX) som kan brukes gjennom hele boken.
-4. Planlegge fagfellelesing og illustrasjoner når hovedtekstene er skrevet.
-5. Holde ressursappendiks og lærerveiledning oppdatert i takt med nye kapitler og caser.
+1. Koordinere fagfellelesing for alle kapitler, inkludert plan for eksterne lesere fra industri og akademia.
+2. Utarbeide illustrasjons- og grafikkplan: konverter kladdene til ferdige figurer og sikre konsistent stil i hele boken.
+3. Konsolidere bibliografien i `support/referanser.bib`, sikre DOI/URL og harmonisere siteringsstil på tvers av kapitlene.
+4. Oppdatere appendiks, ordliste og lærerveiledning etter fagfelleinnspill og nye case.
+5. Forberede produksjonsløp: definere layout, testkompilere og planlegge en pilotundervisning basert på leseplanen.
