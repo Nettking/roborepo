@@ -4,10 +4,6 @@
 Marisport's reefs and relationships are both on the brink. Marine biologist Elena Ruiz fights to restore the coastline while balancing loyalty to her fiancé Marco Alvarez and the renewed pull of childhood friend-turned-philanthropist Adrian Sterling. Corporate malfeasance, political brinkmanship, and escalating climate disasters force the trio into uneasy alliances that evolve into a resilient, chosen-family network determined to protect their town and each other.
 
 ## Table of Contents
-- **Front Matter**
-  - [Contents Overview](frontmatter/contents_overview.tex)
-  - [Disposition](disposition.tex)
-- **Main Matter**
   1. [Chapter 1 – Low Tide](chapters/chapter1.tex)
   2. [Chapter 2 – Undertow](chapters/chapter2.tex)
   3. [Chapter 3 – Crosscurrents](chapters/chapter3.tex)
@@ -38,5 +34,3 @@ Marisport's reefs and relationships are both on the brink. Marine biologist Elen
   28. [Chapter 28 – Stormglass Fracture](chapters/chapter28.tex)
   29. [Chapter 29 – Underswell Reckoning](chapters/chapter29.tex)
   30. [Chapter 30 – Riptide Signal](chapters/chapter30.tex)
-- **Back Matter**
-  - Additional appendices and indices to be added as the manuscript matures.
