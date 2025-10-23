@@ -25,8 +25,24 @@ Kontinuerlige modeller benytter differensialligninger eller tilnærminger som Mo
 \subsection{Kopling mot sanntidsdata}
 Uavhengig av modelltype må simuleringsløsningen kunne kobles mot sanntidsdata. Det innebærer funksjoner for dataassimilering, filtrering av støy og oppdatering av parametre i forkant av hver simuleringsperiode. En robust digital tvilling har mekanismer som gjør det mulig å planlegge scenarioer offline og samtidig oppdatere simuleringene når nye sensordata ankommer.
 
+\begin{figure}[htbp]
+    \centering
+    % Alt-tekst: kap04-simuleringsmatrise-v1.alt.md
+    \fbox{\parbox{0.9\textwidth}{\centering\textit{Plassholder for simuleringsmatrise som viser kombinasjoner av deterministiske/stokastiske og diskrete/kontinuerlige modeller med norske eksempler.}}}
+    \caption{Oversikt over sentrale simuleringsmetoder og hvordan de kombineres i praksis.}
+    \label{fig:kap04-simuleringsmatrise}
+\end{figure}
+
 \section{Analysemetoder}
 Validerte simuleringsmodeller gir grunnlag for analyse som støtter både taktiske og strategiske beslutninger. Analysearbeidet bør være strukturert slik at resultater kan spores tilbake til antakelser og datagrunnlag.
+
+\begin{figure}[htbp]
+    \centering
+    % Alt-tekst: kap04-analyseflyt-v1.alt.md
+    \fbox{\parbox{0.9\textwidth}{\centering\textit{Plassholder for analyseflyt fra datainntak til visualisering med kontrollpunkter og feedback-sløyfer.}}}
+    \caption{Foreslått arbeidsflyt for analyse av digitale tvillinger med kvalitetssikring i hvert steg.}
+    \label{fig:kap04-analyseflyt}
+\end{figure}
 
 \subsection{Sensitivitets- og scenarioanalyse}
 Sensitivitetsanalyse identifiserer hvilke parametre som har størst innvirkning på målvariablene, og gjør det mulig å prioritere datainnsamling eller kalibrering. Scenarioanalyse handler om å variere inngangsverdier systematisk for å belyse framtidige muligheter, som ulike etterspørselsnivåer eller driftsstrategier. I en digital tvilling kan scenarioresultater lagres som konfigurasjoner som senere kan visualiseres og sammenlignes i dashbord.
@@ -47,6 +63,14 @@ Et velfungerende verktøyslandskap består av modellering, simulering, datahånd
     \item \textbf{Ytelsesmiljø:} For store beregninger brukes HPC-klynger eller skyplattformer med GPU/FPGA-akselerasjon. Skaleringsstrategien bør beskrives eksplisitt slik at kostnader kan estimeres og kapasitet kan reserveres.
 \end{itemize}
 
+\begin{figure}[htbp]
+    \centering
+    % Alt-tekst: kap04-verktoystakk-v1.alt.md
+    \fbox{\parbox{0.9\textwidth}{\centering\textit{Plassholder for verktøystakk med lag for modellering, integrasjon, automasjon og ytelse, inkludert norske eksempler.}}}
+    \caption{Forslag til lagdelt verktøystøtte for simulering og analyse.}
+    \label{fig:kap04-verktoystakk}
+\end{figure}
+
 Arbeidsflyten starter med versjonskontrollert modellkode, etterfulgt av automatisert validering av parametrisering, simulering og analyse. Resultater pakkes i rapporter eller API-er og lagres i et beslutningsarkiv slik at tidligere scenarioer kan gjenbrukes ved nye vurderinger.
 
 \section{Praksiseksempel: Digital tvilling for fjernvarmenett}
@@ -55,6 +79,14 @@ Et norsk energiselskap ønsker å styre et fjernvarmenett mer effektivt og redus
 Deretter bygges en diskret hendelsessimulering av driftsoperasjoner som vedlikeholdsavvik, nødstopper og lastskifte mellom kjeler. Agentbaserte komponenter modellerer kundesegmenter, slik at kampanjer for energisparing kan evalueres. Data fra IoT-målere strømmer kontinuerlig inn via en skyplattform, og parametre kalibreres hver time.
 
 Analysefasen kombinerer sensitivitet mot utetemperatur og energipriser med optimalisering av pumpesetpunkter. Resultatene visualiseres i et dashboard der driftsoperatører kan teste scenarioer før de aktiveres. Etter ett års bruk dokumenterer selskapet 12\% reduksjon i energitopper og et bedre beslutningsgrunnlag for investeringer i nye varmesentraler.
+
+\begin{figure}[htbp]
+    \centering
+    % Alt-tekst: kap04-fjernvarmecase-v1.alt.md
+    \fbox{\parbox{0.9\textwidth}{\centering\textit{Plassholder for fjernvarmecase som kobler dataflyt, modelltyper og styringsdashboard.}}}
+    \caption{Illustrasjon av hvordan fjernvarmecaset kombinerer ulike simuleringsmetoder og beslutningsstøtte.}
+    \label{fig:kap04-fjernvarmecase}
+\end{figure}
 
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}

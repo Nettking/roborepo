@@ -16,7 +16,6 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger |
 | --- | --- | --- | --- | --- | --- |
-| DT-04 | Høy | Kapittel 4 | Kartlegg behov for supplerende figurer og forbered fagfellepakke. | Liste over nødvendige figurer og fagfellenotat. | `plan.md` (Del II), `support/illustrasjonsplan.md` |
 | DT-05 | Høy | Kapittel 5 | Samle tilleggsreferanser, koble vurderingsrubrikk og forberede fagfelleløp. | Oppdatert kildebank og rubrikknotat. | `plan.md` (Kapittel 5), `support/larerveiledning.tex` |
 | DT-06 | Middels | Kapittel 6 | Verifiser standardhenvisninger og vurder støttefigurer for kvalitetsprosesser. | Revidert kapittelavsnitt og figurplan. | `plan.md` (Kapittel 6), `support/illustrasjonsplan.md` |
 | DT-07 | Høy | Kapittel 7 | Utvikle grafisk livssyklus og planlegg caseintervjuer. | Grafikkutkast og intervjuliste. | `plan.md` (Kapittel 7), `support/illustrasjonsplan.md` |
@@ -28,6 +27,12 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 ## Pågår
 
 *(ingen oppgaver for øyeblikket – endre status til `PÅGÅR` i tabellen over når arbeid starter)*
+
+## Ferdige oppgaver
+
+| ID | Tema | Oppsummering | Leveranser |
+| --- | --- | --- | --- |
+| DT-04 | Kapittel 4 | FERDIG – Kartlagt figurbehov, opprettet metadata og fagfellepakke for simulering og analyse. | `support/illustrasjonsplan.md`, `support/figurer/metadata/kap04-*.alt.md`, `support/notater/kap04-fagfellepakke.md` |
 
 
 Se `completed_tasks.md` for hele historikken over ferdige oppgaver.
