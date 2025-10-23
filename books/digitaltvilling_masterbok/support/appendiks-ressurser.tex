@@ -48,6 +48,35 @@ CesiumJS & Bibliotek for 3D-geovisualisering i nettleser. Støtter tidsdimensjon
 \bottomrule
 \end{longtable}
 
+\section{Helsesektorspesifikke ressurser}
+% Notat (2024-05-09): Lagt til oversikt over helsedata, API-er og etterlevelsesverktøy for å støtte sektorteksten i Kapittel~8.
+\begin{longtable}{p{0.28\textwidth}p{0.32\textwidth}p{0.30\textwidth}}
+\toprule
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i helse?} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i helse?} \\
+\midrule
+\endhead
+Helsedirektoratet – Åpne helsedata & Portal med statistikk om kommunale helse- og omsorgstjenester, kvalitetsindikatorer og folkehelsetall. Tilgjengelig som nedlastbare tabeller og API. & Bruk aggregerte nøkkeltall som grunnlag for scenarioanalyse av kapasitet, ressursbehov og effekt av forebyggende tiltak i helsetvillinger. \\
+\addlinespace
+Folkehelseinstituttet – Sykdomspulsen & Åpne, anonymiserte tidsserier for luftveisinfeksjoner, sykehusinnleggelser og andre beredskapsindikatorer. Leveres via \href{https://www.fhi.no/hn/overvaking/sykdomspulsen/}{FHI API}. & Understøtt sanntidsoppdaterte overvåkingsmodeller, tidlig varsling og simulering av smittespredning koblet til lokale kapasitetsberegninger. \\
+\addlinespace
+Felleskatalogen – Legemiddel-API & FHIR-kompatibelt API med virkestoff, dosering og interaksjonsdata for legemidler tilgjengelig i Norge. Krever gratis registrering. & Knytt legemiddelopplysninger til beslutningsstøtte i digitale tvillinger for kliniske arbeidsflyter og pasientsimuleringer. \\
+\addlinespace
+Norsk Helsenett – Norm for informasjonssikkerhet & Retningslinjer, maler og risikovurderingsverktøy for behandling av helseopplysninger i norske virksomheter. Tilgjengelig via \href{https://normen.no}{normen.no}. & Sikre etterlevelse i datainnsamling, modelltrening og deling av innsikt ved å bygge styringspakker og kontrollpunkter inn i helsetvillinger. \\
+\bottomrule
+\end{longtable}
+
+\section{Personvern og bruk av sensitive data}
+\begin{enumerate}
+    \item Kartlegg behandlingsgrunnlag i henhold til GDPR artikkel~6 og 9 før datainnsamling. For forskningsprosjekter bør det innhentes godkjenning via \emph{Helsedataservice} og relevant etisk komité.
+    \item Bruk pseudonymisering eller syntetiske datasett (for eksempel \emph{Synthea} eller data generert med verktøy fra Norsk Helsenett) i tidlige prototyper, og etabler klare rutiner for når ekte pasientdata kan benyttes.
+    \item Dokumenter dataflyt, tilgangskontroller og logging i prosjektets styringsdokumenter, og knytt tiltakene til kapittel~6 om validering og tillit.
+    \item Sørg for at modell- og beslutningsstøtte evalueres for bias og klinisk gyldighet før utrulling. Logg versjoner slik at fagfeller kan etterprøve resultater.
+\end{enumerate}
+
 \section{Forslag til arbeidsmåte}
 \begin{enumerate}
     \item Definér et konkret problem (for eksempel energistyring i en campusbygning) og velg hvilke datasett som best dekker behovet for historiske, sanntids- og kontekstdata.
