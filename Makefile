@@ -9,7 +9,7 @@ build-image:
 
 # Compile LaTeX document inside Docker with interactive book selection
 pdf: build-image
-	@python scripts/compile_book.py --project "$(PROJECT)" --image "$(IMAGE)"
+	@python3 scripts/compile_book.py --project "$(PROJECT)" --image "$(IMAGE)"
 
 # Clean auxiliary files for the selected book
 clean:
