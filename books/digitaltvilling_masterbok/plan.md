@@ -14,7 +14,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | II | Kapittel 6 | Skjelett – læringsmål og stikkord for validering, usikkerhet og etikk. | Utdype rammeverk, standarder og praktiske prosedyrer med case. |
 | III | Kapittel 7 | Skjelett – punkter om livssyklus, roller og endringsledelse. | Skrive tekst med governance-modeller, RACI-eksempel og modenhetsmodeller. |
 | III | Kapittel 8 | Delvis utkast – casemal er detaljert, men sektorseksjonene er punktlister. | Utdype sektorseksjonene med narrativ tekst og knytte mal til flere norske eksempler. |
-| III | Kapittel 9 | Skjelett – punktlister om forskning og trender. | Skrive tekst som kobler internasjonal forskning med norske prioriteringer og gir prosjektidéer. |
+| III | Kapittel 9 | Første hele utkast – helhetlig tekst om forskning, trender og masterprosjekter. | Planlegge fagfellelesing, samle referanser og koble mot kommende ordliste og bibliografi. |
 | Appendiks | Ressurser | Første hele utkast – tabeller og arbeidsmåte skrevet. | Holdes oppdatert etter hvert som nye kapittelbehov oppstår. |
 | Støtte | Lærerveiledning | Første hele utkast – strukturert undervisningsopplegg. | Utvides med vurderingsrubrikker og flere case etter hvert. |
 
@@ -73,9 +73,9 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
    - Studentaktivitet: Presentere en caseanalyse.
 
 9. **Kapittel 9 – Fremtidstrender og forskning**
-   - Status: Skjelett med punktlister.
+   - Status: Første hele utkast med prosa om forskningsfront, teknologitrender og prosjektforslag.
    - Læringsmål: Se forskningsfronten og nye teknologier.
-   - Forfatteroppgaver (neste steg): Skrive tekst om internasjonale forskningsprogrammer, norske satsinger og hvordan studenter kan formulere prosjektidéer.
+   - Forfatteroppgaver (neste steg): Kvalitetssikre kildereferanser, innarbeide fremtidig Bib\TeX-struktur og forberede fagfellelesing som vurderer balansen mellom teknologi og samfunnseffekter.
    - Studentaktivitet: Lage forskningsspørsmål.
 
 ## Leseplan for studenter
