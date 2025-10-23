@@ -1,6 +1,7 @@
 # Illustrasjons- og grafikkplan
 
 > Notat (2024-05-08): Utarbeidet plan for å løfte kladdeillustrasjoner til ferdige figurer og etablere felles stil på tvers av kapitlene.
+> Notat (2024-05-10): Oppdatert etter gjennomgang av kapitteltekstene for å fange nye illustrasjonsbehov og avstemme ansvar.
 
 ## Formål
 
@@ -47,22 +48,42 @@ Fargene defineres i `main.tex` før bruk (`\definecolor{dypblaa}{HTML}{1B4965}` 
 
 Fagfellekommentarer loggføres i `support/fagfellelogg.csv` slik at grafikkendringer kan spores.
 
+## Oppdatert behov fra kapitlene (mai 2024)
+- Kapittel 1 forsterker historiske milepæler og norske case, og trenger en tidslinje som viser internasjonale og nasjonale spor i samme figur.
+- Kapittel 2 beholder systemkart og kausalsløyfe i Mermaid-kode; de må konverteres til TikZ med ikoner og tydelige dataetiketter.
+- Kapittel 3 har en ny TikZ-figur for datapipeline som må harmoniseres med fargepalett, tekststørrelser og governance-callout.
+- Kapittel 4 utdyper simuleringsmetoder, analyseprosesser og verktøystøtte, og krever matrise, prosessdiagram og oversiktsfigur for verktøy.
+- Kapittel 5 beskriver en lukket sløyfe mellom læring, optimalisering og dataassimilering samt MLOps-oppdateringer; begge bør visualiseres.
+- Kapittel 6 legger til usikkerhetsanalyse og etikk, noe som krever kontrolltårn-illustrasjon, usikkerhetskart og tillitsindikator.
+- Kapittel 7 fremhever livssyklusfaser, governance-varianter og modenhetstrinn; disse må tegnes som egen figurserie.
+- Kapittel 8 utvider sektorseksjoner og casemal, og trenger både casekart og infographic som viser malens byggesteiner.
+- Kapittel 9 samler forskningsdrivere og teknologitrender, og trenger en roadmap samt trendradar for prioriteringer.
+- Appendiks skal fortsatt få en ikonserie for ressurskategorier til digitale formater.
+
 ## Oversikt per kapittel og leveranse
 
 | Kapittel/element | Kladd/status i dag | Tiltak for ferdigstilling | Format og filnavn | Ansvar og tidslinje |
 | --- | --- | --- | --- | --- |
-| Kap. 1 – Introduksjon: historisk tidslinje | Tekstlig beskrivelse av milepæler, ingen figur | Utarbeide horisontal tidslinje med norske milepæler, markere industrisektorer med ikoner | `figurer/kap01-tidslinje-v1.tikz` (+ PDF) | Ingrid Lunde klargjør manus, grafiker ferdigstiller innen uke 2 før fagfellelesing |
-| Kap. 2 – Figur 2.1 systemkart | Mermaid-kode i kapitteltekst | Gjenskape i TikZ med definert palett, legge til ikon for hvert aktør-lag og tydelige dataetiketter; exportere både farge og gråtoneversjon | `figurer/kap02-systemkart-v1.tikz` og `-v1.pdf` | Ahmed Solheim leder produksjon, førsteutkast uke 1, review med Ingrid |
-| Kap. 2 – Figur 2.2 kausalsløyfe | Mermaid-kode i kapitteltekst | Redesign som sirkulær diagram i TikZ; markere positive/negative koblinger med ikon + stiplet linje | `figurer/kap02-kausal-v1.tikz` | Ahmed Solheim + temaekspert; ferdig uke 1 |
-| Kap. 3 – Datapipeline (Figur~\ref{fig:kap3-datapipeline}) | TikZ-figur eksisterer, men fargekoder og tekst varierer fra ønsket standard | Refaktorere til felles palett, justere tekststørrelser til 8/9 pt, legge inn ikon for governance-blokk og eksportere versjonert PDF | Oppdatere `kapittel03-data.tex` + `figurer/kap03-datapipeline-v2.tikz/pdf` | Ahmed Solheim ferdigstiller uke 2, kvalitetssjekk av Nora Aas |
-| Kap. 4 – Simuleringsmetodematrise | Ingen figur; behov uttrykt i kapittel og plan | Lage 2x2 matrise som kartlegger deterministisk/stokastisk vs. diskret/kontinuerlig, med eksempler fra tekst | `figurer/kap04-matrise-v1.svg` (+ PDF) | Nora Aas utarbeider skisse, grafiker leverer uke 3 |
-| Kap. 4 – Analyseflyt | Tekst beskriver arbeidsflyt | Utforme prosessdiagram (input–modell–analyse–visualisering) som kan gjenbrukes i undervisning | `figurer/kap04-analyseflyt-v1.tikz` | Nora Aas, ferdigstilles uke 3 |
-| Kap. 5 – ML/optimalisering samspill | Ingen figur | Lage lagdelt arkitekturfigur som viser ML-moduler koblet mot optimalisering og datakilder | `figurer/kap05-mlflow-v1.tikz` | Nora Aas initierer storyboard uke 2, ferdig uke 4 |
-| Kap. 6 – Valideringsrammeverk | Tekst refererer til rammeverk og kontrollpunkter | Skape «kontrolltårn»-illustrasjon som viser modellversjoner, datasett og beslutningsportaler | `figurer/kap06-validering-v1.svg` | Leif Ødegaard fasiliterer, ferdig uke 4 |
-| Kap. 7 – Livssyklusdiagram | Planen etterspør grafisk fremstilling | Produsere sirkel/timeline med faser og governance-artefakter; markere RACI-eksempel som callout | `figurer/kap07-livssyklus-v1.tikz` | Leif Ødegaard, ferdig uke 2 før intervjuer |
-| Kap. 8 – Caseoversikt | Kapittel beskriver sektorseksjoner | Lage matrix/galleri med sektorer og nøkkelindikatorer; eventuelt kart over Norge med case | `figurer/kap08-casekart-v1.svg` | Ingrid Lunde + sektoreiere, ferdig uke 4 |
-| Kap. 9 – FoU-roadmap | Kapittel omtaler trender og prosjektforslag | Designe roadmap med kortsiktige/langsiktige initiativ og tilhørende aktører | `figurer/kap09-roadmap-v1.tikz` | Leif Ødegaard, ferdig uke 4 |
-| Appendiks – Ressurser | Tabeller eksisterer, ingen grafikk | Valgfri ikonserie for ressurskategorier for bruk i digitale versjoner | `figurer/app-ressurser-ikoner-v1.svg` | Astrid Hauge, levering etter hovedfigurer (uke 5) |
+| Kap. 1 – Historisk tidslinje | Tekstlig oversikt over milepæler i kapittel 1, ingen grafikk | Lage to-spors tidslinje (internasjonalt vs. Norge) med ikonmarkering av sektorer og korte tekstbobler | `figurer/kap01-tidslinje-v1.tikz` (+ PDF) | Ingrid Lunde (manus) + grafiker; storyboard uke 1, ferdig leveranse uke 3 |
+| Kap. 2 – Systemkart for produksjonslinje | Mermaid-kode i manus | Konvertere til TikZ med palett, ikonsett for sensorer/aktører og datapiler merket med datatyper | `figurer/kap02-systemkart-v1.tikz/pdf` | Ahmed Solheim leder, skisse oppdatert uke 1, ferdigstillelse uke 2 |
+| Kap. 2 – Kausalsløyfe vedlikehold–energi | Mermaid-kode i manus | Redesign som sirkulær kausalfigur med positive/negative koblinger, tidsforsinkelsesikon og legendetekst | `figurer/kap02-kausal-v1.tikz/pdf` | Ahmed Solheim + fagekspert; storyboard uke 1, produksjon uke 2 |
+| Kap. 3 – Datapipeline (Figur~\ref{fig:kap3-datapipeline}) | TikZ finnes, men bruker generiske farger/typer | Revidere til definert palett, 8–9 pt tekst, egen callout for governance og eksportere `-v2`-filer | Oppdatere `kapittel03-data.tex` + `figurer/kap03-datapipeline-v2.tikz/pdf` | Ahmed Solheim + Nora Aas; revisjon uke 2, alt-tekst uke 2 |
+| Kap. 4 – Simuleringsmetodematrise | Mangler figur | Lage 2×2 matrise (deterministisk/stokastisk × diskret/kontinuerlig) med norske eksempler og metodeikon | `figurer/kap04-matrise-v1.svg/pdf` | Nora Aas; skisse uke 2, ferdiggjøring uke 3 |
+| Kap. 4 – Analyseflyt | Mangler figur | Tegne prosess med trinnene datainntak → modellering → simulering → analyse → visualisering, inkludert referanse til scenario-/sensitivitetsarbeid | `figurer/kap04-analyseflyt-v1.tikz` | Nora Aas; storyboard uke 2, levering uke 3 |
+| Kap. 4 – Verktøystakk | Ingen eksisterende grafikk | Visualisere lagdelt verktøystøtte (modellering, data/integrasjon, automasjon, ytelsesmiljø) med eksempler fra teksten | `figurer/kap04-verktoystakk-v1.tikz/pdf` | Nora Aas + grafisk designer; skisse uke 2, ferdig uke 4 |
+| Kap. 5 – Læringssløyfe (ML–optimalisering–assimilering) | Ingen figur | Illustrere lukket sløyfe mellom dataassimilering, ML-modeller, optimalisering og operasjonelle dashboards med usikkerhetsindikator | `figurer/kap05-laeringssloyfe-v1.tikz/pdf` | Nora Aas; storyboard uke 2, ferdig uke 4 |
+| Kap. 5 – MLOps-oppdateringsløp | Ikke planlagt tidligere | Lage flytskjema for dataopptak, kvalitetskontroll, trening, registrering og utrulling med alarm for konseptdrift | `figurer/kap05-mlops-v1.tikz/pdf` | Nora Aas + DevOps-team; struktur uke 3, levering uke 5 |
+| Kap. 6 – Valideringsrammeverk («kontrolltårn») | Ingen grafikk ennå | Utforme vertikal kontrolltårn-figur som viser verifikasjon, validering, beslutningsportaler og revisjonsspor | `figurer/kap06-validering-v1.svg/pdf` | Leif Ødegaard; arbeidsmøte uke 3, ferdig uke 5 |
+| Kap. 6 – Usikkerhetskart | Nytt behov fra kapittelet | Lage oversikt (2×2 eller spektrum) som plasserer aleatorisk vs. epistemisk usikkerhet, metoder og tiltak | `figurer/kap06-usikkerhet-v1.svg/pdf` | Leif Ødegaard + data scientist; skisse uke 3, ferdig uke 4 |
+| Kap. 6 – Tillitspanel | Ikke tidligere planlagt | Visualisere indikatorpanel med sporbarhet, etikk og revisjonsspor, koblet til dashboard-eksempler | `figurer/kap06-tillitspanel-v1.tikz/pdf` | Leif Ødegaard + designressurs; storyboard uke 4, levering uke 5 |
+| Kap. 7 – Livssyklusdiagram | Mangler figur | Bygge sirkel/tidslinje med fasene initiativ, design, drift, avvikling og tilhørende leveranser, inkl. RACI-callout | `figurer/kap07-livssyklus-v1.tikz/pdf` | Leif Ødegaard; gapanalyse uke 2, ferdig uke 3 |
+| Kap. 7 – Governance-modeller | Nytt behov | Diagram som sammenligner sentralisert, føderert og produktlinje-modell med ansvarslinjer og beslutningsfora | `figurer/kap07-governance-v1.svg/pdf` | Leif Ødegaard + Ingrid Lunde; workshop uke 3, ferdig uke 4 |
+| Kap. 7 – Modenhetsstige | Uadressert i tidligere plan | Lage modenhetsstige (ad hoc → pilot → styrt → integrert → kontinuerlig forbedring) med kriterier per trinn | `figurer/kap07-modenhet-v1.tikz/pdf` | Leif Ødegaard + programteam; skisse uke 4, ferdig uke 5 |
+| Kap. 8 – Caseoversikt | Ingen figur ennå | Kart/matrise med sektorer (industri, energi, maritim, bygg, helse) og nøkkelindikatorer; markere geografisk plassering i Norge | `figurer/kap08-casekart-v1.svg/pdf` | Ingrid Lunde + sektorteam; datainnsamling uke 3, ferdig uke 4 |
+| Kap. 8 – Casemal infographic | Nytt behov fra maltekst | Infographic som viser hovedseksjoner i casemalen (sammendrag, mål, datagrunnlag, modeller, resultater, overføringsverdi) med ikoner | `figurer/kap08-casemal-v1.tikz/pdf` | Ingrid Lunde + grafiker; storyboard uke 4, levering uke 5 |
+| Kap. 9 – FoU-roadmap | Ingen figur ennå | Roadmap som kobler internasjonale drivere, norske satsinger og studentprosjektideer med tidshorisont (0–2/2–5/5+ år) | `figurer/kap09-roadmap-v1.tikz/pdf` | Leif Ødegaard + forskningskoordinator; skisse uke 4, ferdig uke 5 |
+| Kap. 9 – Trendradar | Ikke planlagt tidligere | Trendradar eller spindeldiagram som grupperer semantiske tvillinger, immersive arbeidsflater og bærekraft/regulering etter modenhet | `figurer/kap09-trendradar-v1.svg/pdf` | Leif Ødegaard + trendteam; datainnsamling uke 5, levering uke 6 |
+| Appendiks – Ressursikoner | Fortsatt uadressert | Utvikle ikonsett for ressurskategorier (datasett, verktøy, kurs, nettverk) til digital distribusjon | `figurer/app-ressurser-ikoner-v1.svg/pdf` | Astrid Hauge; starter etter hovedfigurer, ferdig uke 6 |
 
 ## Leveranse- og kvalitetskriterier
 - Hver figur skal ha versjonslogg i commit-melding og i kapittelfilens kommentarblokk.
@@ -71,6 +92,6 @@ Fagfellekommentarer loggføres i `support/fagfellelogg.csv` slik at grafikkendri
 - Fagansvarlig signerer av for faglig korrekthet; grafisk ansvarlig for layout; prosjektleder for helhetlig stil.
 
 ## Neste steg
-1. Definere farger i `main.tex` (egen PR).
-2. Starte med konvertering av Kapittel 2-figurene (Mermaid → TikZ) og refaktorering av Kapittel 3-figuren.
-3. Forberede storyboardmal (PowerPoint eller LaTeX) for nye figurer og lagre i `support/figurer/kilder`.
+1. Koordinere storyboard-arbeid for kapittel 1–3 i uke 1 (tidslinje, systemkart og kausalsløyfe) sammen med fagansvarlige og grafisk ressurs.
+2. Revidere eksisterende TikZ-filer til felles palett og etablere delte stiler for kontrolltårn, læringssløyfe og dashboard-elementer før kapittel 5–6-produksjon.
+3. Planlegge uke 3–5 workshops med grafisk team for governance-/modenhetsfigurer, casekart og trendradar, samt sikre at nødvendige data- og ikonbibliotek legges i `support/figurer/kilder`.

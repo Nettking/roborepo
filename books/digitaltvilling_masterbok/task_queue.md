@@ -4,7 +4,6 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Aktive oppgaver
 
-- `TODO` – Samle oppdaterte illustrasjonsbehov fra kapitlene og justere leveransene i `support/illustrasjonsplan.md`.
 - `TODO` – Utarbeide plan for pilotundervisning basert på leseplanen, inkludert vurderingsmetoder og logistikk for gjennomføring.
 
 ## Pågår
@@ -15,6 +14,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 - `FERDIG` – Etablert tiltaksplan for fagfelleinnspill og oppdatert `plan.md` samt `support/fagfellelogg.csv`.
 - `FERDIG` – Konsolidert bibliografien i `support/referanser.bib` med DOI/URL og harmonisert siteringspraksis.
+- `FERDIG` – Samle oppdaterte illustrasjonsbehov fra kapitlene og justere leveransene i `support/illustrasjonsplan.md`.
 - `FERDIG` – Utarbeide illustrasjons- og grafikkplan som konverterer kladdene til ferdige figurer og sikrer konsistent stil.
 - `FERDIG` – Koordinere fagfellelesing for alle kapitler og identifisere eksterne lesere fra industri og akademia.
 - `FERDIG` – Oppdatere `plan.md` slik at kapittelstatus, neste steg og leseplan gjenspeiler at alle kapitler nå har helhetlige utkast.
