@@ -6,6 +6,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 > Notat (2024-07-15): Datapipeline-illustrasjonen i Kapittel 3 er harmonisert med fargepaletten og dokumentert i metadatafil `kap03-datapipeline-v2.alt.md`.
 > Notat (2024-07-16): Systemkart og kausalsløyfe i Kapittel 2 er konvertert til TikZ og dokumentert i figurmetadata.
 > Notat (2024-07-17): Delingsnotat for datastyringsforumet (DI-03) er publisert i `support/notater/datastyringsforum-di03.md` og referert fra Kapittel~3.
+> Notat (2025-10-25): Kapittel 5 har fått vurderingsramme og algoritmematrise som støtter fagfellelesing og vurderingsarbeid.
 
 ## Statusoversikt
 
@@ -15,7 +16,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | I | Kapittel 2 | Helhetlig utkast som beskriver systemkart, modelleringsparadigmer og kalibrering. | Produser ferdige figurer av systemkartene og kvalitetssikre referanser til standarder og verktøy. |
 | I | Kapittel 3 | Helhetlig utkast med dataflyt, integrasjonsarkitektur og øvinger. | Samordne fagfellelesing og ferdigstille resterende illustrasjoner; datapipeline-versjon 2 er klar med registrert alt-tekst. |
 | II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
-| II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering og dataassimilering. | Samle utfyllende referanser og etabler vurderingskriterier før fagfellelesing. |
+| II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering og dataassimilering. | Samle utfyllende referanser og koordinere fagfellelesing; vurderingskriterier og algoritmematrise er beskrevet i Seksjon~«Vurderingskriterier for AI-drevne tvillinger». |
 | II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet og etikk. | Verifiser standardhenvisninger og vurder om kapitlet trenger støttediagrammer. |
 | III | Kapittel 7 | Helhetlig utkast med livssyklus, governance og RACI-eksempel. | Utarbeid grafisk fremstilling av livssyklus og planlegg caseintervjuer til videre arbeid. |
 | III | Kapittel 8 | Helhetlig utkast med narrative sektorseksjoner og casemal. | Identifiser hvilke case som skal utdypes videre og samle kildegrunnlag til hver sektor. |
