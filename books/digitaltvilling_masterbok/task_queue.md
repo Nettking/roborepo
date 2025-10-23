@@ -19,7 +19,6 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger |
 | --- | --- | --- | --- | --- | --- |
 | DT-SUP-01 | Middels | Støtte | Utarbeid maler for prosjektkontrakt og koble rubrikker til kommende caseutvidelser. | Malutkast og oppdatert lærerveiledning. | `plan.md` (Støtte), `support/larerveiledning.tex` |
-| DT-OPS-02 | Lav | Oppgavestruktur | Definer rutine for månedlig revisjon av oppgavetavle og task queue. | Rutinebeskrivelse og sjekkliste. | `support/oppgavetavle.md` |
 | DT-13 | Høy | Kapittel 4 | Integrere AR/VR-baserte beslutningsstøtteeksempler, nye simuleringscase og vurderingsopplegg. | Utvidet kapittel med casebeskrivelser, storyboard-notater og figurreferanser. | `plan.md` (Kapittel 4), `support/illustrasjonsplan.md` |
 | DT-14 | Høy | Kapittel 5 | Legge inn generative/edge-orienterte læringssløyfer, vurderingsrubrikker og nye industrireferanser. | Oppdatert manus med nye delkapitler og rubrikksammendrag. | `plan.md` (Kapittel 5), `support/larerveiledning.tex` |
 | DT-15 | Middels | Kapittel 6 | Forsterke innhold om standarder, usikkerhetsanalyser og kontrolltårn-case. | Utvidet kapitteltekst + sjekklister for NIS2/IEC 62443. | `plan.md` (Kapittel 6), `support/illustrasjonsplan.md` |
@@ -41,6 +40,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-OPS-02 | Oppgavestruktur | FERDIG – Etablerte månedlig revisjonsrutine for tavle og arbeidsliste med sjekkliste og fasetidslinje. | `support/oppgavetavle.md`, `plan.md`, `completed_tasks.md` |
 | DT-11 | Kapittel 2 | FERDIG – Utvidet modelleringskapittelet med flerfidelitetscase, metodetabeller og dokumentasjonskrav. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/referanser.bib` |
 | DT-08 | Kapittel 8 | FERDIG – Prioriterte pilotcase, etablerte dataspace-tilganger og oppdaterte sektoravsnitt etter fagfellefeedback. | `chapters/kapittel08-case.tex`, `support/notater/pilotundervisning-materiell.md`, `plan.md` |
 | DT-06 | Kapittel 6 | FERDIG – Integrerte NIS2/IEC 62443-tiltak, oppdatert sjekklister og referanser. | `chapters/kapittel06-validering.tex`, `support/referanser.bib`, `plan.md` |
