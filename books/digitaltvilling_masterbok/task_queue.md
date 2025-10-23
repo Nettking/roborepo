@@ -4,7 +4,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Aktive oppgaver
 
-- `TODO` – Etablere et BibTeX-bibliotek og beskrive siteringspraksis slik at kapitlene kan referere til kilder.
+*(ingen oppgaver)*
 
 ## Pågår
 
@@ -12,6 +12,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Ferdige oppgaver
 
+- `FERDIG` – Etablere et BibTeX-bibliotek og beskrive siteringspraksis slik at kapitlene kan referere til kilder.
 - `FERDIG` – Opprettet en begrepsliste/ordliste i støttefilene som samler norske og engelske uttrykk brukt i boken.
 - `FERDIG` – Utdype Kapittel 8 ved å skrive narrative sektorseksjoner, knytte casemalen til flere norske case og foreslå øvingsoppgaver.
 - `FERDIG` – Skrive Kapittel 7 med livssyklusfaser, governance-modeller, RACI-eksempel og måleindikatorer for gevinstrealisering.

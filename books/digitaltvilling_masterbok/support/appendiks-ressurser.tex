@@ -56,5 +56,16 @@ CesiumJS & Bibliotek for 3D-geovisualisering i nettleser. Støtter tidsdimensjon
     \item Lag forslag til videre arbeid i prosjektet, for eksempel supplering med syntetiske data eller integrasjon mot læringsmoduler i Kapittel~5.
 \end{enumerate}
 
+\section{Siteringspraksis og bibliografi}
+For å sikre en enhetlig referansestil er et felles Bib\TeX-bibliotek tilgjengelig i filen \texttt{support/referanser.bib}. Kapittelforfattere bør:
+\begin{itemize}
+    \item bruke \verb+\citet{}+ når kilden skal inngå i selve setningen (for eksempel ``\citet{grieves2017digital} introduserer konseptet").
+    \item bruke \verb+\citep{}+ for parentesreferanser (for eksempel ``norske myndigheter vektlegger datadeling \citep{regjeringen2022datastrategi}'').
+    \item legge til nye kilder i Bib\TeX-filen med konsistente nøkler og utfylt \texttt{doi} eller \texttt{url} når det er tilgjengelig.
+    \item bestille fagfellevurdering av referanselisten når nye kapitler publiseres for å sikre kvalitet på kildene.
+\end{itemize}
+
+Bibliografien settes automatisk inn i bokens bakmaterie via \LaTeX-kommandoen \verb+\bibliography{support/referanser}+.
+
 \section{Notater}
-Denne ressursoversikten ble opprettet for å støtte oppgaveløsning og casestudier. Oppdater listen ved nye sektorkrav eller når verktøy får endret lisens.
+Denne ressursoversikten ble opprettet for å støtte oppgaveløsning og casestudier. Oppdater listen ved nye sektorkrav eller når verktøy får endret lisens. Seksjonen om siteringspraksis ble lagt til for å informere kapittelforfattere om bruk av det nye Bib\TeX-arkivet.

@@ -22,6 +22,13 @@ Denne filen beskriver hvordan neste oppgave skal velges og hvordan bidrag organi
 - Hvert kapittel bør inneholde læringsmål, hovedinnhold og forslag til øvingsoppgaver eller refleksjonsspørsmål.
 - Kontroller at nye pakker eller kommandoer er kompatible med den eksisterende LaTeX-oppsettet i `main.tex`.
 
+## Siteringspraksis og referansehåndtering
+
+- Alle kilder skal registreres i BibTeX-filen `support/referanser.bib`. Bruk beskrivende nøkler (for eksempel `forfatterÅrTema`).
+- Sett inn kilder i teksten med `\citet{}` når forfatteren skal være en del av setningen og `\citep{}` for parentesreferanser. Begge kommandoene støttes av `natbib`-oppsettet som er aktivert i `main.tex`.
+- Inkluder DOI eller URL der det finnes, og merk rapporter fra norsk industri og offentlig sektor som `@report` eller `@misc` med tydelige institusjonsnavn.
+- Når nye kapitler ferdigstilles, gjennomgå bibliografien samlet for å sikre at alle kilder er konsistente og følger valgt stil (`apalike`).
+
 ## Oppdatering av plan
 
 `plan.md` gir en samlet oversikt over bokas struktur og anbefalt progresjon for lesere og forfattere. Dersom du endrer strukturen, introduserer nye kapitler eller justerer læringsmål, oppdater `plan.md` samtidig.
