@@ -53,6 +53,19 @@ Optimaliseringsmetoder brukes for å finne beste løsning gitt begrensninger, en
 \subsection{Visualisering og beslutningsstøtte}
 Resultatene må presenteres på en måte som skaper tillit og handling. Kombinasjoner av 3D-visualisering, tidsseriegrafer og indikatorer for kvalitet eller risiko hjelper beslutningstakere med å forstå konsekvensene av ulike tiltak. Moderne verktøy gjør det mulig å overføre simuleringsresultater til VR/AR-miljøer eller integrere dem direkte i operative dashbord.
 
+\subsection{Immersiv AR/VR-beslutningsstøtte}
+Immersive arbeidsflater gjør det mulig for tverrfaglige team å oppleve de samme modellene samtidig, enten de står i et kontrollrom eller på en fjern lokasjon. Operatører kan «pinne» sensorer og KPI-er direkte på 3D-modellen, mens analytikere kjører scenariovariasjoner og deler resultatene i samme visuelle kontekst. Forskning på vedlikeholdsprosesser viser at slike løsninger gir raskere feilidentifisering og bedre felles situasjonsforståelse \citep{palmarini2018augmented}. Når AR/VR-panelet er koblet til tvillingens simuleringsmotor, kan brukere se hvilke antakelser som ligger bak en anbefaling og teste alternative tiltak før de aktiveres.
+
+For fjernvarmecaset i dette kapitlet etableres et immersivt kontrollrom der sanntidsdata, historikk og planlagte tiltak samles i en arbeidsflate. Figur~\ref{fig:kap04-immersiv-beslutning} skisserer hvordan sensorer, scenariokjøringer og beslutningslogg henger sammen i en norsk kontekst. Støttenotatet \textit{kap04-immersiv-case.md} beskriver detaljene i laboratorieøvelsen, inkludert oppgavetekst og evaluering.
+
+\begin{figure}[htbp]
+    \centering
+    % Alt-tekst: kap04-immersiv-beslutning-v1.alt.md
+    \fbox{\parbox{0.9\textwidth}{\centering\textit{Plassholder for immersivt kontrollrom som viser AR/VR-flater med sensorer, simulering og beslutningslogg.}}}
+    \caption{Storyboard for immersivt beslutningsrom knyttet til fjernvarmecaset.}
+    \label{fig:kap04-immersiv-beslutning}
+\end{figure}
+
 \section{Verktøy og arbeidsflyt}
 Et velfungerende verktøyslandskap består av modellering, simulering, datahåndtering og automasjon.
 
@@ -87,6 +100,17 @@ Analysefasen kombinerer sensitivitet mot utetemperatur og energipriser med optim
     \caption{Illustrasjon av hvordan fjernvarmecaset kombinerer ulike simuleringsmetoder og beslutningsstøtte.}
     \label{fig:kap04-fjernvarmecase}
 \end{figure}
+
+\section{Laboratorieøving: Immersivt beslutningsrom}
+Laboratorieøvelsen bygger på scenariet i \textit{kap04-immersiv-case.md} og tar utgangspunkt i at studentene får tilgang til et immersivt kontrollrom der fjernvarmeoperasjoner kan testes. Økten varer 90 minutter og gjennomføres i grupper på fire.
+
+\begin{enumerate}
+    \item \textbf{Forberedelse:} Studentene analyserer historiske logger og definerer tre hypoteser for lastbalansering. De etablerer et minimumssett av sensorer som skal «festes» til AR-objekter.
+    \item \textbf{Gjennomføring:} I laben utfører gruppen scenariokjøringer i AnyLogic/Modelica mens de følger KPI-er og alarmer i VR-panelet. De dokumenterer tiltak, fallback-prosedyrer og hvordan informasjon deles mellom roller.
+    \item \textbf{Etterarbeid:} Hver gruppe leverer en to-siders refleksjon som beskriver læring, forbedringer og risikovurdering. Evalueringsrubrikken fra støttenotatet brukes av faglærer og medstudenter til å gi karakteren «godkjent/ikke godkjent».
+\end{enumerate}
+
+Rubrikken vektlegger modellforankring, beslutningslogg, universell utforming og risikohåndtering, og kobler eksplisitt til kravene i Kapittel~5 og Kapittel~6.
 
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}
