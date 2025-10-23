@@ -40,6 +40,8 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-BUG-02 | Kapittel 1–3 | FERDIG – Gjenopprettet kapitteltegningenes TikZ-stier til `../support/figurer/kilder/` slik at figurene kompileres fra kapittelmappene. | `chapters/kapittel01-introduksjon.tex`, `chapters/kapittel02-systemtenkning.tex`, `chapters/kapittel03-data.tex` |
+| DT-BUG-01 | Kapittel 1–3 | FERDIG – Rettet TikZ-stier for kapittel 1–3 slik at figurfilene hentes fra `support/figurer/kilder/`. | `chapters/kapittel01-introduksjon.tex`, `chapters/kapittel02-systemtenkning.tex`, `chapters/kapittel03-data.tex`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-FIG-01 | Kapittel 1 | FERDIG – Tidslinjefiguren er produsert som to-spors TikZ-grafikk med sektorikoner og legende for fagfellepakke. | `support/figurer/kilder/kap01-tidslinje-v1.tikz`, `plan.md`, `completed_tasks.md` |
 | DT-OPS-02 | Oppgavestruktur | FERDIG – Etablerte månedlig revisjonsrutine for tavle og arbeidsliste med sjekkliste og fasetidslinje. | `support/oppgavetavle.md`, `plan.md`, `completed_tasks.md` |
 | DT-11 | Kapittel 2 | FERDIG – Utvidet modelleringskapittelet med flerfidelitetscase, metodetabeller og dokumentasjonskrav. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/referanser.bib` |
