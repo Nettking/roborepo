@@ -8,7 +8,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | Del | Kapittel | Status | Neste steg |
 | --- | -------- | ------ | ---------- |
 | I | Kapittel 1 | Utvidet med detaljert historisk tidslinje, norske politiske koblinger og caser. | Dele fagfellepakke med fokus på tidslinje, tabeller og nye kilder. |
-| I | Kapittel 2 | Oppdatert med politiske rammer, Statnett- og Avinor-caser og ny illustrasjon. | Starte fagfelleløp for policyseksjonen og verifisere regulatoriske referanser. |
+| I | Kapittel 2 | Utvidet med flerfidelitetscase, metodetabeller og modellforvaltningskrav i tillegg til politiske rammer. | Pilotere metode- og dokumentasjonstabeller i workshop og samle fagfelleinnspill før neste revisjon. |
 | I | Kapittel 3 | Supplert med sirkulærøkonomi, materialsløyfefigur og to datadrevne caser. | Samordne sirkulærøkonomi-innspill med grafikk- og datastyringsteamet før fagfelleutsending. |
 | II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
 | II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering, dataassimilering samt generative og edge-baserte tiltak. | Test pilotopplegg med vurderingsmatrise, sikre datasporing for syntetiske datasett og loggfør funn i fagfelleløpet. |
@@ -27,7 +27,7 @@ Omfangstallene under er beregnet ved å kjøre en enkel ordtelling (LaTeX-komman
 | Kapittel/element | Nåværende omfang (ord) | Anslåtte sider i dag | Kommentar |
 | --- | --- | --- | --- |
 | Kapittel 1 – Introduksjon | 1020 | ≈2,6 | Gir et overblikk, men mangler fordyping i norske verdikjeder og begrepsavklaringer. |
-| Kapittel 2 – Systemtenkning | 1104 | ≈2,8 | Grunnleggende beskrivelser av modelltyper er på plass, men metodiske sammenligninger er korte. |
+| Kapittel 2 – Systemtenkning | 1104 | ≈2,8 | Utvidet med flerfidelitetstabeller og dokumentasjonsseksjon, men trenger flere praksisoppgaver og volumvekst. |
 | Kapittel 3 – Data og integrasjon | 1373 | ≈3,4 | Datapipeline og integrasjonsmønstre er beskrevet, men dataspace- og beredskapsstoff er minimalt. |
 | Kapittel 4 – Simulering og analyse | 945 | ≈2,4 | Metodeoversikten er komprimert og trenger flere eksempler og casesammenhenger. |
 | Kapittel 5 – Læring, optimalisering og AI | 1281 | ≈3,2 | Dekker hovedsløyfen, men mangler generative/edge-baserte perspektiver og vurderingsmaler. |
@@ -67,7 +67,7 @@ Anslagene nedenfor tar utgangspunkt i 400 ord per side og supplerer statusoversi
   2. Designe kombinasjoner av fysikkbaserte og datadrevne modeller med tydelige antakelser og datakrav.
   3. Planlegge verifikasjon av modeller gjennom eksperimenter, sensitivitet og parameterkalibrering.
 - **Volumbehov:** +13,2 sider (~5 300 ord).
-- **Prioriterte utvidelser:** Lage sammenligningstabeller for modelltilnærminger, beskrive modelloppsett for energi- og produksjonscase, samt utvikle en referanseseksjon om modellstyring og dokumentasjon.
+ - **Prioriterte utvidelser:** Pilotere metodetabeller og flerfidelitetscase i undervisning, komplettere caset med kvantitative resultater og utvikle vurderingsrubrikker for modelljournaler.
 
 ### Kapittel 3 – Data, integrasjon og infrastruktur
 - **Ønsket omfang:** 20 sider (~8 000 ord) med fokus på datastrømmer, dataspace-samarbeid og beredskap.
@@ -160,11 +160,11 @@ Anslagene nedenfor tar utgangspunkt i 400 ord per side og supplerer statusoversi
    - Studentaktivitet: Kort refleksjon over egen fagbakgrunn og relevans.
 
 2. **Kapittel 2 – Systemtenkning og modellering**
-   - Status: Oppdatert med nasjonale politiske rammer, Statnett- og Avinor-caser og en figur som kobler EU-, nasjonale og sektorvise føringer.
-   - Læringsmål: Kjenne til modelleringsteknikker (fysikkbasert, datadrevet, hybride).
-   - Forfatteroppgaver (neste steg): Forankre policyseksjonen i fagfelleløpet, kvalitetssikre regulatoriske kilder og koordinere med juridisk ressursgruppe.
-   - Koordinering med Kapittel 1: Delta i fagfelleløp med utsendelse 27.05, workshop 03.06 og tiltaksoppfølging 07.06 for å samkjøre endringer i begrepsbruk og case.
-   - Studentaktivitet: Lag en konseptuell modell for en valgt prosess.
+   - Status: Utvidet med flerfidelitetscase, metode- og kalibreringstabeller samt seksjon om modelldokumentasjon og styring.
+   - Læringsmål: Kjenne til modelleringsteknikker (fysikkbasert, datadrevet, hybride) og kunne beskrive dokumentasjonskrav.
+   - Forfatteroppgaver (neste steg): Pilotere tabellene i masterworkshop, hente kvantitative resultater til subsea-caset og harmonisere dokumentasjonskrav med støttefilene.
+   - Koordinering med Kapittel 1 og 3: Dele modelljournal-mal og begrepsliste før neste fagfellemøte, og synkronisere datakatalogkrav før workshopene for data- og modellkapitlene.
+   - Studentaktivitet: Bruk tabellen til å foreslå modellportefølje for egen case og skrive en kort modelljournal som begrunner valgene.
 
 3. **Kapittel 3 – Data, integrasjon og infrastruktur**
    - Status: Supplert med sirkulærøkonomi-seksjon, materialsløyfefigur og caser fra Hydro CIRCAL og Statsbygg/Loopfront.
