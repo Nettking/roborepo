@@ -7,10 +7,9 @@ IMAGE = latex-builder
 build-image:
 	docker build -t $(IMAGE) .
 
-# Compile LaTeX document inside Docker
+# Compile LaTeX document inside Docker with interactive book selection
 pdf: build-image
-	@test -d $(BOOK_DIR) || (echo "Book '$(BOOK)' not found in $(BOOK_DIR)." && exit 1)
-	docker run --rm -v $(PWD):/data -w /data/$(BOOK_DIR) $(IMAGE) $(PROJECT).tex
+	@python scripts/compile_book.py --project "$(PROJECT)" --image "$(IMAGE)"
 
 # Clean auxiliary files for the selected book
 clean:
