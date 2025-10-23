@@ -2,6 +2,8 @@
 
 Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og for studenter som skal arbeide seg gjennom boken.
 
+> Notat (2024-05-08): Oppdatert med lenke til illustrasjons- og grafikkplan som beskriver leveranser per kapittel.
+
 ## Statusoversikt
 
 | Del | Kapittel | Status | Neste steg |
@@ -127,7 +129,7 @@ t) kan aktiveres.
 ## Videre arbeid
 
 1. Følge opp fagfelleplanen ovenfor, inkludert å oppdatere fagfellelogg og sende ut påminnelser to dager før levering.
-2. Utarbeide illustrasjons- og grafikkplan: konverter kladdene til ferdige figurer og sikre konsistent stil i hele boken.
+2. Implementere illustrasjons- og grafikkplanen i `support/illustrasjonsplan.md` og koordinere produksjonen av prioriterte figurer.
 3. Konsolidere bibliografien i `support/referanser.bib`, sikre DOI/URL og harmonisere siteringsstil på tvers av kapitlene.
 4. Oppdatere appendiks, ordliste og lærerveiledning etter fagfelleinnspill og nye case.
 5. Forberede produksjonsløp: definere layout, testkompilere og planlegge en pilotundervisning basert på leseplanen.
