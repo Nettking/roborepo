@@ -4,6 +4,8 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Etablerte `AGENTS.md` med arbeidsinstruksjoner for hele manusmappen og flyttet oppgaven fra `task_queue.md`.
+
 - `FERDIG` – Skill ferdige oppgaver i en egen fil og flytt historikken hit slik at `task_queue.md` blir enklere å lese.
 
 - `FERDIG` – Koordinerte illustrasjoner og fagfelleavklaringer for datapipeline i Kapittel 3 og oppdaterte referanser i `plan.md`.
