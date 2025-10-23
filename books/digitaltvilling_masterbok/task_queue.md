@@ -4,13 +4,15 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Aktive oppgaver
 
-*(ingen oppgaver)*
+- `TODO` – Integrere vurderingsmatrisen for casevalg i `support/larerveiledning.tex` slik at undervisningsopplegget bruker de samme kriteriene som Kapittel 8.
 
 ## Pågår
 
 *(ingen oppgaver)*
 
 ## Ferdige oppgaver
+
+- `FERDIG` – Etablere vurderingsmatrise og prioriteringsprosess for Kapittel 8 slik at norske case kan sammenlignes systematisk.
 
 - `FERDIG` – Dokumenterte datastyring for Kapittel 3, oppdaterte plan.md og fagfellelogg etter fagfellekommentar DI-03.
 - `FERDIG` – Utvidet `support/appendiks-ressurser.tex` med helseressurser og personvernveiledning for å støtte sektorstudiene i Kapittel 8.

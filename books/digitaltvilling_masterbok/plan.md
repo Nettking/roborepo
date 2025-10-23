@@ -72,7 +72,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 8. **Kapittel 8 – Bruksområder og sektorspesifikke case**
    - Status: Helhetlig tekst med narrative sektorseksjoner, casemal og øvinger.
    - Læringsmål: Illustrere variasjon mellom industri, energi, helse, transport.
-   - Forfatteroppgaver (neste steg): Velge hvilke case som skal utdypes videre, samle kildemateriale og planlegge visuelle elementer.
+   - Forfatteroppgaver (neste steg): Velge hvilke case som skal utdypes videre, samle kildemateriale, bruke vurderingsmatrisen i Kapittel~8 til å begrunne prioriteringen og planlegge visuelle elementer.
    - Studentaktivitet: Presentere en caseanalyse.
 
 9. **Kapittel 9 – Fremtidstrender og forskning**
