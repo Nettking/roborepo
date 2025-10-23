@@ -1,36 +1,53 @@
 \chapter{Data, integrasjon og infrastruktur}
 
-\section{Læringsmål}
+% Notat (2024-05-08): Utdypet kapittelet med sammenhengende tekst om dataflyt, integrasjon og sikkerhetstiltak i norske kontekster.
+\section{L\ae ringsm\aa l}
 \begin{itemize}
     \item Beskrive arkitekturen for datafangst, lagring og distribusjon i digitale tvillinger.
-    \item Evaluere integrasjonsmønstre og standarder.
+    \item Evaluere integrasjonsm\o nstre og standarder.
     \item Utforme krav til sikkerhet, personvern og datasuverenitet.
 \end{itemize}
 
 \section{Dataflyt og pipeline-design}
-\begin{itemize}
-    \item Fra sensor til innsikt: innsamling, behandling, lagring.
-    \item Batch kontra streaming og krav til latens.
-    \item Metadata, semantikk og masterdata.
-\end{itemize}
+En digital tvilling er avhengig av en gjennomtenkt datapipeline som kan fange, bearbeide og tilgjengeliggj\o re informasjon med riktig kvalitet og tidsoppl\o sning. Det starter i feltet, hvor sensorer, styringssystemer eller manuelle registreringer skaper r\aa data. Dataene m\aa filtreres og normaliseres tidlig for \aa unng\aa store forsinkelser senere i kjeden. Norske industrimilj\o er som prosessindustrien p\aa Her\o ya har gode erfaringer med \aa kombinere edge-noder som gj\o r grunnleggende forh\aa ndsprosessering med sentrale skyplattformer som tilbyr datalagring, modelltrening og visualisering.
 
-\section{Integrasjonsmønstre og standarder}
-\begin{itemize}
-    \item API-er, meldingskøer og eventdrevne arkitekturer.
-    \item Standarder: OPC UA, MQTT, Asset Administration Shell.
-    \item Datakvalitet og interoperabilitet.
-\end{itemize}
+\subsection{Fra sensor til innsikt}
+F\o rste steg er datainnsamling via feltbuss, industrielle IoT-gatewayer eller API-er fra eksterne systemer. For digital tvilling-bruk er det avgj\o rende \aa definere sampling-rate, datastruktur og kontekst slik at hver m\a ling kan kobles til riktig fysiske komponent. Inntaksleddet m\aa h\aa ndtere buffring n\aar tilkoblingen faller ut, og bidra med enhetlige tidsstempler for \aa muliggj\o re felles analyse av hendelser. Videre b\o r pipeline-design inkludere datakvalitetsregler som fanger opp avvik, for eksempel ved \aa merke data fra kalibreringsperioder eller vedlikehold.
+
+\subsection{Batch kontra streaming}
+Batchbehandling er egnet n\aar dataene hovedsakelig brukes til periodisk rapportering eller modelloppdatering, mens streaming er n\o dvendig for operasjonelle beslutninger og avviksh\a ndtering. Mange virksomheter kombinerer disse to: hendelser str\o mmes gjennom en meldingsk\o for \aa trigge alarmer og dashboards, samtidig som dataene landes i et datasj\o for tyngre analyser senere. Beslutningen b\o r dokumenteres i arkitekturbeskrivelsen slik at teamet vet hvilke forsinkelser og kostnader som forventes.
+
+\subsection{Metadata, semantikk og masterdata}
+Semantisk informasjon er n\o kkelen til \aa kunne dele data p\aa tvers av applikasjoner. Et felles begrepsapparat, for eksempel basert p\aa internasjonale referansemodeller eller bransjespesifikke ontologier, hjelper teamet med \aa unng\aa tolkningstvister. Masterdata om utstyr, prosesser og lokasjoner m\a holdes oppdatert, ellers mister tvillingen sin kobling til den fysiske virkeligheten. Ved \aa etablere en dedikert katalog med API-tilgang kan andre prosjekter gjenbruke informasjonen og bidra til kvaliteten.
+
+\section{Integrasjonsm\o nstre og standarder}
+Et integrasjonslandskap for digitale tvillinger spenner fra enkle API-kall til kompleks hendelsesdrevet samhandling. God praksis er \aa kartlegge datastr\o mmer, volum og krav til robusthet f\o r man velger teknologier.
+
+\subsection{Arkitekturvalg}
+Tradisjonelle REST-API-er gir tydelig kontraktstyring og passer for foresp\o rsel-/svar-scenarioer, men b\o r suppleres med publish/subscribe-mekanismer n\aar flere systemer trenger de samme sanntidsdataene. Hendelsesdrevne arkitekturer med meldingsk\oer eller loggstr\o mmer (for eksempel Apache Kafka) gir bedre skalerbarhet og kan forenkle revisjon, fordi alle hendelser lagres i riktig rekkef\o lge. For kritiske styringssystemer b\o r man ogs\aa vurdere redundans og fallback-l\o sninger, slik at tapte meldinger ikke medf\o rer sikkerhetsrisiko.
+
+\subsection{Standarder i norsk praksis}
+OPC UA er utbredt i norsk industri fordi det forener datapublisering med semantiske modeller. MQTT er lettere og passer godt n\aar batteri- eller nettverkshensyn krever minimal overhead, som i maritime anvendelser. Asset Administration Shell (AAS) f\aa r st\o tte gjennom europeiske initiativer og gir et strukturert format for \aa beskrive digitale representasjoner av produkter og systemer. Ved \aa kombinere disse standardene kan man b\o de integrere eldre automasjonssystemer og dele data med eksterne partnere.
+
+\subsection{Datakvalitet og interoperabilitet}
+Integrasjonen m\aa inkludere kontrollpunkter for datakvalitet, spesielt n\aar dataene brukes til modelloppdatering eller automatiserte beslutninger. Versjonering av datakontrakter og testmilj\o er der integrasjoner valideres f\o r produksjonssetting reduserer risiko for feil. Dokumentasjon av avhengigheter og kontaktpunkter gj\o r det enklere \aa etablere ansvar for h\a ndtering av databrudd eller uforutsette endringer.
 
 \section{Infrastruktur og sikkerhet}
-\begin{itemize}
-    \item Edge, sky og hybrid arkitektur.
-    \item Tilgangsstyring, IAM og zero-trust-prinsipper.
-    \item Juridiske hensyn: GDPR, datasuverenitet, datadeling.
-\end{itemize}
+Arkitekturen b\o r balansere behovet for lav responstid med kravene til sikkerhet, kostnad og etterlevelse. Norske organisasjoner m\o ter ofte krav om datasuverenitet, samtidig som de \o nsker \aa dra nytte av skytjenester for elastisitet og tung regnekraft.
 
-\section{Refleksjonsspørsmål og øvinger}
+\subsection{Edge, sky og hybrid}
+Edge-plattformer n\a r fysiske prosesser gir rask respons og reduserer b\aa ndebreddebruken ved \aa filtrere data f\o r videresending. Skybaserte løsninger gir tilgang til avanserte analysetjenester og fleksibel lagring. En hybrid tilnærming er vanlig: modellene trenes i skyen og pakkes som containere som kan distribueres tilbake til fabrikkgulvet. God orkestrering (for eksempel med Kubernetes eller Azure Arc) sikrer at oppdateringer kan rulles ut kontrollert.
+
+\subsection{Tilgangsstyring og zero-trust-prinsipper}
+Zero-trust inneb\ae rer at alle foresp\o rsler autentiseres og autoriseres, uansett hvor de kommer fra. I en digital tvilling m\a dette omfatte sensorer, API-klienter og mennesker. Bruk av identitetsplattformer, automatisert n\o kkellagring og segmenterte nettverk reduserer angrepsflaten. Logsikkerhet, inkludert kryptografisk signering av hendelser, hjelper virksomheten med \aa dokumentere etterlevelse og spore hendelser i etterkant.
+
+\subsection{Juridiske hensyn}
+GDPR krever at personopplysninger behandles med tydelig hjemmel og strenge tilgangsregler. Selv n\a r dataene i utgangspunktet er tekniske, kan kombinasjonen av sensorinformasjon og arbeidsplaner gj\o re dem identifiserbare. Datasuverenitet har f\aa tt \o kt fokus etter Schrems II-dommen; virksomheter m\aa vite hvor dataene fysisk lagres og hvilke underleverand\o rer som involveres. Mange velger \aa knytte seg til norske eller europeiske skyer, eller \aa bruke konfigurerbare sovereign cloud-l\o sninger.
+
+\section{Refleksjonssp\o rsm\aa l og \o vinger}
 \begin{enumerate}
     \item Tegn et dataflytdiagram for en digital tvilling i en norsk industribedrift.
-    \item Vurder når det er hensiktsmessig å bruke sky kontra edge for sanntidsanalyse.
+    \item Vurder n\aar det er hensiktsmessig \aa bruke sky kontra edge for sanntidsanalyse.
     \item Beskriv hvordan du ville etablere en governance-modell for datatilgang.
+    \item Foresl\aa indikatorer for datakvalitet som b\o r overv\aa kes kontinuerlig i tvillingen.
 \end{enumerate}
