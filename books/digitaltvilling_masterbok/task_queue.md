@@ -4,7 +4,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Aktive oppgaver
 
-- `TODO` – Utarbeide mal for prosjektkontrakt mellom studentgrupper og eksterne partnere i lærerveiledningen.
+*(ingen oppgaver)*
 
 ## Pågår
 
@@ -13,6 +13,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 ## Ferdige oppgaver
 
 - `FERDIG` – Utarbeidet vurderingsrubrikker i `support/larerveiledning.tex` og oppdatert `plan.md` med nye oppfølgingstiltak.
+- `FERDIG` – Utarbeidet mal for prosjektkontrakt mellom studentgrupper og eksterne partnere i lærerveiledningen.
 - `FERDIG` – Utarbeide plan for pilotundervisning basert på leseplanen, inkludert vurderingsmetoder og logistikk for gjennomføring.
 - `FERDIG` – Etablert tiltaksplan for fagfelleinnspill og oppdatert `plan.md` samt `support/fagfellelogg.csv`.
 - `FERDIG` – Konsolidert bibliografien i `support/referanser.bib` med DOI/URL og harmonisert siteringspraksis.
