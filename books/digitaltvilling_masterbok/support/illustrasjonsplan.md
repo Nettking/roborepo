@@ -2,6 +2,7 @@
 
 > Notat (2024-05-08): Utarbeidet plan for å løfte kladdeillustrasjoner til ferdige figurer og etablere felles stil på tvers av kapitlene.
 > Notat (2024-05-10): Oppdatert etter gjennomgang av kapitteltekstene for å fange nye illustrasjonsbehov og avstemme ansvar.
+> Notat (2024-07-15): Datapipeline-illustrasjonen i Kapittel 3 er oppdatert til definert fargepalett og alt-tekst er registrert som versjon 2.
 
 ## Formål
 
@@ -104,7 +105,7 @@ notater: >-
 | Kap. 1 – Historisk tidslinje | Tekstlig oversikt over milepæler i kapittel 1, ingen grafikk | Lage to-spors tidslinje (internasjonalt vs. Norge) med ikonmarkering av sektorer og korte tekstbobler | `figurer/kap01-tidslinje-v1.tikz` (+ PDF) | Ingrid Lunde (manus) + grafiker; storyboard uke 1, ferdig leveranse uke 3 |
 | Kap. 2 – Systemkart for produksjonslinje | Mermaid-kode i manus | Konvertere til TikZ med palett, ikonsett for sensorer/aktører og datapiler merket med datatyper | `figurer/kap02-systemkart-v1.tikz/pdf` | Ahmed Solheim leder, skisse oppdatert uke 1, ferdigstillelse uke 2 |
 | Kap. 2 – Kausalsløyfe vedlikehold–energi | Mermaid-kode i manus | Redesign som sirkulær kausalfigur med positive/negative koblinger, tidsforsinkelsesikon og legendetekst | `figurer/kap02-kausal-v1.tikz/pdf` | Ahmed Solheim + fagekspert; storyboard uke 1, produksjon uke 2 |
-| Kap. 3 – Datapipeline (Figur~\ref{fig:kap3-datapipeline}) | TikZ finnes, men bruker generiske farger/typer | Revidere til definert palett, 8–9 pt tekst, egen callout for governance og eksportere `-v2`-filer | Oppdatere `kapittel03-data.tex` + `figurer/kap03-datapipeline-v2.tikz/pdf` | Ahmed Solheim + Nora Aas; revisjon uke 2, alt-tekst uke 2 |
+| Kap. 3 – Datapipeline (Figur~\ref{fig:kap3-datapipeline}) | TikZ oppdatert til versjon 2 (2024-07-15) med definert palett og governance-callout | Visuell QA mot øvrige kapitler; metadata publisert i `metadata/kap03-datapipeline-v2.alt.md` | Oppdatere `kapittel03-data.tex` + `figurer/kap03-datapipeline-v2.tikz/pdf` | Ahmed Solheim + Nora Aas; revisjon uke 2, alt-tekst uke 2 |
 | Kap. 4 – Simuleringsmetodematrise | Mangler figur | Lage 2×2 matrise (deterministisk/stokastisk × diskret/kontinuerlig) med norske eksempler og metodeikon | `figurer/kap04-matrise-v1.svg/pdf` | Nora Aas; skisse uke 2, ferdiggjøring uke 3 |
 | Kap. 4 – Analyseflyt | Mangler figur | Tegne prosess med trinnene datainntak → modellering → simulering → analyse → visualisering, inkludert referanse til scenario-/sensitivitetsarbeid | `figurer/kap04-analyseflyt-v1.tikz` | Nora Aas; storyboard uke 2, levering uke 3 |
 | Kap. 4 – Verktøystakk | Ingen eksisterende grafikk | Visualisere lagdelt verktøystøtte (modellering, data/integrasjon, automasjon, ytelsesmiljø) med eksempler fra teksten | `figurer/kap04-verktoystakk-v1.tikz/pdf` | Nora Aas + grafisk designer; skisse uke 2, ferdig uke 4 |

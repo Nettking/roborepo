@@ -12,6 +12,8 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Ferdige oppgaver
 
+- `FERDIG` – Harmoniserte datapipeline-illustrasjonen i Kapittel 3 med fargepalett, definerte farger i `main.tex` og registrerte alt-tekst i `support/figurer/metadata/kap03-datapipeline-v2.alt.md`.
+
 - `FERDIG` – Integrerte vurderingsmatrisen for casevalg i `support/larerveiledning.tex` slik at undervisningsopplegget bruker de samme kriteriene som Kapittel 8.
 - `FERDIG` – Etablere vurderingsmatrise og prioriteringsprosess for Kapittel 8 slik at norske case kan sammenlignes systematisk.
 

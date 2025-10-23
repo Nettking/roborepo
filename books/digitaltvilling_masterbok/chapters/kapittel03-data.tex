@@ -15,24 +15,36 @@ En digital tvilling er avhengig av en gjennomtenkt datapipeline som kan fange, b
 
 Figur~\ref{fig:kap3-datapipeline} oppsummerer hovedstr\o mmen fra feltniv\aa til de applikasjonene som konsumerer tvillingtjenestene. Integrasjonslaget markerer overgangen der normaliserte hendelser og masterdata eksponeres gjennom standardiserte grensesnitt og meldingsstrukturer, slik at etterf\o lgende plattformer kan bygges modul\ae rt.
 
+% Alt-tekst: support/figurer/metadata/kap03-datapipeline-v2.alt.md
 \begin{figure}[ht]
     \centering
     \resizebox{\textwidth}{!}{%
     \begin{tikzpicture}[node distance=2.3cm, >=LaTeX]
-        \tikzset{stage/.style={draw, rounded corners=4pt, minimum height=1.9cm, text width=3.2cm, align=center, font=\small, fill=#1!18}, stage/.default=blue}
-        \node (field) [stage=blue] {Feltniv\aa \\ \footnotesize Sensorer, SCADA, operat\o rinput};
-        \node (edge) [stage=teal, right=2.3cm of field] {Edge- og gatewaylag \\ \footnotesize Filtrering, buffering, protokollkonvertering};
-        \node (integration) [stage=green, right=2.3cm of edge] {Integrasjonslag \\ \footnotesize Meldingsk\o er, API-orkestrering, semantisk modellering};
-        \node (platform) [stage=orange, right=2.3cm of integration] {Data- og analyseplattformer \\ \footnotesize Datasj\o, tidsserielager, modelltrening};
-        \node (apps) [stage=purple, right=2.3cm of platform] {Forbrukere \\ \footnotesize Digital tvilling, dashboards, styringssystemer};
-        \draw[->, thick] (field) -- (edge);
-        \draw[->, thick] (edge) -- node[above, font=\scriptsize]{Normalisering, kvalitetssikring} (integration);
-        \draw[->, thick] (integration) -- node[above, font=\scriptsize]{Distribusjon, standarder} (platform);
-        \draw[->, thick] (platform) -- node[above, font=\scriptsize]{Innsikt, automatisering} (apps);
-        \node (governance) [draw, dashed, rounded corners=4pt, text width=8cm, align=center, font=\scriptsize, fill=gray!12, below=1.4cm of integration] {Tverrg\aa ende styring: tilgangskontroll, hendelseslogging, datakatalog og livssyklus for modeller};
-        \draw[->, dashed] (governance.north west) -- (edge.south);
-        \draw[->, dashed] (governance.north) -- (integration.south);
-        \draw[->, dashed] (governance.north east) -- (platform.south);
+        \tikzset{
+            stage/.style={
+                draw=grafitt,
+                rounded corners=4pt,
+                minimum height=1.9cm,
+                text width=3.2cm,
+                align=center,
+                font=\small,
+                fill=#1!18
+            },
+            stage/.default=dypblaa
+        }
+        \node (field) [stage=dypblaa] {Feltniv\aa \\ \footnotesize Sensorer, SCADA, operat\o rinput};
+        \node (edge) [stage=petrol, right=2.3cm of field] {Edge- og gatewaylag \\ \footnotesize Filtrering, buffering, protokollkonvertering};
+        \node (integration) [stage=havgronn, right=2.3cm of edge] {Integrasjonslag \\ \footnotesize Meldingsk\o er, API-orkestrering, semantisk modellering};
+        \node (platform) [stage=solgul, right=2.3cm of integration] {Data- og analyseplattformer \\ \footnotesize Datasj\o, tidsserielager, modelltrening};
+        \node (apps) [stage=koral, right=2.3cm of platform] {Forbrukere \\ \footnotesize Digital tvilling, dashboards, styringssystemer};
+        \draw[->, thick, draw=grafitt] (field) -- (edge);
+        \draw[->, thick, draw=grafitt] (edge) -- node[above, font=\scriptsize]{Normalisering, kvalitetssikring} (integration);
+        \draw[->, thick, draw=grafitt] (integration) -- node[above, font=\scriptsize]{Distribusjon, standarder} (platform);
+        \draw[->, thick, draw=grafitt] (platform) -- node[above, font=\scriptsize]{Innsikt, automatisering} (apps);
+        \node (governance) [draw=grafitt, dashed, rounded corners=4pt, text width=8cm, align=center, font=\scriptsize, fill=skygraa!60, below=1.4cm of integration] {Tverrg\aa ende styring: tilgangskontroll, hendelseslogging, datakatalog og livssyklus for modeller};
+        \draw[->, dashed, draw=grafitt] (governance.north west) -- (edge.south);
+        \draw[->, dashed, draw=grafitt] (governance.north) -- (integration.south);
+        \draw[->, dashed, draw=grafitt] (governance.north east) -- (platform.south);
     \end{tikzpicture}%
     }
     \caption{Skisse av datapipeline fra felt til applikasjoner, med integrasjonslaget som kobler sanntidsstr\o mmer og dataplattformer.}
