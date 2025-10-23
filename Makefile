@@ -10,7 +10,7 @@ build-image:
 # Compile LaTeX document inside Docker
 pdf: build-image
 	@test -d $(BOOK_DIR) || (echo "Book '$(BOOK)' not found in $(BOOK_DIR)." && exit 1)
-	docker run --rm -v $(PWD):/data $(IMAGE) $(BOOK_DIR)/$(PROJECT).tex
+	docker run --rm -v $(PWD):/data -w /data/$(BOOK_DIR) $(IMAGE) $(PROJECT).tex
 
 # Clean auxiliary files for the selected book
 clean:
