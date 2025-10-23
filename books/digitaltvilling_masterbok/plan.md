@@ -10,9 +10,9 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | I | Kapittel 1 | Helhetlig tekst med historikk, begreper, økosystem og verdiskaping. | Planlegg fagfellelesing og oppdater kildehenvisninger til de norske eksemplene. |
 | I | Kapittel 2 | Helhetlig utkast som beskriver systemkart, modelleringsparadigmer og kalibrering. | Produser ferdige figurer av systemkartene og kvalitetssikre referanser til standarder og verktøy. |
 | I | Kapittel 3 | Helhetlig utkast med dataflyt, integrasjonsarkitektur og øvinger. | Koordiner fagfelleinnspill (DI-03) og ferdigstille gjenværende illustrasjoner; datapipeline-versjon 2 deles med grafikkteam via `support/figurer/metadata/kap03-datapipeline-v2.alt.md`. |
-| II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
-| II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering og dataassimilering. | Samle utfyllende referanser og koordinere fagfellelesing; vurderingskriterier og algoritmematrise er beskrevet i Seksjon~«Vurderingskriterier for AI-drevne tvillinger». |
-| II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet og etikk. | Verifiser standardhenvisninger og vurder om kapitlet trenger støttediagrammer. |
+| II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Koordiner immersivt beslutningsrom (figur og lab) før fagfellelesing og ferdigstill grafikkleveransen. |
+| II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering og dataassimilering. | Gjennomfør fagfelleløp for den multimodale AI-laben og forankre algoritmematrise-notatet i læringsplattformen. |
+| II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet og etikk. | Test sikkerhetscase-øving med fokus på IEC 62443/NIS2 og samle revisjonsinnspill fra governance-teamet. |
 | III | Kapittel 7 | Helhetlig utkast med livssyklus, governance og RACI-eksempel. | Utarbeid grafisk fremstilling av livssyklus og planlegg caseintervjuer til videre arbeid. |
 | III | Kapittel 8 | Helhetlig utkast med narrative sektorseksjoner og casemal. | Identifiser hvilke case som skal utdypes videre og samle kildegrunnlag til hver sektor. |
 | III | Kapittel 9 | Helhetlig utkast om forskningslandskap og prosjektforslag. | Koordiner fagfellelesing og harmoniser referanser mot bibliografien. |
@@ -57,20 +57,20 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 4. **Kapittel 4 – Simulering og analyse**
    - Status: Helhetlig tekst med simuleringsmetoder, analyser, verktøyskart og fjernvarmeeksempel.
    - Læringsmål: Skille mellom ulike simuleringsmetoder og analyseteknikker.
-   - Forfatteroppgaver (neste steg): Ferdigstille storyboard og metadata for de planlagte figurene (se `support/illustrasjonsplan.md`, DT-04), sende fagfellepakke (`support/notater/kap04-fagfellepakke.md`) og dokumentere koblingen til øvingene.
-   - Studentaktivitet: Sammenligne to simuleringsverktøy.
+   - Forfatteroppgaver (neste steg): Ferdigstille immersivt beslutningsrom (figur `kap04-immersiv-beslutning-v1` og labnotat `support/notater/kap04-immersiv-case.md`), sende fagfellepakke (`support/notater/kap04-fagfellepakke.md`) og koordinere grafikkleveransen.
+   - Studentaktivitet: Gjennomføre immersiv beslutningslab og sammenligne to simuleringsverktøy.
 
 5. **Kapittel 5 – Læring, optimalisering og AI**
    - Status: Helhetlig tekst som binder maskinlæring, optimalisering og dataassimilering, inkludert oppdrettscase.
    - Læringsmål: Se sammenhengen mellom maskinlæring, optimalisering og digitale tvillinger.
-   - Forfatteroppgaver (neste steg): Samle tilleggsreferanser, beskrive vurderingskriterier for caseoppgaven og forberede fagfellelesing.
-   - Studentaktivitet: Designe et eksperiment som bruker online læring.
+   - Forfatteroppgaver (neste steg): Fagfellekoordinere den multimodale AI-coach-seksjonen, publisere algoritmematrise-notatet (`support/notater/kap05-algoritmematrise-utvidelse.md`) og sikre at laboratorierubrikken brukes i læringsplattformen.
+   - Studentaktivitet: Designe og teste en multimodal AI-lab med AR/VR-støtte.
 
 6. **Kapittel 6 – Validering, verifikasjon og tillit**
    - Status: Helhetlig tekst med rammeverk, usikkerhetsanalyse, etikk og refleksjonsspørsmål.
    - Læringsmål: Forstå prosesser for kvalitetssikring og usikkerhetsanalyse.
-   - Forfatteroppgaver (neste steg): Verifisere standardhenvisninger, vurdere behov for støttefigurer og planlegge fagfelleinnhenting fra industripartnere.
-   - Studentaktivitet: Utarbeide en plan for validering av en digital tvilling.
+   - Forfatteroppgaver (neste steg): Teste sikkerhetscase-øvingen (`support/notater/kap06-sikkerhetscase.md`), dokumentere standardkartet og samle revisjonsinnspill fra governance-teamet.
+   - Studentaktivitet: Utarbeide en kombinert validerings- og etterlevelsesplan for en digital tvilling.
 
 ## Del III: Implementering og casearbeid
 

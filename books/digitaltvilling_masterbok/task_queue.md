@@ -16,7 +16,6 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger |
 | --- | --- | --- | --- | --- | --- |
-| DT-05 | Høy | Kapittel 5 | Samle tilleggsreferanser, koble vurderingsrubrikk og forberede fagfelleløp. | Oppdatert kildebank og rubrikknotat. | `plan.md` (Kapittel 5), `support/larerveiledning.tex` |
 | DT-06 | Middels | Kapittel 6 | Verifiser standardhenvisninger og vurder støttefigurer for kvalitetsprosesser. | Revidert kapittelavsnitt og figurplan. | `plan.md` (Kapittel 6), `support/illustrasjonsplan.md` |
 | DT-07 | Høy | Kapittel 7 | Utvikle grafisk livssyklus og planlegg caseintervjuer. | Grafikkutkast og intervjuliste. | `plan.md` (Kapittel 7), `support/illustrasjonsplan.md` |
 | DT-08 | Høy | Kapittel 8 | Prioriter hvilke case som skal utdypes, samle kildegrunnlag og skissere visuelle elementer. | Prioritert caseliste og kildeoppsummering. | `plan.md` (Kapittel 8), `support/appendiks-ressurser.tex` |
@@ -26,7 +25,10 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 ## Pågår
 
-*(ingen oppgaver for øyeblikket – endre status til `PÅGÅR` i tabellen over når arbeid starter)*
+| ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger |
+| --- | --- | --- | --- | --- | --- |
+| DT-04 | Høy | Kapittel 4 | Reåpnet – ferdigstille immersivt beslutningsrom og laboratoriepakke for simulering. | Storyboard for `kap04-immersiv-beslutning-v1` og labbeskrivelse. | `support/illustrasjonsplan.md`, `support/notater/kap04-immersiv-case.md` |
+| DT-05 | Høy | Kapittel 5 | Reåpnet – utvide analyseeksempel og algoritme-/rubrikkstøtte for AI-lab. | Storyboard for `kap05-operator-coach-v1`, algoritmematrise og rubrikknotat. | `support/illustrasjonsplan.md`, `support/notater/kap05-algoritmematrise-utvidelse.md` |
 
 ## Ferdige oppgaver
 
