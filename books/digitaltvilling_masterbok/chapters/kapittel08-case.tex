@@ -41,6 +41,48 @@ For å sammenligne case på tvers av sektorer, start med å beskrive hvorfor tvi
     \item Reflekter over etiske og samfunnsmessige hensyn, inkludert personvern, arbeidstakerperspektiv og miljøpåvirkning.
 \end{itemize}
 
+\subsection*{Vurderingsmatrise for modenhet og prioritering}
+Når flere potensielle case konkurrerer om oppmerksomhet eller undervisningsressurser, kan en vurderingsmatrise gi et felles
+beslutningsgrunnlag. Tabellen under brukes til å skåre hvert case fra~1 (lav modenhet) til~5 (høy modenhet) på fem dimensjoner.
+Noter begrunnelsen for hver skår og lenk til dokumentasjon, slik at fagfeller kan etterprøve vurderingen.
+
+\begin{longtable}{p{0.23\textwidth}p{0.26\textwidth}p{0.45\textwidth}}
+\toprule
+\textbf{Kriterium} & \textbf{Hva vurderes?} & \textbf{Eksempel på skåringsskala (1--5)} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Kriterium} & \textbf{Hva vurderes?} & \textbf{Eksempel på skåringsskala (1--5)} \\
+\midrule
+\endhead
+Datagrunnlag og tilgang & Tilgjengelighet, kvalitet og rettigheter til data som trengs for tvillingen. & 1~= fragmenterte kilder uten tilgangsavklaringer. 3~= etablerte datastrømmer, men mangler kvalitetssikring. 5~= sanntidsdata med avtalte API-er, eierskap og datakvalitetsrutiner. \\
+\addlinespace
+Organisatorisk forankring & Hvor godt case er støttet av ledelse, fagmiljø og brukere. & 1~= initiativ fra enkeltperson uten mandat. 3~= prosjektgruppe med midlertidig finansiering. 5~= tverrfaglig styringsmodell med dedikerte roller og gevinstansvar. \\
+\addlinespace
+Teknologisk modenhet & Modenhet på modeller, integrasjonsplattform og driftsoppsett. & 1~= konseptskisse uten implementert plattform. 3~= pilot i begrenset produksjon. 5~= robust løsning med DevOps-/MLOps-sløyfer og overvåkning i drift. \\
+\addlinespace
+Gevinst- og læringspotensial & Forventet effekt for virksomheten og læringsverdi for studenter. & 1~= uklare mål og lite overføringsverdi. 3~= tydelige KPI-er, men begrenset dokumentasjon. 5~= målbare gevinster, åpne data/artefakter og tydelig kobling til læringsmål. \\
+\addlinespace
+Risiko og etterlevelse & Regulatoriske, sikkerhets- og etiske forutsetninger. & 1~= ukjente krav eller høy personvernrisiko. 3~= identifiserte tiltak, men ufullstendig dokumentasjon. 5~= komplette risikovurderinger, etterlevelsesplan og jevnlig revisjon. \\
+\bottomrule
+\end{longtable}
+
+Etter at tabellen er fylt ut, summeres skårene for et samlet modenhetsnivå, men noter også hvordan svakheter skal håndteres.
+Følg denne arbeidsflyten for å forankre prioriteringen:
+
+\begin{enumerate}
+    \item Sett sammen et tverrfaglig vurderingsteam (for eksempel produktansvarlig, dataarkitekt og domeneekspert) og avklar
+    hva slags beslutning som skal tas.
+    \item Innhent nødvendig dokumentasjon: prosjektmandat, tekniske beskrivelser, datalister og gevinstrealiseringsplaner. Bruk
+    ressursoversikten i \autoref{appendix:ressurser} for å finne støttedata eller verktøy som mangler.
+    \item Skår casene i fellesskap, dokumenter begrunnelser og registrer resultatet i prosjektets styrings- eller fagfellelogg.
+    \item Definer tiltak for kriterier som får skår 1--2 (for eksempel avklare tilgang, etablere governance eller komplettere
+    risikovurdering) og gi tydelig anbefaling om case skal prioriteres, videreutvikles eller settes på vent.
+\end{enumerate}
+
+Ved å dele vurderingsmatrisen med studenter og eksterne samarbeidspartnere blir det lettere å diskutere hvilke case som gir mest
+verdi, og hvilke forberedelser som kreves før data kan deles eller modeller kobles på.
+
 \section{Casestudie-mal: Digital tvilling for batteriproduksjon i Mo i Rana}
 Denne malen er inspirert av etableringen av den nasjonale batteriverdikjeden i Mo i Rana, der en digital tvilling skal binde sammen prosesslinjer, energiforbruk og logistikk. Bruk strukturen nedenfor som ramme for å dokumentere og analysere egne case, og erstatt eksemplene med data fra den faktiske virksomheten du studerer.
 
