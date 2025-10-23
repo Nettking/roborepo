@@ -76,22 +76,76 @@ Kausalsløyfen viser hvordan systemkart kan brukes til å fange både ønskede o
 Den konseptuelle modellen fra systemkartet danner grunnlaget for videre modellering, enten du velger fysikkbaserte, datadrevne eller hybride tilnærminger i de følgende seksjonene.
 
 \section{Modelleringsparadigmer}
-\begin{itemize}
-    \item Fysikkbaserte modeller (differensialligninger, FEM, CFD).
-    \item Datadrevne modeller (maskinlæring, statistikk, digitale skygger).
-    \item Hybride modeller og ko-simulering.
-\end{itemize}
+Systemkartet gir en felles forståelse av hvilke fenomener som må representeres i en digital tvilling. Neste steg er å velge et
+modelleringsparadigme som balanserer nøyaktighet, forklarbarhet og implementasjonskostnad. Masterstudenter må kunne vurdere
+hvordan ulike typer modeller beskriver sammenhengene i systemet og hvilke beslutninger de støtter. I praksis innebærer dette å
+kombinere domenekunnskap fra feltet med metoder fra matematikk, statistikk og informatikk.
+
+\subsection{Fysikkbaserte modeller}
+Fysikkbaserte modeller er bygd på eksplisitte ligninger som beskriver energi-, masse- eller informasjonsstrømmer. Typiske
+teknikker er differensialligninger, finite element-metoder (FEM) og computational fluid dynamics (CFD). Fordelen er at
+modellene er transparente og muliggjør følsomhetsanalyser, men de krever inngående forståelse av prosessen og god kvalitet på
+parametere. I norske prosessindustrier brukes slike modeller blant annet til å simulere varmebalanser i ovner, fukttransport i
+trebaserte materialer og hydrodynamikk i fiskemerder.
+
+\subsection{Datadrevne modeller}
+Datadrevne modeller lærer systemets oppførsel direkte fra historiske eller sanntidsdata. Maskinlæring og statistiske metoder
+kan identifisere mønstre uten å kjenne den underliggende fysikken. En digital skygge kan trenes på tidsserier fra sensorer for
+å predikere avvik i produksjonen. Fordelen er rask implementering når rike datasett finnes, men modellene kan bli sårbare for
+driftsendringer og må overvåkes for skjevheter.
+
+\subsection{Hybride modeller og ko-simulering}
+I mange digitale tvillinger kombineres fysikkbaserte og datadrevne komponenter. En hybrid modell kan bruke førsteprinsipper for
+energi- og materialbalanser, mens maskinlæring estimerer friksjonstap eller operatørpåvirkning som er vanskelig å beskrive
+analytisk. Ko-simulering gjør det mulig å koble sammen flere spesialiserte modeller i en helhetlig tidslinje, for eksempel når
+mekanikk, termodynamikk og styringslogikk må løses samtidig. Denne kombinasjonen gir robusthet og fleksibilitet, men krever
+god styring av grensesnitt og versjoner.
+
+\subsection{Vurdering av modellvalg}
+Når et paradigme skal velges, bør teamet diskutere hvor kritisk forklarbarhet er, hvilke datakilder som er tilgjengelige og hvor
+raskt modellen må oppdateres. Dokumentér alltid hvilke antagelser som ligger til grunn og hvilke måledata som trengs for å holde
+modellen presis over tid.
 
 \section{Modellintegrasjon og kalibrering}
-\begin{itemize}
-    \item Hvordan koble modeller til sanntidsdata.
-    \item Parameteridentifikasjon og kalibreringsmetoder.
-    \item Modellreduksjon og modularisering.
-\end{itemize}
+Valgt modell må kobles til dataflyten som ble kartlagt tidligere. Integrasjon handler både om teknisk infrastruktur og
+organisatorisk forankring. Kalibrering sikrer at modellen forblir relevant når systemet endrer seg.
+
+\subsection{Integrasjonsmønstre mot datakilder}
+Modellen kan oppdateres batchvis fra historiske datalagre eller kontinuerlig via hendelsesstrømmer. Et vanlig mønster er å bruke
+en meldingskø eller et datamesh som mellomlag, slik at flere modeller kan abonnere på samme datasett uten å skape tette koblinger
+til kildesystemene. Edge-komponenter håndterer ofte aggregering og filtrering før data sendes til skybaserte analyseplattformer.
+
+\subsection{Sanntidsoppdatering og orkestrering}
+For digitale tvillinger som støtter operativ beslutningstaking må modellene ha mekanismer for å oppdatere tilstandsvariabler i
+sanntid. Dette kan løses med orkestreringsverktøy som støtter versjonering av modeller, utrulling i containere og overvåkning av
+beregningstider. Viktige indikatorer er latens fra sensor til modell, datakvalitet og hvilken grad modellen brukes i kontrollsløyfer.
+
+\subsection{Kalibreringsstrategier}
+Parameteridentifikasjon kan gjøres manuelt ved å justere parameterne basert på eksperterfaring, eller automatisk ved hjelp av
+optimaliseringsalgoritmer som minimerer forskjellen mellom modell og målinger. Vanlige metoder er minste kvadrater,
+Bayesiansk oppdatering eller Kalman-filtre. For systemer som endrer seg gradvis kan modellreduksjon og adaptive filtre holde
+beregningstidene nede uten å tape presisjon.
+
+\subsection{Case: Digital tvilling for fjernvarme i Oslo}
+Fortum Oslo Varme har utviklet en digital tvilling for å optimalisere energiproduksjon og distribusjon i fjernvarmenettet.
+Modellen kombinerer hydrauliske ligninger for rørnettet med maskinlæringsmodeller som predikerer varmebehov basert på vær,
+bygningstyper og historisk forbruk. Integrasjonen skjer via en datastrøm fra sensorer i kundesentraler og produksjonsanlegg til
+et skybasert kontrollrom. Kalibreringen utføres daglig ved å sammenlikne modellprediksjoner med faktiske returtemperaturer, og
+parametere justeres automatisk når avvik overstiger definerte terskler. Caset viser hvordan samarbeid mellom energiselskap,
+teknologipartnere og kommune gir en robust modell som støtter både operativ drift og langsiktige investeringsbeslutninger.
+
+\subsection{Anbefalt arbeidsflyt for team}
+\begin{enumerate}
+    \item Kartlegg hvilke datakilder som skal kobles til og etabler nødvendige API-er eller databrokere.
+    \item Implementer monitorering som fanger avvik mellom modell og observasjoner i sanntid.
+    \item Planlegg regelmessige kalibreringssykluser og dokumentér endringer i parametere og antagelser.
+\end{enumerate}
+
+% Oppdatert med utvidet prosa om modelleringsparadigmer, integrasjon, kalibrering og norsk case.
 
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}
     \item Lag et systemkart for en valgt industriell prosess.
     \item Diskuter fordeler og ulemper ved å kombinere fysikkbaserte og datadrevne modeller.
-    \item Beskriv hvordan du ville gjennomføre kalibrering av en modell som drifter over tid.
+    \item Ta utgangspunkt i fjernvarme-caset og skisser hvordan kalibreringssløyfen kan overvåkes og forbedres over ett år.
 \end{enumerate}

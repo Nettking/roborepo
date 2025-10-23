@@ -4,7 +4,6 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Aktive oppgaver
 
-- `TODO` – Utvikle Kapittel 2 med prosa om modelleringsparadigmer, integrasjon og kalibrering, og legge inn et norsk case som illustrasjon.
 - `TODO` – Skrive Kapittel 4 ferdig med beskrivelser av simuleringsmetoder, analyseprosesser, verktøyskart og et praksiseksempel.
 - `TODO` – Utarbeide Kapittel 5 med tekst som binder sammen maskinlæring, optimalisering og dataassimilering, samt et industrieksempel.
 - `TODO` – Ferdigstille Kapittel 6 med utdypende innhold om valideringsrammeverk, usikkerhetsanalyse, etikk og kommunikasjon av tillit.
@@ -26,6 +25,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 - `FERDIG` – Lage forslag til datasett og verktøyressurser i `support/appendiks-ressurser.tex`.
 - `FERDIG` – Utarbeidet forslag til lærerveiledning i `support/larerveiledning.tex`.
 - `FERDIG` – La til illustrative figurer og beskrivelser av systemkart i Kapittel 2.
+- `FERDIG` – Utvikle Kapittel 2 med prosa om modelleringsparadigmer, integrasjon, kalibrering og norsk case.
 - Opprettet grunnstruktur for boken, inkludert frontmatter, kapittelskisser og arbeidsprosess.
 - `FERDIG` – Utdype historiske eksempler i Kapittel 1 med referanser til norske initiativer.
 - `FERDIG` – Utarbeidet casestudie-mal i Kapittel 8 med fokus på batteriproduksjon i Mo i Rana.
