@@ -12,6 +12,8 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Ferdige oppgaver
 
+- `FERDIG` – Dokumenterte vurderingskriterier og algoritmematrise for AI-drevne tvillinger i Kapittel 5, oppdaterte plan og fagfellelogg for å klargjøre fagfellelesing (oppgaven ble satt til `PÅGÅR` 2025-10-25 for koordinering).
+
 - `FERDIG` – Registrerte kilder for autonome ferger i Kapittel 8 og oppdaterte bibliografien (oppgaven ble satt til `PÅGÅR` 2025-10-24 for koordinering).
 - `FERDIG` – Dokumenterte maritim casebrief for autonome ferger i Trondheimsfjorden og forankret nøkkeldata i Kapittel 8.
 - `FERDIG` – Utvidet `support/appendiks-ressurser.tex` med maritime og offshore-ressurser, la til sektorhenvisning i Kapittel 8 og dokumenterte caseprioritering i nytt støtte-notat.

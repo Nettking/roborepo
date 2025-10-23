@@ -1,4 +1,5 @@
 \chapter{Læring, optimalisering og kunstig intelligens}
+% Oppdatert 2025-10-25: Lagt til vurderingsramme og algoritmematrise for caseoppgaver i Kapittel~5.
 
 \section{Læringsmål}
 \begin{itemize}
@@ -55,6 +56,52 @@ r innsyn i hvorfor anbefalingene endres. En moden digital tvilling bør derfor i
 r som påvirker beslutningene, og varslingsmekanismer når usikkerheten overstiger forhåndsdefinerte terskler. Dette gjør det mul
 ig å bygge tillit, for eksempel ved å dokumentere hvordan et bestemt sett med sensordata utløste en ny optimaliseringsstrategi
 .
+
+\section{Vurderingskriterier for AI-drevne tvillinger}
+For å gjøre caseoppgaven i dette kapittelet etterprøvbar må studentene beskrive hvordan algoritmevalgene deres oppfyller krav t
+il ytelse, robusthet og ansvarlighet. Rammeverk som \citet{ec2020trustworthyai} anbefaler at tekniske måltall kombineres med pro
+sesskrav, slik at evalueringen dekker både modellkvalitet og styringsmekanismer rundt tvillingen.
+
+\subsection{Fokusområder for evaluering}
+\begin{itemize}
+    \item \textbf{Ytelse og generalisering}: Dokumenter trenings- og valideringsoppsettet, inkludert kryssvalidering, usikkerhetsbånd og hvilke datasett som brukes til sluttkontroll. Angi terskler for akseptable verdier (for eksempel RMSE, MAPE eller F1-score) og hvordan de knyttes til beslutningene tvillingen skal støtte.
+    \item \textbf{Robusthet og driftsoppfølging}: Vis hvordan modellen overvåkes for konseptdrift gjennom alarmer i MLOps-løpet og hvilke failsafe-mekanismer som trer inn dersom modellen avviker fra virkelige observasjoner. Beskriv testsett for stress- og feilsituasjoner, inkludert syntetiske scenarioer.
+    \item \textbf{Etikk, etterlevelse og forklarbarhet}: Oppsummer hvilke regulatoriske krav og interne prinsipper som gjelder for caset. Knytt tiltak til styringsstrukturene i Kapittel~6 og vurder hvilke forklaringsmetoder (for eksempel SHAP, feature importance eller kontrafaktiske eksempler) som trengs for å gi innsikt til domeneekspertene.
+\end{itemize}
+
+\subsection{Matrise for algoritmevalg}
+Tabellen under hjelper studentene å argumentere for hvorfor et algoritmevalg er passende og hvilke evidenser som må leveres. De
+n kan fylles ut som del av prosjektlogg eller rapport og fungerer som kobling til vurderingsrubrikken i lærerveiledningen.
+
+\begin{longtable}{p{0.23\textwidth}p{0.30\textwidth}p{0.41\textwidth}}
+\toprule
+\textbf{Algoritmekategori} & \textbf{Aktuelle scenarier i caset} & \textbf{Nøkkelkriterier for vurdering} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Algoritmekategori} & \textbf{Aktuelle scenarier i caset} & \textbf{Nøkkelkriterier for vurdering} \\
+\midrule
+\endhead
+Regresjon og ensemble-modeller (Random Forest, Gradient Boosting) & Tilstandsestimering, energiprognoser og kvalitetsmålinger i produksjon. & Rapporter RMSE/MAE, forklart varians og hvilke sensorer som bidrar mest. Beskriv hvordan modellen håndterer manglende data og klasseskeivhet. \\
+\addlinespace
+Sekvens- og tidsseriemodeller (LSTM, Temporal Fusion Transformer) & Sanntidsprognoser for last, vedlikeholdsbehov eller produksjonskapasitet. & Dokumenter MAPE eller SMAPE, forsinkelse i inferens og strategier for å håndtere konseptdrift (re-trening eller transfer learning). \\
+\addlinespace
+Forsterkende læring og MPC-hybrider & Autonome styringssløyfer, energibalansering og ruteoptimalisering. & Oppgi stabilitet i belønningsfunksjonen, antall brudd på sikkerhetsbegrensninger og hvordan policyer testes før utrulling. \\
+\addlinespace
+Bayesiansk optimalisering og surrogatmodeller & Parameterfinjustering av simuleringsmodeller eller eksperimentdesign. & Vis forbedring i forventet gevinst, antall nødvendige eksperimenter og usikkerhetsmarginer rundt anbefalte parametere. \\
+\addlinespace
+Anomali- og driftsdeteksjon (autoencoder, isolation forest) & Overvåking av sensorer, logistikkflyt eller sikkerhetshendelser. & Mål falsk positiv-rate, deteksjonstid og hvordan alarmer eskaleres til operasjonelle team. Forklar hvilke signalforklaringer som deles med fagpersoner. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Leveransekrav til caseoppgaven}
+\begin{enumerate}
+    \item Oppdater prosjektlogg eller fagfellelogg med valgt algoritme, evaluering og beslutning, slik at arbeidet kan revideres
+    av andre team. Dokumenter prosessen i tråd med audit-prinsippene i \citet{raji2020closing}.
+    \item Legg ved en teknisk vedleggsdel som beskriver datakilder, hyperparametere, versjonskontroll og automatiserte tester i MLOps-løpet. Knyt tiltakene til styringsprinsippene i Kapittel~7.
+    \item Reflekter i sluttrapporten over hvordan modellen skal videreføres etter prosjektet: hvem eier ansvaret, hvilke indikator
+    er skal overvåkes og hvilke beslutningsgrenser krever menneskelig godkjenning.
+\end{enumerate}
 
 \section{Industrieksempel: Optimal drift av et landbasert oppdrettsanlegg}
 Et norsk oppdrettsanlegg med resirkulerende akvakultur (RAS) kombinerer sensorer for vannkvalitet, fôringssystem og fiskevelfe
