@@ -7,9 +7,9 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 
 | Del | Kapittel | Status | Neste steg |
 | --- | -------- | ------ | ---------- |
-| I | Kapittel 1 | Helhetlig tekst med historikk, begreper, økosystem og verdiskaping. | Planlegg fagfellelesing og oppdater kildehenvisninger til de norske eksemplene. |
-| I | Kapittel 2 | Helhetlig utkast som beskriver systemkart, modelleringsparadigmer og kalibrering. | Produser ferdige figurer av systemkartene og kvalitetssikre referanser til standarder og verktøy. |
-| I | Kapittel 3 | Helhetlig utkast med dataflyt, integrasjonsarkitektur og øvinger. | Koordiner fagfelleinnspill (DI-03) og ferdigstille gjenværende illustrasjoner; datapipeline-versjon 2 deles med grafikkteam via `support/figurer/metadata/kap03-datapipeline-v2.alt.md`. |
+| I | Kapittel 1 | Utvidet med detaljert historisk tidslinje, norske politiske koblinger og caser. | Dele fagfellepakke med fokus på tidslinje, tabeller og nye kilder. |
+| I | Kapittel 2 | Oppdatert med politiske rammer, Statnett- og Avinor-caser og ny illustrasjon. | Starte fagfelleløp for policyseksjonen og verifisere regulatoriske referanser. |
+| I | Kapittel 3 | Supplert med sirkulærøkonomi, materialsløyfefigur og to datadrevne caser. | Samordne sirkulærøkonomi-innspill med grafikk- og datastyringsteamet før fagfelleutsending. |
 | II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
 | II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering og dataassimilering. | Samle utfyllende referanser og koordinere fagfellelesing; vurderingskriterier og algoritmematrise er beskrevet i Seksjon~«Vurderingskriterier for AI-drevne tvillinger». |
 | II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet og etikk. | Verifiser standardhenvisninger og vurder om kapitlet trenger støttediagrammer. |
@@ -32,23 +32,23 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 ## Del I: Fundamentet
 
 1. **Kapittel 1 – Introduksjon til digitale tvillinger**
-   - Status: Helhetlig tekst med historiske linjer, nøkkelbegreper, økosystem og verdiskapingscase.
+   - Status: Utvidet med tidslinjefigur, utdypet milepælbeskrivelser og caser fra Johan Sverdrup og Trondheim bylab.
    - Læringsmål: Forstå grunnbegreper, historikk og sentrale drivere.
-   - Forfatteroppgaver (neste steg): Planlegg fagfellelesing, gjennomfør språkvask og oppdater referanseliste med kilder til norske eksempler.
+   - Forfatteroppgaver (neste steg): Distribuere fagfellepakke med nye tabeller og kildehenvisninger, samt verifisere alt-tekst og metadata mot grafikkarkivet.
    - Fagfelleplan: Fagfellepakke sendes 27.05 (Ingrid Lunde), digital gjennomgang 03.06 med Equinor og NTNU, tiltaksmøte i redaksjonen 07.06 for prioritering.
    - Studentaktivitet: Kort refleksjon over egen fagbakgrunn og relevans.
 
 2. **Kapittel 2 – Systemtenkning og modellering**
-   - Status: Helhetlig tekst med systemperspektiv, modelleringsparadigmer, integrasjon og norsk case.
+   - Status: Oppdatert med nasjonale politiske rammer, Statnett- og Avinor-caser og en figur som kobler EU-, nasjonale og sektorvise føringer.
    - Læringsmål: Kjenne til modelleringsteknikker (fysikkbasert, datadrevet, hybride).
-   - Forfatteroppgaver (neste steg): Lage ferdige figurer basert på systemkartene, kvalitetssikre referanser og vurdere behov for supplerende eksempler.
+   - Forfatteroppgaver (neste steg): Forankre policyseksjonen i fagfelleløpet, kvalitetssikre regulatoriske kilder og koordinere med juridisk ressursgruppe.
    - Koordinering med Kapittel 1: Delta i fagfelleløp med utsendelse 27.05, workshop 03.06 og tiltaksoppfølging 07.06 for å samkjøre endringer i begrepsbruk og case.
    - Studentaktivitet: Lag en konseptuell modell for en valgt prosess.
 
 3. **Kapittel 3 – Data, integrasjon og infrastruktur**
-   - Status: Helhetlig tekst med dataflyt, integrasjonsmønstre, figur og øvinger.
+   - Status: Supplert med sirkulærøkonomi-seksjon, materialsløyfefigur og caser fra Hydro CIRCAL og Statsbygg/Loopfront.
    - Læringsmål: Forstå dataflyt, integrasjonsmønstre og plattformvalg.
-   - Forfatteroppgaver (neste steg): Forberede fagfellelesing, dele datapipeline-figur versjon 2 med grafikkteamet og bruke delingsnotatet `support/notater/datastyringsforum-di03.md` til å svare ut DI-03.
+   - Forfatteroppgaver (neste steg): Samordne med sirkulærøkonomi-teamet, oppdatere fagfellenotatet DI-03 med nye indikatorer og sikre at nye figurer er registrert i metadataarkivet.
    - Notat: Alt-tekst og metadata for figuren ligger i `support/figurer/metadata/kap03-datapipeline-v2.alt.md`, og tiltakene er synkronisert med `support/illustrasjonsplan.md`.
    - Studentaktivitet: Kartlegge data- og systemkrav for en case.
 

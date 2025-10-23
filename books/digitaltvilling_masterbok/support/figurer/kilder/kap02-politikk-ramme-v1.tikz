@@ -1,0 +1,16 @@
+\begin{tikzpicture}[box/.style={rectangle, rounded corners, draw=grafitt, thick, fill=skygraa!40, minimum width=4cm, minimum height=1.6cm, align=center}, connector/.style={-Latex, thick, petrol}]
+    \node[box, fill=petrol!20] (eu) {EU-initiativ\nGaia-X, dataspace-rammer\citep{eu2020circulareconomy}};
+    \node[box, below=1.2cm of eu, fill=solgul!40] (national) {Nasjonale strategier\nMeld. St. 22 (2020--2021) og digitaliseringsstrategi\citep{meldst22datasomressurs,regjeringen2022datastrategi}};
+    \node[box, below left=1.4cm and 1.2cm of national, fill=havgronn!35] (energy) {Energisektor\nNVE retningslinjer for nettplanlegging\citep{nve2023nettplan}};
+    \node[box, below=1.4cm of national, fill=havgronn!35] (transport) {Transport\nNTP-oppfølging og Avinor digitaliseringsplan\citep{avinor2022digital}};
+    \node[box, below right=1.4cm and 1.2cm of national, fill=havgronn!35] (built) {Bygg og by\nPlan- og bygningslov, klimabudsjett\citep{trondheim2024bytvilling}};
+    \node[box, below=1.2cm of energy, fill=white] (organisation) {Virksomhetsnivå\nProsesskrav, datakvalitet og fagfelleløp};
+
+    \draw[connector] (eu) -- (national);
+    \draw[connector] (national.south west) to[out=-110, in=90] (energy.north);
+    \draw[connector] (national.south) -- (transport.north);
+    \draw[connector] (national.south east) to[out=-70, in=90] (built.north);
+    \draw[connector] (energy) -- (organisation);
+    \draw[connector] (transport) -- (organisation);
+    \draw[connector] (built) -- (organisation);
+\end{tikzpicture}
