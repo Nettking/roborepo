@@ -6,7 +6,8 @@ Denne mappen organiserer arbeid med grafikk slik at alle figurer kan versjonskon
 
 - `kilder/` skal inneholde redigerbare originalfiler (for eksempel `.tikz`, `.svg`, `.afdesign`, `.drawio`).
 - `eksport/` skal inneholde PDF/PNG/SVG-filer som brukes direkte i LaTeX-dokumentene.
+- `metadata/` lagrer alt-tekst og figurinformasjon i tråd med malen beskrevet i `../illustrasjonsplan.md`.
 
 Navngiv figurene etter mønsteret `kapXX-tema-versjon.ext`, der `versjon` oppdateres når layout eller innhold endres. Husk å legge ved kildefil hver gang en eksport oppdateres.
 
-For alt-tekst og figurtekster, se retningslinjene i `../illustrasjonsplan.md`.
+Lag tilhørende metadatafil `metadata/kapXX-tema-versjon.alt.md` når figuren er klar for fagfellelesing eller publisering. Referer til filen i kapittelteksen med en LaTeX-kommentar.

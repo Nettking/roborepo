@@ -12,6 +12,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Ferdige oppgaver
 
+- `FERDIG` – Etablert mal for alt-tekst og figurmetadata i `support/illustrasjonsplan.md` samt `support/figurer/metadata/` for å sikre universell utforming og sporbarhet i grafikkarbeidet.
 - `FERDIG` – Utvidet ordlisten i `support/ordliste.tex` med begrep om styringsmodeller, datadeling og modenhet slik at kapittel 7 og støttefiler får felles terminologi.
 - `FERDIG` – Utarbeidet vurderingsrubrikker i `support/larerveiledning.tex` og oppdatert `plan.md` med nye oppfølgingstiltak.
 - `FERDIG` – Utarbeidet mal for prosjektkontrakt mellom studentgrupper og eksterne partnere i lærerveiledningen.

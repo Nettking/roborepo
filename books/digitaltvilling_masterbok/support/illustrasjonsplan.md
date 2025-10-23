@@ -48,6 +48,43 @@ Fargene defineres i `main.tex` før bruk (`\definecolor{dypblaa}{HTML}{1B4965}` 
 
 Fagfellekommentarer loggføres i `support/fagfellelogg.csv` slik at grafikkendringer kan spores.
 
+## Alt-tekst og metadata
+Tilgjengelige figurer krever entydig alt-tekst og dokumentert kildeinformasjon. Alt-tekst beskriver funksjonen til illustrasjonen og skal gjøre det mulig for lesere med skjermleser å forstå figuren uten å se den. Metadatafilene brukes også som referanse når figurer revideres eller gjenbrukes i andre formater (EPUB, nettsider).
+
+### Obligatoriske felt
+| Felt | Beskrivelse | Eksempel |
+| --- | --- | --- |
+| `figur` | Filnavn uten endelse og med versjon (`kap04-analyseflyt-v1`). | `kap03-datapipeline-v2` |
+| `tittel` | Kort visningsnavn som kan brukes i figurregister. | «Datapipeline fra felt til styringssystemer» |
+| `alttekst` | 2–3 setninger som beskriver hovedbudskap, aktører og hva pilene/aksene viser. | «Figuren viser fem steg fra feltsensorer via edge og integrasjonslag til analyseplattformer og dashboards, med egen styringsboks for sikkerhet og logging.» |
+| `kilde` | Kapittelreferanse eller ekstern kilde som figuren bygger på. | `Kapittel 3, seksjon «Dataflyt og pipeline-design»` |
+| `forfatter` | Navn på ansvarlig designer/forfatter. | `Ahmed Solheim` |
+| `dato` | ISO-format (`YYYY-MM-DD`) for siste oppdatering. | `2024-05-10` |
+| `relaterte_kapitler` | (Valgfritt) Liste over kapittelnummer der figuren brukes. | `["3", "6"]` |
+
+### Mal for metadatafil
+Alt-tekst og metadata lagres som Markdown med YAML-frontmatter i `support/figurer/metadata/`. Filnavnet følger mønsteret `kapXX-tema-vY.alt.md`. Innholdet skal bruke malen under:
+
+```markdown
+---
+figur: kap04-analyseflyt-v1
+tittel: Analyseflyt for digitale tvillinger
+alttekst: >-
+  Figuren viser en prosess med fem steg fra datainnsamling via modellering til visualisering,
+  og fremhever hvordan beslutningspunkter og feedbacksløyfer er koblet på hvert trinn.
+kilde: Kapittel 4, seksjon «Analysemetoder»
+forfatter: Nora Aas
+dato: 2024-05-10
+relaterte_kapitler:
+  - 4
+  - 5
+notater: >-
+  Oppdatert etter fagfellekommentar DI-03 for å tydeliggjøre governance-callout.
+---
+```
+
+`alttekst`-feltet kan være flere avsnitt ved behov; bruk `>-`-syntaksen for å håndtere linjeskift. `notater` brukes til kort endringslogg (for eksempel referanse til fagfellekommentar eller Jira-sak). Når figuren oppdateres, kopieres metadatafilen og versjonsnummeret økes i både filnavn og `figur`-felt.
+
 ## Oppdatert behov fra kapitlene (mai 2024)
 - Kapittel 1 forsterker historiske milepæler og norske case, og trenger en tidslinje som viser internasjonale og nasjonale spor i samme figur.
 - Kapittel 2 beholder systemkart og kausalsløyfe i Mermaid-kode; de må konverteres til TikZ med ikoner og tydelige dataetiketter.
@@ -87,7 +124,7 @@ Fagfellekommentarer loggføres i `support/fagfellelogg.csv` slik at grafikkendri
 
 ## Leveranse- og kvalitetskriterier
 - Hver figur skal ha versjonslogg i commit-melding og i kapittelfilens kommentarblokk.
-- Alt-tekst dokumenteres i kapittelkommentar eller egen `.alt`-fil i `figurer/kilder`.
+- Alt-tekst og metadata lagres i `support/figurer/metadata/kapXX-tema-vY.alt.md` og lenkes fra kapittelfilen med kommentar (`% Alt-tekst: kapXX-tema-vY.alt.md`).
 - Ved bruk av data, legg ved kildehenvisning i figurtekst og i `referanser.bib`.
 - Fagansvarlig signerer av for faglig korrekthet; grafisk ansvarlig for layout; prosjektleder for helhetlig stil.
 
