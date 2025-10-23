@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -89,7 +90,66 @@ def compile_book(book: Path, project: str, image: str) -> int:
     ]
 
     print(f"\nCompiling '{book.name}' using '{tex_filename}'...\n")
-    return subprocess.run(command, check=False).returncode
+    result = subprocess.run(command, check=False)
+
+    if result.returncode == 0:
+        rename_compiled_pdf(book, project)
+
+    return result.returncode
+
+
+def rename_compiled_pdf(book: Path, project: str) -> None:
+    """Rename the generated PDF to match the book's title when available."""
+
+    pdf_path = book / f"{project}.pdf"
+    if not pdf_path.exists():
+        return
+
+    title = extract_book_title(book / f"{project}.tex")
+    if title:
+        output_name = sanitise_title_for_filename(title)
+    else:
+        output_name = book.name
+
+    if not output_name:
+        output_name = project
+
+    target_path = pdf_path.with_name(f"{output_name}.pdf")
+    if target_path == pdf_path:
+        return
+
+    try:
+        if target_path.exists():
+            target_path.unlink()
+        pdf_path.rename(target_path)
+    except OSError as exc:
+        print(f"Warning: could not rename PDF to '{target_path.name}': {exc}")
+    else:
+        print(f"Output PDF renamed to '{target_path.name}'.")
+
+
+def extract_book_title(tex_file: Path) -> str | None:
+    """Return the title declared in the LaTeX source if available."""
+
+    try:
+        contents = tex_file.read_text(encoding="utf-8")
+    except OSError:
+        return None
+
+    match = re.search(r"\\title\{([^}]*)\}", contents)
+    if not match:
+        return None
+
+    title = match.group(1).strip()
+    return title or None
+
+
+def sanitise_title_for_filename(title: str) -> str:
+    """Create a filesystem-friendly filename stem from the provided title."""
+
+    cleaned = re.sub(r"[\\/:*?\"<>|]", "", title)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+    return cleaned or "book"
 
 
 def main() -> int:
