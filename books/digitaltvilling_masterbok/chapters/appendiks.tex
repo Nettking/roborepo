@@ -1,0 +1,144 @@
+\chapter{Arbeidsark og maler for prosjektarbeid}
+\label{appendix:arbeidsark}
+
+Dette appendikset samler arbeidsark som støtter prosjektgjennomføringen i undervisningsopplegget.
+Målgruppen er studentteam, faglærere og samarbeidspartnere som trenger strukturerte maler for
+planlegging, datainnsamling og evaluering av digitale tvilling-prosjekter. Arbeidsarkene er
+organisert tematisk, og hver tabell kan skrives ut eller fylles ut digitalt.
+
+\section{Forprosjektcanvas}
+Canvasset fungerer som et førstegangsrammeverk når studentgrupper skal definere caset sitt.
+Fyll ut feltene i prioritert rekkefølge for å sikre felles forståelse mellom studenter, mentorer og
+partnere.
+
+\begin{longtable}{p{0.24\textwidth}p{0.35\textwidth}p{0.31\textwidth}}
+\toprule
+\textbf{Del} & \textbf{Hva beskrives?} & \textbf{Arbeidsnotater} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Del} & \textbf{Hva beskrives?} & \textbf{Arbeidsnotater} \\
+\midrule
+\endhead
+Problemforståelse & Hvilket forretnings- eller samfunnsproblem skal løses, og hvilke indikatorer viser at problemet er viktig? & \rule{0.95\linewidth}{0.4pt}\\[0.8em]
+Verdiforslag & Hvilken verdi forventes skapt for organisasjon, sluttbruker og samarbeidspartnere? & \rule{0.95\linewidth}{0.4pt}\\[0.8em]
+Datastrømskartlegging & Hvilke datakilder finnes (interne/eksterne), hvordan får teamet tilgang, og hvilke kvalitetstiltak må på plass? & \rule{0.95\linewidth}{0.4pt}\\[0.8em]
+Modellomfang & Hvilke komponenter modelleres (fysikkbasert, datadrevet, hybride), og hvilke antakelser må dokumenteres? & \rule{0.95\linewidth}{0.4pt}\\[0.8em]
+Interessenter & Hvem er involvert, hvilken gevinst forventer de, og hvilke beslutninger skal støttes? & \rule{0.95\linewidth}{0.4pt}\\[0.8em]
+Rammebetingelser & Hvilke regulatoriske, etiske eller sikkerhetsmessige krav gjelder? & \rule{0.95\linewidth}{0.4pt}\\[0.8em]
+Suksesskriterier & Hvilke målbare indikatorer (KPI-er, gevinsthypoteser) skal brukes for å evaluere tvillingen? & \rule{0.95\linewidth}{0.4pt}\\[0.8em]
+Ressursbehov & Hvilke roller, verktøy, budsjetter og tidsvinduer kreves for å realisere forprosjektet? & \rule{0.95\linewidth}{0.4pt}\\[0.8em]
+\bottomrule
+\end{longtable}
+
+\section{Arbeidsark for datainnsamling}
+Bruk tabellen for å holde oversikt over datakilder og forvaltningsrutiner. Fyll ut én rad per
+sensor, datasett eller API.
+
+\begin{longtable}{p{0.19\textwidth}p{0.25\textwidth}p{0.19\textwidth}p{0.27\textwidth}}
+\toprule
+\textbf{Datakilde} & \textbf{Tilgangs- og lisensvilkår} & \textbf{Oppdateringsfrekvens} & \textbf{Tiltak for kvalitet og etterlevelse} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Datakilde} & \textbf{Tilgangs- og lisensvilkår} & \textbf{Oppdateringsfrekvens} & \textbf{Tiltak for kvalitet og etterlevelse} \\
+\midrule
+\endhead
+\rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+\rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+\rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+\rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+\bottomrule
+\end{longtable}
+
+\section{Modell- og simuleringsplan}
+Arbeidsarket gir en rask sjekkliste for å planlegge modelleringen. Bruk kolonnen for sjekkpunkter
+til å beskrive fremgang og eventuelle avklaringer.
+
+\begin{longtable}{p{0.23\textwidth}p{0.28\textwidth}p{0.39\textwidth}}
+\toprule
+\textbf{Fase} & \textbf{Leveranse} & \textbf{Sjekkpunkter og avklaringer} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Fase} & \textbf{Leveranse} & \textbf{Sjekkpunkter og avklaringer} \\
+\midrule
+\endhead
+Behovs- og prosessanalyse & Funksjonell beskrivelse av systemet og tvillingens rolle. & \begin{itemize}[leftmargin=*]
+    \item Har teamet identifisert grensesnitt mot eksisterende systemer?
+    \item Er krav til responstid og nøyaktighet avklart med interessenter?
+\end{itemize}\\
+Dataforberedelse & Datakatalog, datakvalitetsmålinger og transformasjonslogg. & \begin{itemize}[leftmargin=*]
+    \item Er datastruktur, enheter og semantikk dokumentert?
+    \item Er data lagret slik at versjonering og reproduksjon ivaretas?
+\end{itemize}\\
+Modellutvikling & Dokumenterte modeller (fysikk, statistikk, hybrid) med parameteroversikt. & \begin{itemize}[leftmargin=*]
+    \item Er valgte modeller begrunnet mot gevinsthypotesen?
+    \item Finnes det plan for kalibrering, tuning og sensitivitetstesting?
+\end{itemize}\\
+Simulering og eksperimenter & Eksperimentdesign, scenarier og måleplan. & \begin{itemize}[leftmargin=*]
+    \item Hvilke scenarioer skal kjøres, og hvilke beslutninger støttes?
+    \item Hvordan registreres avvik mellom simulering og virkelighet?
+\end{itemize}\\
+Implementering og drift & Plan for deployment, overvåking og modelloppdatering. & \begin{itemize}[leftmargin=*]
+    \item Er DevOps/MLOps-rutiner og rollback-plan etablert?
+    \item Er ansvar for drift, risikostyring og gevinstoppfølging avklart?
+\end{itemize}\\
+\bottomrule
+\end{longtable}
+
+\section{Risiko- og gevinstjournal}
+Journalen kombinerer risikoregister og gevinstoppfølging slik at teamet kan synliggjøre status for
+kritiske forutsetninger. Fyll ut tabellen månedlig eller etter større milepæler.
+
+\begin{longtable}{p{0.16\textwidth}p{0.20\textwidth}p{0.22\textwidth}p{0.18\textwidth}p{0.18\textwidth}}
+\toprule
+\textbf{Kategori} & \textbf{Beskrivelse} & \textbf{Konsekvens og sannsynlighet} & \textbf{Tiltak/ansvar} & \textbf{Status og neste steg} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Kategori} & \textbf{Beskrivelse} & \textbf{Konsekvens og sannsynlighet} & \textbf{Tiltak/ansvar} & \textbf{Status og neste steg} \\
+\midrule
+\endhead
+Risiko & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+Risiko & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+Gevinst & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+Gevinst & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+\bottomrule
+\end{longtable}
+
+\section{Refleksjonslogg for studentteam}
+Refleksjonsloggen hjelper teamet å dokumentere læringsutbytte, beslutninger og tiltak. Hver rad
+kan brukes ukentlig.
+
+\begin{longtable}{p{0.22\textwidth}p{0.27\textwidth}p{0.24\textwidth}p{0.19\textwidth}}
+\toprule
+\textbf{Dato/uke} & \textbf{Hva lærte vi?} & \textbf{Åpne spørsmål eller avklaringer} & \textbf{Tiltak til neste møte} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Dato/uke} & \textbf{Hva lærte vi?} & \textbf{Åpne spørsmål eller avklaringer} & \textbf{Tiltak til neste møte} \\
+\midrule
+\endhead
+\rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+\rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+\rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+\rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt} & \rule{0.9\linewidth}{0.4pt}\\[0.8em]
+\bottomrule
+\end{longtable}
+
+\section{Sjekkliste for fagfelleklarering}
+Bruk sjekklisten før innlevering til fagfelleteamet. Hvert punkt hukes av og begrunnes i
+etterprøvbarhetsloggen.
+
+\begin{enumerate}[label=\arabic*.]
+    \item Er forprosjektcanvas og datainnsamlingsarket oppdatert med siste versjon av datastrømmer og tilgangsavklaringer?
+    \item Er modell- og simuleringsplanen kvalitetssikret av fagmentor, med tydelig kobling til læringsmålene i Kapittel~4 og \nobreakspace{}5?
+    \item Er risiko- og gevinstjournalen oppdatert med tiltak, ansvarlig person og forventet tidspunkt for neste revisjon?
+    \item Er refleksjonsloggen delt med faglærer og eksterne partnere, og er åpne spørsmål loggført i prosjektets styringsverktøy?
+    \item Er dokumentasjonen versjonert i prosjektets repo, inkludert referanse til modellkode, datakilder og beslutningslogg?
+\end{enumerate}
+
+Arbeidsarkene er ment å brukes fleksibelt: tilpass rekkefølge, kolonneoverskrifter og detaljer
+etter sektor og modenhetsnivå. Bevar likevel kjerneelementene slik at fagteam og fagfeller kan
+sammenligne leveranser på tvers av grupper.

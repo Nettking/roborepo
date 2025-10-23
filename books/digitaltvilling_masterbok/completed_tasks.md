@@ -5,6 +5,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 ## Historikk
 
 - `FERDIG` – Oppdatert kapittel 1–3 med historiske milepæler, norske politiske rammer, sirkulærøkonomi og nye caser; flyttet oppgave DT-10 til ferdig kolonne i `task_queue.md`.
+- `FERDIG` – Opprettet `chapters/appendiks.tex` med arbeidsark, maler og fagfelleklarering, reviderte `support/larerveiledning.tex` med nye læringsaktiviteter og vurderingskrav, oppdaterte ordliste, plan og fagfellelogg for å forankre leveransen.
 - `FERDIG` – Opprettet pytest som bygger `main.tex` i en midlertidig katalog og fanger opp LaTeX-feil automatisk; oppdaterte oppgave DT-OPS-03 i `task_queue.md`.
 - `FERDIG` – Kartla figurbehov for Kapittel 4, opprettet metadatafiler for planlagte illustrasjoner og etablerte fagfellepakke med sjekkpunkter og spørsmål.
 - `FERDIG` – Utvidet `instruksjoner.md` og `plan.md` med nye tematiske prioriteringer og forslag til innhold for dt-boken. (Agent)
