@@ -8,29 +8,58 @@
 \end{itemize}
 
 \section{Typer simulering}
-\begin{itemize}
-    \item Deterministisk kontra stokastisk simulering.
-    \item Diskret hendelsessimulering, agentbaserte modeller, kontinuerlige modeller.
-    \item Samspill mellom simuleringsverktøy og sanntidsdata.
-\end{itemize}
+Digitale tvillinger kombinerer flere simuleringsprinsipper for å speile virkeligheten med tilstrekkelig presisjon og responstid. I praksis trengs en bevisst vurdering av hvordan fysiske prosesser, menneskelig samhandling og tilfeldige hendelser skal representeres i modellen.
+
+\subsection{Deterministiske og stokastiske modeller}
+Deterministiske modeller forutsetter at like input gir like output. De brukes når fysikkens lover er godt forstått og måleseriene er stabile, for eksempel til varmeoverføring i en byggmodell. Stokastiske modeller inkluderer usikkerhet eller støy i inputvariablene, noe som er nødvendig når sensorverdier varierer eller prosessen påvirkes av menneskelig atferd. En moderne digital tvilling kombinerer ofte begge tilnærmingene ved å bruke deterministiske kjerneberegninger sammen med stokastiske parameterfordelinger for å kvantifisere risiko og toleranser.
+
+\subsection{Diskret hendelsessimulering}
+Diskret hendelsessimulering (DES) beskriver systemer som endres ved identifiserbare hendelser, slik som køsystemer, vedlikeholdsplaner eller logistikkflyt. I en digital tvilling for produksjonslinjer kan DES beregne gjennomløpstid, identifisere flaskehalser og evaluere effekten av alternative operasjonssekvenser.
+
+\subsection{Agentbaserte modeller}
+Agentbaserte modeller (ABM) representerer individuelle aktører med egne regler og mål. De egner seg for digitale tvillinger der interaksjoner mellom mange aktører påvirker systemets dynamikk, for eksempel i energinett med mange distribuert produserende enheter eller i bylogistikk med autonome kjøretøy. ABM gir innsikt i kollektive mønstre, emergent atferd og hvordan incentiver påvirker helheten.
+
+\subsection{Kontinuerlige og hybride modeller}
+Kontinuerlige modeller benytter differensialligninger eller tilnærminger som Modelica for å beskrive prosesser over tid. Når kontinuerlige prosesser må kobles til diskrete hendelser eller beslutninger, brukes hybride modeller. Et eksempel er en digital tvilling av et vannkraftverk som kombinerer kontinuerlige strømningsegenskaper med diskrete beslutninger om når turbiner startes og stoppes.
+
+\subsection{Kopling mot sanntidsdata}
+Uavhengig av modelltype må simuleringsløsningen kunne kobles mot sanntidsdata. Det innebærer funksjoner for dataassimilering, filtrering av støy og oppdatering av parametre i forkant av hver simuleringsperiode. En robust digital tvilling har mekanismer som gjør det mulig å planlegge scenarioer offline og samtidig oppdatere simuleringene når nye sensordata ankommer.
 
 \section{Analysemetoder}
-\begin{itemize}
-    \item Sensitivitetsanalyse og scenarioanalyse.
-    \item Optimalisering, parameterstudier og eksperimentdesign.
-    \item Visualisering og beslutningsstøtte.
-\end{itemize}
+Validerte simuleringsmodeller gir grunnlag for analyse som støtter både taktiske og strategiske beslutninger. Analysearbeidet bør være strukturert slik at resultater kan spores tilbake til antakelser og datagrunnlag.
+
+\subsection{Sensitivitets- og scenarioanalyse}
+Sensitivitetsanalyse identifiserer hvilke parametre som har størst innvirkning på målvariablene, og gjør det mulig å prioritere datainnsamling eller kalibrering. Scenarioanalyse handler om å variere inngangsverdier systematisk for å belyse framtidige muligheter, som ulike etterspørselsnivåer eller driftsstrategier. I en digital tvilling kan scenarioresultater lagres som konfigurasjoner som senere kan visualiseres og sammenlignes i dashbord.
+
+\subsection{Optimalisering og eksperimentdesign}
+Optimaliseringsmetoder brukes for å finne beste løsning gitt begrensninger, enten gjennom matematisk programmering, heuristikker eller evolusjonsalgoritmer. Når simuleringen er tidskrevende, kombineres den gjerne med metoder for design av eksperiment (DoE) eller metamodelering for å redusere antall kjøringer. Dette muliggjør presise anbefalinger om for eksempel vedlikeholdsintervaller, produksjonsoppsett eller energistyring.
+
+\subsection{Visualisering og beslutningsstøtte}
+Resultatene må presenteres på en måte som skaper tillit og handling. Kombinasjoner av 3D-visualisering, tidsseriegrafer og indikatorer for kvalitet eller risiko hjelper beslutningstakere med å forstå konsekvensene av ulike tiltak. Moderne verktøy gjør det mulig å overføre simuleringsresultater til VR/AR-miljøer eller integrere dem direkte i operative dashbord.
 
 \section{Verktøy og arbeidsflyt}
+Et velfungerende verktøyslandskap består av modellering, simulering, datahåndtering og automasjon.
+
 \begin{itemize}
-    \item Eksempler på kommersielle og åpne verktøy (AnyLogic, Simulink, Modelica, OpenFoam).
-    \item Automatisering av simuleringer med CI/CD-prinsipper.
-    \item Integrasjon med data science-plattformer.
+    \item \textbf{Modellerings- og simuleringsverktøy:} Kommersielle alternativer som AnyLogic, Simulink og Ansys Twin Builder tilbyr grafiske modellbyggere og co-simuleringsmuligheter. Åpne verktøy som OpenModelica, OpenFOAM og JuliaSim gir fleksibilitet og kan integreres med egendefinerte bibliotek.
+    \item \textbf{Data- og integrasjonsplattform:} ETL-verktøy, meldingskøer (for eksempel Kafka) og skybaserte datasjøer sørger for kontinuerlig oppdatering av tvillingen med historikk og sanntidsstrømmer.
+    \item \textbf{Automasjon og kvalitet:} Infrastruktur som Git, container-baserte byggeoppsett, CI/CD-rør og automatiserte tester sikrer reproduserbare simuleringer. Orkestrering med Jupyter Notebooks eller workflow-motorer som Airflow kan styre eksperimenter og rapportering.
+    \item \textbf{Ytelsesmiljø:} For store beregninger brukes HPC-klynger eller skyplattformer med GPU/FPGA-akselerasjon. Skaleringsstrategien bør beskrives eksplisitt slik at kostnader kan estimeres og kapasitet kan reserveres.
 \end{itemize}
+
+Arbeidsflyten starter med versjonskontrollert modellkode, etterfulgt av automatisert validering av parametrisering, simulering og analyse. Resultater pakkes i rapporter eller API-er og lagres i et beslutningsarkiv slik at tidligere scenarioer kan gjenbrukes ved nye vurderinger.
+
+\section{Praksiseksempel: Digital tvilling for fjernvarmenett}
+Et norsk energiselskap ønsker å styre et fjernvarmenett mer effektivt og redusere toppbelastninger vinterstid. Teamet utvikler først en kontinuerlig modell basert på rørnettets geometri, termiske egenskaper og pumpelogikk. Ved å kombinere deterministiske varmeoverføringsligninger med stokastiske profiler for kundeuttak fanges variasjonene i forbruksmønsteret.
+
+Deretter bygges en diskret hendelsessimulering av driftsoperasjoner som vedlikeholdsavvik, nødstopper og lastskifte mellom kjeler. Agentbaserte komponenter modellerer kundesegmenter, slik at kampanjer for energisparing kan evalueres. Data fra IoT-målere strømmer kontinuerlig inn via en skyplattform, og parametre kalibreres hver time.
+
+Analysefasen kombinerer sensitivitet mot utetemperatur og energipriser med optimalisering av pumpesetpunkter. Resultatene visualiseres i et dashboard der driftsoperatører kan teste scenarioer før de aktiveres. Etter ett års bruk dokumenterer selskapet 12\% reduksjon i energitopper og et bedre beslutningsgrunnlag for investeringer i nye varmesentraler.
 
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}
     \item Beskriv når du ville velge agentbasert simulering fremfor kontinuerlige modeller.
     \item Lag en enkel plan for å automatisere en simuleringsstudie med Git og CI/CD.
     \item Diskuter hvordan visualisering kan forbedre beslutningsprosesser.
+    \item Bruk praksiseksempelet som inspirasjon og skisser hvordan en digital tvilling kan forbedre en annen norsk energitjeneste.
 \end{enumerate}
