@@ -92,9 +92,41 @@ En anbefalt 6-ukersmodul:
 | 5 | Kapittel 6 og 7 | Utarbeide valideringsplan og governance-oversikt |
 | 6 | Kapittel 8 og 9 | Presentere norsk case, skrive forskningsidé |
 
+## Plan for fagfellelesing
+
+Fagfelleløpet organiseres over fire uker, med felles vurderingsmal og digital tilbakemeldingsportal (OwnCloud-skjema). Interne
+ansvarlige koordinerer kapitlene sine, mens eksterne lesere er forespurt fra norske industri- og akademimiljøer som dekker tem
+aene i boken.
+
+| Uke | Kapitler | Intern ansvarlig | Industriell fagfelle | Akademisk fagfelle | Leveranse |
+| --- | -------- | ---------------- | -------------------- | ------------------ | --------- |
+| 1 | Kapittel 1–2 | Ingrid Lunde (redaksjon) | Equinor – leder for digitale tvillinger | NTNU – førsteamanuensis i industriell digitalisering | Notat med begrepsavklaringer og caseutvidelser |
+| 2 | Kapittel 3–4 | Ahmed Solheim (teknisk redaktør) | Kongsberg Digital – produkteier for Kognitwin | SINTEF Digital – seniorforsker innen simulering | Sammendrag av datakvalitetskrav og illustrasjoner |
+| 3 | Kapittel 5–6 | Nora Aas (AI-ansvarlig) | Cognite – principal data scientist | Universitetet i Stavanger – professor i modellbasert overvåking | Matrise for algoritmevalg, usikkerhet og etikk |
+| 4 | Kapittel 7–9 | Leif Ødegaard (programledelse) | Statnett – leder for digitaliseringsprogram | Universitetet i Agder – faggruppeleder i prosjektstyring | Tiltakslogg for governance, sektorcase og forskning |
+| 4 | Appendiks, ordliste, lærerveiledning | Astrid Hauge (støtteredaktør) | Aker Solutions – rådgiver for kompetanseprogram | OsloMet – universitolektor i profesjonsdidaktikk | Oppdatert ressursliste og terminologi |
+
+### Arbeidsprosess og milepæler
+
+1. **Felles oppstartsmøte (fredag uke 0).** Del ut vurderingsmal, avklar format (skriftlig kommentert PDF og kort digital opps
+ummering) og sørg for at alle har tilgang til samarbeidsmappen.
+2. **Ukesvise innsjekk (onsdag).** Interne ansvarlige rapporterer status i delte notater; eventuelle flaskehalser løftes til pro
+sjektleder.
+3. **Oppsummeringswebinar (fredag uke 4).** Presentasjon av hovedfunn fra hver fagfellegruppe, prioritering av endringsforslag 
+og beslutning om hvilke innspill som tas inn før produksjonsløpet.
+4. **Loggføring.** Alle kommentarer arkiveres i `support/fagfellelogg.csv` (ny fil) med status (åpen, under vurdering, løst) og a
+nsvarlig person.
+
+### Forventninger til fagfeller
+
+- Gi konkrete henvisninger til avsnitt, figurer og referanser – bruk kommentarmalen med felt for side, linje og anbefalt tiltak.
+- Vurdér balansen mellom teori og praksis, og foreslå supplerende case eller norske referanser der det styrker relevansen.
+- Meld fra innen tirsdag samme uke dersom fristen ikke kan holdes, slik at varalister (inkluderer DNV og Høgskulen på Vestlande
+t) kan aktiveres.
+
 ## Videre arbeid
 
-1. Koordinere fagfellelesing for alle kapitler, inkludert plan for eksterne lesere fra industri og akademia.
+1. Følge opp fagfelleplanen ovenfor, inkludert å oppdatere fagfellelogg og sende ut påminnelser to dager før levering.
 2. Utarbeide illustrasjons- og grafikkplan: konverter kladdene til ferdige figurer og sikre konsistent stil i hele boken.
 3. Konsolidere bibliografien i `support/referanser.bib`, sikre DOI/URL og harmonisere siteringsstil på tvers av kapitlene.
 4. Oppdatere appendiks, ordliste og lærerveiledning etter fagfelleinnspill og nye case.
