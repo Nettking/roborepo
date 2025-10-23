@@ -4,7 +4,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 
 ## Aktive oppgaver
 
-- `TODO` – Lage illustrasjon av datapipeline og integrasjonslag til Kapittel 3 basert på den nye teksten.
+*(ingen oppgaver)*
 
 ## Pågår
 
@@ -13,6 +13,7 @@ Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefø
 ## Ferdige oppgaver
 
 - `FERDIG` – Utdypet Kapittel 3 med tekst om datapipeline, integrasjon og sikkerhetsstyring.
+- `FERDIG` – Lage illustrasjon av datapipeline og integrasjonslag til Kapittel 3 basert på den nye teksten.
 - `FERDIG` – Lage forslag til datasett og verktøyressurser i `support/appendiks-ressurser.tex`.
 - `FERDIG` – Utarbeidet forslag til lærerveiledning i `support/larerveiledning.tex`.
 - `FERDIG` – La til illustrative figurer og beskrivelser av systemkart i Kapittel 2.
