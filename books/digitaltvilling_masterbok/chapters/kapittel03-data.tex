@@ -1,6 +1,7 @@
 \chapter{Data, integrasjon og infrastruktur}
 
 % Notat (2024-05-08): Utdypet kapittelet med sammenhengende tekst om dataflyt, integrasjon og sikkerhetstiltak i norske kontekster.
+% Notat (2024-05-09): Lagt til illustrasjon av datapipeline og integrasjonslag for \aa synliggj\o re samspillet mellom arkitekturelementene.
 \section{L\ae ringsm\aa l}
 \begin{itemize}
     \item Beskrive arkitekturen for datafangst, lagring og distribusjon i digitale tvillinger.
@@ -10,6 +11,32 @@
 
 \section{Dataflyt og pipeline-design}
 En digital tvilling er avhengig av en gjennomtenkt datapipeline som kan fange, bearbeide og tilgjengeliggj\o re informasjon med riktig kvalitet og tidsoppl\o sning. Det starter i feltet, hvor sensorer, styringssystemer eller manuelle registreringer skaper r\aa data. Dataene m\aa filtreres og normaliseres tidlig for \aa unng\aa store forsinkelser senere i kjeden. Norske industrimilj\o er som prosessindustrien p\aa Her\o ya har gode erfaringer med \aa kombinere edge-noder som gj\o r grunnleggende forh\aa ndsprosessering med sentrale skyplattformer som tilbyr datalagring, modelltrening og visualisering.
+
+Figur~\ref{fig:kap3-datapipeline} oppsummerer hovedstr\o mmen fra feltniv\aa til de applikasjonene som konsumerer tvillingtjenestene. Integrasjonslaget markerer overgangen der normaliserte hendelser og masterdata eksponeres gjennom standardiserte grensesnitt og meldingsstrukturer, slik at etterf\o lgende plattformer kan bygges modul\ae rt.
+
+\begin{figure}[ht]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tikzpicture}[node distance=2.3cm, >=LaTeX]
+        \tikzset{stage/.style={draw, rounded corners=4pt, minimum height=1.9cm, text width=3.2cm, align=center, font=\small, fill=#1!18}, stage/.default=blue}
+        \node (field) [stage=blue] {Feltniv\aa \\ \footnotesize Sensorer, SCADA, operat\o rinput};
+        \node (edge) [stage=teal, right=2.3cm of field] {Edge- og gatewaylag \\ \footnotesize Filtrering, buffering, protokollkonvertering};
+        \node (integration) [stage=green, right=2.3cm of edge] {Integrasjonslag \\ \footnotesize Meldingsk\o er, API-orkestrering, semantisk modellering};
+        \node (platform) [stage=orange, right=2.3cm of integration] {Data- og analyseplattformer \\ \footnotesize Datasj\o, tidsserielager, modelltrening};
+        \node (apps) [stage=purple, right=2.3cm of platform] {Forbrukere \\ \footnotesize Digital tvilling, dashboards, styringssystemer};
+        \draw[->, thick] (field) -- (edge);
+        \draw[->, thick] (edge) -- node[above, font=\scriptsize]{Normalisering, kvalitetssikring} (integration);
+        \draw[->, thick] (integration) -- node[above, font=\scriptsize]{Distribusjon, standarder} (platform);
+        \draw[->, thick] (platform) -- node[above, font=\scriptsize]{Innsikt, automatisering} (apps);
+        \node (governance) [draw, dashed, rounded corners=4pt, text width=8cm, align=center, font=\scriptsize, fill=gray!12, below=1.4cm of integration] {Tverrg\aa ende styring: tilgangskontroll, hendelseslogging, datakatalog og livssyklus for modeller};
+        \draw[->, dashed] (governance.north west) -- (edge.south);
+        \draw[->, dashed] (governance.north) -- (integration.south);
+        \draw[->, dashed] (governance.north east) -- (platform.south);
+    \end{tikzpicture}%
+    }
+    \caption{Skisse av datapipeline fra felt til applikasjoner, med integrasjonslaget som kobler sanntidsstr\o mmer og dataplattformer.}
+    \label{fig:kap3-datapipeline}
+\end{figure}
 
 \subsection{Fra sensor til innsikt}
 F\o rste steg er datainnsamling via feltbuss, industrielle IoT-gatewayer eller API-er fra eksterne systemer. For digital tvilling-bruk er det avgj\o rende \aa definere sampling-rate, datastruktur og kontekst slik at hver m\a ling kan kobles til riktig fysiske komponent. Inntaksleddet m\aa h\aa ndtere buffring n\aar tilkoblingen faller ut, og bidra med enhetlige tidsstempler for \aa muliggj\o re felles analyse av hendelser. Videre b\o r pipeline-design inkludere datakvalitetsregler som fanger opp avvik, for eksempel ved \aa merke data fra kalibreringsperioder eller vedlikehold.
