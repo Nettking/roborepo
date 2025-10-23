@@ -31,6 +31,38 @@ Pilotprosjektet rundt passasjerfergen \emph{Milliampere 2} demonstrerer hvordan 
 
 Integrer gjerne en illustrasjon fra `support/illustrasjonsplan.md` som viser samspillet mellom fartøyet, fjernoperasjonssenteret og byens øvrige transportsystem. Dette gjør det lettere for lesere å forstå hvordan datastrømmene og beslutningssløyfene knyttes sammen i en urban, maritim kontekst.
 
+\section{Prioriterte case for kommende fagfelleløp}
+For å støtte fagfelleløpet prioriteres tre nye case som dekker norsk energiomlegging, grønn industri og landbruksmodernisering. Notatene i `support/notater/` utdyper datakilder, KPI-er og styringsmodeller slik at arbeidsgrupper kan forberede intervjuer og dokumentasjon.
+
+\subsection*{Havvind – Sørlige Nordsjø II og Hywind Tampen}
+Utbyggingen av flytende havvind gir et rikt læringsgrunnlag for digital tvilling. Statlige rammer for areal og nettilknytning kombineres med Equinors operasjonserfaring fra Hywind Tampen, der turbiner og kraftplattformer deler data for å balansere produksjon mot sokkelinstallasjoner.\citep{nve2023havvindfakta,equinor2023hywindtampen} Tvillingen må koordinere værprognoser, vedlikeholdslogistikk og energioppgjør i en delt dataspace mellom operatør, Statnett og tjenesteleverandører.
+
+\subsection*{Landbruk – Presisjonsjordbruk i Trøndelag}
+Presisjonsjordbruket gir studentene innsikt i kombinasjonen av edge-prosessering og sentral analyse. Jord- og maskinsensorer prosesseres lokalt for å støtte autonome arbeidsoperasjoner, mens agronomiske beslutninger dokumenteres i felles datasett for rådgivere og forvaltning.\citep{nibio2023dataflyt,landbruksdir2023digitalisering,etsi2023mec} Caset viser hvordan data kan deles mellom gårdbruker, forskningsmiljø og kooperativ med klare policyer for gjenbruk av feltdata.
+
+\subsection*{Batteriverdikjede – Giga Arctic i Mo i Rana}
+Norsk batteriproduksjon kobler prosessindustri, energi og logistikk. FREYR Battery etablerer digitale tvillinger som følger råvarer, produksjonslinjer og energiforbruk for å oppfylle kravene i EUs batteriforordning og Enovas støtteordninger.\citep{freyr2024giga,enova2023batteri,gaiax2023architecture} Dataspace-tilnærmingen gjør at leverandørkjeder kan dele karbondata og kvalitetsmålinger under strenge kontraktsregimer.
+
+\begin{table}[h]
+    \centering
+    \caption{Oversikt over prioriterte case og nøkkelindikatorer}
+    \label{tab:prioriterte-case}
+    \begin{tabular}{p{3.2cm}p{2.6cm}p{4.6cm}p{3.6cm}}
+        \toprule
+        Case & Sektor & Hovedindikatorer & Dataspace-fokus \\
+        \midrule
+        Sørlige Nordsjø II / Hywind Tampen & Havvind & Kapasitetsfaktor, planlagt vs. faktisk vedlikehold, HSE-observasjoner & Deling av produksjons- og værdata mellom operatør, TSO og offshore-partnere \\
+        Presisjonsjordbruk i Trøndelag & Landbruk & Avlingsprognose, nitrogenutnyttelse, klimafotavtrykk per enhet & Samtykkebasert deling av feltdata og agronomiske anbefalinger mellom bønder og rådgivere \\
+        Giga Arctic, Mo i Rana & Batteri & First-pass yield, energiforbruk per GWh, CO$_2$-intensitet per celle & Kontraktsstyrt tilgang til prosess-, logistikk- og bærekraftsdata i industrielt dataspace \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Casebeskrivelsene bygger videre på casemalen i dette kapittelet og gevinstplanen i Kapittel~7. Sektorgruppene bør fylle ut notatmalene med intervjuer, datatilgang og planlagte figurer før fagfellemøtene.
+
+\subsection*{Dataspace-arkitektur for sektorkase}
+Casene over illustrerer hvordan dataspace-prinsipper kan gjøre deling tryggere og mer fleksibel. Start med å etablere dataprodukter (for eksempel værvinduer, gjødselplaner eller energirapporter) med tydelig lisens. Bruk standardiserte policy-rammeverk fra IDSA og Gaia-X for å modellere tilgang og forretningsregler, og koble dem til KPI-oppfølgingen.\citep{idsa2023ram,gaiax2023architecture} Resultatet dokumenteres i prosjektets gevinstplan og RACI-matriser, slik at undervisningscasene får en konsistent styringsstruktur.
+
 \section{Bygg, transport og helse}
 Offentlige og private aktører bruker digitale tvillinger til å koordinere investeringer og tjenester som påvirker hele samfunnet. Felles utfordringer er å forankre tvillingen i eksisterende forvaltningssystemer, sikre datadeling og bygge kompetanse på tvers av fagmiljøer. Casemalen hjelper deg med å tydeliggjøre roller og datakilder i prosjekter der mange interessenter må samarbeide.
 

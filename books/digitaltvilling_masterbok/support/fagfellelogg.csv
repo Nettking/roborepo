@@ -6,6 +6,7 @@ Kapittel,Uke,Kommentar-ID,Type innspill,Ansvarlig redaktør,Status,Notater
 5-6,3,AI-04,Algoritmevalg,Nora Aas,Levert,Matrise og vurderingskriterier publisert i Kapittel 5 (seksjon «Vurderingskriterier for AI-drevne tvillinger», oppdatert 2025-10-25).
 7-9,4,GV-05,Governance-tiltak,Leif Ødegaard,Planlagt oppfølging,Utarbeider tiltakslogg og KPI-oppsett til 29.05.
 Appendiks,4,ST-06,Terminologi,Astrid Hauge,Planlagt oppfølging,Oppdatert begrepsliste og engelske ekvivalenter ferdig 31.05.
+Appendiks,5,ST-07,Arbeidsark,Astrid Hauge,Under arbeid,Utarbeider arbeidsark i `chapters/appendiks.tex` og oppdaterer lærerveiledning samt ordliste før fagfellegjennomgang uke 6.
 1-2,22,KT-07,Fagfellepakke utsendt,Ingrid Lunde,Planlagt,Utsending 27.05 med revidert manus, fagfellebrief og referanseoversikt; Equinor og NTNU får tilgang via OwnCloud.
 1-2,23,KT-08,Kommentarinnsamling,Astrid Hauge,Planlagt,Digital gjennomgang 03.06; sammendrag fra Equinor og NTNU loggføres innen 04.06 sammen med prioriterte begrepsavklaringer.
 1-2,24,KT-09,Tiltaksmøte,Ingrid Lunde,Planlagt oppfølging,Redaksjonsmøte 07.06 for å prioritere tiltak; oppdater `plan.md` og fordel oppfølging i `task_queue.md`.

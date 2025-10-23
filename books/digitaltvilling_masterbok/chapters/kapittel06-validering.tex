@@ -15,6 +15,11 @@ Flere etablerte standarder kan brukes som rammeverk. ISO~9001 gir føringer for 
 
 Validering er ikke en engangsaktivitet, men en kontinuerlig praksis gjennom tvillingens livsløp. Hver gang modellen får nye data, algoritmer eller styringsparametere må baseline-modeller, referansescenarier og feltmålinger brukes til å bekrefte at presisjonen er innenfor toleranse. Dette krever en styrt datastrøm inn i DevOps- og MLOps-prosessene, versjonskontroll av modellartefakter, og periodiske revisjoner der både tekniske og domeneeksperter signerer på at tvillingen fortsatt er egnet.
 
+\section{Sikkerhetsstandarder og regulatorisk etterlevelse}
+Digitale tvillinger som påvirker kritisk infrastruktur må etterleve etablerte sikkerhetsstandarder. \citet{iec62443-2-1} gir rammeverk for å dele systemet inn i soner og konduiter med definerte sikkerhetsnivåer, slik at både IT- og OT-komponenter får tilpasset beskyttelse. For organisatoriske prosesser supplerer \citet{iso27001-2022} med krav til risikostyring, dokumentasjon og kontinuerlig forbedring av informasjonssikkerhet. I tillegg stiller \citet{eu2022nis2} krav til hendelsesrapportering, styring og tilsyn, noe som innebærer tydelige roller og oppfølging i hele verdikjeden.
+
+Et praktisk grep er å knytte hvert modell- og datagrensesnitt til en kontroll i standardene. Tiltak som tofaktor-autentisering, segmentering og revisjonslogger må beskrives både teknisk og organisatorisk. Når nye funksjoner lanseres, bør et standardkart vise hvilke krav som berøres og hvem som eier tiltakene. Støttenotatet \textit{kap06-sikkerhetscase.md} gir en caseoppgave der studentene kartlegger tiltak for et regionalt kraftselskap.
+
 \section{Usikkerhetsanalyse og robusthet}
 Usikkerhetsanalyse gjør det mulig å forstå hvor pålitelig tvillingens prediksjoner er. En viktig første aktivitet er å klassifisere usikkerhet som \textit{aleatorisk} (tilfeldige variasjoner i prosessen) eller \textit{epistemisk} (mangel på kunnskap). For eksempel vil en energitvilling for et fjernvarmenett ha aleatorisk usikkerhet knyttet til vær og forbruksmønstre, mens epistemisk usikkerhet kan skyldes ufullstendige rørdata eller sjeldne feilmodi. Klassifiseringen påvirker hvilke tiltak som settes inn: bedre sensorer og datakvalitetsrutiner for epistemisk usikkerhet, og probabilistiske metoder for aleatorisk variasjon.
 
@@ -38,6 +43,16 @@ For prosjekter som skal inngå i pilotundervisningen anbefales følgende kontrol
     \item Bruk IEC~62443 som sjekkliste for å fordele ansvar mellom leverandør, drift og OT-team, inkludert segmentering, tilgangskontroll og oppdateringsprosedyrer.
     \item Dokumenter hvordan kvalifikasjonsløpet følger DNV-RP-A204, fra definisjon av bruksområde til testing og verifikasjon av oppdateringer.
 \end{itemize}
+\section{Laboratorieøving: Standard- og risikoanalyse}
+Laboratorieøvelsen for kapittel 6 lar studentene omsette standardkrav til konkrete tiltak. Utgangspunktet er casebeskrivelsen i \textit{kap06-sikkerhetscase.md}, der et regionalt nettselskap skal dokumentere etterlevelse før utrulling av en operatørportal.
+
+\begin{enumerate}
+    \item \textbf{Forstudie:} Studentene analyserer avviksloggen og identifiserer hvilke hendelser som faller inn under NIS2 artikkel 23.
+    \item \textbf{Kartlegging:} Gruppen fyller ut et compliance-canvas med standardreferanse, teknisk og organisatorisk tiltak, ansvarlig rolle og dokumentasjon.
+    \item \textbf{Rapportering:} Resultatene oppsummeres i en tre-siders rapport med soner/konduiter-diagram og indikatorer for oppfølging.
+\end{enumerate}
+
+Evalueringsrubrikken vektlegger standardforståelse, risikohåndtering, dokumentasjon og tverrfaglig koordinering. En totalscore på 10 eller mer gir «godkjent» og brukes sammen med ALTAI-sjekklisten fra Kapittel~5.
 
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}

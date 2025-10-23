@@ -22,6 +22,12 @@ Feltet domineres av tverrfaglige metoder som kobler modellering, dataanalyse og 
 \section{Teknologitrender}
 Teknologisk utvikling setter nye rammer for hva digitale tvillinger kan løse og hvordan de driftes. Det skjer en sammensmelting mellom simuleringsverdenen, sanntidsdata og intelligent beslutningsstøtte, noe som øker autonomien i både industrielle og samfunnsrettede systemer.
 
+\subsection{Generativ AI og beslutningsassistenter}
+Foundation-modeller og multimodale generative teknikker brukes nå til å foreslå designalternativer, generere syntetiske datasett og veilede operatører i komplekse beslutninger. Industripartnere eksperimenterer med copiloter som kombinerer naturlig språk, visualisering og historiske tvillingdata for å foreslå tiltak i sanntid.\citep{siemens2023copilot} Den europeiske AI-handlingsplanen fremhever behovet for ansvarlige, dokumenterte modeller, noe som innebærer at tvillinger må ha forklaringslag og revisjonsspor før generativ AI kan tas i bruk i regulerte bransjer.\citep{eu2023ai}
+
+\subsection{Edge-native tvillinger}
+For prosesser som krever lav responstid kombineres digitale tvillinger med edge-komponenter der databehandling skjer tett på utstyret. Standarder for multi-access edge computing gjør det mulig å orkestrere containere og AI-modeller i fabrikkhaller, på fartøy eller i landbruksmaskiner, samtidig som policyer for dataspace-tilgang ivaretas.\citep{etsi2023mec} Edge-native mønstre utfordrer tradisjonell skyarkitektur og krever at DevOps- og MLOps-prosesser inkluderer distribuerte oppdateringer, overvåking og fallback-rutiner.
+
 \subsection{Semantiske tvillinger og autonomi}
 De mest modne tvillingene bygger nå på semantiske modeller der kunnskapsgrafer og ontologier beskriver forholdet mellom komponenter, datastrømmer og forretningsregler. Kombinert med maskinlæring, probabilistiske modeller og formelle verifikasjonsmetoder gir dette grunnlag for beslutninger som kan automatiseres. Autonome tvillinger brukes til å orkestrere vedlikehold, balansere energinett og styre logistikksystemer, men krever transparens og sporbarhet slik at operatører kan forstå og overstyre kritiske valg.
 
@@ -35,6 +41,8 @@ Europeiske dataspace-initiativer endrer hvordan virksomheter deler data og model
 Masterprosjekter og pilotundervisningen bør derfor undersøke dataspace-strategier tidlig: avklar hvilke delingsnoder som finnes i sektoren, hvilke tilganger som krever godkjenning, og hvordan tvillingen håndterer logging og audit når data flyttes mellom organisasjoner. Dette gir også mulighet for komparative studier av hvordan ulike dataspace-implementeringer støtter NIS2 og andre sikkerhetskrav.
 
 Digitaliseringsstrategier forventes å dokumentere klima- og ressursgevinster, og digitale tvillinger brukes som beslutningsgrunnlag for grønn omstilling. Forskningen undersøker hvordan tvillingene kan kobles til EU-taksonomien, rapportere Scope 1–3 utslipp og støtte sirkulærøkonomiske modeller. Dette stiller krav til datakvalitet, revisjonsspor og etterlevelse av regelverk som NIS2 og personvernforordningen, samtidig som det åpner for nye tjenester knyttet til sertifisering og revisjon.
+\subsection{Bærekraft, dataspace og regulering}
+Digitaliseringsstrategier forventes å dokumentere klima- og ressursgevinster, og digitale tvillinger brukes som beslutningsgrunnlag for grønn omstilling. Forskningen undersøker hvordan tvillingene kan kobles til EU-taksonomien, rapportere Scope 1–3 utslipp og støtte sirkulærøkonomiske modeller. Dataspace-initiativer i transport og energi legger føringer for hvordan dataprodukter beskrives, lisensieres og revideres, og gjør det enklere å dele gevinster på tvers av aktører.\citep{ec2023mobilitydataspace,idsa2023ram} Dette stiller krav til datakvalitet, revisjonsspor og etterlevelse av regelverk som NIS2 og personvernforordningen, samtidig som det åpner for nye tjenester knyttet til sertifisering og revisjon.
 
 \section{Fra idé til prosjekt}
 Å utvikle en masteroppgave eller et forskningsprosjekt innen digitale tvillinger innebærer å knytte tekniske muligheter til et meningsfullt problem i en valgt sektor. Prosessen starter med å forstå eksisterende praksis, avdekke kunnskapshull og sette mål som kan måles.
@@ -44,6 +52,28 @@ Begynn med en systematisk litteraturgjennomgang i databaser som Scopus og Oria, 
 
 \subsection{Metodevalg og datainnsamling}
 Valg av metode bør speile både teknologiens modenhet og tilgjengelige ressurser. Eksperimentelle design kan brukes når man har tilgang til laboratorier eller simuleringsmiljøer, mens casestudier gir verdi når feltdata må samles i samarbeid med virksomheter. Mixed-methods med både kvantitative målinger og kvalitative intervjuer blir stadig vanligere for å dokumentere effekter og endringsledelse. Masterstudenter bør tidlig avklare datatilgang, lisensbehov og etiske avklaringer (for eksempel REK eller NSD) slik at prosjektet blir gjennomførbart.
+
+\subsection*{Indikatorer for forskningsfremdrift}
+Fagfelleløp og masterprosjekter kan bruke indikatorene i Tabell~\ref{tab:forskningsindikatorer} for å holde fremdrift og datasamarbeid under kontroll. Indikatorene er hentet fra porteføljestyring i norsk forskningsfinansiering og kobler resultater til samarbeid i dataspace.
+
+\begin{table}[h]
+    \centering
+    \caption{Forslag til KPI-er for forsknings- og innovasjonsprosjekter}
+    \label{tab:forskningsindikatorer}
+    \begin{tabular}{p{2.6cm}p{3.8cm}p{3.8cm}p{3.2cm}}
+        \toprule
+        Fase & KPI & Beskrivelse & Datakilde \\
+        \midrule
+        Problemforståelse & Andel kartlagte datasett og partnere & Deling av metadatakort i dataspace-katalog & Prosjektlogg, dataspace-dashboard \\
+        Metodeutvikling & Andel eksperimenter med reproduserbare skript & Kode- og modellpakker publisert med versjonering & Git-repositorier, laboratorienotat \\
+        Evaluering & Dokumenterte effekter (for eksempel energi, kvalitet, sikkerhet) & Sammenligning av før/etter-KPI-er og fagfelleuttalelser & Evalueringsrapporter, gevinstplan \\
+        Formidling & Antall åpne dataprodukter eller artikler & Publisering i kanaler definert av finansieringsprogram & Publiseringsdatabase, dataspace-katalog \\
+        Videreføring & Finansiert oppskalering eller pilot & Nye kontrakter, videre forskningsmidler & Prosjektregnskap, Forskningsrådets porteføljerapporter \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Indikatorene støtter kravene i porteføljeanalysen for digitalisering og muliggjør datadeling gjennom standardiserte policyer og kontrakter.\citep{rcn2024digitalisering}
 
 \subsection{Publisering og nettverk}
 Planlegg formidling parallelt med forskningen. Målrett konferanser som \emph{Model-Based Systems Engineering} (MBSE), \emph{Simulation-Based Digital Twins} eller norske arenaer som Smart Industri og Tekna-fagkvelder. Delta i faglige nettverk som DigSam, Data Space Norway og relevante forskerskoler. Aktiv deltakelse gir tilgang til datasett, veiledere og potensielle medforfattere, og øker sjansen for at prosjektet bidrar til pågående initiativer.

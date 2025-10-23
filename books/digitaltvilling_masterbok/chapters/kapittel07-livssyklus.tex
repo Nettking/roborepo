@@ -79,6 +79,60 @@ Produkteier, domeneekspert, data scientist, simuleringsspesialist og IT-drift m�
 
 Eksterne leverandører bør inkluderes med klare kontrakter for ansvar og dataeierskap. Juridiske vurderinger må sikre at deling av sanntidsdata skjer i tråd med avtaler og regelverk.
 
+\subsection*{RACI-variant for tverrsektorielle partnerskap}
+Kryss-sektorielle initiativ, for eksempel batteriverdikjeder eller havvindplattformer, krever ofte at flere linjeorganisasjoner deler ansvar. En utvidet RACI-variant med kategorien \emph{Support} gjør det tydelig hvem som leverer operative ressurser selv om beslutningsmyndigheten ligger hos andre aktører. Tabell~\ref{tab:raci-variant} viser hvordan modellen kan anvendes på et dataspace-program der kommune, industri og teknologipartnere samarbeider.
+
+\begin{table}[h]
+    \centering
+    \caption{RACI-S-matrise for dataspace-program i regionalt havvindinitiativ}
+    \label{tab:raci-variant}
+    \begin{tabular}{p{4.3cm}ccccc}
+        \toprule
+        Aktivitet & Kommune & Operatør & Plattformleverandør & Faglig rådgiver & TSO \\
+        \midrule
+        Fastsette delingspolicy og tilgangsnivå & A & C & R & C & I \\
+        Implementere dataspace-kontrakter og API-er & I & C & R & C & S \\
+        Overvåke datakvalitet og hendelser & C & R & S & C & A \\
+        Planlegge vedlikeholdsvinduer & I & A & C & R & S \\
+        Rapportere gevinster og bærekraftindikatorer & R & A & C & C & I \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Denne varianten forbereder leseren på å bruke malen i Appendiks~\ref{appendix:ressurser} der en generell tabell for RACI-S kan fylles ut for egne case.
+
+\subsection*{Gevinstplan og KPI-styring}
+For å sikre kontinuerlig oppfølging bør kapittelteamet bruke en gevinstplan som kobler indikatorer til ansvarlige roller og beslutningsarenaer. Tabell~\ref{tab:gevinstplan} gir et eksempel på hvordan livssyklusfaser, KPI-er og datakilder kan organiseres. Malen speiler strukturen i Appendiks~\ref{appendix:ressurser} og kan tilpasses ulike sektorer.
+
+\begin{table}[h]
+    \centering
+    \caption{Eksempel på gevinstplan for digital tvilling}
+    \label{tab:gevinstplan}
+    \begin{tabular}{p{2.8cm}p{3.8cm}p{3.5cm}p{3.2cm}}
+        \toprule
+        Livssyklusfase & Hovedindikator & Datakilde & Beslutningsarena \\
+        \midrule
+        Initiativ & Forventet netto nåverdi og modenhetsgrad & Forretningscase, vurderingsmatrise (Kapittel~8) & Porteføljestyre (kvartalsvis) \\
+        Implementering & Sprintleveranser fullført og modellnøyaktighet & DevOps-rapporter, modellvalidering (Kapittel~6) & Styringsgruppe (hver sprint) \\
+        Drift & Oppetid, datakvalitet og sikkerhetshendelser & Observabilitetsdashbord, hendelseslogger & Operasjonelt forum (ukentlig) \\
+        Forbedring & Realiserte gevinster og læringspunkter & KPI-rapport, retrospektiver & Programstyre (månedlig) \\
+        Avvikling & Dokumentert arv og gjenbruk & Arkiverte modeller, dataspace-policy & Kunnskapsforum (etterprosjekt) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Ved å oppdatere gevinstplanen etter hver milepæl blir det lettere å holde oversikt over forutsetninger som må oppdateres når nye caser legges inn i undervisningen.
+
+\subsection*{Dataspace-arkitektur for styring og deling}
+Livssyklusforvaltning i større økosystem krever en dataspace-arkitektur som definerer ansvar for dataprodukter, identitet og policy. En anbefalt struktur følger fire lag:
+\begin{enumerate}
+    \item \textbf{Dataprodukter og semantikk:} Domeneeiere beskriver datastrømmer med felles ordlister og metadata slik at partnere kan oppdage dem. Semantiske modeller gjør det mulig å koble tvillingen til dataspace-kontrakter.\citep{idsa2023ram}
+    \item \textbf{Tillitstjenester:} Identitet, tilgangskontroll og policy-håndhevelse sørger for at bare autoriserte aktører får tilgang til sensitive data. Gaia-X nav og nasjonale forvaltere kan fungere som tillitsanker.\citep{gaiax2023architecture}
+    \item \textbf{Edge og sky:} Data behandles så nær kilden som mulig for å sikre respons, mens aggregerte datasett lagres i sky for analyse og deling. Edge-noder må støtte samme sikkerhetskrav som sentrale plattformer.\citep{etsi2023mec}
+    \item \textbf{Styringsfora:} Tverrfaglige råd følger opp avvik, oppdaterer gevinstplanen og prioriterer forbedringer. Output fra rådene dokumenteres i læringssløyfer (retrospektiver, fagfellelogg) slik at gevinstene kan revideres.
+\end{enumerate}
+Arkitekturen sikrer at gevinstplaner, RACI-matriser og modellforvaltning er koblet sammen gjennom felles dataprodukter og policyer.
+
 \section{Endringsledelse og modenhet}
 Digital tvilling er en organisasjonsutvikling like mye som et teknisk prosjekt. Modenhet kan vurderes i nivåer fra ad hoc-initiativ til kontinuerlig forbedring der tvillingen er integrert i virksomhetsstyringen. En modenhetsmodell kan beskrive kriterier for styringsstruktur, datakvalitet, automatisering og kompetanse på hvert nivå.
 
