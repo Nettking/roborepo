@@ -2,8 +2,6 @@
 
 Dette notatet samler forberedende innsikt til utvidelsen av den maritime delen av Kapittel~8 og skal deles med sektorteamet før neste workshop.
 
-> Oppdatert 2024-08-21: Lagt til casebrief for autonome ferger i Trondheimsfjorden basert på datagrunnlaget i tabellen under.
-> Oppdatert 2025-10-24: Registrert NTNU- og SINTEF-kilder i referanselisten og referert dem inn i Kapittel~8.
 
 ## Formål og scope
 - Velge hvilke maritime case som skal løftes frem i kommende revisjon av kapittelet.
