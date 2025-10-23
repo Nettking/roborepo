@@ -4,15 +4,15 @@ Denne filen beskriver hvordan neste oppgave skal velges og hvordan bidrag organi
 
 ## Arbeidsflyt
 
-1. **Åpne `task_queue.md`.** Oppgavene er listet i prioritert rekkefølge. Hver oppgave har en status (`TODO`, `PÅGÅR`, `FERDIG`).
-2. **Finn første oppgave merket `TODO`.** Dette er «neste oppgave». Når du som bidragsyter blir bedt om å "ta neste oppgave på dt-boken", skal du velge denne.
-3. **Oppdater status til `PÅGÅR`** før du starter arbeidet, slik at andre ser at oppgaven er under arbeid.
+1. **Åpne `task_queue.md` og `support/oppgavetavle.md`.** Arbeidslisten viser prioriteringen, mens oppgavetavlen gir mer kontekst (ansvar, avhengigheter og notater). Hver oppgave har en status (`TODO`, `PÅGÅR`, `FERDIG`).
+2. **Finn første oppgave merket `TODO`.** Dette er «neste oppgave». Når du blir bedt om å «ta neste oppgave på dt-boken», skal du velge denne og bruke ID-en (for eksempel `DT-07`) i kommunikasjon og commit-meldinger.
+3. **Oppdater status til `PÅGÅR`** i `task_queue.md` (og oppgavetavlen) før du starter arbeidet, slik at andre ser at oppgaven er under arbeid.
 4. **Utfør oppgaven** ved å redigere de relevante filene i denne mappen (eller underordnede mapper).
 5. **Dokumenter resultatet.**
    - Legg til korte notater i kapittel- eller støttefilen du har endret (for eksempel et sammendrag av hva som ble lagt til).
    - Oppdater eventuelle referanser i `plan.md` hvis strukturen eller progresjonen endres.
-6. **Marker oppgaven som `FERDIG`.** Flytt ferdige oppgaver til seksjonen «Ferdige oppgaver» nederst i `task_queue.md` for historikk.
-7. **Legg til nye oppgaver ved behov.** Når du identifiserer oppfølgingselementer, opprett nye `TODO`-oppgaver under «Aktive oppgaver».
+6. **Marker oppgaven som `FERDIG`.** Flytt ferdige oppgaver til seksjonen «Ferdige oppgaver» nederst i `task_queue.md` for historikk og oppdater oppgavetavlen med samme status.
+7. **Legg til nye oppgaver ved behov.** Når du identifiserer oppfølgingselementer, opprett nye `TODO`-oppgaver under «Aktive oppgaver» og registrer dem i `support/oppgavetavle.md`.
 
 ## Stil og formatering
 

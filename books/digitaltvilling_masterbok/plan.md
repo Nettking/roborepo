@@ -155,7 +155,7 @@ Vektleggingen summerer til 100\% (45\% underveisleveranser, 55\% sluttvurdering)
 
 - **Datainnsamling:** Kursundersøkelse (Likert + åpne spørsmål), fokusgrupper med studentrepresentanter og logganalyse fra digitale verktøy.
 - **Analyse:** Fagteamet sammenstiller funn i en evalueringsrapport innen uke 8. Rapporten skal foreslå konkrete endringer i kapittelinndeling, aktivitetstyngde og vurderingsvekter.
-- **Oppfølging:** Tiltak prioriteres i redaksjonens arbeidsmøte og følges opp i `task_queue.md`. Oppdaterte anbefalinger innarbeides i `support/larerveiledning.tex` og kommende utgave av planen.
+- **Oppfølging:** Tiltak prioriteres i redaksjonens arbeidsmøte og følges opp i `task_queue.md` og `support/oppgavetavle.md`. Oppdaterte anbefalinger innarbeides i `support/larerveiledning.tex` og kommende utgave av planen.
 
 
 ## Plan for fagfellelesing

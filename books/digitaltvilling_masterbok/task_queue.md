@@ -1,16 +1,33 @@
 # Arbeidsliste for dt-boken
 
-Dette dokumentet styrer videre arbeid. Oppgavene er ordnet i prioritert rekkefølge. Ta alltid den øverste oppgaven merket `TODO` når du blir bedt om å «ta neste oppgave på dt-boken».
+Arbeidslisten er omstrukturert til en lett kanban-tavle med identifiserbare oppgavekort.
+Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
+`support/oppgavetavle.md` for detaljerte beskrivelser.
 
-## Aktive oppgaver
-*(ingen oppgaver)*
+## Bruksnotater
+- Oppgaver får en kort ID (for eksempel `DT-07`) slik at diskusjoner og commiter kan
+  peke på samme leveranse.
+- Alle nye oppgaver legges inn i tabellen under som `TODO` og flyttes til seksjonen
+  «Pågår» ved å endre status til `PÅGÅR` før arbeidet starter.
+- Når oppgaven er ferdig, flytt raden til «Ferdige oppgaver» og dokumenter resultatet
+  i de berørte filene samt i `completed_tasks.md`.
+
+## Aktive oppgaver (TODO)
+
+| ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger |
+| --- | --- | --- | --- | --- | --- |
+| DT-04 | Høy | Kapittel 4 | Kartlegg behov for supplerende figurer og forbered fagfellepakke. | Liste over nødvendige figurer og fagfellenotat. | `plan.md` (Del II), `support/illustrasjonsplan.md` |
+| DT-05 | Høy | Kapittel 5 | Samle tilleggsreferanser, koble vurderingsrubrikk og forberede fagfelleløp. | Oppdatert kildebank og rubrikknotat. | `plan.md` (Kapittel 5), `support/larerveiledning.tex` |
+| DT-06 | Middels | Kapittel 6 | Verifiser standardhenvisninger og vurder støttefigurer for kvalitetsprosesser. | Revidert kapittelavsnitt og figurplan. | `plan.md` (Kapittel 6), `support/illustrasjonsplan.md` |
+| DT-07 | Høy | Kapittel 7 | Utvikle grafisk livssyklus og planlegg caseintervjuer. | Grafikkutkast og intervjuliste. | `plan.md` (Kapittel 7), `support/illustrasjonsplan.md` |
+| DT-08 | Høy | Kapittel 8 | Prioriter hvilke case som skal utdypes, samle kildegrunnlag og skissere visuelle elementer. | Prioritert caseliste og kildeoppsummering. | `plan.md` (Kapittel 8), `support/appendiks-ressurser.tex` |
+| DT-09 | Middels | Kapittel 9 | Harmoniser referanser og avklar behov for tabell- eller figurtilegg. | Oppdatert referanseoversikt og leveranseplan. | `plan.md` (Kapittel 9), `support/referanser.bib` |
+| DT-SUP-01 | Middels | Støtte | Utarbeid maler for prosjektkontrakt og koble rubrikker til kommende caseutvidelser. | Malutkast og oppdatert lærerveiledning. | `plan.md` (Støtte), `support/larerveiledning.tex` |
+| DT-OPS-02 | Lav | Oppgavestruktur | Definer rutine for månedlig revisjon av oppgavetavle og task queue. | Rutinebeskrivelse og sjekkliste. | `support/oppgavetavle.md` |
+
 ## Pågår
 
-*(ingen oppgaver)*
+*(ingen oppgaver for øyeblikket – endre status til `PÅGÅR` i tabellen over når arbeid starter)*
 
-## Ferdige oppgaver
 
-- `FERDIG` – Utvid instruksjoner med nye temaer for videre innhold i dt-boken. (Agent)
-- `FERDIG` – Etablerte `AGENTS.md` for manusmappen slik at arbeidsinstruksjonene følger agent-standarden.
-
-- `FERDIG` – Skill ferdige oppgaver i en egen fil. Se `completed_tasks.md` for full historikk.
+Se `completed_tasks.md` for hele historikken over ferdige oppgaver.
