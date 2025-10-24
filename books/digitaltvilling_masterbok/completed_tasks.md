@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-27: Beskrev driftsgodkjenning og modellvedlikehold i Kapittel 6 med godkjenningspunkttabell, og oppdaterte plan-, tavle- og kildefiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-26: Utvidet Kapittel 3 med Oslo VAVs vann- og avløpscase, tiltakstabell for beredskap og undervisningskoblinger, og oppdaterte plan-, status- og kildefiler. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`)
 
 - `FERDIG` – Leveranse for DT-25: Skrev seksjon om personvern, dataminimering og tilsynslogg i Kapittel 6, etablerte DPIA-arbeidsflyt og oppdaterte plan-, status- og kildefiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
