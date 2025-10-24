@@ -19,7 +19,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | Appendiks | Ressurser | Første hele utkast – tabeller og arbeidsmåte skrevet. | Revider etter fagfelleinnspill fra kapitlene. |
 | Appendiks | Arbeidsark | Ny seksjon med maler, arbeidsark og fagfelleklarering i `chapters/appendiks.tex`. | Test arbeidsarkene i pilot og samle fagfelleinnspill før endelig publisering. |
 | Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk. | Oppdater når nye termer eller presiseringer oppstår under fagfellelesing. |
-| Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan og ferdige vurderingsrubrikker. | Harmoniser læringsaktiviteter med arbeidsark og oppdater vurderingskriterier etter pilot. |
+| Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan, vurderingsrubrikker og ny prosjektkontraktmal. | Pilotere kontrakten mot kommende caseutvidelser og justere rubrikkene etter erfaringer fra AR/VR- og sektorworkshops. |
 | Støtte | Oppgavetavle og task queue | Månedlig revisjonsrutine definert og forankret i redaksjonen. | Pilotere første revisjonssyklus, dokumentere forbedringspunkter, justere kalender for høstsemesteret og holde øye med at det oppdaterte LaTeX-preambelet med norsk språkpakke fortsatt gir grønne kompileringer for TikZ-illustrasjonene. |
 ### Omfang per kapittel (august 2024)
 
