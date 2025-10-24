@@ -56,6 +56,35 @@ Foundation-modeller og andre generative teknikker brukes til å lage scenarioer 
 \subsection{Edge-distribuerte tvillinger}
 Edge-intelligens er nødvendig der beslutninger må tas på millisekunder og nettverkstilkoblingen er begrenset, for eksempel i maritime operasjoner eller energimikrogrids.\citep{shi2016edge} En vanlig arkitektur er å la den sentrale plattformen håndtere langsiktig læring og flåtestyring, mens edge-noder kjører lette versjoner av modellene for lokal optimalisering og avviksdeteksjon. Fagfellepanelet anbefalte at vi beskriver hvordan modellversjoner og dataflyt synkroniseres mellom edge og sky: DevOps-teamet må definere hvilke signaler som trigges ved modellavvik, hvilke målinger som replikkeres tilbake til sentral datasjø, og hvordan sikkerhetsoppdateringer distribueres uten å stoppe produksjonen. Ved pilotering i norsk industri har det vært nyttig å kombinere container-orienterte orkestratorer (for eksempel K3s) med hendelseslogg i datasjøen slik at datagovernance og revisjon kan følge edge-endringene.
 
+\subsection{Styringsramme for generativ dataflyt}
+For å unngå at generativt innhold og edge-modeller skaper uoversiktlige datastrømmer, må laboratorieteamene etablere en styringsramme som spenner fra datamerking til etterlevelsesrapportering. Erfaringer fra Kognitwin og Statnett viser at en delt kontrolltavle gir innsikt i hvilke datapakker som er syntetiske, hvilke som kommer fra edge og hvilke som er revisjonsgodkjent før utrulling.\citep{kongsberg2023kognitwin,statnett2023digital} I praksis organiseres styringen i tre kontrollnivåer:
+\begin{enumerate}
+    \item \textbf{Datakvalifisering}: Alle nye datasett -- historiske, syntetiske eller strømmende -- skal merkes med opprinnelse, kvalitetsscore og tilhørende modellversjon. Merkingen synkroniseres automatisk med dataspace-kontraktene fra Kapittel~3.
+    \item \textbf{Modellfrigivelse}: Foundation-modeller og edge-komponenter pakkes i versjoner som kan valideres mot rubrikken i Tabell~\ref{tab:rubrikk-ai-lab}. Før publisering testes løsningene mot kontrollpunktene i Kapittel~6 for å sikre at forslagene tåler revisjon.
+    \item \textbf{Operasjonell oppfølging}: Kontrolltårnet overvåker avvik, loggfører manuelle overstyringer og utløser re-trening eller fallback når usikkerhetsgrensen brytes. Indikatorene rapporteres tilbake til livssyklusplanen i Kapittel~7.
+\end{enumerate}
+
+Tabell~\ref{tab:kontrollpunkter-generativ} viser hvordan styringen kan dokumenteres i prosjektlogg eller fagfellelogg. Kolonnene speiler kravene fra dataspace-governance, laboratorierubrikken og sikkerhetskapittelet slik at studentgrupper tydelig ser sammenhengen mellom kapittelbidragene.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Kontrollpunkter for generativ og edge-basert dataflyt}
+    \label{tab:kontrollpunkter-generativ}
+    \begin{tabular}{p{3.6cm}p{4.0cm}p{4.2cm}p{3.8cm}}
+        \toprule
+        \textbf{Fase} & \textbf{Tiltak} & \textbf{Dokumentasjon} & \textbf{Kobling til andre kapitler} \\
+        \midrule
+        Datainntak og berikelse & Merk syntetiske datapakker og edge-hendelser med opprinnelse, kvalitet og lisensvilkår. & Metadatafelter i datasjø/dataspace, revisjonsspor i MLflow. & Kapittel~3 (dataspace-arkitektur), Kapittel~9 (innovasjon og deling). \\
+        \addlinespace
+        Modelltrening og distribusjon & Definer kvalitetsporter for generative modeller og edge-pakker før de publiseres. & Testprotokoller, rubrikkscore og versjonstabell for modellbibliotek. & Kapittel~5 (rubrikk), Kapittel~6 (valideringsjournal). \\
+        \addlinespace
+        Operativ drift og læring & Overvåk KPI-er for respons, forklarbarhet og etterlevelse; loggfør manuelle overstyringer. & Kontrolltårnrapporter, fagfellelogg og oppdatert tiltaksregister. & Kapittel~6 (tillitspanel), Kapittel~7 (styringsmodell). \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Denne styringsrammen gjør det enklere å argumentere for generativt databruk overfor juridiske og etiske vurderinger. Studentteam kan bruke tabellen som sjekkliste i prosjektgjennomgangen og som vedlegg når rubrikken fra lærerveiledningen skal dokumenteres.
+
 \section{Samspill mellom læring, optimalisering og assimilering}
 De tre byggesteinene virker sammen i en lukket sløyfe: maskinlæring gir prognoser og modeller som beskriver systemet, dataassimilering korrigerer modellen når virkeligheten avviker, og optimalisering omskaper innsikten til beslutninger. I praksis må slike sløyfer designes slik at dataflyten er robust, at prosesseringen skjer i riktig rekkefølge, og at menneskelige operatører har innsyn i hvorfor anbefalingene endres. En moden digital tvilling bør derfor inkludere dashboards som visualiserer hvilke måler som påvirker beslutningene, og varslingsmekanismer når usikkerheten overstiger forhåndsdefinerte terskler. Dette gjør det mulig å bygge tillit, for eksempel ved å dokumentere hvordan et bestemt sett med sensordata utløste en ny optimaliseringsstrategi.
 
