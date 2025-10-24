@@ -117,6 +117,57 @@ Metodebiblioteket gjør det lettere å fordele ansvar i teamet og tydeliggjøre 
 revisjon. Studentgrupper kan utvide tabellen med kolonner for risiko, estimerte timer og behov for fagfellegjennomgang for å få
 et konkret styringsverktøy.
 
+\subsection{Sensitivitetsanalyse og parameterprioritering}
+Selv solide flerfidelitetsoppsett taper verdi dersom nøkkelparametere ikke overvåkes systematisk. En sensitivitetstilnærming
+gjør det mulig å identifisere hvilke antakelser og måledata som påvirker beslutninger mest, og å planlegge målrettede
+kalibreringer før modellen tas videre til valideringsarbeidet i kapittel~6. Global
+sensitivitetsanalyse, der parameterinteraksjoner kartlegges i stedet for å variere én parameter om gangen, gir et mer robust
+grunnlag enn manuelle scenariotester \citep{saltelli2019sensitivity}. Norske infrastruktureiere som Statnett anbefaler å kombinere
+slike analyser med periodiserte vedlikeholdsplaner for å sikre at modelljournalen reflekterer faktiske måleusikkerheter
+\citep{statnett2023modellforvaltning}.
+
+\paragraph{Praktisk arbeidsflyt.} Følgende arbeidssteg kan brukes som mal når sensitivitet skal kobles til
+modelljournalen og tiltaksloggene i kapittel 6 og 7:
+\begin{enumerate}
+    \item Definer beslutningsindikatorer (for eksempel energiutnyttelse, tilgjengelighet eller CO$_2$-intensitet) og knytt dem til
+    relevante kapitler slik at endringer kan spores.
+    \item Grupper parametere etter datakilde og målehyppighet, og etabler sannsynlighetsfordelinger som fanger opp målefeil eller
+    ekspertvurderinger.
+    \item Kjør en global sensitivitetstest (Sobol, Morris eller variansbaserte metoder) og dokumenter resultatene i
+    modelljournalen med tydelig referanse til versjoner og datagrunnlag.
+    \item Prioriter kalibreringstiltak og overvåkingsrutiner basert på hvilke parametere som påvirker indikatorene mest, og oppdater
+    tiltaksloggen i kapittel 7 dersom endringer krever organisatorisk oppfølging.
+\end{enumerate}
+
+\paragraph{Indikatorer for oppfølging.} Resultatene bør visualiseres i et felles dashboard slik at både modellutviklere og
+driftsorganisasjonen kan reagere raskt. Følgende indikatorer er anbefalt:
+\begin{itemize}
+    \item \textbf{Sensitivitetspoeng}: Summert bidrag fra hver parameter til total varians i beslutningsindikatorene.
+    \item \textbf{Datakvalitetsgrad}: Forholdet mellom måleusikkerhet og aksepterte toleranser i modellen.
+    \item \textbf{Kalibreringsstatus}: Antall dager siden sist parameter ble validert eller målt i felt.
+    \item \textbf{Tiltaksavhengighet}: Markerer hvilke parametere som krever koordinering med dataspace- og valideringsteamene.
+\end{itemize}
+
+\begin{table}[ht]
+    \centering
+    \caption{Eksempel på prioritering av parametergrupper basert på sensitivitet og datatilgang.}
+    \label{tab:kap02-sensitivitet}
+    \begin{tabular}{p{0.22\textwidth}p{0.26\textwidth}p{0.27\textwidth}p{0.21\textwidth}}
+        \toprule
+        \textbf{Parameterkategori} & \textbf{Typiske indikatorer} & \textbf{Anbefalte tiltak} & \textbf{Kobling til øvrige kapitler} \\
+        \midrule
+        Feltmålinger med høy varians & Energiflyt, vibrasjon, temperatur & Øk målefrekvens, bruk redundante sensorer, planlegg feltkalibrering hvert kvartal. & Kapittel 6: Valideringsjournal og hendelsesrespons. \\
+        Avledede modellparametere & Effektivitet, CO$_2$-intensitet, vedlikeholdsprognoser & Dokumenter antakelser, innfør automatiske regressjonstester og oppdater modelljournalen etter hver versjon. & Kapittel 5: Læringssløyfer og modelloppdateringer. \\
+        Forretningsdrivere & Kost/nytte, leveringsgrad, sikkerhetsnivå & Synkroniser indikatorer med gevinst- og tiltakslogg, eskaler endringer i styringsfora. & Kapittel 7: Porteføljestyring og gevinstoppfølging. \\
+        Exogene scenarioinput & Markedspriser, værdata, reguleringskrav & Etabler scenarioarkiv, loggfør kilder og oppdater beslutningsgrunnlag ved nye regulatoriske føringer. & Kapittel 3: Dataintegrasjon og beredskap. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Ved å kombinere tabellen med metodestegene over får studentene en konkret mal for å prioritere feltarbeid, laboratorietester og
+styringsmøter. Det gjør det enklere å dokumentere hvorfor enkelte parametere får mer oppmerksomhet enn andre, og hvordan
+sensitivitetsfunnenes tiltak forplanter seg til dataspace- og governance-arbeidet.
+
 \subsection{Case: Flerfidel modell for subsea-kompressorer}
 Et norsk leverandørkonsortium har utviklet en digital tvilling for subsea-kompressorer på sokkelen. Plattformen kombinerer en
 hurtig maskinlæringsmodell som estimerer produksjon og energiforbruk fra tilgjengelige trykk- og temperaturmålinger, med en
