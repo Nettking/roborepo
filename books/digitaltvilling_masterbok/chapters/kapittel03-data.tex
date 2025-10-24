@@ -46,6 +46,73 @@ OPC UA er utbredt i norsk industri fordi det forener datapublisering med semanti
 \subsection{Datakvalitet og interoperabilitet}
 Integrasjonen m å inkludere kontrollpunkter for datakvalitet, spesielt nåar dataene brukes til modelloppdatering eller automatiserte beslutninger. Versjonering av datakontrakter og testmiljøer der integrasjoner valideres før produksjonssetting reduserer risiko for feil. Dokumentasjon av avhengigheter og kontaktpunkter gjør det enklere  å etablere ansvar for h å ndtering av databrudd eller uforutsette endringer.
 
+\section{Dataspace-arkitektur og samhandling}
+Norge deltar i flere europeiske dataspace-initiativ, og mange virksomheter har begynt å etablere felles dataplattformer som
+knytter industrielle tvillinger på tvers av selskaper. Gaia-X og International Data Spaces Association (IDSA) gir rammen for
+hvordan teknisk arkitektur, tillitsmekanismer og policy-regler bør utformes \citep{gaiax2023architecture,idsa2023ram}. For å
+sikre at norske aktører kan koble seg på disse økosystemene uten å gi fra seg kontroll på data, er det nyttig å beskrive
+dataspace-arkitekturen lag for lag, slik Tabell~\ref{tab:kap03-dataspace-lag} viser.
+
+\begin{table}[ht]
+    \centering
+    \caption{Lagdeling i en norsk dataspace-arkitektur for digitale tvillinger.}
+    \label{tab:kap03-dataspace-lag}
+    \begin{tabular}{p{0.28\textwidth}p{0.62\textwidth}}
+        \toprule
+        \textbf{Lag} & \textbf{Formål og tiltak} \\
+        \midrule
+        Deltakerforvaltning & Registrering av virksomheter, utstedelse av identiteter og sertifikater, samt avtaler om datadeling. \\
+        Tilgangskontroll & Policy-håndheving via konnektorer som sikrer at datadelingen følger kontrakter og sanksjoner ved brudd. \\
+        Semantikk og katalog & Felles begreper, datasettbeskrivelser og API-spesifikasjoner publiseres i søkbare kataloger. \\
+        Datastrømmer & Konfigurasjon av sanntids- og batchkanaler med logging, kryptering og datasuverenitetsregler. \\
+        Tjenester & Analyse- og simuleringsapplikasjoner som kan kjøres nær dataene og kobles til tvillingene i kapittel 4 og 5. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Erfaringer fra mobilitetsdataspace-programmet i EU viser at det er avgjørende med tidlig avklaring av roller, tekniske krav og
+juridiske mekanismer \citep{ec2023mobilitydataspace}. I Norge bør bransjeorganisasjoner og klynger definere et minimumssett med
+policy-regler for datadeling slik at energiselskaper, offentlige etater og leverandører kan koble seg på uten omfattende
+bilaterale avtaler. Ved å bruke referansearkitekturene kan pilotprosjekter gjenbruke sertifiseringsprosesser, logging og
+komponenter for dataminimering.
+
+\subsection{Norske roller og styringsmodeller}
+Et vellykket dataspace krever kombinasjon av tekniske og organisatoriske roller. Tabellen under viser en forenklet matrise som
+har blitt testet i norske pilotprosjekter i kraft- og mobilitetssektoren.
+
+\begin{table}[ht]
+    \centering
+    \caption{Ansvarsfordeling i dataspace-piloter.}
+    \label{tab:kap03-dataspace-ansvar}
+    \begin{tabular}{p{0.32\textwidth}p{0.58\textwidth}}
+        \toprule
+        \textbf{Rolle} & \textbf{Hovedansvar} \\
+        \midrule
+        Dataspace-operatør & Drifter konnektorer, policy-tjenester og sertifiseringsmekanismer for deltakerne. \\
+        Domeneeier & Definerer semantikk, datasettprioritet og kvalitetssikrer modellene som bruker informasjonen. \\
+        Tilbyder & Leverer datastrømmer eller tjenester, følger policy-regler og rapporterer hendelser til operatøren. \\
+        Forbruker & Integrerer data i egne tvillinger, dokumenterer formål og bidrar med forbedringsforslag til semantikken. \\
+        Tilsyn/koordinator & Overvåker etterlevelse av regelverk (for eksempel NIS2) og beslutter tiltak ved alvorlige brudd. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Rollen som dataspace-operatør kan med fordel ligge hos en nøytral aktør (for eksempel en bransjeorganisasjon eller et
+forskningsinstitutt), mens domeneeier ofte er et konsortium av virksomheter som ønsker felles styring. Tilgang til tvillingens
+simuleringsresultater kan skje via tjenestelag i dataspace-arkitekturen slik at partnerne får innsikt uten å kopiere hele
+datasett.
+
+\subsection{Implementeringssteg for norske virksomheter}
+For å komme raskt i gang med dataspace-initiativ anbefales en trinnvis tilnærming:
+\begin{enumerate}
+    \item Kartlegg hvilke datakilder, modeller og simuleringsresultater som er mest etterspurt på tvers av organisasjoner.
+    \item Identifiser regulatoriske krav (for eksempel energilovgivning, personvern, eksportkontroll) og oversett disse til
+    policy-regler som kan konfigureres i konnektorene.
+    \item Velg tekniske komponenter som støtter signering, kryptering og logging i tråd med IDSA-rammeverket.
+    \item Etabler en felles katalog og begrepsmodell, gjerne med utgangspunkt i eksisterende bransjestandarder.
+    \item Pilotér deling av et begrenset datasett og vurder ytelse, sikkerhet og gevinstrealisering før skalering.
+\end{enumerate}
+
 \section{Infrastruktur og sikkerhet}
 Arkitekturen bør balansere behovet for lav responstid med kravene til sikkerhet, kostnad og etterlevelse. Norske organisasjoner møter ofte krav om datasuverenitet, samtidig som de ønsker  å dra nytte av skytjenester for elastisitet og tung regnekraft.
 
@@ -57,6 +124,82 @@ Zero-trust innebåe rer at alle forespørsler autentiseres og autoriseres, uanse
 
 \subsection{Juridiske hensyn}
 GDPR krever at personopplysninger behandles med tydelig hjemmel og strenge tilgangsregler. Selv n å r dataene i utgangspunktet er tekniske, kan kombinasjonen av sensorinformasjon og arbeidsplaner gjøre dem identifiserbare. Datasuverenitet har f å tt økt fokus etter Schrems II-dommen; virksomheter m å vite hvor dataene fysisk lagres og hvilke underleverandører som involveres. Mange velger  å knytte seg til norske eller europeiske skyer, eller  å bruke konfigurerbare sovereign cloud-løsninger.
+
+\section{Beredskap og kontinuitet}
+Digitale tvillinger som understøtter kritisk infrastruktur må inngå i organisasjonens beredskapsplaner. Direktoratet for
+samfunnssikkerhet og beredskap (DSB) anbefaler at både teknologiske og organisatoriske avhengigheter kartlegges for å sikre
+responsevne ved hendelser \citep{dsb2023nrb}. En beredskapsplan for tvillingplattformen kan organiseres i fire hoveddeler:
+\begin{enumerate}
+    \item \textbf{Forebygging:} Risikovurderinger av datakilder, tilgangsstyring og avhengigheter mot tredjepartsleverandører.
+    \item \textbf{Beredskap:} Varslingsplaner, alternative datakilder og manuelle prosedyrer for operatører dersom tvillingen blir utilgjengelig.
+    \item \textbf{Respons:} Hendelseshåndtering med tydelig ansvarslinje, logging av beslutninger og kommunikasjon mot myndigheter.
+    \item \textbf{Gjenoppretting:} Prioritert plan for å gjenopprette datapipeline, modeller og dashboard, inkludert tester som verifiserer integriteten.
+\end{enumerate}
+
+Organisasjonen bør gjennomføre regelmessige øvelser der dataspace-partnere, driftspersonell og sikkerhetsteam deltar. Øvelsene
+kan bygge på scenarier fra Nasjonalt risikobilde og inkludere bortfall av leverandører, cyberangrep eller feil i sensornett.
+Resultatene dokumenteres i samme fagfellelogg som brukes for datastyringsforumet slik at tiltak følges opp.
+
+\subsection{Kontinuitetsplan for dataplattformen}
+Et praktisk hjelpemiddel er å etablere en kontinuitetsmatrise som viser hvilke komponenter som krever redundans. Tabell~\ref{tab:kap03-kontinuitet}
+gir et eksempel fra energisektoren.
+
+\begin{table}[ht]
+    \centering
+    \caption{Kontinuitetstiltak for kritiske komponenter.}
+    \label{tab:kap03-kontinuitet}
+    \begin{tabular}{p{0.34\textwidth}p{0.56\textwidth}}
+        \toprule
+        \textbf{Komponent} & \textbf{Tiltak og ansvar} \\
+        \midrule
+        Sensor- og edgeinfrastruktur & Redundant strøm og kommunikasjon, avtaler om nødlager for reservedeler, ansvarlig: teknisk drift. \\
+        Meldingsplattform & Klyngeoppsett på tvers av datasentre, automatisert failover-test, ansvarlig: plattformteam. \\
+        Datakatalog & Daglig backup til isolert sone og plan for manuell distribusjon av kritiske metadata, ansvarlig: data steward. \\
+        Modelltjenester & Containerimages lagres i sikker registry med signering, gjenoppretting automatisert via IaC, ansvarlig: DevOps. \\
+        Dashboards & Offline-snapshots av nøkkelindikatorer og utsending til beredskapsrom, ansvarlig: forretningskontinuitet. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Kontinuitetsplanen bør oppdateres etter hver øvelse og ved større endringer i dataspace-arkitekturen. Ved å koble planen til
+organisasjonens helhetlige beredskapsrammeverk blir tvillingen en integrert del av den operative beredskapen.
+
+\section{Bærekrafts-dashboard og indikatorstyring}
+For å gjøre bærekraft og klimaeffekter synlige i operative beslutninger bør digitale tvillinger levere dashboards som kombinerer
+miljøindikatorer, energieffektivitet og økonomiske nøkkeltall. Statnett og andre norske infrastruktureiere rapporterer at slike
+dashboards er viktige for å dokumentere innsparingstiltak og rapportere til myndigheter \citep{statnett2024baerekraft}. Et
+bærekraftsdashboard kan struktureres rundt tre nivåer:
+\begin{itemize}
+    \item \textbf{Strategisk nivå:} KPI-er for utslippsreduksjoner, fornybarandel og taksonomi-etterlevelse.
+    \item \textbf{Taktisk nivå:} Energibruk, materialforbruk og logistikkindikatorer fordelt på anlegg og tidsperioder.
+    \item \textbf{Operativt nivå:} Varsler på avvik fra planlagte tiltak, prediksjoner fra tvillingmodeller og anbefalte tiltak.
+\end{itemize}
+
+Ved å koble indikatorene til dataspace-laget kan partnere dele aggregerte resultater uten å avsløre forretningssensitiv informasjon.
+Det gir samtidig beslutningstakere i kapitlene 4 og 7 et faktagrunnlag for å prioritere tiltak.
+
+\subsection{Eksempel på indikatorstruktur}
+Tabell~\ref{tab:kap03-dashboard} viser hvordan indikatorer kan knyttes til datakilder og ansvarlige roller i en energioperasjon.
+
+\begin{table}[ht]
+    \centering
+    \caption{Indikatorer i et bærekraftsdashboard.}
+    \label{tab:kap03-dashboard}
+    \begin{tabular}{p{0.28\textwidth}p{0.32\textwidth}p{0.30\textwidth}}
+        \toprule
+        \textbf{Indikator} & \textbf{Datakilder} & \textbf{Ansvarlig rolle} \\
+        \midrule
+        Scope 1-utslipp & Sensorer fra forbrenningsanlegg, drivstoffrapporter & Bærekraftsleder \\
+        Energitap i nett & SCADA-målinger, værdata, prognoser fra tvilling & Driftssentral \\
+        Materialgjenvinningsgrad & ERP, materialpass, dataspace for leverandører & Innkjøp og sirkulærteam \\
+        Leveransetid for tiltak & Prosjektverktøy, avvikslogger & Programkontor \\
+        Kundepåvirkning & Hendelseslogger, kundeservice, sosiale medier & Kommunikasjon \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+For å unngå «greenwashing» må indikatorene revideres av uavhengige fagmiljøer. Resultatene kan kobles til læringssløyfene i
+Kapittel~5 slik at modeller kalibreres med faktiske effekter av tiltakene.
 
 \section{Datastyring og kontinuerlig forbedring}
 For  å sikre at datapipelinen leverer konsistent kvalitet m å tekniske tiltak kobles til tydelige roller og arbeidsprosesser. Norske virksomheter etablerer ofte et datastyringsforum som samler produkteier, data steward, sikkerhetsansvarlig og representanter fra drift. Forumet prioriterer tiltak basert p å indikatorer for datakvalitet, hendelseslogger og fagfelleinnspill.

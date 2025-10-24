@@ -9,7 +9,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | --- | -------- | ------ | ---------- |
 | I | Kapittel 1 | Utvidet med detaljert historisk tidslinje, norske politiske koblinger og caser. | Dele fagfellepakke med tekstlig tidslinje (TikZ er fjernet), tabeller og nye kilder, og bekrefte at kapittelet fortsatt gir helhetlig historikk uten grafikkavhengigheter. |
 | I | Kapittel 2 | Utvidet med flerfidelitetscase, metodetabeller og modellforvaltningskrav i tillegg til politiske rammer. | Pilotere metode- og dokumentasjonstabeller i workshop og samle fagfelleinnspill før neste revisjon. |
-| I | Kapittel 3 | Supplert med sirkulærøkonomi, materialsløyfefigur og to datadrevne caser. | Samordne sirkulærøkonomi-innspill med grafikk- og datastyringsteamet før fagfelleutsending. |
+| I | Kapittel 3 | Utvidet med dataspace-arkitektur, beredskapsoppsett og bærekraftsdashboard i tillegg til sirkulærøkonomi-casene. | Pilotere dataspace-tabellene og kontinuitetsplanen i DI-03-forumet og planlegge illustrasjoner for nye tabeller. |
 | II | Kapittel 4 | Oppdatert med immersive case, beredskapsøvelse og vurderingsrubrikk. | Pilotere AR/VR-lab med rubrikk og hente tilbakemeldinger fra industripartnere. |
 | II | Kapittel 5 | Oppdatert med generative og edge-baserte læringssløyfer, laboratorierubrikker og industripuls fra norske piloter. | Pilotere laboratorierubrikken med studentteam, verifisere datasporing for syntetiske datasett og loggføre innspill fra industripartnere. |
 | II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet, etikk og regulatoriske krav (NIS2, IEC 62443). | Pilotere standardkartet og kontrolltårn-caset i kurslaboratoriet, og samle erfaringer med usikkerhetsarbeidsflyten før fagfelleløpet. |
