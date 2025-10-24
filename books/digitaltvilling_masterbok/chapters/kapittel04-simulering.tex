@@ -174,6 +174,37 @@ Simuleringsmotoren beregner kontinuerlige lastflytprognoser og foreslår brytero
 
 Etter hver øvelse eksporteres beslutningsloggen til virksomhetens hendelseshåndteringssystem, der læringspunkter og anbefalte tiltak spores til konkrete simuleringskjøringer. Statnett rapporterer at denne kombinasjonen av simulator, immersiv visualisering og strukturert beslutningslogg gir raskere identifikasjon av kritiske tiltak og bedre overlevering til vedlikeholdsplanlegging \citep{statnett2024kontrolltarn}. Erfaringene deles med regionale nettselskaper gjennom felles treningsprogram, og casebeskrivelsen brukes som grunnlag for masterstudenters prosjektoppgaver om resilient strømnett.
 
+\section{Praksiseksempel: Flom- og overvannslaboratorium for kommuner}
+Flom- og overvannsrisiko er et økende problem i norske byer, og myndighetene anbefaler at kommuner kombinerer hydrologiske analyser med digitale tvillinger for å teste tiltak før neste ekstremnedbør \citep{nve2022kommunal,dsb2022beredskap}. Oslo kommune har utviklet en overvannsstrategi der digitale scenarier kobles til grønn infrastruktur, pumpestyring og kriseplaner slik at beslutninger kan forankres på tvers av etater \citep{oslo2023overvann}. Et kommunalt overvannslaboratorium bygger videre på dette ved å kombinere kontinuerlige strømningmodeller med diskrete hendelser som veistenging, kritiske bygg og kapasitet i beredskapslagre.
+
+Arbeidsløpet organiseres i tre sløyfer som kobler modellering, dataassimilering og beredskap:
+\begin{enumerate}
+    \item \textbf{Datagrunnlag og kalibrering:} Kartlegg sensor- og kartdata fra NVE, kommunale målenoder og værprognoser. Strømningmodellen kalibreres mot historiske hendelser (for eksempel Vesleofsen 2023) og parameterne versjonskontrolleres i modelljournalen.
+    \item \textbf{Scenario- og tiltaksvurdering:} Diskrete hendelser som stengte kulverter, trafikkavvikling og kritiske samfunnsfunksjoner simuleres sammen med kontinuerlige vannføringsmodeller. Tiltak som regnbed, midlertidige barrierer og styrt utslipp testes og rangeres etter effekt og ressursbruk.
+    \item \textbf{Operativ oppfølging og læring:} Resultater synkroniseres mot kommunens beredskapsplaner, og indikatorer som vannstand mot kritiske terskler og responstid for tiltak loggføres i samme kontrollpanel som brukes i Kapittel~6.
+\end{enumerate}
+
+Tabell~\ref{tab:overvanns-lab} viser hvordan de tre sløyfene oversettes til konkrete leveranser i et overvannslaboratorium. Strukturen kan brukes i undervisningsprosjekter der studentgrupper jobber med egne kommunedata eller åpne datasett.
+
+\begin{table}[ht]
+    \centering
+    \caption{Leveransepakke for kommunalt flom- og overvannslaboratorium}
+    \label{tab:overvanns-lab}
+    \begin{tabular}{|p{3.1cm}|p{4.4cm}|p{4.4cm}|p{3.1cm}|}
+        \hline
+        \textbf{Fase} & \textbf{Formål} & \textbf{Modell- og dataoppsett} & \textbf{Hovedleveranse} \\
+        \hline
+        Datagrunnlag og kalibrering & Etablere felles datakilder og sikre sporbarhet mot historiske hendelser & Integrert datakatalog med sensorer, kartlag, demografidata og hendelseslogger \citep{nve2022kommunal} & Kalibreringsrapport med parameterhistorikk og kvalitetsindikatorer \\
+        \hline
+        Scenario- og tiltaksvurdering & Evaluere effekten av tiltak på tvers av fag (samferdsel, bygg, grønn struktur) & Hybride modeller som kombinerer kontinuerlig hydraulikk og diskrete tiltaksskript, koblet til simuleringsmotor for nedbørsscenario & Tiltaksportefølje med kost/nytte, risikoreduserende effekt og krav til gjennomføring \citep{dsb2022beredskap} \\
+        \hline
+        Operativ oppfølging og læring & Forankre beslutninger i beredskapsplaner og etablere indikatorer for neste hendelse & Dashboard med nivåmålinger, kapasitetsindikatorer, avvikshåndtering og lenker til varslingssystem \citep{oslo2023overvann} & Oppdatert beredskapsplan med læringslogg, varslingsrutiner og kobling til kapittel 6 sitt tillitspanel \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Etter hver øvelse dokumenteres læringspunkter i et felles register som deles med nabokommuner og regionale vannområder. Flere kommuner tester nå skybaserte overvannslaboratorier der digitale tvillinger integreres med 3D-bymodeller for å visualisere konsekvenser for kritisk infrastruktur og skoleveier \citep{asplan2023overvannslab}. Erfaringene bør kobles til kapittel 3 sine beskrivelser av dataspace-samarbeid, slik at sensor- og modelldata kan deles sikkert mellom kommuner, entreprenører og statlige myndigheter. Når caset brukes i undervisning, kan studentgrupper simulere effekten av grønne tak, permeable dekker og nødavledninger, og måle gevinstene med samme indikatorer som brukes i kapittel 6 sine beredskapsøvelser.
+
 \section{Laboratorieøving: Immersivt beslutningsrom}
 Laboratorieøvelsen bygger på scenariet i \textit{kap04-immersiv-case.md} og tar utgangspunkt i at studentene får tilgang til et immersivt kontrollrom der fjernvarmeoperasjoner kan testes. Økten varer 90 minutter og gjennomføres i grupper på fire. Datastrømmer og roller speiles i Tabell~\ref{tab:kap04-immersiv-arkitektur} slik at studentene forstår hvordan teknologi og organisasjon henger sammen.
 
