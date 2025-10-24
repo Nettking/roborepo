@@ -183,6 +183,52 @@ For å komme raskt i gang med dataspace-initiativ anbefales en trinnvis tilnærm
     \item Pilotér deling av et begrenset datasett og vurder ytelse, sikkerhet og gevinstrealisering før skalering.
 \end{enumerate}
 
+\section{Sirkulære materialstrømmer og klimaregnskap}
+Sirkulærøkonomi krever at ressursdata knyttes tett til beslutningsprosesser for innkjøp, drift og avvikling. \citet{norskindustri2023sirkular}
+peker på at digitale tvillinger gjør det mulig å følge materialstrømmer i sanntid, mens \citet{miljodir2023materialstrommer} framhever
+behovet for standardiserte indikatorer for klima- og miljørapportering. Når datastrømmene kobles til tvillingens livssyklus kan
+virksomheter planlegge ombruk, spore klimafotavtrykk og dokumentere etterlevelse av nye krav fra EUs taksonomi.
+
+\subsection{Datagrunnlag for ressurs- og klimastyring}
+Et sirkulært datagrunnlag bør dekke hele verdikjeden fra innkjøp til ombruk. Følgende elementer er spesielt viktige:
+\begin{itemize}
+    \item \textbf{Material- og komponentregister:} Strukturerte data om type, mengde, miljøegenskaper og demonterbarhet for hver komponent.
+    \item \textbf{Tilstands- og inspeksjonsdata:} Sensormålinger, termografering og manuelle vurderinger som dokumenterer kvalitet før ombruk.
+    \item \textbf{CO$_2$-regnskap og energi:} Klimafaktor per materialstrøm, energibruk i bearbeiding og logistikk, samt referanse mot klimabudsjett.
+    \item \textbf{Logistikk- og kontraktsinformasjon:} Sporbarhet på leverandører, transport og avtalevilkår for tilbakekjøp eller materialbank.
+    \item \textbf{Dokumentasjon til myndigheter:} Rapportpakker for miljødeklarasjoner (EPD) og krav fra taksonomi og anskaffelsesregelverk.
+\end{itemize}
+
+Tabell~\ref{tab:kap03-sirkular-data} viser hvordan datasettene kan organiseres for å støtte tvillingens analyser og rapportering.
+
+\begin{table}[ht]
+    \centering
+    \caption{Datasett for sirkulære materialstrømmer og klimaregnskap.}
+    \label{tab:kap03-sirkular-data}
+    \begin{tabular}{p{0.26\textwidth}p{0.30\textwidth}p{0.28\textwidth}p{0.10\textwidth}}
+        \toprule
+        \textbf{Datasett} & \textbf{Primærkilde} & \textbf{Bruksområde} & \textbf{Indikator} \\n        \midrule
+        Materialregister & BIM-modell, produktpass, lageroversikt & Kartlegger gjenbrukspotensial og tilgjengelige komponenter. & Ombruksgrad \% \\n        Klimafotavtrykk & Miljødeklarasjoner (EPD), energimålere & Beregner spart CO$_2$ ved ombruk versus nyanskaffelse. & Tonn CO$_2$ spart \\n        Tilstandslogger & IoT-sensorer, inspeksjonsapp & Prioriterer komponenter til videre bruk og planlegger vedlikehold. & Kvalitetsscore (1--5) \\n        Logistikkspor & Transport-API, avfallssystemer & Optimaliserer transport og sikrer dokumentasjon til myndigheter. & Km med lavutslipp \\n        Kontraktsarkiv & Anskaffelsessystem, dataspace-avtaler & Verifiserer eierskap, garantier og tilbakekjøpsrett. & Avtaledekning \% \\n        \bottomrule
+    \end{tabular}
+\end{table}
+
+Datasett i tabellen kan distribueres gjennom dataspace-arkitekturen ved å definere egne policy-regler for klimadata. Det gjør det enklere å
+dele informasjon med leverandører, kommuner og ombrukssentre uten å kompromittere forretningssensitiv informasjon.
+
+\subsection{Case: Ombrukslab for offentlige bygg}
+Statsbygg og flere kommuner har etablert laboratorier for å teste ombruk av byggematerialer, der digitale tvillinger kobler sensordata,
+materialbank og klimaregnskap. \citet{statsbygg2022ombruk} beskriver hvordan prosjektteam bruker en felles modell for å planlegge demontering,
+klassifisere komponenter og visualisere utslippseffekten av ulike beslutninger. En vellykket arbeidsflyt kan organiseres slik:
+\begin{enumerate}
+    \item \textbf{Kartlegg porteføljen:} Tvillingen henter BIM-data og lager en materialinventarliste med ombrukskategorier og forventet levetid.
+    \item \textbf{Utfør tilstandsdiagnose:} Feltinspeksjoner oppdaterer tilstandslogger og utløser sensormålinger for fukt, vibrasjon eller energiavvik.
+    \item \textbf{Planlegg logistikk og kontrakter:} Systemet matcher komponenter med nye byggeprosjekter og synkroniserer kontraktsvilkår via dataspace.
+    \item \textbf{Evaluer klimaeffekt:} Klimapanelet beregner spart CO$_2$ og rapporterer direkte til virksomhetens bærekraftsrapport.
+\end{enumerate}
+
+\paragraph{Oppgaveforslag.} Studentgrupper kan bruke caset til å utvikle dashboards som viser ombruksgrad, klimabesparelse og risikonivå per komponent.
+Resultatene kan kobles til tiltaksplanene i Kapittel~7 slik at gevinster og oppfølging får egne ansvarslinjer.
+
 \section{Infrastruktur og sikkerhet}
 Arkitekturen bør balansere behovet for lav responstid med kravene til sikkerhet, kostnad og etterlevelse. Norske organisasjoner møter ofte krav om datasuverenitet, samtidig som de ønsker  å dra nytte av skytjenester for elastisitet og tung regnekraft.
 
