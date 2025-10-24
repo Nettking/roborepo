@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-108 | Kapittel 5 | FERDIG – Beskrev AI-støttede beredskapsverksteder med scenarioark, tabell for styring og indikatoroppfølging, og synkroniserte tavle- og loggfiler. | `chapters/kapittel05-ai.tex`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-107 | Kapittel 5 | FERDIG – Etablerte guardrail-sjekkliste for generative tvillinger med indikatorer og koblinger til valideringspanelet. | `chapters/kapittel05-ai.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-106 | Kapittel 6 | FERDIG – Dokumenterte tverrsektoriell dataspace-samvirkeøvelse med faseoppsett, evalueringsindikatorer og koblinger mellom energikontrolltårn og pasientlogistikk. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-105 | Kapittel 3 | FERDIG – Dokumenterte dataspace for grønne industriparker med tabell over prioriterte dataprodukter, indikator- og beredskapskoblinger og oppdaterte plan- og tavlefiler for pilotering mot industripartnere. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
