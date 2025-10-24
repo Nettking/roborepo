@@ -82,6 +82,40 @@ Flere norske nettselskaper etablerer kontrolltårn for å kombinere feltdata, tv
 \end{enumerate}
 Kontrolltårn-caset forsterker koplingen mellom modellvalidering, cybersikkerhet og organisasjonsdesign. Studentene skal levere både teknisk dokumentasjon og en kort tiltakslogg for oppfølging i styringssystemet.
 
+\section{Indikatorramme for dataspace-valideringslaboratorium}
+Dataspace-laboratoriet binder valideringsprosesser fra kapittel\,3, 4 og 7, og trenger derfor en indikatorramme som kombinerer kvalitetskontroller, hendelseshåndtering og gevinstoppfølging. \citet{digdir2024datasamarbeid} anbefaler at dataspace-partnere etablerer felles måltall og responstider før sandkasseaktiviteter igangsettes, mens \citet{idsa2023operational} beskriver hvordan kontrollpunkter må logges for å kunne sertifisere dataspace-komponenter. For å sikre at laben oppfyller norske krav til bærekraftsrapportering bør indikatorene også speile rammeverket i \citet{efrag2023esrs} og styringsprosessene som \citet{dfo2023baerekraft} anbefaler for offentlig sektor.
+
+En helhetlig indikatorramme kan bygges opp i fire arbeidssteg som studentteamet repeterer ved hver iterasjon:
+\begin{enumerate}
+    \item \textbf{Planlegg måleprogrammet:} Koble dataspace-kontrakter, modeller og kontrolltårn-panelet til et felles målekart med definisjoner, eiere og akseptgrenser. Bruk sjekklistene for modelljournal og gevinstoppfølging for å sikre at både tekniske og organisatoriske effekter spores.\citep{digdir2023modelljournal,digdir2022gevinst}
+    \item \textbf{Synkroniser datakvalitet:} Etabler dataprodukter med tydelig beskrivelse av kvalitet, oppdateringsfrekvens og policy, og registrer dem i katalogen slik dataspace-partnere kan verifisere grunnlaget for testene.\citep{dssc2024dataproducts}
+    \item \textbf{Test modeller og prosesser:} Kjør modellscenarier, ytre påvirkninger og hendelsesøvelser i sandkassen mens indikatorene logges automatisk til kvalitetsjournalen. Hver test får sin egen versjonslenke slik at revisjoner kan etterprøve resultatet.\citep{idsa2023operational}
+    \item \textbf{Analysér effekt og gevinst:} Del målerapporter i dataspace-portalen, oppdater tiltakslogg og gevinstkart, og bestem hvilke tiltak som skal overføres til drift. Kombinerer teamet dette med målstyringen fra kapittel\,7, får de en helhetlig vurdering av både teknisk kvalitet og virksomhetsverdi.\citep{digdir2022gevinst}
+\end{enumerate}
+
+Tabell~\ref{tab:dataspaceindikatorer} viser et eksempel på indikatorer som brukes i laben for å demonstrere sammenhengen mellom modellpresisjon, datakvalitet, hendelsesberedskap og bærekraftsrapportering. Tersklene kan justeres for sektor- og casetilpasning, men strukturen gir studentene en mal for å dokumentere kvantitative resultater før pilotering.
+
+\begin{table}[ht]
+    \centering
+    \caption{Kjerneindikatorer for dataspace-valideringslaboratorium}
+    \label{tab:dataspaceindikatorer}
+    \begin{tabular}{|p{3.2cm}|p{4.8cm}|p{4.2cm}|p{3.2cm}|}
+        \hline
+        \textbf{Måling} & \textbf{Datagrunnlag} & \textbf{Terskel og eskalering} & \textbf{Oppfølging} \\
+        \hline
+        Modellpresisjon mot feltdata & Sammenligning av simuleringer fra kapittel\,4 og sanntidsdata fra dataspace & Avvik \textless{} 5\% over tre iterasjoner; ellers trigges ekstra verifikasjon og sign-off fra fageier & Modelljournal og kontrolltårn-protokoll \\
+        \hline
+        Dataproduktkvalitet & Profilering av dataprodukter, metadata og policy fra dataspace-katalogen & Minimum 98\% fullstendige metadata; avvik \textgreater{} 2\% varsler data steward og oppdatering av kontrakt & Datakatalog og dataspace-varsel \\
+        \hline
+        Hendelsesrespons & Tidsstempler fra hendelsesøvelser og kvalitetsjournal & Varsling til partnere innen 15 minutter og full hendelsesrapport innen 24 timer; brudd eskaleres til beredskapsleder & Hendelseslogg og tiltaksplan \\
+        \hline
+        Bærekrafts- og gevinstindikatorer & KPI-er for energi, klima og tjenestegevinst fra gevinstplanen & Rapportering av ESRS E1-indikatorer hver sprint; manglende tall fører til midlertidig stopp i pilotering & Gevinstlogg og bærekraftsrapport \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Ved å bruke indikatorsettet som mal får masterstudentene trening i å kombinere tekniske målinger med styringskrav. Resultatene kan gjenbrukes i fagfellelogg, tiltaksplan og planfil, og gir samtidig dokumentasjon for å flytte sandkasseaktiviteter inn i ordinær drift når kriteriene er oppfylt.
+
 \section{Scenariobasert stresstesting for hydrogenknutepunkt}
 Utbygging av hydrogenknutepunkt i Norge kombinerer produksjon, lagring, bunkring og distribusjon til maritim og landbasert transport.\citep{enova2024hydrogenknutepunkt} Digitale tvillinger brukes for å dimensjonere anlegget, koordinere logistikk og dokumentere sikkerhetstiltak, men komplekse verdikjeder gjør at både energiselskaper, nettoperatører og havner må samordne risikobilde og beredskap.\citep{gassco2023hydrogen,dnv2023hydrogenforecast} For å sikre at modellene tåler forstyrrelser må kapittel 4 sitt hydrogenknutepunkt-case suppleres med en strukturert stresstest i valideringsløpet.
 
