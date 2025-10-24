@@ -40,6 +40,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-BUG-05 | Kompilering | FERDIG – La til `\usepackage{textcomp}` i preambelen slik at `\textminus` fungerer med T1-koding og LaTeX-bygg stopper ikke på kapittel 2. | `main.tex`, `task_queue.md`, `completed_tasks.md`, `plan.md` |
 | DT-BUG-04 | Kapittel 1–3 | FERDIG – Rettet figurstiene slik at `main.tex` finner TikZ-filene når kapitlene inkluderes, og verifiserte at kompileringstesten går grønt. | `chapters/kapittel01-introduksjon.tex`, `chapters/kapittel02-systemtenkning.tex`, `chapters/kapittel03-data.tex`, `support/figurer/kilder/*`, `plan.md`, `completed_tasks.md` |
 | DT-BUG-02 | Kapittel 1–3 | FERDIG – Gjenopprettet kapitteltegningenes TikZ-stier til `../support/figurer/kilder/` slik at figurene kompileres fra kapittelmappene. | `chapters/kapittel01-introduksjon.tex`, `chapters/kapittel02-systemtenkning.tex`, `chapters/kapittel03-data.tex` |
 | DT-BUG-01 | Kapittel 1–3 | FERDIG – Rettet TikZ-stier for kapittel 1–3 slik at figurfilene hentes fra `support/figurer/kilder/`. | `chapters/kapittel01-introduksjon.tex`, `chapters/kapittel02-systemtenkning.tex`, `chapters/kapittel03-data.tex`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
