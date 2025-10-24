@@ -40,6 +40,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-BUG-06 | Kompilering | FERDIG – Fjernet `\n`-linjeskift fra TikZ-figuren i kapittel 2 slik at `main.tex` kompilerer uten kritiske feil, og synkroniserte status i plan- og arbeidsfilene. | `support/figurer/kilder/kap02-politikk-ramme-v1.tikz`, `task_queue.md`, `plan.md`, `completed_tasks.md` |
 | DT-BUG-05 | Kompilering | FERDIG – La til `\usepackage{textcomp}` i preambelen slik at `\textminus` fungerer med T1-koding og LaTeX-bygg stopper ikke på kapittel 2. | `main.tex`, `task_queue.md`, `completed_tasks.md`, `plan.md` |
 | DT-BUG-04 | Kapittel 1–3 | FERDIG – Rettet figurstiene slik at `main.tex` finner TikZ-filene når kapitlene inkluderes, og verifiserte at kompileringstesten går grønt. | `chapters/kapittel01-introduksjon.tex`, `chapters/kapittel02-systemtenkning.tex`, `chapters/kapittel03-data.tex`, `support/figurer/kilder/*`, `plan.md`, `completed_tasks.md` |
 | DT-BUG-02 | Kapittel 1–3 | FERDIG – Gjenopprettet kapitteltegningenes TikZ-stier til `../support/figurer/kilder/` slik at figurene kompileres fra kapittelmappene. | `chapters/kapittel01-introduksjon.tex`, `chapters/kapittel02-systemtenkning.tex`, `chapters/kapittel03-data.tex` |
