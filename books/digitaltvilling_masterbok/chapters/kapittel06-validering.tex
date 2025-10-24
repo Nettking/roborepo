@@ -202,6 +202,49 @@ For masterstudentene gir overvåkingssløyfen et rammeverk for praktiske oppgave
 
 Koblingen mellom kontinuerlig overvåking, beredskapsplaner og læringsaktiviteter gjør at studentene opplever hvordan en kommunal tvilling må forvaltes i praksis. Samtidig styrkes samspillet mellom Kapittel~3 (datastyring), Kapittel~4 (simulering) og Kapittel~7 (governance) fordi indikatorene deles på tvers av arenaer.
 
+\section{Valideringsløp for byggdrift-sandkasse}
+Kommunale eiendomsavdelinger har etablert dataspace-sandkasser for å teste integrasjoner mellom energiledelse, inneklimakontroll og vedlikeholdslogg før løsninger slippes inn i produksjonsmiljøet.\citep{osloeiendom2023strategi,bergen2024smartbygg} Sandkassen i Kapittel~3 beskriver prosessene for å hente data fra skole- og helsebygg, men for å gå fra eksperimentering til ordinær drift trengs et eksplisitt valideringsløp. Dette løftet binder sensordata, modellprediksjoner og styringsindikatorer til kvalitetsjournalen i dette kapittelet og gevinststyringen i Kapittel~7, slik at kommunedirektør, eiendomssjef og leverandører har en felles sannhet om status.
+
+\subsection{Testtrinn og indikatorer}
+Valideringsløpet må dekke både tekniske integrasjoner og organisatoriske beslutninger. Erfaringer fra Oslo, Bergen og Statsbygg viser at kommunene lykkes når hvert trinn avsluttes med måledata og styringssignaler som kan spores i dataspace-katalogen og planverkene.\citep{osloeiendom2023strategi,oslo2024klimaeiendom,statsbygg2023digitalmodenhet}
+
+\begin{table}[ht]
+    \centering
+    \caption{Valideringsløp for dataspace-sandkasse i kommunal byggdrift}
+    \label{tab:byggdrift-validering}
+    \begin{tabular}{|p{3.2cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Fase} & \textbf{Hovedmål} & \textbf{Tester og datagrunnlag} & \textbf{Ansvarlig} \\
+        \hline
+        Sandkasseoppstart & Prioritere bygg, datasett og gevinster i tråd med klima- og energiambisjoner & Sammenligne bygningsportefølje mot energimerker, importere sanntidsdata til sandkasse, etablere datapolicy med personvernnotat \citep{osloeiendom2023strategi,ks2024eiendomsdrift} & Eiendomssjef + data steward \\
+        \hline
+        Integrasjonstest & Sikre at BMS, IoT-sensorer og vedlikeholdssystem leverer konsistente strømmer & Automatisk validering av tidsstempel og måleenheter, syntetiske avvikstester, oppdatering av modelljournal \citep{bergen2024smartbygg} & Teknisk integrasjonsteam \\
+        \hline
+        Pilotdrift & Dokumentere effekten på energi, inneklima og brukeropplevelse i utvalgte bygg & Sammenligne modellprediksjoner mot energiregister, CO$_2$-målinger og brukerklager; rapportere avvik i kvalitetsjournal og tiltakslogg \citep{oslo2024klimaeiendom} & Driftssjef + HMS-koordinator \\
+        \hline
+        Overlevering til ordinær drift & Forankre gevinstoppfølging og leverandøransvar i styringssystemet & Revisjon av SLA og tjenestekontrakter, måling av sparte kWh og utslipp, kobling til porteføljestyring i Kapittel~7 \citep{statsbygg2023digitalmodenhet} & Programkontor + innkjøp \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Tabellen bygger videre på arbeidsflyten i Kapittel~3 og gjør det tydelig hvilke datapakker som må godkjennes før nye bygg kobles på dataspace. Når fasene loggføres i kvalitetsjournalen får kommunen et revisjonsspor som kan brukes både overfor Riksrevisjonen og interne kontrollutvalg.
+
+\subsection{Rapporteringssløyfe og læringsarena}
+Valideringsløpet bør støttes av en fast rapporteringsstruktur som kobler drift, økonomi og bærekraft:
+\begin{enumerate}
+    \item \textbf{Forankre i porteføljestyret:} Presentér status på energimål, investeringsbehov og brukeropplevelse hver tertial, og knytt tiltak til gevinstplanen fra Kapittel~7.\citep{ks2024eiendomsdrift}
+    \item \textbf{Integrer med kommunens klimaregnskap:} Eksporter måledata fra sandkassen til klimaregnskapet slik at effekten av tiltak rapporteres til byråd og kommunestyre.\citep{oslo2024klimaeiendom}
+    \item \textbf{Lukk avvik i leverandørkjeden:} Bruk kvalitetsjournalen til å spore hvordan leverandører oppdaterer dokumentasjon, sensorkalibrering og vedlikeholdsplaner etter hvert kvartalsmøte.\citep{statsbygg2023digitalmodenhet}
+\end{enumerate}
+
+\subsection{Læringsaktiviteter}
+For masterstudentene gir byggdrift-sandkassen et konkret case som kombinerer dataintegrasjon, modelltesting og styring:
+\begin{itemize}
+    \item \textbf{Data- og indikatorverksted:} Studentene kobler datasett fra Kapittel~3 til tabell~\ref{tab:byggdrift-validering}, beregner indikatorer for energi- og inneklimamål og dokumenterer avvik i kvalitetsjournalen.
+    \item \textbf{Revisjonssimulering:} Gruppene spiller gjennom en kvartalsvis styringsdialog der de må argumentere for videre utrulling basert på målt effekt, brukerfeedback og leverandørstatus.
+    \item \textbf{Rapporteringsleveranse:} Resultatene oppsummeres i et kort notat til kommunedirektør som kobler funnene til klima-, budsjett- og arbeidsmiljømål, og viser hvordan tiltakene følges opp i planfilen.
+\end{itemize}
+
 \section{Mobilitetsdataspace for kollektivtransport}
 Ruter, Entur og Bane NOR bygger nå en felles mobilitetsdataspace der sanntidsdata fra buss, bane, tog og delte mikromobilitetstjenester synkroniseres med digitale tvillinger for planlegging og beredskap.\citep{ruter2024mobilitetslab,entur2023dataplattform,banenor2024digitalspor} Dataspacet kombinerer reiseplanleggingsdata, billettinformasjon, tilstandsmålinger fra infrastruktur og trafikkinformasjon fra Statens vegvesen for å gi et samlet bilde av kapasitetsutnyttelse og flaskehalser.\citep{vegvesen2023beredskap} For å sikre tillit må valideringsregimet dekke datakvalitet, modellpresisjon og koordinering mellom etatene, samtidig som personvernkrav og sikkerhetsnivåer følges slik Kapittel~3 beskriver for mobilitetsdataspace og Kapittel~7 adresserer for porteføljestyring.
 
