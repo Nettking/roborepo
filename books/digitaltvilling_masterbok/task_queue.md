@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-77 | Kapittel 7 | FERDIG – Etablerte tiltakslogg for gevinstoppfølging med tabell og rutiner, og synkroniserte plan-, tavle- og statusfiler for porteføljestyring. | `chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-76 | Kapittel 6 | FERDIG – Dokumenterte AI-forordningen for mobilitetstvillinger med sjekkliste, indikatorpanel og kobling til kontrolltårn-panelet, og synkroniserte plan- og statusfiler for kollektiv- og jernbanepartnere. | `chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-75 | Kapittel 6 | FERDIG – Etablerte internasjonal samsvarsbenchmark for autonome maritime tvillinger med tabell og læringsaktiviteter, og synkroniserte plan-, tavle- og kildefiler for pilotering mot fjernoperasjonssentre. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-74 | Kapittel 3 | FERDIG – Dokumenterte dataspace-sandkasse for kommunal byggdrift med stegvis arbeidsflyt, indikatorpanel og læringsoppgaver som kobler kapittel 3 til kvalitetsjournalen i kapittel 6 og gevinstplanen i kapittel 7. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
