@@ -191,6 +191,41 @@ Et praktisk undervisningsopplegg kan la studentgrupper kombinere pasientlogistik
 
 Ved å bruke én rapporteringspakke på tvers av caser får studentene erfaring med hvordan organisasjoner kan utnytte samme styringsmodell på tvers av sektorer uten å miste domenespesifikke krav av syne. Erfaringene mates tilbake til planfilen i Kapittel~7 og til støttefilene for undervisning slik at kommende kull kan bygge videre.
 
+\section{Samvirkeøvelser for dataspace-beredskap}
+Tverrsektorielle øvelser blir et krav når digitale tvillinger skal støtte nasjonal beredskap. Totalberedskapskommisjonen understreker at felles situasjonsforståelse og deling av beslutningsdata må øves jevnlig for å tåle samtidige kriser.\citep{dsb2023totalberedskap} I praksis betyr det at tvillingteamet må planlegge samvirkeøvelser som kombinerer dataspace-kontrakter, kontrolltårn og kliniske beslutningsstøtter i ett scenario. Direktoratet for samfunnssikkerhet og beredskap anbefaler at nasjonale samvirkeøvelser tester både teknologi og styring, med tydelige evalueringskriterier for datautveksling, varslingsrutiner og læringssløyfer.\citep{dsb2024nser} Kommunesektoren løfter samtidig behovet for å koble lokale beredskapsplaner til slike øvelser slik at kommunale og statlige aktører kan dele måledata, tiltakslogger og beslutningsgrunnlag i sanntid.\citep{ks2022samhandling}
+
+\subsection{Scenario og roller}
+Et undervisningsopplegg kan bygge på et 24-timers scenario der et ekstremvær påvirker både strømforsyning og helsetjenester. Tabellen nedenfor viser et forslag til struktur, roller og verktøy som brukes i hvert trinn. Scenarioet kan integreres i kurslaboratoriet ved å gjenbruke kontrolltårn-panelet fra energicaset, pasientlogistikkpakken og kvalitetsjournalen.
+
+\begin{table}[ht]
+    \centering
+    \caption{Forslag til samvirkeøvelse for dataspace-baserte høyrisikotvillinger}
+    \label{tab:samvirkeovelse}
+    \begin{tabular}{|p{2.8cm}|p{5.0cm}|p{4.8cm}|p{3.0cm}|}
+        \hline
+        \textbf{Fase} & \textbf{Aktivitet og dataflyt} & \textbf{Tvilling- og styringsverktøy} & \textbf{Ansvarlig(e)} \\
+        \hline
+        Varsling (0--2 t) & Energikontrolltårn sender varsler via dataspace til helsesektorens operasjonssenter; hendelser tagges med prioritet og lokasjon. & Hendelsesjournal, dataspace-kontrakter, varslingsdashbord & Vaktleder energi, beredskapskoordinator helse \\
+        \hline
+        Analyse (2--8 t) & Simulerer nettkapasitet og pasientstrøm; vurderer fallback-modeller og ressursbehov. & Tvillingmodeller fra Kapittel~5, kvalitetsjournal, indikatorpanel & Modellansvarlig, klinisk fagansvarlig \\
+        \hline
+        Tiltak (8--16 t) & Aktiverer mobile aggregater, omdirigerer pasienter, etablerer felles informasjonslinje; logger avvik og beslutninger. & Tiltakslogg, styringsmodell fra Kapittel~7, beslutningsstøtte & Programleder tvilling, kommunikasjonsteam \\
+        \hline
+        Evaluering (16--24 t) & Samler læringspunkter, oppdaterer datasett og modellparametre, utarbeider rapport til tilsyn. & Revisjonsmodul, indikatoranalyse, rapporteringspakke & Compliance-team, fagfellepanel \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Evalueringskriterier}
+For å sikre at øvelsen dekker både tekniske og organisatoriske mål, anbefales tre evalueringskriterier:
+\begin{enumerate}
+    \item \textbf{Datatilgjengelighet og kvalitet:} Måle hvor raskt datasett åpnes i dataspace og om metadata oppfyller kravene fra Kapittel~3, inkludert logging av etiske og juridiske avklaringer.
+    \item \textbf{Samordnet beslutningstaking:} Evaluere hvor godt tiltak i energi- og helsesektoren harmoniseres med styringssløyfene i Kapittel~7, samt hvordan menneskelig kontroll dokumenteres.
+    \item \textbf{Læringssløyfe og rapportering:} Kontrollere at kvalitetsjournalen oppdateres med forbedringstiltak og at rapporteringspakken i dette kapittelet brukes til å informere tilsyn og samarbeidspartnere.
+\end{enumerate}
+
+Når øvelsen er gjennomført, bør resultatene sammenlignes med tidligere scenarier i fagfelleloggen og brukes til å oppdatere indikatorpanelene i Kapittel~5 og casene i Kapittel~8. En slik iterativ praksis gir studentene erfaring med hvordan tverrsektoriell beredskap kan støttes av digitale tvillinger og dataspace-løsninger.
+
 \section{Bærekraftsrapportering og klimarisiko i valideringsløpet}
 Valideringsarbeidet må også håndtere kravene til bærekraft og klimarisiko som følger av EUs taksonomi og den nye rapporteringsplikten i CSRD.\citep{eu2020taxonomy,eu2022csrd} For digitale tvillinger betyr det å dokumentere hvordan modellresultater påvirker miljø- og klimamål, og hvordan kontrollsløyfene bidrar til å redusere negativ påvirkning. De europeiske bærekraftsstandardene (ESRS) beskriver eksplisitte indikatorer for klima, ressurser og sirkularitet, og krever at virksomheten kan spore beregningsgrunnlaget frem til datakilder og beslutninger.\citep{efrag2023esrs} Dermed må kvalitetsjournalen og rapporteringspakken i dette kapittelet suppleres med bærekraftsdata, og indikatorpanelet fra Kapittel~5 bør utvides med nøkkeltall som måles i samme DevOps-prosess som presisjon og sikkerhet.
 
