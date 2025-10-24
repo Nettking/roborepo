@@ -124,6 +124,35 @@ Som supplement til fjernvarmecaset beskrives en beredskapsøvelse for et norsk p
 
 I støttefilen \textit{kap04-immersiv-case.md} er det lagt inn sjekklister for hvordan en slik øvelse kan gjennomføres i masterkurs, inkludert roller, datakilder og nødvendige simulatorer. Figur~\ref{fig:kap04-beredskap-case} reserverer plass til en illustrasjon som viser koblingen mellom tvilling, AR/VR-grensesnitt og beredskapsprosesser.
 
+\subsection{Simuleringscase: Sirkulær avfallslogistikk i Oslo-regionen}
+Kommuner som Oslo har satt ambisiøse mål for ombruk, utslippskutt og materialgjenvinning. En digital tvilling som modellerer avfallsstrømmer, transport og sorteringskapasitet gjør det mulig å teste tiltak på tvers av renovasjonsetat, bygg- og anleggsaktører og gjenbruksnæringen \citep{oslo2023sirkularstrategi,ren2024ressursdataplattform}. Tvillingen kombinerer diskret hendelsessimulering for innsamlingsruter, agentbaserte modeller for brukeratferd og lineær programmering for å balansere kapasitet i sorterings- og materialstrømmer. Resultatene kobles til indikatorpanelet i kapittel~7 slik at effekter på klimaregnskap og ombruk kan vurderes helhetlig.
+
+Caset følger tre faser som er direkte anvendbare i kurslaboratoriet:
+\begin{enumerate}
+    \item \textbf{Datagrunnlag og modellgrenser:} Studentgrupper kartlegger datakilder fra sensorer i innsamlingskjøretøy, fyllingsgrad i containere, byggesøknadsdata og materialsertifikater. Informasjonen kobles til dataspace-pakker fra kapittel~3 slik at tilgangsstyring og kvalitetssikring ivaretas \citep{norsus2022materialflyt}.
+    \item \textbf{Scenario- og tiltakstest:} Gruppene designer tiltak som endret ruteplanlegging, dynamisk prising av tjenesten eller økt sorteringsgrad i byggeprosjekter. Simuleringsmotoren beregner kapasitetsutnyttelse, transportutslipp og logistikkkostnader.
+    \item \textbf{Rapportering og gevinst:} Resultatene eksporteres til tiltaksloggen i kapittel~7 og visualiseres i dashboard som kombinerer indikatorer for klimagassreduksjon, kundetilfredshet og ressursgjenvinning. Arbeidsmetoden dokumenteres i lærerveiledningen slik at den kan gjenbrukes i tverrfaglige prosjekter.
+\end{enumerate}
+
+Tabell~\ref{tab:kap04-avfall-simulering} viser hvordan dataflyter og indikatorer struktureres gjennom casearbeidet. Oppsettet fungerer både som spesifikasjon til teknologiteamet og som rapporteringsmal når caset skal fagfellevurderes.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{0.22\textwidth}p{0.40\textwidth}p{0.30\textwidth}}
+        \toprule
+        \textbf{Fase} & \textbf{Viktige dataflyter} & \textbf{Nøkkelindikatorer}\\
+        \midrule
+        Innsamling & Sensorlogger fra kjøretøy, GPS-spor, fyllingsgrad fra containere og mottaksbekreftelser. & Utslipp per tonn innsamlet avfall, andel overfylte beholderhendelser, punktlighet i ruteplan.\\
+        Sortering og ombruk & Materialstrømmer fra sorteringsanlegg, kvalitetssjekk av fraksjoner, sporbarhet i bygg- og anleggsprosjekter. & Materialgjenvinningsgrad, ombruksandel av byggematerialer, kvalitetsavvik registrert i dataspace.\\
+        Markeds- og logistikkstyring & Avrop til sekundærmarked, lagerstatus for ombrukslagre og transportplan mellom anlegg. & Leveringstid til sekundærmarked, inntekt per tonn gjenvunnet materiale, CO$_2$-ekvivalenter spart mot referanse.\\
+        \bottomrule
+    \end{tabular}
+    \caption{Data- og indikatorstruktur for sirkulær avfallslogistikk-case i Oslo-regionen.}
+    \label{tab:kap04-avfall-simulering}
+\end{table}
+
+For å sikre at caset knyttes til vurderingskriteriene i kapittelet skal studentgruppene levere en simuleringsteknisk logg, et indikatorpanel og forslag til gevinstoppfølging. Loggen beskriver antakelser og parameterverdier, mens indikatorpanelet refererer til bærekrafts- og gevinstmål i kapittel~7. Gevinstforslaget skal inneholde tiltak for å skalere løsningen fra pilot til fullskala drift, inkludert forslag til datadeling og styringsmekanismer med renovasjonsetat, bydeler og private entreprenører. Dermed demonstreres hvordan digital tvilling kan brukes for å prioritere investeringer i infrastruktur og teknologi som støtter sirkulærøkonomiske mål.
+
 \subsection{Co-design for menneske--maskin-samhandling}
 Menneske--maskin-samhandling i digitale tvillinger blir mest effektiv når operatører, modellutviklere og beslutningstakere utformer arbeidsflater sammen. Et strukturert co-design-løp sikrer at simuleringer og visualiseringer understøtter både situasjonsforståelse og læring. Erfaringene fra norske kontrollrom viser at denne typen samarbeid må starte før teknologien implementeres, slik at modellforvaltningsrutiner og beslutningslogg bygges inn i løsningene \citep{kongsberg2023kognitwin,statnett2024kontrolltarn}.
 

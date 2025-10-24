@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-103 | Kapittel 4 | FERDIG – Dokumenterte sirkulær avfallslogistikk-case med faseoppsett, indikator-tabell og undervisningsopplegg for masterkurs. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-102 | Kapittel 4 | FERDIG – Dokumenterte havbruksscenario som kombinerer simulering, biosikkerhet og dataspace-styring med arbeidsflyt for masterkurset. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-101 | Kapittel 2 | FERDIG – La inn sensitivitetstabell, indikatorpakke og arbeidsflyt for parameterprioritering i flerfidelitetsmodeller og oppdaterte plan-, tavle- og kildefiler for koordinert oppfølging. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-100 | Kapittel 4 | FERDIG – Utvidet fjernvarmecaset med termisk energilager, indikatorpakke og studentworkshop som kobler dataspace, validering og gevinststyring. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
