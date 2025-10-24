@@ -124,6 +124,44 @@ Som supplement til fjernvarmecaset beskrives en beredskapsøvelse for et norsk p
 
 I støttefilen \textit{kap04-immersiv-case.md} er det lagt inn sjekklister for hvordan en slik øvelse kan gjennomføres i masterkurs, inkludert roller, datakilder og nødvendige simulatorer. Figur~\ref{fig:kap04-beredskap-case} reserverer plass til en illustrasjon som viser koblingen mellom tvilling, AR/VR-grensesnitt og beredskapsprosesser.
 
+\subsection{Co-design for menneske--maskin-samhandling}
+Menneske--maskin-samhandling i digitale tvillinger blir mest effektiv når operatører, modellutviklere og beslutningstakere utformer arbeidsflater sammen. Et strukturert co-design-løp sikrer at simuleringer og visualiseringer understøtter både situasjonsforståelse og læring. Erfaringene fra norske kontrollrom viser at denne typen samarbeid må starte før teknologien implementeres, slik at modellforvaltningsrutiner og beslutningslogg bygges inn i løsningene \citep{kongsberg2023kognitwin,statnett2024kontrolltarn}.
+
+Et praktisk opplegg for masterstudenter kan organiseres som en firedagers sprint der hvert steg bygger videre på simuleringscasene i kapittelet:
+\begin{enumerate}
+    \item \textbf{Problemforståelse:} Kartlegg kritiske beslutninger, datakilder og aktørroller. Bruk sjekklistene for dataspace og hendelseshåndtering fra kapittel~3 og kapittel~6 for å avdekke avhengigheter.
+    \item \textbf{Konseptskisser:} Lag grove prototyper av skjermer, AR-overlegg og indikatorpanel. Prototypene bør referere til scenarioene som beskrives i fjernvarme- og beredskapscasene.
+    \item \textbf{Simuleringskobling:} Kjør utvalgte scenarier og test hvordan resultatene kan publiseres til immersive grensesnitt. Oppdater modelljournalen og tiltaksloggen slik at funn kan evalueres i etterkant.
+    \item \textbf{Evaluering og læringssløyfe:} Samle operatør- og studentobservasjoner, mål effekten mot indikatorbiblioteket og noter forbedringer som skal tas videre til planleggingen i kapittel~7.
+\end{enumerate}
+
+Tabell~\ref{tab:kap04-codesign} beskriver hvilke leveranser som bør komme ut av hvert steg. Den brukes som mal for studentrapporter og som forankring når samarbeidet med operatørmiljøer skal dokumenteres.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{0.18\textwidth}p{0.38\textwidth}p{0.32\textwidth}}
+        \toprule
+        \textbf{Fase} & \textbf{Fokus} & \textbf{Eksempel på leveranser}\\
+        \midrule
+        Problemforståelse & Beskrive arbeidsoppgaver, risiko og informasjonsbehov for nøkkelroller. & Oppgavetabell med ansvar og samhandlingspunkter som deles med kvalitetsjournalen i kapittel~6.\\
+        Konseptskisser & Definere brukerreiser og skisser for skjermer, AR-briller og dashboards. & Storyboard for kontrollromsflater og liste over indikatorer som må være synlige for ulike roller.\\
+        Simuleringskobling & Integrere modellresultater med visualisering og samhandlingslogg. & Tekniske koblingsbeskrivelser, API-oversikt og testlogg fra scenarioene i dette kapittelet.\\
+        Evaluering & Målsette læringsutbytte og forbedringsbehov. & Evalueringsnotat med indikatorresultater, tiltaksforslag og referanser til gevinstplanen i kapittel~7.\\
+        \bottomrule
+    \end{tabular}
+    \caption{Leveranser fra co-design-sprint for menneske--maskin-samhandling.}
+    \label{tab:kap04-codesign}
+\end{table}
+
+For å sikre at samhandlingen gir målbar effekt, bør indikatorer for både operativ ytelse og læring registreres fortløpende. Følgende måleparametere kan brukes som tillegg til indikatorbiblioteket for simuleringer:
+\begin{itemize}
+    \item \textbf{Beslutningskvalitet:} Andel tiltak som følger definerte prosedyrer og leverer forventet effekt i simuleringen. Dette kobles direkte til kvalitetsjournalen og tiltaksloggene i kapittel~6 og kapittel~7.
+    \item \textbf{Situasjonsforståelse:} Resultater fra korte kunnskapstester før og etter øvelsen, samt responstid når kritiske alarmer trigges i scenarioene \citep{dsb2023ovelser}.
+    \item \textbf{Læringsopplevelse:} Selvrapporterte vurderinger fra operatører og studenter om hvor godt arbeidsflaten støtter samarbeid, dokumentert i lærerveiledningen.
+\end{itemize}
+
+Ved å dokumentere co-design-arbeidet på denne måten kan kapittelet kobles tettere til læringsmålet om å evaluere simuleringsoppsett, samtidig som studentene trener på å designe helhetlige samhandlingsløsninger. Leveransene fungerer også som input til plan- og porteføljearbeidet i kapittel~7, og gir begrunnelser når nye investeringer eller prosessendringer skal vurderes.
+
 \begin{figure}[htbp]
     \centering
     % Alt-tekst: kap04-beredskap-case-v1.alt.md
