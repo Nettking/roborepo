@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-29: Beskrev samsvarstesting i digitalt laboratorieløp med testregime-tabell i Kapittel 2 og oppdaterte plan-, tavle- og statusfiler. (`chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-28: Utviklet seksjon om sirkulære materialstrømmer og klimaregnskap i Kapittel 3 med datasett-tabell og ombrukslab-case, og oppdaterte plan-, tavle- og kildefiler. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 
 - `FERDIG` – Leveranse for DT-27: Beskrev driftsgodkjenning og modellvedlikehold i Kapittel 6 med godkjenningspunkttabell, og oppdaterte plan-, tavle- og kildefiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
