@@ -48,6 +48,47 @@ Flere norske nettselskaper etablerer kontrolltårn for å kombinere feltdata, tv
 \end{enumerate}
 Kontrolltårn-caset forsterker koplingen mellom modellvalidering, cybersikkerhet og organisasjonsdesign. Studentene skal levere både teknisk dokumentasjon og en kort tiltakslogg for oppfølging i styringssystemet.
 
+\section{Scenariobasert stresstesting for hydrogenknutepunkt}
+Utbygging av hydrogenknutepunkt i Norge kombinerer produksjon, lagring, bunkring og distribusjon til maritim og landbasert transport.\citep{enova2024hydrogenknutepunkt} Digitale tvillinger brukes for å dimensjonere anlegget, koordinere logistikk og dokumentere sikkerhetstiltak, men komplekse verdikjeder gjør at både energiselskaper, nettoperatører og havner må samordne risikobilde og beredskap.\citep{gassco2023hydrogen,dnv2023hydrogenforecast} For å sikre at modellene tåler forstyrrelser må kapittel 4 sitt hydrogenknutepunkt-case suppleres med en strukturert stresstest i valideringsløpet.
+
+En scenariobasert stresstest følger fire gjentakende aktiviteter:
+\begin{enumerate}
+    \item \textbf{Velg risikoscenarier:} Kombiner forsyningsavbrudd, produksjonsavvik og hendelser i havna for å dekke både tekniske og operasjonelle risikoer. Bruk DNV sitt veikart for å identifisere sannsynlige utviklingstrekk frem mot 2030.\citep{dnv2023hydrogenforecast}
+    \item \textbf{Konfigurer modellparametere:} Hent lastprofiler, trykkgrenser og leveranseavtaler fra kapittel 4-modellen og koble dem til indikatorer i kontrolltårn-panelet. Hver simulering skal dokumenteres med parameterfil og referansesporing i kvalitetsjournalen.
+    \item \textbf{Planlegg målepunkter:} Definer hvilke KPI-er som må oppdateres i sanntid for å vise effekten av stresset, for eksempel fyllingsgrad i lagertanker, antall sikkerhetsventil-aktiveringer og tidsbruk i logistikkjeden.
+    \item \textbf{Evaluér respons og tiltak:} Sammenlign modellresultater med beredskapsplaner fra nettselskap, havn og produsent. Tildel oppfølgingstiltak og risikoaksept i tiltaksloggen slik at erfaringene synkroniseres med leverandør- og styringsprosessene.
+\end{enumerate}
+
+Tabell~\ref{tab:hydrogenstress} viser hvordan scenariene kan struktureres for undervisnings- og pilotformål. Oppsettet knytter modellparametere, indikatorer og ansvarlige funksjoner sammen, slik at stresstesten blir et felles planleggingsverktøy for aktørene i verdikjeden.
+
+\begin{table}[ht]
+    \centering
+    \caption{Scenarioportefølje for stresstesting av hydrogenknutepunkt}
+    \label{tab:hydrogenstress}
+    \begin{tabular}{|p{3.2cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Scenario} & \textbf{Modellparametere} & \textbf{Nøkkelindikatorer} & \textbf{Primært ansvar} \\
+        \hline
+        Strømavbrudd i elektrolysør & Reduser tilgjengelig effekt med 60\%, aktiver backup fra nettet og tidsforskyv produksjon & Leveranserate til fyllestasjoner, energikostnad per kg, tidsbruk på sikker nedstenging & Kraftsystemoperatør + produksjonsleder \\
+        \hline
+        Leveransehopp fra maritim kunde & Doble bunkringsvolum i tre timer, prioriter terminalplass og transportlogistikk & Ventetid for fartøy, lagernivå i buffer, antall samtidige sikkerhetskontroller & Havnedirektør + logistikkkoordinator \\
+        \hline
+        Sensorfeil i lagersystem & Sett trykksensorer til \pm{}10\% avvik, simuler datatap i 15 minutter & Antall manuelle inspeksjoner, trigger for failsafe-ventiler, responstid i kontrolltårn & Driftstekniker + sikkerhetsingeniør \\
+        \hline
+        Regional transportstans & Steng hovedvei i fire timer, aktiver alternative distribusjonsruter og ekstra lagring & Beholdning ved kunde, utslippsnivå fra ekstra logistikk, antall eskaleringer til kriseledelse & Logistikksjef + beredskapsleder \\
+        \hline
+    \end{tabular}
+\end{table}
+
+For å gjøre stresstesten praktisk anvendbar bør teamet bruke samme rapporteringspakke som for kontrolltårn-caset: indikatorer skrives til styringspanelet, hendelser loggføres i kvalitetsjournalen og beslutninger refereres til i planfilen. Workshopene kan organiseres i tre faser:
+\begin{itemize}
+    \item \textbf{Forberedelse:} Fordel rollene fra Tabell~\ref{tab:hydrogenstress} til student- og industrideltakere, og oppdater tiltaksloggen med forventede observasjoner.
+    \item \textbf{Gjennomføring:} Kjør simuleringene i kapittel 4-plattformen, og la deltakerne registrere tiltak, avvik og kommunikasjon i sanntid via kontrolltårn-panelet.
+    \item \textbf{Etterarbeid:} Evaluér data fra stresstesten, oppdater risikoaksept og beredskapsplaner, og del en kort rapport i fagfellelogg og planfil. Erfaringene skal også mates inn i leverandørkvalifiseringen for å vise hvordan krav håndteres i praksis.
+\end{itemize}
+
+Koblingen mellom simulering, indikatorer og styringssystem gjør at hydrogenknutepunkt-caset blir en bro mellom kapittel 4 og 6. Stresstesten viser samtidig hvordan digital tvilling, dataspace og beredskap må spille sammen for å sikre trygg utrulling av hydrogeninfrastruktur i Norge.
+
 \section{Kontinuerlig modellovervåking for kommunale tvillinger}
 Kommunale digitale tvillinger for vann, avløp og byplanlegging er avhengige av kontinuerlig overvåking for å oppdage avvik tidlig og koordinere beredskapstiltak. \citet{dsb2022beredskap} fremhever at kommunene må dokumentere helhetlig ROS-analyse, varslingsrutiner og øvingsplaner, mens \citet{nve2022kommunal} anbefaler at overvåkingen knyttes til konkrete hendelsesnivåer for flom og skred. Når en digital tvilling integrerer sensorstrømmer, simuleringer og hendelseslogg, må disse kravene oversettes til automatiserte kontroller slik at driftsorganisasjonen får varsler i tide. Prosjekter som det digitale overvannslaboratoriet utviklet av Asplan Viak viser hvordan 3D-bydata og sanntidssensorer kan brukes til å modellere kapasitet, responstid og effekten av blågrønne tiltak.\citep{asplan2023overvannslab}
 
