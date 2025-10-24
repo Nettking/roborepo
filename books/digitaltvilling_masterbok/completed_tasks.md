@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-12: Dokumenterte dataspace-arkitektur, beredskaps- og kontinuitetsplaner samt bærekraftsdashboard i Kapittel 3, registrerte nye kilder og oppdaterte plan- og statusfiler. (`chapters/kapittel03-data.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-APP-02: Beriket ordlisten med forkortelser, referanser og tematiske tabeller for styring, modellering og infrastruktur, oppdaterte `plan.md` og registrerte nye kilder i `support/referanser.bib`. (`support/ordliste.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-APP-01: Kategoriserte ressursbanken etter modenhetsnivå, beskrev casescenarier og oppdaterte plan- og statusfiler (`support/appendiks-ressurser.tex`, `plan.md`, `task_queue.md`).
 - `FERDIG` – Leveranse for DT-18: Utvidet Kapittel 9 med strategisk veikart, finansieringstabell og forskningsdesign-eksempler, registrerte nye kilder i `support/referanser.bib`, oppdaterte `plan.md` og synkroniserte arbeidslisten.

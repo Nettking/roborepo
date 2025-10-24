@@ -25,12 +25,12 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 | --- | --- | --- | --- | --- | --- | --- |
 | DT-04 | Høy | Kapittel 4 | Reåpnet – ferdigstille immersivt beslutningsrom og laboratoriepakke for simulering. | Storyboard for `kap04-immersiv-beslutning-v1` og labbeskrivelse. | `support/illustrasjonsplan.md`, `support/notater/kap04-immersiv-case.md` | PÅGÅR |
 | DT-05 | Høy | Kapittel 5 | Reåpnet – utvide analyseeksempel og algoritme-/rubrikkstøtte for AI-lab. | Storyboard for `kap05-operator-coach-v1`, algoritmematrise og rubrikknotat. | `support/illustrasjonsplan.md`, `support/notater/kap05-algoritmematrise-utvidelse.md` | PÅGÅR |
-| DT-12 | Kritisk | Kapittel 3 | Utvide data- og integrasjonskapittelet med dataspace-arkitektur, beredskapsplan og bærekrafts-dashboard. | Revidert kapittelstruktur, nye seksjoner og tilhørende illustrasjonsbestillinger. | `plan.md` (Kapittel 3), `support/illustrasjonsplan.md`, `support/oppgavetavle.md` | PÅGÅR |
 
 ## Ferdige oppgaver
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-12 | Kapittel 3 | FERDIG – La inn dataspace-arkitektur, beredskaps- og kontinuitetsplaner samt bærekraftsdashboard, og oppdaterte statusfiler. | `chapters/kapittel03-data.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-APP-02 | Appendiks – Begrepsliste | FERDIG – Beriket ordlisten med forkortelser, referanser og tematiske tabeller for styring, modellering og infrastruktur. | `support/ordliste.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-APP-01 | Appendiks – Ressurser | FERDIG – Kategoriserte ressursbanken etter modenhetsnivå og beskrev casescenarier for bruk i undervisning og prosjektarbeid. | `support/appendiks-ressurser.tex`, `plan.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-18 | Kapittel 9 | FERDIG – Skalerte fremtidstrendene med veikart, finansieringstabell og forskningsdesign-eksempler. | `chapters/kapittel09-fremtid.tex`, `support/referanser.bib`, `plan.md`, `completed_tasks.md`, `task_queue.md` |
