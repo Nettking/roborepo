@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-BUG-07: Aktivert `babel` med norsk språk i `main.tex` slik at kontrollsekvensene `\aa`, `\ae` og `\o` tolkes korrekt og kapittel 3 kan kompileres uten stoppfeil; oppdaterte `task_queue.md` og `plan.md` for å synliggjøre endringen.
 - `FERDIG` – Leveranse for DT-BUG-06: Erstattet udefinerte `\n`-linjeskift med `\\` i `support/figurer/kilder/kap02-politikk-ramme-v1.tikz`, bekreftet at hovedmanuset har fargedefinisjonene og dokumenterte status i `task_queue.md` og `plan.md` for å sikre grønn kompilering.
 - `FERDIG` – Leveranse for DT-BUG-05: La til `\usepackage{textcomp}` i `main.tex` slik at `\textminus` fungerer med T1-koding og kapittel 2 kan kompileres uten stopp; oppdaterte `task_queue.md` og `plan.md` for å speile statusen.
 - `FERDIG` – Leveranse for DT-BUG-04: Rettet figurstiene i kapittel 1–3 slik at `main.tex` finner TikZ-filene i `support/figurer/kilder/`, oppdaterte plan- og arbeidsstatusene og bekreftet at testen `test_latex_referanser.py` passerer.
