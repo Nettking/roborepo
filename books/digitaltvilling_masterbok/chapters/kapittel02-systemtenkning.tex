@@ -364,6 +364,55 @@ Samsvarstesting bør avsluttes med en kort beslutningspakke som viser hva som er
 må følge modellen inn i produksjon. Dokumentasjonen gjør det enklere å dele erfaringer mellom laboratorier, bruke resultatene i
 fagfellelogg og koble forbedringspunkter til tiltaksplanen i kapittel~6.
 
+\section{Systemdynamiske beslutningssløyfer for beredskap og kapasitet}
+Norske virksomheter må håndtere samtidige krav til beredskap, kapasitet og bærekraft når digitale tvillinger brukes i drift. Systemdynamiske modeller gjør det mulig å koble ressursdisponering, hendelseshåndtering og læringssløyfer i én helhet slik at ledelsen får et felles beslutningsgrunnlag.\citep{dsb2023nrb} Når slike modeller etableres i kapittel~2, får teamet et rammeverk som senere kan knyttes til valideringsjournalen i kapittel~6 og gevinstplanen i kapittel~7.
+
+\subsection{Kritiske påvirkningsfaktorer}
+En systemdynamisk analyse starter med å identifisere hvilke variabler som driver kapasitet og risiko over tid:
+\begin{itemize}
+    \item \textbf{Belastning på infrastruktur:} Kombiner produksjons- eller pasientvolum med vær- og hendelsesdata for å beregne hvilke scenarier som presser kapasiteten.\citep{helsedir2023nasjonalberedskap}
+    \item \textbf{Tilgjengelig kompetanse og ressurser:} Modellér hvor raskt vaktlag, beredskapsstyrker og leverandører kan mobiliseres, og hvordan fravær påvirker responstiden.
+    \item \textbf{Styringssignaler:} Beskriv hvordan beslutninger fra beredskapsstab, kontrolltårn eller politiske myndigheter endrer prioriteringer og investeringsløp.
+    \item \textbf{Læringsmekanismer:} Knytt hendelseslogger, øvelser og fagfelleevalueringer til justering av prosedyrer og indikatorgrenser.
+\end{itemize}
+
+Tabell~\ref{tab:kap02-beredskapssløyfer} viser et forslag til hvordan variablene kobles i praktiske beslutningssløyfer. Oversikten hjelper studentgrupper med å tydeliggjøre hvilke datastrømmer som må være på plass før modellen tas i bruk.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Eksempel på systemdynamiske sløyfer for beredskap og kapasitet.}
+    \label{tab:kap02-beredskapssløyfer}
+    \begin{tabular}{p{0.24\textwidth}p{0.32\textwidth}p{0.18\textwidth}p{0.20\textwidth}}
+        \toprule
+        \textbf{Sløyfe} & \textbf{Beskrivende mekanisme} & \textbf{Sentrale datakilder} & \textbf{Styringsartefakter}\\
+        \midrule
+        Belastningsbalanse & Økt etterspørsel øker ressursuttak; tiltak i kontrolltårn demper belastningen og frigjør kapasitet for kritiske tjenester. & Sanntidsmålinger, hendelseslogger, værdata & Operativ tiltakslogg, scenarioark, KPI-panel fra kapittel~6.\\
+        Kompetanse og utholdenhet & Læringsøkter og øvelser styrker kompetanse, som reduserer behovet for ad hoc-ressurser og forbedrer responstid. & Øvingslogg, kompetanseregister, HR-data & Opplæringsplan, beredskapsplan og gevinsttabell i kapittel~7.\\
+        Etterlevelse og tillit & Revisjoner og tilsyn avdekker avvik; forbedringstiltak forbedrer compliance og øker tiltro til modellen. & Revisjonsrapporter, kvalitetsjournal, avvikssystem & Valideringsjournal, regulatoriske sjekklister og risikoregister.\\
+        Læringssløyfe for investeringer & Dokumenterte effekter fra øvelser styrer hvilke investeringer som prioriteres i neste budsjett. & Kostnadsdata, målt effekt, porteføljelogger & Investeringsbeslutningsgrunnlag, gevinstplan og kapittel~7 sin tiltakslogg.\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Fra modell til operativ styring}
+Når sløyfene er definert, bør teamet koble dem til eksisterende styringsfora:
+\begin{enumerate}
+    \item \textbf{Kartlegg beslutningspunkter:} Identifiser hvilke møter, rapporter eller dashboards som skal få innsikt fra modellen.\citep{dsb2023nrb}
+    \item \textbf{Definer terskler:} Sett målverdier og alarmgrenser som automatisk utløser handling i beredskapsplanen og gevinstoppfølgingen.
+    \item \textbf{Planlegg datatilgang:} Avklar hvordan datasett fra helse, energi eller transport skal deles i tråd med dataspace-prinsipper fra kapittel~3.
+    \item \textbf{Etabler evalueringssløyfe:} Beskriv hvordan effekten av tiltak måles og mates tilbake i modelljournalen og tiltaksloggen.
+\end{enumerate}
+
+\subsection{Oppgave: modeller en tverrsektoriell øvelse}
+Som arbeidsoppgave kan studentgrupper modellere en øvelse som kobler et energiselskap og en helseinstitusjon. Start med å beskrive ressursflyten når et langvarig strømbrudd oppstår, og hvordan backup-løsninger aktiveres. Deretter skal gruppen:
+\begin{itemize}
+    \item definere indikatorer for tilgjengelig kapasitet, responstid og pasientsikkerhet,
+    \item beskrive hvilke data som må deles gjennom dataspace-avtaler før hendelsen,
+    \item modellere hvordan beslutninger eskaleres fra lokale team til regional beredskapsstab,
+    \item foreslå hvordan læringspunkter dokumenteres i modelljournal, valideringsjournal og gevinstplan.
+\end{itemize}
+Resultatet brukes som grunnlag i kapitteloppgaven der teamet skal planlegge en faktisk øvelse sammen med partnerne i kapittel~6 og kapittel~8.
+
 \section{Modelldokumentasjon og styring}
 God dokumentasjon sikrer at digitale tvillinger kan forvaltes over tid og at beslutninger er etterprøvbare. ISO~23247 beskriver hvordan modellbeskrivelser, datakataloger og styringsrutiner bør struktureres for produksjonsnære tvillinger \citep{iso23247-2021}. Ved å etablere en felles dokumentasjonsprosess blir det enklere å dele modeller på tvers av fagmiljø og følge opp krav fra myndigheter og industripartnere.
 
