@@ -18,7 +18,6 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger |
 | --- | --- | --- | --- | --- | --- |
-| DT-SUP-01 | Middels | Støtte | Utarbeid maler for prosjektkontrakt og koble rubrikker til kommende caseutvidelser. | Malutkast og oppdatert lærerveiledning. | `plan.md` (Støtte), `support/larerveiledning.tex` |
 | DT-13 | Høy | Kapittel 4 | Integrere AR/VR-baserte beslutningsstøtteeksempler, nye simuleringscase og vurderingsopplegg. | Utvidet kapittel med casebeskrivelser, storyboard-notater og figurreferanser. | `plan.md` (Kapittel 4), `support/illustrasjonsplan.md` |
 | DT-14 | Høy | Kapittel 5 | Legge inn generative/edge-orienterte læringssløyfer, vurderingsrubrikker og nye industrireferanser. | Oppdatert manus med nye delkapitler og rubrikksammendrag. | `plan.md` (Kapittel 5), `support/larerveiledning.tex` |
 | DT-15 | Middels | Kapittel 6 | Forsterke innhold om standarder, usikkerhetsanalyser og kontrolltårn-case. | Utvidet kapitteltekst + sjekklister for NIS2/IEC 62443. | `plan.md` (Kapittel 6), `support/illustrasjonsplan.md` |
@@ -40,6 +39,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-SUP-01 | Støtte | FERDIG – Utarbeidet prosjektkontraktmal som kobler rubrikker til kommende caseutvidelser og oppdaterte lærerveiledningen og planstatus for bruken. | `support/maler/prosjektkontrakt.tex`, `support/larerveiledning.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md` |
 | DT-BUG-12 | Bibliografi | FERDIG – Normaliserte norske spesialtegn i referansepostene for DNV og Avinor slik at BibTeX ikke stopper på ugyldige kontrollsekvenser, og synkroniserte statusfilene. | `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`, `plan.md` |
 | DT-BUG-11 | Bibliografi | FERDIG – Normaliserte BibTeX-typer, la til forfatterfelt for standarder og fjernet duplikatet for `eu2022nis2` slik at `support/referanser.bib` bygger uten advarsler. | `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`, `plan.md` |
 | DT-BUG-10 | Kompilering | FERDIG – Fjernet TikZ-illustrasjoner i kapittel 1–3, erstattet dem med tekstlige beskrivelser og oppdaterte plan- og statusfiler slik at manus ikke er avhengig av grafikk for å bygge. | `chapters/kapittel01-introduksjon.tex`, `chapters/kapittel02-systemtenkning.tex`, `chapters/kapittel03-data.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
