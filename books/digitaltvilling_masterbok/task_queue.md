@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-98 | Kapittel 4 | FERDIG – Dokumenterte hydrogenknutepunkt-scenario med datastrømmer, fasetabell og indikatorpakke som binder simuleringene til kapittel 6 og 7, og oppdaterte plan- og tavlefiler for pilotering med energi- og beredskapsteam. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-97 | Kapittel 4 | FERDIG – Etablerte seksjon om kommunal klimatilpasning med overvannsmodellering, scenariotabell og undervisningsopplegg, og oppdaterte plan- og tavlefiler for koordinert pilotering. | `chapters/kapittel04-simulering.tex`, `plan.md`, `task_queue.md`, `support/oppgavetavle.md`, `completed_tasks.md` |
 | DT-96 | Kapittel 5 | FERDIG – Dokumenterte kommunale læringssløyfer for byggtvillinger med arbeidsark som binder AI-komponenter til styringsartefakter og indikatorer. | `chapters/kapittel05-ai.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-95 | Kapittel 3 | FERDIG – Etablerte testregime for API-katalog og dataprodukter med fire kontrolltrinn, sjekkliste og laboratoriekoblinger, og oppdaterte plan- og tavlefiler for koordinert kvalitetssikring før produksjon. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |

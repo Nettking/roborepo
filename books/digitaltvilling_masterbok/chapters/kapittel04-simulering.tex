@@ -170,6 +170,43 @@ Ved å dokumentere co-design-arbeidet på denne måten kan kapittelet kobles tet
     \label{fig:kap04-beredskap-case}
 \end{figure}
 
+\section{Hydrogenknutepunkt for energi- og beredskapssamarbeid}
+Etablering av hydrogenknutepunkt langs norskekysten krever simuleringer som koordinerer elektrolysører, lagring, distribusjon og havnens logistikk i én helhetlig modell. En digital tvilling for knutepunktet må håndtere energibalansen mellom produksjon, lokal bruk og eksport, samtidig som sikkerhetstiltak og beredskapsplaner oppfyller krav fra både energimyndigheter og havnesektoren \citep{enova2024hydrogenknutepunkt,gassco2023hydrogen}. Scenarioarbeidet i dette kapittelet bygger videre på læringsmålene om å kombinere simulering, dataspace og validering, og gir studentene et konkret case som binder kapitlene om data, validering og gevinststyring tett sammen.
+
+\subsection{Datastrømmer og modelloppsett}
+Hydrogenknutepunktet samler måledata fra elektrolysører, kompressoranlegg, rørdistribusjon og bunkringsoperasjoner. Modelljournalen bør beskrive hvordan disse datastrømmene kobles i sanntid og hvilke syntetiske datasett som trengs for å teste nye investeringsplaner. Følgende elementer inngår i basisscenariet:
+\begin{itemize}
+    \item \textbf{Produksjon og energitilgang:} Effektkurver fra elektrolysører, krafttilgang fra lokalnettet og timespriser brukes for å optimalisere driftsmønsteret i kombinasjon med energilagring og fjernleveranser \citep{dnv2023hydrogenforecast}.
+    \item \textbf{Logistikk og havneoperasjoner:} Sensorer på fyllestasjoner, skipstrafikkdata og sikkerhetssoner rundt bunkringskaier modelleres som diskrete hendelser for å beregne kapasitet og konflikter i havneområdet \citep{heroya2024hydrogenhub}.
+    \item \textbf{Beredskap og sikkerhet:} Gasslekkasjedeteksjon, trykknivå og værdata brukes til å simulere hendelser som krever samspill mellom havneberedskap og kommunale nødressurser, i tråd med hendelseshåndteringen i kapittel~6.
+\end{itemize}
+Kombinasjonen av kontinuerlige energimodeller og diskrete logistikkoperasjoner gjør scenariet egnet for hybrid simulering. Når datakoblingene dokumenteres i modelljournalen, blir det enklere å gjenbruke samme oppsett i dataspace-laboratoriet fra kapittel~3 og valideringsløpene i kapittel~6.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{0.19\textwidth}p{0.34\textwidth}p{0.34\textwidth}}
+        \toprule
+        \textbf{Fase} & \textbf{Nøkkelspørsmål} & \textbf{Datasett og leveranser}\\
+        \midrule
+        Planlegging & Hvor mye hydrogen må produseres og lagres for å dekke etterspørsel og eksport? & Energisystemdata, prognoser for skipstrafikk, investeringsbudsjett, baseline-scenario for kapittel~7 sin gevinstplan.\\
+        Drift & Hvordan balanseres elektrolysørdrift, energilagring og bunkring fra time til time? & Sanntidsmålinger fra elektrolysører og lager, driftslogg fra havn, styringspanel i kapittel~6 for hydrogenstresstest.\\
+        Hendelser & Hvilke tiltak skal utløses ved lekkasjer, avvik eller forsyningsbrudd? & Beredskapsscript, hendelseslogger, responsplan koblet til tiltaksloggen i kapittel~7 og kvalitetsjournalen i kapittel~6.\\
+        Læring & Hvordan dokumenteres gevinst og forbedringer for neste revisjon? & Evalueringsnotat, indikatorresultater, referanser til dataspace-kontraktene i kapittel~3 og fagfellelogg i støttefilene.\\
+        \bottomrule
+    \end{tabular}
+    \caption{Faser i hydrogenknutepunkt-scenarioet og hvilke data og leveranser som trengs for simulering, validering og gevinststyring.}
+    \label{tab:kap04-hydrogen-faser}
+\end{table}
+
+\subsection{Indikatorer og styringssløyfer}
+Hydrogenknutepunktet gjør det mulig å teste indikatorbiblioteket fra dette kapittelet i kombinasjon med nye måltall for klimarisiko og forsyningssikkerhet. Når studentene kjører scenariene, bør de loggføre:
+\begin{itemize}
+    \item \textbf{Energi- og produksjonsutbytte:} Forholdet mellom elektrisitetsforbruk og produsert hydrogen (kWh/kg) samt utnyttelsesgrad i lagring og kompressorer. Tallene kobles til energirapporteringen i kapittel~6 og brukes som baseline i gevinstplanen i kapittel~7.
+    \item \textbf{Forsyningssikkerhet og robusthet:} Antall leveranser som gjennomføres innenfor planlagt tidsvindu, og hvor raskt hendelser håndteres i tråd med dataspace- og hendelsesprosessen fra kapittel~3 og kapittel~6.
+    \item \textbf{Klimapåvirkning og verdiskaping:} Redusert CO$_2$-utslipp ved å erstatte fossilt drivstoff, samt ringvirkninger for lokale næringer målt i sysselsetting eller eksportverdi. Resultatene skal plottes inn i indikatorpanelet for sirkulær gevinststyring i kapittel~7.
+\end{itemize}
+Ved å kombinere disse måleparametrene med tiltaksloggen fra kapittel~7 kan redaksjonen vise hvordan en digital tvilling understøtter både investeringer og daglig drift av hydrogenknutepunktet. Caset gir også en naturlig bro til kapittel~8, der havvind og batteriverdikjeder bruker hydrogen som energibærer i sine scenarioer.
+
 \section{Kvantitativ kalibrering og effektmåling}
 For å vise læringsutbytte og gevinster må simuleringsresultater oversettes til tall som kan sammenlignes mot målsetninger i styringsmodellen. Norske energiselskaper og offentlige etater krever at kontrolltårn, dataspace og tiltakslogger viser sammenheng mellom modellforutsetninger, indikatorer og faktisk effekt \citep{energinorge2023beredskap,statnett2024kontrolltarn}. I masterkurset betyr det at hver case skal ha en tydelig baseline, et sett prioriterte indikatorer og en rapporteringssløyfe som kan speiles mot kapittel~6 og kapittel~7.
 

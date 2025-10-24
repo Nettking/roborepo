@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-98: Dokumenterte hydrogenknutepunkt-scenario med datastrømmer, fasetabell og indikatorpakke som binder simuleringene i kapittel 4 til validerings- og gevinstarbeidet i kapitlene 6 og 7, og oppdaterte plan-, tavle- og arbeidsfiler for koordinert pilotering. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-97: Beskrev kommunal klimatilpasning med overvannsmodellering i Kapittel 4 med scenariotabell, indikatorer og undervisningsopplegg, og oppdaterte plan-, tavle- og arbeidsfiler for å koordinere pilotering med kommunale beredskapsteam. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-96: Dokumenterte kommunale læringssløyfer for byggtvillinger med tabell over AI-komponenter, styringsartefakter og indikatorer, og oppdaterte plan- og statusfiler for koordinert samarbeid med eiendomsforvaltningen. (`chapters/kapittel05-ai.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-95: Etablerte testregime for API-katalog og dataprodukter med fire kontrolltrinn, tabell og laboratoriekoblinger, og oppdaterte plan-, tavle- og statusfiler for koordinert kvalitetssikring før produksjon. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
