@@ -48,6 +48,52 @@ Flere norske nettselskaper etablerer kontrolltårn for å kombinere feltdata, tv
 \end{enumerate}
 Kontrolltårn-caset forsterker koplingen mellom modellvalidering, cybersikkerhet og organisasjonsdesign. Studentene skal levere både teknisk dokumentasjon og en kort tiltakslogg for oppfølging i styringssystemet.
 
+\section{Kontinuerlig modellovervåking for kommunale tvillinger}
+Kommunale digitale tvillinger for vann, avløp og byplanlegging er avhengige av kontinuerlig overvåking for å oppdage avvik tidlig og koordinere beredskapstiltak. \citet{dsb2022beredskap} fremhever at kommunene må dokumentere helhetlig ROS-analyse, varslingsrutiner og øvingsplaner, mens \citet{nve2022kommunal} anbefaler at overvåkingen knyttes til konkrete hendelsesnivåer for flom og skred. Når en digital tvilling integrerer sensorstrømmer, simuleringer og hendelseslogg, må disse kravene oversettes til automatiserte kontroller slik at driftsorganisasjonen får varsler i tide. Prosjekter som det digitale overvannslaboratoriet utviklet av Asplan Viak viser hvordan 3D-bydata og sanntidssensorer kan brukes til å modellere kapasitet, responstid og effekten av blågrønne tiltak.\citep{asplan2023overvannslab}
+
+\subsection{Overvåkingssløyfe og ansvar}
+En kommunal overvåkingssløyfe kan bygges opp med fire gjentagende aktiviteter som involverer både tekniske ressurser og beredskapsledelse:
+\begin{enumerate}
+    \item \textbf{Innsamling og filtrering:} Sensorer for vannstand, pumpestasjoner og værdata normaliseres i en delt datasjø. Datakatalogen fra Kapittel~3 må utvides med felt for kvalitet, oppdateringshyppighet og ansvarlig etat slik at avvik spores raskt.\citep{nve2022kommunal}
+    \item \textbf{Modellkjøring og prediksjon:} Tvillingen genererer prognoser for kapasitetsutnyttelse og risiko for oversvømmelse. Resultatene lagres med modellversjon, parameteroppsett og referansescenario slik at testresultatene kan gjenbrukes i sertifiseringsjournalen.
+    \item \textbf{Varsling og tiltak:} Når indikatorer passerer terskler, utløses automatiske varsler til vaktlag, teknisk etat og beredskapsledelse. Tiltakene følger trinnene i kommunens beredskapsplan og loggføres i kontrolltårn-panelet.\citep{dsb2022beredskap}
+    \item \textbf{Læring og revisjon:} Etter hendelser gjennomføres mini-revisjoner der datakvalitet, modellpresisjon og tiltak evalueres. Erfaringene brukes til å oppdatere risikologgen og indikatorpanelet i Kapittel~7.
+\end{enumerate}
+
+\subsection{Indikatorpanel for vann- og overvannstjenester}
+Tabell~\ref{tab:kommunaleindikatorer} viser hvordan en kommune kan sette opp indikatorer som kombinerer modellresultater, feltmålinger og organisatoriske tiltak. Struktur og roller speiler kontrolltårn-caset, men referansene og tersklene er tilpasset kommunale tjenester.
+
+\begin{table}[ht]
+    \centering
+    \caption{Eksempel på indikatorpanel for kommunal modellovervåking}
+    \label{tab:kommunaleindikatorer}
+    \begin{tabular}{|p{3.2cm}|p{4.6cm}|p{4.4cm}|p{3.0cm}|}
+        \hline
+        \textbf{Indikator} & \textbf{Datakilde og modellstøtte} & \textbf{Terskel og tiltak} & \textbf{Ansvarlig} \\
+        \hline
+        Magasinstatus i overvannsnett & SCADA-nivåer, tvillingprognoser for kapasitet \citep{oslo2023overvann} & Gult nivå ved 80\% utnyttelse; aktiver tømming og fleksible basseng, logg tiltak i beredskapsjournal & Vann- og avløpsetaten \\
+        \hline
+        Kritiske kjellere og bygg & Kombinasjon av høyde-/flomdata og risikokart fra tvillingen \citep{nve2022kommunal} & Orange nivå når simulert vannstand \textgreater{} 20 cm; utplasser mobile barrierer og informer beboere & Teknisk etat og beredskap \\
+        \hline
+        Sensorhelse & Datakvalitetsdashbord fra overvannslaboratoriet \citep{asplan2023overvannslab} & Rød status ved mer enn 2 sensorer offline i samme sone; send utrykning og aktiver reservekilder & Driftsovervåking \\
+        \hline
+        Øvings- og læringsstatus & Hendelseslogg, ROS-plan og fagfellelogg & Oppdateres etter hver øvelse; avvik eskaleres til kommunedirektør og rapporteres i styringspanelet fra Kapittel~7 & Beredskapsleder \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Indikatorene bør visualiseres i samme dashboard som brukes i kontrolltårn-caset, slik at drifts- og beredskapsroller får en samlet situasjonsforståelse. Når terskler nås, skal loggskjemaene kobles til personvern- og sikkerhetskontrollene i Kapittel~5 og Kapittel~7 for å sikre etterlevelse på tvers av sektorer.
+
+\subsection{Kobling til læringsaktiviteter}
+For masterstudentene gir overvåkingssløyfen et rammeverk for praktiske oppgaver:
+\begin{itemize}
+    \item \textbf{Workshop i digitalt laboratorieløp:} Studentene bruker datasett fra kommunale partnere til å validere indikatorene og tester hvordan kvalitetsjournalen fanger opp avvik mellom modell og feltobservasjoner.
+    \item \textbf{Beredskapsøvelse:} En simulert ekstremnedbørshendelse kjøres i tvillingen. Gruppene dokumenterer beslutninger, varslingsløp og tiltak i journalen, og kobler dem til kravene fra \citet{dsb2022beredskap}.
+    \item \textbf{Rapportering og refleksjon:} Leveransene inkluderer en kort rapport som viser hvordan indikatorpanelet støtter kommunens mål for klimaadaptasjon og bærekraft, i tråd med \citet{oslo2023overvann}.
+\end{itemize}
+
+Koblingen mellom kontinuerlig overvåking, beredskapsplaner og læringsaktiviteter gjør at studentene opplever hvordan en kommunal tvilling må forvaltes i praksis. Samtidig styrkes samspillet mellom Kapittel~3 (datastyring), Kapittel~4 (simulering) og Kapittel~7 (governance) fordi indikatorene deles på tvers av arenaer.
+
 \section{AI-forordningens krav til helsetvillingene}
 AI-forordningen klassifiserer kliniske beslutningsstøttesystemer og digitale tvillinger for pasientforløp som høyrisiko-systemer.\citep{eu2024aiact} Dermed må både leverandører og helsevirksomheter etablere et kvalitetsledelsessystem som dokumenterer hvordan risiko håndteres før og under drift. For masterstudentene betyr det at hver caseleveranse skal kunne peke på hvor i modellen kravene adresseres, og hvilke loggføringer som viser etterlevelse over tid.
 
