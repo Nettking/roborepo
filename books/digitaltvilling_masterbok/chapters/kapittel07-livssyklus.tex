@@ -309,6 +309,80 @@ Tabell~\ref{tab:portefolje-porter} viser hvilke indikatorer og dokumenter som b�
 
 For kapittelteamet er porteføljestyringen en sjekkliste: Når en port er passert skal indikatorer og dokumenter oppdateres i planfilene og fagfelleloggen. Resultatene deles med programleder, slik at porteføljen rebalanseres i takt med nye case fra Kapittel~\ref{chap:case} og forskningsløpene i Kapittel~9.
 
+\section{Leverandørstyring og anskaffelser}
+Digital tvilling-initiativ kombinerer ofte interne utviklingsressurser med leveranser fra konsulenter, programvarehus og drifts-
+partnere. For å sikre at gevinst- og kvalitetsmål oppnås må anskaffelser og kontrakter speile livssyklusmodellen i dette kapittelet.
+\citet{dfo2023anskaffelser} anbefaler at behov og modenhet kartlegges i forkant av konkurranser, mens \citet{dfo2024kontraktsoppfolging}
+viser hvordan kontraktsoppfølging bør kobles til styringsdata og gevinstplaner. Norske virksomheter som Bane NOR og Statsbygg
+benytter i økende grad partnerskap og standardiserte ytelsesindikatorer for å sikre kontinuerlig leveranse av modelloppdateringer
+og dataforvaltning.\citep{statsbygg2023digitalmodenhet,banenor2024leverandor}
+
+\subsection*{Anskaffelsesløp for tvillingprogram}
+Et strukturert anskaffelsesløp bør kombinere innovasjonspartnerskap, modulbaserte kontrakter og tydelige krav til datadeling.
+Tabell~\ref{tab:anskaffelseslop} viser et eksempel på faser, leveranser og styringspunkter.
+
+\begin{table}[h]
+    \centering
+    \caption{Eksempel på anskaffelsesløp for digital tvilling-program}
+    \label{tab:anskaffelseslop}
+    \begin{tabular}{|p{3.1cm}|p{4.6cm}|p{4.4cm}|p{3.0cm}|}
+        \hline
+        \textbf{Fase} & \textbf{Hovedleveranser} & \textbf{Tiltak og styring} & \textbf{Ansvarlig} \\
+        \hline
+        Behovsforberedelse & Modenhetsanalyse, gevinsthypoteser og datakartlegging & Workshop med fag og innkjøp, kobling til gevinstplanen og dataspace-krav fra Kapittel~3 & Programleder + innkjøpsrådgiver \\
+        \hline
+        Konkurransegjennomføring & Konkurransegrunnlag, tildelingskriterier og evalueringspanel & Bruk modningskrav fra \citet{dfo2023anskaffelser}, vurder leverandørers evne til deling via dataspace og DevOps-støtte & Anskaffelsesleder + teknisk komité \\
+        \hline
+        Kontraktsinngåelse & Leveranseplan, datakontrakter og sikkerhetsbilag & Harmoniser kontraktsmaler med Kapittel~6 sitt kvalitets- og tilsynsregime, etabler felles modelljournal & Juridisk rådgiver + sikkerhetsleder \\
+        \hline
+        Pilot og skalering & Sprintplan, KPI-er og læringslogg & Følg opp indikatorer i Tabell~\ref{tab:gevinstplan}, benytt måleverktøyene fra \citet{dfo2024kontraktsoppfolging} & Produkteier + leverandørteam \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Ved å koble konkurransegrunnlag og kontraktsvilkår til gevinstplan og dataspace-governance unngår virksomheten at leverandører leverer
+isolerte komponenter uten integrasjon. En tydelig datakontrakt som beskriver API-er, semantikk og eierskap gjør det mulig å gjenbruke
+artefakter i nye prosjekter.\citep{digdir2023modelljournal}
+
+\subsection*{Kontraktsoppfølging og samarbeid}
+I drifts- og forbedringsfasen må leverandører følges opp gjennom faste styringsmøter og indikatorpaneler. \citet{ks2023leverandor}
+anbefaler å kombinere tjenestenivå (SLA), modenhetsmåling og gevinstsporing, mens \citet{dfo2024kontraktsoppfolging} viser hvordan
+kontraktsdata kan kobles til digitale dashboards for løpende kontroll.
+
+\begin{enumerate}
+    \item \textbf{Etabler felles styringsforum:} Samle programleder, leverandørens prosjektleder og sikkerhets- og personvernansvarlige
+    i månedlige møter som bruker indikatorene fra Kapittel~6 og 7.
+    \item \textbf{Bruk læringssløyfer:} Registrer avvik, forbedringsforslag og innovasjonsmuligheter i en delt logg som knyttes til
+    tiltaksplanen i \citet{ks2023leverandor}. Dette støtter kontinuerlig forbedring og gjør at erfaringer kan flyttes mellom kontrakter.
+    \item \textbf{Aktiver gevinststyring:} Koble målt gevinsteffekt til finansieringsmodeller og porteføljestyring. Ved avvik
+    skal kontraktsmekanismer som bonus/malus eller opsjoner brukes til å justere leveranser.
+\end{enumerate}
+
+Tabell~\ref{tab:leverandoroppfolging} gir et eksempel på indikatorer som binder sammen kontraktsoppfølging, leveransestatus og livssyklusen.
+
+\begin{table}[h]
+    \centering
+    \caption{Indikatorer for leverandørstyring i digital tvilling-program}
+    \label{tab:leverandoroppfolging}
+    \begin{tabular}{|p{3.2cm}|p{4.5cm}|p{4.2cm}|p{3.0cm}|}
+        \hline
+        \textbf{Indikator} & \textbf{Datakilde} & \textbf{Tiltak ved avvik} & \textbf{Kobling i livssyklusen} \\
+        \hline
+        Leveransegrad per sprint & Sprintdemoer, modelljournal og kontraktslogg & Juster backlog og ressursbruk, aktiver kontraktsklausuler for forsinkelse & Implementering og drift \\
+        \hline
+        Datakvalitet og delingsstatus & Dataspace-kontroller, API-målinger og SLA-rapport & Initiér forbedringsplan, oppdater delingspolicy og eskaler til dataspace-råd & Drift og forbedring \\
+        \hline
+        Gevinstrealiseringsindeks & Gevinstplan, KPI-panel og økonomirapporter & Gjennomfør gevinstreview, revurder finansiering og beslutningsport & Porteføljestyring \\
+        \hline
+        Kompetanseoverføring & Kurslogg, fagfellelogg og opplæringsplan & Utvid læringsopplegg, juster krav til dokumentasjon og støtte & Endringsledelse og avvikling \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Leverandørstyring må også inkludere exit-strategier slik at data og kode overføres tilbake til virksomheten ved kontraktsslutt. En
+strukturert avslutning med revisjon av dokumentasjon, datalagring og tilgangsstyring gjør at erfaringer kan tas med inn i neste
+anskaffelsesrunde og reduserer risikoen for leverandørbinding.
+
 \section{Endringsledelse og modenhet}
 Digital tvilling er en organisasjonsutvikling like mye som et teknisk prosjekt. Modenhet kan vurderes i nivåer fra ad hoc-initiativ til kontinuerlig forbedring der tvillingen er integrert i virksomhetsstyringen. En modenhetsmodell kan beskrive kriterier for styringsstruktur, datakvalitet, automatisering og kompetanse på hvert nivå.
 
