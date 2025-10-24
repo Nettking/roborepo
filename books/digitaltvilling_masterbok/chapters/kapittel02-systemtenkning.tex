@@ -212,6 +212,44 @@ teknologipartnere og kommune gir en robust modell som støtter både operativ dr
     \item Planlegg regelmessige kalibreringssykluser og dokumentér endringer i parametere og antagelser.
 \end{enumerate}
 
+\subsection{Samsvarstesting i digitale laboratorier}
+Før en digital tvilling tas i bruk i operativ drift trenger teamet et laboratorieløp som viser at modellen tåler regulatoriske og
+tekniske krav. Norske aktører som Statnett og Energi Norge har etablert kontrolltårn der simuleringer, hendelsesscenarier og
+reelle målinger sammenlignes før løsningen får grønt lys i kontrollrommet.\citep{statnett2024kontrolltarn,energinorge2023beredskap}
+Ved å dokumentere testsløyfene systematisk i modelljournalen unngår man at samsvarskrav blir et ad hoc-vedlegg som bare
+oppdateres ved revisjoner.
+
+Tabell~\ref{tab:kap02-samsvar} kan brukes som sjekkliste når laboratoriet planlegges. Den kombinerer forventninger fra norske
+veiledere og DNV sine anbefalinger for digital tvilling-assurance, og viser hvilke artefakter som bør produseres i hver test.
+\citep{sintef2021digital,dnv2023digitalassurance}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Testregime for samsvarstesting av digitale tvillinger i laboratoriet.}
+    \label{tab:kap02-samsvar}
+    \begin{tabular}{p{0.24\textwidth}p{0.32\textwidth}p{0.18\textwidth}p{0.22\textwidth}}
+        \toprule
+        \textbf{Testtype} & \textbf{Formål} & \textbf{Ansvar} & \textbf{Nøkkelartefakter} \\
+        \midrule
+        Integrasjonstest & Verifisere at datastrømmer, API-er og sikkerhetstiltak fungerer før modellen kobles mot produksjon. &
+        Plattformteam & Tilkoblingsprotokoll, datakvalitetsrapport, risikovurdering i tråd med ISO~31000. \\
+        \addlinespace
+        Scenario- og stresstest & Bekrefte at modellen gir stabile anbefalinger under avvik og hendelser som øves i kontrolltårnet. &
+        Fagansvarlig for drift & Hendelseslogg, sammenstilling av simulerte og faktiske målinger, beslutningslogg fra kontrollrom. \\
+        \addlinespace
+        Etterlevelsesreview & Sikre at modelljournal, personvern og sikkerhetskrav er dokumentert før utrulling til operativ drift. &
+        Kvalitets- og sikkerhetsteam & Revisjonssjekkliste, signert godkjenning, kobling til kapittel~6 sin valideringsjournal. \\
+        \addlinespace
+        Pilotering med operatører & Teste brukergrensesnitt, forklaringsmekanismer og arbeidsprosesser med operatørteam i lab. &
+        Operasjonsleder og fagfeller & Tilbakemeldingslogg, oppdatert opplæringsplan, referat til livssyklusmodellen i kapittel~7. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Samsvarstesting bør avsluttes med en kort beslutningspakke som viser hva som er verifisert, resterende risiko og hvilke tiltak som
+må følge modellen inn i produksjon. Dokumentasjonen gjør det enklere å dele erfaringer mellom laboratorier, bruke resultatene i
+fagfellelogg og koble forbedringspunkter til tiltaksplanen i kapittel~6.
+
 \section{Modelldokumentasjon og styring}
 God dokumentasjon sikrer at digitale tvillinger kan forvaltes over tid og at beslutninger er etterprøvbare. ISO~23247 beskriver hvordan modellbeskrivelser, datakataloger og styringsrutiner bør struktureres for produksjonsnære tvillinger \citep{iso23247-2021}. Ved å etablere en felles dokumentasjonsprosess blir det enklere å dele modeller på tvers av fagmiljø og følge opp krav fra myndigheter og industripartnere.
 
