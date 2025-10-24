@@ -27,6 +27,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-54 | Kapittel 3 | FERDIG – Dokumenterte helsedataspace og kliniske datadelingsrutiner med styringstabell, arbeidsflyt og oppdaterte plan- og tavlefiler. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-53 | Kapittel 6 | FERDIG – Integrerte bærekraftsrapportering og klimarisiko i valideringskapittelet med ny indikatorpakke, arbeidsflyt og oppdaterte kilder. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-51 | Kapittel 6 | FERDIG – Beskrev avvikstriage og læringssløyfe for dataspace-hendelser med ny tabell og rutine, og oppdaterte plan- og tavlefiler for pilotering. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-52 | Kapittel 4 | FERDIG – La til sirkulær simuleringseksjon med indikatorbibliotek og oppdaterte plan- og tavlefiler. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |

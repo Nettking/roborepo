@@ -305,6 +305,47 @@ For å bruke tabellen i praksis anbefales følgende arbeidsflyt:
 viser hvordan varslingsreglene implementeres i dataspace-konfiguratoren, og hvordan kontrolltårn-panelet i kapittel~6
 oppdateres. Dokumentasjonen må inneholde lenker til hendelsesloggen, kontaktpunkter og beslutningsreferat.
 
+\subsection{Helsesektorens dataspace og kliniske tvillinger}
+Helsesektoren stiller ekstra krav til datasuverenitet, pasientsikkerhet og dokumentasjon når digitale tvillinger tas i bruk.
+Norsk helsenett beskriver i sin referansearkitektur hvordan en nasjonal dataspace skal sørge for at datadeling skjer gjennom
+sertifiserte konnektorer, policy-motorer og revisjonsspor som ivaretar både helseregisterlov og personvernforordningen.\citep{nhn2024dataspace}
+For kapittelteksten betyr det at kliniske tvillinger må koble dataplattformene til tydelige adgangsregler, samtykkelagre og
+loggmekanismer slik at både behandlingsansvarlige og pasienter kan etterprøve bruken. Helsedirektoratets veiledere for digital
+hjemmeoppfølging og beredskap anbefaler at virksomheter dokumenterer datakilder, risikovurderinger og kontinuitetsplaner før
+nye tjenester lanseres, noe som kan gjenbrukes direkte i dataspace-oppsettet.\citep{helsedir2020dho,helsedir2023beredskap}
+
+En praktisk arbeidsflyt for studentgrupper og fagteam kan beskrives i tre steg:
+\begin{enumerate}
+    \item \textbf{Forankre behandlingsgrunnlag og samtykker}: Kartlegg hvilke datasett som har hjemmel i helseregisterlov eller krever eksplisitt samtykke, og lagre beslutningene i samme katalog som dataspace-kontraktene.
+    \item \textbf{Etabler sikre delingskanaler}: Konfigurer sertifiserte konnektorer og dataminimering slik at bare nødvendige felter eksponeres til forsknings- og kvalitetsregistre. Automatisk pseudonymisering dokumenteres i modelljournalen.\citep{datatilsynet2023dpia}
+    \item \textbf{Knytt overvåking til kvalitetsjournalen}: Synkroniser hendelses- og revisjonslogger med kontrollpunktene i Kapittel~6 slik at avvik, revisjoner og læringspunkter kan spores tilbake til pasientsikkerhetskravene.\citep{ehelse2024tilsyn}
+\end{enumerate}
+
+Tabell~\ref{tab:kap03-helsedataspace} viser hvilke styringstiltak som bør beskrives for hver komponent i dataspace-arkitekturen.
+Kolonnene speiler rollene i kapittel~7 og gjør det enklere å koble kliniske tvillinger til governance-modellene og casene i
+kapittel~8.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Styringstiltak for helsedataspace i kliniske tvillingprosjekter}
+    \label{tab:kap03-helsedataspace}
+    \begin{tabular}{p{3.6cm}p{5.0cm}p{4.4cm}}
+        \toprule
+        \textbf{Komponent} & \textbf{Tiltak og dokumentasjon} & \textbf{Kobling til andre kapitler} \\
+        \midrule
+        Samtykke- og tilgangsstyring & Dokumenter behandlingsgrunnlag, samtykkestatus og tilgangsnivå i katalogen; oppdater policy-regler ved nye tjenester. & Kapittel~6 (DPIA og tilsynslogg), Kapittel~7 (ansvarsfordeling) \\
+        Kliniske datakanaler & Bruk konnektorer med end-to-end-kryptering og dataminimering; loggfør pseudonymisering og filtrering i modelljournalen. & Kapittel~5 (modelljournal), Kapittel~8 (helsecase) \\
+        Revisjon og beredskap & Etabler prosedyrer for hendelsesrapportering, fallback-datasett og kontinuitetsplaner som kan testes i sandkasse. & Kapittel~6 (rapporteringspakke), Appendiks (ressursbank for øvelser) \\
+        Læring og faglig deling & Publiser aggregerte indikatorer og læringspunkter i dataspace-portalen og fagfelleloggen, med referanse til gevinstplanen. & Kapittel~7 (gevinststyring), `support/notater/pilotundervisning-materiell.md` \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\paragraph{Samspill med øvrige kapitler.} Seksjonen bør vise hvordan dataspace-designet gjør det mulig å følge kravene til
+personvern, kvalitet og beredskap som beskrives i Kapittel~6, samtidig som caset i Kapittel~8 om pasientlogistikk får konkrete
+datakilder og indikatorer. I masterkurset kan tabellen brukes som sjekkliste når grupper leverer modelljournal og kvalitetsrapport,
+samtidig som `support/oppgavetavle.md` og planfilen oppdateres med ansvarslinjer for helsedata.
+
 \section{Sirkulære materialstrømmer og klimaregnskap}
 Sirkulærøkonomi krever at ressursdata knyttes tett til beslutningsprosesser for innkjøp, drift og avvikling. \citet{norskindustri2023sirkular}
 peker på at digitale tvillinger gjør det mulig å følge materialstrømmer i sanntid, mens \citet{miljodir2023materialstrommer} framhever
