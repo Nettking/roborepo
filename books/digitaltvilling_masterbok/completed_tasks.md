@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-61: Utviklet scenariobasert stresstest for hydrogenknutepunkt i Kapittel 6 med arbeidsflyt, tabell og workshopopplegg som kobler kontrolltårn, indikatorpanel og kvalitetsjournal, og oppdaterte plan-, tavle- og arbeidsfiler for koordinering med Kapittel 4-teamet. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-60: Dokumenterte AI-støttet karbonfangst- og lagringstvilling i Kapittel 5 med indikatortabell og koblinger til kapittel 3, 6 og 7, registrerte nye CCS-kilder og oppdaterte plan-, tavle- og arbeidsfiler for koordinering. (`chapters/kapittel05-ai.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-59: Dokumenterte kommunal klima- og beredskapscase i Kapittel 8 med arbeidsflyttabell, undervisningspunkter og kobling til kapittel 3 og 6, og oppdaterte plan-, tavle- og statusfiler. (`chapters/kapittel08-case.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-58: Utviklet hydrogenknutepunkt-simulering med indikatorpakke og undervisningsopplegg i Kapittel 4, oppdaterte planstatus og registrerte nye kilder for koordinering med Kapittel 6. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
