@@ -155,6 +155,37 @@ Kryss-sektorielle initiativ, for eksempel batteriverdikjeder eller havvindplattf
 
 Denne varianten forbereder leseren på å bruke malen i Appendiks~\ref{appendix:ressurser} der en generell tabell for RACI-S kan fylles ut for egne case.
 
+\subsection*{Dataspace-governance og eskaleringslinjer}
+Dataspace-samarbeid stiller krav til hvordan organisasjoner deler data, håndhever kontrakter og håndterer avvik. \citet{idsa2023ram} og \citet{gaiax2023architecture} beskriver hvordan noder må sertifiseres og hvordan tiltrode rollemyndigheter skal følge opp dataspace-policyer. Norske initiativ for mobilitet og energi legger til grunn at forvaltningsmodellen kombinerer tekniske komponenter (connectors, kataloger) med et styringsforum som kan sette bindinger for bruksvilkår.\citep{ec2023mobilitydataspace} For at kapittel 3 og 7 skal henge sammen i undervisningen, må studentene se hvordan dataspace-governance speiler de organisatoriske modellene over.
+
+En praktisk måte å etablere styringen på er å definere fire beslutningsnivåer:
+\begin{enumerate}
+    \item \textbf{Strategisk råd:} Godkjenner dataspace-mandat, medlemskap og sanksjoner. Rådet eies gjerne av et offentlig-privat partnerskap hvor programleder for tvillinginitiativet sitter sammen med dataspace-operatør.
+    \item \textbf{Operasjonelt forum:} Koordinerer onboarding, datakataloger og hendelser. Her deltar plattformteam, dataspace-arkitekter og juridiske rådgivere som vurderer datakontrakter mot \citet{digdir2023modelljournal}.
+    \item \textbf{Domenegrupper:} Sektorspesifikke arbeidsgrupper (for eksempel helseteknologi eller mobilitet) som prioriterer data- og modellbehov, kvalitetssikrer semantikk og harmoniserer indikatorer fra Kapittel~6.
+    \item \textbf{Eskaleringsteam:} Hurtigrespons-team med representanter fra sikkerhet, personvern og forretningssiden som kan pause deling eller oppdatere tilgangsvilkår ved avvik.
+\end{enumerate}
+
+Tabell~\ref{tab:dataspace-governance} viser hvordan styringsnivåene kan knyttes til konkrete artefakter og eskaleringspunkter i et regionalt dataspace-program. Oversikten kan brukes i casearbeid sammen med RACI-S-malen.
+
+\begin{table}[h]
+    \centering
+    \caption{Styringsartefakter og eskalering i et regionalt dataspace-program}
+    \label{tab:dataspace-governance}
+    \begin{tabular}{p{3.2cm}p{4.2cm}p{4.2cm}p{3.0cm}}
+        \toprule
+        Beslutningsnivå & Hovedartefakt & Ansvarlige roller & Eskaleringspunkt \\
+        \midrule
+        Strategisk råd & Partnerskapsavtale med krav til sertifisering, medlemskap og gevinstplan & Programleder, kommuneadministrasjon, industripartnere & Revisjon mot dataspace-policy hvert halvår \\
+        Operasjonelt forum & Datakatalog, tilgangspolicy og teknisk driftsrapport & Plattformteam, dataspace-arkitekt, juridisk rådgiver & Hendelser i connector eller uautorisert bruk \\
+        Domenegrupper & Modelljournaler, semantiske vokabular og KPI-sett & Fagansvarlige, produktledere, data steward & Konflikt i datakvalitet eller indikatorer mellom sektorer \\
+        Eskaleringsteam & Hendelseslogg, tilsynsrapport og beslutningslogg & Sikkerhetsleder, personvernombud, forretningsansvarlig & Pause eller stanse datadeling, varsling til tilsyn \citep{ec2023mobilitydataspace} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Når artefaktene forvaltes i samme versjonskontroll som tvillingmodeller og datakataloger, blir det lettere å dokumentere etterlevelse av \citet{gaiax2023architecture} og å spore hvilke beslutninger som utløste endringer. Studentene bør kombinere tabellen med gevinstplanen under for å vise hvordan dataspace-governance støtter gevinstrealisering.
+
 \subsection*{Gevinstplan og KPI-styring}
 For å sikre kontinuerlig oppfølging bør kapittelteamet bruke en gevinstplan som kobler indikatorer til ansvarlige roller og beslutningsarenaer. Tabell~\ref{tab:gevinstplan} gir et eksempel på hvordan livssyklusfaser, KPI-er og datakilder kan organiseres. Malen speiler strukturen i Appendiks~\ref{appendix:ressurser} og kan tilpasses ulike sektorer.
 
