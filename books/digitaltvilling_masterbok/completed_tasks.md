@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-17: Utarbeidet felles leveranseplan for klimacaser, tabell over milepæler og workshopopplegg som kobler havvind-, landbruks- og batterisektorene. Oppdaterte kapitteltekst, plan og statusfiler samt registrerte nye kilder. (`chapters/kapittel08-case.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `support/referanser.bib`)
 - `FERDIG` – Leveranse for DT-16: Utvidet livssyklusfortellingene med styringspunkttabell, beskrev hybrid governance-sløyfer og etablerte modenhetssteg for bærekraftstyring. Oppdaterte kapittelteksten, planen og arbeidsfilene. (`chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-14: Etablerte styringsramme for generativ dataflyt, kontrolltabell og planoppdatering for Kapittel 5, og synkroniserte `plan.md`, `support/oppgavetavle.md` og `task_queue.md`. (`chapters/kapittel05-ai.tex`, `plan.md`, `task_queue.md`, `support/oppgavetavle.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-20: Dokumenterte datakvalitetsstyring i Kapittel 3 med nye kontrollpunkter, observabilitetssjekkliste og ISO-referanser, og oppdaterte plan- og statusfiler. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `support/referanser.bib`)
