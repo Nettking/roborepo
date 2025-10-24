@@ -26,6 +26,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-59 | Kapittel 8 | FERDIG – Dokumenterte kommunal klima- og beredskapscase med tabell for arbeidsflyt, koblet caset til dataspace- og valideringskapitlene og synkroniserte plan- og tavlefiler. | `chapters/kapittel08-case.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-58 | Kapittel 4 | FERDIG – Utvidet simuleringskapittelet med hydrogenknutepunkt-case, indikatorpakke og koordinering mot Kapittel 6. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `completed_tasks.md` |
 | DT-57 | Kapittel 6 | FERDIG – Etablerte leverandørkvalifisering og datakontraktspakke for dataspace-validering, inkludert kravprosess, samsvarstabell og journaloppfølging. | `chapters/kapittel06-validering.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md` |
 | DT-56 | Kapittel 3 | FERDIG – Dokumenterte tverrsektorielt dataspace-samvirke mellom energi og helse med tabell, øvingsscenario og indikatorpakke samt oppdaterte plan- og tavlefiler. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md` |
