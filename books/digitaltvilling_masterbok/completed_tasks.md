@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-BUG-04: Rettet figurstiene i kapittel 1–3 slik at `main.tex` finner TikZ-filene i `support/figurer/kilder/`, oppdaterte plan- og arbeidsstatusene og bekreftet at testen `test_latex_referanser.py` passerer.
 - `FERDIG` – Leveranse for DT-BUG-02: Reverterte figurreferansene i kapittel 1–3 til `../support/figurer/kilder/` slik at TikZ-filene finnes når kapitlene inkluderes fra `chapters/`-mappen og dokumenterte statusoppdateringen i `task_queue.md`.
 - `FERDIG` – Leveranse for DT-BUG-01: Korrigerte TikZ-stiene i kapittel 1–3 slik at `main.tex` finner figurfilene i `support/figurer/kilder/`, lukket bibtex-oppføringen for `glaessgen2012digital` i `support/referanser.bib` og oppdaterte status i `task_queue.md`.
 - `FERDIG` – Leveranse for DT-FIG-01: Produserte to-spors tidslinje med sektorikoner for kapittel 1, la til egen legende i `support/figurer/kilder/kap01-tidslinje-v1.tikz` og oppdaterte plan- og arbeidsstatus.
