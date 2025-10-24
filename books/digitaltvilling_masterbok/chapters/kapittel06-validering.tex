@@ -761,6 +761,43 @@ Tabell~\ref{tab:maritim-tilsyn} viser et forslag til revisjonspunkter for en aut
 
 Ved å integrere tabellen i kvalitetsjournalen kan rederiet dokumentere samsvar før hver milepæl i driftsgodkjenningen. Rapporteringen gjenbrukes i fagfelleprosesser og undervisning, og sikrer at nye iterasjoner av tvillingen vurderes mot maritime risikokrav samtidig som indikatorpanelet for tillit oppdateres.
 
+\subsection{Internasjonal samsvarsbenchmark for autonome tvillinger}
+Internasjonal regulering for autonome fartøy utvikler seg raskt, og norske aktører må bevise at tvillingene deres følger både globale og nasjonale krav. \citet{imo2023masscode} legger rammen for hvordan Maritime Autonomous Surface Ships (MASS) skal testes i internasjonalt farvann, mens \citet{emsa2024remote} beskriver forventninger til fjernoperasjonssentre i EU. Disse må kombineres med norske krav til testløp, sikkerhetsstyring og digital pålitelighet fra \citet{sdir2023autonomefartoy} og \citet{dnv2024autonomous}. For tvillingteamet betyr det at modelljournalen må kunne vise samsvar med flere regimer i samme revisjon.
+
+Tabell~\ref{tab:maritim-benchmark} viser en samsvarsbenchmark som binder sammen sentrale regelverk og foreslår indikatorer som kan hentes fra kvalitetsjournalen. Strukturen gjør det mulig å følge opp hvilke bevis som er levert for hvert regime, og å koble kravene til kontrolltårn-panelet fra kapittelets tidligere seksjoner.
+
+\begin{table}[ht]
+    \centering
+    \caption{Benchmark for samsvar i autonome maritime digitale tvillinger}
+    \label{tab:maritim-benchmark}
+    \begin{tabular}{|p{3.2cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Regime} & \textbf{Kjernekrav} & \textbf{Dokumentasjon i tvillingprogrammet} & \textbf{Indikator for samsvar} \\
+        \hline
+        IMO MASS-kode & Risikovurdering av operasjonsscenarier, kommunikasjonsrutiner og datadeling i internasjonalt farvann \citep{imo2023masscode} & Scenariojournal fra simuleringer, kommunikasjonsplan for bro-til-bro og rapport fra sikkerhetscase & Andel scenarier validert mot IMO-checkliste, tid brukt på informasjonsdeling før seilas \\
+        \hline
+        EMSA fjernoperasjon & Krav til organisering av fjernoperasjonssentre, situasjonsforståelse og cyberresiliens \citep{emsa2024remote} & Driftsmanual for kontrollrom, redundanstest av sensorkjeder og cybersikkerhetssjekk fra Kapittel~5 & Oppetid på fjernoperasjonssenter, dokumentert responstid på alarmer \citep{massterly2023operations} \\
+        \hline
+        Sjøfartsdirektoratet testløp & Nasjonale testkorridorer, sikkerhetsstyring og rapportering av avvik \citep{sdir2023autonomefartoy} & Tillatelsesbrev, avvikslogg fra operasjoner i norske farvann og plan for manuell overstyring & Antall godkjente testfaser uten gule avvik, lukketid for hendelser \citep{eu2022nis2} \\
+        \hline
+        DNV digital assurance & Klasseregler for autonome systemer, kontinuerlig overvåkning og oppdateringskontroll \citep{dnv2024autonomous,dnv2023digitalassurance} & Revisjonsrapporter, modelljournal med versjonssporing og patch-protokoller & Andel leveranser med godkjent DNV-review, tid fra funn til oppdatert modell \\
+        \hline
+        EU AI-forordning & Krav til risikoklassifisering, transparens og menneskelig tilsyn for høyrisikosystemer \citep{eu2023ai} & Risikovurdering fra kapittelets AI-seksjon, brukerlogg for menneskelig overstyring og dokumentert XAI-analyse & Fullførte kontrollpunkter i høyrisiko-sjekklisten, registrerte manuelle inngrep per seilas \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Benchmarken gjør det tydelig hvilke deler av styringssystemet som må aktiveres før en ny maritim funksjon settes i drift. Når tabellen oppdateres jevnlig, kan den brukes i dialog med både Sjøfartsdirektoratet og internasjonale sertifisører for å vise helhetlig etterlevelse.
+
+For masterstudentene gir benchmarken en konkret ramme for prosjekt- og laboratorieoppgaver:
+\begin{itemize}
+    \item \textbf{Compliance-sprint i laboratoriet:} Studentgrupper får utdelt et scenario der fjernoperasjonssenteret må håndtere nytt farvann. De fyller ut tabellen med hvilke bevis som finnes og hvilke gap som må lukkes før lansering.
+    \item \textbf{Tverrfaglig workshop:} Maritime teknologer, jurister og dataingeniører analyserer hvordan indikatorene fra Tabell~\ref{tab:maritim-benchmark} kobles til hendelsesresponsen i dataspace-seksjonen og styringspanelet i Kapittel~7.
+    \item \textbf{Refleksjonsnotat:} Hver student beskriver hvordan internasjonale krav påvirker modelloppdateringer og menneskelig tilsyn, med henvisning til \citet{imo2023masscode} og \citet{emsa2024remote}.
+\end{itemize}
+
+Ved å bruke benchmarken som felles språk på tvers av team får organisasjonen en sporbar oversikt over hvilke krav som er dekket, og kapittel 6 kan fungere som bro mellom teknisk validering, regulatorisk etterlevelse og undervisningspraksis.
+
 \section{Kommunal validering for overvann og kritisk infrastruktur}
 Kommuner som bygger digitale tvillinger for overvann, kritisk infrastruktur og beredskap må kombinere tekniske modeller med lovpålagte krav til planverk og øving. \citet{dsb2022beredskap} legger vekt på at kommunal beredskapsplikt krever en helhetlig ROS-prosess, mens \citet{nve2022kommunal} anbefaler at flom- og skredscenarioer testes gjennom samkjørte øvelser med kritiske tjenesteområder. I Oslo brukes den digitale tvillingen for å koordinere blågrønn infrastruktur og driftsberedskap, med indikatorer for kapasitet, risiko og tiltakssoner.\citep{oslo2023overvann} Prosjekter som overvannslaboratoriet utviklet av Asplan Viak viser hvordan kommuner kan koble sensordata, værprognoser og 3D-bymodeller for å teste tiltak før de implementeres.\citep{asplan2023overvannslab}
 
