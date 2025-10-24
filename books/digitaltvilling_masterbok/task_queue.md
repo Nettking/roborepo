@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-85 | Kapittel 7 | FERDIG – Dokumenterte anskaffelses- og leverandørstyring for kommunale tvillingprogram med aktivitetsliste, tabell og scorecard-anbefaling, og oppdaterte plan- og statusfiler for koordinering. | `chapters/kapittel07-livssyklus.tex`, `plan.md`, `task_queue.md` |
 | DT-84 | Kapittel 6 | FERDIG – Tallfestet kvartalsrapport for valideringspanelet med arbeidssteg, indikatorutdrag og undervisningskoblinger, og synkroniserte plan-, tavle- og statusfiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-83 | Kapittel 7 | FERDIG – Utviklet indikatorpanel for sirkulær gevinststyring med panelkort, koblet måleområder til dataspace- og valideringsarbeid og oppdaterte plan-, tavle- og kildefiler for koordinert bærekraftsrapportering. | `chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-82 | Kapittel 6 | FERDIG – Etablerte indikatorramme for dataspace-valideringslaboratorium med arbeidssteg, indikatorpanel og kobling til gevinststyring. | `chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md` |

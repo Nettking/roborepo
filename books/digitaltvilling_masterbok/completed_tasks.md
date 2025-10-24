@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-85: Dokumenterte anskaffelses- og leverandørstyring for kommunale tvillingprogram med aktivitetsliste, tabell og scorecard-anbefaling, og oppdaterte plan- og statusfiler for koordinering. (`chapters/kapittel07-livssyklus.tex`, `plan.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-84: Tallfestet kvartalsrapport for valideringspanelet med arbeidssteg, indikatorutdrag og undervisningsbruk, og oppdaterte plan-, tavle- og statusfiler for koordinering. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-83: Utviklet indikatorpanel for sirkulær gevinststyring i Kapittel 7 med nye panelkort, koblet måleområder til dataspace- og valideringsarbeidet og oppdaterte plan-, tavle- og kildefiler for koordinering av bærekraft og porteføljestyring. (`chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-82: Etablerte indikatorramme for dataspace-valideringslaboratorium med arbeidssteg, kvantitativt indikatorpanel og koblinger til gevinst- og styringsarbeidet, og oppdaterte plan- og statusfiler for å synliggjøre fremdriften. (`chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md`)
