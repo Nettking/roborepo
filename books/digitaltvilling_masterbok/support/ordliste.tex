@@ -39,6 +39,9 @@ Gevinsthypotese & -- & Benefit hypothesis & Begrunnet antakelse om hvilken verdi
 Risiko- og gevinstjournal & -- & Risk and benefit log & Register som sporer risikofaktorer, tiltak, forventede gevinster og status for oppfølging på tvers av tvillingprosjekter. \citep{dnv2021rp} \\
 Etterprøvbarhetslogg & -- & Traceability log & Oversikt over beslutninger, versjoner og dokumentasjon som gjør det mulig å etterprøve sammenheng mellom data, modeller og leveranser. \citep{dnv2021rp} \\
 Fagfelleklareringssjekkliste & -- & Peer review clearance checklist & Kontrolliste som bekrefter at dokumentasjon, arbeidsark og kvalitetskrav er oppfylt før leveranser sendes til fagfellevurdering. \citep{dnv2021rp} \\
+Tillitsankertjeneste & -- & Trust anchor service & Sertifiseringskomponent i et dataspace som verifiserer identitet, sikkerhetsnivå og samsvar før parter får tilgang til tvillingdata. \citep{idsa2023ram} \\
+Dataspace-operatør & -- & Dataspace operator & Rolle som drifter infrastrukturen, policyene og onboarding-prosessen i et dataspace slik at tvillingaktører kan dele data sikkert. \citep{digitalnorway2024dataspace} \\
+Styringshåndbok & -- & Governance playbook & Dokumentasjon som beskriver roller, møtearenaer og beslutningsflyt for tvillingporteføljen, brukt til å forankre endringer i hele organisasjonen. \citep{digitalnorway2024dataspace} \\
 \bottomrule
 \end{longtable}
 
@@ -61,6 +64,9 @@ Dataassimilering & -- & Data assimilation & Integrasjon av sanntidsdata i en mod
 Model predictive control & MPC & Model predictive control & Optimaliserende styringsstrategi som bruker modell og prediksjoner for å beregne kontrollsignaler innenfor gitte begrensninger. \citep{rawlings2017model} \\
 Kalibrering & -- & Calibration & Justering av modellparametre mot observasjoner for å sikre at tvilling og fysisk system samsvarer innen toleranser. \citep{dnv2021rp} \\
 Modell- og simuleringsplan & -- & Model and simulation plan & Dokument som beskriver mål, metodikk, scenarier og sjekkpunkter for modell- og simuleringsarbeid i tvillingprosjekter. \citep{dnv2021rp} \\
+Virtuell kommisjonering & -- & Virtual commissioning & Test av automasjonslogikk, sikkerhetsfunksjoner og prosessforløp i et simulert miljø før fysisk oppstart av anlegg. \citep{boschert2018digital} \\
+Scenario-co-simulering & -- & Scenario co-simulation & Kobling av flere simuleringsmodeller for å evaluere tverrfaglige hendelser og beslutninger i samme tvilling. \citep{boschert2018digital} \\
+Flerfidelitetskalibrering & -- & Multi-fidelity calibration & Systematisk bruk av modeller med ulik detaljeringsgrad for å kombinere raske analyser med høy presisjon der det trengs. \citep{kennedy2000predicting} \\
 \bottomrule
 \end{longtable}
 
@@ -85,6 +91,25 @@ Asset-administrasjonsskal & AAS & Asset Administration Shell & Digital represent
 Digital Twin Definition Language & DTDL & Digital Twins Definition Language & Modellbeskrivelse som definerer komponenter, telemetri og relasjoner i Azure Digital Twins og lignende plattformer. \citep{microsoft2023dtdl} \\
 MLOps & MLOps & MLOps & Praksis for å drifte og vedlikeholde maskinlæringsmodeller med versjonering, overvåking og automatisert leveranse. \citep{kreuzberger2023mlops} \\
 Syntetiske data & -- & Synthetic data & Kunstig genererte datasett som brukes til å trene eller teste modeller når reelle data er begrenset eller sensitive. \citep{mittal2023synthetic} \\
+Dataspace-konnektor & -- & Dataspace connector & Programvarekomponent som håndhever policyer, logging og kryptert datautveksling mellom deltakere i et dataspace. \citep{digitalnorway2024dataspace} \\
+Policy Enforcement Point & PEP & Policy Enforcement Point (PEP) & Kontrollpunkt som stopper eller tillater datastrømmer basert på sikkerhets- og delingsregler før data når tvillingplattformen. \citep{idsa2023ram} \\
+Observabilitetsplattform & -- & Observability platform & Verktøykjede for innsamling av logger, spor og metrikk som gir innsikt i ytelse og hendelser i tvillingens data- og modellpipeline. \citep{kreuzberger2023mlops} \\
+\bottomrule
+\end{longtable}
+
+\subsection{Sikkerhet og beredskap}
+\begin{longtable}{p{0.23\textwidth}p{0.16\textwidth}p{0.23\textwidth}p{0.34\textwidth}}
+\toprule
+\textbf{Begrep (norsk)} & \textbf{Forkortelse} & \textbf{Engelsk term} & \textbf{Forklaring} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Begrep (norsk)} & \textbf{Forkortelse} & \textbf{Engelsk term} & \textbf{Forklaring} \\
+\midrule
+\endhead
+NIS2-etterlevelsesplan & -- & NIS2 compliance plan & Tiltaksliste som beskriver ansvar, tidsfrister og tekniske kontroller for å oppfylle NIS2-krav i tvillingprosjekter. \citep{eu2022nis2} \\
+Sikkerhetssoner & -- & Security zones & Segmentering av nettverk og systemer i adskilte soner for å begrense spredning av hendelser og sikre kritisk infrastruktur. \citep{iec62443-2-1} \\
+Beredskapsøvelse & -- & Preparedness exercise & Planlagt trening som tester responsevne, roller og kommunikasjon ved cyberhendelser mot tvillingplattformen. \citep{dsb2023ovelser} \\
 \bottomrule
 \end{longtable}
 

@@ -29,6 +29,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
 | DT-17 | Kapittel 8 | FERDIG – Etablerte felles leveranseplan for klimacaser og workshopopplegg som binder havvind-, landbruks- og battericase sammen. | `chapters/kapittel08-case.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
+| DT-APP-02 | Appendiks – Begrepsliste | FERDIG – Oppdaterte ordlisten med dataspace-roller, modellverktøy, observabilitet og sikkerhetsbegrep samt ny beredskapsseksjon. | `support/ordliste.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-16 | Kapittel 7 | FERDIG – Utvidet livssyklusfortellinger med styringspunkttabell, beskrev hybrid governance-sløyfer og definerte modenhetssteg for bærekraftstyring. | `chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md` |
 | DT-20 | Kapittel 3 | FERDIG – Beskrev datakvalitetsstyring med kontrollpunkter, observabilitet og ISO-referanser. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md` |
 | DT-15 | Kapittel 6 | FERDIG – Etablerte sertifiseringsløp og kvalitetsjournal i kapittel 6 og oppdaterte plan- og statusfiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
