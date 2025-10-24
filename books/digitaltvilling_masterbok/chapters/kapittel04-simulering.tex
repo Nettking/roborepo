@@ -203,7 +203,28 @@ Tabell~\ref{tab:overvanns-lab} viser hvordan de tre sløyfene oversettes til kon
     \end{tabular}
 \end{table}
 
+\subsection{Integrasjon med dataspace og kontrolltårn}
 Etter hver øvelse dokumenteres læringspunkter i et felles register som deles med nabokommuner og regionale vannområder. Flere kommuner tester nå skybaserte overvannslaboratorier der digitale tvillinger integreres med 3D-bymodeller for å visualisere konsekvenser for kritisk infrastruktur og skoleveier \citep{asplan2023overvannslab}. Erfaringene bør kobles til kapittel 3 sine beskrivelser av dataspace-samarbeid, slik at sensor- og modelldata kan deles sikkert mellom kommuner, entreprenører og statlige myndigheter. Når caset brukes i undervisning, kan studentgrupper simulere effekten av grønne tak, permeable dekker og nødavledninger, og måle gevinstene med samme indikatorer som brukes i kapittel 6 sine beredskapsøvelser.
+
+For å gjøre koblingen eksplisitt bør laboratoriet driftes med samme styringsmekanismer som dataspace-tavlen i kapittel~3 og kontrolltårnet i kapittel~6. Tabell~\ref{tab:kap04-overvann-integrasjon} konkretiserer hvilke beslutninger som må speiles i de andre kapitlene for at beredskapsarbeidet skal bli helhetlig.
+
+\begin{table}[ht]
+    \centering
+    \caption{Integrasjonspunkter mellom overvannslaboratoriet og øvrige kapitler.}
+    \label{tab:kap04-overvann-integrasjon}
+    \begin{tabular}{p{0.28\textwidth}p{0.40\textwidth}p{0.24\textwidth}}
+        \toprule
+        \textbf{Integrasjonsområde} & \textbf{Tiltak i overvannslaboratoriet} & \textbf{Kobling} \\
+        \midrule
+        Sanntidsvarsling & Synkronisere flomvarsler, sensoralarmer og beslutningslogg i samme hendelsesprosess som dataspace-operatøren bruker. & Kapittel~3 dataspace-drift, Kapittel~6 hendelseshåndtering \citep{digdir2024sanntidsdata,dsb2022beredskap} \\
+        Indikatorpanel & Oppdatere dashboardet med vannstand, responstid og tiltakseffekt slik at indikatorene kan leses direkte inn i tillitspanelet. & Kapittel~6 tillitsindikatorer, Kapittel~7 gevinstlogg \citep{digdir2023styringai} \\
+        Data- og modellkvalitet & Versjonskontrollere hydrologiske modeller og dele kvalitetsrapporter gjennom dataspace-katalogen. & Kapittel~3 datakvalitetsstyring \citep{nve2022kommunal} \\
+        Læringssløyfer & Samle forbedringsforslag fra øvelser og kommunale pilotprosjekter i samme tiltaksregister som brukes i styringskapittelet. & Kapittel~7 governance, Kapittel~8 sektorreiser \citep{dsb2022beredskap} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+En månedlig driftsgjennomgang mellom kommunens beredskapsteam, dataspace-operatøren og kontrolltårnansvarlige bør bekrefte at tabellen er oppdatert. Møtet følger sjekklisten fra kapittel~3: avvikslogg oppdateres, kommende endringer tidssettes og eventuelle behov for syntetiske datasett vurderes. Resultatene tas inn i kvalitetsjournalen fra kapittel~6 og i governance-oversikten fra kapittel~7 slik at tiltakene forblir sporbare.
 
 \section{Laboratorieøving: Immersivt beslutningsrom}
 Laboratorieøvelsen bygger på scenariet i \textit{kap04-immersiv-case.md} og tar utgangspunkt i at studentene får tilgang til et immersivt kontrollrom der fjernvarmeoperasjoner kan testes. Økten varer 90 minutter og gjennomføres i grupper på fire. Datastrømmer og roller speiles i Tabell~\ref{tab:kap04-immersiv-arkitektur} slik at studentene forstår hvordan teknologi og organisasjon henger sammen.
