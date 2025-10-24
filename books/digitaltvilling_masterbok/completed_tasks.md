@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-64: Etablerte porteføljestyringsseksjon i Kapittel 7 med beslutningsporter, indikatorer og kobling til dataspace-governance, og oppdaterte plan-, tavle- og arbeidsfiler slik at kapittelteamet kan prioritere tvillingprogram. (`chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-63: Dokumenterte generativt valideringsløp med guardrails, kontrolltabell og syntetisk datakvalitet i Kapittel 6, og synkroniserte plan-, tavle- og kildefiler for koordinering med Kapittel 5. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-62: Etablerte månedsrapportmal og møtestruktur for kommunal modellovervåking i Kapittel 6 med prosessbeskrivelse og rapporttabell, og oppdaterte plan-, tavle- og arbeidsfiler for å støtte piloteringen mot Oslo VAV. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-61: Utviklet scenariobasert stresstest for hydrogenknutepunkt i Kapittel 6 med arbeidsflyt, tabell og workshopopplegg som kobler kontrolltårn, indikatorpanel og kvalitetsjournal, og oppdaterte plan-, tavle- og arbeidsfiler for koordinering med Kapittel 4-teamet. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
