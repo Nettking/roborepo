@@ -226,6 +226,38 @@ For å gjøre stresstesten praktisk anvendbar bør teamet bruke samme rapporteri
 
 Koblingen mellom simulering, indikatorer og styringssystem gjør at hydrogenknutepunkt-caset blir en bro mellom kapittel 4 og 6. Stresstesten viser samtidig hvordan digital tvilling, dataspace og beredskap må spille sammen for å sikre trygg utrulling av hydrogeninfrastruktur i Norge.
 
+\section{Tverrsektoriell dataspace-samvirkeøvelse}
+Totalberedskapskommisjonen fremhever at digital samhandling må testes på tvers av sektorer for å oppnå reell beredskapseffekt.\citep{dsb2023totalberedskap} DSB sitt scenarioopplegg for nasjonale samvirkeøvelser anbefaler at energi-, transport- og helsesektoren deler data, indikatorer og beslutningslogger i sanntid for å bygge felles situasjonsforståelse.\citep{dsb2024nser} For masterstudentene betyr dette at valideringspanelet må planlegge øvelser hvor dataspace-strømmer, modelljournal og tiltakslogg aktiveres samtidig. Støtten fra \citet{digdir2024samstyring} gjør at hver etat kan koble øvelsen til sine styringsdokumenter og sikre at resultatene forankres i de samme governance-prosessene som Kapittel~7 beskriver.
+
+Øvelsen bygges opp rundt tre hovedfaser som binder Kapittel~3 sitt dataspace-arbeid sammen med kontrolltårnene fra Kapittel~4 og pasientlogistikken i Kapittel~8. Tabell~\ref{tab:samvirkeovelse} gir en detaljert oversikt over hvordan fasene struktureres med indikatorer, datasett og ansvarlige roller. Datastrømmer fra energikontrolltårn, kollektivtransport og helsejournaler må harmoniseres slik at både Ruter, Bane NOR, nettselskap og helseforetak får like rask tilgang til beslutningsgrunnlag.\citep{ruter2024mobilitetslab,banenor2024digitalspor,energinorge2023beredskap,helsedir2023beredskap}
+
+\begin{table}[ht]
+    \centering
+    \caption{Faser i tverrsektoriell dataspace-samvirkeøvelse}
+    \label{tab:samvirkeovelse}
+    \begin{tabular}{|p{2.9cm}|p{4.4cm}|p{4.6cm}|p{3.2cm}|}
+        \hline
+        \textbf{Fase} & \textbf{Fokus og samhandling} & \textbf{Datasett og indikatorer} & \textbf{Dokumentasjon og ansvar} \\
+        \hline
+        Felles situasjonsbilde & Energikontrolltårn deler lastbilder med kollektivtrafikk og pasientlogistikk; dataspace-operatør setter opp felles varslingskanal & Forbruksmønster, sanntidsposisjon fra transport, sengekapasitet og beredskapsstatus & Dataspace-protokoll, hendelseslogg og beslutningsjournal signert av øvingsleder \\
+        \hline
+        Koordinert respons & Varslingssløyfer aktiveres, modelljournalen brukes til å teste tiltak mot simuleringer i Kapittel~4 og pasientflyt fra Kapittel~8 & Kontrolltårnindikatorer, triagemetoder, ressursallokering for ambulanse og busser & Tiltakslogg, modelljournal og ROS-notat oppdatert av sektoransvarlige \\
+        \hline
+        Læring og rapportering & Resultater kobles til gevinstpanelet fra Kapittel~7; avvik fordeles på forbedringstiltak og nye dataprodukter & Effekter på responstid, gevinstindikatorer og data-kvalitet fra dataspace-portalen & Evalueringsrapport til fagfellelogg, planfil og anskaffelsesoppfølging \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Før øvelsen starter må studentteamet definere akseptkriterier for respons- og læringsfaser, slik at evalueringen kan gjennomføres likt for alle sektorer. Følgende aktiviteter sikrer et strukturert opplegg:
+\begin{enumerate}
+    \item \textbf{Planlegging:} Kartlegg deltakere, datastrømmer og juridiske avklaringer, og registrer øvelsen i kvalitetsjournalen med referanse til relevante dataspace-kontrakter.\citep{dsb2024nser}
+    \item \textbf{Gjennomføring:} Bruk kontrolltårn-panelet for å synliggjøre indikatorer, loggfør avvik i sanntid og aktiver triagerutinen når terskler overskrides.\citep{energinorge2023beredskap,helsedir2023beredskap}
+    \item \textbf{Evaluering:} Sammenlign måledata med akseptkriterier, prioriter tiltak i tiltaksloggen og dokumenter læringspunkter som skal behandles i porteføljestyringen.\citep{digdir2024samstyring}
+\end{enumerate}
+
+Studentene bør levere et øvelseshefte som beskriver scenarier, indikatorer og ansvarsfordeling, samt en kort refleksjonsrapport som viser hvordan dataspace-økosystemet støttet beslutningene. Leveransene brukes i fagfellelogg og planfil for å koordinere videre pilotering, og gir kapittelredaktørene konkrete eksempler som kan skaleres til kommunale og regionale øvelser.
+
+
 \section{Kontinuerlig modellovervåking for kommunale tvillinger}
 Kommunale digitale tvillinger for vann, avløp og byplanlegging er avhengige av kontinuerlig overvåking for å oppdage avvik tidlig og koordinere beredskapstiltak. \citet{dsb2022beredskap} fremhever at kommunene må dokumentere helhetlig ROS-analyse, varslingsrutiner og øvingsplaner, mens \citet{nve2022kommunal} anbefaler at overvåkingen knyttes til konkrete hendelsesnivåer for flom og skred. Når en digital tvilling integrerer sensorstrømmer, simuleringer og hendelseslogg, må disse kravene oversettes til automatiserte kontroller slik at driftsorganisasjonen får varsler i tide. Prosjekter som det digitale overvannslaboratoriet utviklet av Asplan Viak viser hvordan 3D-bydata og sanntidssensorer kan brukes til å modellere kapasitet, responstid og effekten av blågrønne tiltak.\citep{asplan2023overvannslab}
 
