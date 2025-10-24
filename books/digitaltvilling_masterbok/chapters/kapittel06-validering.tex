@@ -125,6 +125,39 @@ Tabell~\ref{tab:kommunaleindikatorer} viser hvordan en kommune kan sette opp ind
 
 Indikatorene bør visualiseres i samme dashboard som brukes i kontrolltårn-caset, slik at drifts- og beredskapsroller får en samlet situasjonsforståelse. Når terskler nås, skal loggskjemaene kobles til personvern- og sikkerhetskontrollene i Kapittel~5 og Kapittel~7 for å sikre etterlevelse på tvers av sektorer.
 
+\subsection{Månedsrapport for modellovervåking}
+For at indikatorene skal føre til kontinuerlig forbedring trenger kommunen en fast rapporteringssløyfe der tekniske funn og beredskapstiltak vurderes samlet. Oslo kommunes overvannsprogram har etablert en felles månedsrapport som kobler modellresultater, feltobservasjoner og planstatus i de samme møtene som drift og byutvikling behandles.\citep{oslo2023overvann} Rapporten må også synliggjøre samhandling med nabokommuner og regionale aktører slik \citet{ks2022samhandling} anbefaler, og dokumentere læringspunkter i tråd med kravene i kommunal beredskapsplikt.\citep{dsb2022beredskap}
+
+En strukturert rapporteringssløyfe kan organiseres slik:
+\begin{enumerate}
+    \item \textbf{Forbered data}: Fagansvarlige eksporterer indikatorene fra Tabell~\ref{tab:kommunaleindikatorer}, oppdaterer hendelsesloggen og samler modellnotater fra siste simuleringer.
+    \item \textbf{Gjennomfør møte}: Drift, beredskap og planleggere samles månedlig for å gjennomgå avvik, foreslå tiltak og validere at beslutningene kan spores i kvalitetsjournalen.
+    \item \textbf{Fang læring}: Tiltak og beslutninger registreres i tiltakslogg og fagfellelogg, og kobles til oppdateringer i kapittel 7 sitt styringspanel og kapittel 3 sin dataspace-policy.
+\end{enumerate}
+
+Tabell~\ref{tab:manedsrapport} viser en anbefalt mal som binder indikatorpanelet til styringssystemet.
+
+\begin{table}[ht]
+    \centering
+    \caption{Forslag til månedsrapport for kommunal modellovervåking}
+    \label{tab:manedsrapport}
+    \begin{tabular}{|p{3.1cm}|p{4.8cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Del} & \textbf{Innhold} & \textbf{Datasett og kilder} & \textbf{Ansvarlig} \\
+        \hline
+        Drift og beredskap & Oppsummering av hendelser, terskelbrudd og responstid, koblet til tiltak i beredskapsplanen & Indikatorpanel, hendelseslogg, ROS-plan \citep{dsb2022beredskap} & Beredskapsleder + driftsansvarlig \\
+        \hline
+        Modellkvalitet & Analyse av prognoseavvik, modellversjoner og planlagte endringer i simuleringsoppsett & Modelljournal, parameterendringer, kvalitetsjournal & Tvillingforvalter \\
+        \hline
+        Datasamarbeid & Status for dataspace-avtaler, delte datasett og varsling mot nabokommuner og sektorpartnere & Dataspace-policy, delingsavtaler, samhandlingslogg \citep{ks2022samhandling} & Data steward \\
+        \hline
+        Bærekraft og plan & Effekt på klima- og overvannsmål, prioriterte investeringsprosjekter og kobling til planprosesser & Klimaregnskap, prosjektportefølje, indikatorer fra Kapittel~7 & Byutviklingssjef \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Rapportstrukturen gjør det enklere å følge opp læringspunkter etter øvelser og hendelser. Når kommunen gjenbruker malen i fagfellemøter og pilotering med partnere, skapes en sammenhengende historikk som styrker kontinuerlig forbedring og gjør det enklere å dele innsikt på tvers av kapitlene.
+
 \subsection{Kobling til læringsaktiviteter}
 For masterstudentene gir overvåkingssløyfen et rammeverk for praktiske oppgaver:
 \begin{itemize}
