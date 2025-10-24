@@ -7,7 +7,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 
 | Del | Kapittel | Status | Neste steg |
 | --- | -------- | ------ | ---------- |
-| I | Kapittel 1 | Utvidet med detaljert historisk tidslinje, norske politiske koblinger og caser. | Dele fagfellepakke med ferdig tidslinje (`support/figurer/kilder/kap01-tidslinje-v1.tikz`), tabeller og nye kilder. |
+| I | Kapittel 1 | Utvidet med detaljert historisk tidslinje, norske politiske koblinger og caser. | Dele fagfellepakke med ferdig tidslinje (`support/figurer/kilder/kap01-tidslinje-v1.tikz`), tabeller og nye kilder, og bekrefte at figurstiene fungerer fra `main.tex`. |
 | I | Kapittel 2 | Utvidet med flerfidelitetscase, metodetabeller og modellforvaltningskrav i tillegg til politiske rammer. | Pilotere metode- og dokumentasjonstabeller i workshop og samle fagfelleinnspill før neste revisjon. |
 | I | Kapittel 3 | Supplert med sirkulærøkonomi, materialsløyfefigur og to datadrevne caser. | Samordne sirkulærøkonomi-innspill med grafikk- og datastyringsteamet før fagfelleutsending. |
 | II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
