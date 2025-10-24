@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-BUG-10: Fjernet TikZ-illustrasjoner i kapittel 1–3, skrev tekstlige erstatninger og oppdaterte `plan.md`, `task_queue.md` og `completed_tasks.md` slik at manus kan kompilere uten grafikkavhengigheter.
 - `FERDIG` – Leveranse for DT-BUG-08: Lukket manglende `}` i BibTeX-posten for EUs sirkulærøkonomiplan, ryddet duplikatfeltene i Gaia-X-oppføringen og flyttet merknaden for IEC 62443-2-1 slik at `support/referanser.bib` bygger uten feil; oppdaterte `task_queue.md` og `plan.md`.
 - `FERDIG` – Leveranse for DT-BUG-07: Aktivert `babel` med norsk språk i `main.tex` slik at kontrollsekvensene `\aa`, `\ae` og `\o` tolkes korrekt og kapittel 3 kan kompileres uten stoppfeil; oppdaterte `task_queue.md` og `plan.md` for å synliggjøre endringen.
 - `FERDIG` – Leveranse for DT-BUG-06: Erstattet udefinerte `\n`-linjeskift med `\\` i `support/figurer/kilder/kap02-politikk-ramme-v1.tikz`, bekreftet at hovedmanuset har fargedefinisjonene og dokumenterte status i `task_queue.md` og `plan.md` for å sikre grønn kompilering.

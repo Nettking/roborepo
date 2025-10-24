@@ -10,45 +10,20 @@
 \section{Dataflyt og pipeline-design}
 En digital tvilling er avhengig av en gjennomtenkt datapipeline som kan fange, bearbeide og tilgjengeliggjøre informasjon med riktig kvalitet og tidsoppløsning. Det starter i feltet, hvor sensorer, styringssystemer eller manuelle registreringer skaper r å data. Dataene m å filtreres og normaliseres tidlig for  å unng å store forsinkelser senere i kjeden. Norske industrimiljøer som prosessindustrien p å Herøya har gode erfaringer med  å kombinere edge-noder som gjør grunnleggende forh å ndsprosessering med sentrale skyplattformer som tilbyr datalagring, modelltrening og visualisering.
 
-Figur~\ref{fig:kap3-datapipeline} oppsummerer hovedstrømmen fra feltniv å til de applikasjonene som konsumerer tvillingtjenestene. Integrasjonslaget markerer overgangen der normaliserte hendelser og masterdata eksponeres gjennom standardiserte grensesnitt og meldingsstrukturer, slik at etterfølgende plattformer kan bygges modulåe rt.
+Oversikten nedenfor oppsummerer hovedstrømmen fra feltniv å til de applikasjonene som konsumerer tvillingtjenestene. Integrasjonslaget markerer overgangen der normaliserte hendelser og masterdata eksponeres gjennom standardiserte grensesnitt og meldingsstrukturer, slik at etterfølgende plattformer kan bygges modulåe rt.
 
 % Alt-tekst: support/figurer/metadata/kap03-datapipeline-v2.alt.md
-\begin{figure}[ht]
-    \centering
-    \resizebox{\textwidth}{!}{%
-    \begin{tikzpicture}[node distance=2.3cm, >=LaTeX]
-        \tikzset{
-            stage/.style={
-                draw=grafitt,
-                rounded corners=4pt,
-                minimum height=1.9cm,
-                text width=3.2cm,
-                align=center,
-                font=\small,
-                fill=#1!18
-            },
-            stage/.default=dypblaa
-        }
-        \node (field) [stage=dypblaa] {Feltniv å \\ \footnotesize Sensorer, SCADA, operatørinput};
-        \node (edge) [stage=petrol, right=2.3cm of field] {Edge- og gatewaylag \\ \footnotesize Filtrering, buffering, protokollkonvertering};
-        \node (integration) [stage=havgronn, right=2.3cm of edge] {Integrasjonslag \\ \footnotesize Meldingskøer, API-orkestrering, semantisk modellering};
-        \node (platform) [stage=solgul, right=2.3cm of integration] {Data- og analyseplattformer \\ \footnotesize Datasjø, tidsserielager, modelltrening};
-        \node (apps) [stage=koral, right=2.3cm of platform] {Forbrukere \\ \footnotesize Digital tvilling, dashboards, styringssystemer};
-        \draw[->, thick, draw=grafitt] (field) -- (edge);
-        \draw[->, thick, draw=grafitt] (edge) -- node[above, font=\scriptsize]{Normalisering, kvalitetssikring} (integration);
-        \draw[->, thick, draw=grafitt] (integration) -- node[above, font=\scriptsize]{Distribusjon, standarder} (platform);
-        \draw[->, thick, draw=grafitt] (platform) -- node[above, font=\scriptsize]{Innsikt, automatisering} (apps);
-        \node (governance) [draw=grafitt, dashed, rounded corners=4pt, text width=8cm, align=center, font=\scriptsize, fill=skygraa!60, below=1.4cm of integration] {Tverrg å ende styring: tilgangskontroll, hendelseslogging, datakatalog og livssyklus for modeller};
-        \draw[->, dashed, draw=grafitt] (governance.north west) -- (edge.south);
-        \draw[->, dashed, draw=grafitt] (governance.north) -- (integration.south);
-        \draw[->, dashed, draw=grafitt] (governance.north east) -- (platform.south);
-    \end{tikzpicture}%
-    }
-    \caption{Skisse av datapipeline fra felt til applikasjoner, med integrasjonslaget som kobler sanntidsstrømmer og dataplattformer.}
-    \label{fig:kap3-datapipeline}
-\end{figure}
+\paragraph{Datapipeline i tekstform.} TikZ-grafikken er fjernet for å sikre grønn kompilering. Strukturen beskrives nå slik:
+\begin{itemize}
+    \item \textbf{Feltnivå:} Sensorer, SCADA og operatørinput leverer kontinuerlige data.
+    \item \textbf{Edge- og gatewaylag:} Filtrerer, bufferer og oversetter protokoller før data sendes videre.
+    \item \textbf{Integrasjonslag:} Meldingskøer, API-orkestrering og semantisk modellering sørger for at data standardiseres og distribueres.
+    \item \textbf{Data- og analyseplattformer:} Datasjøer, tidsserielagre og modelltreningsmiljø kobles til styrings- og analyseapplikasjoner.
+    \item \textbf{Forbrukere:} Digitale tvillinger, dashboards og styringssystemer bruker innsikten til operasjonelle beslutninger.
+    \item \textbf{Styring på tvers:} Tilgangskontroll, hendelseslogging, datakatalog og modellforvaltning følger hele kjeden.
+\end{itemize}
 
-Koordineringen med fagfeller bygger på delingsnotatet \texttt{support/notater/datastyringsforum-di03.md}, og figurens metadata er registrert i \texttt{support/figurer/metadata/kap03-datapipeline-v2.alt.md} slik at grafikkteamet og DI-03-teamet jobber mot samme spesifikasjon.
+Koordineringen med fagfeller bygger på delingsnotatet \texttt{support/notater/datastyringsforum-di03.md}, og metadataene til den tidligere figuren ligger fortsatt i \texttt{support/figurer/metadata/kap03-datapipeline-v2.alt.md} slik at grafikkteamet og DI-03-teamet kan gjenoppta illustrasjonsarbeidet når kompilasjonsmiljøet er på plass.
 
 \subsection{Fra sensor til innsikt}
 Første steg er datainnsamling via feltbuss, industrielle IoT-gatewayer eller API-er fra eksterne systemer. For digital tvilling-bruk er det avgjørende  å definere sampling-rate, datastruktur og kontekst slik at hver m å ling kan kobles til riktig fysiske komponent. Inntaksleddet m å h å ndtere buffring nåar tilkoblingen faller ut, og bidra med enhetlige tidsstempler for  å muliggjøre felles analyse av hendelser. Videre bør pipeline-design inkludere datakvalitetsregler som fanger opp avvik, for eksempel ved  å merke data fra kalibreringsperioder eller vedlikehold.
@@ -107,14 +82,14 @@ som deles med fagfeller i arbeidet med kommentar DI-03.
 N å r nye datakilder tas i bruk bør datastyringsforumet sjekke behandlingsgrunnlag, vurdering av dataminimering og rutiner for sletting. Et eget sjekkpunkt sikrer at dokumentasjonen speiler kravene fra Helsedirektoratet, Normen og Kapittel~6 om validering og tillit. N å r tvillingen skaleres p å tvers av anlegg, anbefales det  å utvide datakatalogen med tydelige beskrivelser av form å l og kontaktpunkt for hvert datasett.
 
 \section{Sirkulåe røkonomi og materialsløyfer}
-Sirkulåe røkonomi krever at data følger materialene gjennom hele verdikjeden slik at gjenbruk, reparasjon og resirkulasjon kan dokumenteres. Den nasjonale strategien for sirkulåe r økonomi fremhever digitale tvillinger som en nøkkel for  å spore klimaavtrykk og ressursbruk \citep{regjeringen2021sirkulaer}. EU sitt handlingsprogram for sirkulåe røkonomi understreker behovet for  å pne standarder, produktpass og datadeling mellom produsenter, brukere og resirkuleringsaktører \citep{eu2020circulareconomy}. Figuren under viser hvordan data flyter i en materialsløyfe n å r en digital tvilling kobler sammen design, produksjon, bruk og retur.
-
-\begin{figure}[ht]
-    \centering
-    \resizebox{0.85\textwidth}{!}{\input{support/figurer/kilder/kap03-sirkular-dataflyt-v1.tikz}}
-    \caption{Datapunkter som deles i en sirkulåe r materialsløyfe, fra design og produksjon via bruk og retur til resirkulasjon.}
-    \label{fig:kap03-sirkular}
-\end{figure}
+Sirkulåe røkonomi krever at data følger materialene gjennom hele verdikjeden slik at gjenbruk, reparasjon og resirkulasjon kan dokumenteres. Den nasjonale strategien for sirkulåe r økonomi fremhever digitale tvillinger som en nøkkel for  å spore klimaavtrykk og ressursbruk \citep{regjeringen2021sirkulaer}. EU sitt handlingsprogram for sirkulåe røkonomi understreker behovet for  å pne standarder, produktpass og datadeling mellom produsenter, brukere og resirkuleringsaktører \citep{eu2020circulareconomy}. Oversikten under viser hvordan data flyter i en materialsløyfe n å r en digital tvilling kobler sammen design, produksjon, bruk og retur:
+\begin{itemize}
+    \item \textbf{Designfase:} Produktpass definerer materialinnhold, moduloppbygging og forventet levetid.
+    \item \textbf{Produksjon:} Kvalitetstester, prosessdata og energibruk logges og knyttes til partinumre.
+    \item \textbf{Bruk:} Sensorer og vedlikeholdslogger oppdaterer tilstand og restlevetid for komponentene.
+    \item \textbf{Retur og ombruk:} Inspeksjonsdata avgjør om komponenter gjenbrukes, repareres eller materialgjenvinnes.
+    \item \textbf{Resirkulasjon:} Massebalanser og sporbarhet sikrer at resirkulert innhold dokumenteres mot nye produktserier.
+\end{itemize}
 
 \subsection{Indikatorer og datakilder}
 For  å støtte sirkulåe re beslutninger bør digitale tvillinger fange indikatorer for materialinnhold, karbonavtrykk, levetid og restverdi. Dataene m å våe re tilgjengelige i produktpass eller digitale loggbøker slik at b å de produsenter og resirkulatører vet hvilke komponenter som kan demonteres og gjenbrukes. Kombinasjonen av sensorinformasjon, ERP-data og kvalitetstester gjør det mulig  å beregne hvor mye av en komponent som kan gjenbrukes uten ytterligere bearbeiding. Norske virksomheter som deltar i grønn plattform-programmet rapporterer at slike indikatorer er nødvendige for  å f å støtte til pilotering \citep{miljodir2022sirkular}.

@@ -9,7 +9,7 @@
 \end{itemize}
 
 \section{Systemperspektiv}
-Systemtenkning starter med å forstå hvilke deler av virkeligheten som påvirker hverandre og hvordan verdistrømmer beveger seg gjennom systemet. Første steg er å definere klare systemgrenser, identifisere interessenter og beskrive hva de forsøker å oppnå. Deretter kan vi visualisere samspillet mellom teknologi, prosesser og mennesker ved hjelp av systemkart, påvirkningsdiagrammer og kausale sløyfer. Figurene under gir to typiske fremstillinger for en digital tvilling i en norsk industribedrift.
+Systemtenkning starter med å forstå hvilke deler av virkeligheten som påvirker hverandre og hvordan verdistrømmer beveger seg gjennom systemet. Første steg er å definere klare systemgrenser, identifisere interessenter og beskrive hva de forsøker å oppnå. Deretter kan vi visualisere samspillet mellom teknologi, prosesser og mennesker ved hjelp av systemkart, påvirkningsdiagrammer og kausale sløyfer. Beskrivelsene under gir to typiske fremstillinger for en digital tvilling i en norsk industribedrift.
 
 \textbf{Nøkkelspørsmål når systemperspektivet etableres:}
 \begin{itemize}
@@ -20,31 +20,34 @@ Systemtenkning starter med å forstå hvilke deler av virkeligheten som påvirke
 
 \subsection{Systemkart for produksjonslinje med digital tvilling}
 % Alt-tekst: support/figurer/metadata/kap02-systemkart-v2.alt.md
-\begin{figure}[ht]
-    \centering
-    \resizebox{\textwidth}{!}{\input{support/figurer/kilder/kap02-systemkart-v2.tikz}}
-    \caption{Systemkart som viser hvordan data flyter fra felt via edge- og produksjonsstyringslag til analyseplattformer og digitale tvillingtjenester. Ikonene markerer hovedtypen av komponent i hvert lag.}
-    \label{fig:kap02-systemkart}
-\end{figure}
+\paragraph{Systemkart som tekst.} For å eliminere kompilasjonsfeil erstattes TikZ-grafikken med en strukturert tekstforklaring. Systemkartet består av følgende lag:
+\begin{itemize}
+    \item \textbf{Feltnivå:} Sensorer, pumper, ventiler og andre fysiske komponenter som leverer sanntidsdata.
+    \item \textbf{Edge-infrastruktur:} Lokale noder som filtrerer data, utfører hurtige analyser og sikrer robust kommunikasjon.
+    \item \textbf{Produksjonsstyring:} MES- og SCADA-lag som koordinerer operasjoner og gjør data tilgjengelig for analyse.
+    \item \textbf{Analyse- og tvillingtjenester:} Skyplattformer og beslutningsgrensesnitt som kombinerer historikk og sanntidsinformasjon.
+    \item \textbf{Brukergrupper:} Operatører, vedlikeholdsteam og ledelse som mottar innsikt og foreslåtte tiltak.
+\end{itemize}
 
-Figur~\ref{fig:kap02-systemkart} illustrerer et typisk informasjonsløp der feltnivå, edge-infrastruktur og produksjonsstyringssystemer er tydelig gruppert. Ikonene i boksen peker på om elementet er en fysisk enhet, en styringsapplikasjon eller et analyse-/beslutningsgrensesnitt, slik at ansvarsdelingen blir enklere å lese. Historiske data kombineres med analyseplattformen for å oppdatere den digitale tvillingen, som igjen leverer beslutningsstøtte til operatører, vedlikeholdsteam og ledelse. Når du lager et eget systemkart, noter eksplisitt hvilke datatyper som flyter mellom nodene, og marker hvor ansvar og eierskap ligger i hvert lag.
+Beskrivelsen over viser et typisk informasjonsløp der feltnivå, edge-infrastruktur og produksjonsstyringssystemer er tydelig gruppert. Når lagene omtales eksplisitt, blir ansvarsdelingen enklere å lese enn i en kompakt figur. Historiske data kombineres med analyseplattformen for å oppdatere den digitale tvillingen, som igjen leverer beslutningsstøtte til operatører, vedlikeholdsteam og ledelse. Når du lager et eget systemkart, noter eksplisitt hvilke datatyper som flyter mellom nodene, og marker hvor ansvar og eierskap ligger i hvert lag.
 
 \subsection{Kausalsløyfe mellom vedlikehold og energibruk}
 % Alt-tekst: support/figurer/metadata/kap02-kausal-v1.alt.md
-\begin{figure}[ht]
-    \centering
-    \resizebox{0.92\textwidth}{!}{\input{support/figurer/kilder/kap02-kausal-v1.tikz}}
-    \caption{Forsterkende (grønn) og dempende (oransje) sammenhenger mellom planlagt vedlikehold, tilstandsovervåkning, nedetid, energiforbruk og produktkvalitet.}
-    \label{fig:kap02-kausal}
-\end{figure}
+\paragraph{Kausalsammenhenger forklart i tekst.} Fremfor en grafisk sløyfe beskrives koblingene slik:
+\begin{itemize}
+    \item Mer planlagt vedlikehold gir bedre sensordata og færre uforutsette stopp.
+    \item Stabil drift reduserer energiforbruket og forbedrer produktkvaliteten.
+    \item Høy produktkvalitet frigjør tid til videre læring og justering av vedlikeholdsstrategien.
+    \item Operasjonelle erfaringer føres tilbake som tiltak i styringssystemene.
+\end{itemize}
 
-Kausalsløyfen i figur~\ref{fig:kap02-kausal} viser hvordan systemkart kan brukes til å fange både ønskede og uønskede tilbakemeldinger. Økt planlagt vedlikehold forbedrer sensorenes status, som reduserer risiko for uplanlagte stopp og stabiliserer energibruken. Et stabilt energinivå gir høyere produktkvalitet, noe som igjen påvirker vedlikeholdsstrategien gjennom læring og prioritering av tiltak. Når slike forhold beskrives eksplisitt, blir det enklere å diskutere scenarier med interessenter og identifisere hvor den digitale tvillingen bør levere mest verdi.
+Denne tekstlige sløyfen viser hvordan systemkart kan brukes til å fange både ønskede og uønskede tilbakemeldinger. Økt planlagt vedlikehold forbedrer sensorenes status, som reduserer risiko for uplanlagte stopp og stabiliserer energibruken. Et stabilt energinivå gir høyere produktkvalitet, noe som igjen påvirker vedlikeholdsstrategien gjennom læring og prioritering av tiltak. Når slike forhold beskrives eksplisitt, blir det enklere å diskutere scenarier med interessenter og identifisere hvor den digitale tvillingen bør levere mest verdi.
 
 \textbf{Arbeidsmåte for å utvikle systemkart:}
 \begin{enumerate}
     \item Start med en workshop hvor interessenter beskriver mål og smertepunkter.
-    \item Tegn det overordnede systemkartet (som i Figur 2.1) med fokus på dataflyt og ansvar.
-    \item Utvid kartet med kausale sløyfer (som i Figur 2.2) for å avdekke dynamikk og mulige ubalanser.
+    \item Tegn det overordnede systemkartet (slik det er beskrevet i punktlisten over) med fokus på dataflyt og ansvar.
+    \item Utvid kartet med kausale sløyfer (slik tekstbeskrivelsen over viser) for å avdekke dynamikk og mulige ubalanser.
     \item Forankre kartene i virksomhetens enterprise-arkitektur og eksisterende prosesskart slik at språk og symboler er gjenkjennelige for organisasjonen.
 \end{enumerate}
 
@@ -202,14 +205,12 @@ Før en modell distribueres til undervisning eller pilotering, bør teamet kontr
 \end{enumerate}
 
 \section{Norske politiske rammer}
-Digitale tvillinger i Norge utvikles innenfor et politisk landskap som legger tydelige føringer for hvordan data skal forvaltes, deles og brukes. Regjeringens datastrategi for offentlig sektor legger vekt på åpne, tilgjengelige og gjenbrukbare data som skal styrke innovasjon og effektivisering \citep{regjeringen2022datastrategi}. I tillegg beskriver stortingsmeldingen \emph{Data som ressurs} hvordan sektorer må samhandle gjennom felles prinsipper for datadeling, sikkerhet og personvern \citep{meldst22datasomressurs}. Figuren under viser hvordan europeiske, nasjonale og sektorspesifikke initiativ henger sammen når virksomheter planlegger digitale tvillinger.
-
-\begin{figure}[ht]
-    \centering
-    \resizebox{0.9\textwidth}{!}{\input{support/figurer/kilder/kap02-politikk-ramme-v1.tikz}}
-    \caption{Sammenhengen mellom europeiske initiativ, nasjonale strategier og sektorspesifikke reguleringer som påvirker digitale tvillingprosjekter.}
-    \label{fig:kap02-politikk}
-\end{figure}
+Digitale tvillinger i Norge utvikles innenfor et politisk landskap som legger tydelige føringer for hvordan data skal forvaltes, deles og brukes. Regjeringens datastrategi for offentlig sektor legger vekt på åpne, tilgjengelige og gjenbrukbare data som skal styrke innovasjon og effektivisering \citep{regjeringen2022datastrategi}. I tillegg beskriver stortingsmeldingen \emph{Data som ressurs} hvordan sektorer må samhandle gjennom felles prinsipper for datadeling, sikkerhet og personvern \citep{meldst22datasomressurs}. Oversikten nedenfor erstatter TikZ-illustrasjonen og viser hvordan europeiske, nasjonale og sektorspesifikke initiativ henger sammen når virksomheter planlegger digitale tvillinger:
+\begin{itemize}
+    \item \textbf{Europeisk nivå:} Datarom, Gaia-X og sektorspesifikke reguleringer (energi, transport, helse) setter rammer for interoperabilitet og sikkerhet.
+    \item \textbf{Nasjonalt nivå:} Regjeringens datastrategi, Digitaliseringsdirektoratets retningslinjer og sektormeldinger definerer politikk, finansiering og samarbeidsmodeller.
+    \item \textbf{Sektornivå:} Veiledere fra NVE, Samferdselsdepartementet, Helsedirektoratet m.fl. oversetter krav til konkrete tiltak i prosjektene.
+\end{itemize}
 
 \subsection{Statlige føringer og standardisering}
 EU sitt arbeid med datarom og Gaia-X gir retningslinjer for interoperabilitet, sikker tilgang og styring av dataøkosystem \citep{eu2020circulareconomy}. Disse prinsippene videreføres i nasjonale strategier og i oppfølgingen av personvern-, sikkerhets- og energilovgivning. For digitaliseringsprosjekter i offentlig sektor betyr det at arkitekturen må støtte datadeling på tvers av etater, samtidig som den ivaretar krav til informasjonssikkerhet gjennom standarder som ISO~27001 og NIS2. NVE og Samferdselsdepartementet stiller tilsvarende krav i sektorveiledninger for energi og transport \citep{nve2023nettplan,avinor2022digital}.
