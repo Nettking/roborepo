@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-40: Dokumenterte prediktivt vedlikehold for kraftsystemets AI-tvillinger med eksempel fra Statnett og Equinor, etablerte vedlikeholdstabell i kapittelteksten og oppdaterte plan- og arbeidsfiler. (`chapters/kapittel05-ai.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-39: Utarbeidet kommunalt valideringsløp for overvanns- og kritisk infrastrukturtvilling med arbeidsflyt, tabell og kobling til kvalitetsjournalen, og oppdaterte plan- og statusfiler for pilot mot Oslo VAV. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-38: Beskrev systemmodellering for autonome ferger med modellstrømmer og tabell over ansvarlige datalag, og oppdaterte plan- og statusfiler for å synliggjøre maritimt pilotarbeid. (`chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-37: Knyttet flom- og overvannslaboratoriet til dataspace- og kontrolltårnarbeidet med integrasjonstabell, møtestruktur og oppdaterte statusfiler. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
