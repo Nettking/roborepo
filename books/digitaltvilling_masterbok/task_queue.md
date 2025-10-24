@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-73 | Kapittel 2 | FERDIG – Dokumenterte mobile feltlaboratorier med sjekkliste og tabell som kobler modelljournalen til feltdata og oppdaterte plan- og tavlefiler for koordinering. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-72 | Kapittel 2 | FERDIG – Etablerte kalibreringsverksted med rolle- og artefaktmatrise samt studentoppgave, og oppdaterte plan- og tavlefiler for å koble arbeidet til valideringsjournalen. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md` |
 | DT-71 | Kapittel 6 | FERDIG – Dokumenterte valideringspakke for grønne industriparker med trinnvis prosess, tabell og læringsopplegg, og oppdaterte plan-, tavle- og kildefiler for koordinering mot industripartnere. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-70 | Kapittel 3 | FERDIG – Dokumenterte API-katalog og dataprodukter med tabell, indikator- og governancekoblinger i kapittelet, og oppdaterte plan-, tavle- og kildefiler for å synliggjøre koblingen til kapittel 6 og 7. | `chapters/kapittel03-data.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
