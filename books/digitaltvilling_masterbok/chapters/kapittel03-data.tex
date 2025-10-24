@@ -183,6 +183,56 @@ For å komme raskt i gang med dataspace-initiativ anbefales en trinnvis tilnærm
     \item Pilotér deling av et begrenset datasett og vurder ytelse, sikkerhet og gevinstrealisering før skalering.
 \end{enumerate}
 
+\subsection{Case: Mobilitetsdataspace for bylogistikk}
+Oslo-regionen har etablert et mobilitetsdataspace som kobler sammen bylogistikkaktører, kollektivselskap og teknologipartnere
+for å redusere utslipp og øke punktligheten i vareleveranser. Piloten bygger på veikartet for European Mobility Data Space og
+bruker Gaia-X-kompatible konnektorer for å sikre at data deles med tydelige policy-regler \citep{ec2023mobilitydataspaceblueprint}.
+Ruter og Bymiljøetaten har samlet sanntidsdata fra mobilitetspunkter, ladeinfrastruktur og mikromobilitetsoperatører i en
+felles katalog. Hver deltaker beholder kontroll over egne datasett, men deler metadata, kvalitetsindikatorer og hendelseslogger
+slik at tvillingene i kapittel~4 og kapittel~6 kan bruke oppdaterte trafikkprofiler.
+
+\paragraph{Formål og arbeidsdeling.} Partnerskapet prioriterer tre hovedområder:
+\begin{itemize}
+    \item \textbf{Styring av bylogistikk:} Samordne leveransevinduer og lavutslippssoner gjennom et felles datalag der
+    mobilitetsdata, trafikkstyring og last-mile-løsninger kobles til de simuleringsmetodene som beskrives i kapittel~4.
+    \item \textbf{Beredskap:} Varsle avvik som påvirker sikkerhet og fremkommelighet (for eksempel stengte ruter eller
+    energimangel i ladepunkter) og sende signaler til beredskapsprosessene i kapittel~6.
+    \item \textbf{Læring og innovasjon:} Tilby anonymiserte datasett til forskningsprosjekter og studentteam som skal teste nye
+    logistikkløsninger, med styringskrav for personvern og datasuverenitet \citep{ruter2023dataplattform}.
+\end{itemize}
+
+\begin{table}[ht]
+    \centering
+    \caption{Tiltakspakke for mobilitetsdataspace i Oslo-regionen.}
+    \label{tab:kap03-mobilitet-tiltak}
+    \begin{tabular}{p{0.30\textwidth}p{0.46\textwidth}p{0.18\textwidth}}
+        \toprule
+        \textbf{Tiltak} & \textbf{Beskrivelse} & \textbf{Ansvarlig} \\
+        \midrule
+        Felles datakatalog & Harmoniserer metadata for kollektivtrafikk, varelevering og mikromobilitet slik at datasett kan
+        oppdages på tvers av deltakere. & Dataspace-operatør (ITS Norway) \\
+        Tilgangsstyring med policy & Automatiserer kontraktvilkår for datasett, inkludert vilkår for kommersiell bruk og deling
+        med forskningspartnere. & Juridisk koordinator hos Ruter \\
+        Observabilitetsdashboard & Viser sanntidsscore for punktlighet, utnyttelse av lastepunkt og hendelser som påvirker
+        sikkerhet, koblet til indikatorene i kapittel~6. & Bymiljøetaten og transportetatene \\
+        Innovasjonsarena & Gir sandkasse for start-up-prosjekter med syntetiske datasett og støtte til
+        eksperimenter dokumentert i kapittel~8. & Mobilitetslab og universitetspartner \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\paragraph{Indikatorer.} For å måle effekten av mobilitetsdataspace defineres indikatorer som gjenbrukes i styringspanelet for
+kapittel~6 og gevinstplanene i kapittel~7:
+\begin{itemize}
+    \item Utslippsreduksjon (CO$_2$-ekvivalenter per leveranse) sammenlignet med baseline-scenarioer.
+    \item Punktlighet og fyllingsgrad per transportkategori, basert på sanntidsposisjoner og bookingsdata.
+    \item Andel datasett med komplett metadata og kvalitetsscore, koblet til datakvalitetsprosessen i dette kapittelet.
+    \item Respons- og gjenopprettingstid ved hendelser som krever koordinering med beredskapsplanen i kapittel~6.
+\end{itemize}
+
+Caset gir studentene innsikt i hvordan datasamarbeid gir konkrete tiltak for bylogistikk, samtidig som det viser hvordan
+dataspace-løsninger må koordineres med juridiske krav, indikatorarbeid og de tverrsektorielle casene i kapittel~8.
+
 \section{Sirkulære materialstrømmer og klimaregnskap}
 Sirkulærøkonomi krever at ressursdata knyttes tett til beslutningsprosesser for innkjøp, drift og avvikling. \citet{norskindustri2023sirkular}
 peker på at digitale tvillinger gjør det mulig å følge materialstrømmer i sanntid, mens \citet{miljodir2023materialstrommer} framhever
