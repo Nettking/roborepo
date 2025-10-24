@@ -138,6 +138,39 @@ Implementeringen av panelet kan organiseres i tre steg:
 
 Når tillitsindikatorene er på plass, kan de kobles til fagfellelogg og tiltaksplan i Kapittel~7. Dette gir transparens i hvordan innspill følges opp og sikrer at tiltak prioriteres etter risiko og modenhet. Panelet støtter også kravene i AI-forordningen om risikostyring og dokumentasjon av menneskelig kontroll, og gjør det enklere å demonstrere etterlevelse overfor tilsynsmyndigheter.
 
+\section{Driftsgodkjenning og modellvedlikehold}
+Driftsgodkjenning er bindeleddet mellom utviklingsteamet og driftsorganisasjonen. For å unngå at nye modellversjoner introduserer ukjente risikoer må endringer loggføres, risikovurderes og dokumenteres i samme styringssystem som brukes for øvrige kritiske applikasjoner. \citet{iso10007-2017} anbefaler at alle modellartefakter inngår i en konfigurasjonsstyringsplan med unike identifikatorer, avhengigheter og historikk. Når tvillingen kjøres som en forvaltet tjeneste, bør service management-prosessene i \citet{iso20000-1-2018} brukes til å koordinere releaser, endringsråd og support slik at operatører vet hvilke funksjoner som er testet og godkjent.
+
+I praksis kombineres konfigurasjonsstyring med sikkerhetskravene fra \citet{nsm2023grunnprinsipper} og kvalitetskriteriene i \citet{dnv2023digitalassurance}. Det betyr at hver endring skal ha en definert eier, knyttes til målbare effekter og følge en forhåndsdefinert sjekkliste for testing, dokumentasjon og sign-off. Tabell~\ref{tab:driftsgodkjenning} viser et eksempel på godkjenningspunkter som dekker både tekniske og organisatoriske kontroller. Tabellen kan brukes direkte i kvalitetsjournalen ved å registrere status og referanse til relevante rapporter eller loggføringer.
+
+\begin{table}[ht]
+    \centering
+    \caption{Godkjenningspunkter for endringer i digital tvilling}
+    \label{tab:driftsgodkjenning}
+    \begin{tabular}{|p{3.0cm}|p{4.8cm}|p{4.8cm}|p{3.0cm}|}
+        \hline
+        \textbf{Steg} & \textbf{Godkjenningskriterier} & \textbf{Dokumentasjon} & \textbf{Beslutningsforum} \\
+        \hline
+        Endringsregistrering & Endringen er klassifisert (funksjonell, sikkerhet, data) og koblet til mål i veikartet & Konfigurasjonslogg, kobling til sprint-mål og risikologg & Produktleder + endringsråd \\
+        \hline
+        Test og modellkvalitet & Dekning for regresjonstester, modellavvik \(<\) definerte grenser, datasett godkjent for bruk & Testprotokoll, modelljournal, datakvalitetsrapport & Teknisk ansvarlig + fagansvarlig \\
+        \hline
+        Pilotering i drift & Kontrollert utrulling mot representativt miljø, overvåkning av KPI-er og hendelser & Pilotnotat, overvåkningsdashboard, beslutningslogg & Driftsteam + sikkerhetsleder \\
+        \hline
+        Endelig sign-off & Risikoaksept dokumentert, avvik lukket, kommunikasjon til brukere forberedt & Godkjenningsprotokoll, oppdatert kvalitetsjournal, kommunikasjonspakke & Kvalitetsråd + linjeleder \\
+        \hline
+        Etterkontroll & Effektmåling gjennom indikatorer, læringspunkter registrert og tiltak satt i arbeid & Retrospektivrapport, KPI-panelet, tiltaksregister & Produktleder + styringsgruppe \\
+        \hline
+    \end{tabular}
+\end{table}
+
+For å sikre at tabellen ikke bare blir et compliance-dokument, bør teamet etablere en fast arbeidsflyt:
+\begin{enumerate}
+    \item \textbf{Planlegging av endringen:} Endringsbeskrivelsen kobles til relevante standardkrav og sikkerhetsmål, og vurderes av endringsrådet sammen med kvalitetsjournalen.
+    \item \textbf{Gjennomføring og overvåkning:} Under pilotering logges modellavvik, brukererfaring og sikkerhetshendelser i sanntid. Avvik som bryter terskelverdier fra kontrolltårn-caset må behandles før sign-off.
+    \item \textbf{Læring og forbedring:} Etterkontrollen skal identifisere hvordan data fra produksjon kan brukes til å forbedre modell og prosess. Tiltak registreres som nye backlog-poster eller oppdateringer av styringssystemet.
+\end{enumerate}
+
 \section{Regulatoriske rammer og sikkerhetsstandarder}
 Fagfellepanelet etterspurte en tydelig kobling mellom kvalitetsprosessen og de regulatoriske rammene som gjelder for norske virksomheter. NIS2-direktivet og IEC~62443-serien definerer krav til cybersikkerhet, hendelseshåndtering og styring av industrielle kontrollsystemer, mens DNV-RP-A204 beskriver hvordan digitale tvillinger skal kvalifiseres i sikkerhetskritiske domener.\citep{eu2022nis2,iec62443-2-1,dnv2021a204} Disse rammeverkene krever at valideringsplanen dokumenterer både tekniske og organisatoriske tiltak, med klar oversikt over ansvar og godkjenninger.
 
