@@ -164,6 +164,32 @@ Statsbygg, Oslo kommune og flere norske byer har tatt i bruk digitale modeller s
 \subsection*{Transport og logistikk}
 Bane NOR utvikler digitale tvillinger av jernbanenettet for å planlegge vedlikehold, simulere trafikkavvik og informere kundeservice. Avinor tester tilsvarende modeller på flyplasser for å koordinere bakketjenester. Når du analyserer slike case, må du kartlegge hvordan sanntidsdata fra sensorer, IoT-enheter og trafikkstyringssystemer flyter inn i tvillingen, og hvordan det støtter planlegging og krisehåndtering. Utforsk datakilder som Entur, Bane NOR og Avinor i \autoref{sec:transportressurser} for å sikre at caserapporter støttes av konkrete tidsserier, kapasitetsdata og hendelseslogger.
 
+\subsection*{Kommunal klimaresiliens og beredskap}
+Oslo VAV har etablert en digital tvilling av vann- og avløpsnettet som kombinerer hydrologiske modeller, sensordata og sanntidsvarsling for å planlegge tiltak mot styrtregn og overvann.\citep{oslovav2023digital} Tvillingen brukes sammen med kommunens overvannsstrategi for å teste konsekvenser av utbygginger, dimensjonere blågrønne tiltak og prioritere investeringer i kulverter og magasiner.\citep{oslo2023overvann} Ved å dokumentere caset kan studentene vise hvordan data fra værstasjoner, trykksensorer og manuelle inspeksjoner gir grunnlag for beslutninger i beredskapsstaber og tekniske etater.
+
+\begin{table}[h]
+    \centering
+    \caption{Arbeidsflyt for beredskap mot styrtregn i kommunal digital tvilling}
+    \label{tab:kommunal-beredskap}
+    \begin{tabular}{p{3.4cm}p{4.5cm}p{5.0cm}}
+        \toprule
+        Fase & Kritiske datakilder & Typiske tiltak og beslutninger \\
+        \midrule
+        Forberedende analyser & Regnhendelsesstatistikk, kapasitetsmålinger i ledningsnett, planregister & Prioriterer fordrøyningsbasseng og grønne løsninger, oppdaterer investeringsplaner og byggesaker. \\
+        Operativ beredskap & Sanntidsnivå i kummer, værvarsler, sensordata fra overløp & Aktiverer beredskapstropp, koordinerer innsats mellom vann- og avløpsvakt og bymiljøetat, varsler utsatte institusjoner. \\
+        Etterarbeid og læring & Skadejournal, hendelsesrapport, øvelseslogg & Evaluerer tiltak i tråd med DSBs øvelsesveileder, oppdaterer tiltaksbank og deler læringspunkter i fagfelleloggen.\citep{dsb2024nser,dsb2023ovelser} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Når casemalen fylles ut, bør du beskrive hvordan den kommunale tvillingen kobles til dataspace-prinsippene i kapittel~3 og valideringsrutiner i kapittel~6. Det innebærer å dokumentere hvilke dataprodukter som deles med nabokommuner eller statlige myndigheter, og hvordan tilgang styres under hendelser. Bruk tabellen i \autoref{tab:kommunal-beredskap} for å konkretisere hvem som tar hvilke beslutninger og hvordan indikatorer for responstid, overløpsutslipp og samfunnskritiske tjenester følges opp.
+
+\begin{itemize}
+    \item Kartlegg hvordan overvannstiltak prioriteres gjennom kommunens porteføljestyring, og lenk til gevinstplanene i kapittel~7 for å vise hvordan investeringsbeslutninger forankres politisk.
+    \item Beskriv hvordan beredskapsøvelser og scenarioarbeid dokumenteres i kvalitetsjournaler, og referer til metodikken i kapittel~6 for å sikre sporbarhet i etterlevelse.
+    \item Presenter forslag til undervisningsaktiviteter der studentgrupper simulerer styrtregnscenarier og foreslår kombinasjoner av tekniske og naturbaserte tiltak basert på tvillingens data.
+\end{itemize}
+
 \subsection*{Helse}
 Helse Vest og Universitetssykehuset i Oslo eksperimenterer med pasientspesifikke tvillinger for kreftbehandling, kirurgisk planlegging og rehabilitering. Malen gir struktur for å beskrive hvordan kliniske data, bildediagnostikk og simuleringer integreres, hvilke etiske vurderinger som gjøres, og hvordan pasienter og fagpersonell involveres i beslutninger.
 
