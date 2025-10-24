@@ -199,6 +199,28 @@ Et anbefalt arbeidsforløp for helsecaset består av tre sløyfer som støtter b
     \item \textbf{Læring og etikk:} Dokumenter avvik, pasientsikkerhetstiltak og brukermedvirkning i kvalitetsjournalen slik at faglige råd fra tilsyn og pasientutvalg blir sporbare.
 \end{enumerate}
 
+\section{Personvern, dataminimering og tilsynslogg}
+Personvernregimet i helse- og energisektoren krever at valideringsaktivitetene dokumenterer både behandlingsgrunnlag og nødvendighet. Normen understreker at datatilgang skal begrenses til det som er strengt nødvendig for formålet, og at alle oppslag skal kunne spores gjennom revisjonslogger.\citep{norm2023} Når digitale tvillinger kombinerer pasientdata, produksjonsmålinger og syntetiske scenarier må modellteamet derfor vise hvordan hvert datasett støtter et konkret beslutningspunkt i kvalitetsjournalen.
+
+\subsection{Personvernkonsekvensvurdering som del av V\&V}
+Digitale tvillinger som behandler helse- eller personopplysninger med høy risiko skal gjennomføre en personvernkonsekvensvurdering (DPIA) før nye funksjoner tas i bruk. \citet{datatilsynet2023dpia} beskriver fire hovedelementer som bør inngå i kapittel 6 sitt valideringsløp:
+\begin{enumerate}
+    \item \textbf{Beskriv behandling og formål:} Kartlegg hvilke datasett som inngår i tvillingens opplæring og operativ drift, og gjør rede for hvorfor hvert felt er nødvendig for å oppnå ønsket beslutningsstøtte.
+    \item \textbf{Vurder nødvendighet og forholdsmessighet:} Dokumenter hvordan dataminimering er implementert i datainnsamling, modelltrening og dashboards. For helsesektoren betyr det å vise at simuleringsvariabler ikke inkluderer identifiserende felter når aggregerte indikatorer er tilstrekkelige.
+    \item \textbf{Analyse av risiko og tiltak:} Knyt identifiserte risikoer til sikkerhetstiltakene i standardkartet (Tabell~\ref{tab:standardkart}), inkludert tilgangsstyring, pseudonymisering og logging.
+    \item \textbf{Plan for oppfølging:} Definer milepæler for nye vurderinger når tvillingen får tilgang til nye datakilder eller når algoritmene oppdateres. Resultatene bør forankres i fagfelleloggen og i styringssystemet for informasjonssikkerhet.
+\end{enumerate}
+
+\subsection{Innebygd personvern og etterlevelsesbevis}
+Innebygd personvern innebærer å bake kontrolltiltak inn i arkitekturen fremfor å legge dem på toppen etterpå. \citet{datatilsynet2022innebygd} anbefaler at løsninger bruker standardinnstillinger som beskytter sluttbrukere, detaljerte tilgangsmatriser og tekniske sikringstiltak som begrenser eksport av rådata. For kapittel 6 bør dette oversettes til konkrete arkitekturkrav:
+\begin{itemize}
+    \item \textbf{Standardiserte rolleprofiler:} Tilgang til treningsdata, modelljournal og operasjonelle dashboards gis kun via roller som er forhåndsgodkjent av personvernombud og sikkerhetsleder.
+    \item \textbf{Automatisert sporbarhet:} Revisjonslogg for modellendringer, datauttrekk og hendelseshåndtering lagres i et separat tilsynsregister som kan eksporteres til Datatilsynet eller Helsetilsynet ved behov. Loggen bør kobles til tiltaksplanen i Kapittel~7 for å sikre helhetlig styring.
+    \item \textbf{Tidsavgrenset datalagring:} Sett eksplisitte tidsgrenser for hvor lenge trenings- og valideringsdata lagres, og verifiser sletting i retrospektive møter. Kontrollpunktene kan inngå som indikator i Tabell~\ref{tab:tillitsindikatorer}.
+\end{itemize}
+
+For energisektoren anbefales tilsvarende praksis i kontrolltårn-caset: adgang til hendelseslogger begrenses til operatører på vakt, og eksport av loggdata skjer gjennom godkjente sikkerhetskanaler. Ved å samle DPIA-resultater, tilgangskontroller og loggutdrag i én tilsynslogg kan virksomheten dokumentere etterlevelse av både personvernforordningen og NIS2-direktivets rapporteringskrav. Dette styrker tillitspanelene i kapittelet og gir studentene en konkret mal for hvordan juridiske krav integreres i modellstyring.
+
 Tabell~\ref{tab:helsevalidering} viser hvordan elementene over kan struktureres i en valideringspakke som dekker både tekniske tester og pasientsikkerhet.
 
 \begin{table}[ht]
