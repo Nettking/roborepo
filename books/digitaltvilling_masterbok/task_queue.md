@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-10 | Kapittel 1 | FERDIG – La inn verdikjedekart, modenhetsanalyse og etikkseksjon for norske case og oppdaterte plan-, status- og kildefiler. | `chapters/kapittel01-introduksjon.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-05 | Kapittel 5 | FERDIG – Utdypet AI-coach-analysen med styringspunkter, integrerte algoritmematrisen i kapittel og støttefil, og harmoniserte laboratorierubrikken med operatørkrav. | `chapters/kapittel05-ai.tex`, `support/notater/kap05-algoritmematrise-utvidelse.md`, `support/figurer/metadata/kap05-operator-coach-v1.alt.md`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-04 | Kapittel 4 | FERDIG – Ferdigstilte immersivt beslutningsrom med operasjonsarkitektur, laboratoriepakke og metadata for figuren `kap04-immersiv-beslutning-v1`. | `chapters/kapittel04-simulering.tex`, `support/notater/kap04-immersiv-case.md`, `support/illustrasjonsplan.md`, `support/figurer/metadata/kap04-immersiv-beslutning-v1.alt.md`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-12 | Kapittel 3 | FERDIG – La inn dataspace-arkitektur, beredskaps- og kontinuitetsplaner samt bærekraftsdashboard, og oppdaterte statusfiler. | `chapters/kapittel03-data.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `completed_tasks.md` |

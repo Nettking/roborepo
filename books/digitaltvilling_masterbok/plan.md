@@ -7,7 +7,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 
 | Del | Kapittel | Status | Neste steg |
 | --- | -------- | ------ | ---------- |
-| I | Kapittel 1 | Utvidet med detaljert historisk tidslinje, norske politiske koblinger og caser. | Dele fagfellepakke med tekstlig tidslinje (TikZ er fjernet), tabeller og nye kilder, og bekrefte at kapittelet fortsatt gir helhetlig historikk uten grafikkavhengigheter. |
+| I | Kapittel 1 | Utvidet med historisk tidslinje, norske politiske koblinger, verdikjedekart og etikkseksjon. | Pilotere verdikjedekart og modenhetsanalyse i seminar, samle innspill til videre fordyping og sikre at etikkdelen gjenbrukes i kapittel 6 og 7. |
 | I | Kapittel 2 | Utvidet med flerfidelitetscase, metodetabeller og modellforvaltningskrav i tillegg til politiske rammer. | Pilotere metode- og dokumentasjonstabeller i workshop og samle fagfelleinnspill før neste revisjon. |
 | I | Kapittel 3 | Utvidet med dataspace-arkitektur, beredskapsoppsett og bærekraftsdashboard i tillegg til sirkulærøkonomi-casene. | Pilotere dataspace-tabellene og kontinuitetsplanen i DI-03-forumet og planlegge illustrasjoner for nye tabeller. |
 | II | Kapittel 4 | Oppdatert med immersivt beslutningsrom, operasjonsarkitektur, laboratoriepakke og vurderingsrubrikk. | Pilotere AR/VR-lab med oppdatert datastrømstabell og verifisere at integrasjonen mot Kognitwin/OMNIA fungerer før fagfelleløpet. |
@@ -27,7 +27,7 @@ Omfangstallene under er beregnet ved å kjøre en enkel ordtelling (LaTeX-komman
 
 | Kapittel/element | Nåværende omfang (ord) | Anslåtte sider i dag | Kommentar |
 | --- | --- | --- | --- |
-| Kapittel 1 – Introduksjon | 1020 | ≈2,6 | Gir et overblikk, men mangler fordyping i norske verdikjeder og begrepsavklaringer. |
+| Kapittel 1 – Introduksjon | 1020 | ≈2,6 | Gir et overblikk og inneholder nå verdikjedekart og modenhetsanalyse; vurder flere læringsaktiviteter og datagrunnlagseksempler. |
 | Kapittel 2 – Systemtenkning | 1104 | ≈2,8 | Utvidet med flerfidelitetstabeller og dokumentasjonsseksjon, men trenger flere praksisoppgaver og volumvekst. |
 | Kapittel 3 – Data og integrasjon | 1373 | ≈3,4 | Datapipeline og integrasjonsmønstre er beskrevet, men dataspace- og beredskapsstoff er minimalt. |
 | Kapittel 4 – Simulering og analyse | 945 | ≈2,4 | Utvidet med immersivt beslutningsrom og beredskapscase, men trenger flere kvantitative resultater. |
