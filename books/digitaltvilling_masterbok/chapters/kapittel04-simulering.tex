@@ -268,6 +268,61 @@ For å sikre at simuleringene faktisk leverer bærekraftige resultater, må labo
 
 Under laboratorieøkter bør studentgruppene bruke indikatorene til å evaluere egne modeller. Dette innebærer å dokumentere antakelser, datakilder og følsomhet overfor usikkerhet i materialdata. Resultatene kan presenteres i en felles «sirkulær tavle» hvor hvert team oppdaterer status mot målverdier, og kobler funnene til tiltakene fra kapittel 3 og styringsmodellen i kapittel 7.
 
+\section{Kommunal klimatilpasning og overvannsmodellering}
+Norske kommuner møter hyppigere styrtregn og oversvømmelser som belaster både avløpsnett og kritisk infrastruktur. En digital tvilling som kombinerer hydrologiske beregninger, sanntids sensordata og bymessige 3D-modeller gjør det mulig å teste tiltak før ekstremvær inntreffer og å koordinere innsats mellom teknisk etat, beredskap og byutvikling \citep{oslo2023overvann,asplan2023overvannslab}. Seksjonen viser hvordan simuleringene kan knyttes til dataspace-arkitekturen fra kapittel~3, kvalitetsjournalen i kapittel~6 og gevinstoppfølgingen i kapittel~7.
+
+\subsection{Datagrunnlag og modellkomponenter}
+Et robust overvannscase bør inkludere både tekniske og samfunnsmessige datapunkter slik at tiltakene kan prioriteres helhetlig:
+\begin{itemize}
+    \item \textbf{Hydrologi og meteorologi:} Nedbørserier fra Meteorologisk institutt, lokale sensorer for grunnvann og vannføring, samt klimaanslag for 2030/2050-scenarier.
+    \item \textbf{Bymessig topologi:} Høydemodeller fra kommunal geodataforvaltning, registrerte flaskehalser i avløpsnettet og lokasjoner for kritiske bygg og transportårer.
+    \item \textbf{Operativ drift:} Loggdata fra pumpestasjoner, driftsmeldinger fra vei- og parketater og sanntidssignaler fra IoT-sensorer i grøntanlegg.
+    \item \textbf{Innbygger- og tjenesteeffekt:} Varslingssystemer, innmeldte hendelser og historiske kostnader knyttet til kjelleroversvømmelser, skader på bygg og avbrudd i kommunale tjenester \citep{miljodir2024indikatorveileder}.
+\end{itemize}
+Dataene bør forvaltes i en modelljournal som følger strukturen i kapittel~2 og versjoneres i dataspace-komponentene fra kapittel~3. Dette sikrer at scenariokjøringer kan spores og reproduseres ved senere revisjoner.
+
+\subsection{Tiltakstabell for scenariostyring}
+Tabell~\ref{tab:kap04-overvann-tiltak} viser et forslag til hvordan ulike klimascenarier kan simuleres og hvilke tiltak som bør evalueres. Tabellen brukes både til å prioritere modellkjøringer og til å koble funnene til tiltaksloggene i kapittel~7.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{0.20\textwidth}p{0.34\textwidth}p{0.32\textwidth}}
+        \toprule
+        \textbf{Scenario} & \textbf{Simuleringsfokus} & \textbf{Tiltakspakke og oppfølging}\\
+        \midrule
+        Styrtregn over sentrum & Kombinere overflateavrenning, kapasitet i avløpsnett og trafikkflyt. & Midlertidig flomvei, styrt prioritering av mobile barrierer og varslingsrutiner mot kritiske bygg.\\
+        \addlinespace
+        Langvarig nedbør i boligfelt & Modellere infiltrasjon, grunnvannsnivå og kapasitet i lokale fordrøyningsanlegg. & Aktivering av smarte sluk, koordinering med borettslag om pumpeberedskap og oppdatering av forsikringsdialog.\\
+        \addlinespace
+        Kombinert havnivåstigning og regn & Integrere tidevannsprognoser med pumper og lukkemekanismer i havneområder. & Sekvens for å lukke flomporter, omdirigere trafikk og utløse beredskapstelefon for næringsdrivende.\\
+        \bottomrule
+    \end{tabular}
+    \caption{Eksempler på scenarier og tiltak som bør testes i kommunale overvannsmodeller.}
+    \label{tab:kap04-overvann-tiltak}
+\end{table}
+
+For hvert scenario bør simuleringene generere varsler som mates direkte inn i kvalitetsjournalen i kapittel~6. Dette gjør at beredskapsteam kan følge avvik i sanntid og dokumentere tiltak som faktisk gjennomføres.
+
+\subsection{Indikator- og rapporteringskoblinger}
+Indikatorer fra overvannsmodellen må koordineres med kommunens styringssystem slik at resultater kan brukes i budsjett og risikooppfølging. Følgende indikatorer anbefales som tillegg til biblioteket i kapittelet:
+\begin{itemize}
+    \item \textbf{Redusert skadeomfang:} Estimat av spart kroner og areal ved gjennomført tiltak, koblet til gevinsttabellene i kapittel~7.
+    \item \textbf{Respons- og varslingstid:} Tid fra simulert varsel til tiltak er iverksatt, synkronisert med hendelsesloggene i kapittel~6.
+    \item \textbf{Blågrønne bidrag:} Mengde vann som forsinkes eller infiltreres gjennom blågrønn infrastruktur, rapportert til bærekraftsindikatorene i kapittel~8 og kapittel~9.
+    \item \textbf{Innbyggerpåvirkning:} Antall husstander eller samfunnskritiske tjenester som holdes operative gjennom tiltaket, brukt i undervisningsopplegg og scenarioøvelser. 
+\end{itemize}
+Indikatorene bør visualiseres i samme dashboard som brukes for energi- og sikkerhetscase slik at kommunen får ett samlet beslutningsgrunnlag.
+
+\subsection{Undervisningsopplegg for masterstudenter}
+Et firestegs undervisningsopplegg gjør at studentene får trent både modellering og tverrfaglig koordinering:
+\begin{enumerate}
+    \item \textbf{Kartlegg risiko og datapunkter:} Bruk sjekklistene fra kapittel~3 for å registrere datasett, roller og avhengigheter, og definer hvilke områder som skal prioriteres.
+    \item \textbf{Bygg og kalibrer modellen:} Utvikle hydrologiske modeller og koble dem til bymodeller i GIS-verktøy. Test mot historiske hendelser for å validere parametre.
+    \item \textbf{Kjør scenarier og dokumenter tiltak:} Bruk Tabell~\ref{tab:kap04-overvann-tiltak} som utgangspunkt, loggfør varselpunkter i kvalitetsjournalen og oppdater tiltaksplanene i kapittel~7.
+    \item \textbf{Evaluering og deling:} Presenter resultater i felles tavlemøte med læringssløyfen fra kapittel~5, og oppdater planstatus i `plan.md` slik at kommunen kan følge progresjonen.
+\end{enumerate}
+Opplegget gir studentene erfaring med å koble kommunal klimatilpasning til dataspace- og styringsprosesser, og gir kommunepartnere en konkret mal for videre pilotering.
+
 \section{Hydrogenknutepunkt og forsyningssimulering}
 Hydrogen får en stadig tydeligere rolle i norsk industri og maritim transport, og krever samspilt infrastruktur mellom produksjon, lagring og bunkring i havner. \citet{enova2024hydrogenknutepunkt} beskriver hvordan hydrogenknutepunkt skal dimensjoneres for å støtte flere fartøyskategorier samtidig, mens \citet{gassco2023hydrogen} peker på behovet for samordnede rør-, båt- og lastebilstrømmer når hydrogen flyttes mellom industriklynger. En digital tvilling for et slikt knutepunkt må kombinere kontinuerlig prosessmodellering med diskrete hendelser knyttet til fartøyanløp, vedlikehold og sikkerhetskontroller. Scenarioene må også speile usikkerhet i etterspørsel og energipriser slik at investeringer og operative tiltak kan prioriteres over tid.\citep{dnv2023hydrogenforecast}
 
