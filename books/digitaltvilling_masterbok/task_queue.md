@@ -22,11 +22,13 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 ## Pågår
 
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger | Status |
+| --- | --- | --- | --- | --- | --- | --- |
 
 ## Ferdige oppgaver
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-70 | Kapittel 3 | FERDIG – Dokumenterte API-katalog og dataprodukter med tabell, indikator- og governancekoblinger i kapittelet, og oppdaterte plan-, tavle- og kildefiler for å synliggjøre koblingen til kapittel 6 og 7. | `chapters/kapittel03-data.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-69 | Kapittel 6 | FERDIG – Etablerte dataspace-seksjon om hendelsesrespons og kvalitetsjournal med trinnvis prosess og rolletabell for norske beredskapsaktører, og oppdaterte plan-, tavle- og kildefiler for øvelser. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-68 | Kapittel 9 | FERDIG – Utarbeidet forskningsetikk-, datahåndtering- og åpen-vitenskapsseksjon med sjekkliste og tabell, og synkroniserte plan-, tavle- og kildefiler for ansvarlige masterprosjekter. | `chapters/kapittel09-fremtid.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-67 | Kapittel 9 | FERDIG – Dokumenterte norske forskningsinfrastrukturer og testarenaer, la inn tabell over tilgangsmodeller for masterstudenter og synkroniserte plan-, tavle- og kildefiler for koordinering mot finansieringsarbeidet. | `chapters/kapittel09-fremtid.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
