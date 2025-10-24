@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-74: Dokumenterte dataspace-sandkasse for kommunal byggdrift med stegvis arbeidsflyt, tabell og læringsoppgaver i Kapittel 3, og oppdaterte plan-, tavle- og kildefiler slik at indikatorer og governance henger sammen med kapittel 6 og 7. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-73: Dokumenterte mobile feltlaboratorier og datainnsamlingssløyfer i Kapittel 2 med sjekkliste, tabell og koblinger til validerings- og gevinstarbeidet, og oppdaterte plan-, tavle- og arbeidsfiler. (`chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-72: Skrev kalibreringsverksted, rolle- og artefaktmatrise samt studentoppgave i Kapittel 2, og oppdaterte plan- og tavlefiler for å koble arbeidet til valideringsjournalen. (`chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-71: La til valideringspakke for grønne industriparker i Kapittel 6 med trinnvis prosess, tabell og læringsopplegg, og oppdaterte plan-, tavle- og kildefiler for å koordinere pilotene mot Mo Industripark og Herøya. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)

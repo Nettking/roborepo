@@ -263,6 +263,46 @@ styringsprosess i ett dokument, slik at deltakere kan automatisere oppfølgingen
     data, beslutning og gevinstrealisering.
 \end{itemize}
 
+\subsection{Case: Dataspace-sandkasse for kommunal byggdrift}
+Kommunale eiendomsforvaltere i Oslo, Bergen og Trondheim har de siste årene etablert felles sanntidsmodeller for energioppfølging, inneklima og vedlikeholdslogg slik at skole- og helsebygg kan styres mer presist \citep{osloeiendom2023strategi,bergen2024smartbygg}. Erfaringen viser at datadeling på tvers av etater krever en trygg arena for å teste nye integrasjoner uten å risikere driftsavbrudd. En dataspace-sandkasse gir nettopp dette: en kontrollert plattform der tvillingmodeller, API-er og indikatorer kan verifiseres før de kobles til produksjonsmiljøet.
+
+Sandkassen bygges stegvis for å sikre både teknisk kvalitet og organisasjonslæring:
+\begin{enumerate}
+    \item \textbf{Kartlegg byggporteføljen.} Eiendomsteamet identifiserer hvilke bygg som skal inngå i piloten, og hvilke datasett som må prioriteres (energiforbruk, CO$_2$-nivå, brukerklager). Resultatet dokumenteres i dataspace-katalogen sammen med kontaktpunkt.
+    \item \textbf{Etabler konnektorer og testdata.} Edge-noder og historiske datasett kopieres til sandkassen. API-ene merkes med egne sandkasse-nøkler og logges separat, slik at feil ikke forurenser produksjonsjournalen.
+    \item \textbf{Koble indikatorpanel og gevinstmål.} Måleparametere fra kapittel~6 (kvalitetsjournal) og gevinstplanen i kapittel~7 lastes inn i et felles dashboard. Sandkassen verifiserer at indikatorene oppdateres riktig når nye datasett aktiveres.
+    \item \textbf{Gjennomfør tverrfaglig sprint.} Driftspersonell, energiøkonomer og læringsansvarlige tester scenarioer (for eksempel vinterdrift eller smittevern). Tiltak og observasjoner loggføres i en felles beslutningsjournal.
+    \item \textbf{Beslutning om produksjonssetting.} Når indikatorene holder terskler definert i Tabell~\ref{tab:kap03-sandkasse-faser}, flyttes integrasjonene over til ordinær dataspace med full hendelseslogging og beredskapsrutiner.
+\end{enumerate}
+
+Tabell~\ref{tab:kap03-sandkasse-faser} fungerer som arbeidsplan for masterstudentene. Den viser hvordan hver fase kobles til konkrete leveranser og hvilken dokumentasjon som må oppdateres for å holde samsvar med kravene i kapittel~6 og kapittel~7.
+
+\begin{table}[ht]
+    \centering
+    \caption{Faser i dataspace-sandkasse for kommunal byggdrift.}
+    \label{tab:kap03-sandkasse-faser}
+    \begin{tabular}{p{0.22\textwidth}p{0.44\textwidth}p{0.26\textwidth}}
+        \toprule
+        \textbf{Fase} & \textbf{Hovedaktiviteter} & \textbf{Leveranser og koblinger} \\
+        \midrule
+        Porteføljekartlegging & Velge bygg, avklare datasett, forankre datadeling med eiere og vernetjeneste. & Oppdatert dataspace-katalog, referanse til personvernvurdering og tiltakslogg i kapittel~6. \\
+        Teknisk sandkasse & Konfigurere konnektorer, rense testdata, etablere syntetiske datasett for stress-testing. & Konfigurasjonsfil i Git, kvalitetsjournal for sandkasse, risikovurdering mot NIS2/IEC 62443. \\
+        Indikatorpanel & Koble energimål, inneklima og brukerklager til dashboard og rapportmal. & Oppdatert indikatorbibliotek, lenke til gevinstplan og budsjettoppfølging i kapittel~7. \\
+        Sprint og evaluering & Teste driftsscenarier, loggføre beslutninger, gjennomføre retro med fagfeller. & Beslutningsjournal, fagfelleinnspill i `support/fagfellelogg.csv`, oppdatert læringsopplegg i kapittel~4 og 5. \\
+        Produksjonsløft & Plan for utrulling, avtaleverk for dataspace og beredskapsøvelse før go-live. & Versjonsnotat i katalogen, avtaleoppdateringer, kobling til kontrolltårnprosess i kapittel~6. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+I praksis samkjøres sandkassen med kommunens energi- og miljømål. Oslo kommune har for eksempel vedtatt at alle nye bygg skal ha digitale loggbøker og klimaregnskap som oppdateres kontinuerlig \citep{oslo2024klimaeiendom}. KS anbefaler at kommuner etablerer felles styringsmodeller for eiendomsdrift som kobler energioppfølging til økonomiplan og bærekraftsrapportering \citep{ks2024eiendomsdrift}. Når sandkassen brukes i masterkurset, får studentene i oppgave å:
+\begin{itemize}
+    \item beskrive hvordan indikatorer for energibruk, inneklima og brukeropplevd kvalitet overføres fra sandkasse til produksjon,
+    \item dokumentere hvordan personvern og driftsikkerhet ivaretas gjennom policy-regler og hendelseslogging,
+    \item foreslå hvordan gevinstene følges opp i kommunens økonomi- og klimaregnskap, slik at dataspace-investeringen kan forsvares for politisk ledelse.
+\end{itemize}
+
+Sandkassen gjør det mulig å koble tekniske pilotprosjekter til ordinær tjenesteproduksjon. Når indikatorene og governance-elementene er testet i sandkassemiljøet, kan de samme artefaktene gjenbrukes i kapittel~6 (kvalitetsjournal og tilsyn) og kapittel~7 (porteføljestyring). Dette sikrer at kommunene bygger opp en dokumentert læringssløyfe fra eksperimentering til drift og kontinuerlig forbedring.
+
 
 \subsection{Tverrsektorielt dataspace-samvirke for kritiske tjenester}
 Energi- og helsetjenester er gjensidig avhengige i krisesituasjoner: strømforsyningen må holdes stabil for å drive sykehus og
