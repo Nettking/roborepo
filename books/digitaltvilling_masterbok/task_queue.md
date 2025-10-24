@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-82 | Kapittel 6 | FERDIG – Etablerte indikatorramme for dataspace-valideringslaboratorium med arbeidssteg, indikatorpanel og kobling til gevinststyring. | `chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-81 | Kapittel 6 | FERDIG – Dokumenterte valideringsløp for dataspace-sandkasse i kommunal byggdrift med tabell, rapporteringssløyfe og læringsopplegg, og synkroniserte plan- og statusfiler mot Kapittel 3. | `chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-80 | Kapittel 4 | FERDIG – Utviklet kvantitativ evalueringspakke med baseline-prosess, indikatorbibliotek og evalueringssløyfe som binder simuleringene til validering og gevinststyring. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-79 | Kapittel 4 | FERDIG – Dokumenterte vinterdriftscase for fjellbaner med datasett, scenariostruktur og indikatorpakke som kobler energistyring til beredskap og governance. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md` |
