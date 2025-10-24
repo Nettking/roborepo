@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-101: Dokumenterte sensitivitetstilnærming og parameterprioritering i Kapittel 2 med ny tabell, indikatorpakke og arbeidsflyt, og oppdaterte plan-, tavle- og kildefiler for koordinert oppfølging mot validerings- og gevinstkapitlene. (`chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-100: Utvidet fjernvarmecaset med termisk energilager, indikatorpakke og studentworkshop, og oppdaterte plan- og kildefiler for koordinert oppfølging mot dataspace-, validerings- og gevinstarbeidet. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-99: Dokumenterte systemdynamiske beslutningssløyfer for beredskap og kapasitet med ny tabell, tverrsektoriell øvingsoppgave og oppdaterte statusfiler. (`chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-98: Dokumenterte hydrogenknutepunkt-scenario med datastrømmer, fasetabell og indikatorpakke som binder simuleringene i kapittel 4 til validerings- og gevinstarbeidet i kapitlene 6 og 7, og oppdaterte plan-, tavle- og arbeidsfiler for koordinert pilotering. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
