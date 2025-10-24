@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-107: Etablerte guardrail-sjekkliste for generative tvillinger og syntetiske datasett med indikatorer, rapporteringskoblinger og oppdaterte plan- og tavlefiler. (`chapters/kapittel05-ai.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-105: Dokumenterte dataspace-case for grønne industriparker med tabell over prioriterte dataprodukter, indikator- og beredskapskoblinger, og oppdaterte plan-, tavle- og statusfiler for pilotering mot industripartnere. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-104: Dokumenterte karbonfangst- og lagringsscenario i Kapittel 4 med arbeidsflytstabell, indikatorpakke og koblinger til validerings- og gevinstkapitlene, og oppdaterte plan-, tavle- og statusfiler for koordinert pilot med CCS-partnere. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-103: Dokumenterte sirkulær avfallslogistikk-case i Kapittel 4 med faseinndelt arbeidsflyt, indikator- og dataflyttabell samt undervisningsopplegg, og oppdaterte plan-, tavle- og kildefiler for koordinert sirkulærpilot. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)

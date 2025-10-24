@@ -85,6 +85,39 @@ Tabell~\ref{tab:kontrollpunkter-generativ} viser hvordan styringen kan dokumente
 
 Denne styringsrammen gjør det enklere å argumentere for generativt databruk overfor juridiske og etiske vurderinger. Studentteam kan bruke tabellen som sjekkliste i prosjektgjennomgangen og som vedlegg når rubrikken fra lærerveiledningen skal dokumenteres.
 
+\subsection{Guardrails for generative tvillinger og syntetiske data}
+For å møte kravene i AI-forordningen og nasjonale styringsstandarder må laboratoriet etablere guardrails som hindrer at generative tvillinger introduserer uønsket risiko eller lovbrudd.\citep{eu2024aiact,dfo2024internkontroll} Guardrailsene gjør det tydelig hvilke datakilder som er tillatt, hvordan modellene skal testes og hvem som kan godkjenne endringer før de påvirker drift. Erfaring fra norske pilotprosjekter viser at guardrails må beskrive både tekniske sperrer og beslutningspunkter som kan dokumenteres i kvalitetsjournalen fra Kapittel~6.
+
+Vi anbefaler å ramme inn guardrailsene i tre nivåer som speiler AI RMF og kommunale internkontrollrutiner:
+\begin{itemize}
+    \item \textbf{Strategisk nivå}: Definer risikotoleranse, ansvar og sporbarhet gjennom styringsdokumenter som kobles til dataspace-kontraktene i Kapittel~3. AI-porteføljen bør dele en felles matrise over høyrisiko-funksjoner og referere til kontrollpunkter i Kapittel~7.
+    \item \textbf{Teknisk nivå}: Implementer policyer for modell- og datahåndtering i MLOps-plattformen. Dette omfatter automatisk sjekk av datalisens, syntetisk datamerking og testing mot scenarier fra Kapittel~4 før modellen legges i produksjon.\citep{nist2023airmf}
+    \item \textbf{Operativt nivå}: Etabler hendelsesprosedyrer, overstyringslogg og læringssløyfe slik at avvik lukkes i tiltaksloggen og rapporteres i kvartalsmøtene til valideringspanelet. Denne logikken bør kobles til indikatorene i Tabell~\ref{tab:kontrollpunkter-generativ}.
+\end{itemize}
+
+Tabell~\ref{tab:guardrails-generativ} gir en sjekkliste som binder sammen guardrailsene med konkrete indikatorer og rapporteringskrav. Kolonnene viser hvordan tiltakene kan dokumenteres slik at de tilfredsstiller både regulatoriske krav og interne revisjoner.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Guardrails for generative tvillinger og syntetiske data}
+    \label{tab:guardrails-generativ}
+    \begin{tabular}{p{3.6cm}p{4.0cm}p{3.8cm}p{3.6cm}}
+        \toprule
+        \textbf{Guardrail} & \textbf{Tiltak} & \textbf{Indikatorer} & \textbf{Rapportering og koblinger} \\
+        \midrule
+        Datagrunnlag og lisens & Automatisk validering av datakilde, behandlingsgrunnlag og syntetisk merking før import. & Andel godkjente datapakker, avvik etter DPIA-kontroll. & Kapittel~3 (dataspace-kontakter) og Kapittel~6 (personvernjournal). \\
+        \addlinespace
+        Modelltesting og robusthet & Scenario- og stresstester mot regulatoriske krav og driftsgrenser før utrulling. & Beståtte scenariotester, tid til lukking av sårbarheter. & Kapittel~4 (scenariobank) og Kapittel~6 (tillitspanel). \\
+        \addlinespace
+        Operativ overvåking & Sanntidsovervåking av generative forslag, manuelle overstyringer og eskaleringsrutiner. & Antall overstyringer, responstid på hendelser. & Kapittel~6 (valideringsjournal) og Kapittel~7 (tiltakslogg). \\
+        \addlinespace
+        Kompetanse og opplæring & Årlige kurs og sertifisering av operatører og fagansvarlige i ansvarlig KI. & Sertifiseringsgrad, antall oppdaterte opplæringsmoduler. & Kapittel~8 (caseverksted) og lærerveiledningen. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Når guardrailsene er på plass kan prosjektteamet koble læringsdata, modelljournal og governance uten å skape nye grensesnitt. Tabellen brukes som vedlegg i prosjektkontrakten slik at fagfellepanelet kan verifisere hvilke indikatorer som er fulgt opp og hvilke som må forbedres før neste iterasjon.
+
 \subsection{LLM-drevne operatørassistenter}
 Store språkmodeller (LLM) fungerer som samtalebaserte grensesnitt som kan hente innsikt fra tvillingens dokumentasjon, modeller og live-data.\citep{openai2024gpt4o} I norsk industri testes de som operatørassistenter som kobler driftsmanualer, hendelseslogger og indikatorpanel til et felles kunnskapsgrunnlag. Når assistenten får tilgang til sanntidssignaler fra dataspace-kontraktene i Kapittel~3, kan den foreslå tiltak, forklare modeller og dokumentere beslutninger direkte i kontrolltårnets journal.
 
