@@ -75,6 +75,23 @@ For å støtte operatører i komplekse situasjoner bygges en AI-coach som kombin
 
 Algoritmene som benyttes må håndtere både tidsserier og kontekstuell informasjon. Støttenotatet \textit{kap05-algoritmematrise-utvidelse.md} beskriver hvilke kombinasjoner av modeller og verktøy som egner seg for slike scenarioer. Eksemplet knytter også anbefalingene til sikkerhetskrav, slik at tiltakene kan vurderes opp mot \citet{iec62443-2-1} og \citet{eu2022nis2} før de settes i drift. Slik bygges en helhetlig kjede fra datafangst via analyse til operasjonell beslutning.
 
+For å gjøre arbeidsflyten konkret deles leveransen inn i fire styringspunkter som må dokumenteres av studentteamene:
+\begin{enumerate}
+    \item \textbf{Flerkanals datainntak:} Multisensordata fra felt, historiske hendelser og genererte scenarioer merkes med metadata før de går inn i tvillingen. Edge-noder filtrerer hendelser og legger på kvalitetsflagg som senere brukes i rubrikken.
+    \item \textbf{Algoritmeallokering:} For hver modalitet velges algoritme fra matrisen i Tabell~\ref{tab:algoritmematrise-ai-coach}. Valgene begrunnes med ytelsesmål og dokumenterte kontrollpunkter.
+    \item \textbf{Operatørdialog:} AR/VR-panelet viser anbefalinger, forklaringer og tiltakslister. Operatøren kan pause, justere eller be om nye simuleringer, og interaksjonene loggføres for fagfellevurdering.
+    \item \textbf{Tiltaksoppfølging:} Beslutninger publiseres til kontrolltårnet sammen med revisjonsspor og etterlevelsesvurderinger. Fallback-prosedyrer kobles mot styringsmodellene i Kapittel~7.
+\end{enumerate}
+
+Caset bør også beskrive en operatørreise fra alarm til tiltak:
+\begin{itemize}
+    \item Hvordan oppdages avviket (for eksempel haptiske tilbakemeldinger i hansker eller en taleinstruksjon fra operatøren)?
+    \item Hvilke forklaringsmekanismer viser hvorfor AI-coachen anbefaler et tiltak, og hvordan verifiseres det med simuleringer?
+    \item Hvilke roller bekrefter endelig beslutning, og hvor loggføres resultatene slik at fagfeller kan gjenskape vurderingen?
+\end{itemize}
+
+Disse beskrivelsene gir en rød tråd mellom figur, algoritmematrise og rubrikk, slik at laboratorieøvelsen kan gjennomføres uten ytterligere muntlig instruksjon.
+
 \begin{figure}[htbp]
     \centering
     % Alt-tekst: kap05-operator-coach-v1.alt.md
@@ -99,26 +116,23 @@ sesskrav, slik at evalueringen dekker både modellkvalitet og styringsmekanismer
 Tabellen under hjelper studentene å argumentere for hvorfor et algoritmevalg er passende og hvilke evidenser som må leveres. De
 n kan fylles ut som del av prosjektlogg eller rapport og fungerer som kobling til vurderingsrubrikken i lærerveiledningen.
 
-\begin{longtable}{p{0.23\textwidth}p{0.30\textwidth}p{0.41\textwidth}}
+\begin{longtable}{p{0.22\textwidth}p{0.24\textwidth}p{0.22\textwidth}p{0.28\textwidth}}
+\caption{Algoritmematrise for immersiv AI-coach}\label{tab:algoritmematrise-ai-coach}\\
 \toprule
-\textbf{Algoritmekategori} & \textbf{Aktuelle scenarier i caset} & \textbf{Nøkkelkriterier for vurdering} \\
+\textbf{Datakilde/Modalitet} & \textbf{Anbefalt algoritme} & \textbf{Støtteverktøy og modeller} & \textbf{Dokumenterte kontrollpunkter} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Algoritmekategori} & \textbf{Aktuelle scenarier i caset} & \textbf{Nøkkelkriterier for vurdering} \\
+\textbf{Datakilde/Modalitet} & \textbf{Anbefalt algoritme} & \textbf{Støtteverktøy og modeller} & \textbf{Dokumenterte kontrollpunkter} \\
 \midrule
 \endhead
-Regresjon og ensemble-modeller (Random Forest, Gradient Boosting) & Tilstandsestimering, energiprognoser og kvalitetsmålinger i produksjon. & Rapporter RMSE/MAE, forklart varians og hvilke sensorer som bidrar mest. Beskriv hvordan modellen håndterer manglende data og klasseskeivhet. \\
+Streaming av tidsserier + 3D-mesh fra inspeksjonsdrone & Temporal Fusion Transformer kombinert med grafnevrale nett (GNN) for geometriske avvik. & PyTorch Forecasting, DGL og ONNX for eksport til edge. & Dokumenter konfidensbånd i dashboardet, valider mot feltmålinger hver uke og loggfør avvik i kontrolltårnet. \\
 \addlinespace
-Sekvens- og tidsseriemodeller (LSTM, Temporal Fusion Transformer) & Sanntidsprognoser for last, vedlikeholdsbehov eller produksjonskapasitet. & Dokumenter MAPE eller SMAPE, forsinkelse i inferens og strategier for å håndtere konseptdrift (re-trening eller transfer learning). \\
+Taleinstruksjoner fra operatører (norsk) + sensordata & Multimodal transformer (ASR + tabulære embeddings) med aktiv læring for nye uttrykk. & HuggingFace Whisper, TabNet og MLflow for modell- og datasporing. & Loggfør manuelle korreksjoner, vis usikkerhet i tiltaksløypen og knytt språkmodellen til revisjonskravene fra Kapittel~6. \\
 \addlinespace
-Forsterkende læring og MPC-hybrider & Autonome styringssløyfer, energibalansering og ruteoptimalisering. & Oppgi stabilitet i belønningsfunksjonen, antall brudd på sikkerhetsbegrensninger og hvordan policyer testes før utrulling. \\
+Haptiske input (AR-hansker) + simulert responstid & Bayesiansk optimalisering for parameterjustering av simuleringsmodeller. & BoTorch, AnyLogic API og Azure ML pipelines. & Definer sikkerhetsgrenser for taktile tilbakemeldinger, stress-test latens og registrer fallback-scenarier i beredskapsplanen. \\
 \addlinespace
-Bayesiansk optimalisering og surrogatmodeller & Parameterfinjustering av simuleringsmodeller eller eksperimentdesign. & Vis forbedring i forventet gevinst, antall nødvendige eksperimenter og usikkerhetsmarginer rundt anbefalte parametere. \\
-\addlinespace
-Anomali- og driftsdeteksjon (autoencoder, isolation forest) & Overvåking av sensorer, logistikkflyt eller sikkerhetshendelser. & Mål falsk positiv-rate, deteksjonstid og hvordan alarmer eskaleres til operasjonelle team. Forklar hvilke signalforklaringer som deles med fagpersoner. \\
-\addlinespace
-Generative modeller og foundation-plattformer & Scenario-testing, syntetiske data og prototyping der reelle data er begrenset eller sensitive. & Dokumenter datasettets opphav, kvalitetskontroller og hvordan syntetiske resultater merkes. Beskriv governance for modellopprinnelse og hvordan output verifiseres før beslutninger tas i drift. \\
+Videostrøm fra operatørkamera + vedlikeholdslogg & Spatio-temporal CNN med selvtilsyn (contrastive learning). & OpenCV, PyTorch Lightning og Data Version Control (DVC). & Sikre anonymisering av persondata, koble avvik til kontrolltårnreferansen i Kapittel~6 og dokumenter godkjenning i fagfelleloggen. \\
 \bottomrule
 \end{longtable}
 
@@ -147,9 +161,13 @@ Rubrikken i Tabell~\ref{tab:rubrikk-ai-lab} brukes i både lærerveiledning og s
         \addlinespace
         Algoritmevalg og begrunnelse & Valgte modeller passer ikke til scenarioet. & Modellvalg beskrives, men mangler kobling til vurderingskriterier. & Modellvalg begrunnes med relevante måltall og tiltak mot konseptdrift. & Kombinerer flere modeller, viser sensitivitet og argumenterer for videre iterasjoner. \\
         \addlinespace
+        Operatøropplevelse og forklaringer & Ingen brukerflate eller forklaring til operatører. & Viser prototyper uten støtte for spørsmål eller tiltak. & AR/VR-panelet visualiserer tiltak med grunnleggende forklaringer og logging av interaksjoner. & Interaktivt panel med what-if-simuleringer, taktile tilbakemeldinger og dokumentert beslutningslogg. \\
+        \addlinespace
         Edge--sky-samspill & Ingen plan for distribusjon mellom edge og sky. & Synkronisering beskrives for enkelte komponenter. & Fullstendig plan for modelloppdatering, overvåking og fallback. & Implementert styringssløyfe med automatisert varsling og testet resilienst. \\
         \addlinespace
-        Etterlevelse og refleksjon & Ingen vurdering av sikkerhet, etikk eller lovverk. & Noterer enkelte krav uten tiltak. & Tiltak knyttes til relevante standarder og roller. & Integrerer krav fra Kapittel~6 og beskriver hvordan tiltak revideres over tid. \\
+        Etterlevelse og refleksjon & Ingen vurdering av sikkerhet, etikk eller lovverk. & Noterer enkelte krav uten tiltak. & Tiltak knyttes til relevante standarder og roller. & Integrerer krav fra Kapittel~6 og beskriver hvordan tiltak revideres over tid, inkludert plan for neste iterasjon. \\
+        \addlinespace
+        Refleksjon og forbedringsplan & Ingen egenvurdering. & Kort oppsummering uten læringspunkter. & Beskriver forbedringer og hvordan de skal testes i neste sprint. & Forankrer læringspunkter i fagfellelogg, oppdaterer rubrikk og foreslår tiltak for pilotgjennomføring. \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -161,10 +179,11 @@ Laboratorieøvelsen for denne seksjonen kombinerer tidsserie-, bilde- og tekstda
 \begin{enumerate}
     \item \textbf{Scoping:} Hver gruppe velger to modaliteter (for eksempel tidsserier + tale) og begrunner valget med referanse til produksjonsscenarioet sitt.
     \item \textbf{Implementering:} Modellene trenes i en delt notebook med støtte for versjonskontroll. Resultatene eksporteres til AR/VR-panelet slik at operatørene kan teste anbefalingene.
+    \item \textbf{Operatørtesting:} Teamet samler innsikt fra operatørrollen, dokumenterer forklaringer som deles i AR/VR-panelet og registrerer hendelser i fagfelleloggen.
     \item \textbf{Evaluering:} Gruppene fyller ut rubrikken fra støttenotatet og beskriver hvordan tiltakene etterlever kravene i \citet{iec62443-2-1} og \citet{eu2022nis2}.
 \end{enumerate}
 
-Rubrikken gir poeng for datasamsvar, algoritmevalg, operatøropplevelse, etterlevelse og refleksjon. En poengsum på 12 eller mer regnes som godkjent og brukes både av faglærer og medstudent i fagfellevurderingen.
+Rubrikken gir poeng for datasamsvar, algoritmevalg, operatøropplevelse, edge--sky-samspill og etterlevelse med refleksjon. En poengsum på 12 eller mer regnes som godkjent og brukes både av faglærer og medstudent i fagfellevurderingen.
 
 \section{Industripuls: Norske pilotprosjekter}
 Koblingen mellom generative modeller, edge-beregninger og operasjonell gevinst må forankres i konkrete caser. Følgende erfaringer gir retning for hvordan læringssløyfer fra dette kapittelet kan realiseres i praksis:
