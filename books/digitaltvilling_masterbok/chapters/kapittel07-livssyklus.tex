@@ -34,6 +34,25 @@ Livssyklusdiagrammer kan oppleves abstrakte uten konkrete hendelser å knytte de
 
 \paragraph{Hydros sirkulære aluminiumskjede.} Hydro dokumenterte tidlig hvilke kundekrav som fulgte deres resirkulerte produkter og koblet tvillingen til smelteverk, logistikksystemer og kundedata. Under drift kontrollerer tvillingen at materialsporingen holder mål, mens forbedringsfasen fokuserer på energieffektivisering og transparens i hele verdikjeden. Erfaringene legges i et kunnskapsarkiv før nye produksjonslinjer tar over.\citep{hydro2023traceability}
 
+Tabell~\ref{tab:livssyklusfortellinger} kobler fortellingene til konkrete styringspunkter i hver fase. Oversikten fungerer som et arbeidsark i undervisningen: studentene identifiserer hvilke beslutninger som må tas for å komme videre i fasen, og hvilke indikatorer som dokumenterer at tiltakene har ønsket effekt.
+
+\begin{table}[h]
+    \centering
+    \caption{Nøkkelhendelser i livssyklusfortellingene per fase}
+    \label{tab:livssyklusfortellinger}
+    \begin{tabular}{p{2.7cm}p{3.6cm}p{3.6cm}p{3.6cm}}
+        \toprule
+        Fase & Statnetts nettplanlegging & Statsbyggs ombrukssatsing & Hydros aluminiumskjede \\
+        \midrule
+        Initiativ & Strategisk forankring i konsernstrategi og scenarioanalyse for kraftflyt & Kartlegging av byggportefølje og klimamål for ombruk & Kundekrav til sporbarhet dokumentert i markedsanalyse \\
+        Design & Integrasjon mot SCADA og værmodeller prioriteres i veikart & Arkitektur for BIM og dataspace-kontrakter fastsettes & Materialsporingsarkitektur knyttes til smelteverk og logistikk \\
+        Implementering & DevOps-sprints etablerer modellbibliotek og automatiserte tester & Leverandørportaler kobles til tvillingen og pilotbygg velges & Sensorer og sertifikater kobles til produksjonslinjer og kundetjenester \\
+        Drift & Kontinuerlig nettdimensjonering og hendelseshåndtering dokumenteres i læringssløyfer & Klimarapportering og ombrukstall deles med partnere i dataspace & Oppetid og energiforbruk overvåkes med varsling til operasjonssenter \\
+        Forbedring/avvikling & Faglige retrospektiver prioriterer neste iterasjon og planlagt migrering & Erfaringer arkiveres og nye rehabiliteringer overtar datagrunnlaget & Gevinstlogg oppdateres før anlegg fases ut eller oppgraderes \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
 \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[node distance=2.6cm, every node/.style={rectangle, rounded corners, draw=dypblaa, fill=skygraa, text width=3.4cm, align=center, minimum height=1.2cm}]
@@ -67,6 +86,15 @@ Styringen av digitale tvillinger krever en tydelig governance-modell som balanse
 \end{itemize}
 
 Tabell~\ref{tab:governance-sammenligning} sammenligner modellene på beslutningsfora, finansiering og egnethet. Oversikten brukes i workshops for å hjelpe virksomheter å vurdere hvilken struktur som passer deres modenhetsnivå.
+
+\subsection*{Hybrid styring og utviklingssløyfer}
+Selv om modellene beskrives separat, opplever mange virksomheter behov for en hybrid tilnærming. Et praktisk mønster er å etablere et sentralisert kjerneteam som definerer felles standarder, mens produktteam eier gevinstansvar. Det gir tre utviklingssløyfer som kan brukes i styringsdokumenter:
+\begin{enumerate}
+    \item \textbf{Strategisk sløyfe:} kvartalsvise portefølgemøter der konsernledelse, sikkerhetsansvarlige og produktteam samordner veikart og investeringer.
+    \item \textbf{Taktisk sløyfe:} månedlige governance-forum der dataspace-råd, arkitektur og DevOps koordinerer endringsforslag og kvalitetskrav.
+    \item \textbf{Operativ sløyfe:} ukevise standups med drift, domeneeksperter og læringsansvarlige som oppdaterer gevinstlogg og håndterer hendelser.
+\end{enumerate}
+Ved å tydeliggjøre hvilke beslutninger som tas i hver sløyfe, kan organisasjonen dokumentere ansvarslinjer i RACI-matrisen og justere ressursbehov etter modenhet.
 
 \begin{table}[h]
     \centering
@@ -168,6 +196,15 @@ Livssyklusstyring må også følge opp klima- og ressursmål. Tabell~\ref{tab:ba
 \end{table}
 
 Indikatorene brukes som utgangspunkt når studentene utvikler egne KPI-sett og kobler dem til dataspace-arkitekturen i \autoref{tab:governance-sammenligning}.
+
+\subsection*{Modenhetssteg for bærekraftstyring}
+For å knytte indikatorene til livssyklusen kan kapittelteamet bruke en trestegs modenhetsmodell. Den gjør det enklere å beskrive ambisjonsnivå i plan- og statusfiler og å følge opp tiltak i fagfellelogg:
+\begin{enumerate}
+    \item \textbf{Baseline:} Sektorteam registrerer grunnleggende klima- og ressursdata og kobler dem til ansvarlige roller i RACI-matrisen.
+    \item \textbf{Integrert:} Bærekraft-KPI-er inngår i gevinstplan og beslutningsfora; dataspace-kontrakter sikrer deling med partnere.
+    \item \textbf{Revisjonsklar:} Indikatorene revideres eksternt, støttes av sporbare dataprodukter og brukes i scenarioplanlegging for neste generasjon tvillinger.
+\end{enumerate}
+Modellen brukes som sjekkliste når nye case legges til i kapittel~\ref{chap:case} og når støttefilene oppdateres med krav til dokumentasjon.
 
 \subsection*{Dataspace-arkitektur for styring og deling}
 Livssyklusforvaltning i større økosystem krever en dataspace-arkitektur som definerer ansvar for dataprodukter, identitet og policy. En anbefalt struktur følger fire lag:
