@@ -16,7 +16,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | III | Kapittel 7 | Helhetlig utkast med livssyklus, governance, RACI-eksempel og ny figur for styringssløyfer. | Pilotere livssyklusfortellingene, governance-sammenligningen og bærekraft-KPI-tabellene i intervjuer og oppdatere fagfellelogg med læringspunkter. |
 | III | Kapittel 8 | Utdypet med maler for havvind, landbruk og batteri samt tabeller for datakilder, styring og indikatorer. | Pilotere casemalene i fagfelleworkshop, samle tilbakemeldinger og supplere kildebank per sektor. |
 | III | Kapittel 9 | Oppdatert med veikart, finansieringskilder og forskningsdesign-eksempler. | Planlegg fagfellegjennomgang av tabeller og kvalitetssikre kobling mot nye referanser. |
-| Appendiks | Ressurser | Første hele utkast – tabeller og arbeidsmåte skrevet. | Revider etter fagfelleinnspill fra kapitlene. |
+| Appendiks | Ressurser | Modenhetskart, caser og tabeller revidert for hele ressursbanken. | Test veiledningen i workshop og samle fagfelleinnspill før neste oppdatering. |
 | Appendiks | Arbeidsark | Ny seksjon med maler, arbeidsark og fagfelleklarering i `chapters/appendiks.tex`. | Test arbeidsarkene i pilot og samle fagfelleinnspill før endelig publisering. |
 | Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk. | Oppdater når nye termer eller presiseringer oppstår under fagfellelesing. |
 | Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan, vurderingsrubrikker og ny prosjektkontraktmal. | Pilotere kontrakten mot kommende caseutvidelser og justere rubrikkene etter erfaringer fra AR/VR- og sektorworkshops. |
@@ -146,7 +146,7 @@ Anslagene nedenfor tar utgangspunkt i 400 ord per side og supplerer statusoversi
   2. Velge riktige data- og verktøypakker for ulike prosjekttyper.
   3. Planlegge evaluering av ressursbruk i undervisning og forskning.
 - **Volumbehov:** +8,3 sider (~3 300 ord).
-- **Prioriterte utvidelser:** Strukturere ressurslisten etter modenhetsnivå, legge til beskrivelser og kontaktpunkter, samt utvikle bruksscenarier for lærere og studenter.
+- **Prioriterte utvidelser:** Validerer modenhetskartet i fagfelleworkshop, supplere med referanser eller kontaktpunkt der pilotene etterspør det, og avstemme casene mot kapittelbidragene før publisering.
 
 ### Appendiks – Begrepsliste og ordliste
 - **Ønsket omfang:** 10 sider (~4 000 ord) med fordypede definisjoner, oversettelser og referanser.
