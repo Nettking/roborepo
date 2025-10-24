@@ -85,6 +85,38 @@ Tabell~\ref{tab:kontrollpunkter-generativ} viser hvordan styringen kan dokumente
 
 Denne styringsrammen gjør det enklere å argumentere for generativt databruk overfor juridiske og etiske vurderinger. Studentteam kan bruke tabellen som sjekkliste i prosjektgjennomgangen og som vedlegg når rubrikken fra lærerveiledningen skal dokumenteres.
 
+\subsection{Koordinerende multi-agent tvillinger}
+Når digitale tvillinger skal ta beslutninger på tvers av en hel verdikjede, er en enkelt modell sjelden tilstrekkelig. Multi-agent forsterkende læring gjør det mulig å kombinere flere beslutningstakere som forhandler om ressurser, tid og risiko samtidig.\citep{zhang2021multiagent} I praksis betyr det at en kontrolltårn-agent, en logistikk-agent og en bærekrafts-agent lærer samhandlingsstrategier der belønningene balanserer produksjon, sikkerhet og klimaavtrykk. For å unngå at agentene overstyrer hverandre, bør de trenes i en felles simuleringssløyfe fra Kapittel~4 der constraints fra fysiske modeller ligger til grunn.
+
+Norske pilotmiljøer peker på at multi-agent oppsettet først gir effekt når beslutninger er synkronisert med etablerte styringsarenaer. Kontrolltårnet til Statnett deler sanntidsmålinger og risikorammer, mens Kognitwin-plattformen til Kongsberg Digital distribuerer modelloppdateringer til både sky og edge.\citep{statnett2024kontrolltarn,kongsberg2023kognitwin} Oslo Havn har i tillegg definert en «digital havn 2030»-strategi der autonome fartøy, kraner og logistikkpartnerskap skal kobles gjennom en felles datahub.\citep{oslohavn2023digitalhavn} Multi-agent sløyfen må derfor beskrive hvem som eier beslutningene, hvilke indikatorer som utløser tiltak og hvordan avvik eskaleres mot valideringsjournalen i Kapittel~6 og gevinstplanen i Kapittel~7.
+
+\begin{itemize}
+    \item \textbf{Koordineringslag}: En hovedagent legger overordnede prioriteringer basert på porteføljemål og gevinstplaner, og setter rammer for hvordan underliggende agenter kan tilpasse seg.
+    \item \textbf{Domeneagenter}: Spesialiserte agenter styrer for eksempel energioptimalisering, maritime operasjoner eller vedlikehold. De bruker lokale observasjoner og generative scenarioer for å foreslå tiltak.
+    \item \textbf{Tilsyns- og sikkerhetsagenter}: Egen agentlogikk overvåker etterlevelse av standarder som DNVs retningslinjer for autonome og fjernstyrte operasjoner, og stopper forslag som bryter med regulatoriske grenser.\citep{dnv2021autonomous}
+\end{itemize}
+
+Tabell~\ref{tab:multiagent-roller} viser hvordan agentene kan organiseres i et norsk logistikk- og energiprosjekt. Kolonnene binder rollene til indikatorer og datakilder som allerede er etablert i kapittelstrukturen.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Roller og indikatorer i et multi-agent oppsett for norske tvillingpiloter}
+    \label{tab:multiagent-roller}
+    \begin{tabular}{p{3.4cm}p{4.2cm}p{3.6cm}p{3.8cm}}
+        \toprule
+        \textbf{Agenttype} & \textbf{Primæroppgaver} & \textbf{Nøkkelsignaler} & \textbf{Kobling til andre kapitler} \\
+        \midrule
+        Koordineringsagent & Setter produksjons- og bærekraftsmål, prioriterer ressurser og løser konflikter mellom domeneagenter. & Porteføljestatus, gevinstindikatorer, risikoappetitt fra styringsmodell. & Kapittel~7 (styring og gevinstplan) og Kapittel~8 (caseprioritering). \\
+        \addlinespace
+        Energi- og logistikkagenter & Optimaliserer energiflyt, lasthåndtering og ruteplanlegging i sanntid. & Sensorstrømmer, værprognoser, kødata fra dataspace. & Kapittel~3 (dataspace-arkitektur) og Kapittel~4 (simulering). \\
+        \addlinespace
+        Sikkerhets- og tilsynsagenter & Verifiserer at forslag følger standarder og operasjonelle begrensninger før utrulling. & Hendelseslogger, avviksstatistikk, sertifiseringsstatus. & Kapittel~6 (validering og tilsyn) og Kapittel~9 (innovasjon og regelverk). \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Studentgrupper kan bruke tabellen som et arbeidsark: identifiser hvilke agenter som trengs, beskriv hvilke datasett som aktiverer dem og dokumenter hvordan beslutningene spores i gevinst- og tiltaksloggene. Når agentene deployeres, bør de følge samme versjonskontroll og dokumentasjon som øvrige modeller slik at fagfeller kan reprodusere resultatene og påse at ansvarsdelingen holder over tid.
+
 \subsection{Prediktivt vedlikehold i norske energianlegg}
 Prediktivt vedlikehold krever at AI-komponentene i den digitale tvillingen forstår slitasjemønstre, kan anbefale tiltak i tide og er koordinert med operasjonelle prosesser i kontrollrommet. Kraftsystemet er et godt eksempel fordi Statnett har etablert kontrolltårn som kobler sanntidsdata, simulerte scenarioer og vedlikeholdsplanlegging for hele transmisjonsnettet.\citep{statnett2024kontrolltarn} Når studentgrupper skal lage tilsvarende løsninger, bør de kombinere dataassimilering fra sensorer, tilstandsovervåkning i SCADA og læringsmodeller som estimerer restlevetid for kritiske komponenter. Offshore-industrien viser hvordan dette kan skaleres: Equinor bruker digitale tvillinger for å følge opp turbiner, ventiler og sikkerhetssystem på Johan Sverdrup-feltet, noe som gir en rik erfaringsbase for å teste algoritmene mot faktiske inspeksjonsrunder.\citep{equinor2021johansverdrup}
 
