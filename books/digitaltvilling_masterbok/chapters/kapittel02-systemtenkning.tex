@@ -197,6 +197,45 @@ kombineres for å støtte flerfidelitetsmodeller og operativ drift \citep{kenned
 Dokumentasjonen må vise hvilke datasett som ligger til grunn, hvordan datakvalitet er vurdert og hvilke roller som godkjenner nye
 parameterverdier før de tas i bruk i produksjon.
 
+\subsection{Kalibreringsverksted for prosessindustri}
+For å gjøre kalibreringen håndgripelig gjennomfører mange norske industripartnere egne verksteder der driftspersonell, datafaglige og leverandører møtes rundt en felles modelljournal.\citep{sintef2021digital,equinor2021johansverdrup} Verkstedet organiseres gjerne som en to-dagers arbeidsøkt der første dag fokuserer på datakvalitet og hypoteser, mens dag to brukes til å teste parameterendringer i sandkassemiljøer. Prosessen gjør det mulig å identifisere hvilke antagelser som må dokumenteres i forkant av pilotering, og hvilke målepunkter som må overvåkes når modellen tas i bruk.
+
+En vellykket samling følger tre hovedfaser:
+\begin{enumerate}
+    \item \textbf{Forberedelse:} Samle historiske driftsdata, definere hvilke scenarier som skal testes og oppdatere modelljournalens avsnitt om formål og datagrunnlag.
+    \item \textbf{Kalibreringssløyfe:} Teste parameterendringer mot referansemålinger, vurdere konsekvenser i kontrollromsgrensesnittet og beslutte hvilke endringer som skal foreslås for produksjon.
+    \item \textbf{Beslutningsmøte:} Dokumentere resultatene i beslutningsloggen, vurdere regulatoriske konsekvenser og forankre videre tiltak i kapittel~6 sin valideringsjournal og livssyklusmodellene i kapittel~7.\citep{dnv2023digitalassurance}
+\end{enumerate}
+
+Tabell~\ref{tab:kap02-kalibreringsverksted} viser en enkel rolle- og artefaktmatrise som kan brukes når verkstedet planlegges. Den gjør det tydelig hvem som har ansvar for ulike deler av kalibreringsarbeidet, hvilke dokumenter som må være tilgjengelige, og hvordan funnene kobles til videre forbedring.
+
+\begin{table}[ht]
+    \centering
+    \caption{Rolle- og artefaktmatrise for kalibreringsverksted.}
+    \label{tab:kap02-kalibreringsverksted}
+    \begin{tabular}{p{0.22\textwidth}p{0.32\textwidth}p{0.2\textwidth}p{0.22\textwidth}}
+        \toprule
+        \textbf{Rolle} & \textbf{Nøkkeloppgaver} & \textbf{Hovedleveranse} & \textbf{Verktøy og kilder} \\
+        \midrule
+        Driftssjef & Prioritere scenarier, vurdere konsekvenser for produksjon og beredskap. & Oppdatert beslutningslogg med anbefalte tiltak. & Kontrolltårnrapporter, ROS-analyser, KPI-panel. \\
+        Data scientist & Analysere datakvalitet, teste parameterendringer og dokumentere resultater. & Kalibreringsnotat med nye parameterverdier og usikkerhet. & Notebooks, datasett fra historisk arkiv, modelljournal. \\
+        Leverandørrepresentant & Verifisere at endringene er kompatible med plattform og kontrakter. & Integrasjonsrapport og oppdatert vedlikeholdsplan. & API-spesifikasjoner, tjenestekontrakter, servicehåndbøker. \\
+        Kvalitets- og sikkerhetsteam & Vurdere etterlevelse av krav og koordinere sign-off. & Revisjonssjekkliste og kobling til valideringsjournal i kapittel~6. & DNV-veiledere, interne prosedyrer, samsvarsregister. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Oppgave: planlegg en kalibreringskampanje}
+Som forberedelse til verkstedet kan studentgrupper utvikle en kalibreringsplan for egen casebedrift. Planen bør inkludere:
+\begin{itemize}
+    \item en prioritering av hvilke målepunkter som må innhentes i laboratoriet før testen starter,
+    \item forslag til datakvalitetsindikatorer og alarmgrenser som skal overvåkes under kampanjen,
+    \item en oversikt over beslutninger som må eskaleres til ledelse eller myndigheter dersom avvik oppstår,
+    \item referanser til eksisterende prosedyrer, for eksempel DNV~RP-A204 og SINTEF sine anbefalinger for norske tvillingprosjekter.\citep{dnv2023digitalassurance,sintef2021digital}
+\end{itemize}
+
+Gruppene kan levere planen som vedlegg til modelljournalen og bruke den i kapitteloppgavene når de vurderer hvordan digitale tvillinger går fra laboratoriet til operativ drift. Øvingen gjør det tydelig hvordan systemtenkning, modellering og styring henger sammen på tvers av kapitlene i boken.
+
 \subsection{Case: Digital tvilling for fjernvarme i Oslo}
 Fortum Oslo Varme har utviklet en digital tvilling for å optimalisere energiproduksjon og distribusjon i fjernvarmenettet.
 Modellen kombinerer hydrauliske ligninger for rørnettet med maskinlæringsmodeller som predikerer varmebehov basert på vær,
