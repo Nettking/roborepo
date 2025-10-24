@@ -308,6 +308,45 @@ For å gjøre kravene håndgripelige kan kurslaboratoriet følge en firestegs ar
 
 Denne tilnærmingen gir studentene innsikt i hvordan europeisk regulering og norske veiledere må kombineres for å bygge tillit til helserettede digitale tvillinger.
 
+\section{AI-forordningen for mobilitetstvillinger}
+Mobilitetstvillinger for kollektivtransport, jernbane og veibaserte tjenester påvirker fysisk sikkerhet, kritisk infrastruktur og persontransport. Dermed klassifiseres de som høyrisikosystemer under AI-forordningen, og må dokumentere hvordan sikkerhet, transparens og menneskelig kontroll ivaretas før nye funksjoner tas i bruk.\citep{eu2024aiact} Norske piloter som Ruters mobilitetslab og Enturs dataplattform viser at tvillinger allerede styrer rutetilpasninger, billettflyt og hendelseshåndtering i sanntid.\citep{ruter2024mobilitetslab,entur2023dataplattform} Samtidig forventer Bane NOR og Statens vegvesen at digitale tvillinger støtter beredskapsplaner, trafikkstyring og kriseinformasjon.\citep{banenor2024digitalspor,vegvesen2023beredskap} For masterstudentene betyr det at mobilitetscaset må koble regulatoriske krav til indikatorpanelet og hendelsesjournalen fra de foregående seksjonene.
+
+\subsection{Sjekkliste for kollektivtransport og jernbane}
+Arbeidsgruppen kan bruke følgende sjekkliste for å planlegge og dokumentere etterlevelse i mobilitetstvillingen:
+\begin{enumerate}
+    \item \textbf{Risikoklassifisering og mandat:} Kartlegg hvilke beslutninger tvillingen påvirker (frekvens, omdirigering, kapasitetsprioritering) og dokumenter hvorfor de faller inn under AI-forordningens sikkerhetskritiske kategori.\citep{eu2024aiact,banenor2024digitalspor}
+    \item \textbf{Datastyring og sporbarhet:} Beskriv hvordan data fra sanntidssensorer, billettsystem og tredjepartsleverandører kvalitetssikres, og merk datasett med formål, eierskap og oppdateringshyppighet i Enturs datakatalog.\citep{entur2023dataplattform}
+    \item \textbf{Hendelseshåndtering og logging:} Integrer tvillingen med beredskapsjournalen slik at avvik, overstyringer og kommunikasjon mot publikum logges i tråd med NIS2 og beredskapsplanene til Statens vegvesen.\citep{vegvesen2023beredskap}
+    \item \textbf{Menneskelig kontroll og opplæring:} Definer roller for trafikkledere, beredskapsvakter og operasjonssentre som kan stanse, tilpasse eller forkaste modellforslag, og dokumenter hvilke prosedyrer som sikrer forståelse av modellbegrensninger.\citep{ruter2024mobilitetslab}
+    \item \textbf{Evaluering og rapportering:} Planlegg faste revisjoner der indikatorer, loggfiler og brukerinnspill vurderes opp mot AI-forordningens krav og kommunenes mobilitets- og klimamål.\citep{eu2024aiact,vegvesen2023beredskap}
+\end{enumerate}
+
+Sjekklisten kan brukes som leveransekrav i prosjektoppgaver: hver gruppe leverer en kort rapport som viser status, ansvarlig rolle og videre tiltak for hvert punkt.
+
+\subsection{Indikatorpanel for mobilitetstvillinger}
+For å demonstrere etterlevelse i drift bør mobilitetstvillingen ha et indikatorpanel som kombinerer operasjonelle data med regulatoriske kontrollpunkter. Tabell~\ref{tab:ai-mobilitet} viser et forslag som kan kobles direkte til kontrolltårn-panelet fra energicaset.
+
+\begin{table}[ht]
+    \centering
+    \caption{Indikatorpanel som viser AI-forordningens krav i mobilitetstvillingen}
+    \label{tab:ai-mobilitet}
+    \begin{tabular}{|p{3.2cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Indikator} & \textbf{Datagrunnlag og modellstøtte} & \textbf{AI-forordningens kontrollpunkt} & \textbf{Ansvarlig funksjon} \\
+        \hline
+        Trafikksikkerhetsscore & Hendelsesdata fra trafikkledelse, simulert risikovurdering av ruter og kapasitetsgrenser \citep{banenor2024digitalspor} & Art. 9 krav til risikostyring og dokumenterte mitigeringstiltak \citep{eu2024aiact} & Trafikksikkerhetssjef (Bane NOR / Sporveien) \\
+        \hline
+        Algoritmisk overstyring & Logg av manuelle beslutninger i mobilitetslabben, antall forslag som stanses eller endres \citep{ruter2024mobilitetslab} & Art. 14 krav til menneskelig tilsyn og overstyring \citep{eu2024aiact} & Operativ leder i kollektivselskap \\
+        \hline
+        Datakvalitet per datastrøm & Enturs dataplattform-metrikker for tilgjengelighet, forsinket oppdatering og datatap \citep{entur2023dataplattform} & Art. 10 krav til datastyring og representativitet \citep{eu2024aiact} & Data steward i mobilitetsdataspace \\
+        \hline
+        Hendelsesrespons og kommunikasjon & Beredskapsjournal, responstid og informasjonsmeldinger til publikum \citep{vegvesen2023beredskap} & Art. 17 krav om logging og rapportering til tilsyn \citep{eu2024aiact} & Beredskapsleder for mobilitet \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Indikatorene bør presenteres i samme dashboard som brukes i beredskapsscenarioene tidligere i kapitlet. Når terskler brytes, skal tiltakslogg, kvalitetsjournal og planfil oppdateres med hvem som vurderte avviket, hvilke tiltak som ble iverksatt og hvordan læring spres til samarbeidspartnerne (for eksempel kommunens mobilitetsavdeling og dataspace-partnere).
+
 \section{Tverrsektorielt tilsyn og rapportering}
 Kommende EU-regulering for kunstig intelligens krever at høyrisiko-tvillingene dokumenterer tilsyn, rapportering og menneskelig kontroll på tvers av domener. \citet{datatilsynet2023sandkasse} viser hvordan regulatoriske sandkasser brukes til å teste tiltak i avgrensede løp, mens \citet{ehelse2024tilsyn} beskriver tredjepartsvurderinger for kliniske beslutningsstøttesystemer. For å holde styr på slike krav må tvillingteamet koble kvalitetsjournalen fra Kapittel~6 til indikatorpanelene i Kapittel~5 og styringsmodellene i Kapittel~7, slik at hvert tiltak har et tydelig eierskap og en plan for rapportering til relevante tilsynsmyndigheter.
 
