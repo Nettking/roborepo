@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-50: Integrerte sirkulærøkonomisk gevinststyring og indikatorramme i Kapittel 7, oppdaterte plan- og tavlefiler og beskrev hvordan indikatorene koples til ressursbanken. (`chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-49: Dokumenterte dataspace-orientert valideringslaboratorium med designprinsipper, testpakker og undervisningsopplegg i Kapittel 6, og oppdaterte plan- og arbeidsfiler for å reflektere pilotbehovet. (`chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-48: Beskrev operativ driftsmøtemodell for dataspace-tilknyttede tvillinger med møtesyklus, tabell og koblinger til indikator- og gevinstarbeidet, og oppdaterte plan-, tavle- og statusfiler. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-47: Etablerte kompetansepakke og kommunikasjonsplan for dataspace-governance i Kapittel 7, inkludert nye tabeller og oppdaterte kilder, og synkroniserte plan- og statusfiler. (`chapters/kapittel07-livssyklus.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `support/oppgavetavle.md`, `completed_tasks.md`)

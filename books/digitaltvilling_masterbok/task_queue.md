@@ -22,10 +22,12 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger | Status |
 
+
 ## Ferdige oppgaver
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-50 | Kapittel 7 | FERDIG – Integrerte sirkulærøkonomisk gevinststyring med indikatorramme i livssykluskapittelet og oppdaterte plan- og tavlefiler for å synliggjøre endringen. | `chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-49 | Kapittel 6 | FERDIG – Dokumenterte dataspace-orientert valideringslaboratorium med designprinsipper, testpakker og undervisningsopplegg. | `chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-48 | Kapittel 3 | FERDIG – Dokumenterte driftsmøtemodell for dataspace-tilknyttede tvillinger med møtesyklus og leveransetabell, og oppdaterte plan- og tavlefiler. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-47 | Kapittel 7 | FERDIG – Utviklet kompetansepakke og kommunikasjonsplan for dataspace-governance med nye tabeller og referanser, og oppdaterte plan- og statusfiler. | `chapters/kapittel07-livssyklus.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
