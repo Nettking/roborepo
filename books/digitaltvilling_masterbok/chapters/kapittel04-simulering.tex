@@ -153,6 +153,41 @@ Tabell~\ref{tab:kap04-avfall-simulering} viser hvordan dataflyter og indikatorer
 
 For å sikre at caset knyttes til vurderingskriteriene i kapittelet skal studentgruppene levere en simuleringsteknisk logg, et indikatorpanel og forslag til gevinstoppfølging. Loggen beskriver antakelser og parameterverdier, mens indikatorpanelet refererer til bærekrafts- og gevinstmål i kapittel~7. Gevinstforslaget skal inneholde tiltak for å skalere løsningen fra pilot til fullskala drift, inkludert forslag til datadeling og styringsmekanismer med renovasjonsetat, bydeler og private entreprenører. Dermed demonstreres hvordan digital tvilling kan brukes for å prioritere investeringer i infrastruktur og teknologi som støtter sirkulærøkonomiske mål.
 
+\subsection{Simuleringscase: Karbonfangst og -lagring i Langskip-programmet}
+Langskip-programmet etablerer fullskala karbonfangst og -lagring i Norge, med Norcem i Brevik og Hafslund Oslo Celsio som fangstanlegg og Northern Lights som transport- og lagringsoperatør.\citep{oed2023langskip,northernlights2024readiness} Operasjonen krever kontinuerlig koordinering av prosessdata, logistikk og undergrunnsmodeller, og et digitalt tvillingoppsett gir en felles arena for å vurdere hvordan tiltak påvirker utslipp, sikkerhet og kapasitet. Tvillingen kombinerer kontinuerlige prosessmodeller for absorberkolonner og varmeintegrasjon, diskret hendelsessimulering for skipstrafikk og buffertanker, samt reservoarsimulering for å følge trykk og metningsgrad i injeksjonsbrønnene.
+
+DNV anbefaler at karbonlagringsoperatører kombinerer fysikkbaserte reservoarmodeller med maskinlæring og datadrevne alarmer for å fange tidlige lekkasjeindikatorer.\citep{dnv2023ccsmonitoring} I caset brukes anbefalingene som grunnlag for å definere simuleringsflyt og kontrollpunkter: prosessmodellen i kapittel~5 leverer prediksjoner av energi- og aminforbruk, mens scenarioanalysen i dette kapittelet tester hvordan ulike skipnings- og injeksjonsplaner påvirker lagertrykk og CO$_2$-balanse. Resultater sendes videre til kontrolltårn og valideringsjournal i kapittel~6 slik at avvik raskt kan kobles til tiltak i tiltaksloggen fra kapittel~7.
+
+Casegjennomføringen i masterkurset kan organiseres i tre steg:
+\begin{enumerate}
+    \item \textbf{Datagrunnlag og modellforberedelse:} Kartlegg målepunkter fra fangstanleggene (temperatur, trykk, amin-konsentrasjon og energibruk), logistikkdata fra skip og tanker samt geofysiske målinger fra lagerformasjonen. Datastrømmer merkes med kontrakter fra kapittel~3 slik at deling med partnere skjer under kontroll.
+    \item \textbf{Scenario- og tiltakstesting:} Simuler variasjoner i fangstgrad, skipningsfrekvens og injeksjonstrykk. Resultatene evalueres mot kapasitetsgrenser, sikkerhetsmarginer og klimanytte. Hendelser som overstiger terskler sender varsler til valideringspanelet i kapittel~6.
+    \item \textbf{Rapportering og styring:} Dokumenter tiltak i gevinst- og tiltaksloggene fra kapittel~7, og forbered rapportpakker til myndigheter i tråd med rapporteringskravene for Langskip.
+\end{enumerate}
+
+Tabell~\ref{tab:kap04-ccs-simulering} gir et forslag til hvordan arbeidsflyten kan dokumenteres i prosjektlogg eller fagfellelogg. Kolonnene binder sammen simuleringsfokus, datakrav og indikatorer slik at teamet tydelig ser hvordan resultatene kobles til øvrige kapitler.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Arbeidsflyt for simuleringscase i karbonfangst- og lagringsoperasjoner}
+    \label{tab:kap04-ccs-simulering}
+    \begin{tabular}{p{0.24\textwidth}p{0.40\textwidth}p{0.30\textwidth}}
+        \toprule
+        \textbf{Fase} & \textbf{Simulerings- og analysefokus} & \textbf{Indikatorer og styringskoblinger}\\
+        \midrule
+        Fangst og varmeintegrasjon & Modellprediktiv kontroll av absorberkolonner og varmegjenvinning med støtte fra læringsmodellene i kapittel~5. & CO$_2$-fangstrate, energiintensitet og aminforbruk rapporteres til kontrolltårnet i kapittel~6.\\
+        \addlinespace
+        Transport og bufferlogistikk & Diskret hendelsessimulering av skipningsplan, buffertanker og havnelogistikk med scenarioer for forsinkelser. & Leveringspresisjon, lagernivå og logistikkavvik deles med tiltaksloggen i kapittel~7.\\
+        \addlinespace
+        Injeksjon og reservoaroppfølging & Kombiner reservoarsimulatorer med datadrevne alarmer fra kapittel~5 for å følge trykk, temperatur og metningsgrad. & Trykkmargin til terskel, lekkasjeindikatorer og regulatorisk rapportering følger kravene i kapittel~6 og kapittel~9.\\
+        \addlinespace
+        Myndighetsrapportering og gevinst & Automatiser rapportpakker som kombinerer prosess-, logistikk- og lagerdata, og visualiser klimanytte i dashboards. & Oppdater gevinstplan og klimaregnskap i kapittel~7, samt eksportér nøkkeltall til forsknings- og innovasjonssporet i kapittel~9.\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Når studentgruppene dokumenterer caset bør de beskrive hvordan modeller, data og beslutninger versjonskontrolleres. Dette gjør det mulig å reprodusere scenariene og å demonstrere overfor partnerne at tvillingen oppfyller krav til sikkerhet, etterlevelse og klimaregnskap. Erfaringene kan tas videre til laboratorieopplegget i kapittel~5, samtidig som indikatorpakken gjenbrukes i styrings- og rapporteringsrutinene i kapitlene~6 og 7.
+
 \subsection{Co-design for menneske--maskin-samhandling}
 Menneske--maskin-samhandling i digitale tvillinger blir mest effektiv når operatører, modellutviklere og beslutningstakere utformer arbeidsflater sammen. Et strukturert co-design-løp sikrer at simuleringer og visualiseringer understøtter både situasjonsforståelse og læring. Erfaringene fra norske kontrollrom viser at denne typen samarbeid må starte før teknologien implementeres, slik at modellforvaltningsrutiner og beslutningslogg bygges inn i løsningene \citep{kongsberg2023kognitwin,statnett2024kontrolltarn}.
 
