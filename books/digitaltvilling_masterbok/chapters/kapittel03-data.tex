@@ -1,16 +1,16 @@
 \chapter{Data, integrasjon og infrastruktur}
 
-\section{L\ae ringsm\aa l}
+\section{Låe ringsm å l}
 \begin{itemize}
     \item Beskrive arkitekturen for datafangst, lagring og distribusjon i digitale tvillinger.
-    \item Evaluere integrasjonsm\o nstre og standarder.
+    \item Evaluere integrasjonsmønstre og standarder.
     \item Utforme krav til sikkerhet, personvern og datasuverenitet.
 \end{itemize}
 
 \section{Dataflyt og pipeline-design}
-En digital tvilling er avhengig av en gjennomtenkt datapipeline som kan fange, bearbeide og tilgjengeliggj\o re informasjon med riktig kvalitet og tidsoppl\o sning. Det starter i feltet, hvor sensorer, styringssystemer eller manuelle registreringer skaper r\aa data. Dataene m\aa filtreres og normaliseres tidlig for \aa unng\aa store forsinkelser senere i kjeden. Norske industrimilj\o er som prosessindustrien p\aa Her\o ya har gode erfaringer med \aa kombinere edge-noder som gj\o r grunnleggende forh\aa ndsprosessering med sentrale skyplattformer som tilbyr datalagring, modelltrening og visualisering.
+En digital tvilling er avhengig av en gjennomtenkt datapipeline som kan fange, bearbeide og tilgjengeliggjøre informasjon med riktig kvalitet og tidsoppløsning. Det starter i feltet, hvor sensorer, styringssystemer eller manuelle registreringer skaper r å data. Dataene m å filtreres og normaliseres tidlig for  å unng å store forsinkelser senere i kjeden. Norske industrimiljøer som prosessindustrien p å Herøya har gode erfaringer med  å kombinere edge-noder som gjør grunnleggende forh å ndsprosessering med sentrale skyplattformer som tilbyr datalagring, modelltrening og visualisering.
 
-Figur~\ref{fig:kap3-datapipeline} oppsummerer hovedstr\o mmen fra feltniv\aa til de applikasjonene som konsumerer tvillingtjenestene. Integrasjonslaget markerer overgangen der normaliserte hendelser og masterdata eksponeres gjennom standardiserte grensesnitt og meldingsstrukturer, slik at etterf\o lgende plattformer kan bygges modul\ae rt.
+Figur~\ref{fig:kap3-datapipeline} oppsummerer hovedstrømmen fra feltniv å til de applikasjonene som konsumerer tvillingtjenestene. Integrasjonslaget markerer overgangen der normaliserte hendelser og masterdata eksponeres gjennom standardiserte grensesnitt og meldingsstrukturer, slik at etterfølgende plattformer kan bygges modulåe rt.
 
 % Alt-tekst: support/figurer/metadata/kap03-datapipeline-v2.alt.md
 \begin{figure}[ht]
@@ -29,98 +29,98 @@ Figur~\ref{fig:kap3-datapipeline} oppsummerer hovedstr\o mmen fra feltniv\aa til
             },
             stage/.default=dypblaa
         }
-        \node (field) [stage=dypblaa] {Feltniv\aa \\ \footnotesize Sensorer, SCADA, operat\o rinput};
+        \node (field) [stage=dypblaa] {Feltniv å \\ \footnotesize Sensorer, SCADA, operatørinput};
         \node (edge) [stage=petrol, right=2.3cm of field] {Edge- og gatewaylag \\ \footnotesize Filtrering, buffering, protokollkonvertering};
-        \node (integration) [stage=havgronn, right=2.3cm of edge] {Integrasjonslag \\ \footnotesize Meldingsk\o er, API-orkestrering, semantisk modellering};
-        \node (platform) [stage=solgul, right=2.3cm of integration] {Data- og analyseplattformer \\ \footnotesize Datasj\o, tidsserielager, modelltrening};
+        \node (integration) [stage=havgronn, right=2.3cm of edge] {Integrasjonslag \\ \footnotesize Meldingskøer, API-orkestrering, semantisk modellering};
+        \node (platform) [stage=solgul, right=2.3cm of integration] {Data- og analyseplattformer \\ \footnotesize Datasjø, tidsserielager, modelltrening};
         \node (apps) [stage=koral, right=2.3cm of platform] {Forbrukere \\ \footnotesize Digital tvilling, dashboards, styringssystemer};
         \draw[->, thick, draw=grafitt] (field) -- (edge);
         \draw[->, thick, draw=grafitt] (edge) -- node[above, font=\scriptsize]{Normalisering, kvalitetssikring} (integration);
         \draw[->, thick, draw=grafitt] (integration) -- node[above, font=\scriptsize]{Distribusjon, standarder} (platform);
         \draw[->, thick, draw=grafitt] (platform) -- node[above, font=\scriptsize]{Innsikt, automatisering} (apps);
-        \node (governance) [draw=grafitt, dashed, rounded corners=4pt, text width=8cm, align=center, font=\scriptsize, fill=skygraa!60, below=1.4cm of integration] {Tverrg\aa ende styring: tilgangskontroll, hendelseslogging, datakatalog og livssyklus for modeller};
+        \node (governance) [draw=grafitt, dashed, rounded corners=4pt, text width=8cm, align=center, font=\scriptsize, fill=skygraa!60, below=1.4cm of integration] {Tverrg å ende styring: tilgangskontroll, hendelseslogging, datakatalog og livssyklus for modeller};
         \draw[->, dashed, draw=grafitt] (governance.north west) -- (edge.south);
         \draw[->, dashed, draw=grafitt] (governance.north) -- (integration.south);
         \draw[->, dashed, draw=grafitt] (governance.north east) -- (platform.south);
     \end{tikzpicture}%
     }
-    \caption{Skisse av datapipeline fra felt til applikasjoner, med integrasjonslaget som kobler sanntidsstr\o mmer og dataplattformer.}
+    \caption{Skisse av datapipeline fra felt til applikasjoner, med integrasjonslaget som kobler sanntidsstrømmer og dataplattformer.}
     \label{fig:kap3-datapipeline}
 \end{figure}
 
 Koordineringen med fagfeller bygger på delingsnotatet \texttt{support/notater/datastyringsforum-di03.md}, og figurens metadata er registrert i \texttt{support/figurer/metadata/kap03-datapipeline-v2.alt.md} slik at grafikkteamet og DI-03-teamet jobber mot samme spesifikasjon.
 
 \subsection{Fra sensor til innsikt}
-F\o rste steg er datainnsamling via feltbuss, industrielle IoT-gatewayer eller API-er fra eksterne systemer. For digital tvilling-bruk er det avgj\o rende \aa definere sampling-rate, datastruktur og kontekst slik at hver m\a ling kan kobles til riktig fysiske komponent. Inntaksleddet m\aa h\aa ndtere buffring n\aar tilkoblingen faller ut, og bidra med enhetlige tidsstempler for \aa muliggj\o re felles analyse av hendelser. Videre b\o r pipeline-design inkludere datakvalitetsregler som fanger opp avvik, for eksempel ved \aa merke data fra kalibreringsperioder eller vedlikehold.
+Første steg er datainnsamling via feltbuss, industrielle IoT-gatewayer eller API-er fra eksterne systemer. For digital tvilling-bruk er det avgjørende  å definere sampling-rate, datastruktur og kontekst slik at hver m å ling kan kobles til riktig fysiske komponent. Inntaksleddet m å h å ndtere buffring nåar tilkoblingen faller ut, og bidra med enhetlige tidsstempler for  å muliggjøre felles analyse av hendelser. Videre bør pipeline-design inkludere datakvalitetsregler som fanger opp avvik, for eksempel ved  å merke data fra kalibreringsperioder eller vedlikehold.
 
 \subsection{Batch kontra streaming}
-Batchbehandling er egnet n\aar dataene hovedsakelig brukes til periodisk rapportering eller modelloppdatering, mens streaming er n\o dvendig for operasjonelle beslutninger og avviksh\a ndtering. Mange virksomheter kombinerer disse to: hendelser str\o mmes gjennom en meldingsk\o for \aa trigge alarmer og dashboards, samtidig som dataene landes i et datasj\o for tyngre analyser senere. Beslutningen b\o r dokumenteres i arkitekturbeskrivelsen slik at teamet vet hvilke forsinkelser og kostnader som forventes.
+Batchbehandling er egnet nåar dataene hovedsakelig brukes til periodisk rapportering eller modelloppdatering, mens streaming er nødvendig for operasjonelle beslutninger og avviksh å ndtering. Mange virksomheter kombinerer disse to: hendelser strømmes gjennom en meldingskøfor  å trigge alarmer og dashboards, samtidig som dataene landes i et datasjøfor tyngre analyser senere. Beslutningen bør dokumenteres i arkitekturbeskrivelsen slik at teamet vet hvilke forsinkelser og kostnader som forventes.
 
 \subsection{Metadata, semantikk og masterdata}
-Semantisk informasjon er n\o kkelen til \aa kunne dele data p\aa tvers av applikasjoner. Et felles begrepsapparat, for eksempel basert p\aa internasjonale referansemodeller eller bransjespesifikke ontologier, hjelper teamet med \aa unng\aa tolkningstvister. Masterdata om utstyr, prosesser og lokasjoner m\a holdes oppdatert, ellers mister tvillingen sin kobling til den fysiske virkeligheten. Ved \aa etablere en dedikert katalog med API-tilgang kan andre prosjekter gjenbruke informasjonen og bidra til kvaliteten.
+Semantisk informasjon er nøkkelen til  å kunne dele data p å tvers av applikasjoner. Et felles begrepsapparat, for eksempel basert p å internasjonale referansemodeller eller bransjespesifikke ontologier, hjelper teamet med  å unng å tolkningstvister. Masterdata om utstyr, prosesser og lokasjoner m å holdes oppdatert, ellers mister tvillingen sin kobling til den fysiske virkeligheten. Ved  å etablere en dedikert katalog med API-tilgang kan andre prosjekter gjenbruke informasjonen og bidra til kvaliteten.
 
-\section{Integrasjonsm\o nstre og standarder}
-Et integrasjonslandskap for digitale tvillinger spenner fra enkle API-kall til kompleks hendelsesdrevet samhandling. God praksis er \aa kartlegge datastr\o mmer, volum og krav til robusthet f\o r man velger teknologier.
+\section{Integrasjonsmønstre og standarder}
+Et integrasjonslandskap for digitale tvillinger spenner fra enkle API-kall til kompleks hendelsesdrevet samhandling. God praksis er  å kartlegge datastrømmer, volum og krav til robusthet før man velger teknologier.
 
 \subsection{Arkitekturvalg}
-Tradisjonelle REST-API-er gir tydelig kontraktstyring og passer for foresp\o rsel-/svar-scenarioer, men b\o r suppleres med publish/subscribe-mekanismer n\aar flere systemer trenger de samme sanntidsdataene. Hendelsesdrevne arkitekturer med meldingsk\oer eller loggstr\o mmer (for eksempel Apache Kafka) gir bedre skalerbarhet og kan forenkle revisjon, fordi alle hendelser lagres i riktig rekkef\o lge. For kritiske styringssystemer b\o r man ogs\aa vurdere redundans og fallback-l\o sninger, slik at tapte meldinger ikke medf\o rer sikkerhetsrisiko.
+Tradisjonelle REST-API-er gir tydelig kontraktstyring og passer for forespørsel-/svar-scenarioer, men bør suppleres med publish/subscribe-mekanismer nåar flere systemer trenger de samme sanntidsdataene. Hendelsesdrevne arkitekturer med meldingskøer eller loggstrømmer (for eksempel Apache Kafka) gir bedre skalerbarhet og kan forenkle revisjon, fordi alle hendelser lagres i riktig rekkefølge. For kritiske styringssystemer bør man ogs å vurdere redundans og fallback-løsninger, slik at tapte meldinger ikke medfører sikkerhetsrisiko.
 
 \subsection{Standarder i norsk praksis}
-OPC UA er utbredt i norsk industri fordi det forener datapublisering med semantiske modeller. MQTT er lettere og passer godt n\aar batteri- eller nettverkshensyn krever minimal overhead, som i maritime anvendelser. Asset Administration Shell (AAS) f\aa r st\o tte gjennom europeiske initiativer og gir et strukturert format for \aa beskrive digitale representasjoner av produkter og systemer. Ved \aa kombinere disse standardene kan man b\o de integrere eldre automasjonssystemer og dele data med eksterne partnere.
+OPC UA er utbredt i norsk industri fordi det forener datapublisering med semantiske modeller. MQTT er lettere og passer godt nåar batteri- eller nettverkshensyn krever minimal overhead, som i maritime anvendelser. Asset Administration Shell (AAS) f å r støtte gjennom europeiske initiativer og gir et strukturert format for  å beskrive digitale representasjoner av produkter og systemer. Ved  å kombinere disse standardene kan man bøde integrere eldre automasjonssystemer og dele data med eksterne partnere.
 
 \subsection{Datakvalitet og interoperabilitet}
-Integrasjonen m\aa inkludere kontrollpunkter for datakvalitet, spesielt n\aar dataene brukes til modelloppdatering eller automatiserte beslutninger. Versjonering av datakontrakter og testmilj\o er der integrasjoner valideres f\o r produksjonssetting reduserer risiko for feil. Dokumentasjon av avhengigheter og kontaktpunkter gj\o r det enklere \aa etablere ansvar for h\a ndtering av databrudd eller uforutsette endringer.
+Integrasjonen m å inkludere kontrollpunkter for datakvalitet, spesielt nåar dataene brukes til modelloppdatering eller automatiserte beslutninger. Versjonering av datakontrakter og testmiljøer der integrasjoner valideres før produksjonssetting reduserer risiko for feil. Dokumentasjon av avhengigheter og kontaktpunkter gjør det enklere  å etablere ansvar for h å ndtering av databrudd eller uforutsette endringer.
 
 \section{Infrastruktur og sikkerhet}
-Arkitekturen b\o r balansere behovet for lav responstid med kravene til sikkerhet, kostnad og etterlevelse. Norske organisasjoner m\o ter ofte krav om datasuverenitet, samtidig som de \o nsker \aa dra nytte av skytjenester for elastisitet og tung regnekraft.
+Arkitekturen bør balansere behovet for lav responstid med kravene til sikkerhet, kostnad og etterlevelse. Norske organisasjoner møter ofte krav om datasuverenitet, samtidig som de ønsker  å dra nytte av skytjenester for elastisitet og tung regnekraft.
 
 \subsection{Edge, sky og hybrid}
-Edge-plattformer n\a r fysiske prosesser gir rask respons og reduserer b\aa ndebreddebruken ved \aa filtrere data f\o r videresending. Skybaserte løsninger gir tilgang til avanserte analysetjenester og fleksibel lagring. En hybrid tilnærming er vanlig: modellene trenes i skyen og pakkes som containere som kan distribueres tilbake til fabrikkgulvet. God orkestrering (for eksempel med Kubernetes eller Azure Arc) sikrer at oppdateringer kan rulles ut kontrollert.
+Edge-plattformer n å r fysiske prosesser gir rask respons og reduserer b å ndebreddebruken ved  å filtrere data før videresending. Skybaserte løsninger gir tilgang til avanserte analysetjenester og fleksibel lagring. En hybrid tilnærming er vanlig: modellene trenes i skyen og pakkes som containere som kan distribueres tilbake til fabrikkgulvet. God orkestrering (for eksempel med Kubernetes eller Azure Arc) sikrer at oppdateringer kan rulles ut kontrollert.
 
 \subsection{Tilgangsstyring og zero-trust-prinsipper}
-Zero-trust inneb\ae rer at alle foresp\o rsler autentiseres og autoriseres, uansett hvor de kommer fra. I en digital tvilling m\a dette omfatte sensorer, API-klienter og mennesker. Bruk av identitetsplattformer, automatisert n\o kkellagring og segmenterte nettverk reduserer angrepsflaten. Logsikkerhet, inkludert kryptografisk signering av hendelser, hjelper virksomheten med \aa dokumentere etterlevelse og spore hendelser i etterkant.
+Zero-trust innebåe rer at alle forespørsler autentiseres og autoriseres, uansett hvor de kommer fra. I en digital tvilling m å dette omfatte sensorer, API-klienter og mennesker. Bruk av identitetsplattformer, automatisert nøkkellagring og segmenterte nettverk reduserer angrepsflaten. Logsikkerhet, inkludert kryptografisk signering av hendelser, hjelper virksomheten med  å dokumentere etterlevelse og spore hendelser i etterkant.
 
 \subsection{Juridiske hensyn}
-GDPR krever at personopplysninger behandles med tydelig hjemmel og strenge tilgangsregler. Selv n\a r dataene i utgangspunktet er tekniske, kan kombinasjonen av sensorinformasjon og arbeidsplaner gj\o re dem identifiserbare. Datasuverenitet har f\aa tt \o kt fokus etter Schrems II-dommen; virksomheter m\aa vite hvor dataene fysisk lagres og hvilke underleverand\o rer som involveres. Mange velger \aa knytte seg til norske eller europeiske skyer, eller \aa bruke konfigurerbare sovereign cloud-l\o sninger.
+GDPR krever at personopplysninger behandles med tydelig hjemmel og strenge tilgangsregler. Selv n å r dataene i utgangspunktet er tekniske, kan kombinasjonen av sensorinformasjon og arbeidsplaner gjøre dem identifiserbare. Datasuverenitet har f å tt økt fokus etter Schrems II-dommen; virksomheter m å vite hvor dataene fysisk lagres og hvilke underleverandører som involveres. Mange velger  å knytte seg til norske eller europeiske skyer, eller  å bruke konfigurerbare sovereign cloud-løsninger.
 
 \section{Datastyring og kontinuerlig forbedring}
-For \aa sikre at datapipelinen leverer konsistent kvalitet m\aa tekniske tiltak kobles til tydelige roller og arbeidsprosesser. Norske virksomheter etablerer ofte et datastyringsforum som samler produkteier, data steward, sikkerhetsansvarlig og representanter fra drift. Forumet prioriterer tiltak basert p\aa indikatorer for datakvalitet, hendelseslogger og fagfelleinnspill.
+For  å sikre at datapipelinen leverer konsistent kvalitet m å tekniske tiltak kobles til tydelige roller og arbeidsprosesser. Norske virksomheter etablerer ofte et datastyringsforum som samler produkteier, data steward, sikkerhetsansvarlig og representanter fra drift. Forumet prioriterer tiltak basert p å indikatorer for datakvalitet, hendelseslogger og fagfelleinnspill.
 
-\subsection{Roller og m\o tearenaer}
+\subsection{Roller og møtearenaer}
 \begin{itemize}
-    \item \textbf{Data steward:} Overv\aa ker datakvalitet og initierer korrigerende tiltak n\aa r regler brytes, for eksempel ved \aa sende saker til endringsstyret eller oppdatere datakontrakter.
-    \item \textbf{Produkteier for tvillingen:} Sikrer at hendelser med h\o y forretningsrisiko f\o lges opp og at prioriteringene synkroniseres med gevinstplaner i Kapittel~7.
-    \item \textbf{Teknisk plattformteam:} Forvalter overv\aa kingsdashbord, versjonering av dataprosesser og automatiserte tester som kj\o res hver gang datastrukturer endres.
+    \item \textbf{Data steward:} Overv å ker datakvalitet og initierer korrigerende tiltak n å r regler brytes, for eksempel ved  å sende saker til endringsstyret eller oppdatere datakontrakter.
+    \item \textbf{Produkteier for tvillingen:} Sikrer at hendelser med høy forretningsrisiko følges opp og at prioriteringene synkroniseres med gevinstplaner i Kapittel~7.
+    \item \textbf{Teknisk plattformteam:} Forvalter overv å kingsdashbord, versjonering av dataprosesser og automatiserte tester som kjøres hver gang datastrukturer endres.
 \end{itemize}
-Forumet kan m\o tes ukentlig i innf\o ringsfasen og deretter m\aa nedlig for moden drift. Referat og tiltak registreres i fagfelleloggen (DI-03) slik at status er synlig for hele redaksjonen.
+Forumet kan møtes ukentlig i innføringsfasen og deretter m å nedlig for moden drift. Referat og tiltak registreres i fagfelleloggen (DI-03) slik at status er synlig for hele redaksjonen.
 
 \subsection{Operasjonelle kontrollpunkter}
 \begin{enumerate}
-    \item \textbf{Datakvalitetsdashbord:} Visualiserer fullstendighet, tidsforsinkelser og valideringsfeil for hver datastr\o m. Alarmgrenser defineres i samarbeid med domeneeksperter og dokumenteres i styringspakken til Kapittel~6.
-    \item \textbf{Hendelsesrespons:} Avvik loggf\o res i samme system som sikkerhetshendelser. Hvert avvik f\aa r ansvarlig person, frist og forslag til kompenserende tiltak (for eksempel fallback-modell eller manuelt kontrollsteg).
-    \item \textbf{L\ae ringssl\o yfe:} Kvartalsvise retrospektiv analyserer m\o nstre i datakvalitetsavvik og oppdaterer pipeline-design eller oppl\ae ringsprogram for operat\o rer.
+    \item \textbf{Datakvalitetsdashbord:} Visualiserer fullstendighet, tidsforsinkelser og valideringsfeil for hver datastrøm. Alarmgrenser defineres i samarbeid med domeneeksperter og dokumenteres i styringspakken til Kapittel~6.
+    \item \textbf{Hendelsesrespons:} Avvik loggføres i samme system som sikkerhetshendelser. Hvert avvik f å r ansvarlig person, frist og forslag til kompenserende tiltak (for eksempel fallback-modell eller manuelt kontrollsteg).
+    \item \textbf{Låe ringssløyfe:} Kvartalsvise retrospektiv analyserer mønstre i datakvalitetsavvik og oppdaterer pipeline-design eller opplåe ringsprogram for operatører.
 \end{enumerate}
-Detaljert praksis for indikatorene, m\o tesstruktur og l\ae ringssl\o yfe er nedfelt i delingsnotatet `support/notater/datastyringsforum-di03.md`,
+Detaljert praksis for indikatorene, møtesstruktur og låe ringssløyfe er nedfelt i delingsnotatet `support/notater/datastyringsforum-di03.md`,
 som deles med fagfeller i arbeidet med kommentar DI-03.
 
 \subsection{Samsvar med personvern og etikk}
-N\aa r nye datakilder tas i bruk b\o r datastyringsforumet sjekke behandlingsgrunnlag, vurdering av dataminimering og rutiner for sletting. Et eget sjekkpunkt sikrer at dokumentasjonen speiler kravene fra Helsedirektoratet, Normen og Kapittel~6 om validering og tillit. N\aa r tvillingen skaleres p\aa tvers av anlegg, anbefales det \aa utvide datakatalogen med tydelige beskrivelser av form\aa l og kontaktpunkt for hvert datasett.
+N å r nye datakilder tas i bruk bør datastyringsforumet sjekke behandlingsgrunnlag, vurdering av dataminimering og rutiner for sletting. Et eget sjekkpunkt sikrer at dokumentasjonen speiler kravene fra Helsedirektoratet, Normen og Kapittel~6 om validering og tillit. N å r tvillingen skaleres p å tvers av anlegg, anbefales det  å utvide datakatalogen med tydelige beskrivelser av form å l og kontaktpunkt for hvert datasett.
 
-\section{Sirkul\ae r\o konomi og materialsl\o yfer}
-Sirkul\ae r\o konomi krever at data f\o lger materialene gjennom hele verdikjeden slik at gjenbruk, reparasjon og resirkulasjon kan dokumenteres. Den nasjonale strategien for sirkul\ae r \o konomi fremhever digitale tvillinger som en n\o kkel for \aa spore klimaavtrykk og ressursbruk \citep{regjeringen2021sirkulaer}. EU sitt handlingsprogram for sirkul\ae r\o konomi understreker behovet for \aa pne standarder, produktpass og datadeling mellom produsenter, brukere og resirkuleringsakt\o rer \citep{eu2020circulareconomy}. Figuren under viser hvordan data flyter i en materialsl\o yfe n\aa r en digital tvilling kobler sammen design, produksjon, bruk og retur.
+\section{Sirkulåe røkonomi og materialsløyfer}
+Sirkulåe røkonomi krever at data følger materialene gjennom hele verdikjeden slik at gjenbruk, reparasjon og resirkulasjon kan dokumenteres. Den nasjonale strategien for sirkulåe r økonomi fremhever digitale tvillinger som en nøkkel for  å spore klimaavtrykk og ressursbruk \citep{regjeringen2021sirkulaer}. EU sitt handlingsprogram for sirkulåe røkonomi understreker behovet for  å pne standarder, produktpass og datadeling mellom produsenter, brukere og resirkuleringsaktører \citep{eu2020circulareconomy}. Figuren under viser hvordan data flyter i en materialsløyfe n å r en digital tvilling kobler sammen design, produksjon, bruk og retur.
 
 \begin{figure}[ht]
     \centering
     \resizebox{0.85\textwidth}{!}{\input{support/figurer/kilder/kap03-sirkular-dataflyt-v1.tikz}}
-    \caption{Datapunkter som deles i en sirkul\ae r materialsl\o yfe, fra design og produksjon via bruk og retur til resirkulasjon.}
+    \caption{Datapunkter som deles i en sirkulåe r materialsløyfe, fra design og produksjon via bruk og retur til resirkulasjon.}
     \label{fig:kap03-sirkular}
 \end{figure}
 
 \subsection{Indikatorer og datakilder}
-For \aa st\o tte sirkul\ae re beslutninger b\o r digitale tvillinger fange indikatorer for materialinnhold, karbonavtrykk, levetid og restverdi. Dataene m\aa v\ae re tilgjengelige i produktpass eller digitale loggb\o ker slik at b\aa de produsenter og resirkulat\o rer vet hvilke komponenter som kan demonteres og gjenbrukes. Kombinasjonen av sensorinformasjon, ERP-data og kvalitetstester gj\o r det mulig \aa beregne hvor mye av en komponent som kan gjenbrukes uten ytterligere bearbeiding. Norske virksomheter som deltar i gr\o nn plattform-programmet rapporterer at slike indikatorer er n\o dvendige for \aa f\aa st\o tte til pilotering \citep{miljodir2022sirkular}.
+For  å støtte sirkulåe re beslutninger bør digitale tvillinger fange indikatorer for materialinnhold, karbonavtrykk, levetid og restverdi. Dataene m å våe re tilgjengelige i produktpass eller digitale loggbøker slik at b å de produsenter og resirkulatører vet hvilke komponenter som kan demonteres og gjenbrukes. Kombinasjonen av sensorinformasjon, ERP-data og kvalitetstester gjør det mulig  å beregne hvor mye av en komponent som kan gjenbrukes uten ytterligere bearbeiding. Norske virksomheter som deltar i grønn plattform-programmet rapporterer at slike indikatorer er nødvendige for  å f å støtte til pilotering \citep{miljodir2022sirkular}.
 
 \subsection{Case: Hydro CIRCAL og materialsporing}
-Hydro har etablert en digital tvilling for \aa dokumentere innholdet av resirkulert aluminium i CIRCAL-produktene sine. Plattformen kobler produksjonsdata fra pressverkene med kvalitetstester og kundesertifikater, slik at hele verdikjeden kan verifisere klimap\aa standen \citep{hydro2023traceability}. Tvillingen gj\o r det mulig \aa f\o lge materialet fra innsamling av skrap via smelteprosesser til ferdig profil, og bidrar til \aa oppn\aa tredjeparts verifisering i henhold til EN~15088.
+Hydro har etablert en digital tvilling for  å dokumentere innholdet av resirkulert aluminium i CIRCAL-produktene sine. Plattformen kobler produksjonsdata fra pressverkene med kvalitetstester og kundesertifikater, slik at hele verdikjeden kan verifisere klimap å standen \citep{hydro2023traceability}. Tvillingen gjør det mulig  å følge materialet fra innsamling av skrap via smelteprosesser til ferdig profil, og bidrar til  å oppn å tredjeparts verifisering i henhold til EN~15088.
 
 \begin{table}[ht]
     \centering
@@ -133,40 +133,40 @@ Hydro har etablert en digital tvilling for \aa dokumentere innholdet av resirkul
         Materialpass & Digitalt pass med andel resirkulert aluminium, partinummer og opprinnelse. \\
         Prosessdata & Temperatur- og energilogger fra smelteovner og presslinjer, koblet til kvalitetstester. \\
         Kunderapportering & Automatisk generering av sertifikater og CO$_2$-beregninger til arkitekter og byggherrer. \\
-        Effekter & 75\% resirkulert innhold dokumentert og redusert tid p\aa revisjoner med 40\%. \\
-        Samarbeid & Deler data med partnere i EU sitt Circular Aluminium-program for \aa harmonisere indikatorer. \\
+        Effekter & 75\% resirkulert innhold dokumentert og redusert tid p å revisjoner med 40\%. \\
+        Samarbeid & Deler data med partnere i EU sitt Circular Aluminium-program for  å harmonisere indikatorer. \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-Caset viser hvordan en industriell akt\o r bruker digitale tvillinger til \aa skape tillit i markedet og m\o te regulatoriske krav om \aa penhet.
+Caset viser hvordan en industriell aktør bruker digitale tvillinger til  å skape tillit i markedet og møte regulatoriske krav om  å penhet.
 
 \subsection{Case: Loopfront og Statsbyggs ombruksprosjekter}
-Loopfront leverer en plattform for ombruk av byggematerialer som brukes av Statsbygg og flere kommuner til \aa kartlegge materialbanker f\o r rehabilitering \citep{statsbygg2023loopfront}. Gjennom digitale tvillinger av bygningsmassen kombineres BIM-modeller, tilstandsanalyser og logistikkdata for \aa planlegge demontering og ny bruk. Systemet beregner potensielle CO$_2$-besparelser og \o konomiske gevinster per komponent, og gj\o r det mulig \aa reservere materialer direkte i prosjektportef\o ljen.
+Loopfront leverer en plattform for ombruk av byggematerialer som brukes av Statsbygg og flere kommuner til  å kartlegge materialbanker før rehabilitering \citep{statsbygg2023loopfront}. Gjennom digitale tvillinger av bygningsmassen kombineres BIM-modeller, tilstandsanalyser og logistikkdata for  å planlegge demontering og ny bruk. Systemet beregner potensielle CO$_2$-besparelser og økonomiske gevinster per komponent, og gjør det mulig  å reservere materialer direkte i prosjektporteføljen.
 
 \begin{table}[ht]
     \centering
-    \caption{N\o kkelindikatorer i Statsbyggs ombruksportef\o lje.}
+    \caption{Nøkkelindikatorer i Statsbyggs ombruksportefølje.}
     \label{tab:kap03-loopfront}
     \begin{tabular}{p{0.36\textwidth}p{0.54\textwidth}}
         \toprule
         \textbf{Indikator} & \textbf{Resultater fra pilotprosjekter} \\
         \midrule
         Kartlagt volum & 28\,000 m$^2$ bygningsmasse med digitalt materialkart i 2024. \\
-        Datakilder & BIM-modeller, laserskanning, materialpass og logistikkdata fra entrepren\o r. \\
-        Beslutningsst\o tte & Dashboard som viser CO$_2$-besparelser, kostnader og tilgjengelighet per komponent. \\
-        Effekt & 1\,200 tonn materialer ombrukt med estimert 1,9 kilotonn CO$_2$ spart i f\o rste fase. \\
-        Samhandling & Deling av datagrunnlag med kommuner og private eiendomsforvaltere for \aa koordinere ettersp\o rsel. \\
+        Datakilder & BIM-modeller, laserskanning, materialpass og logistikkdata fra entreprenør. \\
+        Beslutningsstøtte & Dashboard som viser CO$_2$-besparelser, kostnader og tilgjengelighet per komponent. \\
+        Effekt & 1\,200 tonn materialer ombrukt med estimert 1,9 kilotonn CO$_2$ spart i første fase. \\
+        Samhandling & Deling av datagrunnlag med kommuner og private eiendomsforvaltere for  å koordinere etterspørsel. \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-Eksemplet illustrerer hvordan kombinasjonen av digitale tvillinger og sirkul\ae r\o konomi gir nye arbeidsprosesser for offentlige byggherrer og leverand\o rer.
+Eksemplet illustrerer hvordan kombinasjonen av digitale tvillinger og sirkulåe røkonomi gir nye arbeidsprosesser for offentlige byggherrer og leverandører.
 
-\section{Refleksjonssp\o rsm\aa l og \o vinger}
+\section{Refleksjonsspørsm å l og øvinger}
 \begin{enumerate}
     \item Tegn et dataflytdiagram for en digital tvilling i en norsk industribedrift.
-    \item Vurder n\aar det er hensiktsmessig \aa bruke sky kontra edge for sanntidsanalyse.
+    \item Vurder nåar det er hensiktsmessig  å bruke sky kontra edge for sanntidsanalyse.
     \item Beskriv hvordan du ville etablere en governance-modell for datatilgang.
-    \item Foresl\aa indikatorer for datakvalitet som b\o r overv\aa kes kontinuerlig i tvillingen.
+    \item Foresl å indikatorer for datakvalitet som bør overv å kes kontinuerlig i tvillingen.
 \end{enumerate}

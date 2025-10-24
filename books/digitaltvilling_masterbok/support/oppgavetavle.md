@@ -29,7 +29,6 @@ oppgaver opprettes i arbeidslisten, skal de også beskrives her med samme ID.
 | DT-18 | TODO | Middels | Kapittel 9 | Oppdatere trendanalysen med roadmap, finansieringskilder og forskningsdesign. | Kapittelredaktør Kapittel 9 + forskningskoordinator | `plan.md`, `support/illustrasjonsplan.md`, `support/referanser.bib` | Koordiner med fagfelle fra akademia og sørg for konsistens med kapittel 5. |
 | DT-APP-01 | TODO | Middels | Appendiks – Ressurser | Kategorisere ressursbank og beskrive bruks-case for ulike modenhetsnivå. | Ressursteam + programleder | `plan.md`, `support/appendiks-ressurser.tex` | Avklar med undervisningsteam hvilke lisensbegrensninger som må beskrives. |
 | DT-APP-02 | TODO | Lav | Appendiks – Begrepsliste | Berike ordlisten med definisjoner, forkortelser og referanser. | Redaksjonen + terminologiansvarlig | `plan.md`, `support/ordliste.tex` | Trenger koordinering mot nye begrep som innføres i kapittel 3, 5 og 7. |
-| DT-BUG-09 | FERDIG | Lav | Struktur | Rydde opp i `/n`-linjeskift i tabeller og figurer slik at LaTeX bruker `\\` og ikke feiltolker tekst. | Redaksjonen | `chapters/kapittel08-case.tex`, `support/figurer/kilder/kap03-sirkular-dataflyt-v1.tikz` | Verifiserte at tabell og figur gjenspeiler forventede linjeskift. |
 
 ## Vedlikeholdssyklus
 1. **Oppdater tavlen samtidig som `task_queue.md`.** Når status endres i arbeidslisten,
