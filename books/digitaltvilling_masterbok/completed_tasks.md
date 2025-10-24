@@ -160,6 +160,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 - `FERDIG` – Utvidet `support/appendiks-ressurser.tex` med maritime og offshore-ressurser, la til sektorhenvisning i Kapittel 8 og dokumenterte caseprioritering i nytt støtte-notat.
 - `FERDIG` – Leveranse for DI-03: Opprettet delingsnotat `support/notater/datastyringsforum-di03.md`, refererte det fra Kapittel 3 og oppdaterte fagfelleloggen med status.
 - `FERDIG` – Konverterte systemkart- og kausalsløyfeillustrasjonene i Kapittel 2 til TikZ, la til figurmetadata og oppdaterte kapittelteksten med nye beskrivelser.
+- `FERDIG` – Dokumenterte tverrsektoriell dataspace-samvirkeøvelse med faseplan, indikatorer og evalueringsrutine i Kapittel 6 og oppdaterte plan- og statusfiler for pilotering mot energi- og helsesektoren.
 - `FERDIG` – Utvidet `support/appendiks-ressurser.tex` med energi- og kraftressurser slik at Kapittel 8 får tydelige kilder for sektorcaser.
 - `FERDIG` – Utvidet `support/appendiks-ressurser.tex` med transport- og logistikkressurser og refererte dem fra Kapittel 8 for å støtte sektorarbeidet.
 - `FERDIG` – Harmoniserte datapipeline-illustrasjonen i Kapittel 3 med fargepalett, definerte farger i `main.tex` og registrerte alt-tekst i `support/figurer/metadata/kap03-datapipeline-v2.alt.md`.
