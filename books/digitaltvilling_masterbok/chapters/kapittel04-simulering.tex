@@ -448,6 +448,44 @@ Resultatene bør rapporteres i en månedlig vinterdriftsreview der baneforvalter
 \section{Praksiseksempel: Digital tvilling for fjernvarmenett}
 Et norsk energiselskap ønsker å styre et fjernvarmenett mer effektivt og redusere toppbelastninger vinterstid. Teamet utvikler først en kontinuerlig modell basert på rørnettets geometri, termiske egenskaper og pumpelogikk. Ved å kombinere deterministiske varmeoverføringsligninger med stokastiske profiler for kundeuttak fanges variasjonene i forbruksmønsteret.
 
+\subsection{Termisk energilager som fleksibilitetsmodul}
+For å øke fleksibiliteten bygger selskapet et termisk energilager som kan lades når strømprisen er lav eller avfallsvarmen er høy, og tappes i perioder med høyt effektbehov. Hafslund Oslo Celsio tester nå borehullsbaserte sesonglager og store akkumulatortanker i tilknytning til Klemetsrud-anlegget, og rapporterer at digitale tvillinger gjør det mulig å koordinere lade- og tappestrategier mot strømpriser, værprognoser og vedlikeholdsplaner \citep{hafslund2023sesonglager}. I fjernvarmetvillingen legges energilageret inn som en egen modellkomponent med både kontinuerlige energibalanser og diskrete styringspunkter for lading og tapping.
+
+Dataspace-tilnærmingen fra kapittel~3 brukes for å samle og distribuere relevante datakilder:
+\begin{itemize}
+    \item \textbf{Temperatur og massebalanse:} Sanntidsmålinger fra brønner, akkumulatortanker og frem/retur-ledninger gir grunnlag for å validere lagringsmodellen.
+    \item \textbf{Markedsdata:} Timespriser fra kraftbørs og CO$_2$-kompensasjon påvirker når energilageret bør brukes for å redusere kostnader.
+    \item \textbf{Tilgjengelig avfallsvarme:} Prognoser fra avfallsforbrenning, datasentre og industrielle overskuddsstrømmer avgjør hvor mye varme som kan lagres \citep{norskfjernvarme2024fleksibilitet}.
+    \item \textbf{Kapasitetsbegrensninger:} Driftstillatelser, pumpelogikk og vedlikeholdsplaner bestemmer hvor raskt energilageret kan lades eller tappes.
+\end{itemize}
+
+Resultatene brukes til å beregne fleksibilitetsbidrag i energimarkedene og til å dokumentere klimanytte. Tabell~\ref{tab:kap04-fjernvarme-lager} viser hvordan indikatorene fra termisk energilager kobles til modelljournalen, kvalitetsjournalen i kapittel~6 og tiltaksplanene i kapittel~7.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{0.23\textwidth}p{0.32\textwidth}p{0.32\textwidth}}
+        \toprule
+        \textbf{Indikator} & \textbf{Datagrunnlag og simulering} & \textbf{Oppfølging i andre kapitler}\\
+        \midrule
+        Effektkutt ved topplast & Kombinasjon av timesimuleringer og historisk forbruk viser hvor mye effekt som flyttes fra topplasttimer. & Dokumenteres i tiltaksloggen for energi- og beredskapsarbeidet i kapittel~7.\\
+        CO$_2$-reduksjon & Sammenlikning av driftsstrategier med og uten lager gir estimert utslippsreduksjon. & Rapporteringspanelet i kapittel~6 bruker tallene i kvartalsrapporten.\\
+        Markedsinntekt & Simulerte budstrategier mot regulerkraft- og fleksibilitetsmarkedet. & Gevinstplanen i kapittel~7 oppdateres med nye inntektsstrømmer.\\
+        Leveringspålitelighet & Scenarioanalyse av bortfall i varmekilde, der lageret fungerer som reserve. & Hendelsesjournalen i kapittel~6 beskriver hvordan lageret avlaster beredskapsteamet.\\
+        \bottomrule
+    \end{tabular}
+    \caption{Kobling mellom indikatorer for termisk energilager og oppfølging i styringskapitlene.}
+    \label{tab:kap04-fjernvarme-lager}
+\end{table}
+
+\subsection{Workshopopplegg for masterstudenter}
+Fjernvarmetvillingen egner seg for en todelt laboratorieøkt der studentene først kalibrerer termisk lager og deretter planlegger markedsstrategier. Opplegget kan gjennomføres i samme 90-minutters format som den immersive fjernvarmeøvelsen, men med tydelig kobling til dataspace- og valideringsarbeidet:
+\begin{enumerate}
+    \item \textbf{Kalibrering:} Studentene bruker modelljournalen til å registrere målepunkter og parameterverdier. De tester ulike varmeledningstall og diskuterer avvikene i kvalitetsjournalen fra kapittel~6.
+    \item \textbf{Scenarioverksted:} Gruppene analyserer pris- og værscenarioer, setter opp budstrategier og evaluerer effekten i indikatorbiblioteket. Resultatene deles i tiltaksloggen i kapittel~7 og brukes som grunnlag for gevinstplanlegging.
+\end{enumerate}
+
+Når økten avsluttes, skal hver gruppe levere en kort rapport med beregnet fleksibilitet, anbefalt driftsstrategi og forslag til videre modellutvikling. Forslagene tas inn i lærerveiledningen og i kapittel~5 sine beskrivelser av AI-støttede operatørassistenter slik at læringssløyfene blir helhetlige.
+
 Deretter bygges en diskret hendelsessimulering av driftsoperasjoner som vedlikeholdsavvik, nødstopper og lastskifte mellom kjeler. Agentbaserte komponenter modellerer kundesegmenter, slik at kampanjer for energisparing kan evalueres. Data fra IoT-målere strømmer kontinuerlig inn via en skyplattform, og parametre kalibreres hver time.
 
 Analysefasen kombinerer sensitivitet mot utetemperatur og energipriser med optimalisering av pumpesetpunkter. Resultatene visualiseres i et dashboard der driftsoperatører kan teste scenarioer før de aktiveres. Løsningen bygger videre på anbefalinger fra International Energy Agency om å bruke digitale tvillinger til å balansere last i fjernvarmenett \citep{iea2021district}. Etter ett års bruk dokumenterer selskapet 12\% reduksjon i energitopper og et bedre beslutningsgrunnlag for investeringer i nye varmesentraler.
