@@ -433,6 +433,48 @@ Klimarisiko bør testes parallelt med de tekniske valideringene, slik at modello
 
 Når klimarisikotesten inngår i valideringslaboratoriet gir det studentene innsikt i hvordan bærekraftsmål, regulatorisk etterlevelse og tekniske kvalitetskrav må balanseres. Erfaringene kan gjenbrukes i Kapittel~7 når gevinst- og styringsmodellene skal vise hvordan bærekraft og økonomi følges opp over tid.
 
+\section{Valideringspakke for grønne industriparker}
+Det grønne industriløftet krever at norske industriklynger dokumenterer hvordan nye produksjonsløp reduserer utslipp og energiintensitet før offentlig støtte og konsesjoner kan gis.\citep{regjeringen2023grontindustriloft} Digitale tvillinger brukes allerede i Mo Industripark og Herøya Industripark for å koble produksjonsdata, energisystemer og klimaregnskap i samme styringsplattform.\citep{moindustripark2024klimaplan,heroya2024hydrogenhub} For at resultatene skal være troverdige må valideringsløpet dekke både tekniske modeller, måledata og rapportering til investorer og myndigheter.
+
+\subsection{Trinnvis kvalitetssikring av energi- og klimadata}
+Et helhetlig V\&V-løp for grønne industriparker kan organiseres i fire gjentakende trinn:
+\begin{enumerate}
+    \item \textbf{Baselinemåling}: Kartlegg historiske energistrømmer, utslippskilder og produksjonsvolum før tiltak settes i verk, og etabler referansescenarier i tvillingen.\citep{moindustripark2024klimaplan}
+    \item \textbf{Energiledelse og målepunkt}: Implementer automatisert energiledelse med kalibrerte målepunkter for elektrisitet, damp og varme slik at modellene kan valideres mot kontinuerlige tidsserier.\citep{enova2024energiledelse}
+    \item \textbf{Integrasjon av nye prosesser}: Synkroniser hydrogen-, karbonfangst- og batteripiloter med eksisterende produksjonslinjer ved å bruke felles modelljournal og kvalitetsjournal.\citep{heroya2024hydrogenhub}
+    \item \textbf{Klimarapportering og læring}: Knytt leverandørkrav, bærekraftsindikatorer og læringspunkter til samme rapporteringspakke som brukes i Kapittel~7, slik at forbedringstiltak kan spores gjennom verdikjeden.\citep{eyde2023batteri}
+\end{enumerate}
+
+\subsection{Validerings- og rapporteringspakke}
+Tabell~\ref{tab:industripark-validering} viser en anbefalt struktur for test- og rapporteringspakken som binder tekniske tester til klimamål og myndighetskrav.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Valideringspakke for grønne industriparker}
+    \label{tab:industripark-validering}
+    \begin{tabular}{|p{3.2cm}|p{4.5cm}|p{4.8cm}|p{3.0cm}|}
+        \hline
+        \textbf{Fase} & \textbf{Formål} & \textbf{Tester og dokumentasjon} & \textbf{Ansvarlig} \\
+        \hline
+        Forstudie og referanse & Fastsette mål, tiltak og finansiering i tråd med grønt industriløft og lokale klimaplaner & Scenarioanalyse i tvilling, ROS for energi- og forsyningssikkerhet, baseline-rapport til investorer \citep{regjeringen2023grontindustriloft,moindustripark2024klimaplan} & Programleder industripark \\
+        \hline
+        Pilotering av energisystem & Validere energiledelse, fleksibilitet og sanntidsmålinger før oppskalering & Feltkalibrering av sensorer, sammenligning av modellprediksjoner mot produksjonsdata, revisjon av energiledelsesprosedyrer \citep{enova2024energiledelse,moindustripark2024klimaplan} & Energi- og bærekraftsteam \\
+        \hline
+        Integrasjon av nye prosesser & Sikre at hydrogen, karbonfangst og batterilinjer leverer forventet effekt uten å skape sikkerhetsavvik & HAZOP-/LOPA-gjennomgang i tvilling, test av dataspace-kontrakter for delte prosessdata, oppdatering av kvalitetsjournal \citep{heroya2024hydrogenhub} & Teknologiansvarlig prosess \\
+        \hline
+        Løpende rapportering og revisjon & Kombinere klimaregnskap, leverandørkrav og læringspunkter i én rapporteringspakke & ESRS- og taksonomirapport, leverandørevaluering, tiltakslogg for forbedringer og revisjonsnotat \citep{enova2024energiledelse,eyde2023batteri} & Styresekretariat og compliance \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Læringsopplegg for masterstudenter}
+Caseopplegget i laboratoriet kan bygge på samme struktur ved å la studentgrupper arbeide med industridata:
+\begin{itemize}
+    \item \textbf{Data- og modellverksted}: Studentene setter opp en energi- og utslippsmodell med referansescenario fra Mo Industripark og tester hvordan tiltak påvirker indikatorene i Tabell~\ref{tab:industripark-validering}.\citep{moindustripark2024klimaplan}
+    \item \textbf{Rapportering i praksis}: Gruppene leverer en integrert rapport som kombinerer energiledelse, klimaregnskap og leverandørkrav etter malene i Kapittel~7.\citep{enova2024energiledelse,eyde2023batteri}
+    \item \textbf{Tverrsektorielt seminar}: Resultatene diskuteres sammen med mobilitets- og helsecasene for å vise hvordan samme rapporteringspakke kan brukes i ulike sektorer og kobles til dataspace-kravene i Kapittel~3.\citep{heroya2024hydrogenhub,regjeringen2023grontindustriloft}
+\end{itemize}
+
 \section{Usikkerhetsanalyse og robusthet}
 Usikkerhetsanalyse gjør det mulig å forstå hvor pålitelig tvillingens prediksjoner er. En viktig første aktivitet er å klassifisere usikkerhet som \textit{aleatorisk} (tilfeldige variasjoner i prosessen) eller \textit{epistemisk} (mangel på kunnskap). For eksempel vil en energitvilling for et fjernvarmenett ha aleatorisk usikkerhet knyttet til vær og forbruksmønstre, mens epistemisk usikkerhet kan skyldes ufullstendige rørdata eller sjeldne feilmodi. Klassifiseringen påvirker hvilke tiltak som settes inn: bedre sensorer og datakvalitetsrutiner for epistemisk usikkerhet, og probabilistiske metoder for aleatorisk variasjon. Risikostyringsprinsippene i \citet{iso31000-2018} kan brukes som ramme for å prioritere tiltak og utforme beslutningspunkter.
 
