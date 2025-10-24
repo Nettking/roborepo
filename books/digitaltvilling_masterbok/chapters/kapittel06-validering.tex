@@ -16,16 +16,53 @@ Flere etablerte standarder kan brukes som rammeverk. ISO~9001 gir føringer for 
 Validering er ikke en engangsaktivitet, men en kontinuerlig praksis gjennom tvillingens livsløp. Hver gang modellen får nye data, algoritmer eller styringsparametere må baseline-modeller, referansescenarier og feltmålinger brukes til å bekrefte at presisjonen er innenfor toleranse. Dette krever en styrt datastrøm inn i DevOps- og MLOps-prosessene, versjonskontroll av modellartefakter, og periodiske revisjoner der både tekniske og domeneeksperter signerer på at tvillingen fortsatt er egnet.
 
 \section{Sikkerhetsstandarder og regulatorisk etterlevelse}
-Digitale tvillinger som påvirker kritisk infrastruktur må etterleve etablerte sikkerhetsstandarder. \citet{iec62443-2-1} gir rammeverk for å dele systemet inn i soner og konduiter med definerte sikkerhetsnivåer, slik at både IT- og OT-komponenter får tilpasset beskyttelse. For organisatoriske prosesser supplerer \citet{iso27001-2022} med krav til risikostyring, dokumentasjon og kontinuerlig forbedring av informasjonssikkerhet. I tillegg stiller \citet{eu2022nis2} krav til hendelsesrapportering, styring og tilsyn, noe som innebærer tydelige roller og oppfølging i hele verdikjeden.
+Digitale tvillinger som påvirker kritisk infrastruktur må etterleve etablerte sikkerhetsstandarder. \citet{iec62443-2-1} gir rammeverk for å dele systemet inn i soner og konduiter med definerte sikkerhetsnivåer, slik at både IT- og OT-komponenter får tilpasset beskyttelse. For organisatoriske prosesser supplerer \citet{iso27001-2022} med krav til risikostyring, dokumentasjon og kontinuerlig forbedring av informasjonssikkerhet. I tillegg stiller \citet{eu2022nis2} krav til hendelsesrapportering, styring og tilsyn, noe som innebærer tydelige roller og oppfølging i hele verdikjeden. Prosjekter i energisektoren må samtidig dokumentere samsvar med nasjonale beredskapsforskrifter og kontrollprogram, slik Energi Norge beskriver for nettselskapers operative kontrolltårn.\citep{energinorge2023beredskap}
 
-Et praktisk grep er å knytte hvert modell- og datagrensesnitt til en kontroll i standardene. Tiltak som tofaktor-autentisering, segmentering og revisjonslogger må beskrives både teknisk og organisatorisk. Når nye funksjoner lanseres, bør et standardkart vise hvilke krav som berøres og hvem som eier tiltakene. Støttenotatet \textit{kap06-sikkerhetscase.md} gir en caseoppgave der studentene kartlegger tiltak for et regionalt kraftselskap.
+Et praktisk grep er å knytte hvert modell- og datagrensesnitt til en kontroll i standardene. Tiltak som tofaktor-autentisering, segmentering og revisjonslogger må beskrives både teknisk og organisatorisk. Når nye funksjoner lanseres, bør et standardkart vise hvilke krav som berøres og hvem som eier tiltakene. Tabell~\ref{tab:standardkart} viser et utdrag av en slik oversikt for energibransjen. Støttenotatet \textit{kap06-sikkerhetscase.md} gir en caseoppgave der studentene kartlegger tiltak for et regionalt kraftselskap.
+
+\begin{table}[ht]
+    \centering
+    \caption{Eksempel på standardkart for kontrolltårn i energisektoren}
+    \label{tab:standardkart}
+    \begin{tabular}{|p{3.2cm}|p{4.6cm}|p{4.6cm}|p{3.2cm}|}
+        \hline
+        \textbf{Funksjon} & \textbf{Kjernekrav} & \textbf{Tiltak og dokumentasjon} & \textbf{Ansvarlig rolle} \\
+        \hline
+        Dataoppsamling fra SCADA & IEC~62443-3-3 SR 3, NIS2 art. 21 & Segmenterte konduiter, logging av tjenestekontoer, endringsjournal & OT-sikkerhetsarkitekt \\
+        \hline
+        Modelloppdatering i tvillingplattform & ISO~27001 A.12, DNV-RP-A204 steg 3 & Godkjenningsprotokoll, versjonskontroll, testlogg for modellendringer & Produktleder digital tvilling \\
+        \hline
+        Hendelsesrespons & NIS2 art. 23, IEC~62443-2-1 kap. 5 & Alarmgrenser, responsskript, rapport til myndigheter innen 24 timer & Beredskapsleder \\
+        \hline
+        Visualisering i kontrolltårn & Energi Norge veileder kap. 4, ISO~27001 A.13 & Rollebasert tilgang, sanntidsdashboard med audit trail, sporbarhet til datakilder & Kontrolltårnleder \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Kontrolltårn-case for regionalt kraftsystem}
+Flere norske nettselskaper etablerer kontrolltårn for å kombinere feltdata, tvillingmodeller og beslutningsstøtte i én operativ arena. \citet{statnett2024kontrolltarn} beskriver hvordan overvåkingssenteret koordinerer sanntidssignaler fra produksjon, nett og værdata for å planlegge vedlikehold og håndtere avvik. For å overføre praksisen til undervisningen anbefales følgende struktur:
+\begin{enumerate}
+    \item \textbf{Kartlegg datastrømmer:} Studentene tegner et dataflytsdiagram fra sensorer via SCADA og datasjø til tvillingplattformen, og identifiserer hvor tilgangskontroll og logging må styrkes.
+    \item \textbf{Definer kontrollpaneler:} Gruppen designer KPI-er for forsyningssikkerhet, tap, beredskap og bærekraft. Hvert panel må kobles til en standardreferanse i tabellen over.
+    \item \textbf{Planlegg koordinering:} Scenarioverksteder kjøres med operatører, fagansvarlige og leverandører for å teste hendelseshåndtering, samtidig som roller og varslingsrutiner dokumenteres etter NIS2.
+\end{enumerate}
+Kontrolltårn-caset forsterker koplingen mellom modellvalidering, cybersikkerhet og organisasjonsdesign. Studentene skal levere både teknisk dokumentasjon og en kort tiltakslogg for oppfølging i styringssystemet.
 
 \section{Usikkerhetsanalyse og robusthet}
-Usikkerhetsanalyse gjør det mulig å forstå hvor pålitelig tvillingens prediksjoner er. En viktig første aktivitet er å klassifisere usikkerhet som \textit{aleatorisk} (tilfeldige variasjoner i prosessen) eller \textit{epistemisk} (mangel på kunnskap). For eksempel vil en energitvilling for et fjernvarmenett ha aleatorisk usikkerhet knyttet til vær og forbruksmønstre, mens epistemisk usikkerhet kan skyldes ufullstendige rørdata eller sjeldne feilmodi. Klassifiseringen påvirker hvilke tiltak som settes inn: bedre sensorer og datakvalitetsrutiner for epistemisk usikkerhet, og probabilistiske metoder for aleatorisk variasjon.
+Usikkerhetsanalyse gjør det mulig å forstå hvor pålitelig tvillingens prediksjoner er. En viktig første aktivitet er å klassifisere usikkerhet som \textit{aleatorisk} (tilfeldige variasjoner i prosessen) eller \textit{epistemisk} (mangel på kunnskap). For eksempel vil en energitvilling for et fjernvarmenett ha aleatorisk usikkerhet knyttet til vær og forbruksmønstre, mens epistemisk usikkerhet kan skyldes ufullstendige rørdata eller sjeldne feilmodi. Klassifiseringen påvirker hvilke tiltak som settes inn: bedre sensorer og datakvalitetsrutiner for epistemisk usikkerhet, og probabilistiske metoder for aleatorisk variasjon. Risikostyringsprinsippene i \citet{iso31000-2018} kan brukes som ramme for å prioritere tiltak og utforme beslutningspunkter.
 
-Konkrete metoder for kvantifisering inkluderer sensitivitetsanalyse for å identifisere hvilke inputvariabler som styrer resultatene, Monte Carlo-simuleringer for å beregne sannsynlighetsfordelinger, og Bayesiansk oppdatering når feltmålinger gradvis forbedrer modellparametrene. Scenario-testing mot historiske driftsforstyrrelser, som produksjonsavvik i prosessindustrien eller værrelaterte avbrudd i kraftnettet, bidrar til å teste modellens robusthet. Resultatene bør uttrykkes gjennom konfidensintervaller, prediksjonsbånd og risikoindikatorer som kan deles med beslutningstakere.
+Konkrete metoder for kvantifisering inkluderer sensitivitetsanalyse for å identifisere hvilke inputvariabler som styrer resultatene, Monte Carlo-simuleringer for å beregne sannsynlighetsfordelinger, og Bayesiansk oppdatering når feltmålinger gradvis forbedrer modellparametrene. Scenario-testing mot historiske driftsforstyrrelser, som produksjonsavvik i prosessindustrien eller værrelaterte avbrudd i kraftnettet, bidrar til å teste modellens robusthet. Resultatene bør uttrykkes gjennom konfidensintervaller, prediksjonsbånd og risikoindikatorer som kan deles med beslutningstakere. For kontrolltårn-caset bør indikatorer mates direkte inn i driftens dashboards, med terskelverdier som trigges av avvik i modellprediksjon versus faktisk måling.
 
-Robust design handler også om å gjøre tvillingen og den fysiske prosessen motstandsdyktig mot feil. Dette omfatter redundante sensorer, feiltolerante algoritmer og beredskapsprosedyrer når modellen oppdager avvik. I industrielle DevOps-team betyr det at valideringsresultater må integreres i sprint- og releaseritualer, slik at usikkerhet blir aktivt styrt og ikke bare rapportert.
+\subsection{Arbeidsflyt for usikkerhetsstyring}
+En helhetlig arbeidsflyt sikrer at usikkerhet håndteres systematisk i DevOps-prosessene:
+\begin{enumerate}
+    \item \textbf{Hypotese og antakelser:} Definer modellens formål, antakelser og datakilder i en risikologg som kobles til standardkartet. Antakelsene bør vurderes mot DNV-RP-A204 sine modenhetstrinn.
+    \item \textbf{Kvantitative analyser:} Utfør sensitivitet og Monte Carlo-simuleringer i hver sprint. Resultatene dokumenteres i en modelljournal som inngår i kvalitetssystemet.
+    \item \textbf{Overvåkning og alarmgrenser:} Implementer automatiske avvikstester i produksjon slik at driftsorganisasjonen varsles når prediksjonsfeil overskrider definerte grenser. Kontrolltårn-teamet bruker KPI-ene til å eskalere hendelser via beredskapsplanene.
+    \item \textbf{Læring og forbedring:} Evaluér avvik i retrospektivene, oppdater datakilder eller algoritmer, og legg forbedringstiltak inn i styringssystemet for informasjonssikkerhet.
+\end{enumerate}
+
+Robust design handler også om å gjøre tvillingen og den fysiske prosessen motstandsdyktig mot feil. Dette omfatter redundante sensorer, feiltolerante algoritmer og beredskapsprosedyrer når modellen oppdager avvik. I industrielle DevOps-team betyr det at valideringsresultater må integreres i sprint- og releaseritualer, slik at usikkerhet blir aktivt styrt og ikke bare rapportert. Til slutt bør innsikt fra kontrolltårn-caset brukes som treningsgrunnlag for både operatører og ledelse.
 
 \section{Etikk, transparens og forklarbarhet}
 Tillit til den digitale tvillingen forutsetter at både data og beslutninger er sporbare. Prosjektet bør etablere en styringsmodell for datasett, med kildebeskrivelser, behandlingsgrunnlag og kontroll av personvern i tråd med GDPR og den kommende EUs AI-forordning. Revisjonsspor i form av dataversjoner, modellkonfigurasjoner og brukerhandlinger gjør det mulig å rekonstruere hvorfor en anbefaling ble gitt og hvem som godkjente den.
