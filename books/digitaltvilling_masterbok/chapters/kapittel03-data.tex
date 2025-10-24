@@ -202,6 +202,66 @@ forskningsinstitutt), mens domeneeier ofte er et konsortium av virksomheter som 
 simuleringsresultater kan skje via tjenestelag i dataspace-arkitekturen slik at partnerne får innsikt uten å kopiere hele
 datasett.
 
+\subsection{Tilgangsstyring og dataminimering i kommunale dataspace}
+Kommunal- og distriktsdepartementet anbefaler at kommunesektoren etablerer felles prinsipper for tilgangsstyring, logging og
+dataminimering før dataspace deles med eksterne aktører.\citep{kdd2023datadeling} KS har fulgt opp med veiledning for hvordan
+eiendomsdata og driftstjenester bør klassifiseres slik at skolene, helseetaten og teknisk sektor får innsikt uten å miste
+kontrollen over personsensitive eller sikkerhetskritiske opplysninger.\citep{ks2024eiendomsdrift} For masterstudentene betyr
+det at tilgangsavtaler må speile både dataeiers forventninger, personvernforordningen og beredskapskravene fra helse- og
+teknisk sektor.
+
+Tre styringsprinsipper går igjen i norske kommuner:
+\begin{itemize}
+    \item \textbf{Minimer delte attributter.} Datasett skal deles på lavest mulige granularitet og med aggregerte nøkler når
+    individnivå ikke er nødvendig. Norm for informasjonssikkerhet i helsesektoren brukes som referanse for å sikre at
+    pseudonymisering og loggkrav håndheves også når data flyttes mellom sektorer.\citep{norm2023}
+    \item \textbf{Skarp rollefordeling.} Tjenesteprodusenter (for eksempel energientreprenører) får lese- og skriveadgang kun til
+    de hendelsene de er kontraktsfestet til å håndtere, mens etaten som eier bygget beholder eierskap til konfigurasjon og
+    modelljournal.
+    \item \textbf{Sporbar beslutning.} Alle tilgangsendringer skal logges sammen med begrunnelse, kobling til risikoanalyse og
+    hvem som godkjente unntak. Loggen synkroniseres med tiltaksplanene i kapittel~6 og gevinstoppfølgingen i kapittel~7 slik at
+    avvik behandles i samme møtestruktur.
+\end{itemize}
+
+Tabell~\ref{tab:kap03-tilgangsstyring} viser hvordan tilgangsstyring og dataminimering dokumenteres gjennom hele livssyklusen til
+et kommunalt dataspace. Kolonnene kobler tiltakene til kravene i andre kapitler slik at studentgrupper kan lage en helhetlig
+leveranse uten å miste sporbarheten på tvers av kursmateriellet.
+
+\begin{table}[ht]
+    \centering
+    \caption{Tilgangsstyring og dataminimering i kommunale dataspace-prosjekter.}
+    \label{tab:kap03-tilgangsstyring}
+    \begin{tabular}{p{0.26\textwidth}p{0.38\textwidth}p{0.20\textwidth}p{0.16\textwidth}}
+        \toprule
+        \textbf{Fase} & \textbf{Tiltak} & \textbf{Dokumentasjon} & \textbf{Kobling til kapitler} \\
+        \midrule
+        Behovsavklaring & Kartlegg hvilke datapunkter som må deles mellom etater og hvilke som kan aggregeres eller pseudonymiseres.
+        & Delingsprotokoll, dataflytkart og risikovurdering. & Kapittel~4 (sandkasse-scenarioer) og Kapittel~8 (kommunale case) \\
+        \addlinespace
+        Tilgangsetablering & Implementer rollebasert tilgang, tidsbegrensede nøkler og policy for nødtilgang. & Autorisasjonsmatrise,
+        endringslogg og hendelsesjournal. & Kapittel~6 (tilsyn og kontrolltårn) og Kapittel~7 (porteføljestyring) \\
+        \addlinespace
+        Løpende bruk & Overvåk bruksstatistikk, avvik og delingsforespørsler. Eskaler brudd via tiltaksloggen. & Månedlig
+        rapportpakke, gevinstrapport og DPIA-oppdatering. & Kapittel~5 (modelltilpasning) og Kapittel~9 (innovasjon og regelverk) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Case: Felles tilgangsstyring for byggdrift og helsetjenester}
+Oslo kommune tester et felles dataspace der eiendomsetaten og helseetaten deler sensordata for innemiljø, smittevern og
+kapasitetsplanlegging.\citep{osloeiendom2023strategi,helsedir2023beredskap} I pilotfasen opplevde teamene at helsedata måtte
+behandles annerledes enn energidata, samtidig som byggdriftsloggene var nødvendige for å forstå avvik i pasientflyten. Løsningen
+ble å etablere en tilgangsstyringsgruppe som gjennomgår hver delingsforespørsel og sikrer at dataminimering og logging følger
+kravene fra Normen og kommunens sikkerhetshåndbok. Gruppens beslutninger registreres i dataspace-katalogen og publiseres sammen
+med indikatorene for kvalitetsjournal og gevinststyring.
+
+Studentgrupper som jobber med caset skal:
+\begin{itemize}
+    \item dokumentere hvilke datasett som krever ekstra skjerming og hvordan de kan anonymiseres eller aggregeres før deling,
+    \item beskrive beslutningsprosessen når helsesektoren trenger høyoppløselige driftsdata for smittevern,
+    \item vise hvordan logging og månedlige revisjoner speiles i tiltaksloggen fra kapittel~6 og gevinstrapportene i kapittel~7.
+\end{itemize}
+
 \subsection{Implementeringssteg for norske virksomheter}
 For å komme raskt i gang med dataspace-initiativ anbefales en trinnvis tilnærming:
 \begin{enumerate}

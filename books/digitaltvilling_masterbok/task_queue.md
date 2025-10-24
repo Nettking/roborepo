@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-89 | Kapittel 3 | FERDIG – Beskrev tilgangsstyring og dataminimering for kommunale dataspace med tabell, case og oppdaterte plan- og referansefiler. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-88 | Kapittel 4 | FERDIG – Etablerte presisjonslandbruk-case med modellstruktur, indikatorpakke og dataspace-koblinger, og oppdaterte plan- og tavlefiler for koordinering. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md` |
 | DT-87 | Kapittel 8 | FERDIG – Utvidet helseseksjonen med pasientflyt-tabell, dataspace- og tilsynssjekkliste og synkroniserte plan- og tavlefiler for pilotundervisning. | `chapters/kapittel08-case.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-86 | Kapittel 4 | FERDIG – La til co-designseksjon for menneske--maskin-samhandling med sprintopplegg, leveransetabell og indikatorpakke som kobler simuleringene til læring og styring. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
