@@ -132,6 +132,50 @@ I støttefilen \textit{kap04-immersiv-case.md} er det lagt inn sjekklister for h
     \label{fig:kap04-beredskap-case}
 \end{figure}
 
+\section{Kvantitativ kalibrering og effektmåling}
+For å vise læringsutbytte og gevinster må simuleringsresultater oversettes til tall som kan sammenlignes mot målsetninger i styringsmodellen. Norske energiselskaper og offentlige etater krever at kontrolltårn, dataspace og tiltakslogger viser sammenheng mellom modellforutsetninger, indikatorer og faktisk effekt \citep{energinorge2023beredskap,statnett2024kontrolltarn}. I masterkurset betyr det at hver case skal ha en tydelig baseline, et sett prioriterte indikatorer og en rapporteringssløyfe som kan speiles mot kapittel~6 og kapittel~7.
+
+\subsection{Baseliner og datagrunnlag}
+Før simuleringene kjøres må teamet etablere en referanse som viser dagens ytelse. Den brukes som sammenligningsgrunnlag for scenarier, og bør beskrive både tekniske forhold og tilhørende kostnader. Følgende fremgangsmåte anbefales for kurslaboratoriet:
+\begin{enumerate}
+    \item \textbf{Definer operativ baseline:} Dokumenter nøkkelverdier for kapasitet, energibruk og hendelsesfrekvens fra eksisterende drift. Kontroller at datakildene er de samme som benyttes av kontrolltårn og hendelseshåndtering i kapittel~6 \citep{statnett2024kontrolltarn}.
+    \item \textbf{Sikre datakvalitet:} Valider sensorer, tidsstempler og datakontrakter mot rammeverket fra kapittel~3. Bruk sjekklistene for datakvalitet slik at simuleringen ikke forsterker avvik \citep{energinorge2023beredskap}.
+    \item \textbf{Etabler kost- og klimaparamer:} Trekk ut relevante kostnadstall, CO$_2$-faktorer og ressursbruk fra planleggingsgrunnlaget slik at tiltak kan vurderes helhetlig i tiltaksloggen i kapittel~7.
+\end{enumerate}
+Baselinen bør lagres som et eget scenario i modellforvaltningsverktøyet. Når studentene dokumenterer endringer, skal de eksplisitt referere til hvilke parametre som ble endret og hvilke datauttrekk som ligger til grunn. Dette gir etterprøvbarhet når caset evalueres i fagfelleløpet.
+
+\subsection{Indikatorbibliotek for simuleringer}
+Tabell~\ref{tab:kap04-evaluering-indikatorer} foreslår et indikatorbibliotek som dekker teknisk ytelse, ressursbruk og samfunnseffekt. Indikatorene er valgt for å kunne kobles direkte til kontrollrammene for dataspace og gevinstoppfølging i resten av boken \citep{digdir2022gevinst,nve2023nettplan}. Tabellen kan utvides med sektorspesifikke varianter etter behov.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{0.18\textwidth}p{0.28\textwidth}p{0.24\textwidth}p{0.22\textwidth}}
+        \toprule
+        \textbf{Perspektiv} & \textbf{Indikator} & \textbf{Datakilder} & \textbf{Kobling i boka}\\
+        \midrule
+        Teknisk ytelse & Gjennomløpstid per scenario og 95\%-kvartil for ventetid & Hendelseslogger, produksjonsplaner, simulerte tidsstempler & Kapittel~6 sitt kvalitetspanel for stresstester.\\
+        Robusthet & Antall hendelser som bryter definerte terskler i risikomatrise & Hendelseslogg, alarmgrenser, beredskapsplan & Kapittel~6 sin hendelseshåndtering og triage.\\
+        Ressurs- og kosteffekt & Netto energibruk, driftskostnad og OPEX pr. tiltak & Energidata, ERP-rapporter, vedlikeholdslogger & Kapittel~7 sin gevinst- og tiltakslogg.\\
+        Klima og bærekraft & CO$_2$-ekv./år og materialgjenvinningsgrad & Livssyklusdata, materialregistre, simulerte utslippsfaktorer & Kapittel~4 sin sirkulære tavle og bærekraftskapittelet.\\
+        Samfunnseffekt & Leveringspålitelighet og tjenestetilgjengelighet for brukere & Kundedata, beredskapsstatistikk, tjenestelogger & Kapittel~8 sine case og vurderinger av samfunnskritiske tjenester.\\
+        \bottomrule
+    \end{tabular}
+    \caption{Indikatorbibliotek som kan brukes til å måle effekt av simuleringsscenarier.}
+    \label{tab:kap04-evaluering-indikatorer}
+\end{table}
+
+For hver indikator skal studentene beskrive hvordan data aggregeres, hvilke forutsetninger som gjelder og hvordan resultatet visualiseres. Dette gjør det mulig å sammenligne grupper og identifisere hvor modellene trenger videre kalibrering.
+
+\subsection{Evalueringssløyfe for kurslaboratoriet}
+Etter at indikatorene er beregnet, må resultatene gjennom en styrt evalueringssløyfe. Prosessen speiler gevinstoppfølgingen fra kapittel~7 og skal sikre at forbedringer faktisk implementeres:
+\begin{enumerate}
+    \item \textbf{Analyser avvik:} Sammenlign scenariene mot baseline og marker avvik som krever tiltak i kvalitetsjournalen. Integrer funnene med hendelsesresponsen i kapittel~6 \citep{statnett2024kontrolltarn}.
+    \item \textbf{Prioriter tiltak:} Vurder kost/nytte ved å kombinere indikatorer for økonomi og klima. Bruk gevinstmetodikken fra kapittel~7 til å rangere forslagene \citep{digdir2022gevinst}.
+    \item \textbf{Planlegg implementering:} Oppdater prosjekt- og kapasitetsplaner med anbefalte endringer, og synkroniser beslutningene mot infrastrukturplanene for energisystemet \citep{nve2023nettplan}.
+    \item \textbf{Lukk sløyfen:} Dokumenter hvilke tiltak som ble valgt, mål faktisk effekt etter pilot og oppdater indikatorbiblioteket slik at læringene kommer med i neste simuleringsrunde.
+\end{enumerate}
+Sløyfen skal implementeres i laboratorieopplegget gjennom en felles mal for evalueringsnotat. Malen bør inneholde referanse til datagrunnlag, indikatorer, anbefalte tiltak og hvilken styringsarena som følger opp funnene.
+
 \section{Verktøy og arbeidsflyt}
 Et velfungerende verktøyslandskap består av modellering, simulering, datahåndtering og automasjon.
 

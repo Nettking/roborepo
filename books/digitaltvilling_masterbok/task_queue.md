@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-80 | Kapittel 4 | FERDIG – Utviklet kvantitativ evalueringspakke med baseline-prosess, indikatorbibliotek og evalueringssløyfe som binder simuleringene til validering og gevinststyring. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-79 | Kapittel 4 | FERDIG – Dokumenterte vinterdriftscase for fjellbaner med datasett, scenariostruktur og indikatorpakke som kobler energistyring til beredskap og governance. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md` |
 | DT-78 | Kapittel 5 | FERDIG – Beskrev multi-agent koordineringsramme for AI-tvillinger med norsk logistikk- og energitabell, og oppdaterte plan- og kildefiler for å koble til styrings- og valideringsarbeidet. | `chapters/kapittel05-ai.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-77 | Kapittel 7 | FERDIG – Etablerte tiltakslogg for gevinstoppfølging med tabell og rutiner, og synkroniserte plan-, tavle- og statusfiler for porteføljestyring. | `chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
