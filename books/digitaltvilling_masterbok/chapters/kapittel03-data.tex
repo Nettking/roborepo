@@ -134,6 +134,34 @@ Tabell~\ref{tab:kap03-observabilitet-kraft} viser et utdrag av indikatorene som 
 
 Indikatorene forvaltes gjennom en ukentlig tavle der driftssenteret, dataspace-operatøren og sikkerhetsfunksjonen koordinerer tiltak. Resultatet er at modelloppdateringer og nettoperasjon blir tett koblet til observabilitetsarbeidet, samtidig som partnere kan etterprøve datakvaliteten når de gjenbruker strømmer fra kontrolltårnet.
 
+\subsection{Case: Energideling i lokale energisamfunn}
+Kommuner og eiendomsselskap etablerer nå lokale energisamfunn der solcelleanlegg, varmepumper, batterier og ladeinfrastruktur deler energi gjennom felles kontrakter. For å lykkes trenger de en dataspace som binder sammen tekniske målepunkt, avtaleregulering og bærekraftsrapportering. Et digitalt tvillingoppsett kan kombinere AMS- og sensordata med simuleringer av energilast for å beregne fordelingsnøkler i sanntid, styre lagring og dokumentere klimanytte.
+
+En energidelingsdataspace må håndtere ulike roller: nettselskap leverer måleverdier og nettrelaterte begrensninger, bygningseier forvalter lokal produksjon og laster, og deltakerne trenger innsyn i fordelingsreglene. Kontraktene må derfor synkroniseres mot dataspace-policyene i \autoref{tab:dataspace-governance}, samtidig som tiltak og avvik følges opp i gevinstplanen i kapittel~7. Når tvillingen fordeler energi eller kostnader automatisk, skal beslutningene gå gjennom kontrollpunktene i kapittel~6 for å sikre etterlevelse av NVE-regler og støtteordninger.
+
+Tabell~\ref{tab:energideling-datakrav} viser et minimumssett av dataprodukter som bør inngå i energidelingsdataspace. Kolonnene gir studentgrupper en sjekkliste for å dokumentere både tekniske og organisatoriske krav før pilotering.
+
+\begin{table}[ht]
+    \centering
+    \caption{Dataprodukter og styringspunkter for energidelingsdataspace.}
+    \label{tab:energideling-datakrav}
+    \begin{tabular}{p{3.4cm}p{4.6cm}p{4.0cm}}
+        \toprule
+        \textbf{Dataprodukt} & \textbf{Formål og nøkkelinnhold} & \textbf{Styringskobling} \\
+        \midrule
+        Måleverdier fra AMS og underfordeling & Fem-minutters energiuttak og produksjon per leilighet, felleslast og felles solcellefelt med tidsstempel og kvalitetsflagg. & Kontrolltårnindikatorer i kapittel~6 og tiltakslogg ved avvik. \\
+        \addlinespace
+        Fleksibilitets- og lastprofiler & Simulerte scenarier for effekt-topper, lagring og styring av varmepumper/EV-lading. & Simulerings- og gevinstramme i kapittel~4 og kapittel~7. \\
+        \addlinespace
+        Avtale- og fordelingsregister & Kontraktsparametere, kostnadsnøkler og bærekraftsfordeling for deltakere og fellesanlegg. & Dataspace-governance i \autoref{tab:dataspace-governance} og læringsmål i kapittel~7. \\
+        \addlinespace
+        Klimaregnskap og indikatorpanel & CO$_2$-reduksjon, egenforbruk, grad av lokal energiforsyning og økonomiske gevinster per deltaker. & Rapportering til bærekraftstabellene i kapittel~7 og scenariopanelet i kapittel~8. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Før energisamfunnet settes i drift bør prosjektteamet teste dataspace-løsningen i en sandkasse sammen med nettselskap og leverandører av energistyringssystemer. Det innebærer å verifisere at måleverdiene kan aggregeres og anonymiseres før deling, at algoritmene for fordeling kan revideres gjennom modelljournalen i kapittel~2, og at gevinstmålingen harmoniseres med klimamålene som beskrives i kapittel~8. Når kontrollene er dokumentert, kan energisamfunnet bruke tvillingen til å planlegge investeringer, rapportere klimaeffekt og identifisere nye fleksibilitetstjenester.
+
 \section{Integrasjonsmønstre og standarder}
 Et integrasjonslandskap for digitale tvillinger spenner fra enkle API-kall til kompleks hendelsesdrevet samhandling. God praksis er  å kartlegge datastrømmer, volum og krav til robusthet før man velger teknologier.
 
