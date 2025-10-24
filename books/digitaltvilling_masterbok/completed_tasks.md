@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-52: Etablerte seksjon om sirkulær simulering i Kapittel 4 med ombruksscenarier, indikatorbibliotek og oppdatert planstatus for å støtte koordinering med kapittel 7. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-51: Beskrev avvikstriage og tverrsektoriell læringssløyfe i Kapittel 6, inkludert tabell og arbeidsrutine, og oppdaterte plan- og tavlefiler for å pilotere triagerutinen. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-50: Integrerte sirkulærøkonomisk gevinststyring og indikatorramme i Kapittel 7, oppdaterte plan- og tavlefiler og beskrev hvordan indikatorene koples til ressursbanken. (`chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-49: Dokumenterte dataspace-orientert valideringslaboratorium med designprinsipper, testpakker og undervisningsopplegg i Kapittel 6, og oppdaterte plan- og arbeidsfiler for å reflektere pilotbehovet. (`chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md`)

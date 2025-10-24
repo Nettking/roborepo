@@ -17,6 +17,7 @@ oppgaver opprettes i arbeidslisten, skal de også beskrives her med samme ID.
 
 | ID | Status | Prioritet | Tema | Beskrivelse | Ansvar | Avhengigheter | Notater |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| DT-52 | FERDIG | Middels | Kapittel 4 | Bygget seksjon om sirkulær simulering og bærekraftsindikatorer med nytt case og indikatorbibliotek. | Kapittelredaktør Kapittel 4 + bærekraftsteam | `chapters/kapittel04-simulering.tex`, `plan.md` | Klar for pilotering av sirkulær tavle sammen med kapittel 7-teamet. |
 | DT-51 | FERDIG | Middels | Kapittel 6 | Beskrev triage for avvik og læringssløyfer som binder dataspace-labben til kvalitetsjournalen og planfiler. | Kapittelredaktør Kapittel 6 + compliance-team | `chapters/kapittel06-validering.tex`, `plan.md` | Tabell og rutine publisert; neste steg er å pilotere triagerutinen i laboratoriet og oppdatere tiltakslogg. |
 | DT-50 | FERDIG | Middels | Kapittel 7 | Integrerte sirkulærøkonomisk gevinststyring og indikatorramme i livssykluskapittelet. | Kapittelredaktør Kapittel 7 + bærekraftsteam | `chapters/kapittel07-livssyklus.tex`, `plan.md` | Plan og task queue oppdatert; koordinerer KPI-biblioteket videre med kapittel 3 og appendiksressursene før fagfelleløpet. |
 | DT-48 | FERDIG | Høy | Kapittel 3 | Dokumenterte driftsmøtemodell som synkroniserer dataspace-hendelser med kontrolltårn-indikatorer og fagfellelogg. | Kapittelredaktør Kapittel 3 + dataspace-operasjonsteam | `chapters/kapittel03-data.tex`, `plan.md` | Møtesyklus og tabell publisert; plan og task queue oppdatert for pilotering. |

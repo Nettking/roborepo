@@ -152,6 +152,40 @@ Et velfungerende verktøyslandskap består av modellering, simulering, datahånd
 
 Arbeidsflyten starter med versjonskontrollert modellkode, etterfulgt av automatisert validering av parametrisering, simulering og analyse. Resultater pakkes i rapporter eller API-er og lagres i et beslutningsarkiv slik at tidligere scenarioer kan gjenbrukes ved nye vurderinger.
 
+\section{Sirkulær simulering og bærekraft}
+Simuleringsmodeller for digitale tvillinger brukes i økende grad til å støtte sirkulærøkonomiske beslutninger. Norske virksomheter som Statsbygg og industripartnere innen batteri- og prosessindustri kobler tvillingene til materialregistre for å dokumentere ombrukspotensial og klimafotavtrykk \citep{statsbygg2022ombruk,statsbygg2023loopfront}. I masterkurset bør studentene lære å modellere både tekniske strømmer og ressursgjenvinning slik at tiltak kan begrunnes med tallfestede effekter.
+
+\subsection{Materialstrømmer og ombruksscenarier}
+En sirkulær tvilling kombinerer produksjons- og driftssimuleringer med livssyklusdata for komponentene. I praksis etableres et bibliotek som angir vekt, karbonintensitet og forventet levetid for hvert objekt. Når komponentene demonteres eller oppgraderes, registreres de i et markedsgrensesnitt (for eksempel Loopfront) slik at nye prosjekter kan reservere dem \citep{statsbygg2023loopfront}. Simuleringsløpet består av tre steg:
+\begin{enumerate}
+    \item \textbf{Kartlegg materialstrømmer:} Bruk BIM-data og sensorer for å estimere volum, tilstand og demonteringskostnader for hver komponent.
+    \item \textbf{Kjør ombruksscenarier:} Simuler alternative planer for gjenbruk lokalt, regionalt eller hos partnere og vurder effekten på kost og CO$_2$-utslipp.
+    \item \textbf{Oppdater tiltakslogg:} Dokumenter hvilke deler som faktisk gjenbrukes og synkroniser med indikatorene i kapittel 7 slik at gevinstoppfølgingen blir konsistent.
+\end{enumerate}
+
+Simuleringsresultater deles med innkjøps- og prosjektledere gjennom dashboards som viser materialbalanser, utslippsbaner og økonomiske gevinster. Når studentene jobber med caser innen bygg og industri, bør de sammenligne ombruksscenarier mot referansebanen som beskriver lineær utskifting. Dette gjør det mulig å diskutere både tekniske avhengigheter og regulatoriske krav fra blant annet EU sitt sirkulærøkonomiprogram \citep{miljodir2022sirkular,regjeringen2021sirkulaer}.
+
+\subsection{Bærekraftsindikatorer for tvillinglaboratoriet}
+For å sikre at simuleringene faktisk leverer bærekraftige resultater, må laboratoriet definere indikatorer som er kompatible med styringsmodellen i kapittel 7. Tabell~\ref{tab:kap04-sirkular-indikatorer} foreslår et utvalg indikatorer som kan beregnes direkte fra simuleringsdata. Indikatorene kan knyttes til nasjonale veikart og bransjeforpliktelser, noe som gjør det enklere å benchmarke mot partnere i norsk industri \citep{norskindustri2023sirkular}.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{0.23\textwidth}p{0.34\textwidth}p{0.31\textwidth}}
+        \toprule
+        \textbf{Indikator} & \textbf{Simuleringsgrunnlag} & \textbf{Bruksområde i kurset}\\
+        \midrule
+        Andel ombrukte komponenter & Antall komponenter som går inn i nye scenarier vs. total avhendet mengde. & Planlegging av demonteringssekvenser og logistikk for bygg- og industriprosjekter.\\
+        CO$_2$-besparelse per tiltak & Livssyklusdata for materialer kombinert med transport- og energimodeller. & Prioritering av tiltak i tiltakslogg og rapportering til bærekraftspanel i kapittel 7.\\
+        Materialgjenvinningsgrad & Masse som forblir i lukket kretsløp dividert på total masse. & Evaluering av sirkulære mål for kommunale bygg og energisystemer.\\
+        Ressursintensitet per tjeneste & Simulerte timer drift eller levert energi satt opp mot ressursbruk per scenario. & Sammenligning av scenarier i fjernvarme- og industrilabben for å synliggjøre gevinst.\\
+        \bottomrule
+    \end{tabular}
+    \caption{Forslag til indikatorer for sirkulær simulering i digitale tvillinglaboratorier.}
+    \label{tab:kap04-sirkular-indikatorer}
+\end{table}
+
+Under laboratorieøkter bør studentgruppene bruke indikatorene til å evaluere egne modeller. Dette innebærer å dokumentere antakelser, datakilder og følsomhet overfor usikkerhet i materialdata. Resultatene kan presenteres i en felles «sirkulær tavle» hvor hvert team oppdaterer status mot målverdier, og kobler funnene til tiltakene fra kapittel 3 og styringsmodellen i kapittel 7.
+
 \section{Praksiseksempel: Digital tvilling for fjernvarmenett}
 Et norsk energiselskap ønsker å styre et fjernvarmenett mer effektivt og redusere toppbelastninger vinterstid. Teamet utvikler først en kontinuerlig modell basert på rørnettets geometri, termiske egenskaper og pumpelogikk. Ved å kombinere deterministiske varmeoverføringsligninger med stokastiske profiler for kundeuttak fanges variasjonene i forbruksmønsteret.
 
