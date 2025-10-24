@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-94 | Kapittel 3 | FERDIG – Beskrev energidelingsdataspace med case, tabell over dataprodukter og styringskoblinger, og oppdaterte plan- og tavlefiler for pilotering mot energisamfunn. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-93 | Kapittel 6 | FERDIG – Etablerte tverrsektorielt rapporteringspanel for energi- og helsecaser med tabell, arbeidsflyt og oppdatert planstatus. | `chapters/kapittel06-validering.tex`, `plan.md`, `completed_tasks.md`, `support/referanser.bib` |
 | DT-92 | Kapittel 6 | FERDIG – Etablerte avviksanalyse for dataspace-kvalitetsjournalen med arbeidsflyt, tallfestet avviksmatrise og oppdaterte plan- og statusfiler for tiltaksoppfølging. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-91 | Kapittel 6 | FERDIG – Etablerte auditplan for dataspace-valideringspanelet med faser, revisjonstabell og undervisningsopplegg, og synkroniserte plan- og tavlefiler for kvartalsvise revisjoner. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
