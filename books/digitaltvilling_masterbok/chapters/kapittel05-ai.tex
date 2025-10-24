@@ -123,6 +123,37 @@ For å realisere kontinuerlige forbedringer må læringssløyfen spesifisere hvo
 \end{enumerate}
 Denne arkitekturen gjør det mulig å holde læringen i gang selv om enkelte anlegg har begrenset nettverkstilgang eller strenge delingsregler. Caseerfaringer fra norsk prosessindustri viser at slike hybride sløyfer gir raskere oppdaterte modeller og bedre situasjonsforståelse for operatørene.\citep{kongsberg2023kognitwin}
 
+\subsection{Adaptiv AI-styring i havbruk}
+Havbruksnæringen etterspør digitale tvillinger som kan styre fôringsstrategi, miljøtiltak og biosikkerhet uten å miste kontroll over fiskevelferd og regulatoriske grenser.\citep{fore2018precision,nfd2023sjomatmelding} I lukkede og semilukkede merder kombineres høyfrekvente sensorer for oksygen, strøm og partikkelkonsentrasjon med videostrømmer og manuelle inspeksjoner. En adaptiv AI-sløyfe må derfor kunne tolke både tidsserier og visuelle signaler, samtidig som den synkroniserer beslutninger med kontrolltårnet som koordinerer flåten av servicefartøy og miljøtiltak.
+
+For å gi robuste anbefalinger bygges tvillingen som en serie edge- og skykomponenter i tråd med anbefalinger fra DNV om sikker modellforvaltning.\citep{dnv2020rpa204} Edge-noder i merdene kjører lette modeller for å oppdage hurtige endringer i fiskeadferd og vannkvalitet, mens skyplattformen evaluerer langtidsmønstre og foreslår tiltakspakker. Datastrømmer fra åpne kilder som BarentsWatch sitt lusedata-API brukes til å kalibrere risikonivå per lokalitet og planlegge koordinerte tiltak mellom oppdrettere i samme produksjonsområde.\citep{barentswatch2023lusedata} Studentgrupper bør kartlegge hvordan følgende komponenter virker sammen:
+\begin{itemize}
+    \item \textbf{Fiskevelferdsanalytikk}: Multimodale modeller vurderer appetitt, svømmemønster og pustefrekvens og kobler funnene til tiltak i beredskapsplanen fra Kapittel~6.
+    \item \textbf{Miljøprognoser}: Hydrodynamiske simuleringer og generative scenarioer fra Kapittel~4 mates inn i læringsløypen for å teste konsekvenser av endret salinitet eller algeoppblomstring.
+    \item \textbf{Kontrolltårn for operasjoner}: Et felles dashbord synkroniserer modelloppdateringer, manuelle observasjoner og etterlevelseslogger fra Kapittel~7 slik at beslutninger kan dokumenteres.
+\end{itemize}
+
+Tabell~\ref{tab:havbruk-ai-styring} viser hvordan tiltakene kan struktureres i prosjektlogg eller fagfellelogg. Kolonnene gjør det enkelt å koble AI-tiltak mot datakilder og ansvarsroller slik at teamet har en klar plan for både teknisk og operasjonell oppfølging.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Tiltak for adaptiv AI-styring i havbrukstvillinger}
+    \label{tab:havbruk-ai-styring}
+    \begin{tabular}{p{3.6cm}p{4.2cm}p{3.8cm}p{4.0cm}}
+        \toprule
+        \textbf{Operativ modul} & \textbf{AI-tiltak} & \textbf{Nøkkeldatakilder} & \textbf{Tverrfaglig oppfølging} \\
+        \midrule
+        Fiskevelferdsløype & Sekvensielle modeller som estimerer stressnivå og appetitt og foreslår fôringsjusteringer i sanntid. & Kamerafeeds, oksygen- og temperatursonder, manuell inspeksjonslogg. & Veterinær, produksjonsleder og dataspace-ansvarlig evaluerer tiltak mot beredskapsplanen i Kapittel~6. \\
+        \addlinespace
+        Miljøovervåkning & Bayesianske nettverk og scenario-generering for å forutsi algeoppblomstring og strømskifte. & Hydrodynamiske modeller, satellittdata, lusedata-API. & Driftssjef, myndighetskontakt og simuleringsansvarlig koordinerer tiltak og rapporterer i kontrolltårnet. \\
+        \addlinespace
+        Logistikk og service & Forsterkende læring for å prioritere servicefartøy, avlusing og vedlikehold av sensorpark. & Flåtelogg, arbeidsordre-system, vedlikeholdsdata for utstyr. & Operasjonsplanlegger, leverandør og MLOps-team bruker rubrikkene fra Kapittel~5 og styringsmodellen i Kapittel~7. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Når caseoppgaven gjennomføres i undervisning, bør teamene levere en kort «modelljournal» som viser hvordan data, modell og tiltak henger sammen. Journalen danner grunnlag for revisjon mot kravene i Kapittel~3 og hjelper studentene å diskutere etiske og juridiske konsekvenser av å automatisere tiltak i havbruk. Ved å koble tabellen til vurderingskriteriene i dette kapittelet får masterstudentene en konkret sjekkliste for å dokumentere at AI-forslagene er forsvarlige, etterprøvbare og i tråd med nasjonale mål for bærekraftig sjømatproduksjon.\citep{nfd2023sjomatmelding}
+
 \section{Utvidet analyseeksempel: Immersiv AI-coach}
 For å støtte operatører i komplekse situasjoner bygges en AI-coach som kombinerer simulering, maskinlæring og samarbeid i et immersivt miljø. Figur~\ref{fig:kap05-operator-coach} illustrerer hvordan sensorer, taleinstruksjoner og historiske hendelser kobles til anbefalinger som vises i AR/VR. Operatøren kan stille oppfølgingsspørsmål, trigge what-if-simuleringer og dele tiltakslister direkte i kontrolltårnet. Ved å bruke multimodale modeller kobles tekst, lyd og visuelle observasjoner, og anbefalingene dokumenteres automatisk i beslutningsloggen.
 
