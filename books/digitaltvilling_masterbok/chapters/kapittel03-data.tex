@@ -1,6 +1,6 @@
 \chapter{Data, integrasjon og infrastruktur}
 
-\section{Låe ringsm å l}
+\section{Læringsmål}
 \begin{itemize}
     \item Beskrive arkitekturen for datafangst, lagring og distribusjon i digitale tvillinger.
     \item Evaluere integrasjonsmønstre og standarder.
@@ -33,6 +33,46 @@ Batchbehandling er egnet nåar dataene hovedsakelig brukes til periodisk rapport
 
 \subsection{Metadata, semantikk og masterdata}
 Semantisk informasjon er nøkkelen til  å kunne dele data p å tvers av applikasjoner. Et felles begrepsapparat, for eksempel basert p å internasjonale referansemodeller eller bransjespesifikke ontologier, hjelper teamet med  å unng å tolkningstvister. Masterdata om utstyr, prosesser og lokasjoner m å holdes oppdatert, ellers mister tvillingen sin kobling til den fysiske virkeligheten. Ved  å etablere en dedikert katalog med API-tilgang kan andre prosjekter gjenbruke informasjonen og bidra til kvaliteten.
+
+\section{Datakvalitetsstyring og observabilitet}
+Digitale tvillinger leverer verdi først når beslutningstakere stoler på at dataene er presise, komplette og tidsriktige. ISO 25012 og ISO 8000 beskriver hvordan dataforvaltere kan kombinere kvalitetsdimensjoner og styringsprosesser for  å ivareta dette kontinuerlig \citep{iso25012-2014,iso8000-61-2016}. I en norsk kontekst må kravene forankres både teknisk og organisatorisk slik at industripartnere, myndigheter og leverandører kan verifisere at tvillingen er etterrettelig.
+
+\subsection{Kvalitetsdimensjoner for tvillingdata}
+Datastyringsforumet i DI-03 har brukt dimensjonene fra ISO-standardene som felles språk for å avklare ansvar på tvers av plattformteam, fagpersoner og sikkerhetsfunksjoner. I praksis prioriteres følgende områder:
+\begin{itemize}
+    \item \textbf{Nøyaktighet og gyldighet:} Sanntidsmålinger må sammenlignes mot kalibreringsjournaler og driftsgrenser før de brukes til modelloppdatering.
+    \item \textbf{Fullstendighet:} Hendelseslogger og kontekstdata må være komplette for at simuleringsresultater skal tolkes riktig, spesielt når partnere deler data via dataspace.
+    \item \textbf{Aktualitet:} Latens gjennom pipeline må dokumenteres slik at dashboards og automatiserte beslutninger viser situasjonen i riktig tidsvindu.
+    \item \textbf{Sporbarhet:} Hver datapost skal ha opprinnelse, prosesseringssteg og gjeldende kontrakt dokumentert slik at avvik kan reverseres uten å stoppe produksjonen.
+\end{itemize}
+
+Dimensjonene knyttes direkte til læringsmålene i dette kapittelet ved at studentene skal kunne kombinere tekniske kontroller med styringsprosesser. I undervisning brukes de som sjekkliste for casearbeid med energi- og mobilitetsdata.
+
+\subsection{Operasjonelle kontrollpunkter}
+Kontrollene implementeres som en serie kvalitetssjekker i pipeline. Flere av sjekkene er koordinert gjennom delingsnotatet \texttt{support/notater/datastyringsforum-di03.md} og testes i pilotmiljøet før produksjonssetting. Tabell~\ref{tab:kap03-datakvalitet} beskriver sentrale kontrollpunkter og hvem som eier dem.
+
+\begin{table}[ht]
+    \centering
+    \caption{Kontrollpunkter for datakvalitet i en digital tvilling-plattform.}
+    \label{tab:kap03-datakvalitet}
+    \begin{tabular}{p{0.28\textwidth}p{0.44\textwidth}p{0.20\textwidth}}
+        \toprule
+        \textbf{Kontrollpunkt} & \textbf{Formål} & \textbf{Ansvarlig funksjon} \\n        \midrule
+        Inntaksvalidering & Automatisk sjekk av format, gyldige verdier og sensorstatus før hendelser publiseres videre. & Dataingeniør/edge-ansvarlig \\n        Strømobservasjon & Kontinuerlig måling av latens, pakketap og verdidrift for sanntidsstrømmer. & Plattformteam \\n        Kontekstforankring & Krysskobling mellom masterdata, kontrakter og dataspace-policy før data deles eksternt. & Data steward \\n        Modellfeedback & Registrering av modellavvik og automatiske retreningskøer når kvalitetsgrenser overskrides. & Modellansvarlig \\n        Etterlevelseslogg & Dokumentasjon av avvik, tiltak og varsling i tråd med NIS2- og personvernkrav. & Sikkerhets- og compliance-team \\n        \bottomrule
+    \end{tabular}
+\end{table}
+
+Kontrollene må dokumenteres og testes jevnlig. For hver lansering av en ny datakilde legges det inn en endringsordre med forventede kvalitetsgrenser, testscenarioer og plan for revert dersom kravene ikke oppfylles. Resultatene rapporteres tilbake til datastyringsforumet og gjenspeiles i fagfelleloggen.
+
+\subsection{Observabilitet og læringssløyfer}
+Observabilitet sørger for at kvalitetsindikatorene faktisk overvåkes og at tvillingen tilpasser seg når noe går galt. En praktisk fremgangsmåte bygger på tre trinn:
+\begin{enumerate}
+    \item Definer tjenestenivåmål (SLO) for dataforsinkelse, kvalitetsscore og tilgjengelighet. KPI-ene publiseres i samme dashboard som bærekraftsindikatorene slik at ledelsen får helhetlig oversikt.
+    \item Automatiser alarmer, hendelsesregistrering og kommunikasjon til beredskapsplanen når SLO-ene brytes. Hendelser får tydelig ansvarlig og frist for korrigering.
+    \item Knytt læringssløyfer til modellene ved å bruke avvik som input til feilanalyse, nye sensorbehov eller oppdatering av dataspace-kontrakter.
+\end{enumerate}
+
+\paragraph{Praktisk sjekkliste.} Før en pilot settes i drift, bør teamet bekrefte at indikatorene over kan testes ende-til-ende i testmiljøet, at varslingsrutiner er synkronisert med beredskapsplanen i dette kapittelet, og at partnere i dataspace har signert på hvilke kvalitetsmålinger de forventer. Dette sikrer at datakvalitet ikke blir en engangsaktivitet, men en kontinuerlig del av plattformstyringen.
 
 \section{Integrasjonsmønstre og standarder}
 Et integrasjonslandskap for digitale tvillinger spenner fra enkle API-kall til kompleks hendelsesdrevet samhandling. God praksis er  å kartlegge datastrømmer, volum og krav til robusthet før man velger teknologier.
