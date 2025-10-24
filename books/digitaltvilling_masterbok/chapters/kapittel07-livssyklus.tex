@@ -237,6 +237,37 @@ For å knytte indikatorene til livssyklusen kan kapittelteamet bruke en trestegs
 \end{enumerate}
 Modellen brukes som sjekkliste når nye case legges til i kapittel~\ref{chap:case} og når støttefilene oppdateres med krav til dokumentasjon.
 
+\subsection*{Sirkulærøkonomisk gevinststyring}
+Norske virksomheter forventes å dokumentere hvordan digitale tvillinger støtter ombruk, materialeffektivitet og klimaambisjoner.\citep{norskindustri2023sirkular,regjeringen2021sirkulaer} For å gjøre dette operativt bør gevinstplanen kobles til et sett med sirkulærøkonomiske indikatorer som følger tvillingen gjennom livssyklusen. Indikatorene må forankres i de samme beslutningsforaene som håndterer investeringer og dataspace-governance, slik at tiltakene prioriteres sammen med øvrige endringer.
+
+Et praktisk oppsett for masterstudenter består av tre komponenter:
+\begin{enumerate}
+    \item \textbf{Material- og energiindikatorer:} Registrer gjenbrukbar andel, resirkuleringsgrad og energiforbruk per leveranse slik Statsbygg og Hydro gjør i sine tvillingprogram.\citep{statsbygg2022ombruk,hydro2023traceability}
+    \item \textbf{Prosessindikatorer:} Følg opp hvor raskt komponenter flyttes gjennom sirkulære sløyfer og hvor mange beslutninger som er dokumentert i kontrolltårn eller fagfellelogg.
+    \item \textbf{Resultatindikatorer:} Mål klimanytte, reduserte innkjøpskostnader og etterlevelse av offentlige krav, og del tallene i de samme gevinstmøtene som rapporterer økonomisk effekt.
+\end{enumerate}
+
+Tabell~\ref{tab:sirkular-livssyklus} viser hvordan indikatorene kan organiseres per fase og hvilke kilder som brukes. Strukturen speiler datastrømmene i kapittel~3 og gjør det tydelig hvem som eier målingene.
+
+\begin{table}[h]
+    \centering
+    \caption{Sirkulærøkonomiske indikatorer gjennom livssyklusen}
+    \label{tab:sirkular-livssyklus}
+    \begin{tabular}{p{2.7cm}p{3.7cm}p{3.5cm}p{3.0cm}}
+        \toprule
+        Fase & Fokusområde & KPI og terskel & Datakilde/ansvar \\
+        \midrule
+        Initiativ & Sirkulær forretningscase & Potensiell ombruksandel $>30\%$ og CO$_2$-besparelse per år & Forretningsanalyse, livsløpsberegning (Kapittel~3) ledet av bærekraftsansvarlig \\
+        Design & Material- og dataarkitektur & Fullstendig komponentregister og sporbarhetsplan & BIM/dataspace-kontrakter, modelljournal forvaltes av arkitekt \\
+        Implementering & Operative sløyfer & Tid fra demontering til gjenbruk $<6$ uker, kvalitetssjekk i sandkasse & IoT-logger, kontrolltårnrapport (Kapittel~6) eid av operasjonsteam \\
+        Drift & Kontinuerlig måling & Andel sirkulære leveranser per måned, energiforbruk per enhet & Observabilitetsdashbord og ERP-data, rapportert av produktteam \\
+        Forbedring/avvikling & Læring og dokumentasjon & Dokumenterte læringspunkter og oppdaterte policyer innen 4 uker & Fagfellelogg, gevinstmøte og arkivansvarlig \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Når tabellen brukes i casearbeid, bør studentene samtidig oppdatere ressursbanken i appendikset med datasett og verktøy som støtter indikatorene. Dette sikrer at sirkulærøkonomi blir en integrert del av gevinststyringen og ikke et separat sideprosjekt.
+
 \subsection*{Dataspace-arkitektur for styring og deling}
 Livssyklusforvaltning i større økosystem krever en dataspace-arkitektur som definerer ansvar for dataprodukter, identitet og policy. En anbefalt struktur følger fire lag:
 \begin{enumerate}
