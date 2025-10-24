@@ -252,6 +252,42 @@ For å bruke laboratoriet i undervisningen kan masterstudentene følge fire arbe
 
 Laboratoriet gjør det enklere å koble dataspace-styring og modellkvalitet til konkrete leveranser i DevOps-løpet. Når caseopplegget brukes i fagfelleplanen, kan industripartnerne bidra med realistiske scenarier samtidig som studentene får praktisk trening i dokumentert etterlevelse.
 
+\section{Avvikstriage og læringssløyfer}
+Selv med grundige testpakker vil dataspace-integrerte tvillinger møte hendelser som må håndteres i fellesskap. For å unngå at avvik blir isolerte support-saker, bør teamet etablere en triagerutine som binder sammen kontrolltårn, kvalitetsjournal og rapporteringspakke. \citet{helsetilsynet2024internkontroll} anbefaler at avvik vurderes på tvers av kliniske og tekniske funksjoner, mens \citet{energinorge2023beredskap} viser at energibransjen lykkes når overvåkingspanelene er koblet til klare eskaleringsveier. Når rutinen bygges inn i dataspace-laboratoriet kan den samme strukturen testes i undervisningscasene, og erfaringene føres direkte inn i tiltakslogg og styringsmodeller.
+
+\subsection{Triagerutine for dataspace-hendelser}
+En praktisk triagerutine kan beskrives i fire trinn som alle grupperer funn i kvalitetsjournalen og vurderer dem mot regulatoriske krav:
+\begin{enumerate}
+    \item \textbf{Fang hendelsen:} Overvåkingsvarsel eller kvalitetsavvik registreres automatisk i journalen med referanse til dataspace-kontrakten og den relevante testpakken fra laboratoriet.\citep{digdir2024sanntidsdata}
+    \item \textbf{Klassifiser alvorlighet:} Produktleder, sikkerhetsansvarlig og domeneekspert vurderer konsekvens og sannsynlighet. Resultatet kobles til indikatorpanelene for kontrolltårn og helsecase slik at påvirkede tjenester identifiseres.\citep{energinorge2023beredskap}
+    \item \textbf{Velg tiltak:} Teamet aktiverer forhåndsdefinerte tiltak i rapporteringspakken, for eksempel fallback-modeller eller manuell overstyring. Tiltakene loggføres med ansvarlig rolle og forventet effekt.
+    \item \textbf{Eskalér og lær:} Når hendelsen er lukket, gjennomføres mini-revisjon sammen med fagansvarlige. Læringspunkter mates inn i tiltakslogg, undervisningsopplegg og kommende sprintplan.
+\end{enumerate}
+
+\subsection{Læringssløyfe mellom sektorer}
+Tabell~\ref{tab:triage-laringssloyfe} viser hvordan triagefunnet kan følge en standardisert læringssløyfe som dekker både helsesektorens og energisektorens krav. Kolonnene speiler arbeidsflyten i rapporteringspakken, mens radene gjør det enkelt å koordinere tiltak når flere domener er involvert i samme dataspace.
+
+\begin{table}[ht]
+    \centering
+    \caption{Læringssløyfe for triagerte avvik i dataspace-integrerte tvillinger}
+    \label{tab:triage-laringssloyfe}
+    \begin{tabular}{|p{3.3cm}|p{4.8cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Fase} & \textbf{Aktivitet} & \textbf{Dokumentasjon og rapportering} & \textbf{Videre læring} \\
+        \hline
+        Umiddelbar respons & Aktivere beredskapsplan, sikre manuell kontroll og varsle berørte aktører i dataspace. & Hendelsesmelding med referanse til dataspace-kontrakt og påslåtte kontrolltiltak. & Oppdatere kontrolltårn-panelet og undervisningscaset med ny alarmgrense. \\
+        \hline
+        Felles analyse & Samle tekniske logger, modelljournal og brukerobservasjoner i et tverrfaglig møte. & Analyseoppsummering i kvalitetsjournalen med kobling til regulatoriske krav. & Synkronisere funn med indikatorbiblioteket i Kapittel~5 og governance-tabellene i Kapittel~7. \\
+        \hline
+        Beslutning og implementering & Prioritere forbedringstiltak og planlegge releaser på tvers av domener. & Tiltaksliste i rapporteringspakken med ansvar, tidsfrist og forventet effekt. & Utarbeide nye øvingsoppgaver i laboratoriet for å teste tiltaket før produksjon. \\
+        \hline
+        Tilbakemelding og deling & Dele læringspunkter med partnerne i dataspace og med neste studentkohort. & Oppdatert fagfellelogg og referanse til lærerveiledningens oppgavesett. & Justere planfilen og oppdatere oppgavetavlen med nye prioriteringer. \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Sløyfen gjør det enklere å vise hvordan én hendelse fører til konkrete forbedringer i både tekniske systemer og organisasjonens rutiner. Når triage-resultatene kobles til indikatorpanel og rapporteringspakke, får studentene et helhetlig bilde av hvordan dataspace-samarbeid kan drives trygt over tid.
+
 \section{Sertifiseringsløp og kvalitetsjournal}
 Et tydelig sertifiseringsløp gjør det mulig å dokumentere at tvillingen holder et konsekvent kvalitetsnivå gjennom hele livssyklusen. \citet{dnv2023digitalassurance} anbefaler at prosjekteier etablerer et rammeverk som kobler risikovurderinger, testregimer og ansvarslinjer. Dette kan struktureres som en trinnvis modenhetsstige der hvert steg utløser nye revisjoner og beslutninger før funksjoner settes i drift. I tillegg fremhever \citet{iso2020tr24028} at tillitskriterier må dekke både tekniske egenskaper (robusthet, sikkerhet, personvern) og organisatoriske forhold (kompetanse, ansvar, prosesskontroll).
 
