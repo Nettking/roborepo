@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-58: Utviklet hydrogenknutepunkt-simulering med indikatorpakke og undervisningsopplegg i Kapittel 4, oppdaterte planstatus og registrerte nye kilder for koordinering med Kapittel 6. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-57: Etablerte leverandørkvalifisering, datakontraktspakke og journaloppfølging for dataspace-validering i Kapittel 6, og oppdaterte plan-, tavle- og kildefiler for pilotering mot anskaffelsesteamet. (`chapters/kapittel06-validering.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-56: Dokumenterte tverrsektorielt dataspace-samvirke mellom energi- og helsetjenester med tabell, øvingsscenario og indikatorpakke, og oppdaterte plan- og tavlefiler for pilotering. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-55: Utarbeidet samvirkeøvelse for dataspace-baserte høyrisikotvillinger med scenario, tabell, evalueringskriterier og referanser, og synkroniserte plan-, tavle- og statusfiler for pilotering. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
