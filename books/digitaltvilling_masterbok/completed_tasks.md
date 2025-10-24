@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-36: Etablerte driftsrammeverk for dataspace-tvillinger med hendelseshåndteringstabell, koblet indikatorer til kontrolltårnkapitlene og oppdaterte plan-, tavle- og kildefiler. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-35: Dokumenterte mobilitetsdataspace for bylogistikk med tiltakstabell, indikatorliste og plan-/tavleoppdatering. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `support/referanser.bib`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-34: Opprettet sektorvis regelverksoversikt som arbeidsark i appendiks og oppdaterte plan- og statusfiler slik at krav kan spores i casearbeid. (`chapters/appendiks.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-33: Utarbeidet AI-forordningens styringspakke med tiltakstabell, høyrisiko-prosess og bibliografioppdatering for helsesektorens digitale tvillinger. (`chapters/kapittel06-validering.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
