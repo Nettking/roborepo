@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-22 | Kapittel 6 | FERDIG – La inn helsesektor-beredskapssimulering med øvingsfaser, indikator-tabell og undervisningsopplegg, og oppdaterte plan- og statusfiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `support/referanser.bib`, `task_queue.md` |
 | DT-21 | Kapittel 3 | FERDIG – Dokumenterte sanntidsobservabilitet i kraftnettet med Statnett-inspirert indikatorbibliotek og tiltakstabell. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md` |
 | DT-17 | Kapittel 8 | FERDIG – Etablerte felles leveranseplan for klimacaser og workshopopplegg som binder havvind-, landbruks- og battericase sammen. | `chapters/kapittel08-case.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-APP-02 | Appendiks – Begrepsliste | FERDIG – Oppdaterte ordlisten med dataspace-roller, modellverktøy, observabilitet og sikkerhetsbegrep samt ny beredskapsseksjon. | `support/ordliste.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
