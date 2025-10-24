@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-56: Dokumenterte tverrsektorielt dataspace-samvirke mellom energi- og helsetjenester med tabell, øvingsscenario og indikatorpakke, og oppdaterte plan- og tavlefiler for pilotering. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-55: Utarbeidet samvirkeøvelse for dataspace-baserte høyrisikotvillinger med scenario, tabell, evalueringskriterier og referanser, og synkroniserte plan-, tavle- og statusfiler for pilotering. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-54: Dokumenterte helsedataspace og kliniske datadelingsrutiner i Kapittel 3 med ny arbeidsflyt, styringstabell og oppdaterte plan- og statusfiler. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-53: Integrerte bærekraftsrapportering og klimarisiko i Kapittel 6 med ny seksjon, indikatorpakke, arbeidsflyt for klimarisikotesting og oppdaterte referanser; synkroniserte plan- og statusfiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)

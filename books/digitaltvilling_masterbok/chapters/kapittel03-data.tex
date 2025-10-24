@@ -213,6 +213,49 @@ For å komme raskt i gang med dataspace-initiativ anbefales en trinnvis tilnærm
     \item Pilotér deling av et begrenset datasett og vurder ytelse, sikkerhet og gevinstrealisering før skalering.
 \end{enumerate}
 
+\subsection{Tverrsektorielt dataspace-samvirke for kritiske tjenester}
+Energi- og helsetjenester er gjensidig avhengige i krisesituasjoner: strømforsyningen må holdes stabil for å drive sykehus og
+helsedata må deles sikkert for å prioritere reparasjons- og evakueringsressurser. Nasjonale beredskapsplaner og sikkerhetskrav
+legger derfor opp til samvirkeøvelser som kobler energisektoren og helsetjenestene, med vekt på felles situasjonsforståelse,
+datakvalitet og eskaleringslinjer.\citep{dsb2023totalberedskap,nsm2023grunnprinsipper,nhn2024dataspace,statnett2024kontrolltarn,helsedir2023beredskap}
+Et tverrsektorielt dataspace gir en felles plattform for å koordinere sanntidsdata, beslutningslogger og tiltak i masterkurset.
+
+Tabell~\ref{tab:kap03-tversektor-samvirke} oppsummerer hvilke informasjonsstrømmer som må forvaltes og hvem som leder
+koordineringsarbeidet. Kolonnene speiler koblingen til kontrolltårn-arbeidet i kapittel~6 og governance-strukturen i
+kapittel~7.
+
+\begin{table}[ht]
+    \centering
+    \caption{Datastrømmer og ansvar i tverrsektorielt dataspace-samvirke mellom energi og helse.}
+    \label{tab:kap03-tversektor-samvirke}
+    \begin{tabular}{p{0.30\textwidth}p{0.42\textwidth}p{0.22\textwidth}}
+        \toprule
+        \textbf{Datastrøm} & \textbf{Formål i samvirkeøvelsen} & \textbf{Primær eier og kobling} \\
+        \midrule
+        Kritiske energipunkter & Viser tilgjengelig kapasitet på sykehus, reservekraft og nettnoder slik at tiltak kan prioriteres. & Statnett kontrolltårn \& regionalt nettselskap (Kap.~6) \\
+        Kliniske logistikkdata & Gir oversikt over pasientflyt, ambulanser og logistikktjenester for evakuering og fordeling. & Helseforetakets operasjonssenter (Kap.~8) \\
+        Hendelses- og risikologg & Dokumenterer avvik, beslutninger og varsling som grunnlag for myndighetsrapportering. & Dataspace-operatør i fellesskap med beredskapsledelse (Kap.~6/7) \\
+        Ressurs- og kompetansebank & Kartlegger tilgjengelige mannskaper, leverandører og støttefunksjoner. & Kommunal beredskap og frivillige organisasjoner (Appendiks) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\paragraph{Øvingsscenario for masterkurset.} Studentgrupper kan bygge videre på tabellen ved å gjennomføre en tredelt øvelse:
+\begin{enumerate}
+    \item \textbf{Forberedelse:} Kartlegg hvilke datasett som må deles og oppdater policy-regler for tilgang, inkludert logging av
+    samtykker fra helsesektoren. Resultatet registreres i dataspace-katalogen og kvalitetsjournalen i kapittel~6.
+    \item \textbf{Simulert hendelse:} Start en hendelse der en transformatorfeil påvirker et sykehusområde. Energisiden publiserer
+    sanntidsdata om last, mens helsetjenesten deler pasientprioritet og behov for kritisk utstyr. Deltakerne bruker kontrolltårn-
+    panelet til å koordinere tiltak og oppdaterer hendelsesloggen.
+    \item \textbf{Etteranalyse:} Evaluer datakvalitet, beslutningslogg og responstid. Læringspunkter føres inn i governance-planen
+    fra kapittel~7 og deles med fagfellegruppen via `support/fagfellelogg.csv`.
+\end{enumerate}
+
+\paragraph{Indikatorpakke.} For å måle effekten av samvirket anbefales indikatorer for energitilgjengelighet, prioriteringstid
+for kritiske pasienter, kvalitet på hendelseslogg og etterlevelse av sikkerhetskrav. Tersklene bør hentes fra kontrolltårn-
+seksjonen i kapittel~6 og kombineres med gevinstplanene i kapittel~7 slik at resultatene kan rapporteres til både styre og
+myndigheter.
+
 \subsection{Case: Mobilitetsdataspace for bylogistikk}
 Oslo-regionen har etablert et mobilitetsdataspace som kobler sammen bylogistikkaktører, kollektivselskap og teknologipartnere
 for å redusere utslipp og øke punktligheten i vareleveranser. Piloten bygger på veikartet for European Mobility Data Space og
