@@ -191,6 +191,48 @@ Et praktisk undervisningsopplegg kan la studentgrupper kombinere pasientlogistik
 
 Ved å bruke én rapporteringspakke på tvers av caser får studentene erfaring med hvordan organisasjoner kan utnytte samme styringsmodell på tvers av sektorer uten å miste domenespesifikke krav av syne. Erfaringene mates tilbake til planfilen i Kapittel~7 og til støttefilene for undervisning slik at kommende kull kan bygge videre.
 
+\section{Bærekraftsrapportering og klimarisiko i valideringsløpet}
+Valideringsarbeidet må også håndtere kravene til bærekraft og klimarisiko som følger av EUs taksonomi og den nye rapporteringsplikten i CSRD.\citep{eu2020taxonomy,eu2022csrd} For digitale tvillinger betyr det å dokumentere hvordan modellresultater påvirker miljø- og klimamål, og hvordan kontrollsløyfene bidrar til å redusere negativ påvirkning. De europeiske bærekraftsstandardene (ESRS) beskriver eksplisitte indikatorer for klima, ressurser og sirkularitet, og krever at virksomheten kan spore beregningsgrunnlaget frem til datakilder og beslutninger.\citep{efrag2023esrs} Dermed må kvalitetsjournalen og rapporteringspakken i dette kapittelet suppleres med bærekraftsdata, og indikatorpanelet fra Kapittel~5 bør utvides med nøkkeltall som måles i samme DevOps-prosess som presisjon og sikkerhet.
+
+\subsection{Koble validering til bærekraftsrapportering}
+For å tilfredsstille offentlige virksomheters rapporteringsforventninger anbefaler DFØ at bærekraftsdata integreres i de ordinære styringssløyfene og at ansvar fordeles i linjen.\citep{dfo2023baerekraft} I praksis kan tvillingteamet følge tre prinsipper når bærekraftsindikatorene bygges inn i valideringsløpet:
+\begin{enumerate}
+    \item \textbf{Kartlegg mål og taksonomikrav:} Knytt tvillingens formål til miljømålene i EU-taksonomien og dokumenter hvordan modellresultater påvirker kriteriene for vesentlighet og vesentlig skade.
+    \item \textbf{Synkroniser datakilder:} Merk datasett med hvilke ESRS-indikatorer de støtter, og bruk kvalitetsjournalen til å vise hvordan beregninger kan revideres fra rådata til rapporterte tall.
+    \item \textbf{Fordel ansvar:} Speil ansvarslinjene fra styringsmodellen i Kapittel~7 slik at bærekraftsansvarlige, fagledere og compliance-team godkjenner måltall i samme sign-off som sikkerhets- og kvalitetskontroller.
+\end{enumerate}
+
+Tabell~\ref{tab:baerekraft-validering} foreslår en indikatorpakke som binder bærekraftsrapporteringen til valideringssløyfen. Strukturen gjør det mulig å kombinere klimascenarier, ressursbruk og sosial effekt i samme rapporteringspakke som allerede brukes for høyrisiko-tvillingene.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Bærekraftsindikatorer i validerings- og rapporteringspakken}
+    \label{tab:baerekraft-validering}
+    \begin{tabular}{|p{3.2cm}|p{4.5cm}|p{4.5cm}|p{3.0cm}|}
+        \hline
+        \textbf{Indikatorområde} & \textbf{Datagrunnlag og modellkobling} & \textbf{Rapporteringskrav og tiltak} & \textbf{Ansvarlig rolle} \\
+        \hline
+        Klimagassintensitet & Simulert energiforbruk, sanntidssensorer for utslipp og scenarioanalyse mot referanseår & ESRS~E1-krav til utslippsbaner og taksonomiens klimamål; registrer avvik og tiltak i kvalitetsjournalen & Bærekraftsansvarlig i linjen \\
+        \hline
+        Ressurseffektivitet & Tvillingens beregning av materialstrømmer, vedlikeholdsdata og sirkulasjonsgrad & Rapporter på ESRS~E5 og taksonomiens kriterier for sirkulær økonomi; oppdater tiltakslogg og dataspace-kontrakter & Produktleder digital tvilling \\
+        \hline
+        Klimarisikoscenarier & Stress-testing av modeller mot fysiske og overgangsrelaterte scenarier fra NOU~2018:17 \citep{nou2018klimarisiko} & Dokumenter konsekvens og rest-risiko i risikologg og rapport til styret i tråd med CSRD & Risikostyringsfunksjon \\
+        \hline
+        Sosial påvirkning og sikkerhet & Arbeidsmiljødata, brukerundersøkelser og hendelseslogg for leverandørkjeden & Vurder ESRS~S2 og styringskrav til anstendig arbeid; koordinér tiltak med rapporteringspakken for tilsyn & HR- og leverandøransvarlig \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Arbeidsflyt for klimarisikotesting}
+Klimarisiko bør testes parallelt med de tekniske valideringene, slik at modelloppdateringer ikke skaper utilsiktet økning i utslipp eller eksponering. En anbefalt arbeidsflyt er:
+\begin{enumerate}
+    \item \textbf{Scenarioforberedelse:} Velg fysiske og overgangsscenarioer fra NOU~2018:17 og relevant bransjestandard, og koble dem til simuleringer i Kapittel~4.
+    \item \textbf{Tverrfaglig analyse:} Kombiner finans-, drift- og bærekraftsressurser i samme valideringsmøte slik at konsekvenser for økonomi, sikkerhet og miljø vurderes samlet.
+    \item \textbf{Integrert rapportering:} Oppdater kvalitetsjournal, rapporteringspakke og indikatorpanelet for tillit med klimarisikofunn, og sørg for at dataene kan eksporteres til virksomhetens bærekraftsrapport.
+\end{enumerate}
+
+Når klimarisikotesten inngår i valideringslaboratoriet gir det studentene innsikt i hvordan bærekraftsmål, regulatorisk etterlevelse og tekniske kvalitetskrav må balanseres. Erfaringene kan gjenbrukes i Kapittel~7 når gevinst- og styringsmodellene skal vise hvordan bærekraft og økonomi følges opp over tid.
+
 \section{Usikkerhetsanalyse og robusthet}
 Usikkerhetsanalyse gjør det mulig å forstå hvor pålitelig tvillingens prediksjoner er. En viktig første aktivitet er å klassifisere usikkerhet som \textit{aleatorisk} (tilfeldige variasjoner i prosessen) eller \textit{epistemisk} (mangel på kunnskap). For eksempel vil en energitvilling for et fjernvarmenett ha aleatorisk usikkerhet knyttet til vær og forbruksmønstre, mens epistemisk usikkerhet kan skyldes ufullstendige rørdata eller sjeldne feilmodi. Klassifiseringen påvirker hvilke tiltak som settes inn: bedre sensorer og datakvalitetsrutiner for epistemisk usikkerhet, og probabilistiske metoder for aleatorisk variasjon. Risikostyringsprinsippene i \citet{iso31000-2018} kan brukes som ramme for å prioritere tiltak og utforme beslutningspunkter.
 
