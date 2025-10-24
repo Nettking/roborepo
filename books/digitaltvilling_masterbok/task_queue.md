@@ -23,11 +23,11 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger | Status |
 
 
-
 ## Ferdige oppgaver
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-46 | Kapittel 6 | FERDIG – Etablerte tverrsektoriell tilsyns- og rapporteringspakke med sandkassefunn, leveransetabell og oppdatert planstatus. | `chapters/kapittel06-validering.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-45 | Kapittel 6 | FERDIG – Beskrev kommunal modellovervåking med indikatorpanel og læringsløp, og synkroniserte plan- og statusfiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-44 | Kapittel 6 | FERDIG – Dokumenterte kontinuerlig modellovervåking for kommunale tvillinger med tiltaks- og indikatorpanel, og oppdaterte plan- og statusfiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-43 | Kapittel 5 | FERDIG – Dokumenterte adaptiv AI-styring for havbrukstvillinger med tiltakstabell, modelljournal-anbefaling og oppdaterte plan- og statusfiler. | `chapters/kapittel05-ai.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |

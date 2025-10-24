@@ -143,6 +143,54 @@ For å gjøre kravene håndgripelige kan kurslaboratoriet følge en firestegs ar
 
 Denne tilnærmingen gir studentene innsikt i hvordan europeisk regulering og norske veiledere må kombineres for å bygge tillit til helserettede digitale tvillinger.
 
+\section{Tverrsektorielt tilsyn og rapportering}
+Kommende EU-regulering for kunstig intelligens krever at høyrisiko-tvillingene dokumenterer tilsyn, rapportering og menneskelig kontroll på tvers av domener. \citet{datatilsynet2023sandkasse} viser hvordan regulatoriske sandkasser brukes til å teste tiltak i avgrensede løp, mens \citet{ehelse2024tilsyn} beskriver tredjepartsvurderinger for kliniske beslutningsstøttesystemer. For å holde styr på slike krav må tvillingteamet koble kvalitetsjournalen fra Kapittel~6 til indikatorpanelene i Kapittel~5 og styringsmodellene i Kapittel~7, slik at hvert tiltak har et tydelig eierskap og en plan for rapportering til relevante tilsynsmyndigheter.
+
+\subsection{Sandkassefunn og tilsynsspor}
+Sandkasseprosjektene peker på tre gjentakende læringspunkter: å tydeliggjøre risikoaksept, å dokumentere vurderinger av forklarbarhet og å involvere sluttbrukere i godkjenningssløyfer.\citep{datatilsynet2023sandkasse} Når erfaringene skal omsettes i driftssetting, bør de skrives inn i kvalitetsjournalen som eksplisitte tilsynsspor. I praksis innebærer det at hver revisjon knytter modellversjoner, dataopphav og operasjonelle tiltak sammen med en ansvarlig funksjon. Helsetilsynet etterspør den samme sammenhengen når de vurderer internkontroll i spesialisthelsetjenesten, og energitilsynet krever tilsvarende logg når kontrolltårn håndterer beredskapshendelser.\citep{energinorge2023beredskap,helsetilsynet2024internkontroll}
+
+En anbefalt arbeidsflyt er å etablere et felles tilsynsregister som viser hvilke krav som gjelder for hver tjeneste, hvilke måleparametere som følger opp kravene og hvilke eskaleringsrutiner som skal brukes dersom avvik oppstår. Registeret kan deles mellom prosjekteier, compliance-team og fagansvarlige gjennom samme dataspace som brukes for indikatorene i Kapittel~3. Når nye funksjoner lanseres, oppdateres registeret som en del av releaseprosessen i kvalitetsjournalen.
+
+\subsection{Rapporteringspakke for høyrisikotvillinger}
+For å møte kravene i AI-forordningen og sektorregelverk må tvillingen levere en helhetlig rapporteringspakke med faste leveranser gjennom året. Pakken kan bygges opp av fire komponenter:
+\begin{enumerate}
+    \item \textbf{Kvartalsvis statusrapport}: Oppsummerer modellendringer, indikatorer for ytelse og menneskelig kontroll samt eventuelle avvik som er håndtert i perioden. Rapporten deler indikatorer med dashboards i Kapittel~5 for å sikre konsistent kommunikasjon til ledelsen.
+    \item \textbf{Årlig revisjonsoppsummering}: Dokumenterer funn fra interne og eksterne revisjoner, refererer til oppdaterte risikovurderinger og kobler tiltak til styringssløyfene i Kapittel~7.
+    \item \textbf{Hendelsesmeldinger}: Beskriver avvik innen 24 timer, slik NIS2 og helsesektorens tilsyn forventer, og forklarer hvilke fallback-modeller som er aktivert.\citep{eu2022nis2,ehelse2024tilsyn}
+    \item \textbf{Brukerlogg og forklaringsarkiv}: Samler spørsmål og beslutninger fra operatører, og viser hvordan anbefalingene er forklart og eventuelt overstyrt.
+\end{enumerate}
+
+Tabell~\ref{tab:kap06-tilsynsplan} gir en oversikt over hvordan rapporteringspakken kan struktureres. Kolonnene speiler koblingen mellom regulatoriske krav, ansvarlige roller og verktøyene som er introdusert i tidligere kapitler.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Rapporteringsplan for høyrisiko digitale tvillinger}
+    \label{tab:kap06-tilsynsplan}
+    \begin{tabular}{p{3.2cm}p{4.6cm}p{3.8cm}p{3.4cm}}
+        \toprule
+        \textbf{Leveranse} & \textbf{Innhold} & \textbf{Ansvar og godkjenning} & \textbf{Verktøy og koblinger} \\
+        \midrule
+        Kvartalsvis statusrapport & Modellendringer, indikatorer for presisjon, forklarbarhet og menneskelig kontroll. & Produktleder tvilling signerer, compliance-team kvalitetssikrer. & Kvalitetsjournal, indikatorpanel i Kapittel~5, dataspace-kontrakter i Kapittel~3. \\
+        \addlinespace
+        Årlig revisjonsoppsummering & Sammendrag av interne/eksterne revisjoner, risikologg og forbedringstiltak. & Programstyre godkjenner etter høring i styringsmodell fra Kapittel~7. & Revisjonsmodul i kvalitetsjournal, tiltakslogg og sertifiseringsløp. \\
+        \addlinespace
+        Hendelsesmelding & Varsling av avvik, aktiverte fallback-modeller og varslede myndigheter. & Beredskapsleder og sikkerhetsansvarlig koordinerer, faglig ansvarlig bekrefter tiltak. & Hendelsesjournal, beredskapsplan og NIS2-rapportmal. \\
+        \addlinespace
+        Brukerlogg og forklaringsarkiv & Operatørspørsmål, forklaringer, manuelle overstyringer og læringspunkter. & Kontrolltårnleder følger opp, opplæringsteamet oppdaterer materiell. & Modelljournal, lærerveiledning og øvingsnotater fra Kapittel~5 og Kapittel~8. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Case: Felles rapporteringsløp for helse og energi}
+Et praktisk undervisningsopplegg kan la studentgrupper kombinere pasientlogistikk-caset og kontrolltårn-caset. Hensikten er å vise hvordan samme rapporteringspakke kan dekke både helsesektorens krav til klinisk beslutningsstøtte og energisektorens krav til beredskap. Gruppen fordeler ansvar mellom et klinisk team og et energiteam, men bruker felles kvalitetsjournal og tilsynsregister. Under øvelsen skal de:
+\begin{itemize}
+    \item Kartlegge relevante tilsyn (Datatilsynet, Direktoratet for e-helse, NVE) og sette terskler for hendelsesmeldinger.
+    \item Konfigurere indikatorpanelet slik at både pasientsikkerhet og forsyningssikkerhet måles med like metodikker.
+    \item Levere en samlet revisjonsoppsummering som viser hvordan tiltak fra hvert domene henger sammen og hvor læring overføres.
+\end{itemize}
+
+Ved å bruke én rapporteringspakke på tvers av caser får studentene erfaring med hvordan organisasjoner kan utnytte samme styringsmodell på tvers av sektorer uten å miste domenespesifikke krav av syne. Erfaringene mates tilbake til planfilen i Kapittel~7 og til støttefilene for undervisning slik at kommende kull kan bygge videre.
+
 \section{Usikkerhetsanalyse og robusthet}
 Usikkerhetsanalyse gjør det mulig å forstå hvor pålitelig tvillingens prediksjoner er. En viktig første aktivitet er å klassifisere usikkerhet som \textit{aleatorisk} (tilfeldige variasjoner i prosessen) eller \textit{epistemisk} (mangel på kunnskap). For eksempel vil en energitvilling for et fjernvarmenett ha aleatorisk usikkerhet knyttet til vær og forbruksmønstre, mens epistemisk usikkerhet kan skyldes ufullstendige rørdata eller sjeldne feilmodi. Klassifiseringen påvirker hvilke tiltak som settes inn: bedre sensorer og datakvalitetsrutiner for epistemisk usikkerhet, og probabilistiske metoder for aleatorisk variasjon. Risikostyringsprinsippene i \citet{iso31000-2018} kan brukes som ramme for å prioritere tiltak og utforme beslutningspunkter.
 
