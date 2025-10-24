@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-79: Beskrev vinterdrift i fjellbaner med datasettoversikt, scenariostruktur og indikatorpakke i Kapittel 4, og oppdaterte plan-, tavle- og kildefiler for å koble energistyring til beredskaps- og governancearbeidet. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-78: Beskrev multi-agent koordineringsramme med tabell for norske logistikk- og energipiloter i Kapittel 5, og oppdaterte plan-, tavle- og kildefiler for å koble arbeidet til styrings- og valideringskapitlene. (`chapters/kapittel05-ai.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-77: Etablerte tiltakslogg for gevinstoppfølging i Kapittel 7 med tabell og arbeidsrutiner, og oppdaterte plan-, tavle- og statusfiler slik at porteføljestyring og fagfellelogg bruker samme struktur. (`chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-76: Dokumenterte AI-forordningen for mobilitetstvillinger i Kapittel 6 med sjekkliste og indikatorpanel, og oppdaterte plan- og statusfiler for pilotering mot kollektiv- og jernbanepartnere. (`chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md`)
