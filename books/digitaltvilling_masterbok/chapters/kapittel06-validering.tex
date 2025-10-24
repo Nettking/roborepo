@@ -385,6 +385,40 @@ Når tiltaksloggen er integrert i kvalitetsjournalen kan indikatorpanelet i Tabe
 
 Når tvillingen tas i bruk i undervisningslaboratoriet, bør studentgrupper teste scenarioer for akutt pågang, influensaepidemier og samtidige kommunale beredskapssituasjoner. Resultatene kobles til kontrolltårn-panelet fra energisektoren ved å oversette indikatorene til helsesektorens måleparametere, for eksempel andel planlagte utskrivinger som må flyttes og tid fra triage til første kliniske vurdering. Slik får studentene erfaring med å overføre strukturerte valideringsmetoder til et nytt domene og ser hvordan ansvarlige roller samarbeider for å sikre trygg tjenesteleveranse.
 
+\section{Regulatorisk sandkasse og tredjepartsrevisjon}
+Datatilsynets regulatoriske sandkasse for ansvarlig kunstig intelligens gir offentlige virksomheter mulighet til å teste nye digitale løsninger sammen med tilsynet før de tas i full drift.\citep{datatilsynet2023sandkasse} For digitale tvillinger i helsesektoren betyr det at prosjektet kan eksperimentere med nye datakilder og algoritmer innenfor klare rammer for personvern, informasjonssikkerhet og etikk. Sandkasseløpet krever at tvillingteamet dokumenterer hvordan løsningen bygger inn nødvendige sikkerhetsmekanismer og menneskelig kontroll, og at erfaringene omsettes til forbedrede rutiner i kvalitetsjournalen.
+
+En strukturert sandkasseprosess består av fire hovedaktiviteter:
+\begin{enumerate}
+    \item \textbf{Forberedelse og mandat:} Beskriv formålet, datagrunnlaget og forventede gevinster i en prosjektbeskrivelse som koordineres mellom klinisk ledelse, personvernombud og Datatilsynet. Identifiser relevante risikoområder og kartlegg hvilke deler av AI-forordningen som berøres.
+    \item \textbf{Design og testscenarier:} Etabler scenarier for modelltesting, datasett og vurderingskriterier sammen med sandkassens fagteam. Dokumenter hvordan syntetiske data, anonymisering og tilgangsstyring skal brukes for å redusere risiko i eksperimenteringen.\citep{norm2023}
+    \item \textbf{Evaluering og forbedring:} Analyser funn fra sandkassens workshops og tester, og oversett anbefalingene til konkrete tiltak i kvalitetsjournalen, kontrolltårn-panelet og beredskapsplanene.
+    \item \textbf{Ekstern deling og implementering:} Publiser hovedfunn, risikovurderinger og anbefalte tiltak slik at både pasientorganisasjoner og tilsynsmyndigheter får innsikt i hvordan tvillingen håndterer risiko og personvern. Oppdater læringssløyfene i kapittelets øvrige seksjoner slik at erfaringene blir en del av kontinuerlig forbedring.
+\end{enumerate}
+
+For å sikre etterlevelse gjennom hele livsløpet bør sandkasseresultatene følges av en tredjepartsrevisjon. Direktoratet for e-helse anbefaler at slike revisjoner kombinerer kliniske fagmiljø, tekniske eksperter og juridiske rådgivere som vurderer både datakvalitet, modellstyring og pasientsikkerhet.\citep{ehelse2024tilsyn} Tabell~\ref{tab:tredjepartsrevisjon} viser et eksempel på hvordan revisjonen kan struktureres for en helsetvilling som skal rulles ut i et regionalt helseforetak.
+
+\begin{table}[ht]
+    \centering
+    \caption{Tredjepartsrevisjon etter sandkasse for helsesektorens digitale tvilling}
+    \label{tab:tredjepartsrevisjon}
+    \begin{tabular}{|p{3.2cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Fokusområde} & \textbf{Revisjonstiltak} & \textbf{Dokumentasjon} & \textbf{Ekstern aktør} \\
+        \hline
+        Datagrunnlag og personvern & Sammenligne sandkassens databruk med behandlingsgrunnlag og tilgangsprotokoller, kontrollere anonymiseringsstrategi & Databehandlingsprotokoller, tilgangslogg, sandkasserapport & Personvernombud + Datatilsynet \\
+        \hline
+        Modell og algoritmer & Gjennomgå modelljournal, feilanalyser og valideringsresultater, reprodusere kritiske scenarier fra sandkassen & Modelljournal, testlogg, kodeutdrag & Ekstern modellrevisor \\
+        \hline
+        Klinisk prosess & Evaluere hvordan tvillingen påvirker pasientforløp, beslutningsstøtte og beredskap, sikre at menneskelig kontroll er tydelig dokumentert & Prosesskart, kontrolltårn-indikatorer, læringslogg fra øvelser & Klinisk fagråd \\
+        \hline
+        Styring og forbedring & Kontrollere at tiltak fra sandkassen er integrert i kvalitetsjournalen, at avvik behandles i styringssystemet og at kommunikasjon med pasienter er planlagt & Kvalitetsjournal, tiltaksregister, kommunikasjonsplan & Direktoratet for e-helse + styresekretariat \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Resultatene fra sandkassen og tredjepartsrevisjonen bør brukes til å oppdatere indikatorene i kontrolltårn-panelet, sikre at nye risikoer loggføres i kvalitetsjournalen og planlegge videre pilotering i undervisningslaboratoriet. Dette styrker koblingen mellom helsesektorens tvillinger, de kommunale beredskapsløpene og kravene fra AI-forordningen som omtales tidligere i kapittelet.
+
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}
     \item Definer en valideringsstrategi for en digital tvilling i helsevesenet, og identifiser hvilke standarder og datasett som må håndteres for å dokumentere pasientsikkerhet.
