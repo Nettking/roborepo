@@ -427,6 +427,36 @@ For å gjøre koblingen eksplisitt bør laboratoriet driftes med samme styringsm
 
 En månedlig driftsgjennomgang mellom kommunens beredskapsteam, dataspace-operatøren og kontrolltårnansvarlige bør bekrefte at tabellen er oppdatert. Møtet følger sjekklisten fra kapittel~3: avvikslogg oppdateres, kommende endringer tidssettes og eventuelle behov for syntetiske datasett vurderes. Resultatene tas inn i kvalitetsjournalen fra kapittel~6 og i governance-oversikten fra kapittel~7 slik at tiltakene forblir sporbare.
 
+\section{Praksiseksempel: Presisjonslandbruk med datasamarbeid}
+Norsk landbruk digitaliseres raskt, og gårdsbruk som kombinerer sensorer, satellittdata og agronomisk fagkunnskap får nye muligheter til å styre innsatsfaktorer og miljøpåvirkning \citep{nibio2023dataflyt}. Landbruksdirektoratet løfter frem digitale tvillinger som et virkemiddel for å dele data mellom maskinleverandører, rådgivningstjenester og myndigheter uten å miste kontroll på eierskap og tilgangsstyring \citep{landbruksdir2023digitalisering}. Et masterprosjekt kan derfor utvikle en digital tvilling som speiler jordbruksdrift gjennom en tredelt modellstruktur:
+
+\begin{enumerate}
+    \item \textbf{Feltobservasjon og datainnsamling:} Sensorer på traktorer, droner og jordfuktighetsmålere samler data om vekststatus, jordstruktur og næringsinnhold. Dataene pakkes som dataprodukter i dataspace-katalogen fra Kapittel~3.
+    \item \textbf{Vekst- og ressursmodeller:} Kontinuerlige modeller beregner biomasse og tilvekst, mens diskrete hendelser beskriver gjødsling, høsting og maskinlogistikk. Modellene valideres mot måledata i kvalitetsjournalen fra Kapittel~6.
+    \item \textbf{Beslutningsstøtte og læringssløyfer:} Indikatorer for avlingsnivå, klimaavtrykk og ressursbruk visualiseres sammen med tiltaksforslag i styringspanelet fra Kapittel~7 slik at bonden kan prioritere tiltak og dokumentere effekt.
+\end{enumerate}
+
+Tabell~\ref{tab:kap04-presisjonslandbruk} viser hvordan de tre modellnivåene oversettes til konkrete leveranser i et presisjonslandbrukslaboratorium.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Leveransepakke for digital tvilling i presisjonslandbruk.}
+    \label{tab:kap04-presisjonslandbruk}
+    \begin{tabular}{p{0.28\textwidth}p{0.32\textwidth}p{0.32\textwidth}}
+        \toprule
+        \textbf{Fase} & \textbf{Datagrunnlag og simulering} & \textbf{Leveranse og kobling} \\
+        \midrule
+        Feltobservasjon & Sensorstrømmer fra maskinpark, jordprøver, satellittbilder og værprognoser. & Dataprodukter i dataspace-katalogen med metadata, tilgangsstyring og versjonering fra Kapittel~3. \\
+        \addlinespace
+        Vekst- og ressursmodeller & Kontinuerlige vekstmodeller kombinert med diskrete operasjoner (såing, gjødsling, høsting). & Modelljournal med parameterhistorikk, kalibrering mot feltdata og kobling til valideringsindikatorer i Kapittel~6. \\
+        \addlinespace
+        Beslutningsstøtte & Optimaliseringsløp for innsatsmidler, scenarioer for klima- og markedsvariasjon, beregning av klimaavtrykk. & Tiltaksplan og indikatorpanel for avlingsmål, utslipp og økonomi som oppdateres i styringsloggen fra Kapittel~7. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Et undervisningsopplegg kan la studentgrupper velge ulike produksjoner (korn, potet, melk) og konfigurere datagrunnlag og modeller deretter. Resultatene vurderes i en felles demonstrasjon der gruppene viser hvordan indikatorene kobles til dataspace-deling, regulatoriske krav og bærekraftsrapportering. Caset gir også grunnlag for å teste hvordan maskinleverandører kan bidra med syntetiske datasett for vintertrening, og hvordan bonden kan dele beslutningslogg med rådgivere uten å eksponere rådata.
+
 \section{Laboratorieøving: Immersivt beslutningsrom}
 Laboratorieøvelsen bygger på scenariet i \textit{kap04-immersiv-case.md} og tar utgangspunkt i at studentene får tilgang til et immersivt kontrollrom der fjernvarmeoperasjoner kan testes. Økten varer 90 minutter og gjennomføres i grupper på fire. Datastrømmer og roller speiles i Tabell~\ref{tab:kap04-immersiv-arkitektur} slik at studentene forstår hvordan teknologi og organisasjon henger sammen.
 
