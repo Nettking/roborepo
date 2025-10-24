@@ -35,13 +35,82 @@ Integrer gjerne en illustrasjon fra `support/illustrasjonsplan.md` som viser sam
 For å støtte fagfelleløpet prioriteres tre nye case som dekker norsk energiomlegging, grønn industri og landbruksmodernisering. Notatene i `support/notater/` utdyper datakilder, KPI-er og styringsmodeller slik at arbeidsgrupper kan forberede intervjuer og dokumentasjon.
 
 \subsection*{Havvind – Sørlige Nordsjø II og Hywind Tampen}
-Utbyggingen av flytende havvind gir et rikt læringsgrunnlag for digital tvilling. Statlige rammer for areal og nettilknytning kombineres med Equinors operasjonserfaring fra Hywind Tampen, der turbiner og kraftplattformer deler data for å balansere produksjon mot sokkelinstallasjoner.\citep{nve2023havvindfakta,equinor2023hywindtampen} Tvillingen må koordinere værprognoser, vedlikeholdslogistikk og energioppgjør i en delt dataspace mellom operatør, Statnett og tjenesteleverandører.
+Utbyggingen av flytende havvind gir et rikt læringsgrunnlag for digital tvilling. Statlige rammer for areal og nettilknytning kombineres med Equinors operasjonserfaring fra Hywind Tampen, der turbiner og kraftplattformer deler data for å balansere produksjon mot sokkelinstallasjoner.\citep{nve2023havvindfakta,equinor2023hywindtampen} Tvillingen må koordinere værprognoser, vedlikeholdslogistikk og energioppgjør i en delt dataspace mellom operatør, Statnett og tjenesteleverandører. Når studentgruppene fyller ut casemalen skal de beskrive hvordan produksjonsdata, SCADA-signaler og markedsinformasjon synkroniseres i hydrodynamiske modeller og energioptimering på tvers av plattformer og nettilknytning.
+
+\begin{table}[h]
+    \centering
+    \caption{Nøkkelspor for casestudiet i havvind}
+    \label{tab:havvind-spor}
+    \begin{tabular}{p{3.5cm}p{8.5cm}}
+        \toprule
+        Fokusområde & Eksempler på spørsmål som skal besvares i casemalen \\
+        \midrule
+        Operasjonelle modeller & Hvordan oppdateres laster, vær og produksjonsprognoser i sanntid, og hvilke beslutningsdører (for eksempel daglig produksjonsmøte og ukentlig vedlikeholdsforum) bruker simuleringene? \\
+        Energioppgjør og markeder & Hvilke datagrunnlag brukes for å beregne fleksibilitet mot sokkelinstallasjoner, og hvordan dokumenteres avregning og kostnadsdeling mellom aktører? \\
+        Beredskap og HMS & Hvordan loggføres hendelser, barrierestyring og sikkerhetstiltak, og hvordan deles tilsynskrav med myndighetene? \\
+        Dataspace-styring & Hvilke policy-artefakter fra Gaia-X eller IDSA brukes for å regulere tilgang til sensordata, og hvordan versjoneres dem for nye samarbeidspartnere? \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item Kartlegg integrasjonspunktene mellom turbinsystemer, nettilknytning og sokkelinstallasjoner, og dokumenter hvordan datakvalitet sikres før modeller oppdateres.\citep{nve2023havvindfakta}
+    \item Beskriv hvordan styringsstrukturen fordeler ansvar mellom operatør, myndigheter og leverandørkjede, og pek på beslutningsfora som må involveres før endringer godkjennes.
+    \item Definer indikatorer for kapasitetsfaktor, HSE-observasjoner og tilgjengelighet per turbin, og lenk dem til gevinstplanen i Kapittel~7.
+    \item Referer til ressurser i \autoref{appendix:ressurser} om energi- og offshoredata, og noter hvilke kilder som trengs for å fylle ut malen i \autoref{sec:case-maler-prioriterte-sektorer}.
+\end{itemize}
 
 \subsection*{Landbruk – Presisjonsjordbruk i Trøndelag}
-Presisjonsjordbruket gir studentene innsikt i kombinasjonen av edge-prosessering og sentral analyse. Jord- og maskinsensorer prosesseres lokalt for å støtte autonome arbeidsoperasjoner, mens agronomiske beslutninger dokumenteres i felles datasett for rådgivere og forvaltning.\citep{nibio2023dataflyt,landbruksdir2023digitalisering,etsi2023mec} Caset viser hvordan data kan deles mellom gårdbruker, forskningsmiljø og kooperativ med klare policyer for gjenbruk av feltdata.
+Presisjonsjordbruket gir studentene innsikt i kombinasjonen av edge-prosessering og sentral analyse. Jord- og maskinsensorer prosesseres lokalt for å støtte autonome arbeidsoperasjoner, mens agronomiske beslutninger dokumenteres i felles datasett for rådgivere og forvaltning.\citep{nibio2023dataflyt,landbruksdir2023digitalisering,etsi2023mec} Caset viser hvordan data kan deles mellom gårdbruker, forskningsmiljø og kooperativ med klare policyer for gjenbruk av feltdata. Når casemalen fylles ut bør analysen omfatte agronomiske beslutningspunkter, maskinlogistikk og datasikkerhet slik at både operasjonell styring og bærekraftsmål blir transparente.
+
+\begin{table}[h]
+    \centering
+    \caption{Datakilder og styringsaktiviteter i presisjonsjordbrukscaset}
+    \label{tab:landbruk-datakilder}
+    \begin{tabular}{p{3.5cm}p{8.5cm}}
+        \toprule
+        Datakategori & Eksempler og dokumentasjonskrav \\
+        \midrule
+        Sensor- og maskindata & Jordfuktighet, NDVI og maskintelemetri lagres lokalt (edge) før utsnitt lastes til datasjø; beskriv hvordan kalibrering og datakvalitet sikres i sesongen. \\
+        Agronomiske beslutninger & Gjødselplan, vekstskifte og plantevern loggføres i felles rådgivningsportal; noter hvordan beslutninger forankres i samvirke eller rådgivningstjenester. \\
+        Forvaltnings- og policykrav & Dokumenter hvordan datadeling møter krav fra Landbruksdirektoratet og personvernforordningen, inkludert samtykkeprosesser for deling av feltdata. \\
+        Bærekraftsindikatorer & Forklar hvordan klimagassregnskap, jordhelse og vannforbruk beregnes, og hvilke indikatorer som rapporteres tilbake til finansierings- eller sertifiseringsordninger. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item Kartlegg beslutningsarenaer gjennom vekstsesongen (planlegging, utsåing, vekstoppfølging, innhøsting) og knytt databehov til hver hendelse.\citep{landbruksdir2023digitalisering}
+    \item Beskriv hvordan edge-arkitekturen (for eksempel MEC-noder og traktorkontrollere) filtrerer data før de sendes til skyløsningen, og hvilke hendelser som krever manuell verifisering.\citep{etsi2023mec}
+    \item Definer KPI-er for avlingsprognoser, ressursbruk og klimaeffekt, og koble dem til vurderingsmatrisen for modenhet i dette kapittelet.
+    \item Sammenlign datastrømmer og verktøy med ressurskategoriene i \autoref{appendix:ressurser}, og bruk veiledningen i \autoref{sec:case-maler-prioriterte-sektorer} for å dokumentere læringspunkter til undervisning og fagfeller.
+\end{itemize}
 
 \subsection*{Batteriverdikjede – Giga Arctic i Mo i Rana}
-Norsk batteriproduksjon kobler prosessindustri, energi og logistikk. FREYR Battery etablerer digitale tvillinger som følger råvarer, produksjonslinjer og energiforbruk for å oppfylle kravene i EUs batteriforordning og Enovas støtteordninger.\citep{freyr2024giga,enova2023batteri,gaiax2023architecture} Dataspace-tilnærmingen gjør at leverandørkjeder kan dele karbondata og kvalitetsmålinger under strenge kontraktsregimer.
+Norsk batteriproduksjon kobler prosessindustri, energi og logistikk. FREYR Battery etablerer digitale tvillinger som følger råvarer, produksjonslinjer og energiforbruk for å oppfylle kravene i EUs batteriforordning og Enovas støtteordninger.\citep{freyr2024giga,enova2023batteri,gaiax2023architecture,eu2023batteryregulation} Dataspace-tilnærmingen gjør at leverandørkjeder kan dele karbondata og kvalitetsmålinger under strenge kontraktsregimer. Analyse av caset må vise hvordan tvillingen støtter rapportering mot bærekraftsindikatorer, samtidig som produksjonstakt og kvalitet optimaliseres i samspill med energisystemet i Mo Industripark.
+
+\begin{table}[h]
+    \centering
+    \caption{Avklaringer som bør inngå i batterikaset}
+    \label{tab:batteri-fokus}
+    \begin{tabular}{p{3.6cm}p{8.4cm}}
+        \toprule
+        Tema & Beskrivelse av forventet dokumentasjon \\
+        \midrule
+        Material- og leverandørflyt & Spesifiser hvordan råvarer spores fra ankomst via produksjonslinjene til ferdige celler, og hvordan avvik håndteres i MES/ERP. \\
+        Energi- og klimarapportering & Redegjør for koblingen til lokale energisystemer, fleksibilitetsavtaler og hvordan CO$_2$-intensitet rapporteres til kunder og myndigheter. \\
+        Kvalitetslaboratorier & Beskriv hvordan laboratoriedata integreres i tvillingen for å justere prosesstyring og prediktivt vedlikehold. \\
+        Dataspace og kontrakter & Dokumenter kontraktsmekanismer for deling av prosess- og karbondata, inkludert tilgangskontroll og revisjonspunkter. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item Kartlegg hvordan tvillingen understøtter regulatoriske rapporteringskrav i EUs batteriforordning og norske støtteprogrammer, og dokumenter hvilke indikatorer som må eksporteres fra plattformen.\citep{eu2023batteryregulation,enova2023batteri}
+    \item Beskriv grensesnittet mellom produksjonsplanlegging, energistyring og logistikk, og angi hvor sanntidsdata må tilgjengeliggjøres for partnere i Mo Industripark.
+    \item Vurder hvilke modeller (for eksempel energibalansesimulering, yield-analyse og kvalitetsprognoser) som bør prioriteres i casemalen for å gi undervisningsverdi.
+    \item Sett gevinstmål opp mot indikatorene i vurderingsmatrisen og bruk malen i \autoref{sec:case-maler-prioriterte-sektorer} til å dokumentere læringsopplegg, risiko og neste steg.
+\end{itemize}
 
 \begin{table}[h]
     \centering
@@ -145,84 +214,190 @@ Følg denne arbeidsflyten for å forankre prioriteringen:
 Ved å dele vurderingsmatrisen med studenter og eksterne samarbeidspartnere blir det lettere å diskutere hvilke case som gir mest
 verdi, og hvilke forberedelser som kreves før data kan deles eller modeller kobles på.
 
-\section{Casestudie-mal: Digital tvilling for batteriproduksjon i Mo i Rana}
-Denne malen er inspirert av etableringen av den nasjonale batteriverdikjeden i Mo i Rana, der en digital tvilling skal binde sammen prosesslinjer, energiforbruk og logistikk. Bruk strukturen nedenfor som ramme for å dokumentere og analysere egne case, og erstatt eksemplene med data fra den faktiske virksomheten du studerer.
+\section{Casestudie-maler for prioriterte sektorer}
+\label{sec:case-maler-prioriterte-sektorer}
+Denne seksjonen gir tre casemaler som speiler prioriteringene i \S~«Prioriterte case for kommende fagfelleløp». Hver mal beskriver hvilke spørsmål som skal besvares, hvilke datakilder som må dokumenteres og hvordan gevinstplanen fra Kapittel~7 kan kobles på.
 
-\subsection{Sammendrag av caset}
-\begin{tabular}{p{0.32\textwidth}p{0.62\textwidth}}
+\subsection{Havvind – Sørlige Nordsjø II og Hywind Tampen}
+\paragraph{Sammendrag av caset}
+\begin{tabular}{p{0.34\textwidth}p{0.60\textwidth}}
 \textbf{Element} & \textbf{Beskrivelse / spørsmål som skal besvares} \\
-Virksomhet og lokasjon & Hvilken organisasjon studeres, og hvor er den plassert? \\
-Strategisk hovedmål & Hva ønsker virksomheten å oppnå med den digitale tvillingen (for eksempel redusert energibruk eller økt kapasitet)? \\
-Scope for tvillingen & Hvilke deler av verdikjeden eller prosesslinjen inngår? \\
-Status ved prosjektstart & Hvilke systemer, datakilder og arbeidsprosesser fantes fra før? \\
+Operatør og lokasjon & Hvilke selskaper deltar i tvillingen, og hvordan er havområdet delt mellom aktørene? \\
+Strategiske mål & Hvordan balanseres energi til sokkelinstallasjoner mot eksport til fastlandet, og hvilke klimamål skal støttes? \\
+Omfang & Hvilke anlegg og tjenester inngår (turbiner, kabler, substasjoner, logistikkfartøy)? \\
+Utgangspunkt & Hvilke modeller, datakilder og driftserfaringer fantes før caset ble utvidet til en helhetlig tvilling? \\
 \end{tabular}
 
-\subsection{Forretningsmål og interessenter}
+\paragraph{Forretningsmål og interessenter}
 \begin{itemize}
-    \item Beskriv konkrete forretningsmål og prioriteringer (for eksempel energieffektivitet, kvalitetskontroll eller fleksibel skalering).
-    \item Identifiser hovedinteressenter: produksjonsledelse, operatører, IT/OT-team, energiselskap, logistikkpartnere og lokale myndigheter.
-    \item Avklar hvordan målene måles, inkludert KPI-er som OEE, energiforbruk per battericelle og skraprate.
+    \item Beskriv hvordan operatør, lisenspartnere, Statnett og leverandører bruker tvillingen til å koordinere produksjon, fleksibilitet og kraftpriser.\citep{nve2023havvindfakta}
+    \item Identifiser relevante myndigheter (OED, NVE, Petroleumstilsynet) og hvilke krav til miljørapportering og HMS som tvillingen må støtte.
+    \item Definer KPI-er for kapasitetsfaktor, vedlikeholdstid, CO$_2$-reduksjon og leveringssikkerhet.
 \end{itemize}
 
-\subsection{Datagrunnlag og integrasjon}
+\paragraph{Datagrunnlag og integrasjon}
 \begin{itemize}
-    \item Kartlegg hvilke datastrømmer som trengs: sensorer langs elektrodefabrikasjonen, MES/ERP-data, vær- og strømpriser, lager- og transportstatus.
-    \item Vurder kvalitet, oppdateringsfrekvens og eierskap til hver datakilde.
-    \item Beskriv integrasjonsarkitekturen, for eksempel OPC UA mot produksjonsutstyr og skybasert datasjø for historiske data.
+    \item Kartlegg SCADA-data, metocean-modeller, inspeksjonsrapporter og markedsdata, og forklar hvordan de samles i dataspace og kontrollrom.\citep{gaiax2023architecture}
+    \item Dokumenter grensesnitt mot sokkelinstallasjoner, hydrodynamiske simuleringer og kraftmarkedsplattformer.
+    \item Vurder hvordan datastrømmer kvalitetssikres før beslutninger fattes (for eksempel validering mot værbojer og inspeksjonsdroner).
 \end{itemize}
 
-\subsection{Modelleringsstrategi}
+\paragraph{Modelleringsstrategi}
 \begin{itemize}
-    \item Definer hvilke modelltyper som skal inngå: prosessimulering, energimodell, logistikkmodell og prediktive vedlikeholdsmodeller.
-    \item Spesifiser modelloppløsning (granularitet), valideringsdata og hvordan modeller kalibreres mot observasjoner.
-    \item Marker antatte begrensninger eller usikkerheter, som begrenset historikk fra nyetablert produksjon.
+    \item Beskriv bruk av vær- og produksjonsprognoser, lastflytanalyse og strukturelle modeller av turbin og fundament.
+    \item Forklar hvordan modellene kalibreres, og hvilke scenarioer som simuleres (storm, nettilkobling, vedlikeholdsvinduer).
+    \item Angi hvordan beslutninger loggføres slik at modellforbedringer kan spores.
 \end{itemize}
 
-\subsection{Implementering og arbeidsprosesser}
+\paragraph{Implementering og arbeidsprosesser}
 \begin{itemize}
-    \item Beskriv hvordan tvillingen tas i bruk i daglig drift: dashboards i kontrollrom, digitale arbeidsordre, simulering før omstilling.
-    \item Legg inn plan for opplæring av operatører og samarbeid mellom dataanalytikere og prosessingeniører.
-    \item Dokumenter forvaltningsmodell: hvem eier modellen, hvordan versjoneres den, og hvordan sikres datakvalitet over tid?
+    \item Forklar hvordan tvillingen støtter daglige operasjoner (for eksempel operations centre dashboards, vedlikeholdsplanlegging og energioppgjør).
+    \item Beskriv opplæring for driftsteam, leverandørkjede og myndighetsdialog.
+    \item Noter hvordan policy-artefakter og tilgangsstyring vedlikeholdes i dataspace-portalen.\citep{gaiax2023architecture}
 \end{itemize}
 
-\subsection{Resultater, gevinster og gevinstrealisering}
+\paragraph{Resultater, gevinster og gevinstrealisering}
 \begin{itemize}
-    \item Oppgi konkrete gevinster som måles, for eksempel 8~\% lavere energiforbruk, redusert kassasjon eller raskere oppskalering av nye produktserier.
-    \item Beskriv metoder for å verifisere gevinster, inkludert før- og etter-målinger og kontrollgrupper.
-    \item Noter sekundære effekter: bedre HMS-oppfølging, samarbeid med kraftleverandør eller nye forretningsmodeller.
+    \item Dokumenter gevinstmål for energiproduksjon, tidsbesparelse i vedlikehold og redusert nedetid.
+    \item Beskriv hvordan gevinster verifiseres gjennom produksjons- og HMS-rapporter.
+    \item Vurder sekundære effekter, som bedre sameksistens med fiskeri og skipsfart eller raskere konsesjonsoppfølging.
 \end{itemize}
 
-\subsection{Overføringsverdi og neste steg}
+\paragraph{Overføringsverdi og neste steg}
 \begin{itemize}
-    \item Drøft hvilke komponenter som kan gjenbrukes i andre norske industrier, for eksempel prosessmodeller, datastrømsarkitektur eller governance.
-    \item Identifiser videre utvikling: kobling mot leverandørkjede, bruk av AI til kvalitetssikring, integrasjon med europeiske energimarkeder.
-    \item Foreslå indikatorer og beslutningspunkter for å evaluere når tvillingen bør oppdateres eller skaleres.
+    \item Drøft hvordan modeller og datainnsikt kan gjenbrukes i nye felt (for eksempel Utsira Nord) eller andre offshoreprosjekter.
+    \item Foreslå tiltak for å koble tvillingen til handelsplattformer og beredskapsøvelser.
+    \item Identifiser beslutningspunkter for skalering til internasjonale partnere og testing av nye turbintyper.
 \end{itemize}
 
-\subsection*{Sjekkliste for caserapporten}
+\subsection{Landbruk – Presisjonsjordbruk i Trøndelag}
+\paragraph{Sammendrag av caset}
+\begin{tabular}{p{0.34\textwidth}p{0.60\textwidth}}
+\textbf{Element} & \textbf{Beskrivelse / spørsmål som skal besvares} \\
+Gård og produksjon & Hvilke produksjoner inngår (korn, gras, potet) og hvor ligger gården? \\
+Strategiske mål & Skal tvillingen optimalisere avling, ressursbruk, klima eller dyrevelferd? \\
+Omfang & Hvilke maskiner, sensorer og agronomiske beslutninger er inkludert? \\
+Utgangspunkt & Hvilke digitale verktøy og datakilder fantes før presisjonsprogrammet startet? \\
+\end{tabular}
+
+\paragraph{Forretningsmål og interessenter}
 \begin{itemize}
-    \item[$\square$] Har du dokumentert mål, interessenter og scope?
-    \item[$\square$] Er alle relevante datakilder og integrasjoner beskrevet?
-    \item[$\square$] Inneholder rapporten tydelige modelleringsvalg og begrunnelser?
-    \item[$\square$] Er det lagt inn plan for drift, opplæring og governance?
-    \item[$\square$] Er gevinstene målbare og knyttet til KPI-er som følges opp?
-    \item[$\square$] Er læringspunkter og videre tiltak formulert?
+    \item Beskriv målene til bonden, rådgivningstjenesten, samvirket og eventuelle forskningspartnere.\citep{landbruksdir2023digitalisering}
+    \item Avklar hvordan finansieringsordninger og sertifiseringer påvirker prioriteringer.
+    \item Definer KPI-er for avlingsprognoser, inputfaktorbruk og klimafotavtrykk.
 \end{itemize}
 
-\subsection{Eksempler på norske casetilpasninger}
+\paragraph{Datagrunnlag og integrasjon}
+\begin{itemize}
+    \item Kartlegg sensorer (jord, vær, maskinlogg), datasiloer (FMIS, ERP) og eksterne kilder (satellitt, rådgiving).\citep{nibio2023dataflyt}
+    \item Beskriv edge-arkitekturen: hvilke data behandles lokalt, hvilke sendes til sky og når kreves offline-funksjonalitet?\citep{etsi2023mec}
+    \item Dokumenter samtykke- og delingsprosesser for data mot rådgivere, leverandører og myndigheter.
+\end{itemize}
+
+\paragraph{Modelleringsstrategi}
+\begin{itemize}
+    \item Forklar hvilke modeller som kombineres (vekstmodeller, maskinlogistikk, agronomiske beslutningsstøtter).
+    \item Angi hvordan modeller kalibreres mot jordprøver, avlingsdata og forsøksfelt.
+    \item Beskriv hvordan usikkerhet og værvariasjon håndteres i anbefalinger.
+\end{itemize}
+
+\paragraph{Implementering og arbeidsprosesser}
+\begin{itemize}
+    \item Dokumenter hvordan tvillingen brukes i vekstsesongens beslutningspunkter og hvem som godkjenner tiltak.
+    \item Beskriv opplæring og støtte for driftslag, inkludert digitale arbeidsflyter for maskinoperatører.
+    \item Noter hvordan datakvalitet og datasikkerhet følges opp i samarbeidet med leverandører.
+\end{itemize}
+
+\paragraph{Resultater, gevinster og gevinstrealisering}
+\begin{itemize}
+    \item Oppgi målbare effekter for avling, innsatsfaktorer, klima og jordhelse.
+    \item Beskriv hvordan resultatene dokumenteres (for eksempel i rådgivningsportal eller bærekraftsregnskap).
+    \item Vurder sekundære gevinster som kompetanseheving og datadeling mot agronomi- og innovasjonsprosjekter.
+\end{itemize}
+
+\paragraph{Overføringsverdi og neste steg}
+\begin{itemize}
+    \item Identifiser hvordan løsningene kan skaleres til andre regioner, klima eller produksjoner.
+    \item Foreslå tiltak for å koble tvillingen til forsyningskjeder, finansiering og sensorinnovasjon.
+    \item Beskriv indikatorer som viser når tvillingen er klar for å inngå i landsdekkende samarbeidsprosjekter.
+\end{itemize}
+
+\subsection{Batteriverdikjede – Giga Arctic i Mo i Rana}
+\paragraph{Sammendrag av caset}
+\begin{tabular}{p{0.34\textwidth}p{0.60\textwidth}}
+\textbf{Element} & \textbf{Beskrivelse / spørsmål som skal besvares} \\
+Virksomhet og lokasjon & Hvilke anlegg og partnere inngår i Mo Industripark? \\
+Strategisk hovedmål & Hvordan skal tvillingen støtte oppskalering, kvalitet og bærekraft? \\
+Omfang & Hvilke produksjonslinjer, laboratorier og logistikkprosesser er inkludert? \\
+Utgangspunkt & Hvilke systemer og datakilder fantes før Giga Arctic-programmet ble igangsatt? \\
+\end{tabular}
+
+\paragraph{Forretningsmål og interessenter}
+\begin{itemize}
+    \item Beskriv målbildet til FREYR Battery, energiselskap, logistikkpartnere og offentlige virkemidler.\citep{freyr2024giga,enova2023batteri}
+    \item Angi hvordan kundenes krav til karbonavtrykk og kvalitet styrer prioriteringer.
+    \item Definer KPI-er for produksjonskapasitet, first-pass yield, energibruk og CO$_2$-intensitet.
+\end{itemize}
+
+\paragraph{Datagrunnlag og integrasjon}
+\begin{itemize}
+    \item Kartlegg datakilder i råvarelogistikk, produksjonslinjer, laboratorier, energisystem og forsyningskjede.
+    \item Beskriv integrasjoner mellom OT-systemer (OPC UA, PLC) og datasjø/analyseløsninger, samt hvordan data deles i dataspace.\citep{gaiax2023architecture}
+    \item Dokumenter krav fra EUs batteriforordning og norske støtteprogrammer til rapportering og sporbarhet.\citep{eu2023batteryregulation,enova2023batteri}
+\end{itemize}
+
+\paragraph{Modelleringsstrategi}
+\begin{itemize}
+    \item Forklar hvordan prosessimulering, energibalansesimulering og kvalitetsprognoser kombineres.
+    \item Beskriv kalibrering mot laboratoriedata og produksjonsstatistikk, samt håndtering av usikkerhet i nye produksjonsserier.
+    \item Vurder behov for AI-modeller i produksjonsoptimalisering og vedlikehold.
+\end{itemize}
+
+\paragraph{Implementering og arbeidsprosesser}
+\begin{itemize}
+    \item Dokumenter hvordan tvillingen brukes i daglig drift, kvalitetsstyring og samarbeid med energipartnere.
+    \item Beskriv opplæringsprogrammer for operatører, dataanalytikere og leverandører.
+    \item Forklar hvordan versjonsstyring, datasikkerhet og revisjoner gjennomføres i dataspace og styringsmodeller.
+\end{itemize}
+
+\paragraph{Resultater, gevinster og gevinstrealisering}
+\begin{itemize}
+    \item Oppgi gevinster for energioptimalisering, yield, vedlikehold og bærekraftsrapportering.
+    \item Beskriv hvordan gevinster dokumenteres gjennom interne dashboards og rapportering til myndigheter og kunder.
+    \item Noter sekundære effekter som kompetanseheving, industrisamarbeid og nye forretningsmodeller.
+\end{itemize}
+
+\paragraph{Overføringsverdi og neste steg}
+\begin{itemize}
+    \item Vurder hvordan løsningen kan gjenbrukes i andre batteriprosjekter eller prosessindustrier.
+    \item Definer tiltak for å koble tvillingen til europeiske dataspace-initiativer og leverandørkjeder.
+    \item Foreslå indikatorer for når tvillingen bør utvides med nye produktlinjer eller geografiske lokasjoner.
+\end{itemize}
+
+\subsection*{Felles sjekkliste for caserapporten}
+\begin{itemize}
+    \item[$\square$] Er mål, interessenter og scope tydelig dokumentert med kobling til gevinstplanen?
+    \item[$\square$] Er datakilder, integrasjoner og dataspace-policyer beskrevet med ansvar og kvalitetstiltak?
+    \item[$\square$] Er modelleringsvalg, kalibrering og scenarioer forklart med tilhørende begrensninger?
+    \item[$\square$] Er arbeidsprosesser, opplæring og governance definert med tydelige roller?
+    \item[$\square$] Er gevinster og målemetoder forankret i KPI-er og vurderingsmatrisen?
+    \item[$\square$] Er læringspunkter og neste steg formulert slik at fagfeller kan følge opp?
+\end{itemize}
+
+\subsection*{Eksempler på norske casetilpasninger}
 \paragraph{Digital tvilling av kraftnett i Nord-Norge}
-Statnett og regionale nettselskaper samarbeider om å modellere flaskehalser i kraftnettet mellom Ofoten og Finnmark. Når casemalen brukes på dette prosjektet, bør du beskrive hvordan værdata, planlagte industrietableringer og driftsmønstre fra vann- og vindkraft integreres. Vurder også hvordan tvillingen støtter dialogen med NVE og lokalsamfunn.
+Statnett og regionale nettselskaper samarbeider om å modellere flaskehalser i kraftnettet mellom Ofoten og Finnmark. Når en av malene i denne seksjonen brukes, bør du beskrive hvordan værdata, planlagte industrietableringer og driftsmønstre fra vann- og vindkraft integreres, og hvordan tvillingen støtter dialogen med NVE og lokalsamfunn.
 
 \paragraph{Jernbanedrift og vedlikehold hos Bane NOR}
-En digital tvilling av jernbanestrekningen mellom Oslo og Lillehammer kombinerer BIM-modeller, sensordata fra spor og sanntidssignaler fra togene. Ved å følge malen kan du dokumentere hvordan operasjonssentralen, entreprenører og leverandører samarbeider om vedlikeholdsvinduer, og hvordan simuleringer brukes til å planlegge nye ruteoppsett.
+En digital tvilling av jernbanestrekningen mellom Oslo og Lillehammer kombinerer BIM-modeller, sensordata fra spor og sanntidssignaler fra togene. Malstrukturen hjelper deg å dokumentere hvordan operasjonssentralen, entreprenører og leverandører samarbeider om vedlikeholdsvinduer og hvordan simuleringer brukes til å planlegge nye ruteoppsett.
 
 \paragraph{Virtuell pasientflyt i spesialisthelsetjenesten}
-Helse Sør-Øst prøver ut digitale tvillinger for å koordinere pasientflyt i kreftbehandling. Malen hjelper deg å tydeliggjøre hvilke kliniske datasett som inngår, hvordan algoritmer foreslår behandlingsplaner og hvordan pasienter får informasjon. Etisk vurdering, datasikkerhet og samtykkeprosesser må dokumenteres grundig.
+Helse Sør-Øst prøver ut digitale tvillinger for å koordinere pasientflyt i kreftbehandling. Malen tydeliggjør hvilke kliniske datasett som inngår, hvordan algoritmer foreslår behandlingsplaner og hvordan pasienter får informasjon. Etisk vurdering, datasikkerhet og samtykkeprosesser må dokumenteres grundig.
 
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}
-    \item \textbf{Analyse av eksisterende case:} Velg ett av caseeksemplene ovenfor eller et eget norsk prosjekt. Bruk casemalen til å skrive en kort rapport (2--3 sider) der du vurderer modenhet, måloppnåelse og hvilke ytterligere datakilder som kan styrke tvillingen.
-    \item \textbf{Planlegging av nytt initiativ:} Sett sammen et tverrfaglig team (for eksempel prosessingeniør, data scientist og driftsleder) og lag et arbeidsnotat som beskriver hvordan dere vil samle data, utvikle modeller og organisere forvaltning for et nytt case i deres sektor.
-    \item \textbf{Tverrsektoriell overføring:} Sammenlign to sektorer, for eksempel kraft og bygg. Lag en tabell som viser hvilke komponenter i casemalen som er direkte overførbare, hvilke som må tilpasses, og foreslå tiltak for å gjenbruke modeller eller datagrunnlag.
-    \item \textbf{Refleksjon over etikk og verdiskaping:} Diskuter i grupper hvordan personvern, arbeidsmiljø og bærekraft bør ivaretas når tvillinger skaleres. Bruk notater fra de tre foregående oppgavene og oppdater casemalen med konkrete risikoreduserende tiltak.
+    \item \textbf{Analyse av eksisterende case:} Velg ett av caseeksemplene ovenfor eller et eget norsk prosjekt. Bruk casemalene i \autoref{sec:case-maler-prioriterte-sektorer} til å skrive en kort rapport (2--3 sider) der du vurderer modenhet, måloppnåelse og hvilke ytterligere datakilder som kan styrke tvillingen.
+    \item \textbf{Planlegging av nytt initiativ:} Sett sammen et tverrfaglig team (for eksempel prosessingeniør, data scientist og driftsleder) og lag et arbeidsnotat som beskriver hvordan dere vil samle data, utvikle modeller og organisere forvaltning for et nytt case i deres sektor ved å følge strukturen i \autoref{sec:case-maler-prioriterte-sektorer}.
+    \item \textbf{Tverrsektoriell overføring:} Sammenlign to sektorer, for eksempel kraft og bygg. Lag en tabell som viser hvilke komponenter i casemalene som er direkte overførbare, hvilke som må tilpasses, og foreslå tiltak for å gjenbruke modeller eller datagrunnlag.
+    \item \textbf{Refleksjon over etikk og verdiskaping:} Diskuter i grupper hvordan personvern, arbeidsmiljø og bærekraft bør ivaretas når tvillinger skaleres. Bruk notater fra de tre foregående oppgavene og oppdater relevante casemaler med konkrete risikoreduserende tiltak.
 \end{enumerate}

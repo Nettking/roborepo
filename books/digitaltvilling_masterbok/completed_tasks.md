@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-17: Fordypet havvind-, landbruks- og battericase i Kapittel 8 med tabeller for datakilder og styringsspor, etablerte casemaler for prioriterte sektorer og oppdaterte plan-, kilde- og statusfiler.
 - `FERDIG` – Leveranse for DT-16: Skrev livssyklusfortellinger fra Statnett, Statsbygg og Hydro, laget governance-sammenligningstabell og bærekraft-KPI-tabell, og oppdaterte plan- og statusfiler for Kapittel 7.
 - `FERDIG` – Leveranse for DT-15: Utvidet Kapittel 6 med standardkart, kontrolltårn-case og arbeidsflyt for usikkerhet, la til nye kilder i `support/referanser.bib`, oppdaterte `plan.md` og synkroniserte oppgavestatus i `task_queue.md`.
 - `FERDIG` – Leveranse for DT-14: Beskrev hybrid læringssløyfe for sky og edge, la inn laboratorierubrikker, oppdaterte industripuls med norske caser og registrerte nye kilder i `support/referanser.bib`; synkroniserte `plan.md`, `support/larerveiledning.tex` og `task_queue.md`.
