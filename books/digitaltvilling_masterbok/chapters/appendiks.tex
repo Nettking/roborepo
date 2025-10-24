@@ -139,6 +139,32 @@ etterprøvbarhetsloggen.
     \item Er dokumentasjonen versjonert i prosjektets repo, inkludert referanse til modellkode, datakilder og beslutningslogg?
 \end{enumerate}
 
-Arbeidsarkene er ment å brukes fleksibelt: tilpass rekkefølge, kolonneoverskrifter og detaljer
-etter sektor og modenhetsnivå. Bevar likevel kjerneelementene slik at fagteam og fagfeller kan
-sammenligne leveranser på tvers av grupper.
+\section{Regelverksoversikt for nøkkelsektorer}
+Digitale tvilling-prosjekter må forholde seg til sektorvise regelverk, standarder og tilsynsformer.
+Tabellen nedenfor fungerer som et arbeidsark for å koble prosjektets kravdokumentasjon til
+rammeverkene som omtales i Kapittel~6 om validering og Kapittel~7 om styring. Kolonnene kan fylles
+ut med egne kommentarer eller lenker til organisasjonens styringssystem.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Nøkkelregelverk og krav for digitale tvillinger i utvalgte sektorer}
+    \label{tab:appendiks-regelverk}
+    \begin{tabular}{p{3.0cm}p{4.8cm}p{4.8cm}p{3.0cm}}
+        \toprule
+        \textbf{Sektor} & \textbf{Relevante regelverk og standarder} & \textbf{Konsekvenser for digital tvilling} & \textbf{Dokumentasjon og tilsyn} \\
+        \midrule
+        Energi og kraft & NIS2, IEC~62443 og Energi Norge sin veileder for kontrolltårn\citep{eu2022nis2,iec62443-2-1,energinorge2023beredskap} & Krever segmentering av OT/IT, hendelsesrapportering og testbare sikkerhetskontroller i modell- og datastrømmer. & Lever dokumenterte tilsynslogger, standardkart og beredskapsøvelser til NVE og virksomhetens kvalitetsteam. \\
+        \addlinespace
+        Helse og velferd & AI-forordningen, Norm for informasjonssikkerhet og helseberedskapsplaner\citep{eu2024aiact,norm2023,helsedir2023beredskap} & Forutsetter risikoklassifisering av tjenester, tydelig menneskelig tilsyn og sporbarhet for data og beslutninger. & Oppdater kvalitetsjournal, modelljournal og beredskapslogger for revisjon av Datatilsynet og statsforvalter. \\
+        \addlinespace
+        Maritim transport & Regelverk for autonome fartøy og maritime sikkerhetsstandarder\citep{sdir2023autonomefartoy,dnv2024autonomous,massterly2023operations} & Krever kontinuerlig modellvalidering mot sjøfartsregler, sporbar testing og dokumenterte avviksprosedyrer for fjernoperasjon. & Del revisjonslogg og operasjonsprotokoller med Sjøfartsdirektoratet, klasseselskap og rederiets beredskapsråd. \\
+        \addlinespace
+        Kommunal beredskap & Veiledere for overvann, beredskap og kommunale tiltaksplaner\citep{nve2022kommunal,dsb2022beredskap,oslo2023overvann} & Krever kobling mellom simuleringer, tiltakslister og dokumentasjon av samfunnskritiske funksjoner i krisescenarier. & Arkiver scenariojournal, beslutningslogg og koordinering med beredskapskoordinator for kommunale revisjoner. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Bruk oversikten sammen med arbeidsarkene over for å sikre at krav fra sikkerhet, personvern og
+beredskap fanges opp i prosjektplanene. Tilpass rekkefølge, kolonneoverskrifter og detaljer etter
+sektor og modenhetsnivå, men bevar kjerneelementene slik at fagteam og fagfeller kan sammenligne
+leveranser på tvers av grupper.
