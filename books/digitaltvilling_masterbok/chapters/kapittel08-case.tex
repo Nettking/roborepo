@@ -191,7 +191,31 @@ Når casemalen fylles ut, bør du beskrive hvordan den kommunale tvillingen kobl
 \end{itemize}
 
 \subsection*{Helse}
-Helse Vest og Universitetssykehuset i Oslo eksperimenterer med pasientspesifikke tvillinger for kreftbehandling, kirurgisk planlegging og rehabilitering. Malen gir struktur for å beskrive hvordan kliniske data, bildediagnostikk og simuleringer integreres, hvilke etiske vurderinger som gjøres, og hvordan pasienter og fagpersonell involveres i beslutninger.
+Helse Vest og Universitetssykehuset i Oslo eksperimenterer med pasientspesifikke tvillinger for kreftbehandling, kirurgisk planlegging og rehabilitering. Malen gir struktur for å beskrive hvordan kliniske data, bildediagnostikk og simuleringer integreres, hvilke etiske vurderinger som gjøres, og hvordan pasienter og fagpersonell involveres i beslutninger. I pilotcaset for virtuell pasientflyt kobles valideringsløpet til Helseplattformens kontinuitetsplan for å sikre at dataflyt, arbeidsprosesser og beredskap synkroniseres mellom sykehus og kommunale tjenester.\citep{helseplattformen2023kontinuitet}
+
+En helsetvilling bygger på en nasjonal dataspace-arkitektur som muliggjør styrt tilgang til sanntidskapasitet, laboratorieresultater og pasientlogistikk uten å kompromittere personvernet.\citep{nhn2024dataspace} Når casemalen fylles ut bør du beskrive hvordan tvillingen overholder helseberedskapskrav, og hvordan kontrolltårnene for drift, pasientsikkerhet og forskning samarbeider.\citep{hod2020beredskap} Dokumentasjonen skal vise hvordan data fra kliniske kjernesystemer, digitale hjemmeoppfølgingstjenester og velferdsteknologi bindes sammen slik at pasientforløp og ressursdisponering kan simuleres.\citep{helsedir2020dho}
+
+\begin{table}[h]
+    \centering
+    \caption{Kontrollpunkter for virtuell pasientflyt i helsetvilling}
+    \label{tab:helse-pasientflyt}
+    \begin{tabular}{p{3.4cm}p{4.7cm}p{4.6cm}}
+        \toprule
+        Fase & Kritiske datakilder & Kontrollspørsmål for styring \\
+        \midrule
+        Kapasitetsplanlegging & Operasjonsplaner, sengeposter, ventelister & Hvordan varsles endringer i kapasitet, og hvilke beslutningsfora håndterer eskalering? \\
+        Klinisk koordinering & Kliniske kjernejournaler, laboratoriedata, beslutningsstøtte & Er algoritmene verifisert mot etisk komité og tredjepartskrav før anbefalinger tas i bruk?\citep{ehelse2024tilsyn} \\
+        Beredskap og læring & Kontinuitetsplaner, hendelseslogger, opplæringsdata & Hvordan sikres internkontroll og etterlevelse av tilsynskrav etter hendelser eller øvelser?\citep{helsetilsynet2024internkontroll} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item Kartlegg datautveksling og tilgangspolicyer i dataspace-portalen, og dokumenter hvordan roller og samtykker forvaltes i tråd med Norm for informasjonssikkerhet.\citep{nhn2024dataspace,norm2023}
+    \item Test caset mot beredskapsplanen og kontinuitetsrutinene slik at scenarier for massetilstrømming og nedetid kan simuleres før pilotundervisningen.\citep{hod2020beredskap,helseplattformen2023kontinuitet}
+    \item Oppdater vurderingsnotatet med kontrollspørsmål fra veiledere for digital hjemmeoppfølging og tredjepartsvurdering, og koble funnene til Kapittel~6 sine valideringskrav.\citep{helsedir2020dho,ehelse2024tilsyn}
+    \item Registrer forbedringstiltak i kvalitetsjournalen og fagfelleloggen slik at internkontrollen viser hvordan caset følger opp tilsyn og læring.\citep{helsetilsynet2024internkontroll}
+\end{itemize}
 
 \section{Metodikk for caseanalyse}
 For å sammenligne case på tvers av sektorer, start med å beskrive hvorfor tvillingen ble etablert, hvilke forutsetninger som må være til stede og hvordan resultatene måles. Det kan være nyttig å kombinere casemalen med intervjuer, offentlige rapporter og tekniske arkitekturdokumenter. Et helhetlig rammeverk bør dekke mål, omfang, teknologivalg, organisering og dokumenterte effekter.
