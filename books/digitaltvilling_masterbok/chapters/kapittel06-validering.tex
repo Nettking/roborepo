@@ -1084,6 +1084,39 @@ Tabell~\ref{tab:kommunal-overvaking} strukturerer et overvåkingsprogram som bin
 
 For å holde oversikten operasjonell bør kommunen standardisere en månedsrapport som kombinerer tabellen med hendelsesstatistikk og læringspunkter. Rapporten kan behandles i samme møte som drift av vann- og avløpssystemet og oppfølging av byutviklingsprosjekter, slik \citet{oslo2023overvann} praktiserer. Neste steg er å koble overvåkingen til automatiske varslingsregler og tiltaksplaner i dataspace-løsningen fra Kapittel~3, slik at hendelser i felt umiddelbart trigges som oppgaver i styringssystemet.
 
+\section{Tverrsektorielt rapporteringspanel for energi og helse}
+Dataspace-pilotene viser at energi- og helsesektorene må dele måledata, tiltaksjournaler og hendelseslogger i samme beslutningsmøter for å håndtere samtidige kriser. Totalberedskapskommisjonen og Direktoratet for samfunnssikkerhet og beredskap understreker at slike tverrsektorielle øvelser trenger felles indikatorer og rapporteringskanaler.\citep{dsb2023totalberedskap,dsb2024nser} Samtidig etterspør både Energi Norge og Helsedirektoratet at styringssystemet dokumenterer hvordan kontrolltårn, kliniske beslutningsstøtter og dataspace-portaler bruker like terskler for varsel, eskalering og lukking av tiltak.\citep{energinorge2023beredskap,helsedir2023beredskap} Når rapporteringen bygger på samme struktur blir det enklere å vise helhetlig etterlevelse av NIS2, helseberedskapskrav og kommunal beredskapsplikt.
+
+Et praktisk grep er å etablere et felles rapporteringspanel som henter tall direkte fra indikatorpanelene i dette kapittelet, tiltaksloggen fra Kapittel~7 og dataspace-kontraktene fra Kapittel~3. Panelet kan møte månedlig og bruke tabellen under som sjekkliste for hvilke datapunkter som må oppdateres før rapportering til partnerne. Hver rad kobler en energiindikator til en helsemotsvarighet og peker på ansvarlig rolle og kanal for deling.
+
+\begin{table}[ht]
+    \centering
+    \caption{Felles rapporteringspanel for energi- og helsecaser}
+    \label{tab:tverrsektorielt-panel}
+    \begin{tabular}{|p{3.0cm}|p{4.5cm}|p{4.5cm}|p{3.2cm}|}
+        \hline
+        \textbf{Fokusområde} & \textbf{Energiindikator og kilde} & \textbf{Helseindikator og kilde} & \textbf{Rapporteringskanal og ansvar} \\
+        \hline
+        Hendelsesrespons & Varslingstid fra kontrolltårn-panelet, hendelseslogg fra energiselskapets dataspace \citep{energinorge2023beredskap,nhn2024dataspace} & Tidsbruk fra triage til klinisk beslutning, eskaleringer i helsedataspace-portalen \citep{helsedir2023beredskap,helseplattformen2023kontinuitet} & Felles beredskapsmøte ledet av beredskapsleder og akuttleder, deling i samvirkeportal \\
+        \hline
+        Modellpresisjon og kapasitet & Avvik mellom simulert og faktisk effekt i energimodelljournalen, scenarioresultater fra hydrogen- og vinterdriftscase & Avvik mellom planlagt og faktisk sengekapasitet i pasientlogistikk, læringsnotat fra helseøvelser & Kvartalsrapport til valideringspanelet, ansvar: programleder digital tvilling \\
+        \hline
+        Datasporing og tilgang & Revisjonslogg for dataspace-kontrakter, tilgangsstyring testet mot NIS2-krav \citep{digdir2024samstyring,dsb2024nser} & DPIA-oppdateringer og tilgangslogg fra kliniske systemer, vurdert mot Normen og helselovgivning \citep{helsedir2023beredskap,helseplattformen2023kontinuitet} & Månedlig kvalitetsforum med data steward og personvernombud, referat i kvalitetsjournal \\
+        \hline
+        Bærekraft og gevinst & Energireduksjon og utslippsindikatorer fra ESRS-rapporteringen, tiltak i porteføljestyringen & Pasientutfall og ressursforbruk i læringssløyfen for helsetvilling, koblet til bærekraftsrapport for klinikken & Felles gevinstmøte med bærekraftsteam og klinisk ledelse, publisering i dataspace-dashboard \citep{efrag2023esrs,dsb2023totalberedskap} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+For å holde panelet operativt bør rapporteringssyklusen følge tre steg:
+\begin{enumerate}
+    \item \textbf{Samle måledata og beslutninger:} Data steward henter indikatorverdier fra energikontrolltårnet og helsedataspace-portalen, og lagrer dem i kvalitetsjournalen før møtet.\citep{nhn2024dataspace}
+    \item \textbf{Koble tiltak til ansvar:} Beredskapsleder og akuttleder gjennomgår tabellen, identifiserer avvik og oppdaterer tiltaksloggen fra Kapittel~7 med ansvarlig rolle og frister.
+    \item \textbf{Dele læringspunkter:} Programleder publiserer sammendrag i dataspace-portalen og fagfelleloggen, slik at partnerne kan gjenbruke tiltakene i egne øvelser og revisjoner.\citep{digdir2024samstyring,dsb2024nser}
+\end{enumerate}
+
+Når rapporteringspanelet blir en del av undervisningslaboratoriet kan studentgrupper få ansvar for hver rad i tabellen. De må da hente data fra både energi- og helsecasene, fylle ut kvalitetsjournalen og presentere forbedringsforslag i fellesmøtet. Slik lærer de å operere på tvers av domener, samtidig som virksomheten får et konkret rammeverk for å dokumentere tverrsektoriell beredskap og gevinstrealisering.
+
 \section{Regulatoriske rammer og sikkerhetsstandarder}
 Fagfellepanelet etterspurte en tydelig kobling mellom kvalitetsprosessen og de regulatoriske rammene som gjelder for norske virksomheter. NIS2-direktivet og IEC~62443-serien definerer krav til cybersikkerhet, hendelseshåndtering og styring av industrielle kontrollsystemer, mens DNV-RP-A204 beskriver hvordan digitale tvillinger skal kvalifiseres i sikkerhetskritiske domener.\citep{eu2022nis2,iec62443-2-1,dnv2021a204} Disse rammeverkene krever at valideringsplanen dokumenterer både tekniske og organisatoriske tiltak, med klar oversikt over ansvar og godkjenninger.
 
