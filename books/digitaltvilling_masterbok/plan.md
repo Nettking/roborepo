@@ -52,6 +52,7 @@ Omfangstallene under er beregnet ved å kjøre en enkel ordtelling (LaTeX-komman
 - Gjennomføre månedlig revisjon av `task_queue.md` og `support/oppgavetavle.md` i henhold til den nye rutinen med forberedelses-, beslutnings- og publiseringsdager.
 - Sørge for at tavlemøtet dokumenteres i `support/fagfellelogg.csv` med beslutninger, ansvarlige og eventuelle behov for illustrasjoner eller kilder.
 - Evaluere sjekklisten etter første iterasjon og justere kalenderpåminnelser for høstsemesterets sprintplan.
+- Etter bibliografirevisjonen (DT-BUG-08) er `support/referanser.bib` ryddet; legg inn automatisk BibTeX-validering i neste kvalitetssikringsrunde for å fange tilsvarende feil tidlig.
 
 ## Omfangsmål og læringsmål per kapittel
 
