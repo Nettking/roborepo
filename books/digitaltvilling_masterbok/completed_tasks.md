@@ -4,6 +4,8 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-92: Utarbeidet avviksanalyse for dataspace-kvalitetsjournalen med arbeidsflyt, tallfestet avviksmatrise og oppdatert planstatus for koordinering mot tiltakslogg og kvartalsrapport. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
+
 - `FERDIG` – Leveranse for DT-91: Etablerte auditplan for dataspace-valideringspanelet med revisjonsfaser, tabell og undervisningsopplegg, og oppdaterte plan-, tavle- og kildefiler for å støtte kvartalsvise revisjoner. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-90: Dokumenterte LLM-baserte operatørassistenter med evalueringskriterier og styringsrutiner, og oppdaterte plan-, tavle- og kildefiler for å koordinere med validerings- og governancekapitlene. (`chapters/kapittel05-ai.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-89: La inn seksjon for kommunal tilgangsstyring og dataminimering med tabell og case i Kapittel 3, og oppdaterte plan-, tavle- og kildefiler for å synkronisere mot validerings- og sandkassearbeidet. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)

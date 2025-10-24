@@ -149,6 +149,42 @@ Tabell~\ref{tab:kvartalsrapport} viser et eksempel på utdrag fra kvartalsrappor
 
 Rapporten blir et felles beslutningsgrunnlag for videre pilotering. Når tallene deles i dataspace-portalen får partnerne innsikt i hvilke tiltak som fungerer, og planfilen kan oppdateres med neste steg for hvert case. I undervisningen bruker studentene formatet til å øve på å formulere forbedringshypoteser, argumentere for investeringer og dokumentere effekter i gevinstplanen.
 
+\section{Avviksanalyse og tiltakssporing i kvalitetsjournalen}
+Selv med solide indikatorpakker vil kvartalsrapporten avdekke avvik som må behandles systematisk. Internkontrollforskriften og DFØ sine anbefalinger krever at virksomheter dokumenterer både årsak, konsekvens og korrigerende tiltak før avvik kan lukkes.\citep{dfo2024internkontroll} For dataspace-piloter må analysen knytte modellresultater til kontraktsfestede kvalitetsnivåer slik at både leverandører og offentlige partnere kan vise etterlevelse av styringsmodellen i Kapittel~7.
+
+Prosessen bygger videre på modelljournalen og dataspace-operasjonene som allerede er etablert i laboratoriet. Når måledata og simuleringer registreres med versjonslenker kan hvert avvik kobles til konkrete endringer i modellparametere, hendelser eller datakilder.\citep{digdir2023modelljournal,idsa2023operational} Det gir et spor som dataspace-operatøren kan dele med partnere i tråd med sanntidsdataveilederen og kravene til samstyring fra Digitaliseringsdirektoratet.\citep{digdir2024sanntidsdata,digdir2024samstyring}
+
+En praktisk arbeidsflyt følger fire steg:
+\begin{enumerate}
+    \item \textbf{Kategoriser avviket:} Klassifiser hendelsen som modellavvik, datakvalitetsavvik, prosessavvik eller bærekraftsavvik og registrer den med referanse til indikatorpanelet.
+    \item \textbf{Analyser årsak:} Bruk modelljournalen og kvalitetsjournalen til å spore parameterendringer, datakilder og ansvarlige roller. Samkjør funnene med hendelsesloggen for å se om avviket skyldes hendelser eller planlagte endringer.
+    \item \textbf{Planlegg tiltak:} Definer korrigerende tiltak, ansvarlig rolle og frist, og koble tiltaket til gevinstplanen og tiltaksloggen fra Kapittel~7 slik at effekten følges opp.\citep{digdir2022gevinst}
+    \item \textbf{Verifiser lukking:} Test modellen eller prosessen på nytt, dokumenter resultatet og godkjenn lukking i valideringspanelet før status endres til lukket i dataspace-portalen.
+\end{enumerate}
+
+Tabell~\ref{tab:avviksanalyse} gir et eksempel på hvordan masterstudentene kan tallfeste og følge opp avvik i laboratoriet. Tersklene knyttes til indikatorene i kvartalsrapporten slik at fremdriften kan spores i samme rapporteringspakke.
+
+\begin{table}[ht]
+    \centering
+    \caption{Avviksmatrise for dataspace-validering}
+    \label{tab:avviksanalyse}
+    \begin{tabular}{|p{3.4cm}|p{4.4cm}|p{4.0cm}|p{3.6cm}|}
+        \hline
+        \textbf{Avvikstype} & \textbf{Trigger og målt verdi} & \textbf{Korrigerende tiltak} & \textbf{Sporing og lukking} \\
+        \hline
+        Modellpresisjon & Avvik \textgreater{} 7\% mellom simulering og feltdata i tre måleserier & Revider kalibrering, oppdater modellparametere og gjennomfør ekstra verifikasjon med fageier & Nye testresultater lastes opp i modelljournalen og signeres av valideringspanelet \\
+        \hline
+        Datakvalitet & Metadatafullstendighet faller til 94\% for et kritisk dataprodukt & Data steward kompletterer metadata, oppdaterer kontraktskrav og dokumenterer kvalitetssikringsplan & Dataspace-portalen viser lukket status når komplett metadata er verifisert av partnerne \\
+        \hline
+        Prosess etterlevelse & Varslingstid i hendelsesprosessen overstiger 20 minutter i to øvelser & Oppdatere responsskript, trene teamet og automatisere eskaleringsvarsel i portalen & Hendelsesloggen viser normalisert responstid i neste øvelse og lukkes av beredskapsleder \\
+        \hline
+        Bærekraft og gevinst & Energireduksjon i pilotporteføljen faller til 3,5\% mot mål 4,0\% & Tiltakslogg prioriterer energieffektivisering, ansvarlig følger opp investeringsplan og rapporterer gevinst & Kvartalsrapporten viser korrigert trend og gevinstansvarlig signerer lukking \citep{dfo2023baerekraft} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Avviksmatrisen gjør det tydelig hvilke tiltak som gir raskest effekt, og hvordan studenter kan dokumentere forbedringene i både kvalitetsjournal, tiltakslogg og gevinstrapport. Når lukking signeres av valideringspanelet får dataspace-partnerne et revidert beslutningsgrunnlag før de eventuelt skalerer tvillingen videre.
+
 \section{Scenariobasert stresstesting for hydrogenknutepunkt}
 Utbygging av hydrogenknutepunkt i Norge kombinerer produksjon, lagring, bunkring og distribusjon til maritim og landbasert transport.\citep{enova2024hydrogenknutepunkt} Digitale tvillinger brukes for å dimensjonere anlegget, koordinere logistikk og dokumentere sikkerhetstiltak, men komplekse verdikjeder gjør at både energiselskaper, nettoperatører og havner må samordne risikobilde og beredskap.\citep{gassco2023hydrogen,dnv2023hydrogenforecast} For å sikre at modellene tåler forstyrrelser må kapittel 4 sitt hydrogenknutepunkt-case suppleres med en strukturert stresstest i valideringsløpet.
 
