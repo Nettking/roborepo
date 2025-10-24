@@ -7,7 +7,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 
 | Del | Kapittel | Status | Neste steg |
 | --- | -------- | ------ | ---------- |
-| I | Kapittel 1 | Utvidet med detaljert historisk tidslinje, norske politiske koblinger og caser. | Dele fagfellepakke med ferdig tidslinje (`support/figurer/kilder/kap01-tidslinje-v1.tikz`), tabeller og nye kilder, og bekrefte at figurstiene fungerer fra `main.tex`. |
+| I | Kapittel 1 | Utvidet med detaljert historisk tidslinje, norske politiske koblinger og caser. | Dele fagfellepakke med tekstlig tidslinje (TikZ er fjernet), tabeller og nye kilder, og bekrefte at kapittelet fortsatt gir helhetlig historikk uten grafikkavhengigheter. |
 | I | Kapittel 2 | Utvidet med flerfidelitetscase, metodetabeller og modellforvaltningskrav i tillegg til politiske rammer. | Pilotere metode- og dokumentasjonstabeller i workshop og samle fagfelleinnspill før neste revisjon. |
 | I | Kapittel 3 | Supplert med sirkulærøkonomi, materialsløyfefigur og to datadrevne caser. | Samordne sirkulærøkonomi-innspill med grafikk- og datastyringsteamet før fagfelleutsending. |
 | II | Kapittel 4 | Helhetlig utkast om simuleringsmetoder, analyser og fjernvarmecase. | Planlegg fagfellelesing og identifiser behov for ekstra figurer eller eksempler. |
@@ -160,9 +160,9 @@ Anslagene nedenfor tar utgangspunkt i 400 ord per side og supplerer statusoversi
 ## Del I: Fundamentet
 
 1. **Kapittel 1 – Introduksjon til digitale tvillinger**
-   - Status: Utvidet med tidslinjefigur, utdypet milepælbeskrivelser og caser fra Johan Sverdrup og Trondheim bylab.
+   - Status: Utvidet med tekstlig tidslinje (TikZ-varianten er fjernet), utdypet milepælbeskrivelser og caser fra Johan Sverdrup og Trondheim bylab.
    - Læringsmål: Forstå grunnbegreper, historikk og sentrale drivere.
-   - Forfatteroppgaver (neste steg): Distribuere fagfellepakke med nye tabeller og kildehenvisninger, samt verifisere alt-tekst og metadata mot grafikkarkivet.
+   - Forfatteroppgaver (neste steg): Distribuere fagfellepakke med nye tabeller og kildehenvisninger, og dokumentere hvordan den tekstlige tidslinjen skal visualiseres når grafikkmiljøet er stabilt.
    - Fagfelleplan: Fagfellepakke sendes 27.05 (Ingrid Lunde), digital gjennomgang 03.06 med Equinor og NTNU, tiltaksmøte i redaksjonen 07.06 for prioritering.
    - Studentaktivitet: Kort refleksjon over egen fagbakgrunn og relevans.
 
@@ -174,10 +174,10 @@ Anslagene nedenfor tar utgangspunkt i 400 ord per side og supplerer statusoversi
    - Studentaktivitet: Bruk tabellen til å foreslå modellportefølje for egen case og skrive en kort modelljournal som begrunner valgene.
 
 3. **Kapittel 3 – Data, integrasjon og infrastruktur**
-   - Status: Supplert med sirkulærøkonomi-seksjon, materialsløyfefigur og caser fra Hydro CIRCAL og Statsbygg/Loopfront.
+   - Status: Supplert med sirkulærøkonomi-seksjon, tekstlige beskrivelser av datapipeline og materialsløyfe samt caser fra Hydro CIRCAL og Statsbygg/Loopfront.
    - Læringsmål: Forstå dataflyt, integrasjonsmønstre og plattformvalg.
-   - Forfatteroppgaver (neste steg): Samordne med sirkulærøkonomi-teamet, oppdatere fagfellenotatet DI-03 med nye indikatorer og sikre at nye figurer er registrert i metadataarkivet.
-   - Notat: Alt-tekst og metadata for figuren ligger i `support/figurer/metadata/kap03-datapipeline-v2.alt.md`, og tiltakene er synkronisert med `support/illustrasjonsplan.md`.
+   - Forfatteroppgaver (neste steg): Samordne med sirkulærøkonomi-teamet, oppdatere fagfellenotatet DI-03 med nye indikatorer og sikre at tekstlige beskrivelser samsvarer med illustrasjonsplanen.
+   - Notat: Tidligere TikZ-figurer (`kap03-datapipeline-v2` og `kap03-sirkular-dataflyt-v1`) er parkert; metadata beholdes i `support/figurer/metadata/` for senere grafisk revisjon dersom kompilasjonsmiljøet tillater det.
    - Studentaktivitet: Kartlegge data- og systemkrav for en case.
 
 ## Del II: Metodikk og verktøy
@@ -316,7 +316,7 @@ aene i boken.
 | Uke | Kapitler | Intern ansvarlig | Industriell fagfelle | Akademisk fagfelle | Leveranse |
 | --- | -------- | ---------------- | -------------------- | ------------------ | --------- |
 | 1 | Kapittel 1–2 | Ingrid Lunde (redaksjon) | Equinor – leder for digitale tvillinger | NTNU – førsteamanuensis i industriell digitalisering | Notat med begrepsavklaringer og caseutvidelser |
-| 2 | Kapittel 3–4 | Ahmed Solheim (teknisk redaktør) | Kongsberg Digital – produkteier for Kognitwin | SINTEF Digital – seniorforsker innen simulering | Sammendrag av datakvalitetskrav, datapipeline-figur v2 (med alt-tekst) og øvrige illustrasjoner |
+| 2 | Kapittel 3–4 | Ahmed Solheim (teknisk redaktør) | Kongsberg Digital – produkteier for Kognitwin | SINTEF Digital – seniorforsker innen simulering | Sammendrag av datakvalitetskrav, tekstlige beskrivelser av datapipeline/materialsløyfe og behov for ny illustrasjon |
 | 3 | Kapittel 5–6 | Nora Aas (AI-ansvarlig) | Cognite – principal data scientist | Universitetet i Stavanger – professor i modellbasert overvåking | Matrise for algoritmevalg, usikkerhet og etikk |
 | 4 | Kapittel 7–9 | Leif Ødegaard (programledelse) | Statnett – leder for digitaliseringsprogram | Universitetet i Agder – faggruppeleder i prosjektstyring | Tiltakslogg for governance, sektorcase og forskning |
 | 4 | Appendiks, ordliste, lærerveiledning | Astrid Hauge (støtteredaktør) | Aker Solutions – rådgiver for kompetanseprogram | OsloMet – universitolektor i profesjonsdidaktikk | Oppdatert ressursliste og terminologi |

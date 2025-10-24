@@ -40,6 +40,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-BUG-10 | Kompilering | FERDIG – Fjernet TikZ-illustrasjoner i kapittel 1–3, erstattet dem med tekstlige beskrivelser og oppdaterte plan- og statusfiler slik at manus ikke er avhengig av grafikk for å bygge. | `chapters/kapittel01-introduksjon.tex`, `chapters/kapittel02-systemtenkning.tex`, `chapters/kapittel03-data.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-BUG-09 | Struktur | FERDIG – Erstattet `/n`-linjeskift med `\\` i tabell- og figurbeskrivelser slik at LaTeX bryter linjer riktig. | `chapters/kapittel08-case.tex`, `support/figurer/kilder/kap03-sirkular-dataflyt-v1.tikz`, `completed_tasks.md` |
 | DT-BUG-08 | Støtte | FERDIG – Lukket BibTeX-feil i referansepostene for EUs sirkulærøkonomiplan og Gaia-X slik at `support/referanser.bib` validerer igjen. | `support/referanser.bib`, `plan.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-BUG-07 | Kompilering | FERDIG – La til norsk språkpakke i preambelen slik at makroene `\aa`, `\ae` og `\o` fungerer uten at LaTeX stopper i kapittel 3. | `main.tex`, `plan.md`, `completed_tasks.md` |
