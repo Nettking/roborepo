@@ -205,6 +205,50 @@ et skybasert kontrollrom. Kalibreringen utføres daglig ved å sammenlikne model
 parametere justeres automatisk når avvik overstiger definerte terskler. Caset viser hvordan samarbeid mellom energiselskap,
 teknologipartnere og kommune gir en robust modell som støtter både operativ drift og langsiktige investeringsbeslutninger.
 
+\subsection{Case: Systemmodellering for autonome ferger}
+Trondheim havn og NTNU har etablert en digital tvilling for den autonome passasjerfergen Milliampere~2, som trafikkerer kanalene
+ved Brattøra.\citep{ntnu2023milliampere2} Tvillingen koordinerer navigasjon, fremdrift og fjernoperasjon i én modell slik at
+testteamet kan vurdere både tekniske og organisatoriske konsekvenser før fergen får seilasgodkjenning. Sjøfartsdirektoratets
+veiledning for autonome fartøy krever at slike piloter dokumenterer risikovurderinger, datadelingsavtaler og prosedyrer for
+overgang til manuell kontroll.\citep{sdir2023autonomefartoy} Teamet bruker derfor systemtenkning til å binde sammen modeller for
+sensorfusjon, kraftdistribusjon og situasjonsforståelse i kontrollsenteret. DNV sine anbefalinger for autonome fartøy brukes som
+rammeverk for å vurdere modenheten til kontrollalgoritmer, cybersikkerhet og beredskap.\citep{dnv2024autonomous}
+
+Arbeidet organiseres i tre modellstrømmer som gjenspeiler kravene fra både tekniske standarder og tilsynsmyndigheter:
+\begin{itemize}
+    \item \textbf{Fysisk fremdrift og kraftbalanse:} CFD- og maskinlæringsmodeller beskriver hvordan fremdriftssystemet reagerer
+    på bølger, vind og last, og synkroniseres med energilogger for å sikre at batterier og ladestasjoner utnyttes optimalt.
+    \item \textbf{Navigasjon og trafikkbildet:} Agentbaserte modeller simulerer møter med andre fartøy, kajmanøvre og
+    fartsbegrensninger. Resultatene mates inn i fjernoperasjonssenteret som anbefalinger og alarmer for navigatørene.
+    \item \textbf{Operasjon og beredskap:} Diskrete hendelsesskript kombinerer nødprosedyrer, kommunikasjon med VTS og
+    beredskapslogg slik at systemet raskt kan overføres til manuell styring dersom tvillingen avdekker avvik.
+\end{itemize}
+
+Tabell~\ref{tab:kap02-fergemodeller} viser hvordan modellene forankres i ansvar og datagrunnlag. Oversikten brukes i masterkurset
+til å diskutere hvilke fagmiljø som må involveres i hver fase, og hvordan modelljournalen bør struktureres for å møte kravene fra
+Sjøfartsdirektoratet og forsikringsselskapene.
+
+\begin{table}[ht]
+    \centering
+    \caption{Systemlag og modelleringsartefakter for autonom ferge.}
+    \label{tab:kap02-fergemodeller}
+    \begin{tabular}{p{0.22\textwidth}p{0.32\textwidth}p{0.24\textwidth}p{0.18\textwidth}}
+        \toprule
+        \textbf{Lag} & \textbf{Modelleringsfokus} & \textbf{Beslutningsspørsmål} & \textbf{Primære datakilder} \\
+        \midrule
+        Fysisk system & Hydrodynamikk, fremdrift og energidistribusjon & Dimensjonering av batteri, reservekraft og akselerasjonsgrenser & CFD-resultater, kraftsensorer, ladelogger \\
+        Navigasjon og trafikk & Sensorfusjon, kollisjonsunngåelse og rutevalg & Når skal autonom modus frakobles og hvordan håndteres trafikale avvik? & Lidar, AIS, kamerafeed og digitale sjøkart \\
+        Fjernoperasjon & Kontrollromsgrensesnitt, rollefordeling og situasjonsforståelse & Hvilke alarmer og tiltak skal eskaleres til navigatør og havnevakt? & Operatørlogger, kommunikasjonssystem, hendelsesjournal \\
+        Regelverk og beredskap & Risikovurdering, sikkerhetsbarrierer og rapportering & Hvilke dokumenter må oppdateres før neste testkampanje og hvem signerer? & ROS-analyser, tilsynsrapporter, øvingslogg \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Caset viser at autonome tvillinger må håndtere både teknisk kompleksitet og streng regulering. Ved å kombinere modellene i en
+samlet systemjournal kan prosjektet vise at sikkerhetsbarrierer, kompetanse og dataflyt er på plass før fergen går over i
+regelmessig drift. Erfaringene fra Trondheim brukes nå som referanse når nye autonome ruter planlegges i andre norske havner,
+og gir studentene et konkret eksempel på hvordan systemtenkning gir tryggere innovasjon.
+
 \subsection{Anbefalt arbeidsflyt for team}
 \begin{enumerate}
     \item Kartlegg hvilke datakilder som skal kobles til og etabler nødvendige API-er eller databrokere.
