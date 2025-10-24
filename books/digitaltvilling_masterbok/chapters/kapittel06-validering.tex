@@ -168,6 +168,63 @@ For masterstudentene gir overvåkingssløyfen et rammeverk for praktiske oppgave
 
 Koblingen mellom kontinuerlig overvåking, beredskapsplaner og læringsaktiviteter gjør at studentene opplever hvordan en kommunal tvilling må forvaltes i praksis. Samtidig styrkes samspillet mellom Kapittel~3 (datastyring), Kapittel~4 (simulering) og Kapittel~7 (governance) fordi indikatorene deles på tvers av arenaer.
 
+\section{Mobilitetsdataspace for kollektivtransport}
+Ruter, Entur og Bane NOR bygger nå en felles mobilitetsdataspace der sanntidsdata fra buss, bane, tog og delte mikromobilitetstjenester synkroniseres med digitale tvillinger for planlegging og beredskap.\citep{ruter2024mobilitetslab,entur2023dataplattform,banenor2024digitalspor} Dataspacet kombinerer reiseplanleggingsdata, billettinformasjon, tilstandsmålinger fra infrastruktur og trafikkinformasjon fra Statens vegvesen for å gi et samlet bilde av kapasitetsutnyttelse og flaskehalser.\citep{vegvesen2023beredskap} For å sikre tillit må valideringsregimet dekke datakvalitet, modellpresisjon og koordinering mellom etatene, samtidig som personvernkrav og sikkerhetsnivåer følges slik Kapittel~3 beskriver for mobilitetsdataspace og Kapittel~7 adresserer for porteføljestyring.
+
+\subsection{Valideringsløp for sanntidsplanlegging}
+Et felles V\&V-løp bør koble modelloppdateringer i mobilitetstvillingen til operative beslutninger hos trafikkledelsen. Tabell~\ref{tab:mobilitet-validering} viser en anbefalt struktur for å teste både dataflyt og modellrespons når rutetilbudet endres. Opplegget bygger på praksis fra Mobilitetslab-prosjektet der Ruter og Entur har etablert en delt modelljournal og hendelseslogg for å kunne spore hvordan sanntidsoppdateringer påvirker kundereiser og kapasitet.\citep{ruter2024mobilitetslab,entur2023dataplattform}
+
+\begin{table}[ht]
+    \centering
+    \caption{Valideringsplan for mobilitetstvilling ved endring i rutetilbud}
+    \label{tab:mobilitet-validering}
+    \begin{tabular}{|p{3.4cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Trinn} & \textbf{Formål} & \textbf{Datagrunnlag og tester} & \textbf{Ansvar} \\
+        \hline
+        Datainnsamling og harmonisering & Sikre at sanntidsdata fra buss, trikk, T-bane og tog er tidsstemplede og kvalitetssikret før modelloppdatering & GTFS-RT-feeder, IoT-sensorer fra kjøretøy, tilstandsmålinger fra infrastruktur, datakvalitetsskript for duplikater og forsinkede meldinger & Entur datahub + Ruter trafikkdata \\
+        \hline
+        Modelloppdatering og simulering & Oppdatere mobilitetstvillingen med nytt rutetilbud og kapasitetsparametere & Simuleringsscenario i AnyLogic eller Aimsun, modelljournal med parameterendringer, versjonskontroll i dataspace & Mobilitetslab-teamet \\
+        \hline
+        Operativ verifikasjon & Kontrollere at dashboards, API-er og trafikkinformasjon viser riktige forbindelser og kapasitet & Integrasjonstest mellom mobilitetsdataspace og kundeorienterte apper, KPI-panel for regularitet og fyllingsgrad & Ruter og Bane NOR trafikkledelse \\
+        \hline
+        Etterlevelse og rapportering & Dokumentere tiltak, personvernvurderinger og koordinering med beredskapsplaner & Tiltakslogg, DPIA-oppdatering, kobling til beredskapsplan fra Statens vegvesen og kvalitetsjournal i Kapittel~7 & Programleder mobilitetstvilling \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Gjennomføringen krever at sanntidskilder overvåkes for avvik, og at hendelser som forsinkelser eller feil i informasjonssystemene utløser triage-prosessen beskrevet tidligere i kapitlet. Når modellresponsen avviker fra faktiske passasjertall må nye datasett merkes og testes i samsvar med guardrails for syntetiske data og bias fra Kapittel~5.
+
+\subsection{Tverretatlig beredskapssimulering}
+Mobilitetstvillingen gir også grunnlag for felles beredskapsøvelser mellom kollektivaktører, politi, nødetater og kommunal kriseledelse. Statens vegvesen anbefaler at byområder har en oppdatert beredskapsplan for stengte knutepunkt og store arrangementer, med tydelig ansvarsdeling og alternative transportmidler.\citep{vegvesen2023beredskap} Tabellen under skisserer hvordan en stresstest kan organiseres for hendelser som strømbrudd i T-banetunneler eller signalfeil på jernbanen.
+
+\begin{table}[ht]
+    \centering
+    \caption{Scenarioportefølje for kollektivtransport og mobilitetsberedskap}
+    \label{tab:beredskap-mobilitet}
+    \begin{tabular}{|p{3.2cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Scenario} & \textbf{Modellparametere og data} & \textbf{Indikatorer og tiltak} & \textbf{Ledende aktør} \\
+        \hline
+        Signalfeil på jernbane & Reduser kapasitet på hovedlinjer med 50\%, aktiver buss-for-tog og vurder kapasitet i knutepunkt & Regularitet, reisetidsavvik, passasjerstrøm i stasjoner, sikkerhetstiltak og bemanningsplan & Bane NOR trafikkstyring + Ruter operativ sentral \\
+        \hline
+        Strømbrudd i T-banetunnel & Sett strømtilførsel til null, modeller evakueringsløp og alternative ruter & Evakueringstid, kapasitet i erstatningslinjer, samsvar med beredskapsplan, kommunikasjonstiltak & Sporveien beredskap + Oslo politidistrikt \\
+        \hline
+        Massearrangement i sentrum & Øk passasjeretterspørsel med 70\%, replanlegg frekvens og micromobility-soner & Fyllingsgrad, ventetid, CO$_2$-utslipp, behov for midlertidig infrastruktur og tilgjengelighetstiltak & Oslo kommune + mobilitetsdataspace-koordinator \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Beredskapssimuleringen bør dokumenteres med indikatorpanel som speiler styringsmodellen i Kapittel~7 og med tiltakslogg som kan deles med dataspace-partnerne i Kapittel~3. Etter hver øvelse analyseres læringspunkter sammen med passasjerdata og hendelseslogger for å oppdatere både modellparametere og operative prosedyrer.
+
+\subsection{Læringsaktiviteter}
+For masterstudentene kan mobilitetstvillingen brukes i tverrfaglige oppgaver som kobler dataanalyse, simulering og styring:
+\begin{itemize}
+    \item \textbf{Dataharmonisering}: Studentene utvider guardrail-skriptene for syntetiske datasett med kollektivindikatorer slik at dataspace-delingen mellom Ruter, Entur og Bane NOR kan testes mot feilsløyfer og forsinkelser.
+    \item \textbf{Scenarioverksted}: Gruppene spiller gjennom Tabell~\ref{tab:beredskap-mobilitet}-scenariene og bruker tiltaksloggen fra tidligere seksjoner til å vurdere ansvar og eskalering.
+    \item \textbf{Rapportering}: Leveransen inkluderer en kort rapport til byrådsavdeling for miljø og samferdsel der beslutninger og indikatorresultater knyttes til klimamål og samfunnssikkerhetskrav.
+\end{itemize}
+
 \section{AI-forordningens krav til helsetvillingene}
 AI-forordningen klassifiserer kliniske beslutningsstøttesystemer og digitale tvillinger for pasientforløp som høyrisiko-systemer.\citep{eu2024aiact} Dermed må både leverandører og helsevirksomheter etablere et kvalitetsledelsessystem som dokumenterer hvordan risiko håndteres før og under drift. For masterstudentene betyr det at hver caseleveranse skal kunne peke på hvor i modellen kravene adresseres, og hvilke loggføringer som viser etterlevelse over tid.
 
