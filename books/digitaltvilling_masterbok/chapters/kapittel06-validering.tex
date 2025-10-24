@@ -20,6 +20,40 @@ Digitale tvillinger som påvirker kritisk infrastruktur må etterleve etablerte 
 
 Et praktisk grep er å knytte hvert modell- og datagrensesnitt til en kontroll i standardene. Tiltak som tofaktor-autentisering, segmentering og revisjonslogger må beskrives både teknisk og organisatorisk. Når nye funksjoner lanseres, bør et standardkart vise hvilke krav som berøres og hvem som eier tiltakene. Tabell~\ref{tab:standardkart} viser et utdrag av en slik oversikt for energibransjen. Støttenotatet \textit{kap06-sikkerhetscase.md} gir en caseoppgave der studentene kartlegger tiltak for et regionalt kraftselskap.
 
+\section{Hendelsesrespons og kvalitetsjournal i dataspace}
+Når en digital tvilling inngår i et dataspace for kritisk infrastruktur må hendelsesrespons og kvalitetsjournal styres som én sammenhengende prosess. De nasjonale føringene fra \citet{nsm2023grunnprinsipper} legger til grunn at hendelser håndteres etter prinsippene for forebygging, avdekking, håndtering og læring. Samtidig krever både NIS2-implementeringen og DSB sin nasjonale digitaliseringsstrategi for samfunnssikkerhet at virksomheter kan dokumentere beslutninger, responstid og eskalering i tverrsektorielle situasjoner.\citep{dsb2024nser} For helsesektoren må loggføringen harmoniseres med Helsedirektoratets krav til beredskapsjournal og varsling mot regionale helseforetak.\citep{helsedir2023beredskap}
+
+En robust prosess bør forankres i styringssystemet fra Kapittel~7 og dataforvaltningsmodellen i Kapittel~3. Følgende fire aktiviteter binder hendelsesresponsen til kvalitetsjournalen:
+\begin{enumerate}
+    \item \textbf{Felles situasjonsbilde:} Dataspace-operatøren setter opp en hendelseskanal der overvåkingsdata, modellalarmer og feltobservasjoner samles i sanntid. Beslutningsgrunnlaget lagres i journalen slik at revisjoner kan se hvilke indikatorer som utløste tiltak.
+    \item \textbf{Koordinert responstrinn:} Beredskapsleder, tvillingforvalter og leverandør følger en forhåndsdefinert responsplan med varsling til myndigheter innen tidsfrister fra \citet{eu2022nis2}. Tiltak logges som oppgaver med ansvar og tidsstempler.
+    \item \textbf{Læring og forbedring:} Etter hendelsen gjennomfører teamet en strukturert debrief der journaldata kobles til tiltakslogg og fagfellelogg. Metodikken bygger på \citet{dsb2023ovelser} og sørger for at læringspunkter blir synlige i påfølgende øvelser.
+    \item \textbf{Rapportering til dataspace-partnere:} Resultatet deles via dataspace-kontraktene slik at andre deltakere kan oppdatere sine kontrolltiltak, i tråd med kravene til åpenhet i \citet{nho2023datadeling} og datadelingsprinsippene fra \citet{dssc2023skills}.
+\end{enumerate}
+
+Tabell~\ref{tab:hendelsesroller} viser hvordan roller og responstid kan organiseres på tvers av kritiske sektorer. Den bygger på erfaringer fra energibransjen, kommunal beredskap og helsetjenesten, og gjør det enkelt å gjenbruke strukturen i caseoppgaver og øvelser.
+
+\begin{table}[ht]
+    \centering
+    \caption{Roller og responstid i hendelsesrespons for dataspace-tilknyttede tvillinger}
+    \label{tab:hendelsesroller}
+    \begin{tabular}{|p{3.4cm}|p{4.4cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Rolle} & \textbf{Hovedansvar} & \textbf{Journalføring og rapportering} & \textbf{Krav til responstid} \\
+        \hline
+        Beredskapsleder (kommune eller energiselskap) & Koordinere tverrsektoriell situasjonsforståelse, aktivere kriseledelse og beslutte tiltak & Oppdatere tiltakslogg, ROS-plan og kommunal beredskapsjournal \citep{dsb2022beredskap,dsb2023ovelser} & Varsle statsforvalter innen 2 timer og myndigheter innen 24 timer ved alvorlige hendelser \citep{dsb2024nser} \\
+        \hline
+        Tvillingforvalter / produktleder & Sikre modellstabilitet, fryse versjoner og koordinere tekniske korrigeringer med leverandører & Dokumentere parameterendringer og modellpålitelighet i kvalitetsjournal og MLOps-logg \citep{iso10007-2017,iso20000-1-2018} & Gjennomføre midlertidige sikringstiltak innen 60 minutter og validere normaltilstand før driftssetting \\
+        \hline
+        Dataspace-operatør / data steward & Overvåke delte datastrømmer, stenge kompromitterte API-er og informere partnere & Registrere datakontraktsbrudd, varsle gjennom dataspace-portalen og arkivere beslutninger \citep{dataspaces2023skills,nhn2024dataspace} & Aktivere hendelsesprosedyre innen 15 minutter etter alarm og sende statusoppdateringer hver time \\
+        \hline
+        Personvernombud / helsefaglig ansvarlig & Vurdere konsekvenser for personvern og pasientsikkerhet, koordinere med helsemyndigheter & Oppdatere DPIA, journalføre vurderinger i henhold til helsemessig beredskap \citep{helsedir2023beredskap,helseplattformen2023kontinuitet} & Varsle Datatilsynet innen 72 timer og berørte pasienter uten ugrunnet opphold \citep{eu2022nis2} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+For masterstudentene kan tabellen brukes som sjekkliste når de utvikler hendelsesscenarier i laboratoriet. Kombineres oversikten med triageprosessen tidligere i kapitlet, får studentene trening i å dokumentere både tekniske og organisatoriske beslutninger på en måte som tåler revisjon fra eksterne fagfeller.
+
 \begin{table}[ht]
     \centering
     \caption{Eksempel på standardkart for kontrolltårn i energisektoren}
