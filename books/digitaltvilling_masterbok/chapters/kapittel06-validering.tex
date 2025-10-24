@@ -171,6 +171,44 @@ For å sikre at tabellen ikke bare blir et compliance-dokument, bør teamet etab
     \item \textbf{Læring og forbedring:} Etterkontrollen skal identifisere hvordan data fra produksjon kan brukes til å forbedre modell og prosess. Tiltak registreres som nye backlog-poster eller oppdateringer av styringssystemet.
 \end{enumerate}
 
+\section{Maritimt tilsyn for autonome fartøy}
+Autonome ferger og havneoperasjoner i Norge drives gjennom tett samarbeid mellom teknologiutviklere, rederier og myndigheter. Sjøfartsdirektoratet krever at hvert testløp dokumenteres med sikkerhetsvurderinger, navigasjonsgrenser og kontaktpunkter mot trafikkovervåkingen før en tvilling får tillatelse til å operere i norske farvann.\citep{sdir2023autonomefartoy} DNV beskriver samtidig hvordan digitale tvillinger skal brukes til å vise samsvar med regelverket gjennom kontinuerlig overvåkning av risiko og ytelse.\citep{dnv2024autonomous} 
+
+Tilsynsløpet kombinerer modelloppfølging, sjødyktighet og operativ beredskap. DevOps-teamet må levere innsikt til rederiets driftssentral (for eksempel Massterly) slik at kapteinene på land kan verifisere modelloppdateringer mot navigasjonsregler og værgrenser.\citep{massterly2023operations} Dette krever at modelljournal, hendelseslogg og sikkerhetsrapporter er strukturert likt, og at tvillingen eksponerer nøkkelindikatorer som bremseavstand, energireserver og failsafe-status.
+
+Arbeidsflyten kan organiseres i fire steg:
+\begin{enumerate}
+    \item \textbf{Forbered godkjenning}: Kartlegg operasjonsscenario, risikobildet og hvilke nautiske begrensninger som gjelder i det aktuelle farvannet. Dokumentasjonen sendes til Sjøfartsdirektoratet sammen med referanser til modellbaserte tester.
+    \item \textbf{Integrer overvåkning}: Koble tvillingens sensorer og avviksvakter til driftssentralen slik at alarmer automatisk sammenlignes med definerte sikkerhetsmarginer fra klassereglene.
+    \item \textbf{Revider etter hendelser}: Når tvillingen opplever nestenulykker eller navigasjonsavvik, gjennomfør en felles granskning med rederi, teknologileverandør og myndigheter for å validere læringspunkter og oppdatere modellparametere.
+    \item \textbf{Publiser læringslogg}: Del oppsummeringer med operatørfellesskap og undervisningsteam slik at erfaringer fra feltet gjenbrukes i kurslaboratorier og nye pilotprosjekter.
+\end{enumerate}
+
+Tabell~\ref{tab:maritim-tilsyn} viser et forslag til revisjonspunkter for en autonom ferge. Strukturen speiler kvalitetsjournalen i kontrolltårn-caset og gjør det enklere å kombinere maritime krav med indikatorpanelet for tillit.
+
+\begin{table}[ht]
+    \centering
+    \caption{Revisjonspunkter for autonom maritim digital tvilling}
+    \label{tab:maritim-tilsyn}
+    \begin{tabular}{|p{3.1cm}|p{4.7cm}|p{4.7cm}|p{2.8cm}|}
+        \hline
+        \textbf{Revisjonspunkt} & \textbf{Regelverk og mål} & \textbf{Kontroll og dokumentasjon} & \textbf{Ansvarlig} \\
+        \hline
+        Navigasjonsmodell & Sjøfartsdirektoratets testveileder, COLREG & Scenariojournal med værgrenser, simulert møte med trafikkseparasjon, avvikslogg & Teknisk sjef tvilling \\
+        \hline
+        Situasjonsforståelse & DNV autonomi-rammeverk, ISO~13849 & Sensordekning, redundansrapport, automatiske helsesjekker mot driftssentral & Driftssentralleder \\
+        \hline
+        Beredskap og failsafe & NMA sikkerhetsstyring, NIS2 rapportering & Emergency stop-test, logg for manuell overstyring, varsling til Kystverket & Beredskapskoordinator \\
+        \hline
+        Data og cyberhygiene & IEC~62443 soner/konduiter, NSM grunnprinsipper & Revisjon av tilgangslistene, penetrasjonstest, oppdateringsprotokoll & Sikkerhetsansvarlig \\
+        \hline
+        Operatøropplæring & Sjøfartsdirektoratet krav til vakthold & Kursplan for fjernoperatører, simulatoropptak, signerte kompetansekort & Programleder autonom drift \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Ved å integrere tabellen i kvalitetsjournalen kan rederiet dokumentere samsvar før hver milepæl i driftsgodkjenningen. Rapporteringen gjenbrukes i fagfelleprosesser og undervisning, og sikrer at nye iterasjoner av tvillingen vurderes mot maritime risikokrav samtidig som indikatorpanelet for tillit oppdateres.
+
 \section{Regulatoriske rammer og sikkerhetsstandarder}
 Fagfellepanelet etterspurte en tydelig kobling mellom kvalitetsprosessen og de regulatoriske rammene som gjelder for norske virksomheter. NIS2-direktivet og IEC~62443-serien definerer krav til cybersikkerhet, hendelseshåndtering og styring av industrielle kontrollsystemer, mens DNV-RP-A204 beskriver hvordan digitale tvillinger skal kvalifiseres i sikkerhetskritiske domener.\citep{eu2022nis2,iec62443-2-1,dnv2021a204} Disse rammeverkene krever at valideringsplanen dokumenterer både tekniske og organisatoriske tiltak, med klar oversikt over ansvar og godkjenninger.
 
