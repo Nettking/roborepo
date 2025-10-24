@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-26 | Kapittel 3 | FERDIG – Dokumenterte Oslo VAV-case for vann- og avløpsberedskap med tiltakstabell, oppdaterte plan og registrerte kilder. | `chapters/kapittel03-data.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-25 | Kapittel 6 | FERDIG – Etablerte personvernseksjon med DPIA-arbeidsflyt og tilsynslogg i kapittel 6, og oppdaterte plan-, status- og kildefiler. | `chapters/kapittel06-validering.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-24 | Kapittel 6 | FERDIG – Utviklet pasientlogistikk-case med valideringspakke, indikatorpanel og helsesektor-tilpasning til kvalitetsjournalen. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-22 | Kapittel 6 | FERDIG – La inn helsesektor-beredskapssimulering med øvingsfaser, indikator-tabell og undervisningsopplegg, og oppdaterte plan- og statusfiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `support/referanser.bib`, `task_queue.md` |

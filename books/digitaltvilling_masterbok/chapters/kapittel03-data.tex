@@ -234,6 +234,44 @@ gir et eksempel fra energisektoren.
 Kontinuitetsplanen bør oppdateres etter hver øvelse og ved større endringer i dataspace-arkitekturen. Ved å koble planen til
 organisasjonens helhetlige beredskapsrammeverk blir tvillingen en integrert del av den operative beredskapen.
 
+\subsection{Case: Oslo kommunes vann- og avløpsberedskap}
+Oslo kommunes vann- og avløpsetat (VAV) har etablert en digital tvilling som samler sensordata, hydrauliske modeller og
+beredskapsplaner for hovedforsyningen til byen. Tvillingen følger både råvannsinntak, vannbehandlingsanlegg og soner med høy
+lekkasjerisiko, og kobles til varslingstjenestene i DSB sitt CIM-system. Resultatet er at planleggere kan teste konsekvensen av
+ledningsbrudd eller forurensede magasiner før tiltak iverksettes \citep{oslovav2023digital}. Data fra SCADA-systemet strømmes til
+tvillingen i sanntid, mens historiske vedlikeholdslogger og entreprenørdata gjøres tilgjengelig som batchoppdateringer hver
+natt. Plattformen deler dessuten aggregert informasjon med nabokommuner via en begrenset dataspace slik at alternativ
+vannforsyning kan koordineres når hendelser oppstår \citep{norskvann2023digitaltvilling}.
+
+Etaten har utviklet en tiltakstabell som kobler hendelsestyper til datasett, ansvarslinjer og beslutningstid. Tabell~\ref{tab:kap03-oslo-vav}
+viser et utdrag som brukes i øvelser og faktisk drift.
+
+\begin{table}[ht]
+    \centering
+    \caption{Tiltakstabell for Oslo VAV sin digitale tvilling.}
+    \label{tab:kap03-oslo-vav}
+    \begin{tabular}{p{0.30\textwidth}p{0.28\textwidth}p{0.28\textwidth}}
+        \toprule
+        \textbf{Hendelse} & \textbf{Aktiverte datasett} & \textbf{Tiltak og ansvar} \\
+        \midrule
+        Ledningsbrudd i kritisk sone & Trykksensorer, lekkasjeindikatorer, gravepåvirkning fra entreprenør & Beredskapsvakt varsles via CIM, tvillingen simulerer avstengningsscenario, entreprenør mobiliseres innen 60 minutter. \\
+        Forurenset råvann & Vannkvalitetslogger, værdata, historikk for innsjø & Tvillingen beregner alternative inntak, VAV informerer Folkehelseinstituttet, bydelene får varslingsmaler for kokevarsel. \\
+        Strømutfall på pumpestasjon & SCADA-hendelser, kontinuitetsplan for nødstrøm, energimåler & Driftssentral koordinerer reservestrøm og tanker, tvillingen prioriterer soner med kritisk infrastruktur. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Øvelsene kjøres i samarbeid med kommunens kriseledelse og nabokommuner gjennom interkommunalt vannverk. Erfaringen er at
+kombinasjonen av simulering og faktisk hendelseslogg gir raskere beslutninger når hendelser oppstår, og at tiltak kan prioriteres
+etter både helseeffekt og samfunnskritiske funksjoner \citep{oslovav2023digital}. Tvillingen er også koblet til et publikt
+informasjonspanel som viser status for lekkasjearbeid og planlagte avbrudd, noe som reduserer antall henvendelser til
+kundesenteret.
+
+\paragraph{Overføringspunkter til undervisning og praksis.} Caset brukes i masterprosjekter ved OsloMet og NMBU der studenter
+skal utvikle forbedrede lekkasjemodeller og planlegge deling av data med private entreprenører. Øvelsesopplegget gir en
+praktisk ramme for å trene på samspill mellom teknisk drift, kommunikasjon og beredskapsledelse. Materialet kan gjenbrukes i
+kapittel~6 når DPIA og hendelsesjournal skal dokumenteres, og i kapittel~7 når kommunal governance og datasamarbeid diskuteres.
+
 \section{Bærekrafts-dashboard og indikatorstyring}
 For å gjøre bærekraft og klimaeffekter synlige i operative beslutninger bør digitale tvillinger levere dashboards som kombinerer
 miljøindikatorer, energieffektivitet og økonomiske nøkkeltall. Statnett og andre norske infrastruktureiere rapporterer at slike
