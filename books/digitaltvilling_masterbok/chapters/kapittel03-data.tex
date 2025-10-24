@@ -351,6 +351,47 @@ styringsprosess i ett dokument, slik at deltakere kan automatisere oppfølgingen
     data, beslutning og gevinstrealisering.
 \end{itemize}
 
+\subsection{Testregime for API-katalogen}
+En katalog gir først verdi når spesifikasjoner, sikkerhet og datakvalitet kontinuerlig bekreftes. Digitaliseringsdirektoratet
+anbefaler at hver API-versjon kvalitetssikres mot veilederen før den åpnes for bruk, mens Data Spaces Support Centre og IDS
+Operations Handbook beskriver hvordan dataspace-operatører kan kombinere automatiske tester og revisjonsspor for å holde
+kontrakter oppdatert.\citep{digdir2023apiveileder,dssc2024dataproducts,idsa2023operational} Testregimet nedenfor kan kjøres ved
+hvert sprintskifte og før produksjonssetting av nye dataprodukter.
+
+\begin{enumerate}
+    \item \textbf{Valider spesifikasjonen.} Kjør linting på OpenAPI/AsyncAPI-filene, bekreft at obligatoriske felt som lisens,
+    kontaktpunkt og livsløpsstatus er fylt ut, og generér kontrakttester som bekrefter at responsene følger katalogbeskrivelsen.
+    \item \textbf{Sikkerhet og tilgang.} Test autentisering, autorisasjon og ratebegrensning med syntetiske brukere. Loggene
+    kontrolleres for avvik i tråd med grunnprinsippene for IKT-sikkerhet og nulltillit.\citep{nsm2023grunnprinsipper}
+    \item \textbf{Datakvalitet og semantikk.} Sammenlign felttyper, enheter og indikatorberegninger mot kvalitetsjournalen og
+    indikatorpanelet i kapittel~6 for å sikre at endringer ikke bryter lærings- og rapporteringssløyfene.\citep{dssc2024dataproducts}
+    \item \textbf{Drift og resiliens.} Simuler nettbrudd, versjonsrulling og throttling for å verifisere at overvåkingsrutiner og
+    beredskapsplaner reagerer som forventet i sandkasse og produksjon.\citep{idsa2023operational}
+\end{enumerate}
+
+Tabell~\ref{tab:kap03-api-test} gir en sjekkliste som binder testene til konkrete verktøy og dokumentasjonskrav.
+
+\begin{table}[ht]
+    \centering
+    \caption{Testregime for API-katalog og dataprodukter.}
+    \label{tab:kap03-api-test}
+    \begin{tabular}{p{0.24\textwidth}p{0.30\textwidth}p{0.28\textwidth}p{0.14\textwidth}}
+        \toprule
+        \textbf{Teststeg} & \textbf{Formål} & \textbf{Verktøy og sjekkpunkter} & \textbf{Dokumentasjon} \\
+        \midrule
+        Spesifikasjonsvalidering & Sikre at kontrakten er komplett og maskinlesbar. & OpenAPI/AsyncAPI-linting, kontrakttest i CI, versjonssammenligning. & Endringslogg, katalognotat med versjons-ID. \\
+        Sikkerhetstest & Bekrefte autentisering, autorisasjon og logging. & Testtokens, automatisert ratebegrensningstest, loggrevisjon. & Sikkerhetsjournal, referanse til \autoref{tab:standardkart}. \\
+        Datakvalitet & Hindre semantiske avvik og feil indikatorer. & Schema-diff, prøvepublisering med syntetiske data, kobling til kvalitetsjournal. & Kvalitetsjournal, indikatorrapport i kapittel~6-format. \\
+        Driftsprøve & Verifisere resiliens og gjenoppretting. & Kaos-test i sandkasse, failover mot reserveinstanser, overvåkingsalarm. & Beredskapslogg, tiltaksoppdatering i gevinstplanen. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\paragraph{Koordinering med laboratoriet.} Resultatene fra testene registreres i kvalitetsjournalen før de sendes til
+valideringspanelet i kapittel~6. Når tiltak krever endringer i gevinstplanen eller leverandørkontraktene i kapittel~7, skal
+oppfølgingen loggføres i tiltaksloggen og deles i fagfelleloggen. Studentgrupper kan bruke tabellen som grunnlag for å fordele
+ansvar mellom tekniske og styringsroller i laboratorieøktene.
+
 \subsection{Case: Dataspace-sandkasse for kommunal byggdrift}
 Kommunale eiendomsforvaltere i Oslo, Bergen og Trondheim har de siste årene etablert felles sanntidsmodeller for energioppfølging, inneklima og vedlikeholdslogg slik at skole- og helsebygg kan styres mer presist \citep{osloeiendom2023strategi,bergen2024smartbygg}. Erfaringen viser at datadeling på tvers av etater krever en trygg arena for å teste nye integrasjoner uten å risikere driftsavbrudd. En dataspace-sandkasse gir nettopp dette: en kontrollert plattform der tvillingmodeller, API-er og indikatorer kan verifiseres før de kobles til produksjonsmiljøet.
 

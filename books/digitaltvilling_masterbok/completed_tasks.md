@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-95: Etablerte testregime for API-katalog og dataprodukter med fire kontrolltrinn, tabell og laboratoriekoblinger, og oppdaterte plan-, tavle- og statusfiler for koordinert kvalitetssikring før produksjon. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-94: Dokumenterte energidelingsdataspace med case for lokale energisamfunn, tabell over nødvendige dataprodukter og styringskoblinger, og oppdaterte plan- og tavlefiler for koordinering av pilotene mot energiselskaper. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 
 - `FERDIG` – Leveranse for DT-93: Etablerte tverrsektorielt rapporteringspanel for energi- og helsecaser med felles indikator- og tiltaksoversikt, oppdaterte arbeidsflyt og planstatus for koordinert beredskap. (`chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md`, `support/referanser.bib`)
