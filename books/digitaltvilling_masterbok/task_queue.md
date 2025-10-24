@@ -40,6 +40,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-BUG-09 | Struktur | FERDIG – Erstattet `/n`-linjeskift med `\\` i tabell- og figurbeskrivelser slik at LaTeX bryter linjer riktig. | `chapters/kapittel08-case.tex`, `support/figurer/kilder/kap03-sirkular-dataflyt-v1.tikz`, `completed_tasks.md` |
 | DT-BUG-08 | Støtte | FERDIG – Lukket BibTeX-feil i referansepostene for EUs sirkulærøkonomiplan og Gaia-X slik at `support/referanser.bib` validerer igjen. | `support/referanser.bib`, `plan.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-BUG-07 | Kompilering | FERDIG – La til norsk språkpakke i preambelen slik at makroene `\aa`, `\ae` og `\o` fungerer uten at LaTeX stopper i kapittel 3. | `main.tex`, `plan.md`, `completed_tasks.md` |
 | DT-BUG-06 | Kompilering | FERDIG – Fjernet `\n`-linjeskift fra TikZ-figuren i kapittel 2 slik at `main.tex` kompilerer uten kritiske feil, og synkroniserte status i plan- og arbeidsfilene. | `support/figurer/kilder/kap02-politikk-ramme-v1.tikz`, `task_queue.md`, `plan.md`, `completed_tasks.md` |

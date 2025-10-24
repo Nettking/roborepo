@@ -1,9 +1,9 @@
 \begin{tikzpicture}[>=Latex, stage/.style={circle, draw=havgronn!80!black, fill=havgronn!25, minimum size=2.4cm, align=center}, arrow/.style={-Latex, thick, petrol}]
-    \node[stage] (design) {Design\nMaterialdata};
-    \node[stage, right=3.4cm of design] (produksjon) {Produksjon\nProsessdata};
-    \node[stage, below=2.8cm of produksjon] (bruk) {Bruk\nSensor- og driftstall};
-    \node[stage, left=3.4cm of bruk] (retur) {Retur\nSporbarhet og logistikk};
-    \node[stage, above=2.8cm of retur] (resirk) {Resirkulasjon\nKvalitetstesting};
+    \node[stage] (design) {Design\\Materialdata};
+    \node[stage, right=3.4cm of design] (produksjon) {Produksjon\\Prosessdata};
+    \node[stage, below=2.8cm of produksjon] (bruk) {Bruk\\Sensor- og driftstall};
+    \node[stage, left=3.4cm of bruk] (retur) {Retur\\Sporbarhet og logistikk};
+    \node[stage, above=2.8cm of retur] (resirk) {Resirkulasjon\\Kvalitetstesting};
 
     \draw[arrow] (design) -- node[above, font=\scriptsize]{Digital tvilling for produktstruktur} (produksjon);
     \draw[arrow] (produksjon) -- node[right, font=\scriptsize]{Tilstand og ytelse} (bruk);

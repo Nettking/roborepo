@@ -16,6 +16,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 - `FERDIG` – Leveranse for DT-11: Utvidet Kapittel 2 med flerfidelitetscase, metode- og kalibreringstabeller samt dokumentasjonsseksjon; oppdaterte `plan.md`, `task_queue.md` og `support/referanser.bib`.
 - `FERDIG` – Gjennomførte fagfelleløpet for kapitlene 5–9, innarbeidet generative og edge-tiltak, standardreferanser (NIS2/IEC 62443) og pilotprioriteringer; oppdaterte `plan.md`, `support/fagfellelogg.csv`, kapitteltekstene, `support/referanser.bib` og pilotmateriellet (`support/notater/pilotundervisning-materiell.md`).
+- `FERDIG` – Leveranse for DT-BUG-09: Fjernet `/n`-linjeskift og erstattet dem med `\\` i tabell- og figurbeskrivelser slik at LaTeX bryter linjer riktig i `chapters/kapittel08-case.tex` og `support/figurer/kilder/kap03-sirkular-dataflyt-v1.tikz`; oppdaterte arbeidslister.
 - `FERDIG` – Leveranse for DT-09: Harmoniserte Kapittel 9 med generativ AI- og edge-trender, dataspace-regulering og ny KPI-tabell, samt oppdaterte kilder i `support/referanser.bib`.
 - `FERDIG` – Leveranse for DT-08C: Prioriterte batteriverdikjede-case i Kapittel 8 med KPI-tabell, dataspace-beskrivelse og nytt støtte-notat.
 - `FERDIG` – Leveranse for DT-08B: Dokumenterte landbrukscase med KPI-tabell og dataspace-implikasjoner i Kapittel 8, og opprettet støtte-notat.
