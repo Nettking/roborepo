@@ -189,6 +189,39 @@ Tabell~\ref{tab:helseberedskap} viser hvordan en beredskapssimulering kan strukt
 
 For undervisning anbefales det å kombinere beredskapssimuleringen med laboratorieøvelsen over. Studentgrupper kan få tildelt ulike roller (beredskapsleder, klinikksjef, IKT-sikkerhetsansvarlig) og bruke tabellen som sjekkliste for hvordan tvillingens data skal brukes i hver fase. Resultatene synliggjør sammenhengen mellom modellkvalitet, regulatorisk etterlevelse og pasientsikkerhet, og bygger bro til helsesektorcaset i Kapittel~8.
 
+\section{Helsesektor-case: pasientlogistikk og beredskap}
+Sykehus og kommunale akuttmottak bruker i økende grad digitale tvillinger for å balansere sengekapasitet, personell og logistikk når innleggelser varierer gjennom døgnet. \citet{helsedir2020dho} anbefaler at tjenesteinnovasjon kombineres med kontinuerlig datadeling mellom kommune, fastlege og spesialisthelsetjeneste for å sikre trygg utskriving og oppfølging. Et helhetlig valideringsopplegg må derfor koble operativ planlegging med beredskapskravene i \citet{hod2020beredskap} og informasjonssikkerhetsrammeverket i \citet{norm2023}. Dette krever at pasientflytmodellen dokumenterer hvordan prediksjoner påvirker beredskap, personvern og kliniske beslutninger.
+
+Et anbefalt arbeidsforløp for helsecaset består av tre sløyfer som støtter både drift og kvalitetssikring:
+\begin{enumerate}
+    \item \textbf{Data- og integrasjonskontroll:} Oppdatér tvillingen med sanntidsdata fra triage, laboratorieprøver og kommunale tjenester, og loggfør behandlingsgrunnlag og tilgangsrettigheter i tråd med Normens minimumskrav.
+    \item \textbf{Beslutningsstøtte og varsling:} Valider prediksjoner for beleggsgrad og ventetider mot historikk, og definer terskelverdier som utløser beredskapsplanens trinnvise tiltak når bemanningen blir kritisk.
+    \item \textbf{Læring og etikk:} Dokumenter avvik, pasientsikkerhetstiltak og brukermedvirkning i kvalitetsjournalen slik at faglige råd fra tilsyn og pasientutvalg blir sporbare.
+\end{enumerate}
+
+Tabell~\ref{tab:helsevalidering} viser hvordan elementene over kan struktureres i en valideringspakke som dekker både tekniske tester og pasientsikkerhet.
+
+\begin{table}[ht]
+    \centering
+    \caption{Valideringspakke for pasientlogistikk i helsesektorens digitale tvilling}
+    \label{tab:helsevalidering}
+    \begin{tabular}{|p{3.6cm}|p{4.2cm}|p{4.2cm}|p{3.0cm}|}
+        \hline
+        \textbf{Kontrollpunkt} & \textbf{Målemetode} & \textbf{Dokumentasjon} & \textbf{Ansvarlig} \\
+        \hline
+        Datakvalitet og sporbarhet & Kryssjekk mot elektronisk pasientjournal og kommunale meldinger & Tilgangslogg, behandlingsgrunnlag, samtykkeskjema & Klinisk informasjonsforvalter \\
+        \hline
+        Prediksjonsnøyaktighet & Sammenlikn prognoser for liggetid og ventetid mot historiske målepunkter & Modelljournal, ukentlig rapport til beredskapsråd & Analytiker for pasientlogistikk \\
+        \hline
+        Beredskapsrespons & Øvelse av beredskapstrinn (grønn–rød) og eskalering til kommunal koordineringsenhet & Hendelseslogger, evalueringsnotat etter øvelse & Akuttleder \\
+        \hline
+        Personvern og etikk & Revisjon av tilgangsstyring, vurdering av automatiserte anbefalinger mot kliniske retningslinjer & ROS-analyse, beslutningsprotokoll fra pasientsikkerhetsutvalg & Personvernombud \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Når tvillingen tas i bruk i undervisningslaboratoriet, bør studentgrupper teste scenarioer for akutt pågang, influensaepidemier og samtidige kommunale beredskapssituasjoner. Resultatene kobles til kontrolltårn-panelet fra energisektoren ved å oversette indikatorene til helsesektorens måleparametere, for eksempel andel planlagte utskrivinger som må flyttes og tid fra triage til første kliniske vurdering. Slik får studentene erfaring med å overføre strukturerte valideringsmetoder til et nytt domene og ser hvordan ansvarlige roller samarbeider for å sikre trygg tjenesteleveranse.
+
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}
     \item Definer en valideringsstrategi for en digital tvilling i helsevesenet, og identifiser hvilke standarder og datasett som må håndteres for å dokumentere pasientsikkerhet.
