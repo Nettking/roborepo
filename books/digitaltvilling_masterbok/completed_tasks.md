@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-88: Dokumenterte presisjonslandbruk-case i Kapittel 4 med modellstruktur, indikatorpakke og undervisningsopplegg, og oppdaterte plan-, tavle- og statusfiler for koordinering med dataspace- og valideringskapitlene. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-87: Utvidet helseseksjonen i Kapittel 8 med tabell for pasientflyt, dataspace- og tilsynssjekklister og oppdaterte plan- og tavlefiler slik at undervisningen kan bruke caset i pilotøktene. (`chapters/kapittel08-case.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-86: Utviklet co-designseksjon for menneske--maskin-samhandling i Kapittel 4 med sprintopplegg, leveransetabell og indikatorpakke, og oppdaterte plan-, tavle- og statusfiler for å synkronisere mot validerings- og gevinstarbeidet. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-85: Dokumenterte anskaffelses- og leverandørstyring for kommunale tvillingprogram med aktivitetsliste, tabell og scorecard-anbefaling, og oppdaterte plan- og statusfiler for koordinering. (`chapters/kapittel07-livssyklus.tex`, `plan.md`, `task_queue.md`)
