@@ -225,6 +225,52 @@ Et praktisk undervisningsopplegg kan følge tre hovedtrinn:
 \end{enumerate}
 Refleksjonsdelen bør knytte læringspunkter til governance-modellen i Kapittel~7: Hvem beslutter investeringer, hvordan deles risiko med partnerne og hvilke nye indikatorer må inn i gevinstplanene? Når simuleringen kobles til lærerveiledningen får studentene også erfaring med å formidle funn til eksterne interessenter.
 
+\section{Simulering av vinterdrift i fjellbaner}
+Norske fjellbaner som Bergensbanen og Ofotbanen opplever krevende vinterforhold med sterk vind, ising og raske temperaturskift. Driftsselskapene kombinerer mekanisk snørydding, varmeelementer i sporveksler og beredskapslagre for kritiske komponenter, men trenger beslutningsstøtte for å vite når tiltak skal settes inn. En digital tvilling som kombinerer værprognoser, energistyring og beredskapslogistikk kan redusere nedetid og energibruk samtidig som sikkerheten ivaretas \citep{banenor2023vinterdrift,met2023fjellvaer}. I masterkurset kan studentene bruke caset til å trene på sammensatte simuleringer som koordinerer både tekniske og operative valg.
+
+\subsection{Datasett og modelloppsett}
+Caset krever at kontinuerlige modeller for energi- og varmeoverføring kombineres med diskrete hendelser for snøfall, avvik og beredskapsutrykning. Et anbefalt minimumsoppsett er:
+\begin{itemize}
+    \item \textbf{Meteorologiske data:} Værvarsel fra Meteorologisk institutt og historiske målinger fra fjellstasjoner for temperatur, vind, nedbør og isingsindeks \citep{met2023fjellvaer}.
+    \item \textbf{Beredskapslogistikk:} Ressursoversikt over snøryddingsmaskiner, mannskap og reservedeler med oppdaterte responstider.
+    \item \textbf{Energi og infrastruktur:} Effektbehov til sporvekselvarme, transformatorer og driftsbygg, inkludert avtaler for fleksibelt strømforbruk \citep{jernbanedirektoratet2022energi}.
+    \item \textbf{Trafikkplan:} Planlagte togavganger, prioriterte godstog og kritiske tidsvinduer for passasjertrafikk.
+\end{itemize}
+Modellen må kunne simulere hvordan varmeelementer prioriteres når kapasiteten er begrenset, og hvordan alternative togoppsett påvirker både energibruk og regularitet. Når datagrunnlaget struktureres i dataspace-arkitekturen fra Kapittel~3, kan studentgrupper samarbeide om forskjellige delmodeller og integrere dem gjennom felles API-er.
+
+\subsection{Scenarioer og eksperimentdesign}
+Et undervisningsopplegg kan organisere scenarioene i tre nivåer:
+\begin{enumerate}
+    \item \textbf{Forebyggende drift:} Standard vinterdriftsplan med moderate værforhold. Studentene optimaliserer varmeplaner, vedlikeholdsintervaller og bruk av autonome sensormålinger.
+    \item \textbf{Varslet ekstremvær:} Hurtig opptrapping av vind og snø, der beslutningen står mellom tidlig stenging, ekstra mannskap eller omdirigering av tog. Her må modellen kombinere prediktiv vedlikeholdsanalyse med logistikk for snørydding.
+    \item \textbf{Uforutsett hendelse:} Plutselig ising i kontaktledning eller sporveksler, som krever nødprosedyrer og koordinering med trafikkstyring. Simuleringen må synkroniseres med hendelsesjournalen i Kapittel~6.
+\end{enumerate}
+For hvert scenario bør studentene definere hypoteser om energiforbruk, regularitet og sikkerhetsmarginer. Eksperimentene kan automatiseres med scripts som justerer værparametere og ressursfordeling, slik at resultatene kan analyseres i et dashboard under gruppediskusjoner.
+
+\subsection{Indikatorer for styring og læring}
+Tabell~\ref{tab:kap04-vinterdrift-indikatorer} viser et forslag til indikatorer som kombinerer simuleringens resultatdata med styringsmodellene i Kapittel~6 og Kapittel~7. Indikatorene kan kobles til tiltaksloggen og rapporteringen i Kapittel~7 slik at både teknisk og organisatorisk læring dokumenteres.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Indikatorpakke for vinterdrift i fjellbaner}
+    \label{tab:kap04-vinterdrift-indikatorer}
+    \begin{tabular}{p{0.26\textwidth}p{0.34\textwidth}p{0.28\textwidth}}
+        \toprule
+        \textbf{Indikator} & \textbf{Simuleringsgrunnlag} & \textbf{Foreslåtte tiltak ved avvik}\\
+        \midrule
+        Regularitet per tidsvindu & Diskrete hendelser for togbevegelser kombinert med sannsynlighet for stengte spor. & Prioriter alternative togoppsett, varsle trafikkstyring og oppdatere passasjerinformasjon.\\
+        \addlinespace
+        Energiforbruk i sporvekselvarme & Kontinuerlig modell av varmeelementer og energipriser i driftstimen. & Omprioriter varmeplaner, aktivere fleksibilitetsavtaler og dele effektdata med energiselskap.\\
+        \addlinespace
+        Responstid for beredskapsmannskap & Logistikkmodell for maskiner og personell med rutevalg og væravhengige forsinkelser. & Flytt utstyr til alternative beredskapsbaser, reforhandle kontrakter og oppdatere tiltakslogg.\\
+        \addlinespace
+        Sikkerhetsmargin for kontaktledninger & Kombinerer isingsprognoser med temperatursensornett og inspeksjonsplan. & Iverksett nødavising, redusér hastighet eller steng strekninger etter beredskapsprotokoll.\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Resultatene bør rapporteres i en månedlig vinterdriftsreview der baneforvalter, trafikkstyring og energipartnere vurderer tiltaksliste og læringspunkter. Når indikatorene deles gjennom dataspace-arkitekturen, kan oppdaterte erfaringer brukes i de nasjonale vinterdriftsforaene som Jernbanedirektoratet fasiliterer \citep{jernbanedirektoratet2022energi}. Dette gir studentene innsikt i hvordan tekniske anbefalinger må forankres i sektorens styringslinjer og samarbeidsarenaer.
+
 \section{Praksiseksempel: Digital tvilling for fjernvarmenett}
 Et norsk energiselskap ønsker å styre et fjernvarmenett mer effektivt og redusere toppbelastninger vinterstid. Teamet utvikler først en kontinuerlig modell basert på rørnettets geometri, termiske egenskaper og pumpelogikk. Ved å kombinere deterministiske varmeoverføringsligninger med stokastiske profiler for kundeuttak fanges variasjonene i forbruksmønsteret.
 
