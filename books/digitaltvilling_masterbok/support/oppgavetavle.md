@@ -17,6 +17,7 @@ oppgaver opprettes i arbeidslisten, skal de også beskrives her med samme ID.
 
 | ID | Status | Prioritet | Tema | Beskrivelse | Ansvar | Avhengigheter | Notater |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| DT-21 | FERDIG | Middels | Kapittel 3 | Dokumenterte sanntidsobservabilitet i kraftnettet med metrikk- og hendelsestabell for driftssenteret. | Kapittelredaktør Kapittel 3 + dataarkitekt | `chapters/kapittel03-data.tex`, `plan.md` | Referanser til Statnett-kilder er aktivert og beredskapsseksjonen er oppdatert med kontrolltårn-fokus. |
 | DT-20 | FERDIG | Høy | Kapittel 3 | Utarbeide seksjon om datakvalitetsstyring, kontrollpunkter og observabilitet i tvillingens datapipeline. | Kapittelredaktør Kapittel 3 + dataarkitekt | `chapters/kapittel03-data.tex`, `plan.md`, `support/notater/datastyringsforum-di03.md` | ISO-rammeverket er innarbeidet og sjekklisten er klar for pilotering i DI-03. |
 | DT-12 | PÅGÅR | Kritisk | Kapittel 3 | Etablere nye seksjoner om dataspace-arkitektur, beredskap og bærekraftsindikatorer. | Kapittelredaktør Kapittel 3 + dataarkitekt | `plan.md`, `support/illustrasjonsplan.md`, `support/notater/datastyringsforum-di03.md` | Sikre koordinering med grafikkteam for nye dashboard-figurer og oppdatere API-eksempler. |
 | DT-OPS-02 | FERDIG | Lav | Oppgavestruktur | Definere og teste månedlig revisjonsritual for task queue og oppgavetavle. | Redaksjonen + programleder | `task_queue.md`, `plan.md`, `support/oppgavetavle.md` | Rutine og sjekkliste publisert; evaluering loggføres etter første måned. |

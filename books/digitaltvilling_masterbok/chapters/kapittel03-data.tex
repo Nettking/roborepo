@@ -74,6 +74,36 @@ Observabilitet sørger for at kvalitetsindikatorene faktisk overvåkes og at tvi
 
 \paragraph{Praktisk sjekkliste.} Før en pilot settes i drift, bør teamet bekrefte at indikatorene over kan testes ende-til-ende i testmiljøet, at varslingsrutiner er synkronisert med beredskapsplanen i dette kapittelet, og at partnere i dataspace har signert på hvilke kvalitetsmålinger de forventer. Dette sikrer at datakvalitet ikke blir en engangsaktivitet, men en kontinuerlig del av plattformstyringen.
 
+\subsection{Case: Sanntidsobservabilitet i kraftnettet}
+Statnett har brukt digital tvilling-teknologi for å overvåke sanntidsbelastningen i transmisjonsnettet og gi driftssenteret et felles situasjonsbilde \citep{statnett2023digital,statnett2024kontrolltarn}. Caset bygger på PMU-strømmer, SCADA-data og vedlikeholdslogger som kombineres i et digitalt kontrolltårn. Erfaringene viser at observabilitet må sikres både teknisk og organisatorisk for å unngå at avvik forplanter seg i kraftsystemet.
+
+Tre designgrep er testet i pilotene:
+\begin{itemize}
+    \item \textbf{Felles indikatorbibliotek:} Driftsteamet, cyberberedskap og modellutviklere bruker samme definisjon av latens, datadrift og måletetthet, slik at hendelser tolkes likt på tvers av funksjoner.
+    \item \textbf{Sandkasse for hendelser:} Nye alarmer og SLO-er verifiseres mot historiske feilscenarier før de aktiveres i produksjon. Denne praksisen hindrer alarmutmattelse i beredskapsrommet.
+    \item \textbf{Samsvar med dataspace-policy:} Når data deles med regionale nettselskaper eller forskningspartnere, publiseres indikatorene i samme katalog som tilgangsavtaler og samtykker.
+\end{itemize}
+
+Tabell~\ref{tab:kap03-observabilitet-kraft} viser et utdrag av indikatorene som brukes i driftssenteret. Hvert målepunkt er koblet til en forventet terskel og beskriver hvilket team som leder responsen dersom verdien havner utenfor normalområdet.
+
+\begin{table}[ht]
+    \centering
+    \caption{Observabilitetsindikatorer for Statnett-inspirert digital tvilling.}
+    \label{tab:kap03-observabilitet-kraft}
+    \begin{tabular}{p{0.26\textwidth}p{0.42\textwidth}p{0.26\textwidth}}
+        \toprule
+        \textbf{Metrikk} & \textbf{Overvåkingspraksis} & \textbf{Tiltak ved avvik} \\
+        \midrule
+        Latens i PMU-strømmer & Måles per node og publiseres i dashbord med 5-sekunders oppløsning. & Plattformteam eskalerer til telekomleverandør og initierer failover mot redundante linjer. \\
+        Datadrift i fasevinkel & Automatisk analyse sammenligner mot referansemodeller og vedlikeholdslogger. & Modellansvarlig rekalkulerer parametre og flagger potensielle feil i sanntidsmodellen. \\
+        Tilgjengelighet for kontrolltårn & Kontinuerlig syntetisk testbruker validerer API, graf og varslingskjede. & Beredskapsteam aktiverer manuelle rutiner og informerer situasjonssenteret. \\
+        Hendelsesjournal & Alle alarmer signeres kryptografisk og synkroniseres med dataspace-avtaler. & Compliance-funksjonen vurderer rapporteringsplikt mot NVE og Statnetts situasjonssenter. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Indikatorene forvaltes gjennom en ukentlig tavle der driftssenteret, dataspace-operatøren og sikkerhetsfunksjonen koordinerer tiltak. Resultatet er at modelloppdateringer og nettoperasjon blir tett koblet til observabilitetsarbeidet, samtidig som partnere kan etterprøve datakvaliteten når de gjenbruker strømmer fra kontrolltårnet.
+
 \section{Integrasjonsmønstre og standarder}
 Et integrasjonslandskap for digitale tvillinger spenner fra enkle API-kall til kompleks hendelsesdrevet samhandling. God praksis er  å kartlegge datastrømmer, volum og krav til robusthet før man velger teknologier.
 
