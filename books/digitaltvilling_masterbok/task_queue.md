@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-87 | Kapittel 8 | FERDIG – Utvidet helseseksjonen med pasientflyt-tabell, dataspace- og tilsynssjekkliste og synkroniserte plan- og tavlefiler for pilotundervisning. | `chapters/kapittel08-case.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-86 | Kapittel 4 | FERDIG – La til co-designseksjon for menneske--maskin-samhandling med sprintopplegg, leveransetabell og indikatorpakke som kobler simuleringene til læring og styring. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-85 | Kapittel 7 | FERDIG – Dokumenterte anskaffelses- og leverandørstyring for kommunale tvillingprogram med aktivitetsliste, tabell og scorecard-anbefaling, og oppdaterte plan- og statusfiler for koordinering. | `chapters/kapittel07-livssyklus.tex`, `plan.md`, `task_queue.md` |
 | DT-84 | Kapittel 6 | FERDIG – Tallfestet kvartalsrapport for valideringspanelet med arbeidssteg, indikatorutdrag og undervisningskoblinger, og synkroniserte plan-, tavle- og statusfiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
