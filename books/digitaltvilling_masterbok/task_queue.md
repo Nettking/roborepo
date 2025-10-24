@@ -27,6 +27,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-63 | Kapittel 6 | FERDIG – Dokumenterte generativt valideringsløp med guardrails, tabell og syntetisk datakontroll, og oppdaterte plan-, tavle- og kildefiler for koordinering mot Kapittel 5. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `completed_tasks.md` |
 | DT-62 | Kapittel 6 | FERDIG – Etablerte månedsrapport for kommunal modellovervåking med prosessbeskrivelse, rapportmal og kobling til tiltakslogg. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-61 | Kapittel 6 | FERDIG – Utviklet scenariobasert stresstesting for hydrogenknutepunkt med tabell, indikatorer og workshopopplegg som kobler kontrolltårn, beredskap og kvalitetsjournal. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-60 | Kapittel 5 | FERDIG – Dokumenterte karbonfangst- og lagringscase med indikatorpakke, koblet styringspunktene til kapittel 3, 6 og 7 og oppdaterte plan- og tavlefiler. | `chapters/kapittel05-ai.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |

@@ -830,6 +830,59 @@ Når tiltaksloggen er integrert i kvalitetsjournalen kan indikatorpanelet i Tabe
 
 Når tvillingen tas i bruk i undervisningslaboratoriet, bør studentgrupper teste scenarioer for akutt pågang, influensaepidemier og samtidige kommunale beredskapssituasjoner. Resultatene kobles til kontrolltårn-panelet fra energisektoren ved å oversette indikatorene til helsesektorens måleparametere, for eksempel andel planlagte utskrivinger som må flyttes og tid fra triage til første kliniske vurdering. Slik får studentene erfaring med å overføre strukturerte valideringsmetoder til et nytt domene og ser hvordan ansvarlige roller samarbeider for å sikre trygg tjenesteleveranse.
 
+\section{Validering av generative modeller og syntetiske datasett}
+Generative AI-assistenter og foundation-modeller tas i bruk for å generere nye scenarier, kode og beslutningsunderlag i digitale tvillinger.\citep{siemens2023copilot,rcn2024digitalisering} Når slike modeller koples til sanntidsdata må valideringsløpet utvides med kontroller som fanger opp hallusinasjoner, datastrømmer utenfor modellens treningsgrunnlag og risiko for at syntetiske datasett gjenskaper personopplysninger. \citet{nist2023airmf} fremhever at generative modeller krever eksplisitte guardrails og risikoscenarier, mens \citet{digdir2023styringai} anbefaler at offentlige virksomheter dokumenterer hvordan menneskelig kontroll og transparens sikres i hver iterasjon. Dette kapittelet integrerer derfor en egen kontrollpakke for generative komponenter slik at laboratoriet og undervisningsoppleggene kan kobles til kapittel~5 sitt arbeid med generativ og edge-basert AI.
+
+Et generativt valideringsløp kan organiseres i fire aktiviteter som gjentas gjennom utvikling og drift:
+\begin{enumerate}
+    \item \textbf{Kartlegg bruksområder og risikobilde:} Dokumenter hvilke beslutninger, kodeendringer eller simuleringer som påvirkes av den generative modellen, og vurder konsekvenser for sikkerhet, beredskap og styring før modellen tas i bruk.\citep{digdir2023styringai}
+    \item \textbf{Definer guardrails og evaluering:} Etabler tester for faktasjekk, referanseprompter og måling av avvik fra domenedata. Kombiner automatiserte metrikker med faglig gjennomgang slik at modellen kun leverer svar innenfor godkjent ansvarsområde.
+    \item \textbf{Sikre datastrømmer og journal:} Loggfør hvilke treningsdata, syntetiske datasett og brukerprompter som benyttes, og knytt dem til kvalitetsjournalen slik at endringer kan spores tilbake ved hendelser.\citep{digdir2024datasamarbeid}
+    \item \textbf{Evaluer påvirkning på operasjonell drift:} Sammenlign modellens forslag med beslutninger tatt i kontrolltårn, laboratorier og beredskapsøvelser. Registrer avvik i tiltaksloggen og oppdater indikatorpanelet for tillit med generative feilkilder.
+\end{enumerate}
+
+Tabell~\ref{tab:generativ-validering} viser hvordan kontrollpunktene kan struktureres for å integrere generative komponenter i kvalitetsjournalen.
+
+\begin{table}[ht]
+    \centering
+    \caption{Kontrollpakke for generative tvillingmodeller}
+    \label{tab:generativ-validering}
+    \begin{tabular}{|p{3.2cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Kontrollområde} & \textbf{Valideringssteg} & \textbf{Dokumentasjon} & \textbf{Ansvarlig} \\
+        \hline
+        Modellformål og risiko & Klassifiser generative funksjoner, avklar risikonivå og beslutningsmyndighet før implementering & Risikoregister, beslutningsprotokoll, referanse til AI-forordningen \citep{eu2024aiact} & Programleder digital tvilling \\
+        \hline
+        Prompt- og outputkontroll & Test referanseprompter, etabler sperrer for sensitive forespørsler og mål presisjon mot domeneekspertenes fasit & Testlogg, eksempelbank, referansepanel med faglig vurdering & Kapittel 6 laboratorieteam \\
+        \hline
+        Datastrøm og sporbarhet & Dokumenter opprinnelse til trenings- og syntetiske datasett, loggfør brukerprompter og modellversjoner & Datasettjournal, modelljournal, tilgangslogg \citep{digdir2024datasamarbeid} & Data steward \\
+        \hline
+        Operasjonell integrasjon & Sammenlign modellforslag med beslutninger i kontrolltårn og beredskapsøvelser, registrer effekter på indikatorpanelet & Tiltakslogg, indikatorpanel for tillit, læringsnotat fra øvelser & Driftssjef/beredskapsleder \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Kvalitetskontroll av syntetiske datasett}
+Syntetiske datasett brukes for å beskytte personopplysninger og dele treningsdata mellom partnere, men må kvalitetssikres for å unngå lekkasje av reelle individdata eller feil statistikk. \citet{datatilsynet2022anonymisering} anbefaler at organisasjoner kombinerer kvantitative tester for gjenidentifisering med manuell vurdering av om datasettet kan misbrukes. I dataspace-samarbeid bør kommuner og virksomheter også beskrive hvordan syntetiske datasett distribueres, hvem som har tilgang og hvilke scenarier de er gyldige for.\citep{digdir2024datasamarbeid}
+
+\begin{itemize}
+    \item \textbf{Representativitet:} Sammenlign nøkkelstatistikk (gjennomsnitt, varians, ekstreme verdier) med originale datasett for å sikre at syntetiske data bevarer mønstre som modellen er avhengig av.
+    \item \textbf{Re-identifiseringstest:} Bruk risikoindikatorer fra \citet{datatilsynet2022anonymisering} for å måle sannsynlighet for å gjenskape enkeltindivider. Dersom risikoen overskrider terskler må datasettet re-genereres eller begrenses i distribusjon.
+    \item \textbf{Kontinuerlig overvåking:} Registrer hvilke generasjoner som er brukt i laboratoriet, og oppdater kvalitetsjournalen når nye versjoner tas i bruk slik at devops-teamet kan spore avvik til konkrete datasett.
+\end{itemize}
+
+Resultatene kobles til kontrolltårn-panelet fra energicase og helsesektorcaset slik at indikatorene kan filtrere mellom observasjoner fra produksjonsdata og syntetiske testdata. Dette gjør det mulig å avsløre hvis genererte datasett skjuler risikoer som må håndteres i ordinær drift.
+
+\subsection{Kobling til undervisnings- og laboratorieopplegg}
+For masterstudentene gir generativ validering et aktuelt case som viser hvordan fremvoksende AI-verktøy kan brukes ansvarlig. Øvingspakken bør derfor utvides med følgende aktiviteter:
+\begin{itemize}
+    \item \textbf{Prompt-laboratorium:} Studentgrupper tester guardrails mot faktiske scenarier fra Kapittel~4 og dokumenterer hvordan feilutdata registreres i kvalitetsjournalen.
+    \item \textbf{Syntetisk dataverksted:} Klassen sammenligner treningssett fra Kapittel~3 sine dataspace-case med syntetiske alternativer, og vurderer risiko basert på \citet{datatilsynet2022anonymisering}.
+    \item \textbf{Refleksjonsnotat:} Hver gruppe beskriver hvordan kontrollene i Tabell~\ref{tab:generativ-validering} påvirker indikatorpanelet for tillit og leverandøroppfølgingen fra forrige seksjoner.
+\end{itemize}
+
+Når laboratoriet dokumenterer generative kontroller på samme måte som øvrige valideringssløyfer får virksomheten et helhetlig rammeverk som kan deles med fagfeller og tilsyn. Erfaringene brukes videre når nye leverandører skal kvalifiseres eller når dataspace-partnere ber om dokumentasjon på at syntetiske datasett er trygge å bruke.
+
 \section{Regulatorisk sandkasse og tredjepartsrevisjon}
 Datatilsynets regulatoriske sandkasse for ansvarlig kunstig intelligens gir offentlige virksomheter mulighet til å teste nye digitale løsninger sammen med tilsynet før de tas i full drift.\citep{datatilsynet2023sandkasse} For digitale tvillinger i helsesektoren betyr det at prosjektet kan eksperimentere med nye datakilder og algoritmer innenfor klare rammer for personvern, informasjonssikkerhet og etikk. Sandkasseløpet krever at tvillingteamet dokumenterer hvordan løsningen bygger inn nødvendige sikkerhetsmekanismer og menneskelig kontroll, og at erfaringene omsettes til forbedrede rutiner i kvalitetsjournalen.
 
