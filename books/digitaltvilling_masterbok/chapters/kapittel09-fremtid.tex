@@ -60,6 +60,49 @@ Utvidet virkelighet, digitale arbeidsrom og metaverse-plattformer gjør det muli
 \subsection{Dataspace-økosystemer og samarbeid}
 Europeiske dataspace-initiativer endrer hvordan virksomheter deler data og modeller. Gaia-X og IDSA legger til rette for at digitale tvillinger kan kobles på eksterne datastrømmer uten å gi fra seg kontroll over forretningshemmeligheter.\citep{gaiax2022architecture,idsa2023ram} For norske aktører betyr dette at energidata, maritime logistikkstrømmer eller helseinformasjon kan tilgjengeliggjøres gjennom standardiserte konnektorer, samtidig som tilgang styres av policyer og sertifisering. Forskningsfronten undersøker hvordan slike dataspace-plattformer kan kombineres med semantiske modeller og automatisert etterlevelse, slik at tvillinger kan forhandle om datadeling i sanntid og dokumentere hvilke regler som gjelder for hver transaksjon.
 
+\section{Forskningsetikk, datahåndtering og åpen vitenskap}
+Ambisiøse masterprosjekter må forholde seg til både juridiske krav, etiske vurderinger og forventninger om deling av resultater. Kravene kommer fra institusjonenes egne retningslinjer, personvernregelverket, finansieringskilder og fagfelleprosesser. En strukturert tilnærming gjør at forskningsaktivitetene kan dokumenteres, evalueres og gjenbrukes på tvers av kapitlene i denne boken.
+
+\subsection{Personvern og forhåndsvurdering}
+All bruk av personopplysninger, helseopplysninger eller andre sensitive data krever forhåndsvurdering og tydelig forankring hos dataansvarlig. Sikt tilbyr veiledning for hvordan behandlingsgrunnlag, dataminimering og informasjonssikkerhet skal dokumenteres før datainnsamlingen starter.\citep{sikt2023personvern} For medisinske og helsefaglige prosjekter må Regional komité for medisinsk og helsefaglig forskningsetikk (REK) involveres når prosjektet omfatter levende personer, biologisk materiale eller helsejournaler.\citep{rek2024forhandsvurdering} Den praktiske arbeidsflyten kan organiseres slik:
+\begin{enumerate}
+    \item \textbf{Kartlegg datakategorier:} Beskriv hvilke felt i datasettet som er personidentifiserende, og vurder behov for pseudonymisering eller anonymisering.
+    \item \textbf{Definer ansvar og roller:} Etabler RACI-lister som kobler prosjektleder, veileder, personvernombud og eksterne partnere, slik Kapittel~7 anbefaler for styringsstrukturer.
+    \item \textbf{Forbered godkjenningsløp:} Samle maler for samtykke, databehandleravtaler og REK-søknad i et eget prosjektarkiv slik at endringer kan spores i kvalitetsjournalen fra Kapittel~6.
+\end{enumerate}
+
+\subsection{Datahåndteringsplan og tilgangsstyring}
+De fleste finansieringsprogram krever en oppdatert datahåndteringsplan (DMP) som viser hvordan data samles inn, lagres, deles og bevares. Norges forskningsråd stiller krav om at DMP-en dekker organisering, metadata, sikkerhet og eventuelle begrensninger for gjenbruk av data.\citep{forskningsradet2023aapen} Planen bør oppdateres når prosjektet beveger seg gjennom milepælene i finansieringstabellen lenger ned i kapitlet. Tabellen under viser hvordan tiltakene kan kobles til de øvrige kapittelene i boka.
+
+\begin{table}[h]
+    \centering
+    \caption{Tiltak for ansvarlig håndtering av forskningsdata}
+    \label{tab:forskningsdata-tiltak}
+    \begin{tabular}{|p{3.2cm}|p{5.0cm}|p{4.2cm}|}
+        \hline
+        \textbf{Tiltak} & \textbf{Formål} & \textbf{Relaterte kapitler og verktøy} \\
+        \hline
+        Datahåndteringsplan & Dokumentere datakilder, lagring, tilgang og arkivering med versjonskontroll & Kapittel~3 (dataspace-policy), Kapittel~6 (kvalitetsjournal) \\
+        \hline
+        Tilgangsmatrise og sporbarhet & Sikre at bare autoriserte personer har tilgang, og at alle operasjoner logges & Kapittel~4 (simuleringsinfrastruktur), Kapittel~7 (governance og roller) \\
+        \hline
+        Plan for langtidsbevaring & Avklare hva som skal publiseres åpent, hva som skal lagres i institusjonelle arkiv og hvilke metadata som kreves & Kapittel~8 (casebank) og ressursappendiks \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Når tiltakene er nedfelt i en DMP kan prosjektet koble dem til tekniske løsninger, for eksempel tilgangsstyring i dataspace-kontrakter (Kapittel~3) eller versjonerte modellpakker fra Kapittel~5. Dette gjør at etikk- og kvalitetsarbeidet henger sammen med modellforvaltningen.
+
+\subsection{Åpen vitenskap og gjenbruk}
+Horizon Europe og norske finansieringsprogram forventer at prosjekter legger til rette for åpen publisering, åpne data og gjenbruk av kode, så langt det er forenlig med sikkerhet og personvern.\citep{eu2023ai,forskningsradet2023aapen} For masterstudenter betyr det å planlegge hvordan resultatene kan deles i institusjonelle arkiv eller dataspace-sandkasser uten å kompromittere konfidensialitet. Følgende prinsipper støtter en ansvarlig åpenhetsstrategi:
+\begin{itemize}
+    \item \textbf{Dokumentér avklaringer tidlig:} Legg forventninger om åpen publisering inn i prosjektkontrakt og styringsdokument slik Kapittel~7 anbefaler.
+    \item \textbf{Bruk modulær lisensiering:} Del kode, modeller og data med tydelige lisenser (for eksempel Creative Commons eller Apache 2.0) der det er mulig, og beskriv eventuelle unntak i tiltaksloggen fra Kapittel~6.
+    \item \textbf{Gjør gjenbruk enkelt:} Publiser metadata, konfigurasjonsfiler og skript som lar andre gjenskape resultater, og knytt dem til indikatorene for forskningsfremdrift i Tabell~\ref{tab:forskningsindikatorer}.
+\end{itemize}
+
+En bevisst strategi for etikk, dataforvaltning og åpenhet reduserer risikoen for stopp i prosjektet og øker verdien av leveransene. Den binder sammen læringsmålene i kapittel 3, 6 og 7 med de forskningsorienterte aktivitetene i dette kapittelet.
+
 Masterprosjekter og pilotundervisningen bør derfor analysere dataspace-strategier tidlig: avklar hvilke delingsnoder som finnes i sektoren, hvilke tilganger som krever godkjenning, og hvordan tvillingen håndterer logging og audit når data flyttes mellom organisasjoner. Dette gir også rom for komparative studier av hvordan ulike dataspace-implementeringer støtter NIS2 og andre sikkerhetskrav, og hvilke organisatoriske grep som trengs for å oppnå tillit.\citep{rcn2024digitalisering}
 
 \subsection{Bærekraft og regulering}
