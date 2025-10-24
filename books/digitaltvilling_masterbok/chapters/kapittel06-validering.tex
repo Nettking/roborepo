@@ -209,6 +209,40 @@ Tabell~\ref{tab:maritim-tilsyn} viser et forslag til revisjonspunkter for en aut
 
 Ved å integrere tabellen i kvalitetsjournalen kan rederiet dokumentere samsvar før hver milepæl i driftsgodkjenningen. Rapporteringen gjenbrukes i fagfelleprosesser og undervisning, og sikrer at nye iterasjoner av tvillingen vurderes mot maritime risikokrav samtidig som indikatorpanelet for tillit oppdateres.
 
+\section{Kommunal validering for overvann og kritisk infrastruktur}
+Kommuner som bygger digitale tvillinger for overvann, kritisk infrastruktur og beredskap må kombinere tekniske modeller med lovpålagte krav til planverk og øving. \citet{dsb2022beredskap} legger vekt på at kommunal beredskapsplikt krever en helhetlig ROS-prosess, mens \citet{nve2022kommunal} anbefaler at flom- og skredscenarioer testes gjennom samkjørte øvelser med kritiske tjenesteområder. I Oslo brukes den digitale tvillingen for å koordinere blågrønn infrastruktur og driftsberedskap, med indikatorer for kapasitet, risiko og tiltakssoner.\citep{oslo2023overvann} Prosjekter som overvannslaboratoriet utviklet av Asplan Viak viser hvordan kommuner kan koble sensordata, værprognoser og 3D-bymodeller for å teste tiltak før de implementeres.\citep{asplan2023overvannslab}
+
+For å sikre at tvillingen støtter både drift og beredskap bør valideringsløpet organiseres i fire steg:
+\begin{enumerate}
+    \item \textbf{Etabler felles datagrunnlag:} Kartlegg hvilke sensorer, planregistre og hendelseslogger som inngår i tvillingen, og dokumenter datakvalitet og behandlingsgrunnlag i kvalitetsjournalen.
+    \item \textbf{Koble modeller og tiltak:} Synkroniser hydrauliske modeller, driftsscenarier og bærekraftsmål slik at simuleringene speiler prioriterte tiltak i kommunens handlingsplaner for overvann.\citep{oslo2023overvann}
+    \item \textbf{Planlegg øving og samhandling:} Bruk \citet{dsb2022beredskap} som sjekkliste for å definere roller, varslingslinjer og beslutningspunkter før tverrfaglige øvelser.
+    \item \textbf{Evaluér og forbedre:} Oppsummer funn fra øvelser og drift i fagfelleloggen, og registrer forbedringstiltak i planverk og styringspanel for tillit slik \citet{nve2022kommunal} anbefaler.
+\end{enumerate}
+
+Tabell~\ref{tab:kommunal-validering} oppsummerer hvordan kommunen kan strukturere leveranser og ansvar for å koble tvillingen til kravene i beredskapsplanen.
+
+\begin{table}[ht]
+    \centering
+    \caption{Valideringssløyfe for kommunalt overvanns- og beredskapscase}
+    \label{tab:kommunal-validering}
+    \begin{tabular}{|p{3.2cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Steg} & \textbf{Leveranse} & \textbf{Datagrunnlag og verktøy} & \textbf{Ansvarlig} \\
+        \hline
+        Oppstart og kartlegging & ROS-analyse som kombinerer flomsoner, kritiske bygg og tjenesteområder & Historiske hendelseslogger, planregister, sensorstrømmer fra overvannsløsninger & Beredskapskoordinator \\
+        \hline
+        Modellering og scenariobygging & Kalibrerte hydrauliske modeller og tiltakslister med prioritert rekkefølge & Overvannslaboratorium, værprognoser, 3D-bymodell \citep{asplan2023overvannslab} & Teknisk fageier for vann og avløp \\
+        \hline
+        Øving og driftstøtte & Tabletop-øvelser og operativ beslutningsstøtte i kontrolltårn & Hendelseslogger, samarbeidsplattform, standardkart fra Kapittel~6 & Tverrfaglig innsatsgruppe \\
+        \hline
+        Evaluering og oppfølging & Tiltakstabell med status, læringspunkter og kobling til handlingsplan & Kvalitetsjournal, fagfellelogg, indikatorpanel for tillit & Kommunedirektørens kriseledelse \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Seksjonen bygger bro mellom dataspace-arbeidet i Kapittel~3 og simuleringene i Kapittel~4 ved å tydeliggjøre hvordan kommunal beredskap kan bruke samme valideringspanel og styringsindikatorer som energisektoren. Når tvillingen kombinerer overvannslaboratoriet med kvalitetsjournalen fra dette kapittelet får studentene et helhetlig case som dekker modellering, datadeling og beredskapsledelse.
+
 \section{Regulatoriske rammer og sikkerhetsstandarder}
 Fagfellepanelet etterspurte en tydelig kobling mellom kvalitetsprosessen og de regulatoriske rammene som gjelder for norske virksomheter. NIS2-direktivet og IEC~62443-serien definerer krav til cybersikkerhet, hendelseshåndtering og styring av industrielle kontrollsystemer, mens DNV-RP-A204 beskriver hvordan digitale tvillinger skal kvalifiseres i sikkerhetskritiske domener.\citep{eu2022nis2,iec62443-2-1,dnv2021a204} Disse rammeverkene krever at valideringsplanen dokumenterer både tekniske og organisatoriske tiltak, med klar oversikt over ansvar og godkjenninger.
 
