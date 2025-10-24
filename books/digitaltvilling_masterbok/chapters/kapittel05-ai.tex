@@ -85,6 +85,30 @@ Tabell~\ref{tab:kontrollpunkter-generativ} viser hvordan styringen kan dokumente
 
 Denne styringsrammen gjør det enklere å argumentere for generativt databruk overfor juridiske og etiske vurderinger. Studentteam kan bruke tabellen som sjekkliste i prosjektgjennomgangen og som vedlegg når rubrikken fra lærerveiledningen skal dokumenteres.
 
+\subsection{Prediktivt vedlikehold i norske energianlegg}
+Prediktivt vedlikehold krever at AI-komponentene i den digitale tvillingen forstår slitasjemønstre, kan anbefale tiltak i tide og er koordinert med operasjonelle prosesser i kontrollrommet. Kraftsystemet er et godt eksempel fordi Statnett har etablert kontrolltårn som kobler sanntidsdata, simulerte scenarioer og vedlikeholdsplanlegging for hele transmisjonsnettet.\citep{statnett2024kontrolltarn} Når studentgrupper skal lage tilsvarende løsninger, bør de kombinere dataassimilering fra sensorer, tilstandsovervåkning i SCADA og læringsmodeller som estimerer restlevetid for kritiske komponenter. Offshore-industrien viser hvordan dette kan skaleres: Equinor bruker digitale tvillinger for å følge opp turbiner, ventiler og sikkerhetssystem på Johan Sverdrup-feltet, noe som gir en rik erfaringsbase for å teste algoritmene mot faktiske inspeksjonsrunder.\citep{equinor2021johansverdrup}
+
+Tabell~\ref{tab:vedlikehold-kraft} viser et forslag til hvordan vedlikeholdssyklusen kan dokumenteres. Kolonnene binder sammen læringsmodellene fra dette kapittelet, styringspunktene i Kapittel~6 og livssykluslogikken i Kapittel~7.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Prediktivt vedlikehold for digitale tvillinger i kraftsystemet}
+    \label{tab:vedlikehold-kraft}
+    \begin{tabular}{p{3.6cm}p{4.4cm}p{3.6cm}p{3.6cm}}
+        \toprule
+        \textbf{Fase} & \textbf{AI- og dataopplegg} & \textbf{Operasjonelle tiltak} & \textbf{Relevante styringspunkter} \\
+        \midrule
+        Sensorinnsamling og dataassimilering & Kombiner tidsserier fra synkronfasemålere, værdata og inspeksjonslogger i en felles datasjø. Bruk ensembles av Kalman-filtre for å korrigere målinger og fange konseptdrift. & Avklar dataprioritet i kontrolltårnet og etabler fallback-prosedyrer ved sensorutfall. & Kapittel~3 (dataspace-kontrakter) og Kapittel~6 (tilsynslogger). \\
+        \addlinespace
+        Tilstandsmodellering og prognoser & Tren gjenværende-levetidsmodeller (RUL) med gradientboosting eller sekvensielle nevrale nett; juster hyperparametere etter sesong og belastning. & Synkroniser anbefalte inspeksjonsvinduer med driftsplan og bemanning, og loggfør avvik mellom modell og observasjoner. & Kapittel~5 (rubrikk for læringsmodeller) og Kapittel~7 (styringssløyfer). \\
+        \addlinespace
+        Vedlikeholdsplanlegging og læring & Optimaliser tiltakslisten med flermålsplanlegging som balanserer nedetid, kost og risiko. Læringssløyfen oppdateres etter hver gjennomført inspeksjon. & Del beslutningsgrunnlag i kontrolltårnet og i leverandørportal; oppdater risikobildet mot nasjonale beredskapskrav. & Kapittel~6 (tillitspanel og DPIA) og Kapittel~9 (innovasjonsportefølje). \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+For å få en helhetlig løsning anbefaler Energi Norge at kontrolltårn-team følger faste beredskapsrutiner, blant annet for kommunikasjon mot nettselskap og myndigheter.\citep{energinorge2023beredskap} Slike rutiner bør knyttes til modelloppdateringene ved at hver vedlikeholdssyklus evalueres mot indikatorene i Tabell~\ref{tab:kontrollpunkter-generativ}. Studentgrupper som beskriver både dataflyt, modellvalg og styringsrutiner vil lettere kunne argumentere for at AI-tvillingen støtter sikker og bærekraftig drift av energiinfrastrukturen.
+
 \section{Samspill mellom læring, optimalisering og assimilering}
 De tre byggesteinene virker sammen i en lukket sløyfe: maskinlæring gir prognoser og modeller som beskriver systemet, dataassimilering korrigerer modellen når virkeligheten avviker, og optimalisering omskaper innsikten til beslutninger. I praksis må slike sløyfer designes slik at dataflyten er robust, at prosesseringen skjer i riktig rekkefølge, og at menneskelige operatører har innsyn i hvorfor anbefalingene endres. En moden digital tvilling bør derfor inkludere dashboards som visualiserer hvilke måler som påvirker beslutningene, og varslingsmekanismer når usikkerheten overstiger forhåndsdefinerte terskler. Dette gjør det mulig å bygge tillit, for eksempel ved å dokumentere hvordan et bestemt sett med sensordata utløste en ny optimaliseringsstrategi.
 
