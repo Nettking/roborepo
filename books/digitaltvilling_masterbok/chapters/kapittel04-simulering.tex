@@ -186,6 +186,45 @@ For å sikre at simuleringene faktisk leverer bærekraftige resultater, må labo
 
 Under laboratorieøkter bør studentgruppene bruke indikatorene til å evaluere egne modeller. Dette innebærer å dokumentere antakelser, datakilder og følsomhet overfor usikkerhet i materialdata. Resultatene kan presenteres i en felles «sirkulær tavle» hvor hvert team oppdaterer status mot målverdier, og kobler funnene til tiltakene fra kapittel 3 og styringsmodellen i kapittel 7.
 
+\section{Hydrogenknutepunkt og forsyningssimulering}
+Hydrogen får en stadig tydeligere rolle i norsk industri og maritim transport, og krever samspilt infrastruktur mellom produksjon, lagring og bunkring i havner. \citet{enova2024hydrogenknutepunkt} beskriver hvordan hydrogenknutepunkt skal dimensjoneres for å støtte flere fartøyskategorier samtidig, mens \citet{gassco2023hydrogen} peker på behovet for samordnede rør-, båt- og lastebilstrømmer når hydrogen flyttes mellom industriklynger. En digital tvilling for et slikt knutepunkt må kombinere kontinuerlig prosessmodellering med diskrete hendelser knyttet til fartøyanløp, vedlikehold og sikkerhetskontroller. Scenarioene må også speile usikkerhet i etterspørsel og energipriser slik at investeringer og operative tiltak kan prioriteres over tid.\citep{dnv2023hydrogenforecast}
+
+\subsection{Scenario og datagrunnlag}
+Et hydrogenknutepunkt består typisk av elektrolysekapasitet, lagertanker, distribusjonsrør og bunkringsstasjoner i havn. Studentene bør først kartlegge material- og energistrømmer med støtte fra datakatalogen i Kapittel~3. Det innebærer å registrere sensorer for trykk, temperatur, fyllingsgrad og ventiltider, samt logistikkdata for planlagte anløp og lastprofiler. Historiske data fra produksjonsstatistikk og bookinglister brukes som input til simuleringen, mens framtidsscenarier kan trekkes fra porteføljeplaner og markedsutsikter hos de involverte energiselskapene. Prosess- og sikkerhetskrav hentes fra standardkartet i Kapittel~6 slik at hendelser som trykkavlastning, lekkasjetest eller sikkerhetsinspeksjon får tydelige regler i modellen.
+
+\subsection{Indikatorpakke for navet}
+For å støtte styring må simuleringen levere indikatorer som kobler tekniske måltall til kapasitet, klimaeffekt og sikkerhet. Tabell~\ref{tab:kap04-hydrogen-indikatorer} viser et forslag til indikatorpakke som kombinerer data fra produksjon, logistikk og marked. Kolonnene speiler hvordan indikatorene må knyttes til tiltakslogg og rapporteringskrav i Kapittel~6.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Forslag til indikatorer for hydrogenknutepunkt}
+    \label{tab:kap04-hydrogen-indikatorer}
+    \begin{tabular}{p{0.25\textwidth}p{0.33\textwidth}p{0.32\textwidth}}
+        \toprule
+        \textbf{Indikator} & \textbf{Datagrunnlag og simuleringsstøtte} & \textbf{Tiltak ved avvik}\\
+        \midrule
+        Leveringsgrad per uke & Kombinerer elektrolyseproduksjon, lagernivå og bunkringsplan fra DES-modellen. & Planlegg ekstra skift eller alternative leveranser, oppdater leverandørkontrakter i dataspace.\\
+        \addlinespace
+        Utnyttelse av lagertank & Kontinuerlig nivåmåling koblet med scenario for fartøyanløp og sikkerhetsgrenser. & Optimaliser fyllingssekvenser, iverksett trykkavlastning og informer havneoperatører.\\
+        \addlinespace
+        CO$_2$-besparelse per leveranse & Beregn direkte substitusjon mot marin diesel basert på energiinnhold og logistikkprofiler. & Prioriter kunder eller ruter med størst klimaeffekt og rapporter i bærekraftrapporten.\\
+        \addlinespace
+        Sikkerhetsmargin i bunkring & Kombiner tidsplan, trykkmålinger og nødsystemtester i en risikomodell. & Utsett bunkring, kall inn ekstra sikkerhetspersonell og oppdater hendelseslogg.\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Indikatorene gir grunnlag for å styre kapasitet og risiko i realtid. Når simuleringen er integrert i dataspace-arkitekturen fra Kapittel~3, kan indikatorene deles med både operatører, leverandører og myndigheter gjennom standardiserte API-er. Dette gjør det enklere å etablere felles kontrolltårn mellom havn, energiselskap og transportaktører.
+
+\subsection{Øvingsopplegg for masterkurset}
+Et praktisk undervisningsopplegg kan følge tre hovedtrinn:
+\begin{enumerate}
+    \item \textbf{Bygg scenariobibliotek:} Studentene etablerer minst tre etterspørselsprofiler (base, høy vekst og krise) og kobler dem til sannsynlighetsfordelinger for fartøyanløp og industriell etterspørsel.
+    \item \textbf{Koble til styringssløyfer:} Resultatene mates inn i indikatorpanelet i Tabell~\ref{tab:kap04-hydrogen-indikatorer} og kobles til rapporteringspakken i Kapittel~6 slik at hendelser automatisk flagges.
+    \item \textbf{Evaluere tiltak:} Gruppene tester tiltak som å forskyve produksjon, aktivere mobile lagertanker eller samarbeide med nabohavner. Effekten måles på både leveringssikkerhet, klima og sikkerhetsmarginer.
+\end{enumerate}
+Refleksjonsdelen bør knytte læringspunkter til governance-modellen i Kapittel~7: Hvem beslutter investeringer, hvordan deles risiko med partnerne og hvilke nye indikatorer må inn i gevinstplanene? Når simuleringen kobles til lærerveiledningen får studentene også erfaring med å formidle funn til eksterne interessenter.
+
 \section{Praksiseksempel: Digital tvilling for fjernvarmenett}
 Et norsk energiselskap ønsker å styre et fjernvarmenett mer effektivt og redusere toppbelastninger vinterstid. Teamet utvikler først en kontinuerlig modell basert på rørnettets geometri, termiske egenskaper og pumpelogikk. Ved å kombinere deterministiske varmeoverføringsligninger med stokastiske profiler for kundeuttak fanges variasjonene i forbruksmønsteret.
 
