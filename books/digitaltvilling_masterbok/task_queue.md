@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-20 | Kapittel 3 | FERDIG – Beskrev datakvalitetsstyring med kontrollpunkter, observabilitet og ISO-referanser. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md` |
 | DT-15 | Kapittel 6 | FERDIG – Etablerte sertifiseringsløp og kvalitetsjournal i kapittel 6 og oppdaterte plan- og statusfiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-19 | Kapittel 6 | FERDIG – Etablerte tillitsindikatorer, styringspanel og rapporteringsmal i kapittel 6 og synkroniserte status- og kildefiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-11 | Kapittel 2 | FERDIG – Metodebibliotek, offshore-case og modelljournal-tabell lagt til i kapitlet og statusfiler oppdatert. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md` |
