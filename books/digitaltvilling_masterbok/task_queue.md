@@ -22,10 +22,12 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger | Status |
 
+
 ## Ferdige oppgaver
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-30 | Kapittel 6 | FERDIG – Dokumenterte maritimt tilsynsløp for autonome digitale tvillinger med revisjonstabell og arbeidsflyt, og oppdaterte plan-, tavle- og kildefiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `completed_tasks.md` |
 | DT-29 | Kapittel 2 | FERDIG – Dokumenterte samsvarstesting i digitalt laboratorieløp med testregime-tabell og synkroniserte plan- og statusfiler. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-27 | Kapittel 6 | FERDIG – Etablerte driftsgodkjenning- og modellvedlikeholdsseksjon med godkjenningspunkttabell og koordinerte plan- og tavleoppdateringer. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-28 | Kapittel 3 | FERDIG – Dokumenterte sirkulære materialstrømmer med klimaregnskapstabell og ombrukscase, og oppdaterte plan-, tavle- og kildefiler. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
