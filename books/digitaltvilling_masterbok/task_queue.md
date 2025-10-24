@@ -18,7 +18,6 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger |
 | --- | --- | --- | --- | --- | --- |
-| DT-APP-01 | Middels | Appendiks – Ressurser | Kategorisere ressursbanken etter modenhetsnivå og beskrive bruks-case. | Utvidet appendiks med kategoriserte tabeller og veiledning. | `plan.md` (Appendiks – Ressurser), `support/appendiks-ressurser.tex` |
 | DT-APP-02 | Lav | Appendiks – Begrepsliste | Berike ordlisten med definisjoner, referanser og forkortelser. | Oppdatert ordliste med kildehenvisninger og tematiske grupper. | `plan.md` (Appendiks – Begrepsliste), `support/ordliste.tex` |
 
 ## Pågår
@@ -33,6 +32,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-APP-01 | Appendiks – Ressurser | FERDIG – Kategoriserte ressursbanken etter modenhetsnivå og beskrev casescenarier for bruk i undervisning og prosjektarbeid. | `support/appendiks-ressurser.tex`, `plan.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-18 | Kapittel 9 | FERDIG – Skalerte fremtidstrendene med veikart, finansieringstabell og forskningsdesign-eksempler. | `chapters/kapittel09-fremtid.tex`, `support/referanser.bib`, `plan.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-17 | Kapittel 8 | FERDIG – Fordypet havvind-, landbruks- og battericase med nye tabeller, casemaler og oppdaterte kildehenvisninger. | `chapters/kapittel08-case.tex`, `plan.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-16 | Kapittel 7 | FERDIG – Skrev livssyklusfortellinger, sammenlignet governance-modeller og opprettet bærekraft-KPI-tabell for nye pilotcaser. | `chapters/kapittel07-livssyklus.tex`, `plan.md`, `completed_tasks.md`, `task_queue.md` |

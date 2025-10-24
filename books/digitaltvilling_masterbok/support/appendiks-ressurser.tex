@@ -1,136 +1,173 @@
 \chapter{Datasett og verktøyressurser}
 \label{appendix:ressurser}
 
-Dette appendikset samler forslag til datasett og verktøy som kan brukes i prosjekt-
-eller masteroppgaver knyttet til digitale tvillinger. Ressursene er valgt med tanke på norske forhold, åpen tilgang der det er mulig, og relevans for modellering, overvåking og analyse.
+Dette appendikset samler forslag til datasett, verktøy og styringsmaler som kan brukes i prosjekt- eller masteroppgaver knyttet til digitale tvillinger. Ressursene er valgt med tanke på norske forhold, åpen tilgang der det er mulig, og relevans for modellering, overvåking og analyse. Ressursbanken er nå strukturert etter modenhetsnivå slik at studenter, veiledere og partnere raskt kan velge riktige kombinasjoner til casets ståsted.
+
+\section{Modenhetsnivåer og scenarier}
+\begin{description}
+    \item[Utforske (idé og konsept)] Brukes når teamet kartlegger behov, tilgjengelige datasett og mulige arkitekturer. Fokus ligger på raske analyser og samskaping i verksted eller undervisning.
+    \item[Pilotere (kontrollert utprøving)] Passer når en prototype skal kobles til utvalgte datakilder, og når prosesser for tilgang, sikkerhet og vurdering skal testes med begrenset omfang.
+    \item[Skalere (operasjonell drift og gevinst)] Aktuelt når løsningen skal levere verdi i daglig drift, synkroniseres med styringsmodeller og rapportere effekter på tvers av organisasjoner.
+\end{description}
+
+\begin{table}[h]
+    \centering
+    \caption{Eksempelscenarier for bruk av ressursbanken}
+    \label{tab:ressurs-scenarier}
+    \begin{tabular}{p{0.26\textwidth}p{0.64\textwidth}}
+        \toprule
+        \textbf{Modenhetsnivå} & \textbf{Typiske leveranser og casekobling} \\
+        \midrule
+        Utforske & Case «Klimatilpasset kommune»: kombiner Felles datakatalog, Frost API og CesiumJS for å identifisere hvilke data som trengs til scenariomodeller i kapittel~3 og kapittel~8. \\
+        Pilotere & Case «Smart terminaldrift» og case «Virtuell legevakt»: koble Entur-, Bane~NOR-, Avinor- og FHI-data til Kafka, Azure Digital Twins og Siemens Industrial Edge for å teste nye arbeidsprosesser i transport og helse. \\
+        Skalere & Case «Regional energikoordinering» og case «Autonom havn»: bruk Statnett-, Nord~Pool-, BarentsWatch- og RACI-S-ressurser for å sikre gevinst og styring i tråd med kapittel~6 og kapittel~7. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Casebeskrivelser}
+\subsection{Case «Klimatilpasset kommune» (Utforske)}
+Dette scenarioet tar utgangspunkt i en kommune som skal vurdere klimatilpasning for bygg og kritisk infrastruktur. Studenten bruker åpne datasett fra Digdir, Meteorologisk institutt og Statens vegvesen til å lage raske analyser, visualisere sårbarhet i CesiumJS og koble behovene til læringsmålene i kapittel~3.
+
+\subsection{Case «Smart terminaldrift» (Pilotere)}
+Her testes nye arbeidsprosesser for kollektivknutepunkt og lufthavn i samspill med logistikkaktører. Datakilder fra Entur, Bane~NOR, Avinor og BarentsWatch kobles via Kafka og Azure Digital Twins for å lage en felles situasjonsforståelse, mens Siemens Industrial Edge validerer at algoritmer kan kjøres nær operasjonen før skalering.
+
+\subsection{Case «Regional energikoordinering» (Skalere)}
+Caset retter seg mot energiselskap, fylkeskommune og industripartnere som skal samkjøre produksjon, fleksibilitet og beredskap. Statnett, Nord~Pool, NVE og Enova-prosjektbanken gir datagrunnlaget, mens gevinstplan og RACI-S-mal sikrer at tiltak følges opp etter styringsmodellene i kapittel~6 og kapittel~7.
+
+\subsection{Case «Virtuell legevakt» (Pilotere)}
+Scenarioet omfatter et samarbeid mellom kommunehelsetjenesten og sykehus som skal teste en digital legevakt. Helsedirektoratets nøkkeltall avdekker kapasitet og behov, mens data fra Sykdomspulsen og Felleskatalogen brukes til sanntidsbeslutninger i pilotlaboratoriet. Norsk Helsenetts norm gir rammene for informasjonssikkerhet før løsningen skaleres.
+
+\subsection{Case «Autonom havn» (Skalere)}
+Her samarbeider havn, logistikkaktører og myndigheter om å automatisere trafikkavvikling og beredskap. Kartverket og Mareano-data gir grunnlag for modellering, HUB~Ocean og BarentsWatch gir situasjonsdata i pilotfasen, mens Sjøfartsdirektoratets register og styringsmalene i dette appendikset sikrer etterlevelse ved overgang til ordinær drift.
 
 \section{Åpne datasett}
-\begin{longtable}{p{0.28\textwidth}p{0.32\textwidth}p{0.30\textwidth}}
+\begin{longtable}{p{0.22\textwidth}p{0.30\textwidth}p{0.30\textwidth}p{0.14\textwidth}}
 \toprule
-\textbf{Datasett} & \textbf{Beskrivelse} & \textbf{Hvordan bruke i digital tvilling?} \\
+\textbf{Datasett} & \textbf{Beskrivelse} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Datasett} & \textbf{Beskrivelse} & \textbf{Hvordan bruke i digital tvilling?} \\
+\textbf{Datasett} & \textbf{Beskrivelse} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endhead
-Felles datakatalog (Digdir) & Samleportal for over 2000 offentlige norske datasett på tvers av sektorer. Metadata inkluderer format, API-endepunkter og lisens. & Brukes til å finne referansedata for scenariomodellering, for eksempel demografi, infrastruktur eller miljøvariabler. \\
+Felles datakatalog (Digdir) & Samleportal for over 2000 offentlige norske datasett på tvers av sektorer. Metadata inkluderer format, API-endepunkter og lisens. & Case «Klimatilpasset kommune»: kartlegg referansedata for scenarioverksted og prioriter innsikt til kapittel~3 og kapittel~7. & Utforske \\
 \addlinespace
-Statnett – Åpne nettdata & Tidsserier for kraftforbruk og produksjon, netttopologi og flaskehalser. Tilgjengelig via \href{https://www.statnett.no/vare-tjenester/elanett/}{Statnett elhub} og \href{https://transparency.entsoe.eu/}{ENTSO-E Transparency}. & Understøtter energitvillingers prognosemodeller, belastningsanalyse og sanntidsvisualisering av strømnettet. \\
+Statnett – Åpne nettdata & Tidsserier for kraftforbruk og produksjon, netttopologi og flaskehalser. Tilgjengelig via \href{https://www.statnett.no/vare-tjenester/elanett/}{Statnett elhub} og \href{https://transparency.entsoe.eu/}{ENTSO-E Transparency}. & Case «Regional energikoordinering»: etabler sanntidsdashbord for kapasitet, fleksibilitet og beredskap i regionale energitvillinger. & Skalere \\
 \addlinespace
-Meteorologisk institutt – Frost API & Historiske og sanntids værmålinger fra norske stasjoner, tilgjengelig via REST-API etter registrering. & Knyt værpåvirkning til modeller for bygg, transport og fornybar energi, og test robusthet mot klimavariasjoner. \\
+Meteorologisk institutt – Frost API & Historiske og sanntids værmålinger fra norske stasjoner, tilgjengelig via REST-API etter registrering. & Case «Klimatilpasset kommune»: koble værprofiler til modellantakelser for bygg og mobilitet før pilotering. & Utforske \\
 \addlinespace
-Statens vegvesen – Trafikkdata & Åpne trafikk- og sensordata (veglys, trafikkmengde, hendelser) via \href{https://developer.vegdata.no/}{Vegdata API}. & Modellér logistikk- og mobilitetsløsninger, optimaliser ruter og vedlikehold basert på sanntidssignaler. \\
+Statens vegvesen – Trafikkdata & Åpne trafikk- og sensordata (veglys, trafikkmengde, hendelser) via \href{https://developer.vegdata.no/}{Vegdata API}. & Case «Klimatilpasset kommune»: vurdér beredskap for kritiske transportårer og prioriter datainnsamling i pilotfasen. & Utforske \\
 \addlinespace
-Norsk Petroleumsdirektorat – Oljedata & Brønndata, produksjonsprofiler og reservoarmodeller. Åpne datasett finnes via \href{https://factpages.npd.no/en/}{FactPages}. & Brukes til å bygge tvillinger av subsurface-systemer, planlegge boreprogram eller analysere produksjonsoptimalisering. \\
+Norsk Petroleumsdirektorat – Oljedata & Brønndata, produksjonsprofiler og reservoarmodeller. Åpne datasett finnes via \href{https://factpages.npd.no/en/}{FactPages}. & Case «Regional energikoordinering»: sammenlign produksjonsdata og boringstiltak mot energiforsyning og beredskap i skalering. & Skalere \\
 \bottomrule
 \end{longtable}
 
 \section{Verktøy og plattformer}
-\begin{longtable}{p{0.28\textwidth}p{0.32\textwidth}p{0.30\textwidth}}
+\begin{longtable}{p{0.22\textwidth}p{0.26\textwidth}p{0.30\textwidth}p{0.14\textwidth}}
 \toprule
-\textbf{Verktøy} & \textbf{Type} & \textbf{Relevans for studenter} \\
+\textbf{Verktøy} & \textbf{Type} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Verktøy} & \textbf{Type} & \textbf{Relevans for studenter} \\
+\textbf{Verktøy} & \textbf{Type} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endhead
-Azure Digital Twins & Skyplattform for modellering av komplekse miljøer med graforienterte tvillingmodeller og live dataingest. Studentabonnement gir gratis kvoter. & Hurtig prototyping av bygnings- eller campus-tvilling, med integrasjon mot IoT Hub og Power BI for visualisering. \\
+Azure Digital Twins & Skyplattform for modellering av komplekse miljøer med graforienterte tvillingmodeller og live dataingest. Studentabonnement gir gratis kvoter. & Case «Smart terminaldrift»: bygg en felles datastruktur for tog, buss og flyoperasjoner og visualiser KPI-er fra kapittel~4. & Pilotere \\
 \addlinespace
-OpenModelica & Åpen kildekode-MBSE-verktøy basert på Modelica-standarden. Støtter fysiske modeller og co-simulering. & Utvikle detaljerte prosess- og energimodeller som kan kobles til sanntidsdata gjennom FMI/FMUs. \\
+OpenModelica & Åpen kildekode-MBSE-verktøy basert på Modelica-standarden. Støtter fysiske modeller og co-simulering. & Case «Klimatilpasset kommune»: etabler raske prototyper av energibruk i bygg før du bestemmer hvilke sensorer som må kobles på. & Utforske \\
 \addlinespace
-Apache Kafka + ksqlDB & Distribuert hendelsesstrøm-plattform for sanntidsdata. & Bygg data pipelines mellom sensorer og digitale tvillinger, implementer streaming-analytics og integrer med verktøy som Spark eller Flink. \\
+Apache Kafka + ksqlDB & Distribuert hendelsesstrøm-plattform for sanntidsdata. & Case «Smart terminaldrift»: test datalinjer fra Entur, Avinor og BarentsWatch og definér hendelsesregler for pilotering. & Pilotere \\
 \addlinespace
-Siemens Industrial Edge Trial & Industrinær plattform med støtte for OPC UA, containerdeployering og analysetjenester. Gratis testlisens via partnerprogram. & Evaluér edge-arkitekturer, test maskinlæring nær produksjonsutstyr og sammenlign med skybaserte tvillinger. \\
+Siemens Industrial Edge Trial & Industrinær plattform med støtte for OPC UA, containerdeployering og analysetjenester. Gratis testlisens via partnerprogram. & Case «Smart terminaldrift»: valider at maskinlæring kan kjøres på kanten før løsningen skalering og integreres med kapittel~5. & Pilotere \\
 \addlinespace
-CesiumJS & Bibliotek for 3D-geovisualisering i nettleser. Støtter tidsdimensjon og streaming av sensordata. & Lag interaktive dashboards for digitale tvillinger av byrom, transport og offshore installasjoner. \\
+CesiumJS & Bibliotek for 3D-geovisualisering i nettleser. Støtter tidsdimensjon og streaming av sensordata. & Case «Klimatilpasset kommune»: visualiser klima- og trafikkdata i et delt dashboard for å prioritere tiltak i tidligfase. & Utforske \\
 \bottomrule
 \end{longtable}
 
 \section{Helsesektorspesifikke ressurser}
-\begin{longtable}{p{0.28\textwidth}p{0.32\textwidth}p{0.30\textwidth}}
+\begin{longtable}{p{0.24\textwidth}p{0.28\textwidth}p{0.32\textwidth}p{0.12\textwidth}}
 \toprule
-\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i helse?} \\
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i helse?} \\
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endhead
-Helsedirektoratet – Åpne helsedata & Portal med statistikk om kommunale helse- og omsorgstjenester, kvalitetsindikatorer og folkehelsetall. Tilgjengelig som nedlastbare tabeller og API. & Bruk aggregerte nøkkeltall som grunnlag for scenarioanalyse av kapasitet, ressursbehov og effekt av forebyggende tiltak i helsetvillinger. \\
+Helsedirektoratet – Åpne helsedata & Portal med statistikk om kommunale helse- og omsorgstjenester, kvalitetsindikatorer og folkehelsetall. Tilgjengelig som nedlastbare tabeller og API. & Case «Virtuell legevakt»: kartlegg volum, responstid og forebyggingsbehov før du designer datastrømmer til pilotmiljøet. & Utforske \\
 \addlinespace
-Folkehelseinstituttet – Sykdomspulsen & Åpne, anonymiserte tidsserier for luftveisinfeksjoner, sykehusinnleggelser og andre beredskapsindikatorer. Leveres via \href{https://www.fhi.no/hn/overvaking/sykdomspulsen/}{FHI API}. & Understøtt sanntidsoppdaterte overvåkingsmodeller, tidlig varsling og simulering av smittespredning koblet til lokale kapasitetsberegninger. \\
+Folkehelseinstituttet – Sykdomspulsen & Åpne, anonymiserte tidsserier for luftveisinfeksjoner, sykehusinnleggelser og andre beredskapsindikatorer. Leveres via \href{https://www.fhi.no/hn/overvaking/sykdomspulsen/}{FHI API}. & Case «Virtuell legevakt»: overvåk belastning og triggere for beredskap når du tester beslutningsstøtte med klinikere. & Pilotere \\
 \addlinespace
-Felleskatalogen – Legemiddel-API & FHIR-kompatibelt API med virkestoff, dosering og interaksjonsdata for legemidler tilgjengelig i Norge. Krever gratis registrering. & Knytt legemiddelopplysninger til beslutningsstøtte i digitale tvillinger for kliniske arbeidsflyter og pasientsimuleringer. \\
+Felleskatalogen – Legemiddel-API & FHIR-kompatibelt API med virkestoff, dosering og interaksjonsdata for legemidler tilgjengelig i Norge. Krever gratis registrering. & Case «Virtuell legevakt»: gi klinikere kontekstuell legemiddelinformasjon og sjekk interaksjoner før skalering. & Pilotere \\
 \addlinespace
-Norsk Helsenett – Norm for informasjonssikkerhet & Retningslinjer, maler og risikovurderingsverktøy for behandling av helseopplysninger i norske virksomheter. Tilgjengelig via \href{https://normen.no}{normen.no}. & Sikre etterlevelse i datainnsamling, modelltrening og deling av innsikt ved å bygge styringspakker og kontrollpunkter inn i helsetvillinger. \\
+Norsk Helsenett – Norm for informasjonssikkerhet & Retningslinjer, maler og risikovurderingsverktøy for behandling av helseopplysninger i norske virksomheter. Tilgjengelig via \href{https://normen.no}{normen.no}. & Case «Virtuell legevakt»: dokumenter styring, tilgang og loggføring slik at løsningen kan godkjennes for ordinær drift. & Skalere \\
 \bottomrule
 \end{longtable}
 
 \section{Transport- og logistikkressurser}
 \label{sec:transportressurser}
-\begin{longtable}{p{0.28\textwidth}p{0.32\textwidth}p{0.30\textwidth}}
+\begin{longtable}{p{0.24\textwidth}p{0.28\textwidth}p{0.32\textwidth}p{0.12\textwidth}}
 \toprule
-\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i transport?} \\
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i transport?} \\
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endhead
-Entur – Mobilitetsdata (GTFS/NeTEx) & Nasjonal plattform for kollektivtrafikkdata med ruteplaner, stoppesteder og sanntidsavvik tilgjengelig via åpne API-er. & Modellér passasjerflyt, koordinér multimodale reiser og test scenarioer for kapasitetsstyring i by- og regiontvillinger. \\
+Entur – Mobilitetsdata (GTFS/NeTEx) & Nasjonal plattform for kollektivtrafikkdata med ruteplaner, stoppesteder og sanntidsavvik tilgjengelig via åpne API-er. & Case «Smart terminaldrift»: dimensjonér kapasitet og test køhåndtering før løsningen tas inn i pilot. & Pilotere \\
 \addlinespace
-Bane NOR – Banedata og arbeidsplan-API & Datasett over infrastruktur, kapasitet, vedlikeholdsplaner og operative meldinger for jernbanenettet. & Synkroniser vedlikeholdsplanlegging med simulerte togbevegelser og vurder effekten av avvik på punktlighet og ressursbruk. \\
+Bane NOR – Banedata og arbeidsplan-API & Datasett over infrastruktur, kapasitet, vedlikeholdsplaner og operative meldinger for jernbanenettet. & Case «Smart terminaldrift»: synkroniser togplaner med gate-bruk og bemanningsskift i pilotlaboratoriet. & Pilotere \\
 \addlinespace
-Avinor – Operasjonelle flyplassdata & Åpne data om ankomster, avganger, stand-tildeling og passasjerstatistikk for norske lufthavner. & Bygg digitale tvillinger av terminallogistikk, analysér bakketjenester og optimaliser ressursallokering gjennom dagen. \\
+Avinor – Operasjonelle flyplassdata & Åpne data om ankomster, avganger, stand-tildeling og passasjerstatistikk for norske lufthavner. & Case «Smart terminaldrift»: verifiser hvordan flyplassoperasjoner påvirker multimodale koblinger og KPI-er. & Pilotere \\
 \addlinespace
-Kystverket/BarentsWatch – AIS og havneoversikt & Sanntidsposisjoner, farleder, havneinformasjon og sikkerhetsmeldinger for norskekysten tilgjengelig via API og nedlasting. & Simuler seilingsmønstre, planlegg kaiutnyttelse og vurder beredskapstiltak i maritime tvillinger. \\
+Kystverket/BarentsWatch – AIS og havneoversikt & Sanntidsposisjoner, farleder, havneinformasjon og sikkerhetsmeldinger for norskekysten tilgjengelig via API og nedlasting. & Case «Autonom havn»: overvåk trafikk og beredskap når beslutningsstøtten skal videre til operativ drift. & Skalere \\
 \addlinespace
-Statens vegvesen – Nasjonal vegdatabank (NVDB) & Objektdata om vegnett, fartsgrenser, tunneler og tilstandsanalyser, eksponert som REST-API og nedlastbare datasett. & Kombiner statiske vegdata med trafikkstrømmer for å analysere vedlikeholdsetterslep, kapasitetsutvidelser og sikkerhetstiltak. \\
+Statens vegvesen – Nasjonal vegdatabank (NVDB) & Objektdata om vegnett, fartsgrenser, tunneler og tilstandsanalyser, eksponert som REST-API og nedlastbare datasett. & Case «Klimatilpasset kommune»: identifiser kritiske knutepunkt som trenger sensorer og vedlikehold i tidligfasen. & Utforske \\
 \bottomrule
 \end{longtable}
 
 \section{Maritime og offshore-ressurser}
 \label{sec:maritimressurser}
-\begin{longtable}{p{0.28\textwidth}p{0.32\textwidth}p{0.30\textwidth}}
+\begin{longtable}{p{0.24\textwidth}p{0.28\textwidth}p{0.32\textwidth}p{0.12\textwidth}}
 \toprule
-\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i maritime miljøer?} \\
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i maritime miljøer?} \\
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endhead
-BarentsWatch – Havbase og AIS-tjenester & \href{https://www.barentswatch.no/}{BarentsWatch} tilbyr sanntidsdata for fartøysposisjoner, fiskeriaktivitet, miljøparametere og beredskapsressurser. & Understøtter situasjonsforståelse, logistikkplanlegging og risikoanalyse for offshore-operasjoner og kysttrafikk. \\
+BarentsWatch – Havbase og AIS-tjenester & \href{https://www.barentswatch.no/}{BarentsWatch} tilbyr sanntidsdata for fartøysposisjoner, fiskeriaktivitet, miljøparametere og beredskapsressurser. & Case «Autonom havn»: bygg situasjonsforståelse for trafikkavvik og nødhendelser før drift overtas av digitale tjenester. & Skalere \\
 \addlinespace
-Sjøfartsdirektoratet – NOR/NIS skipsregister & Åpne data over alle registrerte fartøy, tekniske spesifikasjoner og sertifikatstatus via \href{https://www.sdir.no/digitalt/apne-data/}{Sjøfartsdirektoratet}. & Bruk dataene til å modellere flåtesammensetning, vedlikeholdsplaner og regulatoriske krav i maritime tvillinger. \\
+Sjøfartsdirektoratet – NOR/NIS skipsregister & Åpne data over alle registrerte fartøy, tekniske spesifikasjoner og sertifikatstatus via \href{https://www.sdir.no/digitalt/apne-data/}{Sjøfartsdirektoratet}. & Case «Autonom havn»: oppdater flåteoversikt, risikoklasser og sertifikater som grunnlag for styring og rapportering. & Skalere \\
 \addlinespace
-Kartverket – Dybdedata og navigasjonsgrunnlag & \href{https://www.geonorge.no/}{Geonorge} gjør tilgjengelig sjøkart, dybdemodeller og farledsinformasjon i standard GIS-formater. & Gir nøyaktig geometri for simuleringsmodeller, ruteoptimalisering og vurdering av operasjonsgrenser i havner og fjorder. \\
+Kartverket – Dybdedata og navigasjonsgrunnlag & \href{https://www.geonorge.no/}{Geonorge} gjør tilgjengelig sjøkart, dybdemodeller og farledsinformasjon i standard GIS-formater. & Case «Autonom havn»: simuler ruter, anløp og sikkerhetssoner før automatiserte operasjoner slippes løs. & Pilotere \\
 \addlinespace
-Havforskningsinstituttet – Mareano og økosystemdata & \href{https://www.hi.no/hi/forskning/mareano}{Mareano-programmet} publiserer kartlagte bunnforhold, biologi og miljøparametere for norsk sokkel. & Integrer miljø- og økosystemvariabler i digitale tvillinger som analyserer bærekraft, påvirkning og arealplanlegging. \\
+Havforskningsinstituttet – Mareano og økosystemdata & \href{https://www.hi.no/hi/forskning/mareano}{Mareano-programmet} publiserer kartlagte bunnforhold, biologi og miljøparametere for norsk sokkel. & Case «Autonom havn»: vurder miljøkonsekvenser og lokasjonsvalg i idé- og planfase sammen med kapittel~8. & Utforske \\
 \addlinespace
-HUB Ocean – Ocean Data Platform & \href{https://portal.hubocean.no/}{Ocean Data Platform} samler delte datasett fra industrien og forskningsmiljøer med API-tilgang etter registrering. & Koble operative data med forskningsresultater for å teste nye algoritmer, samarbeidsmodeller og tjenesteinnovasjon. \\
+HUB Ocean – Ocean Data Platform & \href{https://portal.hubocean.no/}{Ocean Data Platform} samler delte datasett fra industrien og forskningsmiljøer med API-tilgang etter registrering. & Case «Autonom havn»: koble industridata og forskningsfunn for å teste algoritmer og samarbeidsmodeller i pilot. & Pilotere \\
 \bottomrule
 \end{longtable}
 
 \section{Energi- og kraftressurser}
-\begin{longtable}{p{0.28\textwidth}p{0.32\textwidth}p{0.30\textwidth}}
+\begin{longtable}{p{0.24\textwidth}p{0.28\textwidth}p{0.32\textwidth}p{0.12\textwidth}}
 \toprule
-\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i energi?} \\
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Hvordan støtte digitale tvillinger i energi?} \\
+\textbf{Ressurs} & \textbf{Beskrivelse} & \textbf{Bruks-case} & \textbf{Modenhet} \\
 \midrule
 \endhead
-NVE – Energidataportalen & Åpen portal og API for timeserier om produksjon, magasinfylling, nettdrift og strømforbruk via \href{https://nedlasting.nve.no/}{nedlasting.nve.no}. & Kalibrer last- og produksjonsmodeller, og analyser flaskehalser eller fleksibilitet i regionale energitvillinger. \\
+NVE – Energidataportalen & Åpen portal og API for timeserier om produksjon, magasinfylling, nettdrift og strømforbruk via \href{https://nedlasting.nve.no/}{nedlasting.nve.no}. & Case «Regional energikoordinering»: bygg modeller for last og produksjon som grunnlag for scenarioverksted. & Utforske \\
 \addlinespace
-Nord Pool – Markedsdata API & Gratis tilgang til spotpriser, områdepriser og regulerkraft via \href{https://www.nordpoolgroup.com/en/Market-data1/}{Nord Pool Market Data}. & Legg inn pris- og ubalanseprofiler for å teste optimaliseringsstrategier og nye forretningsmodeller i energimarkeds-tvillinger. \\
+Nord Pool – Markedsdata API & Gratis tilgang til spotpriser, områdepriser og regulerkraft via \href{https://www.nordpoolgroup.com/en/Market-data1/}{Nord Pool Market Data}. & Case «Regional energikoordinering»: test optimaliseringsstrategier og avtaleverk før løsningen rulles bredt ut. & Skalere \\
 \addlinespace
-Enova – Prosjektbank & Prosjektregister med beskrivelser av gjennomførte energieffektiviserings- og innovasjonsprosjekter tilgjengelig via \href{https://www.enova.no/bedrift/prosjekter/prosjektbank/}{enova.no}. & Bruk casene som referanse for tiltakspakker og parameterisering av scenarier i bygg- og industrirelaterte tvillinger. \\
+Enova – Prosjektbank & Prosjektregister med beskrivelser av gjennomførte energieffektiviserings- og innovasjonsprosjekter tilgjengelig via \href{https://www.enova.no/bedrift/prosjekter/prosjektbank/}{enova.no}. & Case «Regional energikoordinering»: velg tiltakspakker og indikatorer for pilotprosjekter i kommunenettverk. & Pilotere \\
 \addlinespace
-Statistisk sentralbyrå – Energiregnskap & Offisielle tall for energiforbruk, produksjon og utslipp per sektor publisert på \href{https://www.ssb.no/energi-og-industri/energi/statistikk/energiregnskap}{ssb.no}. & Etabler baseline for gevinstmåling, scenarioanalyse og rapportering i energi- og klimarelaterte digitale tvillinger. \\
+Statistisk sentralbyrå – Energiregnskap & Offisielle tall for energiforbruk, produksjon og utslipp per sektor publisert på \href{https://www.ssb.no/energi-og-industri/energi/statistikk/energiregnskap}{ssb.no}. & Case «Regional energikoordinering»: mål gevinst, rapporter klimaeffekter og koble styring til kapittel~7. & Skalere \\
 \bottomrule
 \end{longtable}
 
@@ -144,10 +181,10 @@ Statistisk sentralbyrå – Energiregnskap & Offisielle tall for energiforbruk, 
 
 \section{Forslag til arbeidsmåte}
 \begin{enumerate}
-    \item Definér et konkret problem (for eksempel energistyring i en campusbygning) og velg hvilke datasett som best dekker behovet for historiske, sanntids- og kontekstdata.
-    \item Etabler en pipeline med streamingverktøy (Kafka eller tilsvarende) og en modell- eller visualiseringsplattform (Azure Digital Twins, OpenModelica, CesiumJS).
-    \item Dokumenter datakvalitet, lisenskrav og eventuelle personvernhensyn i prosjektets styringsdokumenter.
-    \item Lag forslag til videre arbeid i prosjektet, for eksempel supplering med syntetiske data eller integrasjon mot læringsmoduler i Kapittel~5.
+    \item \textbf{Utforske:} Definér problemet (for eksempel klimatilpasning i kommunen eller energistyring i regionen) og bruk ressursene merket «Utforske» til å kartlegge datatilgang, indikatorer og interessenter.
+    \item \textbf{Pilotere:} Sett opp datastrømmer og prototyper med verktøy og datasett merket «Pilotere», gjennomfør laboratorieøkter og dokumenter læring i tråd med kapittel~4 og kapittel~5.
+    \item \textbf{Skalere:} Implementer styringsmaler, sikkerhetskrav og rapportering med ressursene merket «Skalere», og knytt gevinstoppfølging til kapittel~6 og kapittel~7.
+    \item \textbf{Iterere:} Evaluer resultater og beslutningsgrunnlag mot casene i dette appendikset, og planlegg neste forbedringsrunde eller nye scenarier i samarbeid med partnere.
 \end{enumerate}
 
 \section{Styringsmaler og beslutningsverktøy}
