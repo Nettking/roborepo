@@ -318,6 +318,68 @@ skal utvikle forbedrede lekkasjemodeller og planlegge deling av data med private
 praktisk ramme for å trene på samspill mellom teknisk drift, kommunikasjon og beredskapsledelse. Materialet kan gjenbrukes i
 kapittel~6 når DPIA og hendelsesjournal skal dokumenteres, og i kapittel~7 når kommunal governance og datasamarbeid diskuteres.
 
+\section{Helsesektorens dataspace og kontinuitet}
+Helsesektoren forvalter sensitive pasientdata, kritiske samfunnsfunksjoner og komplekse leverandørkjeder. Derfor må dataspace-
+arkitekturen kombineres med kontinuitetsplaner som oppfyller kravene i nasjonal helseberedskap og personvernforordningen.
+Helsedirektoratet beskriver hvordan digitale tvillinger kan brukes til å dele situasjonsrapporter og ressursoversikter mellom
+kommuner, sykehus og nasjonale koordineringssentre, forutsatt at tilgangsstyring og logging er innebygget \citep{helsedir2023beredskap}.
+Norsk helsenett utvikler samtidig en nasjonal plattform for helsedataspace der konnektorer og sertifisering legger grunnlaget
+for sikker datadeling mellom journal- og analysesystemer \citep{nhn2024dataspace}. Når slike plattformer kobles til digitale
+tvillinger, kan sanntidsdata om kapasitet, smitte og logistikk gjøres tilgjengelig uten at pasientidentiteter eksponeres.
+
+\subsection{Felles datagrunnlag for beredskap}
+For å støtte kontinuerlig drift må dataspace-laget synliggjøre hvilke dataprodukter som dekker beredskapssituasjoner. Helseaktører
+har identifisert tre kategorier som bør prioriteres i første fase \citep{helsedir2023beredskap,helseplattformen2023kontinuitet}:
+\begin{itemize}
+    \item \textbf{Kapasitet og logistikk:} Oppdaterte tall for intensivkapasitet, bemanning, lager av legemidler og medisinsk utstyr,
+    hentet fra journalsystemer og logistikkapplikasjoner.
+    \item \textbf{Pasientstrømmer og hendelser:} Aggregert informasjon om innlagte, hastegrad og smitteutbrudd, kombinert med
+    hendelseslogger fra legevakt og AMK-sentraler.
+    \item \textbf{Støtteprosesser:} Tilgjengelighet på laboratorietjenester, digitale konsultasjoner og eksterne leverandører,
+    slik at alternative behandlingsløp kan planlegges dersom ordinær drift svikter.
+\end{itemize}
+Dataspace-katalogen bør tydelig merke hvilke datasett som krever behandlingsgrunnlag etter helsepersonelloven, og hvilke som
+kan deles som aggregerte beslutningsstøttepakker. Dette legger til rette for at modellene i kapittel~6 kan kobles direkte til
+beredskapsplanene uten å kompromittere personvern.
+
+\subsection{Roller og kontinuitetskontroller}
+Kontinuitetsstyring i helsesektoren krever en tydelig fordeling av ansvar mellom tekniske og kliniske roller. Tabell~\ref{tab:kap03-helse-dataspace}
+viser hvordan roller, nøkkelkontroller og rapporteringspunkter kan organiseres når en digital tvilling skal støtte beredskap.
+
+\begin{table}[ht]
+    \centering
+    \caption{Roller og kontroller i helsesektorens dataspace for digitale tvillinger.}
+    \label{tab:kap03-helse-dataspace}
+    \begin{tabular}{p{0.24\textwidth}p{0.37\textwidth}p{0.27\textwidth}}
+        \toprule
+        \textbf{Rolle} & \textbf{Kontroller og ansvar} & \textbf{Rapportering og samhandling} \\
+        \midrule
+        Nasjonalt koordineringssenter & Godkjenner datasett for deling, vurderer beredskapsscenarier og initierer nasjonale tiltak. & Ukentlig status mot Helsedirektoratet og regionale helseforetak. \\
+        Regional helsetjeneste & Synkroniserer kapasitetstall, driftsscenarier og kritiske hendelser i dataspace-konnektoren. & Daglige rapporter til kommuner og sykehus via felles situasjonsrom. \\
+        Kommune og fastlegekontor & Oppdaterer lokale tiltak, pasientstrømmer og tilgjengelige tjenester, og mottar varsler fra tvillingmodellen. & Deler læringspunkter i samhandlingsportal og kvalitetsutvalg. \\
+        Teknologileverandør & Sikrer kryptering, anonymisering og audit-logg i tvillingplattformen, samt tester beredskapsskript. & Leverer revisjonsrapporter og hendelseslogger til helseforetakets sikkerhetsråd. \\
+        Personvernombud & Verifiserer behandlingsgrunnlag, lagringspolicy og dataminimering for hvert datasett i katalogen. & Kvartalsvis rapport til styret og Datatilsynet ved avvik. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Tabellen kan brukes som en sjekkliste når nye datasett eller modeller kobles til tvillingen. For hver rad bør ansvarlige fylle ut
+konkrete KPI-er i tillitsindikatorpanelet fra kapittel~6 slik at endringer i kapasitet eller regelverk raskt oppdages.
+
+\subsection{Implementering og læringssløyfer}
+Erfaringer fra Helseplattformen viser at kontinuitetsplanlegging må følges av strukturerte læringssløyfer for å holde dataspace-
+komponentene oppdaterte \citep{helseplattformen2023kontinuitet}. Et anbefalt løp er:
+\begin{enumerate}
+    \item \textbf{Etabler beredskapslogger:} Knytt dataspace-hendelser til loggformatet i beredskapssystemet slik at varsler kan
+    spores gjennom hele livssyklusen.
+    \item \textbf{Test alternative arbeidsprosesser:} Bruk tvillingen til å simulere omdirigering av pasientstrømmer, mobilisering
+    av ekstra kapasitet og fallback-løsninger for kritiske tjenester.
+    \item \textbf{Koble til evaluering:} Etter øvelser eller hendelser analyseres beslutningslogg, datakvalitet og responstid i
+    fellesskap, og resultatene publiseres i dataspace-katalogens læringsseksjon.
+\end{enumerate}
+Når denne prosessen er forankret i både teknologi- og klinikkmiljøene, kan helsesektoren bruke digitale tvillinger til å støtte
+koordinert respons ved neste krise samtidig som kontinuerlig drift ivaretas.
+
 \section{Bærekrafts-dashboard og indikatorstyring}
 For å gjøre bærekraft og klimaeffekter synlige i operative beslutninger bør digitale tvillinger levere dashboards som kombinerer
 miljøindikatorer, energieffektivitet og økonomiske nøkkeltall. Statnett og andre norske infrastruktureiere rapporterer at slike
