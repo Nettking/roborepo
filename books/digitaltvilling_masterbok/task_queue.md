@@ -23,13 +23,13 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| DT-04 | Høy | Kapittel 4 | Reåpnet – ferdigstille immersivt beslutningsrom og laboratoriepakke for simulering. | Storyboard for `kap04-immersiv-beslutning-v1` og labbeskrivelse. | `support/illustrasjonsplan.md`, `support/notater/kap04-immersiv-case.md` | PÅGÅR |
 | DT-05 | Høy | Kapittel 5 | Reåpnet – utvide analyseeksempel og algoritme-/rubrikkstøtte for AI-lab. | Storyboard for `kap05-operator-coach-v1`, algoritmematrise og rubrikknotat. | `support/illustrasjonsplan.md`, `support/notater/kap05-algoritmematrise-utvidelse.md` | PÅGÅR |
 
 ## Ferdige oppgaver
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-04 | Kapittel 4 | FERDIG – Ferdigstilte immersivt beslutningsrom med operasjonsarkitektur, laboratoriepakke og metadata for figuren `kap04-immersiv-beslutning-v1`. | `chapters/kapittel04-simulering.tex`, `support/notater/kap04-immersiv-case.md`, `support/illustrasjonsplan.md`, `support/figurer/metadata/kap04-immersiv-beslutning-v1.alt.md`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-12 | Kapittel 3 | FERDIG – La inn dataspace-arkitektur, beredskaps- og kontinuitetsplaner samt bærekraftsdashboard, og oppdaterte statusfiler. | `chapters/kapittel03-data.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-APP-02 | Appendiks – Begrepsliste | FERDIG – Beriket ordlisten med forkortelser, referanser og tematiske tabeller for styring, modellering og infrastruktur. | `support/ordliste.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-APP-01 | Appendiks – Ressurser | FERDIG – Kategoriserte ressursbanken etter modenhetsnivå og beskrev casescenarier for bruk i undervisning og prosjektarbeid. | `support/appendiks-ressurser.tex`, `plan.md`, `completed_tasks.md`, `task_queue.md` |
