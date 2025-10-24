@@ -71,6 +71,39 @@ Forklarbarhet er spesielt viktig når tvillingen benytter maskinlæring. Kombine
 
 Etikk omfatter også vurdering av konsekvenser for arbeidstakere, leverandører og miljø. En digital tvilling kan flytte beslutningsmyndighet fra erfarne fagarbeidere til automatiserte systemer; derfor bør organisasjonen ha tiltak for kompetansebygging, brukermedvirkning og varsling av uønskede hendelser. En klar etikkpolicy med kontaktpunkter for spørsmål og avvik styrker opplevd integritet og reduserer motstand mot innføringen.
 
+\section{Tillitsindikatorer og styringspanel}
+For å gjøre etikk- og sikkerhetsarbeidet operasjonelt trenger prosjektet et eksplisitt sett med tillitsindikatorer som knyttes til styringssystemet. \citet{digdir2023styringai} anbefaler at virksomheter etablerer styringspaneler som kombinerer tekniske måltall, prosessindikatorer og dokumentasjon av ansvarslinjer. I praksis bør indikatorene følge de samme kontrollpunktene som brukes i kvalitets- og sikkerhetsstandardene, slik at ledelsen får én samlet oversikt over modenhet, avvik og tiltak. Når indikatorene kobles til datastrømmer og modellversjoner, kan de automatisk oppdateres og inngå i sprint- og releaseritualer.
+
+Tabell~\ref{tab:tillitsindikatorer} viser et forslag til indikatorer som dekker hele DevOps-kjeden. Oppsettet kan gjenbrukes både i kontrolltårn-caset og i pilotprosjekter innen helse, energi og samferdsel.
+
+\begin{table}[ht]
+    \centering
+    \caption{Forslag til tillitsindikatorer for digital tvilling i kritisk infrastruktur}
+    \label{tab:tillitsindikatorer}
+    \begin{tabular}{|p{3.2cm}|p{4.2cm}|p{4.2cm}|p{3.2cm}|}
+        \hline
+        \textbf{Indikator} & \textbf{Målemetode} & \textbf{Datakilde} & \textbf{Oppfølging} \\
+        \hline
+        Modellpresisjon & Prediksjonsfeil mot feltmålinger per driftsmodus & DevOps-logger, kontrolltårn-dashboards & Eskaleres til modellforvalter når feil > terskel \citep{dnv2023digitalassurance} \\
+        \hline
+        Datasettgjennomsiktighet & Andel datasett med dokumentert behandlingsgrunnlag og kontaktpunkt & Datakatalog med tilgang til behandlingsprotokoller & Rapporteres til personvernombud kvartalsvis \\
+        \hline
+        Hendelseshåndtering & Tid fra avvik til lukket tiltak i NIS2-prosess & Beredskapssystem og hendelseslogger & Drøftes i beredskapsmøte, referanse til \citet{eu2022nis2} \\
+        \hline
+        Brukerinvolvering & Antall forbedringsforslag fra operatører per sprint & Retrospektivlogger, læringsplattform & Følges opp av produktleder og fagforening \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Implementeringen av panelet kan organiseres i tre steg:
+\begin{enumerate}
+    \item \textbf{Definer indikatorene:} Knytt hvert måltall til ansvarlig rolle, datakilde og beslutningsforum. Bruk standardkartet fra Tabell~\ref{tab:standardkart} for å kontrollere at indikatorene dekker både tekniske og organisatoriske krav.
+    \item \textbf{Automatiser oppdateringen:} Integrer indikatorene i eksisterende data pipelines og modelljournaler slik at verdiene oppdateres samtidig med nye releaser. Vedlikehold scripts og dashboards i samme versjonskontroll som modellkoden.
+    \item \textbf{Kommuniser resultatene:} Presenter indikatorene i kontrolltårn, ledermøter og pilotundervisning. Kombiner tallmateriale med kvalitativ status slik \citet{statnett2024kontrolltarn} anbefaler for operativt samarbeid.
+\end{enumerate}
+
+Når tillitsindikatorene er på plass, kan de kobles til fagfellelogg og tiltaksplan i Kapittel~7. Dette gir transparens i hvordan innspill følges opp og sikrer at tiltak prioriteres etter risiko og modenhet. Panelet støtter også kravene i AI-forordningen om risikostyring og dokumentasjon av menneskelig kontroll, og gjør det enklere å demonstrere etterlevelse overfor tilsynsmyndigheter.
+
 \section{Regulatoriske rammer og sikkerhetsstandarder}
 Fagfellepanelet etterspurte en tydelig kobling mellom kvalitetsprosessen og de regulatoriske rammene som gjelder for norske virksomheter. NIS2-direktivet og IEC~62443-serien definerer krav til cybersikkerhet, hendelseshåndtering og styring av industrielle kontrollsystemer, mens DNV-RP-A204 beskriver hvordan digitale tvillinger skal kvalifiseres i sikkerhetskritiske domener.\citep{eu2022nis2,iec62443-2-1,dnv2021a204} Disse rammeverkene krever at valideringsplanen dokumenterer både tekniske og organisatoriske tiltak, med klar oversikt over ansvar og godkjenninger.
 
