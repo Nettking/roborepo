@@ -18,7 +18,6 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger |
 | --- | --- | --- | --- | --- | --- |
-| DT-13 | Høy | Kapittel 4 | Integrere AR/VR-baserte beslutningsstøtteeksempler, nye simuleringscase og vurderingsopplegg. | Utvidet kapittel med casebeskrivelser, storyboard-notater og figurreferanser. | `plan.md` (Kapittel 4), `support/illustrasjonsplan.md` |
 | DT-14 | Høy | Kapittel 5 | Legge inn generative/edge-orienterte læringssløyfer, vurderingsrubrikker og nye industrireferanser. | Oppdatert manus med nye delkapitler og rubrikksammendrag. | `plan.md` (Kapittel 5), `support/larerveiledning.tex` |
 | DT-15 | Middels | Kapittel 6 | Forsterke innhold om standarder, usikkerhetsanalyser og kontrolltårn-case. | Utvidet kapitteltekst + sjekklister for NIS2/IEC 62443. | `plan.md` (Kapittel 6), `support/illustrasjonsplan.md` |
 | DT-16 | Høy | Kapittel 7 | Utvikle livssyklusfortellinger, governance-sammenligning og bærekraft-KPI-tabeller. | Nytt manusutkast med tabeller og caseintervjuplan. | `plan.md` (Kapittel 7), `support/illustrasjonsplan.md` |
@@ -39,6 +38,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-13 | Kapittel 4 | FERDIG – Integrerte immersivt beslutningsrom, beredskapscase og vurderingsrubrikk i kapittel 4 og synkroniserte planstatus. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-SUP-01 | Støtte | FERDIG – Utarbeidet prosjektkontraktmal som kobler rubrikker til kommende caseutvidelser og oppdaterte lærerveiledningen og planstatus for bruken. | `support/maler/prosjektkontrakt.tex`, `support/larerveiledning.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md` |
 | DT-BUG-12 | Bibliografi | FERDIG – Normaliserte norske spesialtegn i referansepostene for DNV og Avinor slik at BibTeX ikke stopper på ugyldige kontrollsekvenser, og synkroniserte statusfilene. | `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`, `plan.md` |
 | DT-BUG-11 | Bibliografi | FERDIG – Normaliserte BibTeX-typer, la til forfatterfelt for standarder og fjernet duplikatet for `eu2022nis2` slik at `support/referanser.bib` bygger uten advarsler. | `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`, `plan.md` |

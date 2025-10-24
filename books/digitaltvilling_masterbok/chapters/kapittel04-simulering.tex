@@ -56,7 +56,16 @@ Resultatene må presenteres på en måte som skaper tillit og handling. Kombinas
 \subsection{Immersiv AR/VR-beslutningsstøtte}
 Immersive arbeidsflater gjør det mulig for tverrfaglige team å oppleve de samme modellene samtidig, enten de står i et kontrollrom eller på en fjern lokasjon. Operatører kan «pinne» sensorer og KPI-er direkte på 3D-modellen, mens analytikere kjører scenariovariasjoner og deler resultatene i samme visuelle kontekst. Forskning på vedlikeholdsprosesser viser at slike løsninger gir raskere feilidentifisering og bedre felles situasjonsforståelse \citep{palmarini2018augmented}. Når AR/VR-panelet er koblet til tvillingens simuleringsmotor, kan brukere se hvilke antakelser som ligger bak en anbefaling og teste alternative tiltak før de aktiveres.
 
-For fjernvarmecaset i dette kapitlet etableres et immersivt kontrollrom der sanntidsdata, historikk og planlagte tiltak samles i en arbeidsflate. Figur~\ref{fig:kap04-immersiv-beslutning} skisserer hvordan sensorer, scenariokjøringer og beslutningslogg henger sammen i en norsk kontekst. Støttenotatet \textit{kap04-immersiv-case.md} beskriver detaljene i laboratorieøvelsen, inkludert oppgavetekst og evaluering.
+I norske industrimiljøer brukes immersive kontrollrom til å støtte både planlagte revisjoner og hendelseshåndtering. Operatørtrening ved onshore støttesentre kombinerer sanntidsdata fra offshore-felt med historiske hendelser og digitale prosedyrer slik at teamet kan øve på kritiske operasjoner uten å stoppe produksjonen. Internasjonale studier av AR/VR i digitale tvillinger viser at effekten blir størst når visualiseringsløsningen integreres tett med datakvalitetssporing, rollebaserte perspektiver og en felles beslutningslogg \citep{zhu2021augmented}. Dette gir både etterprøvbarhet og et læringsgrunnlag for senere forbedringer.
+
+Erfaring fra norske energiselskaper tilsier at immersive flater bør designes etter tre prinsipper:
+\begin{itemize}
+    \item \textbf{Samtidig synlighet av modell og risikomål:} Visuelle lag må kunne slåes av og på slik at driftsoperatører raskt forstår konsekvenser av tiltak.
+    \item \textbf{Brukerroller og perspektivfiltrering:} Kontrollrommet bør støtte både operatører, analytikere og vedlikeholdsplanleggere med egne dashbord, men samme datagrunnlag.
+    \item \textbf{Sporbar beslutningslogg:} Tiltak bør loggføres direkte i den immersive flaten og eksporteres til arbeidsordre- og læringssystemer.
+\end{itemize}
+
+For fjernvarmecaset i dette kapitlet etableres et immersivt kontrollrom der sanntidsdata, historikk og planlagte tiltak samles i en arbeidsflate. Figur~\ref{fig:kap04-immersiv-beslutning} skisserer hvordan sensorer, scenariokjøringer og beslutningslogg henger sammen i en norsk kontekst. Støttenotatet \textit{kap04-immersiv-case.md} beskriver detaljene i laboratorieøvelsen, inkludert oppgavetekst og evaluering. Notatet inneholder også forslag til hvordan studentene kan dokumentere brukerreise, sikkerhetssjekker og universell utforming i den immersive løsningen.
 
 \begin{figure}[htbp]
     \centering
@@ -64,6 +73,26 @@ For fjernvarmecaset i dette kapitlet etableres et immersivt kontrollrom der sann
     \fbox{\parbox{0.9\textwidth}{\centering\textit{Plassholder for immersivt kontrollrom som viser AR/VR-flater med sensorer, simulering og beslutningslogg.}}}
     \caption{Storyboard for immersivt beslutningsrom knyttet til fjernvarmecaset.}
     \label{fig:kap04-immersiv-beslutning}
+\end{figure}
+
+\subsection{Simuleringscase: Samordnet beredskapsøvelse}
+Som supplement til fjernvarmecaset beskrives en beredskapsøvelse for et norsk prosessanlegg der både operatører, driftsingeniører og eksterne beredskapsteam møtes i et immersivt kontrollrom. Tvillingen kombinerer kontinuerlige prosessmodeller, agentbaserte evakueringsscenarioer og diskret hendelsessimulering av vedlikeholdssituasjoner. Formålet er å teste koordinering og beslutningskvalitet når flere samtidige avvik oppstår.
+
+Øvelsen følger tre faser:
+\begin{enumerate}
+    \item \textbf{Før øvelsen:} Simuleringsplanleggere bygger scenarier med ulike feiltyper og definerer hva som skal logges (alarmer, tiltak, kommunikasjon).
+    \item \textbf{Under øvelsen:} Deltakerne bruker AR-briller for å se virtuelle hjelpetekster i kontrollrommet, mens VR-deltakere visualiserer rømningsveier og trykkfordeling i anlegget.
+    \item \textbf{Etter øvelsen:} Beslutningsloggen eksporteres til beredskapssystemet, og tiltak evalueres opp mot responstid, avvik fra prosedyrer og læringspunkter.
+\end{enumerate}
+
+I støttefilen \textit{kap04-immersiv-case.md} er det lagt inn sjekklister for hvordan en slik øvelse kan gjennomføres i masterkurs, inkludert roller, datakilder og nødvendige simulatorer. Figur~\ref{fig:kap04-beredskap-case} reserverer plass til en illustrasjon som viser koblingen mellom tvilling, AR/VR-grensesnitt og beredskapsprosesser.
+
+\begin{figure}[htbp]
+    \centering
+    % Alt-tekst: kap04-beredskap-case-v1.alt.md
+    \fbox{\parbox{0.9\textwidth}{\centering\textit{Plassholder for beredskapscase som viser samspillet mellom tvilling, AR/VR og responsteam.}}}
+    \caption{Oversikt over samordnet beredskapsøvelse støttet av immersiv digital tvilling.}
+    \label{fig:kap04-beredskap-case}
 \end{figure}
 
 \section{Verktøy og arbeidsflyt}
@@ -110,7 +139,26 @@ Laboratorieøvelsen bygger på scenariet i \textit{kap04-immersiv-case.md} og ta
     \item \textbf{Etterarbeid:} Hver gruppe leverer en to-siders refleksjon som beskriver læring, forbedringer og risikovurdering. Evalueringsrubrikken fra støttenotatet brukes av faglærer og medstudenter til å gi karakteren «godkjent/ikke godkjent».
 \end{enumerate}
 
-Rubrikken vektlegger modellforankring, beslutningslogg, universell utforming og risikohåndtering, og kobler eksplisitt til kravene i Kapittel~5 og Kapittel~6.
+Rubrikken vektlegger modellforankring, beslutningslogg, universell utforming og risikohåndtering, og kobler eksplisitt til kravene i Kapittel~5 og Kapittel~6. Tabell~\ref{tab:kap04-immersiv-rubrikk} oppsummerer kriteriene som brukes i vurderingen.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{0.26\textwidth}p{0.34\textwidth}p{0.30\textwidth}}
+        \toprule
+        \textbf{Kriterium} & \textbf{Beskrivelse} & \textbf{Avansert nivå}\
+        \midrule
+        Modellforankring & Alle tiltak begrunnes med data fra tvillingen, og forutsetninger dokumenteres i beslutningsloggen. & Hypoteser testes mot minst to scenarier og knyttes til konkrete usikkerheter. \\
+        Samhandling og kommunikasjon & Roller, ansvar og overleveringer synliggjøres i AR/VR-flaten og i loggen. & Teamet demonstrerer parallelle arbeidsstrømmer og eksplisitt håndtering av konflikter. \\
+        Universell utforming & Visualiseringene følger etablerte retningslinjer for kontrast, språk og navigasjon. & Løsningen inkluderer alternative presentasjoner (tekst/lyd) og tilrettelegging for fjernbrukere. \\
+        Risikohåndtering & Tiltak evalueres mot sannsynlighet/konsekvens og beredskapsplaner. & Gruppen identifiserer sekundæreffekter og anbefaler forbedringer til prosedyrer og sensornett. \\
+        Læringsrefleksjon & Teamet beskriver læringsutbytte, forbedringsforslag og kobling til teori. & Refleksjonen sammenligner AR/VR-løsningen med tradisjonelle kontrollrom og foreslår videre eksperimenter. \\
+        \bottomrule
+    \end{tabular}
+    \caption{Vurderingskriterier for laboratorieøvelsen i immersivt beslutningsrom.}
+    \label{tab:kap04-immersiv-rubrikk}
+\end{table}
+
+Rubrikken er harmonisert med vurderingsopplegget i lærerveiledningen og kan brukes både til egenvurdering og faglig sensur. Etter gjennomført øving anbefales det å sammenligne resultatene med måltallene i Kapittel~7 for governance og Kapittel~8 for sektorspesifikke KPI-er.
 
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}
@@ -118,4 +166,5 @@ Rubrikken vektlegger modellforankring, beslutningslogg, universell utforming og 
     \item Lag en enkel plan for å automatisere en simuleringsstudie med Git og CI/CD.
     \item Diskuter hvordan visualisering kan forbedre beslutningsprosesser.
     \item Bruk praksiseksempelet som inspirasjon og skisser hvordan en digital tvilling kan forbedre en annen norsk energitjeneste.
+    \item Foreslå en vurderingsrubrikk for en AR/VR-basert øving i eget fagmiljø og begrunn hvilke kriterier som bør vektlegges.
 \end{enumerate}
