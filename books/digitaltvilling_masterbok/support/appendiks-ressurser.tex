@@ -25,6 +25,15 @@ Dette appendikset samler forslag til datasett, verktøy og styringsmaler som kan
     \end{tabular}
 \end{table}
 
+\subsection{Ressurspakker og lisenshensyn}
+For å gjøre utvalget mer handlingsrettet er ressursbanken gruppert i tre ferdige pakker. Hver pakke knytter datasett, verktøy og styringsmaler sammen og gjør oppmerksom på lisenskrav undervisningsteamet må følge når studentgrupper settes opp.
+
+\begin{description}
+    \item[Utforske – \emph{åpen eksperimentering}] Kombiner \emph{Felles datakatalog}, Frost~API fra Meteorologisk institutt og \emph{CesiumJS} for raske analyser. Alle ressursene er åpne eller gratis ved registrering, men oppgi kilde og eventuelle \emph{Creative Commons}-vilkår i prosjektjournalen. Bruk RACI-S-malen fra seksjon~\ref{appendix:ressurser} til å avklare ansvar før data deles videre.
+    \item[Pilotere – \emph{kontrollert utprøving}] Sett sammen \emph{Entur}- og \emph{Avinor}-strømmer via Apache~Kafka, og modeller strukturene i \emph{Azure Digital Twins}. Begge API-ene krever gratis nøkkel, mens Azure forutsetter studentabonnement som programleder oppretter. Noter i gevinstplanen hvilke datasett som ikke kan republiseres av hensyn til avtalevilkår.
+    \item[Skalere – \emph{operativ drift}] Bruk \emph{Statnett}-data, \emph{Nord~Pool}-priser og \emph{Siemens Industrial Edge} for gevinst- og risikostyring. Statnett og Nord~Pool krever API-nøkler knyttet til virksomhetskonto, mens Edge-plattformen leveres som tidsbegrenset partnerlisens. Dokumenter derfor tilgangsavtaler i styringsjournalen og planlegg for resertifisering av brukere hver termin.
+\end{description}
+
 \section{Casebeskrivelser}
 \subsection{Case «Klimatilpasset kommune» (Utforske)}
 Dette scenarioet tar utgangspunkt i en kommune som skal vurdere klimatilpasning for bygg og kritisk infrastruktur. Studenten bruker åpne datasett fra Digdir, Meteorologisk institutt og Statens vegvesen til å lage raske analyser, visualisere sårbarhet i CesiumJS og koble behovene til læringsmålene i kapittel~3.
@@ -168,6 +177,28 @@ Nord Pool – Markedsdata API & Gratis tilgang til spotpriser, områdepriser og 
 Enova – Prosjektbank & Prosjektregister med beskrivelser av gjennomførte energieffektiviserings- og innovasjonsprosjekter tilgjengelig via \href{https://www.enova.no/bedrift/prosjekter/prosjektbank/}{enova.no}. & Case «Regional energikoordinering»: velg tiltakspakker og indikatorer for pilotprosjekter i kommunenettverk. & Pilotere \\
 \addlinespace
 Statistisk sentralbyrå – Energiregnskap & Offisielle tall for energiforbruk, produksjon og utslipp per sektor publisert på \href{https://www.ssb.no/energi-og-industri/energi/statistikk/energiregnskap}{ssb.no}. & Case «Regional energikoordinering»: mål gevinst, rapporter klimaeffekter og koble styring til kapittel~7. & Skalere \\
+\bottomrule
+\end{longtable}
+
+\section{Lisens- og tilgangsoversikt}
+\begin{longtable}{p{0.23\textwidth}p{0.26\textwidth}p{0.31\textwidth}p{0.16\textwidth}}
+\toprule
+\textbf{Kategori} & \textbf{Eksempelressurser} & \textbf{Lisens- og tilgangskrav} & \textbf{Tiltak i undervisning} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Kategori} & \textbf{Eksempelressurser} & \textbf{Lisens- og tilgangskrav} & \textbf{Tiltak i undervisning} \\
+\midrule
+\endhead
+Åpne datasett & Felles datakatalog, NVE Energidata, Helsedirektoratets statistikk & Offentlige data under CC~BY 4.0 eller Norsk lisens for offentlige data; krever kildeangivelse og lenke til vilkår. & Legg lisens i oppgavemalene og kontroller at studentnotater gjengir kilde og oppdateringsdato. \\
+\addlinespace
+Registreringsbaserte API-er & Frost, Entur, Avinor, Bane~NOR, Nord~Pool & Gratis nøkkel etter registrering; begrenset spørringskvote og krav til sikker lagring av nøkkel. & Programleder distribuerer API-nøkler via sikker kanal og oppdaterer oversikt for hver kohort. \\
+\addlinespace
+Industriplattformer & Azure Digital Twins, Siemens Industrial Edge Trial, HUB~Ocean & Lisensiert bruk for studenter gjennom utdanningsprogram, tidsbegrenset partneravtale eller NDA. & Dokumenter tildelte lisenser i styringsjournalen, og sett opp offboarding-rutine ved semesterslutt. \\
+\addlinespace
+Kommunitets- og åpen kildekode-verktøy & OpenModelica, CesiumJS, Apache Kafka & Åpen kildekode med permissiv lisens (BSD/Apache). & Sørg for at studentenes kodeprosjekter inkluderer lisensfil og refererer til originalprosjektet. \\
+\addlinespace
+Styrings- og policyressurser & Norsk Helsenett Norm, RACI-S- og gevinstmaler & Gratis tilgang, men krever at organisasjonen følger Normens sikkerhetskrav og dokumenterer bruk. & Inkluder sjekkliste i kursmappen og be studentgrupper signere på at retningslinjer er gjennomgått. \\
 \bottomrule
 \end{longtable}
 
