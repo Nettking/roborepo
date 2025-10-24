@@ -18,7 +18,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | III | Kapittel 9 | Oppdatert med veikart, finansieringskilder og forskningsdesign-eksempler. | Planlegg fagfellegjennomgang av tabeller og kvalitetssikre kobling mot nye referanser. |
 | Appendiks | Ressurser | Modenhetskart, caser og tabeller revidert for hele ressursbanken. | Test veiledningen i workshop og samle fagfelleinnspill før neste oppdatering. |
 | Appendiks | Arbeidsark | Ny seksjon med maler, arbeidsark og fagfelleklarering i `chapters/appendiks.tex`. | Test arbeidsarkene i pilot og samle fagfelleinnspill før endelig publisering. |
-| Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk. | Oppdater når nye termer eller presiseringer oppstår under fagfellelesing. |
+| Appendiks | Begrepsliste | Beriket med forkortelser, referanser og tematiske tabeller som dekker styring, modellering og infrastruktur. | Følg opp nye begrep fra fagfelleinnspill og registrer kilder i ordlisten ved neste revisjon. |
 | Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan, vurderingsrubrikker og ny prosjektkontraktmal. | Pilotere kontrakten mot kommende caseutvidelser og justere rubrikkene etter erfaringer fra AR/VR- og sektorworkshops. |
 | Støtte | Oppgavetavle og task queue | Månedlig revisjonsrutine definert og forankret i redaksjonen. | Pilotere første revisjonssyklus, dokumentere forbedringspunkter, justere kalender for høstsemesteret og holde øye med at det oppdaterte LaTeX-preambelet med norsk språkpakke fortsatt gir grønne kompileringer for TikZ-illustrasjonene. |
 ### Omfang per kapittel (august 2024)
@@ -37,7 +37,7 @@ Omfangstallene under er beregnet ved å kjøre en enkel ordtelling (LaTeX-komman
 | Kapittel 8 – Bruksområder | 1996 | ≈5,0 | Gir sektorreiser, men hvert case er kun introduksjon uten fordypende analyser. |
 | Kapittel 9 – Fremtidstrender | 953 | ≈2,4 | Trendliste finnes, men forskningsprogram og scenarioer er korte. |
 | Appendiks – Ressurser | 1477 | ≈3,7 | Ressurslisten er etablert, men mangler kategorisering og veiledning til bruk. |
-| Appendiks – Begrepsliste | 741 | ≈1,9 | Basistabell finnes, men uten utvidede definisjoner, oversettelser og referanser. |
+| Appendiks – Begrepsliste | 741 | ≈1,9 | Oppdatert med forkortelser, referanser og tematiske tabeller; vurder flere eksempler fra kommende fagfelleinnspill. |
 
 ### Nye tematiske prioriteringer
 
