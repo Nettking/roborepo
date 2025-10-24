@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-48: Beskrev operativ driftsmøtemodell for dataspace-tilknyttede tvillinger med møtesyklus, tabell og koblinger til indikator- og gevinstarbeidet, og oppdaterte plan-, tavle- og statusfiler. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-47: Etablerte kompetansepakke og kommunikasjonsplan for dataspace-governance i Kapittel 7, inkludert nye tabeller og oppdaterte kilder, og synkroniserte plan- og statusfiler. (`chapters/kapittel07-livssyklus.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `support/oppgavetavle.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-46: Etablerte tverrsektoriell tilsyns- og rapporteringspakke for høyrisikotvillinger med ny seksjon i Kapittel 6, tabell for leveranser, oppdatert planstatus og nye referanser til helsetilsynets internkontroll. (`chapters/kapittel06-validering.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `support/oppgavetavle.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-45: Beskrev kontinuerlig modellovervåking for kommunale tvillinger med overvåkingssløyfe, indikatorpanel og læringsopplegg, og oppdaterte plan- og statusfiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md`)

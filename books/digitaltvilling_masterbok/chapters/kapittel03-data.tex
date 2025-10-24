@@ -74,6 +74,36 @@ Observabilitet sørger for at kvalitetsindikatorene faktisk overvåkes og at tvi
 
 \paragraph{Praktisk sjekkliste.} Før en pilot settes i drift, bør teamet bekrefte at indikatorene over kan testes ende-til-ende i testmiljøet, at varslingsrutiner er synkronisert med beredskapsplanen i dette kapittelet, og at partnere i dataspace har signert på hvilke kvalitetsmålinger de forventer. Dette sikrer at datakvalitet ikke blir en engangsaktivitet, men en kontinuerlig del av plattformstyringen.
 
+\subsection{Operativ driftsmøtemodell for dataspace-tilknyttede tvillinger}
+Norske pilotmiljøer som Statnett, Energi Norge og kommunale datasamarbeid organiserer driften rundt faste møtearenaer slik at dataavvik, modelltiltak og kontraktskrav fanges opp før de får følgefeil i styringen.\citep{statnett2023digital,energinorge2023beredskap} Driftsmøtene bygger videre på modelljournal- og dataspace-prinsippene fra \autoref{tab:kap03-datakvalitet} og \autoref{tab:dataspace-governance}, og sørger for at loggene fra kapittel~6 og fagfelleloggen holdes oppdatert.\citep{digdir2023modelljournal}
+
+En anbefalt møtesyklus består av tre nivåer:
+\begin{enumerate}
+    \item \textbf{Ukentlig hendelsesreview:} Plattformteamet og dataspace-operatøren gjennomgår avvik i strømobservasjon og etterlevelseslogg. Tiltak prioriteres og testes i sandkasse før de tas inn i kontrolltårnet i kapittel~6.
+    \item \textbf{Månedlig dataspace-forum:} Domeneeiere, sikkerhetsfunksjoner og programleder samkjører indikatorpanelet i \autoref{tab:kommunaleindikatorer} og \autoref{tab:kap06-tilsynsplan} med pågående endringer i dataspace-kontraktene. Resultatet dokumenteres i fagfelleloggen og i gevinstplanen i kapittel~7.
+    \item \textbf{Kvartalsvis styringsråd:} Strategiske beslutningstakere bekrefter at gevinstmål, policy og investeringer henger sammen. Rådet vedtar eventuelle eskaleringer eller prioriteringer for neste kvartal og bestiller revisjoner ved behov.
+\end{enumerate}
+
+Tabell~\ref{tab:dataspace-drift} kan brukes som mal når studentgrupper skal planlegge sine egne driftsmøter. Tabellen kobler agenda, inndata og leveranser slik at møtene leverer konkrete forbedringer.
+
+\begin{table}[ht]
+    \centering
+    \caption{Driftsmøtemal for dataspace-tilknyttede tvillinger}
+    \label{tab:dataspace-drift}
+    \begin{tabular}{p{3.2cm}p{4.6cm}p{4.0cm}p{3.4cm}}
+        \toprule
+        Møte & Hovedfokus & Kritiske inndata & Utfall og oppfølging \\
+        \midrule
+        Ukentlig hendelsesreview & Analyse av avvik fra \autoref{tab:kap03-datakvalitet} og prioritering av midlertidige tiltak. & Hendelseslogg, kvalitetsmålinger og modelljournalutdrag. & Tiltak loggføres med ansvarlig og testplan i sandkasse. \\
+        Månedlig dataspace-forum & Samordne indikatorpanel, tilgangspolicy og planlagte endringer i konnektorer. & KPI-rapport fra kontrolltårn, dataspace-kontrakter og fagfellelogg. & Oppdatert tiltakslogg og versjonsnotat til deltakerne. \\
+        Kvartalsvis styringsråd & Vurdere gevinstrealisering, risiko og investeringsbehov. & Gevinstplan, rapporteringspakke fra kapittel~6 og revisjonsfunn. & Beslutningsprotokoll med prioriterte forbedringer og eventuelle eskaleringer. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Når møtene dokumenteres i samme versjonskontroll som tvillingmodeller og dataspace-artefakter, blir det enklere å vise samsvar med kravene i \autoref{tab:kap06-tilsynsplan} og å koordinere tiltak med styringsmodellene i kapittel~7. Studentteam bør bruke malen aktivt når de planlegger pilotundervisning slik at gevinstplan, datakvalitet og regulatorisk etterlevelse henger sammen i praksis.
+
+
 \subsection{Case: Sanntidsobservabilitet i kraftnettet}
 Statnett har brukt digital tvilling-teknologi for å overvåke sanntidsbelastningen i transmisjonsnettet og gi driftssenteret et felles situasjonsbilde \citep{statnett2023digital,statnett2024kontrolltarn}. Caset bygger på PMU-strømmer, SCADA-data og vedlikeholdslogger som kombineres i et digitalt kontrolltårn. Erfaringene viser at observabilitet må sikres både teknisk og organisatorisk for å unngå at avvik forplanter seg i kraftsystemet.
 
