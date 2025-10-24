@@ -472,6 +472,50 @@ For å sikre at tabellen ikke bare blir et compliance-dokument, bør teamet etab
     \item \textbf{Læring og forbedring:} Etterkontrollen skal identifisere hvordan data fra produksjon kan brukes til å forbedre modell og prosess. Tiltak registreres som nye backlog-poster eller oppdateringer av styringssystemet.
 \end{enumerate}
 
+
+
+\section{Leverand\o{}rkvalifisering og datakontrakter}
+Valideringsarbeidet må også forankres hos leverandører som leverer komponenter, data eller driftstjenester til tvillingen. Offentlige virksomheter forventes å dokumentere hvordan anskaffelser av kunstig intelligens ivaretar krav til ansvarlighet, datasikkerhet og styring.\citep{dfo2024anskaffelseki} Samtidig må dataspace-partnere enes om delingsavtaler, policyer og tekniske kontroller før de får tilgang til laboratoriet eller produksjonsmiljøet.\citep{digdir2024datasamarbeid,idsa2023operational} Kapittelets drifts- og rapporteringsstrukturer kan bare fungere dersom leverandørkontraktene speiler samme krav til kvalitetsjournal, indikatorpanel og eskaleringsrutiner.
+
+\subsection{Prekvalifisering og kravstilling}
+En koordinert kravprosess reduserer risikoen for at leverandørene leverer løsninger uten nødvendig dokumentasjon eller styringsmekanismer. Følgende trinn anbefales før kontrakt inngås:
+\begin{enumerate}
+    \item \textbf{Definer styringskrav}: Bruk kravrammeverket fra \citet{dfo2024anskaffelseki} og tillitskriteriene i \citet{iso2020tr24028} til å formulere funksjonelle og ikke-funksjonelle krav for hver modul.
+    \item \textbf{Kartlegg datakontrakter}: Beskriv datasett, delingsformål og policyer i en dataspace-avtale før testing starter, slik \citet{digdir2024datasamarbeid} og \citet{idsa2023operational} anbefaler.
+    \item \textbf{Avklar kvalitetsjournal}: Krev at leverandøren benytter modelljournalen fra \citet{digdir2023modelljournal} og leverer testbevis som kan importeres direkte i den felles journalstrukturen.
+    \item \textbf{Planlegg revisjoner}: Integrer sertifiserings- og revisjonsløpene fra \citet{dnv2023digitalassurance} i kontrakten, med tydelige milepæler for pilot, produksjon og videreutvikling.
+\end{enumerate}
+
+\subsection{Samsvarspakke for leverand\o{}rer}
+Tabell~\ref{tab:leverandor-samsvar} viser hvordan leverandørleveranser kan struktureres slik at de støtter både dataspace-styring og valideringsjournalen. Hver fase bygger videre på kontrollpunktene i Tabell~\ref{tab:driftsgodkjenning} og gjør det mulig å følge leverandøroppfølgingen i samme styringspanel som interne team.
+
+\begin{table}[ht]
+    \centering
+    \caption{Samsvarspakke for leverand\o{}rer i dataspace-integrerte tvillinger}
+    \label{tab:leverandor-samsvar}
+    \begin{tabular}{|p{3.0cm}|p{4.9cm}|p{4.6cm}|p{3.1cm}|}
+        \hline
+        \textbf{Fase} & \textbf{Leveranse} & \textbf{Dokumentasjon og sjekkpunkter} & \textbf{Kobling i styringssystemet} \\
+        \hline
+        Forhåndskvalifisering & Risikovurdering av løsning, referansearkitektur og datalandskap & Kravtabell fra \citet{dfo2024anskaffelseki}, dataspace-policy og ROS-analyse for deling \citep{digdir2024datasamarbeid} & Tiltaksregister og risikologg i kvalitetsjournalen \\
+        \hline
+        Pilotleveranse & Testpakker, modelljournal og konfigurasjonsoversikt & Modelljournal iht. \citet{digdir2023modelljournal}, connector-logg og policytester \citep{idsa2023operational} & Valideringslaboratoriets testresultater og avvikslogg \\
+        \hline
+        Driftskontrakt & Oppdateringsplan, indikatorpanel og rapporteringsmal & Sertifiseringsbevis fra \citet{dnv2023digitalassurance}, ajourførte indikatorer og hendelsesrapportmaler & Rapporteringspakken i Tabell~\ref{tab:kap06-tilsynsplan} og styringspanelet for tillit \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Oppf\o{}lging i valideringsjournalen}
+Når leverandørpakkene er definert, må de følges opp gjennom samme kvalitetsjournal som interne aktiviteter. Dette kan gjøres ved å:
+\begin{enumerate}
+    \item \textbf{Etablere felles releasekort}: Leverandørens leveranser registreres som egne releasekort med ansvarlig kontaktperson og kobling til indikatorene i Tabell~\ref{tab:tillitsindikatorer}.\citep{digdir2023modelljournal,digdir2023styringai}
+    \item \textbf{Gjennomføre kvartalsvise samsvarsmøter}: Kombiner rapportene fra Tabell~\ref{tab:leverandor-samsvar} med revisjonsmerknadene i sertifiseringsløpet slik at avvik lukkes i fellesskap.\citep{dnv2023digitalassurance}
+    \item \textbf{Integrere læringssløyfer}: Dokumenter forbedringsforslag fra leverandørene i tiltaksloggen og vurder hvordan de påvirker dataspace-policyer og beredskapsplaner i kapittelets øvrige caser.\citep{digdir2024datasamarbeid}
+\end{enumerate}
+
+Med en slik struktur kan kapittelets laboratorier og samvirkeøvelser gjenbruke leverandørdata og beslutninger uten at dokumentasjonen spres i sidekanaler. Studentene får trening i å se hvordan anskaffelser, dataspace-avtaler og kvalitetsjournal henger sammen i praksis, og virksomheten står bedre rustet til å forsvare valgene sine i tilsyn og fagfelleprosesser.
+
 \section{Maritimt tilsyn for autonome fartøy}
 Autonome ferger og havneoperasjoner i Norge drives gjennom tett samarbeid mellom teknologiutviklere, rederier og myndigheter. Sjøfartsdirektoratet krever at hvert testløp dokumenteres med sikkerhetsvurderinger, navigasjonsgrenser og kontaktpunkter mot trafikkovervåkingen før en tvilling får tillatelse til å operere i norske farvann.\citep{sdir2023autonomefartoy} DNV beskriver samtidig hvordan digitale tvillinger skal brukes til å vise samsvar med regelverket gjennom kontinuerlig overvåkning av risiko og ytelse.\citep{dnv2024autonomous} 
 
