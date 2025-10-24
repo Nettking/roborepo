@@ -48,6 +48,55 @@ Flere norske nettselskaper etablerer kontrolltårn for å kombinere feltdata, tv
 \end{enumerate}
 Kontrolltårn-caset forsterker koplingen mellom modellvalidering, cybersikkerhet og organisasjonsdesign. Studentene skal levere både teknisk dokumentasjon og en kort tiltakslogg for oppfølging i styringssystemet.
 
+\section{AI-forordningens krav til helsetvillingene}
+AI-forordningen klassifiserer kliniske beslutningsstøttesystemer og digitale tvillinger for pasientforløp som høyrisiko-systemer.\citep{eu2024aiact} Dermed må både leverandører og helsevirksomheter etablere et kvalitetsledelsessystem som dokumenterer hvordan risiko håndteres før og under drift. For masterstudentene betyr det at hver caseleveranse skal kunne peke på hvor i modellen kravene adresseres, og hvilke loggføringer som viser etterlevelse over tid.
+
+Kjernen i regelverket kan kondenseres til seks gjensidig avhengige forpliktelser:
+\begin{enumerate}
+    \item \textbf{Risikostyring i hele livssyklusen:} Høyrisiko-systemer skal ha et dokumentert risikostyringssystem med kontinuerlig oppdatering av identifiserte farer, testplaner og mitigeringstiltak.\citep{eu2024aiact} Arbeidsflyten bør speile modenhetstrinnene i DNV sitt digital assurance-rammeverk slik at tekniske og organisatoriske kontroller kobles sammen.\citep{dnv2023digitalassurance}
+    \item \textbf{Datastyring og datakvalitet:} Opplærings-, validerings- og testdatasett må beskrives med behandlingsgrunnlag, representativitet og eventuelle skjevheter.\citep{eu2024aiact} Helsesektoren kan gjenbruke praksis fra Direktoratet for e-helse sin veileder for tredjepartsvurdering ved å kreve datasettjournal og dokumentert kvalitetssikring før modelloppdateringer.\citep{ehelse2024tilsyn}
+    \item \textbf{Teknisk dokumentasjon:} Leverandøren skal til enhver tid kunne fremvise modelljournal, algoritmebeskrivelse og valideringsresultater.\citep{eu2024aiact} Dokumentasjonen bør inngå i kvalitetsjournalen som allerede brukes for sertifiseringsløpet i dette kapittelet.
+    \item \textbf{Journalføring og sporbarhet:} AI-forordningen krever automatiske loggfiler over modellbeslutninger, inputdata og brukerinteraksjoner for å muliggjøre revisjon og etterprøving.\citep{eu2024aiact} Dette må integreres med hendelsesloggene i kontrolltårn-caset slik at både tekniske og kliniske avvik kan spores.
+    \item \textbf{Transparens og menneskelig kontroll:} Systemet skal utformes slik at klinikere forstår begrensninger, kan overstyre anbefalinger og får varsler når tvillingen opererer utenfor validert område.\citep{eu2024aiact} Digdirs styringsveileder anbefaler å kombinere dette med et lederstyrt indikatorpanel som viser risikostatus og tiltak.\citep{digdir2023styringai}
+    \item \textbf{Robusthet, cybersikkerhet og nøyaktighet:} Tvillingen skal tåle feil, angrep og datadrift uten å miste sikkerhetsegenskaper.\citep{eu2024aiact} Kravet kan operasjonaliseres ved å koble kontrollpunktene fra Tabell~\ref{tab:standardkart} med egne kliniske stresstester.
+\end{enumerate}
+
+Tabell~\ref{tab:ai-helsekrav} viser hvordan et universitetssykehus kan tildele ansvar og dokumentasjon for å møte forpliktelsene.
+
+\begin{table}[ht]
+    \centering
+    \caption{Oversettelse av AI-forordningens høyrisiko-krav til helsetvilling i sykehus}
+    \label{tab:ai-helsekrav}
+    \begin{tabular}{|p{3.4cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Forpliktelse} & \textbf{Tiltak i tvillingprosjekt} & \textbf{Dokumentasjon og verktøy} & \textbf{Primær ansvarlig} \\
+        \hline
+        Risikostyring & Etabler livssyklusdrevne fareanalyser og release-gates før klinisk bruk & Risikologg koblet til kvalitetsjournal, revisjonsprotokoll \citep{dnv2023digitalassurance} & Klinisk kvalitetsleder \\
+        \hline
+        Datastyring & Kontroll av datasett mot samtykke og representativitet, bias-sjekker før opplæring & Datasettjournal, datakatalog, tredjepartsvurdering \citep{ehelse2024tilsyn} & Data steward \\
+        \hline
+        Teknisk dokumentasjon & Versjonsstyrt modelljournal, testprotokoll og algoritmespesifikasjon & DevOps-logger, modellarkiv, API-beskrivelser & Produktleder digital tvilling \\
+        \hline
+        Loggføring & Automatisert hendelseslogg for modellavgjørelser og brukerhandlinger & Audit trail integrert med kontrolltårn, varslingspanel & Sikkerhetsarkitekt \\
+        \hline
+        Transparens og kontroll & Brukergrensesnitt med begrunnede anbefalinger, overstyringsknapp og opplæring & Kursjournal, beslutningsstøtte-håndbok, indikatorpanel \citep{digdir2023styringai} & Medisinsk fagansvarlig \\
+        \hline
+        Robusthet og cybersikkerhet & Stresstest mot feilmodi, penetrasjonstest av modellgrensesnitt, fail-safe-plan & Testjournal, penetrasjonstest-rapport, beredskapsplan & Plattformteam leder \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Operativ etterlevelse i undervisningscaset}
+For å gjøre kravene håndgripelige kan kurslaboratoriet følge en firestegs arbeidsflyt:
+\begin{enumerate}
+    \item \textbf{Forberedelser og DPIA:} Studentgrupper identifiserer personvern- og sikkerhetsrisikoer gjennom en forenklet DPIA før modellen bygges, og registrerer funn i risikologgen fra sertifiseringsløpet.\citep{datatilsynet2023dpia}
+    \item \textbf{Konfigurer styringspanelet:} Indikatorpanelet fra forrige seksjon utvides med AI-forordningens nøkkelindikatorer, som modellpresisjon per pasientgruppe og antall overstyringer per uke.
+    \item \textbf{Verifiser menneskelig kontroll:} Under simuleringene dokumenterer studentene hvordan kliniske beslutninger tas, hvilke varslingsgrenser som brukes og hvordan opplæringsmateriellet sikrer forståelse hos brukerne.
+    \item \textbf{Revider og rapporter:} Etter hver sprint gjennomføres en mini-revisjon der loggfiler, indikatorer og tiltak vurderes mot forpliktelsene i Tabell~\ref{tab:ai-helsekrav}. Resultatet legges i kvalitetsjournalen og oppsummeres til styringsgruppen for pilotkurset.
+\end{enumerate}
+
+Denne tilnærmingen gir studentene innsikt i hvordan europeisk regulering og norske veiledere må kombineres for å bygge tillit til helserettede digitale tvillinger.
+
 \section{Usikkerhetsanalyse og robusthet}
 Usikkerhetsanalyse gjør det mulig å forstå hvor pålitelig tvillingens prediksjoner er. En viktig første aktivitet er å klassifisere usikkerhet som \textit{aleatorisk} (tilfeldige variasjoner i prosessen) eller \textit{epistemisk} (mangel på kunnskap). For eksempel vil en energitvilling for et fjernvarmenett ha aleatorisk usikkerhet knyttet til vær og forbruksmønstre, mens epistemisk usikkerhet kan skyldes ufullstendige rørdata eller sjeldne feilmodi. Klassifiseringen påvirker hvilke tiltak som settes inn: bedre sensorer og datakvalitetsrutiner for epistemisk usikkerhet, og probabilistiske metoder for aleatorisk variasjon. Risikostyringsprinsippene i \citet{iso31000-2018} kan brukes som ramme for å prioritere tiltak og utforme beslutningspunkter.
 
