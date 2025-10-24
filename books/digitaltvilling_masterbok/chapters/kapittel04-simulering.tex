@@ -58,12 +58,32 @@ Immersive arbeidsflater gjør det mulig for tverrfaglige team å oppleve de samm
 
 I norske industrimiljøer brukes immersive kontrollrom til å støtte både planlagte revisjoner og hendelseshåndtering. Operatørtrening ved onshore støttesentre kombinerer sanntidsdata fra offshore-felt med historiske hendelser og digitale prosedyrer slik at teamet kan øve på kritiske operasjoner uten å stoppe produksjonen. Internasjonale studier av AR/VR i digitale tvillinger viser at effekten blir størst når visualiseringsløsningen integreres tett med datakvalitetssporing, rollebaserte perspektiver og en felles beslutningslogg \citep{zhu2021augmented}. Dette gir både etterprøvbarhet og et læringsgrunnlag for senere forbedringer.
 
+Partnere som Kongsberg Digital og Equinor har de siste årene demonstrert kontrollrom der AR/VR-overlegg ligger direkte oppå live datastrømmer fra produksjonsanlegg, og der beslutningslogger eksporteres til arbeidsordre-systemer \citep{kongsberg2023kognitwin}. Erfaringene viser at immersive grensesnitt må være tett koblet til modellforvaltning og hendelseshåndtering for å skape tillit i sikkerhetskritiske miljøer.
+
 Erfaring fra norske energiselskaper tilsier at immersive flater bør designes etter tre prinsipper:
 \begin{itemize}
     \item \textbf{Samtidig synlighet av modell og risikomål:} Visuelle lag må kunne slåes av og på slik at driftsoperatører raskt forstår konsekvenser av tiltak.
     \item \textbf{Brukerroller og perspektivfiltrering:} Kontrollrommet bør støtte både operatører, analytikere og vedlikeholdsplanleggere med egne dashbord, men samme datagrunnlag.
     \item \textbf{Sporbar beslutningslogg:} Tiltak bør loggføres direkte i den immersive flaten og eksporteres til arbeidsordre- og læringssystemer.
 \end{itemize}
+
+Tabell~\ref{tab:kap04-immersiv-arkitektur} oppsummerer en operasjonsarkitektur som møter prinsippene ovenfor. Tabellen brukes både som bestilling til grafikkteamet og som sjekkliste når laboratoriet rigges.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{0.22\textwidth}p{0.38\textwidth}p{0.28\textwidth}}
+        \toprule
+        \textbf{Lag} & \textbf{Hovedinnhold} & \textbf{Norske referansepunkt}\\
+        \midrule
+        Datafangst og edge & SCADA-strømmer, IoT-sensorer, historikkbuffer med sanntidsreplay og kvalitetssjekk. & Fjernvarmesentraler i Trondheim og Stavanger, energioperasjoner i Equinor OMNIA.\\
+        Modell- og analysemotor & Kontinuerlige og diskrete modeller, scenariobank og API-er for å trigge simuleringer fra AR/VR-panelet. & Kognitwin Live Operations, AnyLogic-modeller fra NTNU-pilot.\\
+        Samhandling og beslutning & Rollebaserte dashboards, AR/VR-visninger med beslutningslogg, eksport til arbeidsordre og læringsplattform. & Kongsberg Digitals kontrollromsdemoer, læringsopplegget i kapittel 5.\\
+        Sikkerhet og etterlevelse & Tilgangsstyring, hendelseskøer, logging i tråd med IEC 62443-2-1 og norske øvingskrav. & Sikkerhetsregime fra kapittel 6 og DSBs øvelsesveileder.\\
+        \bottomrule
+    \end{tabular}
+    \caption{Kjernekomponenter i et immersivt beslutningsrom for fjernvarmedrift.}
+    \label{tab:kap04-immersiv-arkitektur}
+\end{table}
 
 For fjernvarmecaset i dette kapitlet etableres et immersivt kontrollrom der sanntidsdata, historikk og planlagte tiltak samles i en arbeidsflate. Figur~\ref{fig:kap04-immersiv-beslutning} skisserer hvordan sensorer, scenariokjøringer og beslutningslogg henger sammen i en norsk kontekst. Støttenotatet \textit{kap04-immersiv-case.md} beskriver detaljene i laboratorieøvelsen, inkludert oppgavetekst og evaluering. Notatet inneholder også forslag til hvordan studentene kan dokumentere brukerreise, sikkerhetssjekker og universell utforming i den immersive løsningen.
 
@@ -78,7 +98,7 @@ For fjernvarmecaset i dette kapitlet etableres et immersivt kontrollrom der sann
 \subsection{Simuleringscase: Samordnet beredskapsøvelse}
 Som supplement til fjernvarmecaset beskrives en beredskapsøvelse for et norsk prosessanlegg der både operatører, driftsingeniører og eksterne beredskapsteam møtes i et immersivt kontrollrom. Tvillingen kombinerer kontinuerlige prosessmodeller, agentbaserte evakueringsscenarioer og diskret hendelsessimulering av vedlikeholdssituasjoner. Formålet er å teste koordinering og beslutningskvalitet når flere samtidige avvik oppstår.
 
-Øvelsen følger tre faser:
+Øvelsen følger tre faser i tråd med nasjonale øvingskrav \citep{dsb2023ovelser}:
 \begin{enumerate}
     \item \textbf{Før øvelsen:} Simuleringsplanleggere bygger scenarier med ulike feiltyper og definerer hva som skal logges (alarmer, tiltak, kommunikasjon).
     \item \textbf{Under øvelsen:} Deltakerne bruker AR-briller for å se virtuelle hjelpetekster i kontrollrommet, mens VR-deltakere visualiserer rømningsveier og trykkfordeling i anlegget.
@@ -120,7 +140,7 @@ Et norsk energiselskap ønsker å styre et fjernvarmenett mer effektivt og redus
 
 Deretter bygges en diskret hendelsessimulering av driftsoperasjoner som vedlikeholdsavvik, nødstopper og lastskifte mellom kjeler. Agentbaserte komponenter modellerer kundesegmenter, slik at kampanjer for energisparing kan evalueres. Data fra IoT-målere strømmer kontinuerlig inn via en skyplattform, og parametre kalibreres hver time.
 
-Analysefasen kombinerer sensitivitet mot utetemperatur og energipriser med optimalisering av pumpesetpunkter. Resultatene visualiseres i et dashboard der driftsoperatører kan teste scenarioer før de aktiveres. Etter ett års bruk dokumenterer selskapet 12\% reduksjon i energitopper og et bedre beslutningsgrunnlag for investeringer i nye varmesentraler.
+Analysefasen kombinerer sensitivitet mot utetemperatur og energipriser med optimalisering av pumpesetpunkter. Resultatene visualiseres i et dashboard der driftsoperatører kan teste scenarioer før de aktiveres. Løsningen bygger videre på anbefalinger fra International Energy Agency om å bruke digitale tvillinger til å balansere last i fjernvarmenett \citep{iea2021district}. Etter ett års bruk dokumenterer selskapet 12\% reduksjon i energitopper og et bedre beslutningsgrunnlag for investeringer i nye varmesentraler.
 
 \begin{figure}[htbp]
     \centering
@@ -131,7 +151,7 @@ Analysefasen kombinerer sensitivitet mot utetemperatur og energipriser med optim
 \end{figure}
 
 \section{Laboratorieøving: Immersivt beslutningsrom}
-Laboratorieøvelsen bygger på scenariet i \textit{kap04-immersiv-case.md} og tar utgangspunkt i at studentene får tilgang til et immersivt kontrollrom der fjernvarmeoperasjoner kan testes. Økten varer 90 minutter og gjennomføres i grupper på fire.
+Laboratorieøvelsen bygger på scenariet i \textit{kap04-immersiv-case.md} og tar utgangspunkt i at studentene får tilgang til et immersivt kontrollrom der fjernvarmeoperasjoner kan testes. Økten varer 90 minutter og gjennomføres i grupper på fire. Datastrømmer og roller speiles i Tabell~\ref{tab:kap04-immersiv-arkitektur} slik at studentene forstår hvordan teknologi og organisasjon henger sammen.
 
 \begin{enumerate}
     \item \textbf{Forberedelse:} Studentene analyserer historiske logger og definerer tre hypoteser for lastbalansering. De etablerer et minimumssett av sensorer som skal «festes» til AR-objekter.

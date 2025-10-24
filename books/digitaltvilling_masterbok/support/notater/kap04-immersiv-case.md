@@ -20,6 +20,28 @@ Dette notatet beskriver hvordan AR/VR-beslutningsstøtte skal integreres i kapit
    - Instruktører sjekker at fallback-prosedyrene (swap til tradisjonelle dashboards) er definert.
 3. **Etterarbeid:** Studentene leverer en to-siders refleksjon i læringsplattformen der de beskriver hvordan immersiv visualisering påvirket beslutningene, og foreslår forbedringer.
 
+## Teknisk oppsett
+- **Maskinvare:** To HoloLens 2 (eller tilsvarende) for operatørroller, én VR-rigg (HTC Vive Pro 2) koblet til kraftig GPU-stasjon, samt 3×55" veggskjermer for felles visning i kontrollromsmodus.
+- **Programvare:** AnyLogic/Modelica for simulering, Kognitwin Live Operations eller Equinor OMNIA som dataplattform, Azure Digital Twins som mellomlagring, samt Teams/OneNote for samtidige notater.
+- **Datakilder:** Historiske temperatur- og trykklogger (15 min intervall), sanntidsstrøm fra SCADA (MQTT), syntetisk scenariobank fra sensitivitetstabellen i kapittel 4 og hendelseslogg fra beredskapsøvelsen.
+- **Integrasjon:** Data distribueres via en Kafka-broker som håndterer både sanntidsfeeds og «replay» av historikk. Edge-gateway på fjernvarmesentralen tar hånd om første filtrering før datastrømmen går inn i skyplattformen.
+
+## Datastrømmer og roller
+| Datastrøm | Formål | Ansvarlig rolle |
+| --- | --- | --- |
+| Sensorbuffer (historikk + sanntid) | Sikrer at simuleringene kan kalibreres fortløpende og at AR-overlegg har ferske verdier. | Driftstekniker |
+| Simuleringsresultat via REST API | Gjør det mulig å «pinne» scenarioutfall i AR-panelet og eksportere til beslutningslogg. | Data scientist |
+| Alarm- og hendelseskø | Fordeler varsler til riktige brukerprofiler, og trigges av IEC 62443-tilpasset regelsett. | Beredskapsleder |
+| Beslutningslogg (Teams/OneNote) | Dokumenterer tiltak, ansvar og tidspunkter. Eksporteres som vedlegg til evalueringsrubrikken. | Operasjonsleder |
+
+Tabellen brukes som sjekkliste når laben rigges. Hver rolle må signere på at datastrømmen er testet i forkant av økten.
+
+## Sikkerhet og beredskap
+- Følg kravene i IEC 62443-2-1 for endringskontroll; simuleringsmodellen og AR-konfigurasjon lagres i Git med tagging per øvelse.
+- Loggfør alle tilgangsforespørsler til immersive enheter. Tilgang gis gjennom Azure AD med tidsbegrensede pass.
+- Gjennomfør en «tabletop»-øvelse før første lab for å validere varslings- og fallback-prosedyrene sammen med beredskapsleder.
+- Etter laben: Eksporter hendelsesloggen til fagteamet for vurdering opp mot DSBs øvelsesveileder og oppdater risikoregisteret i støttefilen for kapittel 6.
+
 ## Evalueringsrubrikk (utdrag)
 | Kriterium | Beskrivelse | Oppnådd nivå |
 | --- | --- | --- |
