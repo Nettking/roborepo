@@ -11,7 +11,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | I | Kapittel 2 | Utvidet med flerfidelitetscase, metodetabeller og modellforvaltningskrav i tillegg til politiske rammer. | Pilotere metode- og dokumentasjonstabeller i workshop og samle fagfelleinnspill før neste revisjon. |
 | I | Kapittel 3 | Utvidet med dataspace-arkitektur, beredskapsoppsett og bærekraftsdashboard i tillegg til sirkulærøkonomi-casene. | Pilotere dataspace-tabellene og kontinuitetsplanen i DI-03-forumet og planlegge illustrasjoner for nye tabeller. |
 | II | Kapittel 4 | Oppdatert med immersivt beslutningsrom, operasjonsarkitektur, laboratoriepakke og vurderingsrubrikk. | Pilotere AR/VR-lab med oppdatert datastrømstabell og verifisere at integrasjonen mot Kognitwin/OMNIA fungerer før fagfelleløpet. |
-| II | Kapittel 5 | Oppdatert med generative og edge-baserte læringssløyfer, laboratorierubrikker og industripuls fra norske piloter. | Pilotere laboratorierubrikken med studentteam, verifisere datasporing for syntetiske datasett og loggføre innspill fra industripartnere. |
+| II | Kapittel 5 | Oppdatert med generative og edge-baserte læringssløyfer, laboratorierubrikker og industripuls fra norske piloter. | Pilotere AI-coach-analysen og laboratorierubrikken i AR/VR-lab, verifisere datasporing for syntetiske datasett og loggføre innspill fra industripartnere. |
 | II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet, etikk og regulatoriske krav (NIS2, IEC 62443). | Pilotere standardkartet og kontrolltårn-caset i kurslaboratoriet, og samle erfaringer med usikkerhetsarbeidsflyten før fagfelleløpet. |
 | III | Kapittel 7 | Helhetlig utkast med livssyklus, governance, RACI-eksempel og ny figur for styringssløyfer. | Pilotere livssyklusfortellingene, governance-sammenligningen og bærekraft-KPI-tabellene i intervjuer og oppdatere fagfellelogg med læringspunkter. |
 | III | Kapittel 8 | Utdypet med maler for havvind, landbruk og batteri samt tabeller for datakilder, styring og indikatorer. | Pilotere casemalene i fagfelleworkshop, samle tilbakemeldinger og supplere kildebank per sektor. |
@@ -193,7 +193,7 @@ Anslagene nedenfor tar utgangspunkt i 400 ord per side og supplerer statusoversi
    - Læringsmål: Se sammenhengen mellom maskinlæring, optimalisering og digitale tvillinger.
    - Forfatteroppgaver (neste steg):
      1. Teste pilotopplegget med generative datasett og edge-distribusjon, oppdatere referanser i \S~«Fremvoksende praksiser» og loggføre erfaringene i `support/fagfellelogg.csv`.
-     2. Fagfellekoordinere den multimodale AI-coach-seksjonen, publisere algoritmematrise-notatet (`support/notater/kap05-algoritmematrise-utvidelse.md`) og sikre at laboratorierubrikken brukes i læringsplattformen.
+    2. Fagfellekoordinere den multimodale AI-coach-seksjonen med oppdatert storyboard, algoritmematrise og rubrikk, publisere notatet (`support/notater/kap05-algoritmematrise-utvidelse.md`) og sikre at kravene deles med grafikk- og undervisningsteamet.
    - Studentaktivitet:
      1. Designe et eksperiment som kombinerer online læring, syntetiske scenarier og vurdering mot edge-deployert modell.
      2. Designe og teste en multimodal AI-lab med AR/VR-støtte.
