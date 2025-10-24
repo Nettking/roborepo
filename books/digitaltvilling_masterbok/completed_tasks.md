@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-25: Skrev seksjon om personvern, dataminimering og tilsynslogg i Kapittel 6, etablerte DPIA-arbeidsflyt og oppdaterte plan-, status- og kildefiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-24: Utviklet helsesektor-case for pasientlogistikk med valideringspakke, indikatorstruktur og nye kilder, og oppdaterte plan- og statusfiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-23: La inn dataspace-governance med beslutningsnivåer, eskaleringsartefakter og kobling til gevinstplan i Kapittel 7, og oppdaterte plan- og oppgavetavleoppføringer. (`chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-22: Dokumenterte beredskapssimulering for helsetjenesten med faser, indikator-tabell og undervisningsopplegg koblet til NIS2/DSB-krav, og oppdaterte plan-, status- og kildefiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`)
