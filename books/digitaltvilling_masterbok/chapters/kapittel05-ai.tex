@@ -85,6 +85,40 @@ Tabell~\ref{tab:kontrollpunkter-generativ} viser hvordan styringen kan dokumente
 
 Denne styringsrammen gjør det enklere å argumentere for generativt databruk overfor juridiske og etiske vurderinger. Studentteam kan bruke tabellen som sjekkliste i prosjektgjennomgangen og som vedlegg når rubrikken fra lærerveiledningen skal dokumenteres.
 
+\subsection{LLM-drevne operatørassistenter}
+Store språkmodeller (LLM) fungerer som samtalebaserte grensesnitt som kan hente innsikt fra tvillingens dokumentasjon, modeller og live-data.\citep{openai2024gpt4o} I norsk industri testes de som operatørassistenter som kobler driftsmanualer, hendelseslogger og indikatorpanel til et felles kunnskapsgrunnlag. Når assistenten får tilgang til sanntidssignaler fra dataspace-kontraktene i Kapittel~3, kan den foreslå tiltak, forklare modeller og dokumentere beslutninger direkte i kontrolltårnets journal.
+
+Erfaringen fra pilotene er at LLM-arbeidsflyten må rammes inn av eksplisitte kvalitets- og sikkerhetsporter.\citep{dnv2023digitalassurance,microsoft2023copilot} Det omfatter både promptbibliotek, tilgangskontroll og rutiner for å lagre sporbar dialog før tiltak aktiveres. Operatørassistenten bør derfor utvikles som en modul i den eksisterende styringssløyfen i Kapittel~7, slik at fagansvarlige godkjenner forslag og tildeler oppfølging i tiltaksloggen.
+
+Når en ny LLM-modul etableres, anbefales følgende arbeidssteg:
+\begin{itemize}
+    \item Kartlegg hvilke datakilder assistenten skal se: historiske hendelser, modelljournaler og sanntidsstrømmer. Merk datasettene i tråd med dataspace-reglene og personvernkravene.
+    \item Definer roller og sikkerhetsnivå. Promptbiblioteket bør differensieres mellom operatører, fagspesialister og beredskapsledelse slik at modellen får riktig kontekst og begrensninger.
+    \item Koble svarene til valideringspanelet i Kapittel~6. Hver anbefaling skal få en status (godkjent, avvist, under vurdering) og en begrunnelse som kan revisjonssjekkes.
+    \item Dokumenter læringssløyfen: når assistenten feilklassifiserer situasjoner eller foreslår tiltak utenfor toleranse, skal nye eksempler flagges for retrening med både syntetiske og faktiske data.
+\end{itemize}
+
+Tabell~\ref{tab:llm-assistent-evaluering} oppsummerer hvordan operatørassistenten kan evalueres før den tas i bruk. Kolonnene viser hvilke spørsmål som bør besvares, hvordan resultatene dokumenteres og hvilke kapitler som må involveres for å sikre helhetlig styring.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Evalueringskriterier for LLM-baserte operatørassistenter}
+    \label{tab:llm-assistent-evaluering}
+    \begin{tabular}{p{3.6cm}p{4.5cm}p{4.0cm}p{3.8cm}}
+        \toprule
+        \textbf{Vurderingsdimensjon} & \textbf{Kontrollspørsmål} & \textbf{Dokumentasjon} & \textbf{Kobling til andre kapitler} \\
+        \midrule
+        Situasjonsforståelse & Kombinerer assistenten sanntidsdata, historikk og simuleringer på en transparent måte? & Promptbibliotek med testscenarier, logg over datakilder og modellversjoner. & Kapittel~3 (dataspace-arkitektur) og Kapittel~4 (scenariobibliotek). \\
+        \addlinespace
+        Forslag og beslutningsstøtte & Er anbefalingene sporbare, risikovurderte og knyttet til ansvarlige roller? & Tiltakslogg med beslutningsstatus, referanse til kontrolltårnets indikatorer og manuelle vurderinger. & Kapittel~6 (valideringsjournal) og Kapittel~7 (gevinst- og governance-sløyfer). \\
+        \addlinespace
+        Etterlevelse og forbedring & Hvordan håndteres feil og brukerfeedback, og hvor raskt oppdateres modellene? & Revisjonsrapport, retreningsplan og oppdatert risikoregister for LLM-modulen. & Kapittel~5 (MLOps-rubrikk), Kapittel~8 (casekrav) og Kapittel~9 (forskningsetikk). \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Ved å innføre disse kriteriene kan programledelsen tydelig vise hvordan LLM-assistenten støtter både sikker drift og læringsmål. Studentteam får samtidig et rammeverk for å beskrive generativ AI i prosjektoppgavene og kan peke på hvilke beslutningsfora som må involveres før automatisering tas videre.
+
 \subsection{Koordinerende multi-agent tvillinger}
 Når digitale tvillinger skal ta beslutninger på tvers av en hel verdikjede, er en enkelt modell sjelden tilstrekkelig. Multi-agent forsterkende læring gjør det mulig å kombinere flere beslutningstakere som forhandler om ressurser, tid og risiko samtidig.\citep{zhang2021multiagent} I praksis betyr det at en kontrolltårn-agent, en logistikk-agent og en bærekrafts-agent lærer samhandlingsstrategier der belønningene balanserer produksjon, sikkerhet og klimaavtrykk. For å unngå at agentene overstyrer hverandre, bør de trenes i en felles simuleringssløyfe fra Kapittel~4 der constraints fra fysiske modeller ligger til grunn.
 
