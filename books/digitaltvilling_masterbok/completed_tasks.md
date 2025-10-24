@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-BUG-12: Renset norske spesialtegn i referansepostene for DNV og Avinor slik at BibTeX ikke stopper på `\o`-kombinasjoner som tolkes som ukjente kommandoer, og oppdaterte `task_queue.md` og `plan.md` for å synliggjøre rettingen.
 - `FERDIG` – Leveranse for DT-BUG-11: Normaliserte BibTeX-typene til `@techreport`/`@misc`, la inn eksplisitte forfatterfelt for standardreferanser og fjernet duplikatet for `eu2022nis2` slik at `support/referanser.bib` bygger uten BibTeX-advarsler; oppdaterte `task_queue.md` og `plan.md`.
 - `FERDIG` – Leveranse for DT-BUG-10: Fjernet TikZ-illustrasjoner i kapittel 1–3, skrev tekstlige erstatninger og oppdaterte `plan.md`, `task_queue.md` og `completed_tasks.md` slik at manus kan kompilere uten grafikkavhengigheter.
 - `FERDIG` – Leveranse for DT-BUG-08: Lukket manglende `}` i BibTeX-posten for EUs sirkulærøkonomiplan, ryddet duplikatfeltene i Gaia-X-oppføringen og flyttet merknaden for IEC 62443-2-1 slik at `support/referanser.bib` bygger uten feil; oppdaterte `task_queue.md` og `plan.md`.
