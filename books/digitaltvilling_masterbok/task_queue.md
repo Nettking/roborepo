@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-75 | Kapittel 6 | FERDIG – Etablerte internasjonal samsvarsbenchmark for autonome maritime tvillinger med tabell og læringsaktiviteter, og synkroniserte plan-, tavle- og kildefiler for pilotering mot fjernoperasjonssentre. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-74 | Kapittel 3 | FERDIG – Dokumenterte dataspace-sandkasse for kommunal byggdrift med stegvis arbeidsflyt, indikatorpanel og læringsoppgaver som kobler kapittel 3 til kvalitetsjournalen i kapittel 6 og gevinstplanen i kapittel 7. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-73 | Kapittel 2 | FERDIG – Dokumenterte mobile feltlaboratorier med sjekkliste og tabell som kobler modelljournalen til feltdata og oppdaterte plan- og tavlefiler for koordinering. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-72 | Kapittel 2 | FERDIG – Etablerte kalibreringsverksted med rolle- og artefaktmatrise samt studentoppgave, og oppdaterte plan- og tavlefiler for å koble arbeidet til valideringsjournalen. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md` |
