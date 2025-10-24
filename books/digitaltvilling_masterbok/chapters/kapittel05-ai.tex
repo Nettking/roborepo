@@ -154,6 +154,36 @@ Tabell~\ref{tab:havbruk-ai-styring} viser hvordan tiltakene kan struktureres i p
 
 Når caseoppgaven gjennomføres i undervisning, bør teamene levere en kort «modelljournal» som viser hvordan data, modell og tiltak henger sammen. Journalen danner grunnlag for revisjon mot kravene i Kapittel~3 og hjelper studentene å diskutere etiske og juridiske konsekvenser av å automatisere tiltak i havbruk. Ved å koble tabellen til vurderingskriteriene i dette kapittelet får masterstudentene en konkret sjekkliste for å dokumentere at AI-forslagene er forsvarlige, etterprøvbare og i tråd med nasjonale mål for bærekraftig sjømatproduksjon.\citep{nfd2023sjomatmelding}
 
+\subsection{AI-støttet karbonfangst og lagring}
+Langskip-programmet etablerer fullskala karbonfangst og -lagring i Norge, med Norcem og Hafslund Oslo Celsio som utslippskilder og Northern Lights som transport- og lagringsoperatør.\citep{oed2023langskip,northernlights2024readiness} Prosjektet kombinerer kontinuerlig prosesstyring, logistikkplanlegging og streng rapportering til myndigheter og partnere. En digital tvilling som skal støtte slike operasjoner må håndtere flere datastrømmer samtidig:
+\begin{itemize}
+    \item prosessdata fra fangstanleggene (temperatur, trykk, amin-konsentrasjon og energibruk),
+    \item logistikkinformasjon for skipstransport, buffertanker og injeksjonskapasitet, og
+    \item geologiske målinger, seismikk og trykksensorer i lagerformasjonen.
+\end{itemize}
+DNV anbefaler at karbonlagringsoperatører kombinerer fysikkbaserte reservoarmodeller med maskinlæring for å fange opp lekkasjeindikatorer og sikre etterlevelse av utslippskrav.\citep{dnv2023ccsmonitoring} Studentgrupper kan bruke anbefalingene som utgangspunkt for å definere en AI-arkitektur som binder sammen prediksjoner av CO$_2$-strømmer, logistiske begrensninger og myndighetsrapportering.
+
+Tabell~\ref{tab:kap05-ccs-indikatorer} viser et forslag til indikatorpakke og AI-tiltak for et karbonfangst- og lagringscase. Kolonnene synliggjør hvilke datakilder som trengs, hvordan styringen kobles til andre kapitler og hvilke roller som følger opp. Tabellen kan brukes som sjekkliste i fagfellelogg og i de månedlige møtene som planlegges i Kapittel~7.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Indikatorer og AI-tiltak for karbonfangst- og lagringstvilling}
+    \label{tab:kap05-ccs-indikatorer}
+    \begin{tabular}{p{3.6cm}p{4.2cm}p{3.8cm}p{4.0cm}}
+        \toprule
+        \textbf{Operativ fase} & \textbf{AI-tiltak} & \textbf{Nøkkeldatakilder} & \textbf{Koblinger til kapitler og ansvar} \\
+        \midrule
+        Fangst og absorpsjon & Prediktiv styring av amin-sirkulasjon med kombinert MPC og anomali-deteksjon for absorberkolonner. & Kontinuerlige prosessmålinger, laboratorieprøver, energiregistre. & Kapittel~3 (dataspace-kontrakter) og Kapittel~6 (kvalitetsjournal); prosessingeniør og MLOps-team deler tiltak i tiltaksloggen. \\
+        \addlinespace
+        Transport og mellomlagring & Ruteoptimalisering for transportskip og buffertanker med forsterkende læring og scenario-basert simulering. & Skipssensorer, havnedata, vær- og strømvarsler, bookingplaner. & Kapittel~4 (simulering av logistikk) og Kapittel~7 (styringspunkter for forsyningskjede); logistikkplanlegger og driftssjef følger opp. \\
+        \addlinespace
+        Injeksjon og reservoarovervåking & Kombinerte reservoarmodeller og nevrale nettverk for trykk- og lekkasjeprognoser, med alarmer på avvik i seismikk og brønnlogger. & Nedihulls sensorer, seismiske tolkninger, geomekaniske modeller, miljømålinger. & Kapittel~6 (risiko- og tilsynspakker) og Kapittel~8 (energi- og industrisamarbeid); geolog, miljøansvarlig og regulatorisk kontakt signerer rapporter. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+For å koble caset til livssyklusstyringen må beslutninger dokumenteres i samme journal som brukes for andre høyrisikoprosesser. Rapportering av fangsteffektivitet og lagringskapasitet kan hentes direkte fra indikatorene i tabellen og mates inn i bærekraftsrapporteringen som beskrives i Kapittel~6. Studentgruppene bør også simulere brønnstenginger eller forsinkelser i transportkjeden og teste hvordan AI-modellene oppdateres uten å bryte kravene til sporbarhet og myndighetsdialog.
+
 \section{Utvidet analyseeksempel: Immersiv AI-coach}
 For å støtte operatører i komplekse situasjoner bygges en AI-coach som kombinerer simulering, maskinlæring og samarbeid i et immersivt miljø. Figur~\ref{fig:kap05-operator-coach} illustrerer hvordan sensorer, taleinstruksjoner og historiske hendelser kobles til anbefalinger som vises i AR/VR. Operatøren kan stille oppfølgingsspørsmål, trigge what-if-simuleringer og dele tiltakslister direkte i kontrolltårnet. Ved å bruke multimodale modeller kobles tekst, lyd og visuelle observasjoner, og anbefalingene dokumenteres automatisk i beslutningsloggen.
 
