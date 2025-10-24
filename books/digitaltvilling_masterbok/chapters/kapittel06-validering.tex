@@ -116,6 +116,39 @@ Tabell~\ref{tab:dataspaceindikatorer} viser et eksempel på indikatorer som bruk
 
 Ved å bruke indikatorsettet som mal får masterstudentene trening i å kombinere tekniske målinger med styringskrav. Resultatene kan gjenbrukes i fagfellelogg, tiltaksplan og planfil, og gir samtidig dokumentasjon for å flytte sandkasseaktiviteter inn i ordinær drift når kriteriene er oppfylt.
 
+\section{Kvartalsrapport for valideringspanelet}
+Kvalitetsteamet oppsummerer indikatorene i en kvartalsrapport slik at både dataspace-partnere og styringsgrupper ser utviklingen over tid. Rapporten kombinerer tall fra kontrolltårnet, modelljournalen og gevinstplanen, og brukes aktivt når Statsbygg, Bane NOR og Ruter vurderer om pilotene kan skalere videre.\citep{statsbygg2023digitalmodenhet,banenor2024leverandor,ruter2024mobilitetslab} Tallfestingen gjør det enklere for masterstudentene å argumentere for tiltak i tiltaksloggen fra Kapittel~7 og koble funnene til porteføljestyringen.
+
+Arbeidet følger tre gjentakende steg som bygger på indikatorrammen over:
+\begin{enumerate}
+    \item \textbf{Konsolider data:} Samle eksport fra kontrolltårn, kvalitetsjournal og bærekraftsdashboard før tallene verifiseres mot dataspace-kontraktene.
+    \item \textbf{Analysér avvik:} Sammenlign resultatene med akseptgrenser og avklar om avvik skyldes modelloppdateringer, sensorfeil eller organisatoriske endringer.
+    \item \textbf{Planlegg tiltak:} Prioriter forbedringstiltak i tiltaksloggen, tildel ansvar og koble til gevinstindikatorer før neste sprint.
+\end{enumerate}
+
+Tabell~\ref{tab:kvartalsrapport} viser et eksempel på utdrag fra kvartalsrapporten for første kvartal. Verdiene er syntetiske, men strukturen følger rapporteringsformatet som brukes i pilotene.
+
+\begin{table}[ht]
+    \centering
+    \caption{Utdrag fra kvartalsrapport for valideringspanelet}
+    \label{tab:kvartalsrapport}
+    \begin{tabular}{|p{3.2cm}|p{4.4cm}|p{3.2cm}|p{4.2cm}|}
+        \hline
+        \textbf{Indikator} & \textbf{Datagrunnlag} & \textbf{Resultat Q1 2024} & \textbf{Tiltak og oppfølging} \\
+        \hline
+        Modellpresisjon Statsbygg ombrukslab & Sammenstilling av simuleringsresultater og målinger fra materialombruk & 96,5\% mot akseptgrense 95\% & Fortsette månedlige verifikasjoner og dele dokumentasjon med eiendomsteamet før neste styringsmøte \citep{statsbygg2022ombruk,statsbygg2023digitalmodenhet} \\
+        \hline
+        Sensorstabilitet Bane NOR vinterdrift & Driftsovervåking fra jernbanesensorer og kontrolltårn-logg & 12 avvik over 1,5\% av målepunktene (grense 15) & Oppdatere kalibreringsplanen og synkronisere hendelser med kapittel 4 sitt vinterdriftsscenario \citep{banenor2023vinterdrift,banenor2024leverandor} \\
+        \hline
+        Hendelsesrespons kollektivdataspace & Varslingslogg fra dataspace-portalen og tiltaksjournal & Varslingstid 11 minutter (krav \leq{}15) og full rapport innen 6 timer & Trene responsteamet i sandkasseøvelse og koble læringspunkter til beredskapsjournalen \citep{ruter2023dataplattform,ruter2024mobilitetslab} \\
+        \hline
+        Bærekraftsgevinster energiportefølje & KPI-er fra gevinstplan og ESRS-rapportering & 4,2\% reduksjon i energibruk mot mål 4,0\% & Eskalere tiltak til porteføljestyret og dele analyse med bærekraftsteamet \citep{efrag2023esrs,dfo2023baerekraft} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Rapporten blir et felles beslutningsgrunnlag for videre pilotering. Når tallene deles i dataspace-portalen får partnerne innsikt i hvilke tiltak som fungerer, og planfilen kan oppdateres med neste steg for hvert case. I undervisningen bruker studentene formatet til å øve på å formulere forbedringshypoteser, argumentere for investeringer og dokumentere effekter i gevinstplanen.
+
 \section{Scenariobasert stresstesting for hydrogenknutepunkt}
 Utbygging av hydrogenknutepunkt i Norge kombinerer produksjon, lagring, bunkring og distribusjon til maritim og landbasert transport.\citep{enova2024hydrogenknutepunkt} Digitale tvillinger brukes for å dimensjonere anlegget, koordinere logistikk og dokumentere sikkerhetstiltak, men komplekse verdikjeder gjør at både energiselskaper, nettoperatører og havner må samordne risikobilde og beredskap.\citep{gassco2023hydrogen,dnv2023hydrogenforecast} For å sikre at modellene tåler forstyrrelser må kapittel 4 sitt hydrogenknutepunkt-case suppleres med en strukturert stresstest i valideringsløpet.
 
