@@ -313,6 +313,42 @@ Tabell~\ref{tab:helsevalidering} viser hvordan elementene over kan struktureres 
     \end{tabular}
 \end{table}
 
+\section{Etikkstyring og AI-forordningen for helsesektorens tvillinger}
+AI-forordningen klassifiserer kliniske beslutningsstøttesystemer som høyrisiko og krever at de dokumenterer en helhetlig styring av risiko, data og menneskelig tilsyn før de settes i produksjon.\citep{eu2024aiact} For helsesektorens digitale tvillinger betyr det at kontrolltårn-panelet, kvalitetsjournalen og beredskapsøvelsene må vise hvordan modellresultater kan forklares, justeres og stanses av autoriserte fagpersoner. Arbeidet bør forankres i den norske veilederen for styring av kunstig intelligens\citep{digdir2023styringai} og i ALTAI-sjekklisten for tillitsverdig AI, slik at etiske prinsipper oversettes til konkrete kontrollpunkter.\citep{ec2020trustworthyai}
+
+\subsection{Styring av høyrisikosystemer}
+Et systematisk styringsløp gjør det mulig å knytte AI-forordningens krav til eksisterende DevOps- og kvalitetsrutiner:
+\begin{enumerate}
+    \item \textbf{Klassifisering og risikoregister:} Kartlegg tvillingens funksjoner mot forordningens høyrisiko-kategorier og oppdater risikoregisteret med konsekvenser for pasientsikkerhet, diskriminering og tilgjengelighet.\citep{eu2024aiact}
+    \item \textbf{Datastyring og tekniske kontroller:} Dokumenter datasettkvalitet, syntetisering og anonymisering i tråd med AI-forordningens artikkel~10, og koble kontrollene til standardkartet i Tabell~\ref{tab:standardkart}.\citep{nist2023airmf}
+    \item \textbf{Menneskelig tilsyn og override:} Etabler prosedyrer for manuell overstyring, eskalering og pausemodus, og vis hvordan beslutningslogg og indikatorpanel gjør tilsyn mulig i sanntid.\citep{digdir2023styringai}
+    \item \textbf{Transparens og forklarbarhet:} Utvikle forklaringsmoduler for sentrale prediksjoner og knytt dem til ALTAI-spørsmålene om transparens, ansvarlighet og robusthet.\citep{ec2020trustworthyai}
+\end{enumerate}
+
+\subsection{Tiltakslogg og ansvar}
+Tabell~\ref{tab:aiforordning-tiltak} viser hvordan kravene kan oversettes til tiltak og dokumentasjon i kvalitetsjournalen. Strukturen bygger på samme logikk som tabellene for kontrolltårn og personvern, slik at styringssløyfene kan samordnes.
+
+\begin{table}[ht]
+    \centering
+    \caption{Tiltak for å operasjonalisere AI-forordningens krav i helsetvilling}
+    \label{tab:aiforordning-tiltak}
+    \begin{tabular}{|p{3.3cm}|p{4.5cm}|p{4.5cm}|p{3.0cm}|}
+        \hline
+        \textbf{Kravområde} & \textbf{Praktisk gjennomføring} & \textbf{Dokumentasjon} & \textbf{Ansvarlig rolle} \\
+        \hline
+        Risikostyring og klassifisering & Oppdatere risikomatrise og akseptkriterier per klinisk tjeneste, inkludert terskler for å stanse automatiserte anbefalinger & Risikologg, beslutningsprotokoll fra pasientsikkerhetsutvalg, referanse til AI-forordningens art. 9 & Kvalitetsleder \citep{eu2024aiact} \\
+        \hline
+        Dataforvaltning og datakvalitet & Etablere datakatalog med behandlingsgrunnlag, syntetiseringsregler og sporbarhet til kilde-systemer & Datasettjournal, teknisk bevis for dataminimering, revisjonslogg for tilgang & Dataforvalter \citep{eu2024aiact} \\
+        \hline
+        Menneskelig tilsyn og kompetanse & Beskrive operasjonelle prosedyrer for manuell overstyring, varslingsrutiner og sertifisering av operatører & Beslutningslogg, opplæringsregister, scenarioresultater fra beredskapsøvelser & Klinisk driftsleder \citep{digdir2023styringai} \\
+        \hline
+        Transparens og rapportering & Publisere årlig redegjørelse for modellendringer, tilsynslogger og forbedringstiltak til ledelse og tilsynsmyndigheter & Årsrapport, ALTAI-sjekkliste, oppdatert tiltakslogg koblet til Tabell~\ref{tab:tillitsindikatorer} & Programleder digital tvilling \citep{ec2020trustworthyai} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Når tiltaksloggen er integrert i kvalitetsjournalen kan indikatorpanelet i Tabell~\ref{tab:tillitsindikatorer} utvides med AI-spesifikke mål, for eksempel andel beslutninger som får manuell gjennomgang og tid fra avvik til varslet tilsyn. Dette gjør det enklere å demonstrere etterlevelse overfor Datatilsynet og helsemyndigheter, samtidig som DevOps-teamet får tydeligere prioriteringer i sprintplanene.
+
 Når tvillingen tas i bruk i undervisningslaboratoriet, bør studentgrupper teste scenarioer for akutt pågang, influensaepidemier og samtidige kommunale beredskapssituasjoner. Resultatene kobles til kontrolltårn-panelet fra energisektoren ved å oversette indikatorene til helsesektorens måleparametere, for eksempel andel planlagte utskrivinger som må flyttes og tid fra triage til første kliniske vurdering. Slik får studentene erfaring med å overføre strukturerte valideringsmetoder til et nytt domene og ser hvordan ansvarlige roller samarbeider for å sikre trygg tjenesteleveranse.
 
 \section{Refleksjonsspørsmål og øvinger}
