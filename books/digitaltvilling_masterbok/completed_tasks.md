@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-15: Etablerte sertifiseringsløp og kvalitetsjournal for kontrolltårn-caset i Kapittel 6, dokumenterte arbeidsflyten og oppdaterte plan-, status- og kildefiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-13: Dokumenterte implementeringsløp for immersive kontrollrom, la til scenariotabell og kraftsystem-case i Kapittel 4, og oppdaterte plan- og statusfiler. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-19: Utviklet tillitsindikatorer, styringspanel og rapporteringsmal i Kapittel 6, la til støtte i bibliografien og oppdaterte plan- og statusfiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-11: La inn metodebibliotek, offshore-case og modelljournal-tabell i Kapittel 2, oppdaterte plan-, referanse- og statusfiler og synkroniserte arbeidslisten. (`chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`)
