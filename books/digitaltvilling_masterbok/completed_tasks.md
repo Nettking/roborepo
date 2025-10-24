@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-34: Opprettet sektorvis regelverksoversikt som arbeidsark i appendiks og oppdaterte plan- og statusfiler slik at krav kan spores i casearbeid. (`chapters/appendiks.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-33: Utarbeidet AI-forordningens styringspakke med tiltakstabell, høyrisiko-prosess og bibliografioppdatering for helsesektorens digitale tvillinger. (`chapters/kapittel06-validering.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-32: Etablerte flom- og overvannslaboratorium med scenarioarbeidsflyt, leveransetabell og nye kilder, og oppdaterte plan-, status- og kildefiler. (`chapters/kapittel04-simulering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-31: Dokumenterte helsesektorens dataspace med prioriterte dataprodukter, rolletabell og læringssløyfer for kontinuitetsstyring. (`chapters/kapittel03-data.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
