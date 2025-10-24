@@ -64,6 +64,40 @@ En helhetlig arbeidsflyt sikrer at usikkerhet håndteres systematisk i DevOps-pr
 
 Robust design handler også om å gjøre tvillingen og den fysiske prosessen motstandsdyktig mot feil. Dette omfatter redundante sensorer, feiltolerante algoritmer og beredskapsprosedyrer når modellen oppdager avvik. I industrielle DevOps-team betyr det at valideringsresultater må integreres i sprint- og releaseritualer, slik at usikkerhet blir aktivt styrt og ikke bare rapportert. Til slutt bør innsikt fra kontrolltårn-caset brukes som treningsgrunnlag for både operatører og ledelse.
 
+\section{Sertifiseringsløp og kvalitetsjournal}
+Et tydelig sertifiseringsløp gjør det mulig å dokumentere at tvillingen holder et konsekvent kvalitetsnivå gjennom hele livssyklusen. \citet{dnv2023digitalassurance} anbefaler at prosjekteier etablerer et rammeverk som kobler risikovurderinger, testregimer og ansvarslinjer. Dette kan struktureres som en trinnvis modenhetsstige der hvert steg utløser nye revisjoner og beslutninger før funksjoner settes i drift. I tillegg fremhever \citet{iso2020tr24028} at tillitskriterier må dekke både tekniske egenskaper (robusthet, sikkerhet, personvern) og organisatoriske forhold (kompetanse, ansvar, prosesskontroll).
+
+\begin{table}[ht]
+    \centering
+    \caption{Foreslått sertifiseringsløp for kontrolltårn-case}
+    \label{tab:sertifiseringslop}
+    \begin{tabular}{p{2.2cm}p{4.3cm}p{4.5cm}p{3.0cm}}
+        \toprule
+        \textbf{Trinn} & \textbf{Formål} & \textbf{Dokumentasjon} & \textbf{Godkjenningsforum} \\
+        \midrule
+        Pilot & Validere modellantakelser og datakvalitet i isolert testmiljø. & Modelljournal, usikkerhetsanalyse og risikologg fra Tabell~\ref{tab:standardkart}. & Produktleder + sikkerhetsarkitekt \\
+        \addlinespace
+        Driftssimulering & Teste kontrolltårn-flyt mot realistiske scenarier og fallback-prosedyrer. & Scenarioresultater, hendelseslogger og vurdering mot \citet{nist2023airmf}. & Kontrolltårnleder + beredskapsleder \\
+        \addlinespace
+        Sertifisering & Verifisere samsvar mot standarder og krav til ansvarlighet. & Uavhengig revisjonsrapport, etterlevelsesbevis for \citet{iso2020tr24028} og \citet{dnv2023digitalassurance}. & Ledelsesutvalg + ekstern revisor \\
+        \addlinespace
+        Kontinuerlig forbedring & Sikre at oppdateringer ikke svekker sertifiseringsstatus. & Kvartalsvis kvalitetsjournal, avviksliste og tiltakslogg koblet til Kapittel~7. & Programstyre + personvernombud \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Kvalitetsjournal og revisjon}
+Når sertifiseringsløpet er etablert, trenger teamet en kvalitetsjournal som følger hver release. Journalen bør ligge i samme versjonskontroll som modellkoden og inneholde sjekklister for data, algoritmer, sikkerhet og brukeropplevelse. \citet{nist2023airmf} beskriver dette som en risikoregister-praksis der indikatorer og beslutninger spores fra første prototype til ferdig tjeneste. En anbefalt struktur er:
+\begin{enumerate}
+    \item \textbf{Releasekort:} Oppsummer formål, ansvarlige og dato for hver endring. Knytt kortet til indikatorene i Tabell~\ref{tab:tillitsindikatorer}.
+    \item \textbf{Kvalitetsbevis:} Lagre resultater fra tester, scenariotrening og brukerworkshops som vedlegg. Merkes med referanser til hvilke krav i \citet{iso2020tr24028} eller NIS2 som dekkes.
+    \item \textbf{Revisjonsmerknader:} Dokumenter avvik, beslutninger og oppfølging i henhold til ansvarslinjene i kontrolltårn-caset. Merknadene brukes i fagfellelogg og retrospektiver.
+\end{enumerate}
+Journalen gjør det enklere å bevise samsvar under tilsyn og når studenter gjennomfører caseoppgaven, fordi alle beslutninger er etterprøvbare.
+
+\subsection{Kobling til undervisning og kontrolltårn-case}
+For å omsette sertifiseringsløpet til læringsaktiviteter bør laboratorieøvelsene be studentene levere et utdrag fra kvalitetsjournalen sammen med tekniske resultater. Dermed lærer de hvordan kontrolltårn-teamet må samle bevis for ansvarlig AI. I kurslaboratoriet kan journalen brukes som evalueringsgrunnlag: faglærer vurderer om dokumentasjonen dekker kravene i Tabell~\ref{tab:sertifiseringslop}, mens medstudenter gir tilbakemelding på tydeligheten i prosessbeskrivelsene. Når tiltakene integreres med kontrolltårn-panelet fra Kapittel~5, blir det også mulig å visualisere hvilke sertifiseringskriterier som er oppfylt i sanntid.
+
 \section{Etikk, transparens og forklarbarhet}
 Tillit til den digitale tvillingen forutsetter at både data og beslutninger er sporbare. Prosjektet bør etablere en styringsmodell for datasett, med kildebeskrivelser, behandlingsgrunnlag og kontroll av personvern i tråd med GDPR og den kommende EUs AI-forordning. Revisjonsspor i form av dataversjoner, modellkonfigurasjoner og brukerhandlinger gjør det mulig å rekonstruere hvorfor en anbefaling ble gitt og hvem som godkjente den.
 
