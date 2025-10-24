@@ -13,7 +13,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | II | Kapittel 4 | Oppdatert med immersive case, beredskapsøvelse og vurderingsrubrikk. | Pilotere AR/VR-lab med rubrikk og hente tilbakemeldinger fra industripartnere. |
 | II | Kapittel 5 | Oppdatert med generative og edge-baserte læringssløyfer, laboratorierubrikker og industripuls fra norske piloter. | Pilotere laboratorierubrikken med studentteam, verifisere datasporing for syntetiske datasett og loggføre innspill fra industripartnere. |
 | II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet, etikk og regulatoriske krav (NIS2, IEC 62443). | Pilotere standardkartet og kontrolltårn-caset i kurslaboratoriet, og samle erfaringer med usikkerhetsarbeidsflyten før fagfelleløpet. |
-| III | Kapittel 7 | Helhetlig utkast med livssyklus, governance, RACI-eksempel og ny figur for styringssløyfer. | Gjennomfør intervjuer etter guiden, koble funn til KPI-oppfølging og pilotlogg. |
+| III | Kapittel 7 | Helhetlig utkast med livssyklus, governance, RACI-eksempel og ny figur for styringssløyfer. | Pilotere livssyklusfortellingene, governance-sammenligningen og bærekraft-KPI-tabellene i intervjuer og oppdatere fagfellelogg med læringspunkter. |
 | III | Kapittel 8 | Helhetlig utkast med narrative sektorseksjoner, casemal og prioritert pilotliste. | Sikre dataspace-tilganger, distribuere casebriefs og oppdatere kildebank for hver sektor. |
 | III | Kapittel 9 | Helhetlig utkast om forskningslandskap, teknologitrender og dataspace-samarbeid. | Sammenstill pilotfeedback med forskningsideer, og oppdater bibliografien etter nye kilder. |
 | Appendiks | Ressurser | Første hele utkast – tabeller og arbeidsmåte skrevet. | Revider etter fagfelleinnspill fra kapitlene. |

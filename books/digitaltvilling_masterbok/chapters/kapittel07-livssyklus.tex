@@ -25,6 +25,15 @@ Når tvillingen er i produksjon må datakvalitet, ytelse og sikkerhet følges op
 \subsection*{Avvikling og kunnskapsbevaring}
 Livssyklusen avsluttes med planlagt avvikling eller overgang til ny løsning. Et arkiveringsløp sikrer at modeller, data og beslutningsgrunnlag dokumenteres slik at erfaringer kan brukes i neste generasjon tvilling. Opprydding i integrasjoner hindrer at utdaterte tilkoblinger blir stående igjen og skaper teknisk gjeld.
 
+\subsection*{Livssyklusfortellinger fra norsk praksis}
+Livssyklusdiagrammer kan oppleves abstrakte uten konkrete hendelser å knytte dem til. Vi bruker derfor fortellinger fra tre norske initiativ som viser hvordan faser, roller og gevinster utvikler seg over tid.
+
+\paragraph{Statnetts nettplanleggingsprogram.} Prosjektet startet med et konseptarbeid hvor behovet for bedre scenarioplanlegging og kraftflytanalyser ble forankret i konsernstrategien. Etter en kort prototypfase ble dataintegrasjoner mot SCADA, værmodeller og nettinformasjon prioritert for å etablere en robust implementeringsplattform. I driftsfasen brukes tvillingen til løpende nettdimensjonering, og læringssløyfer dokumenterer hvordan hendelser i kraftsystemet løses raskere enn tidligere praksis.\citep{statnett2023digital}
+
+\paragraph{Statsbyggs ombrukssatsing.} I konseptfasen kartla Statsbygg hvilke byggtyper som hadde størst ombrukspotensial og definerte indikatorer for klimareduksjon. Arkitekturen kombinerer BIM-modeller og dataspace-kontrakter for å gi leverandører innsyn i tilgjengelige komponenter. Når prosjektet avsluttes, overføres erfaringene til nye rehabiliteringer, og tvillingens data brukes som grunnlag for nye anskaffelser.\citep{statsbygg2023loopfront}
+
+\paragraph{Hydros sirkulære aluminiumskjede.} Hydro dokumenterte tidlig hvilke kundekrav som fulgte deres resirkulerte produkter og koblet tvillingen til smelteverk, logistikksystemer og kundedata. Under drift kontrollerer tvillingen at materialsporingen holder mål, mens forbedringsfasen fokuserer på energieffektivisering og transparens i hele verdikjeden. Erfaringene legges i et kunnskapsarkiv før nye produksjonslinjer tar over.\citep{hydro2023traceability}
+
 \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[node distance=2.6cm, every node/.style={rectangle, rounded corners, draw=dypblaa, fill=skygraa, text width=3.4cm, align=center, minimum height=1.2cm}]
@@ -56,6 +65,23 @@ Styringen av digitale tvillinger krever en tydelig governance-modell som balanse
     \item \textbf{Føderert modell:} Domeneenheter eier sine tvillinger, men deler felles retningslinjer for data, sikkerhet og arkitektur. Et strategisk forum koordinerer veikart og prioriteringer.
     \item \textbf{Produktlinjemodell:} Tverrfaglige produktteam får ansvar for hele livssyklusen til en digital tvilling, inkludert finansiering og resultatmål. Plattformteam leverer felles komponenter og DevOps-støtte.
 \end{itemize}
+
+Tabell~\ref{tab:governance-sammenligning} sammenligner modellene på beslutningsfora, finansiering og egnethet. Oversikten brukes i workshops for å hjelpe virksomheter å vurdere hvilken struktur som passer deres modenhetsnivå.
+
+\begin{table}[h]
+    \centering
+    \caption{Sammenligning av governance-modeller for digitale tvillinger}
+    \label{tab:governance-sammenligning}
+    \begin{tabular}{p{2.9cm}p{3.2cm}p{3.2cm}p{3.5cm}}
+        \toprule
+        Modell & Beslutningsfora & Finansiering & Typiske norske eksempler \\
+        \midrule
+        Sentralisert & Konsernråd for teknologi og sikkerhet & Sentralt investeringsbudsjett med felles gevinstplan & Statnetts nettplanleggingsprogram og Equinors Johan Sverdrup-plattform\citep{statnett2023digital,equinor2021johansverdrup} \\
+        Føderert & Domenevise porteføljestyrer og dataspace-råd & Kostnadsdeling mellom virksomhetsområder etter bruk & Statsbyggs ombruksprogram og bytvillingen i Sluppen\citep{statsbygg2023loopfront,trondheim2024bytvilling} \\
+        Produktlinje & Tverrfaglige produktteam med sprintdemoer & Produktteam eier resultatansvar, plattformteam fakturerer tjenester & Hydro CIRCALs materialsporingsprogram og Kognitwin-piloter i prosessindustri\citep{hydro2023traceability,kongsberg2023kognitwin} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 \subsection*{Rollefordeling og samhandling}
 Produkteier, domeneekspert, data scientist, simuleringsspesialist og IT-drift må samarbeide tett. Rolleavklaringen bør konkretiseres gjennom en RACI-matrise som beskriver hvem som er ansvarlig (Responsible), beslutningstaker (Accountable), rådgiver (Consulted) og informert (Informed). Tabell~\ref{tab:raci-maritim} viser et eksempel for et maritimt vedlikeholdsprosjekt.
@@ -122,6 +148,26 @@ For å sikre kontinuerlig oppfølging bør kapittelteamet bruke en gevinstplan s
 \end{table}
 
 Ved å oppdatere gevinstplanen etter hver milepæl blir det lettere å holde oversikt over forutsetninger som må oppdateres når nye caser legges inn i undervisningen.
+
+\subsection*{Bærekraft- og modenhetsindikatorer per sektor}
+Livssyklusstyring må også følge opp klima- og ressursmål. Tabell~\ref{tab:baerekraft-kpi} gir eksempler på indikatorer fra tre sektorer som brukes i norske pilotprosjekter. De kompletterer gevinstplanen ved å vise hvordan bærekraftdata hentes og forankres i styringen.
+
+\begin{table}[h]
+    \centering
+    \caption{Eksempler på bærekraft-KPI-er i norske digital-tvillingprosjekter}
+    \label{tab:baerekraft-kpi}
+    \begin{tabular}{p{2.9cm}p{3.6cm}p{3.2cm}p{3.3cm}}
+        \toprule
+        Sektor & Bærekraft-KPI & Datakilde & Formål \\
+        \midrule
+        Havvind & CO$_2$-intensitet per levert MWh og turbin-tilgjengelighet & Kombinerte driftssensorer og energibalanser fra Hywind Tampen & Dokumentere klimaeffekt og pålitelighet i samsvar med NVE-krav\citep{equinor2023hywindtampen,nve2023havvindfakta} \\
+        Bygg og eiendom & Andel komponenter til gjenbruk samt avfallsreduksjon & BIM-modeller og Loopfront-logg for ombruk & Understøtte klimabudsjett og sirkulærøkonomistrategi hos Statsbygg\citep{statsbygg2023loopfront,regjeringen2021sirkulaer} \\
+        Batteriverdikjede & Resirkuleringsgrad og energiforbruk per celle & Produksjonsdata fra Giga Arctic og leverandørsertifikater & Verifisere bærekraftskrav i støtteordninger og kundekontrakter\citep{freyr2024giga,enova2023batteri} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Indikatorene brukes som utgangspunkt når studentene utvikler egne KPI-sett og kobler dem til dataspace-arkitekturen i \autoref{tab:governance-sammenligning}.
 
 \subsection*{Dataspace-arkitektur for styring og deling}
 Livssyklusforvaltning i større økosystem krever en dataspace-arkitektur som definerer ansvar for dataprodukter, identitet og policy. En anbefalt struktur følger fire lag:
