@@ -20,7 +20,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | Appendiks | Arbeidsark | Ny seksjon med maler, arbeidsark og fagfelleklarering i `chapters/appendiks.tex`. | Test arbeidsarkene i pilot og samle fagfelleinnspill før endelig publisering. |
 | Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk. | Oppdater når nye termer eller presiseringer oppstår under fagfellelesing. |
 | Støtte | Lærerveiledning | Helhetlig utkast med seks ukers undervisningsplan og ferdige vurderingsrubrikker. | Harmoniser læringsaktiviteter med arbeidsark og oppdater vurderingskriterier etter pilot. |
-| Støtte | Oppgavetavle og task queue | Månedlig revisjonsrutine definert og forankret i redaksjonen. | Pilotere første revisjonssyklus, dokumentere forbedringspunkter, justere kalender for høstsemesteret og bekrefte at LaTeX-preambelet støtter nødvendige symboler. |
+| Støtte | Oppgavetavle og task queue | Månedlig revisjonsrutine definert og forankret i redaksjonen. | Pilotere første revisjonssyklus, dokumentere forbedringspunkter, justere kalender for høstsemesteret og bekrefte at LaTeX-preambelet og fargepaletten dekker TikZ-illustrasjonene uten kompilasjonsfeil. |
 ### Omfang per kapittel (august 2024)
 
 Omfangstallene under er beregnet ved å kjøre en enkel ordtelling (LaTeX-kommandoer er filtrert ut) og dele på et estimat på 400 ord per bokside i det planlagte formatet.
