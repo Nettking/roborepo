@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-10: Dokumenterte verdikjedekart, modenhetsanalyse og etikkseksjon i Kapittel 1, oppdaterte plan- og statusfiler samt registrerte ny Bane NOR-kilde i bibliografien. (`chapters/kapittel01-introduksjon.tex`, `plan.md`, `task_queue.md`, `support/oppgavetavle.md`, `support/referanser.bib`)
 - `FERDIG` – Leveranse for DT-05: Utdypet AI-coach-analysen med styringspunkter fra operatørreise, integrerte algoritmematrisen i kapittel og støttefil, opprettet figurmetadata og harmoniserte laboratorierubrikken med nye kriterier. (`chapters/kapittel05-ai.tex`, `support/notater/kap05-algoritmematrise-utvidelse.md`, `support/figurer/metadata/kap05-operator-coach-v1.alt.md`, `plan.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-04: Oppdaterte Kapittel 4 med operasjonsarkitektur for immersivt beslutningsrom, detaljerte laboratorieinstrukser, metadata for ny figur og ferske energireferanser. Synkroniserte status i plan- og arbeidsfiler. (`chapters/kapittel04-simulering.tex`, `support/notater/kap04-immersiv-case.md`, `support/illustrasjonsplan.md`, `support/figurer/metadata/kap04-immersiv-beslutning-v1.alt.md`, `support/referanser.bib`, `plan.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-12: Dokumenterte dataspace-arkitektur, beredskaps- og kontinuitetsplaner samt bærekraftsdashboard i Kapittel 3, registrerte nye kilder og oppdaterte plan- og statusfiler. (`chapters/kapittel03-data.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`)

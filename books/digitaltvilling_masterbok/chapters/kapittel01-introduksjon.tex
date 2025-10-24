@@ -92,6 +92,48 @@ Trondheim kommune kombinerer trafikkdata, klimascenarioer og innbyggerdialog i e
 
 Kombinasjonen av slike caser viser hvordan digitale tvillinger både støtter teknisk optimalisering og demokratiske prosesser når modellene brukes som en arena for samskaping.
 
+\section{Verdikjedekart og modenhetsanalyse for norske satsinger}
+For å forstå hvordan verdiskapingen utløses i praksis må masterstudentene kunne kartlegge hvor i verdikjeden tvillingen tilfører mest verdi. Figurative kart kan skisseres i undervisningen, men tabellene nedenfor gir et tekstlig utgangspunkt som fungerer uten grafikk. De trekker frem tre sentrale norske satsinger der verdikjedeledd, samarbeidsformer og indikatorer er tydelig beskrevet i åpen dokumentasjon \citep{sintef2021digital,statnett2023digital,statsbygg2023loopfront}.
+
+\begin{table}[ht]
+    \centering
+    \caption{Verdikjedeperspektiv for sentrale norske digitale tvillingprogram.}
+    \label{tab:kap01-verdikjedekart}
+    \begin{tabular}{p{0.18\textwidth}p{0.26\textwidth}p{0.36\textwidth}p{0.14\textwidth}}
+        \toprule
+        \textbf{Sektor} & \textbf{Verdikjedeledd} & \textbf{Tvillingtiltak} & \textbf{Modenhet}\ 
+        \midrule
+        Olje og gass & Planlegging, boring, produksjon, vedlikehold & Johan Sverdrup-programmet kobler modellbibliotek, vedlikeholdssystemer og leverandørportaler i en felles tvilling med scenarioanalyser for energioptimalisering. & Orkestrert drift med kontinuerlige forbedringssløyfer \citep{equinor2021johansverdrup}.\\
+        Samferdsel & Nettplanlegging, prosjektering, drift & Statnett og Bane NOR bruker tvillinger for belastningsprognoser, konstruksjonssimuleringer og fjerninspeksjon, og deler data via hendelsesdrevne API-er og skydataplattformer. & Integrert operasjon med felles kontrollrom og risikostyring \citep{statnett2023digital,banenor2023digital}.\\
+        Bygg og eiendom & Prosjektering, ombruk, drift & Statsbygg kombinerer BIM-modeller med sensordata for energi- og ombruksbeslutninger og kobler til Loopfront-markedsplass for materialgjenvinning. & Institusjonalisert forbedring med styringsmål for klima og sirkularitet \citep{statsbygg2023loopfront}.\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Tabellen gjør det mulig å diskutere hvordan datakilder, modellbibliotek og beslutningsprosesser henger sammen på tvers av sektorer. Studentene kan bruke den som mal for å lage egne verdikjedekart for forsknings- eller prosjektoppgaver ved å identifisere hvilke grensesnitt som trenger ytterligere datakvalitet, modellkalibrering eller samarbeidsavtaler.
+
+\subsection{Modenhetsanalyse i praksis}
+En modenhetsanalyse bidrar til å avdekke om organisasjonen er klar for å skalere tvillingbruken. Vi tar utgangspunkt i en tretrinnsmodell som benyttes av norske aktører i industri, samferdsel og offentlig forvaltning \citep{sintef2021digital,dnv2021rp}:
+
+\begin{enumerate}
+    \item \textbf{Initiering:} Fokus på å etablere felles begrepsapparat, datakartlegging og pilotprosjekter som kan gi raske læringssløyfer. Typiske indikatorer er tilstedeværelse av tverrfaglige team og grunnleggende datakvalitet.
+    \item \textbf{Integrasjon:} Sanntidsdata, modeller og styringsprosesser kobles sammen gjennom en digital tråd. Her må virksomheten dokumentere API-er, datasikkerhet og governance, for eksempel via ISO~23247 eller interne arkitekturprinsipper.
+    \item \textbf{Orkestrering:} Digitale tvillinger inngår i virksomhetsstyringen med klare beslutningspunkter, finansieringsmodeller og kontinuerlig gevinstmåling. I denne fasen forventes også automatisert rapportering på bærekraft, sikkerhet og compliance.
+\end{enumerate}
+
+Ved å plassere egne case i denne modellen kan studentene identifisere hvilke gap som gjenstår før tvillingprogrammet kan skaleres videre. Modellen knytter også an til læringsmålene i kapittel~7 om styring og gevinstrealisering.
+
+\section{Etiske refleksjoner og samfunnsansvar}
+Norske satsinger møter strenge krav til ansvarlig teknologiutvikling. Digitale tvillinger kombinerer persondata, operasjonsdata og modellprediksjoner på måter som gjør etikk til en integrert del av designprosessen \citep{regjeringen2022datastrategi}. Vi anbefaler at studentene vurderer følgende dimensjoner når de planlegger eller evaluerer et case:
+
+\begin{itemize}
+    \item \textbf{Åpenhet og forklarbarhet:} Dokumentér hvordan data strømmer gjennom modellen, hvilke antakelser som ligger bak prediksjonene og hvordan beslutninger kan spores. ALTAI-rammeverket for ansvarlig kunstig intelligens gir konkrete sjekklister som kan gjenbrukes i tvillingsammenheng \citep{ec2020trustworthyai}.
+    \item \textbf{Rettferdighet og inkludering:} Vurder om datasett og modeller representerer alle berørte brukergrupper, og planlegg tiltak dersom enkelte regioner, leverandører eller befolkningsgrupper er underrepresentert. Erfaringer fra algoritmetilsyn i teknologibransjen viser hvordan systematiske revisjoner kan redusere bias \citep{raji2020closing}.
+    \item \textbf{Langsiktige konsekvenser:} Diskuter hvordan automatiserte anbefalinger kan påvirke kompetansebehov, arbeidsplasser og styringsmodeller. Debatten om foundation-modeller illustrerer at kraftige prediksjonsmotorer krever kontinuerlig etisk vurdering, også når de brukes som delkomponenter i digitale tvillinger \citep{bommasani2021opportunities}.
+\end{itemize}
+
+Arbeidet med etikk må kobles til styrings- og modenhetsmodellene over. Når digitale tvillinger beveger seg fra pilot til orkestrert drift, bør organisasjonene etablere faste fora for etisk vurdering der fagfolk fra teknologi, jus og domene deltar på lik linje.
+
 \section{Refleksjonsspørsmål}
 \begin{enumerate}
     \item Hvilke komponenter mener du er viktigst for å lykkes med en digital tvilling i ditt fagområde?
