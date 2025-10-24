@@ -268,6 +268,32 @@ Tabell~\ref{tab:sirkular-livssyklus} viser hvordan indikatorene kan organiseres 
 
 Når tabellen brukes i casearbeid, bør studentene samtidig oppdatere ressursbanken i appendikset med datasett og verktøy som støtter indikatorene. Dette sikrer at sirkulærøkonomi blir en integrert del av gevinststyringen og ikke et separat sideprosjekt.
 
+\subsection*{Indikatorpanel for sirkulær gevinststyring}
+For å gjøre indikatorene operative i styringsmøter anbefaler \citet{miljodir2024indikatorveileder} å samle dem i et felles panel som kan kobles til virksomhetens rapporteringsløsning. Panelet må kombinere materialstrømmer, klimapåvirkning, økonomiske effekter og etterlevelse slik at beslutningstakere raskt ser konsekvensene av endringsforslag. Norske virksomheter har gode erfaringer med å la dataspace-operatøren drifte panelet, mens bærekraftsansvarlige og økonomifunksjonen kuraterer visningene.\citep{dfo2023baerekraft,hydro2023traceability}
+
+Tabell~\ref{tab:sirkular-panel} viser hvordan panelkortene kan organiseres. Hver rad beskriver hvilke måleområder som bør vises, hvilke datakilder som aktiveres og hvor beslutningen tas. Kolonnen «Kobling til andre kapitler» hjelper studentene med å navigere mellom dataspace- og valideringsarbeidet i kapittel~3 og 6.
+
+\begin{table}[h]
+    \centering
+    \caption{Panelkort for sirkulær gevinststyring}
+    \label{tab:sirkular-panel}
+    \begin{tabular}{p{3.1cm}p{3.8cm}p{3.6cm}p{3.4cm}}
+        \toprule
+        Måleområde & Visualisering og terskler & Datakilde og forvalter & Kobling til andre kapitler \\
+        \midrule
+        Materialstrøm og ombruk & Stablet søylediagram med restitusjonstid per komponent og terskel for minimum 30\% gjenbruk & BIM-modell, dataspace-katalog og komponentjournal (bærekraftsteam) & Kapittel~3 (dataspace-kontrakter) og Kapittel~8 (bygg- og industri-case) \\
+        \addlinespace
+        Klimapåvirkning & CO$_2$-budsjett mot ESRS-mål og temperaturbaner; advarsler når margin <10\% & Livsløpsanalyser og energimålinger driftet av miljøcontroller & Kapittel~6 (klimarisiko og valideringspanel) og Kapittel~9 (innovasjonsprogram) \\
+        \addlinespace
+        Økonomi og investering & Heatmap over nåverdi, driftskostnad og gjenanskaffelsesbesparelse per tiltak & ERP-system, gevinstplan og porteføljeverktøy (økonomifunksjon) & Kapittel~7 (porteføljestyring) og Kapittel~4 (simuleringsanalyse) \\
+        \addlinespace
+        Etterlevelse og revisjon & Trafikklysvisning for kontraktselementer, tilsynslogger og dokumentasjonsgrad & Kontrolltårnrapport, kontraktslogg og kvalitetsjournal (compliance-team) & Kapittel~3 (dataspace-governance) og Kapittel~6 (tilsynsregime) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Når panelkortene er etablert bør de oppdateres før hvert porteføljemøte slik at avvik kan følges opp i tiltaksloggen. Studentgrupper kan bruke panelet som mal: kartlegg relevante datasett i kapittel~3, verifiser måltall i kapittel~6 sin valideringsjournal og dokumenter beslutninger i gevinstplanen. Panelet er også egnet for fagfellepresentasjoner der teamet demonstrerer hvordan indikatorene støtter både klima- og økonomimål.
+
 \subsection*{Dataspace-arkitektur for styring og deling}
 Livssyklusforvaltning i større økosystem krever en dataspace-arkitektur som definerer ansvar for dataprodukter, identitet og policy. En anbefalt struktur følger fire lag:
 \begin{enumerate}
