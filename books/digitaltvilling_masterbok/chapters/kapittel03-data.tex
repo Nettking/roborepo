@@ -212,6 +212,57 @@ For å komme raskt i gang med dataspace-initiativ anbefales en trinnvis tilnærm
     \item Etabler en felles katalog og begrepsmodell, gjerne med utgangspunkt i eksisterende bransjestandarder.
     \item Pilotér deling av et begrenset datasett og vurder ytelse, sikkerhet og gevinstrealisering før skalering.
 \end{enumerate}
+\subsection{API-katalog og dataprodukter}
+En moden dataspace krever mer enn tekniske konnektorer. Norske virksomheter har erfart at en felles API-katalog og tydelige
+dataprodukter gjør det enklere å koble kontrolltårn, bærekraftsarbeid og governance-prosesser på tvers av partnere.\citep{digdir2023apiveileder,dssc2024dataproducts}
+Katalogen fungerer som kontrakt mellom tilbyder og forbruker: den beskriver formål, datakvalitet, sikkerhetstiltak og kobling
+til lærings- og rapporteringsløp i de øvrige kapitlene.
+
+Et praktisk oppsett følger tre hovedsteg:
+\begin{enumerate}
+    \item \textbf{Registrer dataprodukter i katalogen.} Hvert produkt får en kort beskrivelse, ansvarlig kontakt, datakvalitetskrav
+    og referanse til policy-regler. Feltet \texttt{forbruk} peker på hvilke kapitler eller case som gjenbruker dataene, slik at
+    forbedringer kan prioriteres.
+    \item \textbf{Publiser maskinlesbare spesifikasjoner.} OpenAPI- eller AsyncAPI-beskrivelser lagres sammen med versjonslogg og
+    sikkerhetsprofil. Gjennom versjonering kan fagteamene verifisere at dashboards og modelljournaler oppdateres før endringer
+    tas i bruk.
+    \item \textbf{Koble til styringsindikatorer.} Hvert dataprodukt må dokumentere hvilke KPI-er og hendelseslogger som oppdateres
+    når nye data konsumteres. Det gjør at indikatorpakkene i kapittel~6 og gevinstplanene i kapittel~7 alltid peker på riktig
+    kilde.
+\end{enumerate}
+
+Tabell~\ref{tab:kap03-api-produkter} viser hvordan tre prioriterte dataprodukter dokumenteres i katalogen for masterkurset. Kolonnen
+"Kobling" hjelper studentgrupper med å finne igjen samme indikator i andre kapitler.
+
+\begin{table}[ht]
+    \centering
+    \caption{Eksempel på dataprodukter i API-katalogen for dataspace-piloten.}
+    \label{tab:kap03-api-produkter}
+    \begin{tabular}{p{0.26\textwidth}p{0.32\textwidth}p{0.22\textwidth}p{0.16\textwidth}}
+        \toprule
+        \textbf{Dataprodukt/API} & \textbf{Formål} & \textbf{Sikkerhets- og kvalitetskrav} & \textbf{Kobling} \\
+        \midrule
+        Energiobservasjon v2 (REST) & Leverer sanntidslast og prognoser til kontrolltårnet. & OAuth2 med maskin-til-maskin-token, SLO for latens $<60$ sekunder, versjonerte OpenAPI-kontrakter. & Kap.~6 indikatorpanel, beredskapsøvelse hydrogen \\
+        Klinisk logistikk (AsyncAPI) & Publiserer pasientflyt og kapasitet til helsedataspace. & Kryptert MQTT med klientsertifikat, pseudonymisering før distribusjon, kvartalsvis DPIA-gjennomgang. & Kap.~6 DPIA, Kap.~8 helsecase \\
+        Bærekraftsdashboard (GraphQL) & Samler CO$_2$-regnskap og ombrukstall for rapportering. & Policy for aggregerte svar, kvalitetsscore $>0,95$ på datakatalog, signert endringslogg i dataspace. & Kap.~7 gevinststyring, Kap.~4 sirkulær simulering \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\paragraph{Samsvar med API-veilederne.} Digitaliseringsdirektoratet anbefaler at API-er merkes med lisens, kontaktpunkt og
+forventet levetid i selve spesifikasjonen.\citep{digdir2023apiveileder} I dataspace-kontekst betyr det at katalogen lagrer
+meta-data som \texttt{x-sikkerhetstiltak} (referanse til kapittel~6) og \texttt{x-gevinsteier} (kobling til kapittel~7). Data
+Spaces Support Centre fremhever i tillegg behovet for å publisere dataprodukter som kombinerer API, hendelsesstrømmer og
+styringsprosess i ett dokument, slik at deltakere kan automatisere oppfølgingen av kontrakter og indikatorer.\citep{dssc2024dataproducts}
+
+\paragraph{Arbeidspakke for studentgrupper.} Når oppgaven brukes i masterkurset skal hver gruppe:
+\begin{itemize}
+    \item registrere minst to dataprodukter i katalogen, inkludert OpenAPI- eller AsyncAPI-fil og lenke til kvalitetsjournalen,
+    \item beskrive hvordan indikatorene fra kapittel~6 oppdateres når produktet publiserer nye data,
+    \item dokumentere gevinsthypoteser og rapporteringsløp i samsvar med kapittel~7, slik at fagfeller ser sammenhengen mellom
+    data, beslutning og gevinstrealisering.
+\end{itemize}
+
 
 \subsection{Tverrsektorielt dataspace-samvirke for kritiske tjenester}
 Energi- og helsetjenester er gjensidig avhengige i krisesituasjoner: strømforsyningen må holdes stabil for å drive sykehus og
