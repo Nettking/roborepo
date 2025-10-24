@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-19 | Kapittel 6 | FERDIG – Etablerte tillitsindikatorer, styringspanel og rapporteringsmal i kapittel 6 og synkroniserte status- og kildefiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-11 | Kapittel 2 | FERDIG – Metodebibliotek, offshore-case og modelljournal-tabell lagt til i kapitlet og statusfiler oppdatert. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md` |
 | DT-10 | Kapittel 1 | FERDIG – La inn verdikjedekart, modenhetsanalyse og etikkseksjon for norske case og oppdaterte plan-, status- og kildefiler. | `chapters/kapittel01-introduksjon.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-05 | Kapittel 5 | FERDIG – Utdypet AI-coach-analysen med styringspunkter, integrerte algoritmematrisen i kapittel og støttefil, og harmoniserte laboratorierubrikken med operatørkrav. | `chapters/kapittel05-ai.tex`, `support/notater/kap05-algoritmematrise-utvidelse.md`, `support/figurer/metadata/kap05-operator-coach-v1.alt.md`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
