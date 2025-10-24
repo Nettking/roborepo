@@ -67,6 +67,23 @@ Erfaring fra norske energiselskaper tilsier at immersive flater bør designes et
     \item \textbf{Sporbar beslutningslogg:} Tiltak bør loggføres direkte i den immersive flaten og eksporteres til arbeidsordre- og læringssystemer.
 \end{itemize}
 
+Et typisk implementeringsløp starter med å kuratere en referansemodell i modellforvaltningsverktøyet før scenarier lastes til den immersive flaten. Deretter kobles hendelsesstrømmer (for eksempel alarmer og driftslogger) gjennom en meldingskø som synkroniserer 3D-panelet med dashboard og beslutningslogg. Til slutt integreres AR/VR-klienten med hendelseshåndteringssystemet slik at tiltak kan publiseres som arbeidsordre og analyseres i etterkant \citep{cognite2023akerbp,statnett2024kontrolltarn}. Denne kjeden gjør at operatører kan skifte mellom strategisk planlegging og sanntidsdrift uten å forlate det samme økosystemet.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{0.25\textwidth}p{0.35\textwidth}p{0.28\textwidth}}
+        \toprule
+        \textbf{Scenario} & \textbf{Simuleringsfokus} & \textbf{Immersiv gevinst}\\
+        \midrule
+        Offshore vedlikeholdsplan & Kombinere stokastisk feilmodell og ressursoptimalisering for fartøy og personell. & Felles situasjonsbilde for operatører på land og mannskap offshore, med deling av tiltak i sanntid \citep{cognite2023akerbp}.\\
+        Kraftnett-driftskontroll & Hybride modeller for lastflyt og hendelsestrigget switching av brytere. & Visualisering av belastning og beredskapsplaner i kontrolltårn som understøtter risikoavveiing \citep{statnett2024kontrolltarn}.\\
+        Lufthavnlogistikk & Diskret hendelsessimulering av flybevegelser, bagasje og bakketjenester. & Operativ koordinering av ressurser med AR-overlegg på kart og gateplan for felles prioritering \citep{avinor2022digital}.\\
+        \bottomrule
+    \end{tabular}
+    \caption{Eksempler på hvordan norske virksomheter kobler simulering og immersive grensesnitt.}
+    \label{tab:kap04-immersive-scenarier}
+\end{table}
+
 Tabell~\ref{tab:kap04-immersiv-arkitektur} oppsummerer en operasjonsarkitektur som møter prinsippene ovenfor. Tabellen brukes både som bestilling til grafikkteamet og som sjekkliste når laboratoriet rigges.
 
 \begin{table}[htbp]
@@ -149,6 +166,13 @@ Analysefasen kombinerer sensitivitet mot utetemperatur og energipriser med optim
     \caption{Illustrasjon av hvordan fjernvarmecaset kombinerer ulike simuleringsmetoder og beslutningsstøtte.}
     \label{fig:kap04-fjernvarmecase}
 \end{figure}
+
+\section{Praksiseksempel: Immersivt kontrolltårn for kraftsystemet}
+Statnett utvikler digitale kontrolltårn der hybride simuleringer av lastflyt kombineres med hendelsesstyrt beredskapstrening. Operasjonsmiljøet bygger på en digital tvilling av sentralnettet, supplert med detaljmodeller av utvalgte stasjonsnoder og sanntidsdata fra sensorer og verneanlegg \citep{statnett2024kontrolltarn}. Scenarioene genereres i forkant av øvelser ved å kombinere historiske hendelser, værprognoser og planlagte vedlikeholdsaktiviteter. Når driftsplanleggere starter en økt, lastes scenarioet inn i et immersivt rom der nettoperatører, analysestøtte og beredskapsledelse kan dele samme visuelle flate.
+
+Simuleringsmotoren beregner kontinuerlige lastflytprognoser og foreslår bryteroperasjoner. Dersom en hendelse utløses, aktualiseres også diskrete sekvenser for feilsøking og gjeninnkobling. Disse kombinasjonene gjør det mulig å teste alternative tiltak som lastdeling, opp- og nedregulering eller omkoblinger uten å påvirke den faktiske driften. Resultatene visualiseres i AR-paneler som er projisert på vegger og individuelle skjermer, slik at hvert teammedlem kan filtrere visningen etter sin rolle samtidig som felles risikobilde bevares \citep{kongsberg2023kognitwin}.
+
+Etter hver øvelse eksporteres beslutningsloggen til virksomhetens hendelseshåndteringssystem, der læringspunkter og anbefalte tiltak spores til konkrete simuleringskjøringer. Statnett rapporterer at denne kombinasjonen av simulator, immersiv visualisering og strukturert beslutningslogg gir raskere identifikasjon av kritiske tiltak og bedre overlevering til vedlikeholdsplanlegging \citep{statnett2024kontrolltarn}. Erfaringene deles med regionale nettselskaper gjennom felles treningsprogram, og casebeskrivelsen brukes som grunnlag for masterstudenters prosjektoppgaver om resilient strømnett.
 
 \section{Laboratorieøving: Immersivt beslutningsrom}
 Laboratorieøvelsen bygger på scenariet i \textit{kap04-immersiv-case.md} og tar utgangspunkt i at studentene får tilgang til et immersivt kontrollrom der fjernvarmeoperasjoner kan testes. Økten varer 90 minutter og gjennomføres i grupper på fire. Datastrømmer og roller speiles i Tabell~\ref{tab:kap04-immersiv-arkitektur} slik at studentene forstår hvordan teknologi og organisasjon henger sammen.
