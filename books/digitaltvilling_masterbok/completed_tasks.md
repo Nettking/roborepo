@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-14: Beskrev hybrid læringssløyfe for sky og edge, la inn laboratorierubrikker, oppdaterte industripuls med norske caser og registrerte nye kilder i `support/referanser.bib`; synkroniserte `plan.md`, `support/larerveiledning.tex` og `task_queue.md`.
 - `FERDIG` – Leveranse for DT-SUP-01: Opprettet prosjektkontraktmal i `support/maler/prosjektkontrakt.tex`, beskrev hvordan rubrikker kobles til kommende caseutvidelser i `support/larerveiledning.tex`, og oppdaterte `plan.md`, `task_queue.md` og `support/oppgavetavle.md`.
 - `FERDIG` – Leveranse for DT-13: Utvidet Kapittel 4 med immersivt beslutningsrom, beredskapscase og vurderingsrubrikk, la til ny kilde om AR/VR-integrasjon og oppdaterte `plan.md` samt `task_queue.md`.
 - `FERDIG` – Leveranse for DT-BUG-12: Renset norske spesialtegn i referansepostene for DNV og Avinor slik at BibTeX ikke stopper på `\o`-kombinasjoner som tolkes som ukjente kommandoer, og oppdaterte `task_queue.md` og `plan.md` for å synliggjøre rettingen.

@@ -57,13 +57,18 @@ Foundation-modeller og andre generative teknikker brukes til å lage scenarioer 
 Edge-intelligens er nødvendig der beslutninger må tas på millisekunder og nettverkstilkoblingen er begrenset, for eksempel i maritime operasjoner eller energimikrogrids.\citep{shi2016edge} En vanlig arkitektur er å la den sentrale plattformen håndtere langsiktig læring og flåtestyring, mens edge-noder kjører lette versjoner av modellene for lokal optimalisering og avviksdeteksjon. Fagfellepanelet anbefalte at vi beskriver hvordan modellversjoner og dataflyt synkroniseres mellom edge og sky: DevOps-teamet må definere hvilke signaler som trigges ved modellavvik, hvilke målinger som replikkeres tilbake til sentral datasjø, og hvordan sikkerhetsoppdateringer distribueres uten å stoppe produksjonen. Ved pilotering i norsk industri har det vært nyttig å kombinere container-orienterte orkestratorer (for eksempel K3s) med hendelseslogg i datasjøen slik at datagovernance og revisjon kan følge edge-endringene.
 
 \section{Samspill mellom læring, optimalisering og assimilering}
-De tre byggesteinene virker sammen i en lukket sløyfe: maskinlæring gir prognoser og modeller som beskriver systemet, dataassi
-milering korrigerer modellen når virkeligheten avviker, og optimalisering omskaper innsikten til beslutninger. I praksis må sli
-ke sløyfer designes slik at dataflyten er robust, at prosesseringen skjer i riktig rekkefølge, og at menneskelige operatører ha
-r innsyn i hvorfor anbefalingene endres. En moden digital tvilling bør derfor inkludere dashboards som visualiserer hvilke måle
-r som påvirker beslutningene, og varslingsmekanismer når usikkerheten overstiger forhåndsdefinerte terskler. Dette gjør det mul
-ig å bygge tillit, for eksempel ved å dokumentere hvordan et bestemt sett med sensordata utløste en ny optimaliseringsstrategi
-.
+De tre byggesteinene virker sammen i en lukket sløyfe: maskinlæring gir prognoser og modeller som beskriver systemet, dataassimilering korrigerer modellen når virkeligheten avviker, og optimalisering omskaper innsikten til beslutninger. I praksis må slike sløyfer designes slik at dataflyten er robust, at prosesseringen skjer i riktig rekkefølge, og at menneskelige operatører har innsyn i hvorfor anbefalingene endres. En moden digital tvilling bør derfor inkludere dashboards som visualiserer hvilke måler som påvirker beslutningene, og varslingsmekanismer når usikkerheten overstiger forhåndsdefinerte terskler. Dette gjør det mulig å bygge tillit, for eksempel ved å dokumentere hvordan et bestemt sett med sensordata utløste en ny optimaliseringsstrategi.
+
+\subsection{Hybrid læringssløyfe for sky og edge}
+For å realisere kontinuerlige forbedringer må læringssløyfen spesifisere hvordan edge-noder, skyplattformer og generative komponenter samhandler. Et anbefalt oppsett består av følgende steg:
+\begin{enumerate}
+    \item \textbf{Observasjon og tagging i edge-laget}: Edge-noder filtrerer og merker kritiske hendelser (for eksempel raske trykkendringer) før de sendes videre. Dette reduserer båndbredde og gjør det mulig å bygge lokale tiltakslister.
+    \item \textbf{Synkronisering mot felles dataplattform}: Hendelseslogger, syntetiske datapakker og modellversjoner pushes til datasjø eller dataspace. Metadata forteller hvilke segmenter som er generert, slik at revisjonsteamet kan følge kjeden fra rådata til anbefalinger.
+    \item \textbf{Generativ scenariobygging}: I skyen kjøres foundation-modeller som lager nye scenarioer og forslag til kontrolltiltak. Fagpersoner får et dashbord som viser forskjellen mellom historiske og genererte datapunkter.
+    \item \textbf{Samkjøring med optimalisering}: Optimaliseringsmotoren vurderer hvilke tiltak som er robuste når man tar høyde for både observerte og genererte tilstander. Resultatet distribueres tilbake til edge-enhetene som kontekst for lokal styring.
+    \item \textbf{Kontinuerlig læringskontroll}: En styringskomité vurderer effekten gjennom rubrikker og KPI-er fra Kapittel~7. Hvis avvik overstiger gitte grenser, trigges retrening eller fallback-modeller.
+\end{enumerate}
+Denne arkitekturen gjør det mulig å holde læringen i gang selv om enkelte anlegg har begrenset nettverkstilgang eller strenge delingsregler. Caseerfaringer fra norsk prosessindustri viser at slike hybride sløyfer gir raskere oppdaterte modeller og bedre situasjonsforståelse for operatørene.\citep{kongsberg2023kognitwin}
 
 \section{Utvidet analyseeksempel: Immersiv AI-coach}
 For å støtte operatører i komplekse situasjoner bygges en AI-coach som kombinerer simulering, maskinlæring og samarbeid i et immersivt miljø. Figur~\ref{fig:kap05-operator-coach} illustrerer hvordan sensorer, taleinstruksjoner og historiske hendelser kobles til anbefalinger som vises i AR/VR. Operatøren kan stille oppfølgingsspørsmål, trigge what-if-simuleringer og dele tiltakslister direkte i kontrolltårnet. Ved å bruke multimodale modeller kobles tekst, lyd og visuelle observasjoner, og anbefalingene dokumenteres automatisk i beslutningsloggen.
@@ -127,6 +132,29 @@ Generative modeller og foundation-plattformer & Scenario-testing, syntetiske dat
     \item Beskriv hvordan generative modeller, syntetiske datasett eller edge-komponenter eventuelt inngår i løsningen, og gjør rede for datasporing, ytelsesmålinger og kontroller som sikrer at tiltakene følger retningslinjene i Kapittel~6.
 \end{enumerate}
 
+\subsection{Poenggivende rubrikk for laboratoriearbeid}
+Rubrikken i Tabell~\ref{tab:rubrikk-ai-lab} brukes i både lærerveiledning og studentlogg. Den kombinerer tekniske kriterier med etterlevelse, slik at generative og edge-orienterte tiltak vurderes helhetlig.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Vurderingsrubrikk for multimodal AI-lab}
+    \label{tab:rubrikk-ai-lab}
+    \begin{tabular}{p{3.2cm}p{3.2cm}p{3.2cm}p{3.2cm}p{3.2cm}}
+        \toprule
+        \textbf{Kriterium} & \textbf{0 poeng} & \textbf{1 poeng} & \textbf{2 poeng} & \textbf{3 poeng} \\
+        \midrule
+        Datasamsvar og kvalitet & Ustrukturerte loggfiler uten versjonskontroll. & Delvis kuraterte datasett, men mangler metadata og reproduserbarhet. & Komplette datasett med metadata og kontrollert tilgang. & Dokumentert datasporing inkludert syntetiske bidrag og kvalitetssikring per datapakke. \\
+        \addlinespace
+        Algoritmevalg og begrunnelse & Valgte modeller passer ikke til scenarioet. & Modellvalg beskrives, men mangler kobling til vurderingskriterier. & Modellvalg begrunnes med relevante måltall og tiltak mot konseptdrift. & Kombinerer flere modeller, viser sensitivitet og argumenterer for videre iterasjoner. \\
+        \addlinespace
+        Edge--sky-samspill & Ingen plan for distribusjon mellom edge og sky. & Synkronisering beskrives for enkelte komponenter. & Fullstendig plan for modelloppdatering, overvåking og fallback. & Implementert styringssløyfe med automatisert varsling og testet resilienst. \\
+        \addlinespace
+        Etterlevelse og refleksjon & Ingen vurdering av sikkerhet, etikk eller lovverk. & Noterer enkelte krav uten tiltak. & Tiltak knyttes til relevante standarder og roller. & Integrerer krav fra Kapittel~6 og beskriver hvordan tiltak revideres over tid. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
 \section{Laboratorieøving: Multimodal AI-trening}
 Laboratorieøvelsen for denne seksjonen kombinerer tidsserie-, bilde- og tekstdata i et immersivt kontrollrom. Studentene bruker matrisen i \textit{kap05-algoritmematrise-utvidelse.md} for å velge algoritmer og dokumentere beslutninger.
 
@@ -137,6 +165,14 @@ Laboratorieøvelsen for denne seksjonen kombinerer tidsserie-, bilde- og tekstda
 \end{enumerate}
 
 Rubrikken gir poeng for datasamsvar, algoritmevalg, operatøropplevelse, etterlevelse og refleksjon. En poengsum på 12 eller mer regnes som godkjent og brukes både av faglærer og medstudent i fagfellevurderingen.
+
+\section{Industripuls: Norske pilotprosjekter}
+Koblingen mellom generative modeller, edge-beregninger og operasjonell gevinst må forankres i konkrete caser. Følgende erfaringer gir retning for hvordan læringssløyfer fra dette kapittelet kan realiseres i praksis:
+\begin{itemize}
+    \item \textbf{Kongsberg Digital -- Kognitwin}: Plattformen kombinerer skybasert modellforvaltning med edge-nære apper for offshore, maritim og prosessindustri. Kundenes erfaringer viser at genererte scenarioer og automatisert datafangst kan distribueres raskt til lokale operatører.\citep{kongsberg2023kognitwin}
+    \item \textbf{Equinor og Telenor -- 5G Edge Lab}: Partnerskapet demonstrerer hvordan lav forsinkelse i 5G-nett legger til rette for sanntidsoppdatering av digitale tvillinger i energisektoren, og hvordan læringssløyfer kan flyttes ut til plattformer og skip uten å gå på bekostning av datasikkerhet.\citep{telenor2021equinor5g}
+    \item \textbf{Statnett -- Digital tvilling av kraftsystemet}: Kontrolltårnet kombinerer strømmodeller og sanntidsdata for å teste genererte tiltak før de sendes til regionnettet. Prosjektet illustrerer hvordan rubrikkene for etterlevelse og edge--sky-samspill kan brukes til å dokumentere endringer mot regulatoriske krav.\citep{statnett2023digital}
+\end{itemize}
 
 \section{Industrieksempel: Optimal drift av et landbasert oppdrettsanlegg}
 Et norsk oppdrettsanlegg med resirkulerende akvakultur (RAS) kombinerer sensorer for vannkvalitet, fôringssystem og fiskevelfe

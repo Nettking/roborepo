@@ -11,7 +11,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | I | Kapittel 2 | Utvidet med flerfidelitetscase, metodetabeller og modellforvaltningskrav i tillegg til politiske rammer. | Pilotere metode- og dokumentasjonstabeller i workshop og samle fagfelleinnspill før neste revisjon. |
 | I | Kapittel 3 | Supplert med sirkulærøkonomi, materialsløyfefigur og to datadrevne caser. | Samordne sirkulærøkonomi-innspill med grafikk- og datastyringsteamet før fagfelleutsending. |
 | II | Kapittel 4 | Oppdatert med immersive case, beredskapsøvelse og vurderingsrubrikk. | Pilotere AR/VR-lab med rubrikk og hente tilbakemeldinger fra industripartnere. |
-| II | Kapittel 5 | Helhetlig utkast som binder maskinlæring, optimalisering, dataassimilering samt generative og edge-baserte tiltak. | Test pilotopplegg med vurderingsmatrise, sikre datasporing for syntetiske datasett og loggfør funn i fagfelleløpet. |
+| II | Kapittel 5 | Oppdatert med generative og edge-baserte læringssløyfer, laboratorierubrikker og industripuls fra norske piloter. | Pilotere laboratorierubrikken med studentteam, verifisere datasporing for syntetiske datasett og loggføre innspill fra industripartnere. |
 | II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet, etikk og regulatoriske krav (NIS2, IEC 62443). | Følg opp pilotcase med oppdaterte sjekklister, dokumenter tilsynsprosedyrer og oppdater tiltak i fagfelleloggen. |
 | III | Kapittel 7 | Helhetlig utkast med livssyklus, governance, RACI-eksempel og ny figur for styringssløyfer. | Gjennomfør intervjuer etter guiden, koble funn til KPI-oppfølging og pilotlogg. |
 | III | Kapittel 8 | Helhetlig utkast med narrative sektorseksjoner, casemal og prioritert pilotliste. | Sikre dataspace-tilganger, distribuere casebriefs og oppdatere kildebank for hver sektor. |
@@ -31,7 +31,7 @@ Omfangstallene under er beregnet ved å kjøre en enkel ordtelling (LaTeX-komman
 | Kapittel 2 – Systemtenkning | 1104 | ≈2,8 | Utvidet med flerfidelitetstabeller og dokumentasjonsseksjon, men trenger flere praksisoppgaver og volumvekst. |
 | Kapittel 3 – Data og integrasjon | 1373 | ≈3,4 | Datapipeline og integrasjonsmønstre er beskrevet, men dataspace- og beredskapsstoff er minimalt. |
 | Kapittel 4 – Simulering og analyse | 945 | ≈2,4 | Utvidet med immersivt beslutningsrom og beredskapscase, men trenger flere kvantitative resultater. |
-| Kapittel 5 – Læring, optimalisering og AI | 1281 | ≈3,2 | Dekker hovedsløyfen, men mangler generative/edge-baserte perspektiver og vurderingsmaler. |
+| Kapittel 5 – Læring, optimalisering og AI | 1281 | ≈3,2 | Inkluderer nå generative/edge-baserte læringssløyfer, laboratorierubrikker og industrieksempler; trenger fortsatt flere dybdecaser. |
 | Kapittel 6 – Validering og tillit | 705 | ≈1,8 | Kortfattet omtale av rammeverk; usikkerhets- og etikkstoff er overflatisk. |
 | Kapittel 7 – Livssyklus og styring | 819 | ≈2,0 | RACI og governance nevnes, men livssyklusforløp og bærekraftstyring er ikke utdypet. |
 | Kapittel 8 – Bruksområder | 1996 | ≈5,0 | Gir sektorreiser, men hvert case er kun introduksjon uten fordypende analyser. |
