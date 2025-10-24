@@ -292,6 +292,32 @@ Tabell~\ref{tab:kommunal-validering} oppsummerer hvordan kommunen kan strukturer
 
 Seksjonen bygger bro mellom dataspace-arbeidet i Kapittel~3 og simuleringene i Kapittel~4 ved å tydeliggjøre hvordan kommunal beredskap kan bruke samme valideringspanel og styringsindikatorer som energisektoren. Når tvillingen kombinerer overvannslaboratoriet med kvalitetsjournalen fra dette kapittelet får studentene et helhetlig case som dekker modellering, datadeling og beredskapsledelse.
 
+\subsection{Kontinuerlig modellovervåking og gjenkalibrering}
+Når valideringssløyfen er etablert må kommunen sikre løpende kontroll med modellpresisjon, datastrømmer og tiltaksgjennomføring. \citet{dsb2022beredskap} anbefaler jevnlig rapportering til beredskapsrådet, mens Oslo VAV har gjort modellovervåking til en del av driftsmøtene mellom avdeling for blågrønn infrastruktur og beredskapsstaben.\citep{oslo2023overvann} Overvannslaboratoriet viser i praksis hvordan sensordata og scenarier fra \citet{asplan2023overvannslab} kan kobles direkte til tiltakslogg og kontrolltårn-panelet i Kapittel~4. Det samme rammeverket kan gjenbrukes for andre kommunale kritiske tjenester som vannforsyning og energistyring.
+
+Tabell~\ref{tab:kommunal-overvaking} strukturerer et overvåkingsprogram som binder sammen kontrolltårn-funksjoner fra Kapittel~5 og indikatorpanelet for tillit i dette kapittelet. Kolonnene kan gjenbrukes som sjekkliste i kvalitetsjournalen og i samarbeidsmøter mellom teknisk drift, beredskap og miljø.
+
+\begin{table}[ht]
+    \centering
+    \caption{Overvåkingsprogram for kommunal digital tvilling}
+    \label{tab:kommunal-overvaking}
+    \begin{tabular}{|p{3.2cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Overvåkingskomponent} & \textbf{Varslingskriterier} & \textbf{Data- og prosesskilder} & \textbf{Tiltak og ansvar} \\
+        \hline
+        Sensorhelse og datakvalitet & Avvik \(>5\%\) mellom sanntid og referansemåling, tapte målepunkter over 30 minutter & IoT-plattform, kalibreringslogger, avviksrapport fra laboratoriet & Teknisk drift iverksetter feltkontroll, dataspace-ansvarlig oppdaterer datakatalog \\
+        \hline
+        Modellpresisjon og scenariodekning & Prediksjonsfeil over terskler definert i kontrolltårn-panelet, manglende simulering av prioriterte tiltak & Hydrauliske modeller, scenarioarkiv, læringslogger fra Kapittel~4 & Fagansvarlig oppdaterer modellparametere, beredskapsleder beslutter nye scenariotester \\
+        \hline
+        Tiltakslogg og planstatus & Tiltak uten eier eller frist, øvelser ikke gjennomført innen 12 måneder & Kommunal handlingsplan, beredskapsportal, fagfellelogg & Beredskapskoordinator eskalerer til beredskapsråd, planansvarlig synkroniserer med planverket \\
+        \hline
+        Bærekrafts- og klimamål & Avvik fra utslippsbudsjett eller blågrønn kapasitet, KPI-er som faller under gult nivå & Klimaregnskap, miljødashboard, indikatorer fra Kapittel~3 & Miljøsjef initierer forbedringsprosjekter, kontrolltårnleder rapporterer status til politisk nivå \\
+        \hline
+    \end{tabular}
+\end{table}
+
+For å holde oversikten operasjonell bør kommunen standardisere en månedsrapport som kombinerer tabellen med hendelsesstatistikk og læringspunkter. Rapporten kan behandles i samme møte som drift av vann- og avløpssystemet og oppfølging av byutviklingsprosjekter, slik \citet{oslo2023overvann} praktiserer. Neste steg er å koble overvåkingen til automatiske varslingsregler og tiltaksplaner i dataspace-løsningen fra Kapittel~3, slik at hendelser i felt umiddelbart trigges som oppgaver i styringssystemet.
+
 \section{Regulatoriske rammer og sikkerhetsstandarder}
 Fagfellepanelet etterspurte en tydelig kobling mellom kvalitetsprosessen og de regulatoriske rammene som gjelder for norske virksomheter. NIS2-direktivet og IEC~62443-serien definerer krav til cybersikkerhet, hendelseshåndtering og styring av industrielle kontrollsystemer, mens DNV-RP-A204 beskriver hvordan digitale tvillinger skal kvalifiseres i sikkerhetskritiske domener.\citep{eu2022nis2,iec62443-2-1,dnv2021a204} Disse rammeverkene krever at valideringsplanen dokumenterer både tekniske og organisatoriske tiltak, med klar oversikt over ansvar og godkjenninger.
 
