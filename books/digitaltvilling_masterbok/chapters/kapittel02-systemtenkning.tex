@@ -236,6 +236,37 @@ Som forberedelse til verkstedet kan studentgrupper utvikle en kalibreringsplan f
 
 Gruppene kan levere planen som vedlegg til modelljournalen og bruke den i kapitteloppgavene når de vurderer hvordan digitale tvillinger går fra laboratoriet til operativ drift. Øvingen gjør det tydelig hvordan systemtenkning, modellering og styring henger sammen på tvers av kapitlene i boken.
 
+\subsection{Mobile feltlaboratorier for datainnsamling}
+Mange norske virksomheter bruker mobile laboratorier for å koble modellutvikling på campus med måledata fra felt og produksjon. Et mobilt oppsett består gjerne av containere eller trailere med sensorer, edge-noder og sikre kommunikasjonslinjer som kobles direkte til modellplattformen. Løsningen gir raske iterasjoner mellom hypoteser som testes i akademiske laboratorier og den faktiske infrastrukturen i industrien. Statnett bruker eksempelvis mobile målerigger for å hente PMU-data og stressteste nettmodeller før de rulles ut i driftskontrollene, mens Telenor og Equinor har etablert 5G-baserte feltlabber som knytter offshoreinstallasjoner til digitale tvillinger med lav forsinkelse.\citep{statnett2023digital,telenor2021equinor5g}
+
+Når mobile laboratorier planlegges bør teamet avklare følgende punkter før utrulling:
+\begin{itemize}
+    \item Hvilke sensorer og datalogger som skal brukes, og hvordan strømforsyning og sikker kommunikasjon sikres i felt.
+    \item Hvordan data strømmer inn i modelljournalen, inkludert metadata, tilgangskontroll og synkronisering med eksisterende dashbord fra kapittel~6.
+    \item Hvordan operatører og studenter koordinerer observasjoner, for eksempel gjennom daglige standup-møter eller digitale beslutningslogger.
+    \item Hvilke regulatoriske krav som påvirker testen, inkludert sikkerhet, personvern og avtalene med anleggets eiere.\citep{dnv2023digitalassurance,digdir2023styringai}
+\end{itemize}
+
+Tabell~\ref{tab:kap02-mobilelab} kan brukes som sjekkliste for å holde orden på logistikken når mobile laboratorier etableres. Den binder roller, målepunkter og læringsutbytte og gjør det enklere å dele erfaringer mellom campus og industri.
+
+\begin{table}[ht]
+    \centering
+    \caption{Planleggingspakke for mobile feltlaboratorier i digitale tvillingprosjekter.}
+    \label{tab:kap02-mobilelab}
+    \begin{tabular}{p{0.23\textwidth}p{0.37\textwidth}p{0.32\textwidth}}
+        \toprule
+        \textbf{Fase} & \textbf{Nøkkelaktiviteter} & \textbf{Leveranser og læringspunkter} \\
+        \midrule
+        Forprosjekt & Velge case, avtale tilgang til anlegg og kartlegge målepunkt. & Feltplan, risikovurdering og oppdatert systemkart som kobles til modelljournalen. \\
+        Installasjon & Montere sensorer, sikre strøm og sette opp edge- og 5G-forbindelser. & Konfigurasjonsnotat, sikkerhetssjekk og testlogg fra pilotkoblede enheter. \\
+        Testkampanje & Kjøre scenarier mot modellen, gjennomføre daglige avstemminger og loggføre avvik. & Daglige beslutningslogger, datakvalitetsrapporter og forslag til modelljusteringer. \\
+        Etterarbeid & Dokumentere læringsutbytte og koble funn til validerings- og gevinstplanene. & Oppdatert modelljournal, forbedringsliste til kapittel~6 og forslag til nye øvinger for kapittel~7. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Etter en feltkampanje bør resultatene deles i en felles læringsøkt der driftsorganisasjonen, laboratorieteamet og studentgrupper sammenligner modellprediksjoner med faktiske målinger. Oppfølgingen sikrer at funnene mates inn i valideringsjournalen i kapittel~6 og i gevinstplanene i kapittel~7, og den gjør det enklere å planlegge neste runde med mobile tester.
+
 \subsection{Case: Digital tvilling for fjernvarme i Oslo}
 Fortum Oslo Varme har utviklet en digital tvilling for å optimalisere energiproduksjon og distribusjon i fjernvarmenettet.
 Modellen kombinerer hydrauliske ligninger for rørnettet med maskinlæringsmodeller som predikerer varmebehov basert på vær,
