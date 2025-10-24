@@ -312,6 +312,47 @@ For masterstudentene gir byggdrift-sandkassen et konkret case som kombinerer dat
     \item \textbf{Rapporteringsleveranse:} Resultatene oppsummeres i et kort notat til kommunedirektør som kobler funnene til klima-, budsjett- og arbeidsmiljømål, og viser hvordan tiltakene følges opp i planfilen.
 \end{itemize}
 
+\section{Auditplan for dataspace-valideringspanelet}
+Tverrsektorielle piloter i dataspace-laboratoriet trenger en felles auditplan som binder tekniske tester, styringskrav og gevinstoppfølging.\citep{iso19011-2018,dfo2024internkontroll} Planen skal gjøre det mulig å følge revisjonssporet fra datakilder til beslutninger i kontrolltårn-panelet, og vise hvordan tiltakene kobles til porteføljestyringen i Kapittel~7 og dataspace-policyen i Kapittel~3. Digitaliseringsdirektoratet anbefaler at offentlige virksomheter etablerer tverrsektorielle styringsfora der partnere deler indikatorer og kontrollfunn, slik at læringen fra sandkasseprosjekter kan tas inn i ordinær drift.\citep{digdir2024samstyring}
+
+En auditplan for valideringspanelet bør dekke fire hovedfaser gjennom året:
+\begin{enumerate}
+    \item \textbf{Forbered revisjonsgrunnlag:} Oppdater indikatorpanelet, kvalitetsjournalen og tiltaksloggen slik at hver kontroll kan spores til ansvarlige roller og tidligere beslutninger.
+    \item \textbf{Gjennomfør datasporing:} Kryssjekk datakontrakter, modelljournal og hendelseslogg for å bekrefte at datasettet har gyldig behandlingsgrunnlag og at modellversjoner er dokumentert i tråd med AI-forordningen.
+    \item \textbf{Test scenarier og kontroller:} Gjennomfør representative modellscenarier fra kapittel 4 og 5, og vurder hvordan alarmgrenser, menneskelig tilsyn og beredskapsplaner aktiveres underveis.
+    \item \textbf{Lukk funn og rapporter:} Prioriter tiltak i tiltaksloggen, synkroniser med gevinstpanelet i Kapittel~7 og rapporter status til dataspace-partnere og tilsynsmyndigheter.
+\end{enumerate}
+
+Tabell~\ref{tab:dataspace-audit} viser en struktur som kan brukes både i undervisning og i samarbeid med industripartnere. Hvert trinn angir hvilke dokumenter som må foreligge, hvilke tester som må gjennomføres og hvem som er ansvarlig for å lukke funn.
+
+\begin{table}[ht]
+    \centering
+    \caption{Auditplan for dataspace-valideringspanelet}
+    \label{tab:dataspace-audit}
+    \begin{tabular}{|p{3.2cm}|p{4.8cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Fase} & \textbf{Fokus} & \textbf{Dokumentasjon og tester} & \textbf{Ansvar} \\
+        \hline
+        Planleggingsmøte & Etablere mandat, mål og risikoomfang for revisjonen & Revidert årsplan, oppdatert indikatorpanel og oversikt over dataspace-partnere \citep{digdir2024samstyring} & Programleder valideringspanel + dataspace-operatør \\
+        \hline
+        Datasporing og kontroll & Verifisere datakontrakter, tilgangsstyring og modelljournal & Dataspace-kontrakter, DPIA-oppdatering, logguttrekk fra kontrolltårn-panelet \citep{dfo2024internkontroll} & Data steward + personvernombud \\
+        \hline
+        Scenario- og stresstest & Reprodusere nøkkelscenarier fra kapittel 4 og 5 og vurdere alarmgrenser & Testprotokoller, modelljournal, hendelseslogg og måledata fra pilotene \citep{iso19011-2018} & Tvillingforvalter + fagansvarlige for casene \\
+        \hline
+        Forbedring og rapportering & Lukke funn, oppdatere tiltakslogg og koble resultat til gevinstoppfølging & Tiltaksplan, gevinstpanel fra Kapittel~7, revisjonsrapport til partnere og tilsyn & Kvalitetsteam + programleder Kapittel~7 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+I praksis gir tabellen en sjekkliste for hvordan auditteamet skal forberede workshops, dele dokumentasjon og følge opp funn. Når strukturen brukes i masterkurs, kan studentene tilordnes roller i panelet og få ansvar for å dokumentere et komplett revisjonsspor fra scenariotest til tiltakslogg. Leveranser fra auditplanen bør lastes opp i dataspace-portalen slik at partnerne har et felles beslutningsgrunnlag og kan planlegge neste iterasjon av sandkasse eller pilot.
+
+For undervisning anbefales følgende opplegg:
+\begin{itemize}
+    \item \textbf{Audit-sprint i laboratoriet:} Studentgrupper får utdelt en casepakke fra kontrolltårn-panelet og bruker Tabell~\ref{tab:dataspace-audit} til å planlegge revisjon, gjennomføre scenariotest og rapportere funn.
+    \item \textbf{Refleksjonsnotat:} Hver gruppe beskriver hvordan kontrollene ivaretar krav fra AI-forordningen og dataspace-avtalene, og foreslår forbedringer i tiltaksloggen.
+    \item \textbf{Felles beslutningsmøte:} Resultatene presenteres for et simulerte porteføljestyre som vurderer hvilke tiltak som skal prioriteres før neste kvartal.
+\end{itemize}
+
 \section{Mobilitetsdataspace for kollektivtransport}
 Ruter, Entur og Bane NOR bygger nå en felles mobilitetsdataspace der sanntidsdata fra buss, bane, tog og delte mikromobilitetstjenester synkroniseres med digitale tvillinger for planlegging og beredskap.\citep{ruter2024mobilitetslab,entur2023dataplattform,banenor2024digitalspor} Dataspacet kombinerer reiseplanleggingsdata, billettinformasjon, tilstandsmålinger fra infrastruktur og trafikkinformasjon fra Statens vegvesen for å gi et samlet bilde av kapasitetsutnyttelse og flaskehalser.\citep{vegvesen2023beredskap} For å sikre tillit må valideringsregimet dekke datakvalitet, modellpresisjon og koordinering mellom etatene, samtidig som personvernkrav og sikkerhetsnivåer følges slik Kapittel~3 beskriver for mobilitetsdataspace og Kapittel~7 adresserer for porteføljestyring.
 
