@@ -158,6 +158,37 @@ Laboratorieøvelsen for kapittel 6 lar studentene omsette standardkrav til konkr
 
 Evalueringsrubrikken vektlegger standardforståelse, risikohåndtering, dokumentasjon og tverrfaglig koordinering. En totalscore på 10 eller mer gir «godkjent» og brukes sammen med ALTAI-sjekklisten fra Kapittel~5.
 
+\section{Beredskapssimulering i helsetjenesten}
+Helsesektoren møter særskilte krav til beredskap, pasientsikkerhet og informasjonsforvaltning. Helsedirektoratet \citet{helsedir2023beredskap} anbefaler at helseforetak dokumenterer scenarioøvelser som kobler kliniske prosesser til digital infrastruktur. Digital tvilling-teknologi kan støtte dette ved å gi et felles situasjonsbilde, teste endringer i kapasitet og dokumentere sporbarhet mot hendelsesjournaler. Direktoratet for samfunnssikkerhet og beredskap \citet{dsb2023ovelser} fremhever at øvelser bør planlegges som helhetlige læringsløp med tydelige mål og indikatorer. Når tvillingen inngår i øvelsen, må både modellpresisjon og dataflyt måles i sanntid slik at kvalitetsjournalen oppdateres automatisk.
+
+Et helsecase kan struktureres i tre hovedfaser:
+\begin{enumerate}
+    \item \textbf{Planlegging:} Kliniske fagansvarlige, IT-beredskap og sikkerhetsledelse kartlegger kritiske pasientforløp, datakilder og modellantakelser. Risikoene vurderes mot scenarioene i \citet{dsb2023nrb} og knyttes til tiltak i standardkartet fra Tabell~\ref{tab:standardkart}.
+    \item \textbf{Gjennomføring:} Simuleringer av kapasitetsendringer, forsyningssvikt eller cyberhendelser kjøres i tvillingen parallelt med tabletop-øvelser. Operatører registrerer beslutninger og modellavvik direkte i kvalitetsjournalen slik at \citet{dnv2023digitalassurance} sine krav til sporbarhet ivaretas.
+    \item \textbf{Læring:} Etter øvelsen oppdateres indikatorene i Tabell~\ref{tab:tillitsindikatorer}, og erfaringene integreres i styringssystemet for informasjonssikkerhet. Tiltak og anbefalinger synkroniseres med fagfelleloggen og undervisningsopplegget.
+\end{enumerate}
+
+Tabell~\ref{tab:helseberedskap} viser hvordan en beredskapssimulering kan struktureres for å koble kliniske behov til tvillingens datagrunnlag og indikatorer.
+
+\begin{table}[ht]
+    \centering
+    \caption{Scenarioelementer for helsesektorens beredskapssimulering}
+    \label{tab:helseberedskap}
+    \begin{tabular}{|p{3.0cm}|p{4.6cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Øvingsfase} & \textbf{Hovedmål} & \textbf{Datagrunnlag og tvillingstøtte} & \textbf{Indikatorer} \\
+        \hline
+        Før-øvelse & Oppdatere beredskapsplaner, kapasitetsgrenser og varslingslinjer & Pasientlogistikk fra EPJ, sensordata fra medisinsk teknisk utstyr, tilgangslogger & Fullført risikologg, andel datasett med behandlingsgrunnlag \\
+        \hline
+        Under øvelse & Validere beslutningspunkter ved samtidige hendelser (kapasitetsøkning og cyberangrep) & Sanntidskopi av driftstavle, simulering av ressursbelastning, automatisk hendelseslogging & Responstid på alarm, prediksjonsfeil i kapasitetsmodell, antall eskalerte tiltak \\
+        \hline
+        Etter øvelse & Oppdatere tiltak og ansvar, dele læringspunkter med hele virksomheten & Kvalitetsjournal, fagfellelogg, ALTAI-sjekkliste & Lukketiltak innen frist, implementerte forbedringer i styringssystemet, deltagertilfredshet \\
+        \hline
+    \end{tabular}
+\end{table}
+
+For undervisning anbefales det å kombinere beredskapssimuleringen med laboratorieøvelsen over. Studentgrupper kan få tildelt ulike roller (beredskapsleder, klinikksjef, IKT-sikkerhetsansvarlig) og bruke tabellen som sjekkliste for hvordan tvillingens data skal brukes i hver fase. Resultatene synliggjør sammenhengen mellom modellkvalitet, regulatorisk etterlevelse og pasientsikkerhet, og bygger bro til helsesektorcaset i Kapittel~8.
+
 \section{Refleksjonsspørsmål og øvinger}
 \begin{enumerate}
     \item Definer en valideringsstrategi for en digital tvilling i helsevesenet, og identifiser hvilke standarder og datasett som må håndteres for å dokumentere pasientsikkerhet.

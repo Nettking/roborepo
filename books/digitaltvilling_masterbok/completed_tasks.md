@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-22: Dokumenterte beredskapssimulering for helsetjenesten med faser, indikator-tabell og undervisningsopplegg koblet til NIS2/DSB-krav, og oppdaterte plan-, status- og kildefiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-21: Dokumenterte sanntidsobservabilitet i kraftnettet med Statnett-inspirert case, la til indikator- og tiltakstabell i Kapittel 3 og synkroniserte plan- og statusfiler. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-APP-02: Oppdaterte ordlisten med dataspace-roller, modellverktøy, observabilitet og sikkerhetsbegrep, la til ny beredskapsseksjon og synkroniserte plan- og statusfiler. (`support/ordliste.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-18: Utvidet Kapittel 9 med veikartveiledning, oppdatert finansieringstabell og milepælsoversikt samt koblet forskningsdesign til nye styrings- og finansieringskrav. Synkroniserte plan- og statusfiler. (`chapters/kapittel09-fremtid.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
