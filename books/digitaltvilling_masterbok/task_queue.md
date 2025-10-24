@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-105 | Kapittel 3 | FERDIG – Dokumenterte dataspace for grønne industriparker med tabell over prioriterte dataprodukter, indikator- og beredskapskoblinger og oppdaterte plan- og tavlefiler for pilotering mot industripartnere. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-104 | Kapittel 4 | FERDIG – Dokumenterte karbonfangst- og lagringsscenario med arbeidsflyt, indikatorpakke og koblinger til validerings- og gevinstkapitlene. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-103 | Kapittel 4 | FERDIG – Dokumenterte sirkulær avfallslogistikk-case med faseoppsett, indikator-tabell og undervisningsopplegg for masterkurs. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-102 | Kapittel 4 | FERDIG – Dokumenterte havbruksscenario som kombinerer simulering, biosikkerhet og dataspace-styring med arbeidsflyt for masterkurset. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
