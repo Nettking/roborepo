@@ -93,6 +93,30 @@ flerfidelitetsoppsett krever at teamet:
     eksperimentelle målinger.
 \end{itemize}
 
+\subsection{Metodebibliotek for modellutvikling}
+Arbeidet med flerfidelitetsmodeller følger et repeterbart mønster der analyse, modellering og drift veves sammen. Tabellen under
+kan brukes som sjekkliste i prosjekt- og masteroppgaver for å sikre at alle leveranser spores.
+
+\begin{table}[ht]
+    \centering
+    \caption{Metodebibliotek for utvikling og forvaltning av flerfidelitetsmodeller.}
+    \label{tab:kap02-metodebibliotek}
+    \begin{tabular}{p{0.18\textwidth}p{0.31\textwidth}p{0.25\textwidth}p{0.22\textwidth}}
+        \toprule
+        \textbf{Fase} & \textbf{Formål} & \textbf{Typiske verktøy} & \textbf{Dokumentasjon} \\
+        \midrule
+        Behovsavklaring & Avgrense caset, identifisere beslutningstakere og målebehov. & Interessentintervjuer, målhierarki, kontekstdiagram. & Oppdragsbeskrivelse, interessentlogg og systemskisser. \\
+        Modellering & Utforme og koble lav- og høyfidelitetsmodeller. & FEM/CFD, tidsserieanalyse, modellreduksjon. & Modelljournal, parameterark og antagelsesregister. \\
+        Integrasjon & Koble modellene til dataflyt og driftsprosesser. & API-kontrakter, datastrømskart, containeriserte tjenester. & Integrasjonsdiagram, driftsprotokoll og sikkerhetsvurdering. \\
+        Drift og forbedring & Overvåke ytelse, avdekke driftsavvik og planlegge revisjoner. & Monitoreringstavler, avviksanalyse, A/B-eksperimenter. & Kalibreringslogg, endringsnotat og forbedringsplan. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Metodebiblioteket gjør det lettere å fordele ansvar i teamet og tydeliggjøre hvilke artefakter som må oppdateres etter hver
+revisjon. Studentgrupper kan utvide tabellen med kolonner for risiko, estimerte timer og behov for fagfellegjennomgang for å få
+et konkret styringsverktøy.
+
 \subsection{Case: Flerfidel modell for subsea-kompressorer}
 Et norsk leverandørkonsortium har utviklet en digital tvilling for subsea-kompressorer på sokkelen. Plattformen kombinerer en
 hurtig maskinlæringsmodell som estimerer produksjon og energiforbruk fra tilgjengelige trykk- og temperaturmålinger, med en
@@ -101,6 +125,14 @@ operasjonsdata for å korrigere parametere i hurtigmodellen. Resultatene deles m
 avvik merkes når usikkerheten overstiger definerte grenser. Prosjektet viser hvordan flerfidelitetsstrategier gir bedre
 tilgjengelighet og vedlikeholdsplanlegging samtidig som modellene er dokumentert og revideres i samarbeid mellom operatør og
 teknologipartnere \citep{sintef2021digital}.
+
+\subsection{Case: Modellbibliotek for produksjonsoptimalisering offshore}
+Aker BP og Cognite har etablert et modellbibliotek som kombinerer produksjonsmodeller, maskinlæring og sanntidsdata for å støtte
+beslutninger på norsk sokkel \citep{cognite2023akerbp}. Lavfidelitetsmodeller gir kontinuerlige prognoser for produksjons- og
+energiflyt, mens høyfidelitetsmodeller brukes til detaljert analyse av brønnrespons og kompressoreffektivitet. Modelljournalen
+inneholder versjonerte parameterark, lenker til automatiserte tester og prosedyrer for hvordan avvik løftes i daglige
+driftsmøter. Erfaringene viser at tydelig dokumentasjon gjør det enklere å koble modelleringsarbeidet til eksterne leverandører
+og fagmiljø som jobber med miljøovervåking og sikkerhetsanalyser.
 
 \subsection{Vurdering av modellvalg}
 Når et paradigme skal velges, bør teamet diskutere hvor kritisk forklarbarhet er, hvilke datakilder som er tilgjengelige og hvor
@@ -191,6 +223,27 @@ Hvert modelloppsett bør følges av en artefaktsamling som minimum inneholder:
     \item \textbf{Beslutningslogg} som kobler modellresultater til tiltak, ansvarlige personer og godkjenningstidspunkt.
     \item \textbf{Risikovurdering} som fanger opp driftsavvik, cybersikkerhetskrav og konsekvenser av modellfeil.
 \end{itemize}
+
+\begin{table}[ht]
+    \centering
+    \caption{Forslag til struktur for modelljournal i tråd med norske veiledere.}
+    \label{tab:kap02-modelljournal}
+    \begin{tabular}{p{0.23\textwidth}p{0.34\textwidth}p{0.33\textwidth}}
+        \toprule
+        \textbf{Kapittel} & \textbf{Innhold} & \textbf{Relevante kilder} \\
+        \midrule
+        Formål og kontekst & Definer beslutningen som skal støttes, eierskap og regulatoriske rammer. & Prosjektmandat, styringsdokumenter, politiske føringer. \\
+        Modellbeskrivelse & Oppsummer antagelser, ligninger, datagrensesnitt og begrensninger. & Modellark, kildekode, integrasjonsdiagram. \\
+        Data- og kvalitetsgrunnlag & Beskriv datakilder, kvalitetsindikatorer og rutiner for datavask. & Datakatalog, dataprofilering, sensoroversikt. \\
+        Drift og forbedring & Forklar monitorering, alarmer, revisjonsfrekvens og ansvarlige personer. & Kalibreringslogg, avviksrapporter, forbedringsplaner. \\
+        Etikk og sikkerhet & Dokumenter risiko, personvern- og sikkerhetstiltak. & ROS-analyser, DPIA, beredskapsplan. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Digitaliseringsdirektoratet anbefaler å bruke modelljournaler for å dokumentere kunstig intelligens og avanserte analysemodeller
+i offentlig sektor \citep{digdir2023modelljournal}. Strukturert dokumentasjon gjør det mulig å følge sporbarhetskrav fra
+standarder som ISO~23247 og samtidig gjenbruke erfaringer mellom prosjekter.
 
 \subsection{Versjonskontroll og sporbarhet}
 Alle modeller bør ligge i et versjonsstyrt repositorium der kode, parametere og dokumentasjon utvikles samlet. Metadata for hver versjon må beskrive hvilke datasett og kalibreringsmetoder som er brukt, samt referanser til godkjenning og testresultater. For hybride og flerfidelitetsmodeller innebærer dette at også grensesnittfiler og transformasjoner sjekkes inn, slik at ko-simulering kan reproduseres ved behov \citep{boschert2018digital}. Kombiner gjerne Git-baserte prosesser med automatisert rapportering fra modellovervåkingen for å vise status i sanntid.

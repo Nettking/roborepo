@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-11 | Kapittel 2 | FERDIG – Metodebibliotek, offshore-case og modelljournal-tabell lagt til i kapitlet og statusfiler oppdatert. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md` |
 | DT-10 | Kapittel 1 | FERDIG – La inn verdikjedekart, modenhetsanalyse og etikkseksjon for norske case og oppdaterte plan-, status- og kildefiler. | `chapters/kapittel01-introduksjon.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-05 | Kapittel 5 | FERDIG – Utdypet AI-coach-analysen med styringspunkter, integrerte algoritmematrisen i kapittel og støttefil, og harmoniserte laboratorierubrikken med operatørkrav. | `chapters/kapittel05-ai.tex`, `support/notater/kap05-algoritmematrise-utvidelse.md`, `support/figurer/metadata/kap05-operator-coach-v1.alt.md`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-04 | Kapittel 4 | FERDIG – Ferdigstilte immersivt beslutningsrom med operasjonsarkitektur, laboratoriepakke og metadata for figuren `kap04-immersiv-beslutning-v1`. | `chapters/kapittel04-simulering.tex`, `support/notater/kap04-immersiv-case.md`, `support/illustrasjonsplan.md`, `support/figurer/metadata/kap04-immersiv-beslutning-v1.alt.md`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
@@ -54,7 +55,6 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 | DT-BUG-01 | Kapittel 1–3 | FERDIG – Rettet TikZ-stier for kapittel 1–3 slik at figurfilene hentes fra `support/figurer/kilder/`. | `chapters/kapittel01-introduksjon.tex`, `chapters/kapittel02-systemtenkning.tex`, `chapters/kapittel03-data.tex`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-FIG-01 | Kapittel 1 | FERDIG – Tidslinjefiguren er produsert som to-spors TikZ-grafikk med sektorikoner og legende for fagfellepakke. | `support/figurer/kilder/kap01-tidslinje-v1.tikz`, `plan.md`, `completed_tasks.md` |
 | DT-OPS-02 | Oppgavestruktur | FERDIG – Etablerte månedlig revisjonsrutine for tavle og arbeidsliste med sjekkliste og fasetidslinje. | `support/oppgavetavle.md`, `plan.md`, `completed_tasks.md` |
-| DT-11 | Kapittel 2 | FERDIG – Utvidet modelleringskapittelet med flerfidelitetscase, metodetabeller og dokumentasjonskrav. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `support/referanser.bib` |
 | DT-08 | Kapittel 8 | FERDIG – Prioriterte pilotcase, etablerte dataspace-tilganger og oppdaterte sektoravsnitt etter fagfellefeedback. | `chapters/kapittel08-case.tex`, `support/notater/pilotundervisning-materiell.md`, `plan.md` |
 | DT-06 | Kapittel 6 | FERDIG – Integrerte NIS2/IEC 62443-tiltak, oppdatert sjekklister og referanser. | `chapters/kapittel06-validering.tex`, `support/referanser.bib`, `plan.md` |
 | DT-05 | Kapittel 5 | FERDIG – Innarbeidet generative og edge-baserte tiltak, utvidet vurderingsmatrise og pilotkrav. | `chapters/kapittel05-ai.tex`, `support/referanser.bib`, `plan.md` |
