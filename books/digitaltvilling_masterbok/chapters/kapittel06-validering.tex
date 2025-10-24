@@ -207,6 +207,51 @@ En helhetlig arbeidsflyt sikrer at usikkerhet håndteres systematisk i DevOps-pr
 
 Robust design handler også om å gjøre tvillingen og den fysiske prosessen motstandsdyktig mot feil. Dette omfatter redundante sensorer, feiltolerante algoritmer og beredskapsprosedyrer når modellen oppdager avvik. I industrielle DevOps-team betyr det at valideringsresultater må integreres i sprint- og releaseritualer, slik at usikkerhet blir aktivt styrt og ikke bare rapportert. Til slutt bør innsikt fra kontrolltårn-caset brukes som treningsgrunnlag for både operatører og ledelse.
 
+\section{Valideringslaboratorium for dataspace-integrerte tvillinger}
+Norske virksomheter som deler data gjennom dataspace-økosystemer trenger et valideringslaboratorium som kombinerer modelltester, sikkerhetskontroller og styring av datakontrakter. \citet{sintef2021digital} viser at industripartnere lykkes best når laboratoriet gjenskaper hele kjeden fra sensorer til beslutningsstøtte før løsningen flyttes til produksjon. I dataspace-konteksten betyr det å kunne koble sammen deltagernes connectorer, verifisere delingsregler og teste hvordan tvillingen reagerer på både syntetiske og reelle avvik. Derfor bør laboratoriet ha et eget dataspace-domene med felles policyer, slik \citet{idsa2023operational} anbefaler, samtidig som tillitsmekanismene fra Gaia-X sitt rammeverk brukes til å dokumentere identitet, sertifisering og etterlevelse.\citep{gaiax2023architecture}
+
+\subsection{Designprinsipper for laboratoriet}
+Et helhetlig laboratorium bør bygges rundt fire designprinsipper:
+\begin{enumerate}
+    \item \textbf{Dataspace som testbenk:} Sett opp et isolert dataspace-miljø med egen katalog, policy-håndhevelse og logganalyse slik at kontrakter og konnektorer kan valideres uten å påvirke produksjonssystemer.\citep{idsa2023operational}
+    \item \textbf{Reelle driftsdata med styrt anonymisering:} Bruk delmengder av faktiske datastrømmer fra energi, helse eller mobilitet, men koble dem til anonymiserings- og datakvalitetsrutiner slik \citet{digdir2024sanntidsdata} beskriver for offentlig sektor.
+    \item \textbf{Scenario- og stresstesting:} Kombiner modellscenarier, Monte Carlo-kjøringer og hendelsessimuleringer for å teste hvordan tvillingen reagerer på avvik i både data og algoritmer. Resultatene kobles direkte til indikatorpanelet i Kapittel~5.
+    \item \textbf{Dokumentert sporbarhet:} Integrer kvalitetsjournalen, hendelsesloggen og dataspace-kontraktene slik at hvert teststeg kan spores fra krav i \citet{gaiax2023architecture} til beslutninger i styringsmodellen i Kapittel~7.
+\end{enumerate}
+
+\subsection{Testpakker og leveranser}
+Tabell~\ref{tab:dataspace-lab} viser en anbefalt struktur for testpakker i laboratoriet. Pakken gjør det mulig å koble dataspace-krav til modelltester og operativ beredskap før løsningen settes i drift.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Testpakker i valideringslaboratorium for dataspace-integrerte tvillinger}
+    \label{tab:dataspace-lab}
+    \begin{tabular}{|p{3.4cm}|p{4.6cm}|p{4.6cm}|p{2.8cm}|}
+        \hline
+        \textbf{Testpakke} & \textbf{Formål} & \textbf{Dataspace-koblinger} & \textbf{Resultater og gjenbruk} \\
+        \hline
+        Inntaks- og katalogtest & Verifisere at datasett, metadata og tilgangspolicyer følger IDS-krav før onboarding. & Katalogsynkronisering, policy-håndhevelse og connector-autentisering i henhold til \citet{idsa2023operational}. & Godkjente datasett med sporbar behandlingslogg, klar for bruk i kapittel 3 og 5. \\
+        \hline
+        Sanntidsstresstest & Teste hvor raskt tvillingen reagerer på sensoravvik, latency og datatap. & Simulerte streaming-kanaler og hendelsesvarsler etter anbefalingene i \citet{digdir2024sanntidsdata}. & Oppdatert overvåkingspanel, terskler og fallback-strategier til kontrolltårn-caset. \\
+        \hline
+        Tillits- og etterlevelsespakke & Bekrefte at identitet, sertifikater og rapporteringskrav i dataspace oppfylles. & Gaia-X trustrammeverk, verifiserte attestasjonsprofiler og delingsavtaler.\citep{gaiax2023architecture} & Revisorpakke med sjekklister til kvalitetsjournal og rapporteringsløp i dette kapittelet. \\
+        \hline
+        Samspill mellom tvillinger & Øve på tverrsektorielle scenarier (helse og energi) med delte indikatorer og tiltak. & Kombinerte datakontrakter og kontrolltårn-visninger, styrt av samarbeidsmodellen i \citet{sintef2021digital}. & Scenariojournal som gjenbrukes i caseopplegget i Kapittel~8 og lærerveiledningen. \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Gjennomføring i kurslaboratoriet}
+For å bruke laboratoriet i undervisningen kan masterstudentene følge fire arbeidspakker som knytter dataspace og validering sammen:
+\begin{enumerate}
+    \item \textbf{Planlegg testløpet:} Studentene lager et valideringskart som kobler dataspace-kontrakter til indikatorer, og registrerer hypoteser i kvalitetsjournalen.
+    \item \textbf{Konfigurer connectorer og policyer:} Hver gruppe setter opp en IDS-konnektor med minimum én delingspolicy og demonstrerer at dataflyten loggeres med korrekte tidsstempler.\citep{idsa2023operational}
+    \item \textbf{Kjør testpakker:} Gruppene gjennomfører tabellens tre første pakker og dokumenterer avvik, ytelse og forbedringstiltak med referanse til kontrolltårn-panelet og usikkerhetsanalysen.
+    \item \textbf{Evaluer og dele erfaringer:} Resultatene deles i en fagfellesesjon der læringspunkter mates inn i planfilen, og forbedringstiltak prioriteres i styringsmodellen fra Kapittel~7.
+\end{enumerate}
+
+Laboratoriet gjør det enklere å koble dataspace-styring og modellkvalitet til konkrete leveranser i DevOps-løpet. Når caseopplegget brukes i fagfelleplanen, kan industripartnerne bidra med realistiske scenarier samtidig som studentene får praktisk trening i dokumentert etterlevelse.
+
 \section{Sertifiseringsløp og kvalitetsjournal}
 Et tydelig sertifiseringsløp gjør det mulig å dokumentere at tvillingen holder et konsekvent kvalitetsnivå gjennom hele livssyklusen. \citet{dnv2023digitalassurance} anbefaler at prosjekteier etablerer et rammeverk som kobler risikovurderinger, testregimer og ansvarslinjer. Dette kan struktureres som en trinnvis modenhetsstige der hvert steg utløser nye revisjoner og beslutninger før funksjoner settes i drift. I tillegg fremhever \citet{iso2020tr24028} at tillitskriterier må dekke både tekniske egenskaper (robusthet, sikkerhet, personvern) og organisatoriske forhold (kompetanse, ansvar, prosesskontroll).
 
