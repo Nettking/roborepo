@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-43: Dokumenterte adaptiv AI-styring for havbrukstvillinger med tiltakstabell og modelljournal-anbefaling, oppdaterte plan- og tavlefiler og registrerte nye kilder for sjømatnæringen. (`chapters/kapittel05-ai.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-42: Tolket AI-forordningens høyrisiko-krav for helsetvillingene, etablerte tiltaks- og ansvarstabell, beskrev laboratorieopplegg for etterlevelse og oppdaterte plan- og statusfiler. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-41: Dokumenterte regulatorisk sandkasse og tredjepartsrevisjon for helsesektorens digitale tvillinger med arbeidsflyt, leveransetabell og kildeoppdateringer. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-40: Dokumenterte prediktivt vedlikehold for kraftsystemets AI-tvillinger med eksempel fra Statnett og Equinor, etablerte vedlikeholdstabell i kapittelteksten og oppdaterte plan- og arbeidsfiler. (`chapters/kapittel05-ai.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md`)
