@@ -85,6 +85,30 @@ Tabell~\ref{tab:kontrollpunkter-generativ} viser hvordan styringen kan dokumente
 
 Denne styringsrammen gjør det enklere å argumentere for generativt databruk overfor juridiske og etiske vurderinger. Studentteam kan bruke tabellen som sjekkliste i prosjektgjennomgangen og som vedlegg når rubrikken fra lærerveiledningen skal dokumenteres.
 
+\subsection{AI-koordinerte beredskapsverksteder}
+Scenarioverksteder er en sentral arena for å teste beslutninger i kritiske tjenester før de tas i bruk. Når generative modeller og sanntidsdata knyttes til tvillingen kan verkstedet kombinere tabletop-øvelser, simuleringer og kontrolltårn-visualiseringer slik at ledelse og fagpersoner får felles situasjonsforståelse.\citep{dsb2024nser,statnett2024kontrolltarn} I praksis betyr det at AI-komponentene genererer alternative hendelsesforløp, gir forslag til tiltak og oppdaterer indikatorer i kontrolltavlen samtidig som deltakere vurderer konsekvensene manuelt. Verkstedet bør planlegges sammen med kvalitetsjournalen i Kapittel~6 slik at læringspunkter, avvik og forbedringstiltak loggføres og kan følges opp i tiltaksloggen i Kapittel~7.\citep{dnv2023digitalassurance}
+
+For å sikre styring krever fagfellepanelet at hvert verksted beskriver roller, datakilder og beslutningsporter. Tabell~\ref{tab:beredskapsverksted-ai} viser hvordan forberedelse, gjennomføring og etterarbeid kan dokumenteres i prosjektlogg eller fagfellelogg. Kolonnene binder AI-støtten til hvilke dokumenter som må oppdateres og hvilke indikatorer som må følges opp i etterkant.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Struktur for AI-støttede beredskapsverksteder}
+    \label{tab:beredskapsverksted-ai}
+    \begin{tabular}{p{3.2cm}p{4.2cm}p{4.0cm}p{4.0cm}}
+        \toprule
+        \textbf{Fase} & \textbf{AI-støtte og datagrunnlag} & \textbf{Dokumentasjon og styringsartefakter} & \textbf{Indikatoroppfølging} \\
+        \midrule
+        Planlegging & Generative scenarioer basert på historikk, risikoanalyser og syntetiske datasett.\citep{bommasani2021opportunities,nsm2023grunnprinsipper} & Scenarioark, deltagelister, kontrolltårnkonfigurasjon og godkjent mandat. & Dekning av kritiske scenarioer, oppdaterte risikomatriser og test av varselsgrenser. \\
+        \addlinespace
+        Gjennomføring & LLM-assistenter foreslår tiltak, edge-modeller overvåker responstid og kapasitet.\citep{massterly2023operations,shi2016edge} & Kvalitetsjournal fra Kapittel~6, logg for manuelle beslutninger og sjekkliste for etterlevelse av NIS2/IEC~62443.\citep{eu2022nis2,iec62443-2-1} & Responstid på hendelser, avvik i modellprediksjoner og antall tiltak som krever manuell overstyring. \\
+        \addlinespace
+        Etterarbeid & AI-oppsummeringer grupperer læringspunkter, anbefalinger og databehov for neste sprint.\citep{digitalnorway2024dataspace} & Tiltakslogg fra Kapittel~7, oppdatert gevinstplan og revisjonsrapport til styringsrådet. & Lukket/åpent avvik, oppdatert modenhetsscore og sporing av forbedringstiltak. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Når tabellen brukes som arbeidsark får studentgrupper et felles språk for å beskrive hvordan generative verktøy støtter beredskapsplanlegging uten å redusere menneskelig kontroll. Verkstedet skal avsluttes med en vurdering mot guardrail-sjekklisten og kontrollpunktene i Kapittel~6 slik at både tekniske og organisatoriske tiltak dokumenteres før videre pilotering.\citep{eu2024aiact,dfo2024internkontroll}
+
 \subsection{Guardrails for generative tvillinger og syntetiske data}
 For å møte kravene i AI-forordningen og nasjonale styringsstandarder må laboratoriet etablere guardrails som hindrer at generative tvillinger introduserer uønsket risiko eller lovbrudd.\citep{eu2024aiact,dfo2024internkontroll} Guardrailsene gjør det tydelig hvilke datakilder som er tillatt, hvordan modellene skal testes og hvem som kan godkjenne endringer før de påvirker drift. Erfaring fra norske pilotprosjekter viser at guardrails må beskrive både tekniske sperrer og beslutningspunkter som kan dokumenteres i kvalitetsjournalen fra Kapittel~6.
 
