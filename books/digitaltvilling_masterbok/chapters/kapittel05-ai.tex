@@ -119,6 +119,34 @@ Tabell~\ref{tab:llm-assistent-evaluering} oppsummerer hvordan operatørassistent
 
 Ved å innføre disse kriteriene kan programledelsen tydelig vise hvordan LLM-assistenten støtter både sikker drift og læringsmål. Studentteam får samtidig et rammeverk for å beskrive generativ AI i prosjektoppgavene og kan peke på hvilke beslutningsfora som må involveres før automatisering tas videre.
 
+\subsection{Kommunale læringssløyfer for byggdrift}
+Kommunesektoren bruker digitale tvillinger til å koordinere energioppfølging, vedlikehold og klimaoppfølging på tvers av store eiendomsporteføljer.\citep{ks2024eiendomsdrift} For å lykkes må AI-komponentene integreres i etablerte byggdriftsprosesser og støtte rapportering til politiske beslutningsorgan. Statsbyggs modenhetskart viser at kommunale eiendomsforvaltere etterspør mekanismer for å kombinere sensorstrømmer, tiltakslogg og gevinstoppfølging i samme arbeidsflate.\citep{statsbygg2023digitalmodenhet} Læringssløyfer må derfor planlegges som en forlengelse av dataspace-arkitekturen i Kapittel~3 og aktiveres gjennom styringsportene i Kapittel~7.
+
+En praktisk implementering starter med å definere hvordan rådata fra SD-anlegg, energimålere og tilsynsrapporter strømmer inn i modelljournalen. Deretter etableres et modellbibliotek som inneholder både prediktive energimodeller og klassifiseringsmodeller for avvik. Hver modellversjon kobles til målte indikatorer for energi, inneklima og vedlikehold slik at forbedringer kan dokumenteres i gevinstplanen. Kommuner som følger KS sin veileder anbefaler at datastrømmer merkes med opprinnelse og kvalitetsstatus, og at avvik automatisk logger tiltak som kan sendes til leverandør eller intern drift.\citep{ks2024eiendomsdrift}
+
+Tabell~\ref{tab:kap05-kommunal-laringshoyde} oppsummerer et forslag til læringssløyfe for kommunale byggtvillinger. Kolonnene viser hvordan AI-komponenter, styringsartefakter og indikatorer henger sammen slik at både tekniske og politiske mål blir ivaretatt. Tabellen fungerer som arbeidsark i masterkurset når studentgrupper planlegger samarbeid med eiendomsforvaltningen.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Læringssløyfe for kommunale byggtvillinger}
+    \label{tab:kap05-kommunal-laringshoyde}
+    \begin{tabular}{p{0.24\textwidth}p{0.30\textwidth}p{0.18\textwidth}p{0.22\textwidth}}
+        \toprule
+        \textbf{Fase} & \textbf{AI-komponenter og datagrunnlag} & \textbf{Styringsartefakter} & \textbf{Indikatorer}\\
+        \midrule
+        Datainnsamling og kontroll & SD-anlegg, IoT-sensorer og byggjournal som valideres mot dataspace-regler. & Datakvalitetslogg og målerverifikasjon fra Kapittel~3. & Datakompletthet, avviksrate og tilgjengelighet.\\
+        \addlinespace
+        Modellering og analyse & Prediktive energimodeller, feilklassifisering og inneklimaprognoser. & Modelljournal og revisjonsspor fra AI-rubrikken. & Energibruk per m$^2$, temperaturavvik og komfortscore.\\
+        \addlinespace
+        Tiltak og gjennomføring & Optimaliseringsmoduler for driftstider, vedlikeholdsplaner og leverandørvarsler. & Tiltakslogg og ansvarsfordeling fra Kapittel~7. & Forventet OPEX-reduksjon, oppetid og gjennomføringstid.\\
+        \addlinespace
+        Rapportering og læring & Automatiserte dashboards og gevinstrapporter i kontrolltårnet. & Gevinstplan, klima- og budsjettoppfølging etter \citeauthor{digdir2022gevinst}. & CO$_2$-reduksjon, budsjettavvik og tilfredshetsmåling.\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Når sløyfen er etablert må kommunene planlegge hvordan nye datakilder og modeller introduseres uten å skape teknisk gjeld. En anbefaling er å kombinere kvartalsvise læringsmøter med automatiske varselgrenser fra kontrolltårnet, slik at fagansvarlige kan beslutte om modellen skal retrenes, oppdateres eller fases ut. Erfaringene fra Statsbyggs modenhetsprogram viser at tydelig rollefordeling mellom eiendomsforvaltning, IT og bærekraft gir raskere gevinstrealisering og øker sannsynligheten for at tiltakene blir gjennomført.\citep{statsbygg2023digitalmodenhet,digdir2022gevinst}
+
 \subsection{Koordinerende multi-agent tvillinger}
 Når digitale tvillinger skal ta beslutninger på tvers av en hel verdikjede, er en enkelt modell sjelden tilstrekkelig. Multi-agent forsterkende læring gjør det mulig å kombinere flere beslutningstakere som forhandler om ressurser, tid og risiko samtidig.\citep{zhang2021multiagent} I praksis betyr det at en kontrolltårn-agent, en logistikk-agent og en bærekrafts-agent lærer samhandlingsstrategier der belønningene balanserer produksjon, sikkerhet og klimaavtrykk. For å unngå at agentene overstyrer hverandre, bør de trenes i en felles simuleringssløyfe fra Kapittel~4 der constraints fra fysiske modeller ligger til grunn.
 
