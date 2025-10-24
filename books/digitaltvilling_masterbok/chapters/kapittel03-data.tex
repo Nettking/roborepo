@@ -233,6 +233,48 @@ kapittel~6 og gevinstplanene i kapittel~7:
 Caset gir studentene innsikt i hvordan datasamarbeid gir konkrete tiltak for bylogistikk, samtidig som det viser hvordan
 dataspace-løsninger må koordineres med juridiske krav, indikatorarbeid og de tverrsektorielle casene i kapittel~8.
 
+\subsection{Driftsrammeverk og hendelseshåndtering i dataspace}
+Når flere virksomheter deler tvillingdata gjennom et dataspace, må drift og hendelseshåndtering organiseres som en felles
+tjeneste. IDS-operasjonshåndboken anbefaler å definere operative roller, varslingsregler og sporbarhet i samme
+styringssystem som benyttes for sikkerhet og kvalitet \citep{idsa2023operational}. Digitaliseringsdirektoratet legger
+til grunn at offentlige aktører skal kunne dokumentere hvordan sanntidsdata stanses eller filtreres ved avvik, og at
+hendelsesloggen deles med partnere som påvirkes \citep{digdir2024sanntidsdata}. For norske dataspace-piloter betyr det at
+kontrolltårnene i kapittel~6 må ha en tydelig kobling til dataspace-operatøren, slik at tiltak og varsler oppdateres i samme
+beslutningslogg.
+
+Tabell~\ref{tab:kap03-dataspace-drift} gir et utgangspunkt for driftstavlen i masterkurset. Den fungerer som sjekkliste når
+studentgrupper setter opp samarbeidsavtaler mellom dataspace-operatør, datasettleverandører og kontrolltårnteam.
+
+\begin{table}[ht]
+    \centering
+    \caption{Operativ tavle for dataspace-tvillinger i norske pilotprosjekter.}
+    \label{tab:kap03-dataspace-drift}
+    \begin{tabular}{p{0.24\textwidth}p{0.40\textwidth}p{0.24\textwidth}}
+        \toprule
+        \textbf{Scenario} & \textbf{Varslings- og tiltaksspor} & \textbf{Kobling til kapittel 6} \\
+        \midrule
+        Kvalitetssvikt i sanntidsstrøm & Automatisk stopp i konnektor, varsle datasettansvarlig og publisere avvik i dataspace-logger. & Oppdaterer tillitspanel og hendelseslogg i kontrolltårnseksjonen. \\
+        Uautorisert datapågang & Policy-motor sperrer tilkoblingen, sikkerhetsteamet aktiverer beredskapsprosess og registrerer hendelsen. & Viser sporbarhet til NIS2-kravene og responsflyten i valideringskapittelet. \\
+        Endring i modellversjon & Dataspace-operatør sender endringsvarsel til alle forbrukere og krever sign-off før distribusjon fortsetter. & Knyttes til kvalitetsjournal og driftsgodkjenning for modellvedlikehold. \\
+        Planlagt vedlikehold & Publiser vedlikeholdsvindu i katalogen, rute trafikk til syntetiske datasett og oppdatere statusdashboard. & Sikrer at kontrolltårn-planer og beredskapsøvelser bruker samme tidsplan. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+For å bruke tabellen i praksis anbefales følgende arbeidsflyt:
+\begin{enumerate}
+    \item \textbf{Felles driftsmøte hver måned:} Dataspace-operatøren, kontrolltårnteamet og datasettleverandørene går gjennom
+    kommende endringer og avvik, og oppdaterer tiltakene i tabellen. Referat lenkes til fagfelleloggen.
+    \item \textbf{Hendelsesøvelser:} Studentgrupper kjører miniscenarioer der de simulerer datatap, policy-brudd eller modellendringer.
+    Øvelsene loggføres i samme kvalitetsjournal som beskrives i kapittel~6.
+    \item \textbf{Tilbakemelding til dataspace-design:} Erfaringene brukes til å forbedre kontrakter, indikatorer og
+    observabilitetsdashbordene som allerede er beskrevet i dette kapittelet.
+\end{enumerate}
+
+\paragraph{Leveransekrav i masterkurset.} Når oppgaven brukes i undervisning, skal gruppene levere en kort driftshåndbok som
+viser hvordan varslingsreglene implementeres i dataspace-konfiguratoren, og hvordan kontrolltårn-panelet i kapittel~6
+oppdateres. Dokumentasjonen må inneholde lenker til hendelsesloggen, kontaktpunkter og beslutningsreferat.
+
 \section{Sirkulære materialstrømmer og klimaregnskap}
 Sirkulærøkonomi krever at ressursdata knyttes tett til beslutningsprosesser for innkjøp, drift og avvikling. \citet{norskindustri2023sirkular}
 peker på at digitale tvillinger gjør det mulig å følge materialstrømmer i sanntid, mens \citet{miljodir2023materialstrommer} framhever

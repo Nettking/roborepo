@@ -27,6 +27,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-36 | Kapittel 3 | FERDIG – Etablerte driftsrammeverk for dataspace-tvillinger med hendelseshåndteringstabell, og oppdaterte plan-, tavle- og kildefiler. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-35 | Kapittel 3 | FERDIG – Dokumenterte mobilitetsdataspace for bylogistikk med styrings- og indikatorpakke, og oppdaterte plan-, tavle- og kildefiler. | `chapters/kapittel03-data.tex`, `plan.md`, `support/referanser.bib`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-34 | Appendiks | FERDIG – Etablerte sektorvis regelverksoversikt i appendiks og oppdaterte plan- og statusfiler. | `chapters/appendiks.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-33 | Kapittel 6 | FERDIG – La til AI-forordningens styringspakke med tiltakstabell, styringsprosess og oppdatert bibliografi for helsesektorens tvillinger. | `chapters/kapittel06-validering.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
