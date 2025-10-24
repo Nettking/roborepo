@@ -170,6 +170,49 @@ Ved å dokumentere co-design-arbeidet på denne måten kan kapittelet kobles tet
     \label{fig:kap04-beredskap-case}
 \end{figure}
 
+\section{Digital tvilling for havbruk og kystsoneforvaltning}
+Havbruk er en av Norges største eksportnæringer, men sektoren står i økende grad overfor krav om bærekraft, biosikkerhet og koordinering med andre kystaktiviteter. Digitale tvillinger gjør det mulig å simulere hvordan biomasse, fôrlogistikk, strømforhold og miljøpåvirkning henger sammen, samtidig som data kan deles kontrollert med forvaltning og forskningspartnere gjennom dataspace-arkitekturen fra kapittel~3.\citep{sintef2023havbrukstvilling}
+
+\subsection{Systemgrenser og datakilder}
+For å få et realistisk havbruksscenario må tvillingen omfatte både merden, servicelogistikken og omgivelsene som påvirker produksjonen. Grunnlaget hentes fra sanntids sensorer (strømmålere, kameradata, oksygen), fôringssystemer, miljøovervåking og offentlig åpne datasett for kystsoneplanlegging. Datastrømmene pakkes i dataprodukter slik at både operatører og myndigheter kan hente nødvendig kontekst før de beslutter tiltak. Tabell~\ref{tab:kap04-havbruk-data} viser et forslag til hvordan data og styringskoblinger kan struktureres i caset.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Datakilder og styringskoblinger i et havbruksscenario}
+    \label{tab:kap04-havbruk-data}
+    \begin{tabular}{p{0.26\textwidth}p{0.42\textwidth}p{0.26\textwidth}}
+        \toprule
+        \textbf{Område} & \textbf{Nøkkeldatakilder} & \textbf{Kobling til styring}\\
+        \midrule
+        Biomasse og fiskevelferd & Kameradata for biomassemåling, fôrkonsum, lusetelling og helserapporter. & Valideringsjournal i kapittel~6 og tiltakslogg for biosikkerhet.\\
+        Miljø og utslipp & Strømmodeller, oksygen, temperatur og partikkelspredning fra hydrodynamiske simuleringer. & Klimapanel i kapittel~7 og sirkulærindikatorer for bærekraft.\\
+        Logistikk og drift & Planlagte servicefartøy, sensorlogistikk, vedlikeholdsordre og adgangskontroll. & Dataspace-kontrakter i kapittel~3 og gevinstplan for driftseffektivitet.\\
+        Kystsoneforvaltning & Arealplan, naturmangfoldkart og trafikksoner fra offentlige databaser. & Samstyring med kommunale myndigheter og risikotabeller i kapittel~8.\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Når datagrunnlaget organiseres på denne måten kan studentene bruke modelljournalen til å beskrive hvilke parametre som må kalibreres før scenariene kjøres. DevOps- og miljøteamene får samtidig oversikt over hvilke datakilder som må kvalitetssikres før innsikt deles i fagfelleløpet.
+
+\subsection{Biosikkerhet og miljøindikatorer}
+Biosikkerhetskrav fra Fiskeridirektoratet og Mattilsynet tilsier at lusepåslag, sykdomsindikatorer og utslippsgrenser må overvåkes kontinuerlig.\citep{fiskeridirektoratet2024biosikkerhet,mattilsynet2023lusestrategi} I tvillingen kan slike indikatorer modelleres som terskler som utløser tiltak i kontrolltårnet. En praktisk fremgangsmåte er å kombinere følgende kontroller:
+\begin{itemize}
+    \item \textbf{Forebygging:} Simuler effekten av notspyling, rensefisk og lusefeller for ulike temperatur- og strømforhold, og koble resultatene til indikatorpanelet i kapittel~6.
+    \item \textbf{Respons:} Lag beredskapsscenarier for sykdomsutbrudd der tiltak loggføres i samme tiltakslogg som energicase i kapittel~7.
+    \item \textbf{Rapportering:} Eksporter nøkkeltall for utslipp, biomasse og velferd til dataspace-aktører som fylkeskommunen og forskningspartnere i tråd med personvernkravene i kapittel~3.
+\end{itemize}
+Denne strukturen gjør det mulig å vise hvordan simulering, validering og governance henger sammen i et sektorcaset som er svært relevant for norsk næringsliv.
+
+\subsection{Arbeidsflyt for masterkurset}
+For å bruke havbrukscaset i undervisningen kan læringsaktiviteten deles i tre økter som bygger på de eksisterende læringsmålene i kapittelet:
+\begin{enumerate}
+    \item \textbf{Scenarioverksted:} Studentgrupper kartlegger databehov og definerer hvilke indikatorer som skal visualiseres i kontrolltårn og AR/VR-løsninger, med støtte fra sjekklistene i kapittel~5 og kapittel~6.
+    \item \textbf{Simulering og analyse:} Gruppene kjører hydrodynamiske og agentbaserte modeller for å teste fôrstrategi, biosikkerhet og kystkonflikter. Resultatene dokumenteres i modelljournalen med referanser til dataspace-kontraktene.
+    \item \textbf{Rapportering og gevinst:} Indikatorene kobles til bærekraftspanelet i kapittel~7 og casen i kapittel~8, og det utarbeides et tiltaksnotat for fagfellepresentasjonen.
+\end{enumerate}
+
+\paragraph{Leveranser til fagfelleløpet.} Hver gruppe bør levere en kort rapport som beskriver datainnsamling, modelloppsett, biosikkerhetstiltak og anbefalinger for videre pilotering. Rapporten skal kobles til referansematerialet i støttebiblioteket, inkludert illustrasjonsplanen dersom det bestilles visualiseringer.
+
 \section{Hydrogenknutepunkt for energi- og beredskapssamarbeid}
 Etablering av hydrogenknutepunkt langs norskekysten krever simuleringer som koordinerer elektrolysører, lagring, distribusjon og havnens logistikk i én helhetlig modell. En digital tvilling for knutepunktet må håndtere energibalansen mellom produksjon, lokal bruk og eksport, samtidig som sikkerhetstiltak og beredskapsplaner oppfyller krav fra både energimyndigheter og havnesektoren \citep{enova2024hydrogenknutepunkt,gassco2023hydrogen}. Scenarioarbeidet i dette kapittelet bygger videre på læringsmålene om å kombinere simulering, dataspace og validering, og gir studentene et konkret case som binder kapitlene om data, validering og gevinststyring tett sammen.
 
