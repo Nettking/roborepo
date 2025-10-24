@@ -15,7 +15,7 @@ Denne planen beskriver en anbefalt progresjon både for utvikling av innhold og 
 | II | Kapittel 6 | Helhetlig utkast om validering, usikkerhet, etikk og regulatoriske krav (NIS2, IEC 62443). | Pilotere standardkartet og kontrolltårn-caset i kurslaboratoriet, og samle erfaringer med usikkerhetsarbeidsflyten før fagfelleløpet. |
 | III | Kapittel 7 | Helhetlig utkast med livssyklus, governance, RACI-eksempel og ny figur for styringssløyfer. | Pilotere livssyklusfortellingene, governance-sammenligningen og bærekraft-KPI-tabellene i intervjuer og oppdatere fagfellelogg med læringspunkter. |
 | III | Kapittel 8 | Utdypet med maler for havvind, landbruk og batteri samt tabeller for datakilder, styring og indikatorer. | Pilotere casemalene i fagfelleworkshop, samle tilbakemeldinger og supplere kildebank per sektor. |
-| III | Kapittel 9 | Helhetlig utkast om forskningslandskap, teknologitrender og dataspace-samarbeid. | Sammenstill pilotfeedback med forskningsideer, og oppdater bibliografien etter nye kilder. |
+| III | Kapittel 9 | Oppdatert med veikart, finansieringskilder og forskningsdesign-eksempler. | Planlegg fagfellegjennomgang av tabeller og kvalitetssikre kobling mot nye referanser. |
 | Appendiks | Ressurser | Første hele utkast – tabeller og arbeidsmåte skrevet. | Revider etter fagfelleinnspill fra kapitlene. |
 | Appendiks | Arbeidsark | Ny seksjon med maler, arbeidsark og fagfelleklarering i `chapters/appendiks.tex`. | Test arbeidsarkene i pilot og samle fagfelleinnspill før endelig publisering. |
 | Appendiks | Begrepsliste | Første versjon – tabell med sentrale begrep på norsk og engelsk. | Oppdater når nye termer eller presiseringer oppstår under fagfellelesing. |
@@ -137,7 +137,7 @@ Anslagene nedenfor tar utgangspunkt i 400 ord per side og supplerer statusoversi
   2. Identifisere fremvoksende teknologier (generative tvillinger, autonome agentkollektiv, kvanteforsterkede simuleringer).
   3. Utvikle prosjekt- og søknadsidéer som bygger på bokas tidligere kapitler.
 - **Volumbehov:** +11,6 sider (~4 600 ord).
-- **Prioriterte utvidelser:** Lage roadmap med tidshorisonter, beskrive finansieringsmuligheter, og inkludere forskningsdesign-eksempler knyttet til nye teknologier.
+- **Prioriterte utvidelser:** Validere veikart- og finansieringstabellene mot pilotfeedback, koordinere illustrasjonsbehov for dataspace-økosystemet og innhente fagfellekommentarer på forskningsdesign-eksemplene.
 
 ### Appendiks – Ressurser
 - **Ønsket omfang:** 12 sider (~4 800 ord) som kategoriserer verktøy, datasett, nettverk og kurs.
