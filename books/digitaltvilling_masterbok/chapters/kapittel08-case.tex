@@ -190,6 +190,26 @@ Mobilitetstvillingen som utvikles gjennom Ruters mobilitetslab viser hvordan kol
     \item Vurder behovet for syntetiske datasett eller tilgangsstyring før mobilitetscaset deles i undervisning, og registrer tiltak i fagfelleloggen og kvalitetsjournalen.
 \end{itemize}
 
+\paragraph{Gods- og terminaldataspace i Oslofjordregionen}
+Oslo Havn, Bane NORs godsterminaler på Alnabru og Moss havn samarbeider om en felles logistikk-tvilling som følger containere, bulk og prosjektlast gjennom sjø-, bane- og vegtransport.\citep{oslohavn2024digitaltvilling,banenor2024godsnett} Tvillingen kombinerer sanntidsportaler med historiske omlastingsdata slik at terminalplanleggere kan styre kapasitet, miljøavtrykk og beredskap i samme modell. Statens vegvesens godsstrategi og Kystverkets farledsdatabase brukes som grunnlag for scenarier som dekker sesongtopper, ekstreme værhendelser og omkjøring ved hendelser.\citep{svv2023godsstrategi,kystverket2023farled}
+
+\begin{table}[h]
+    \centering
+    \caption{Dataspace-artefakter for gods- og terminaltvillingen i Oslofjordregionen}
+    \label{tab:oslofjord-gods}
+    \begin{tabular}{p{3.5cm}p{4.6cm}p{4.8cm}}
+        \toprule
+        Artefakt & Innhold & Bruksområde i casemalen \\
+        \midrule
+        Integrert lastjournal & Kombinerer sanntidsdata fra port community-systemet, togsporingssignaler og vegsensorer for kritiske terminalsnitt & Dokumenter hvordan datakvalitet og tidsstempling sikrer at avvik oppdages før logistikkflaskehalser oppstår. \\
+        Kapasitets- og energitavle & Viser lagerstatus, strømforbruk og ladeplaner for elektriske maskiner og tunge kjøretøy & Beskriv hvilke indikatorer som kobles til energistyringen i Kapittel~4 og gevinstoppfølgingen i Kapittel~7. \\
+        Sikkerhets- og beredskapsjournal & Samler hendelsesrapporter, farledsdata og ROS-analyser i samme dataspace & Forklar hvordan planleggingsverksteder bruker journalen sammen med valideringsrutinene i Kapittel~6 og krav til beredskapsøvelser. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+For å gjøre caset undervisningsklart bør studentgrupper definere hvordan gods- og passasjerdata skal avgrenses for å ivareta konkurransesensitiv informasjon og sikkerhet. Et anbefalt opplegg er å la gruppene analysere terminalens nullutslippsplaner og beregne klimaeffekter ved å flytte gods fra veg til sjø eller bane, før funnene loggføres i gevinstplanen og tiltaksloggen. Koble også scenarioarbeidet til \autoref{tab:klimacase-leveranser} slik at mobilitetslaben og logistikkaktørene kan planlegge felles milepæler. Når modellen oppdateres, bør planstatus synliggjøre hvordan tiltakene påvirker arbeidsstrømmer i kapittel 3 og 6, inkludert krav til dataeierskap og inspeksjonsrutiner.
+
 \subsection*{Kommunal klimaresiliens og beredskap}
 Oslo VAV har etablert en digital tvilling av vann- og avløpsnettet som kombinerer hydrologiske modeller, sensordata og sanntidsvarsling for å planlegge tiltak mot styrtregn og overvann.\citep{oslovav2023digital} Tvillingen brukes sammen med kommunens overvannsstrategi for å teste konsekvenser av utbygginger, dimensjonere blågrønne tiltak og prioritere investeringer i kulverter og magasiner.\citep{oslo2023overvann} Ved å dokumentere caset kan studentene vise hvordan data fra værstasjoner, trykksensorer og manuelle inspeksjoner gir grunnlag for beslutninger i beredskapsstaber og tekniske etater.
 
