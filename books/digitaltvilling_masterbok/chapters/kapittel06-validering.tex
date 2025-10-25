@@ -150,6 +150,40 @@ Tabell~\ref{tab:dataspaceindikatorer} viser et eksempel på indikatorer som bruk
 
 Ved å bruke indikatorsettet som mal får masterstudentene trening i å kombinere tekniske målinger med styringskrav. Resultatene kan gjenbrukes i fagfellelogg, tiltaksplan og planfil, og gir samtidig dokumentasjon for å flytte sandkasseaktiviteter inn i ordinær drift når kriteriene er oppfylt.
 
+\section{Valideringsprotokoll for energidelingsdataspace}
+Pilotene for energidelingsdataspace i norske borettslag og næringsklynger krever en koordinert valideringsprotokoll som kombinerer nettkapasitetsplanlegging, sanntidsdata og klimaregnskap. \citet{nve2023nettplan} anbefaler at nettselskap og kommuner samkjører modellscenarioer med nettutviklingsplaner, mens \citet{enova2024energiledelse} beskriver hvordan energiledelse og gevinstoppfølging bør dokumenteres for å kvalifisere til støtteordninger. For dataspace-driften må disse kravene kobles til delingsregimene fra \citet{digdir2024sanntidsdata} og styringsprinsippene i \citet{digdir2024datasamarbeid}, slik at studentene får en helhetlig mal for sporbarhet og rapportering.
+
+Valideringsprotokollen bygger videre på indikatorrammen over og gjennomføres i fire repeterende aktiviteter som gjør det mulig å spore både energigevinst og regulatorisk etterlevelse:
+\begin{enumerate}
+    \item \textbf{Forbered fasebaselines:} Tvillingteamet etablerer referansescenarier for produksjon, last og fleksibilitet i samspill med nettselskapets nettplan og kommunens energi- og klimaplaner. Alle forutsetninger lagres i modelljournalen, og fordelingsregler dokumenteres i dataspace-kontraktene.\citep{nve2023nettplan,digdir2024datasamarbeid}
+    \item \textbf{Synkroniser sanntidsdata:} Dataspace-operatøren sikrer at måledata, værprognoser og styringssignaler strømmer med garanti for tidsstempling og kvalitet. Avvik varsles gjennom hendelsesløypen fra \citet{digdir2024sanntidsdata}, og midlertidige tiltak registreres i kontrolltårn-panelet.
+    \item \textbf{Kjør fordelings- og gevinsttester:} Studentene analyserer hvordan ulike fordelingsnøkler påvirker kostnad, CO\textsubscript{2}-reduksjon og lokal effektbelastning. Resultatene vurderes mot indikatorene i kapittel\,7 og energiledelseskravene fra \citet{enova2024energiledelse} før de tas videre til kvartalsrapporten.
+    \item \textbf{Beslutt og journalfør tiltak:} Valideringspanelet godkjenner scenariene som oppfyller både tekniske og regulatoriske krav, og oppdaterer tiltaksplanen med ansvar, tidsfrister og forventet gevinst. Beslutningene deles med dataspace-partnere for å sikre samsvar med klimaregnskap og investeringsplaner.\citep{efrag2023esrs,dfo2023baerekraft}
+\end{enumerate}
+
+Tabell~\ref{tab:energideling-validering} gir studentteamet en sjekkliste for hver fase. Den kobler datagrunnlag, kontroller og leveranser slik at protokollen kan brukes både i laboratoriet og i pilotprosjekter med kommunale og industrielle partnere.
+
+\begin{table}[ht]
+    \centering
+    \caption{Faser og leveranser i valideringsprotokoll for energidelingsdataspace}
+    \label{tab:energideling-validering}
+    \begin{tabular}{|p{2.8cm}|p{4.8cm}|p{4.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Fase} & \textbf{Hovedaktiviteter} & \textbf{Datagrunnlag og kontroller} & \textbf{Nøkkelleveranser} \\
+        \hline
+        Forberedelser & Kartlegg produksjon, lastprofiler og fleksibilitet; avklar fordelingsmodeller med deltakere og nettselskap & Nettplaner, energi- og klimaplaner, dataspace-kontrakter med fordelingsregler \citep{nve2023nettplan,digdir2024datasamarbeid} & Baselinesett i modelljournal, avtalt fordelingsregel og initial gevinstkart \\
+        \hline
+        Datainnsamling & Etabler datastrømmer for måledata og prognoser; overvåk datakvalitet og tidsstempling & Sanntidsstrømmer fra AMS, værdata og styringssignaler med kvalitetssjekker \citep{digdir2024sanntidsdata} & Datakvalitetslogg, hendelsesnotat og oppdatert kontrolltårn-panel \\
+        \hline
+        Analyse & Simuler fordelingsnøkler, beregn gevinst og belastning, og vurder risiko for nettkapasitet og kostnadsfordeling & Modelljournal, gevinstindikatorer og bærekraftsrapportering \citep{enova2024energiledelse,efrag2023esrs} & Analysepakke med scenarioresultater, gevinstvurdering og anbefalinger til valideringspanelet \\
+        \hline
+        Beslutning og oppfølging & Godkjenn scenarier, planlegg tiltak og dokumenter beslutninger for partnere og myndigheter & Tiltakslogg, porteføljestyring og bærekraftsmål i kapittel\,7 \citep{dfo2023baerekraft} & Signert beslutningsprotokoll, oppdatert tiltakslogg og oppsummering til kvartalsrapport \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Når protokollen repeteres hver sprint blir det enklere å dokumentere progresjon og måle effekt av nye styringssignaler eller investeringsbeslutninger. Studentene kan gjenbruke resultatene i kapittel\,3 sitt energidelingscase, knytte gevinstene til porteføljeloggen i kapittel\,7 og sikre at kvartalsrapporten speiler både teknisk kvalitet og samfunnseffekt.
+
 \section{Kvartalsrapport for valideringspanelet}
 Kvalitetsteamet oppsummerer indikatorene i en kvartalsrapport slik at både dataspace-partnere og styringsgrupper ser utviklingen over tid. Rapporten kombinerer tall fra kontrolltårnet, modelljournalen og gevinstplanen, og brukes aktivt når Statsbygg, Bane NOR og Ruter vurderer om pilotene kan skalere videre.\citep{statsbygg2023digitalmodenhet,banenor2024leverandor,ruter2024mobilitetslab} Tallfestingen gjør det enklere for masterstudentene å argumentere for tiltak i tiltaksloggen fra Kapittel~7 og koble funnene til porteføljestyringen.
 
