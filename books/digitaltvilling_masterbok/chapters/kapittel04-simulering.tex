@@ -124,6 +124,37 @@ Som supplement til fjernvarmecaset beskrives en beredskapsøvelse for et norsk p
 
 I støttefilen \textit{kap04-immersiv-case.md} er det lagt inn sjekklister for hvordan en slik øvelse kan gjennomføres i masterkurs, inkludert roller, datakilder og nødvendige simulatorer. Figur~\ref{fig:kap04-beredskap-case} reserverer plass til en illustrasjon som viser koblingen mellom tvilling, AR/VR-grensesnitt og beredskapsprosesser.
 
+\subsection{Simuleringscase: Brannberedskap i historiske trehusmiljøer}
+Tett trehusbebyggelse i byer som Bergen og Trondheim er blant de mest risikoutsatte områdene i Norge når det gjelder brannspredning. \citet{dsb2021trehus} anbefaler at kommuner kombinerer sanntidsinformasjon, risikoanalyser og operative tiltak for å redusere sannsynligheten for storbranner, mens \citet{riksantikvaren2020trehus} etterlyser digital samhandling mellom kulturminneforvaltning og brannvesen. Dette caset bygger en digital tvilling som integrerer værdata, historiske bygningsmodeller, sensorer i tak og loft, samt hydrant- og ressursdata for brann- og redning. Målet er å gi innsatsleder og 110-sentral et felles beslutningsgrunnlag når brann utvikler seg i tette kvartaler.
+
+Tvillingen kombinerer flere simuleringsmetoder: en kontinuerlig varme- og røykmodell beregner spredningshastighet mellom bygninger, diskret hendelsessimulering følger utrykningslogistikk i trange gater, og agentbaserte modeller beskriver evakuering av beboere og turister. Resultatene strømmes til et kontrollrom der indikatorer for responstid, vannforsyning og eksponerte kulturminner visualiseres sammen med anbefalte tiltak. Dataforvaltningen kobles til dataspace-arkitekturen i kapittel~3 slik at sensordata, kulturminneinformasjon og ressursregister deles med riktige rettigheter, mens tiltaksplanen oppdateres i gevinst- og tiltaksloggene i kapittel~7. Hendelser og avvik loggføres i kvalitetsjournalen i kapittel~6 slik at læring fra øvelser og reelle hendelser kan dokumenteres.
+
+Tabell~\ref{tab:kap04-brann-simulering} viser hvordan de viktigste simuleringsmodulene kartlegges for caset. Oppstillingen fungerer som både bestilling til teknologiteamet og sjekkliste for masterstudentenes leveranser.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{p{0.26\textwidth}p{0.40\textwidth}p{0.28\textwidth}}
+        \toprule
+        \textbf{Simuleringsmodul} & \textbf{Formål} & \textbf{Datakilder og indikatorer}\\
+        \midrule
+        Termisk spredningsmodell & Beregne sannsynlig antennelse mellom bygninger og behov for branngater eller skumutlegging. & Værdata, bygningsinformasjon, brennbarhet fra kulturminneregisteret, indikatorer for varmefluks og sannsynlighet for overtenning.\\
+        Utrykningslogistikk & Optimalisere ruting av mannskaper, høyderedskaper og vannforsyning i trange gater. & Kartdata, hydrantregister, posisjonering av ressurser, responstid per lag og utnyttelse av vannkapasitet.\\
+        Evakuerings- og informasjonsflyt & Modellere bevegelsesmønstre for beboere og besøkende samt kommunikasjon via nødvarsel og sensornett. & Befolkningsdata, mobilitetsstatistikk, varslingslogger, indikatorer for evakueringstid og andel varslede husstander.\\
+        Etterkontroll og læring & Dokumentere læringspunkter fra øvelse eller hendelse og synkronisere dem med tiltakslogg. & Kvalitetsjournal, fagfellelogg, indikatorer for lukket tiltak, tid til normalisering og oppdaterte risikoklasser.\\
+        \bottomrule
+    \end{tabular}
+    \caption{Oversikt over kjernekomponenter i brannberedskaps-caset for historiske trehusmiljøer.}
+    \label{tab:kap04-brann-simulering}
+\end{table}
+
+I undervisningen gjennomføres caset som en todelt sprint:
+\begin{enumerate}
+    \item \textbf{Risikoanalyse og modelloppsett:} Studentgrupper importerer grunnlagsdata fra kommunens bygningsregister og kulturminnebase, etablerer termisk modell i simuleringsverktøy og definerer indikatorer for responstid og eksponerte kulturminner. Resultatet dokumenteres i modelljournalen fra kapittel~3 og verifiseres mot anbefalingene i \citet{dsb2021trehus}.
+    \item \textbf{Scenario- og tiltakstest:} Gruppene kjører scenarier for ulike vindretninger, utrykningsmønstre og tilgjengelig vannforsyning. Tiltak loggføres i kvalitetsjournal og tiltakslogg, og evalueringen sammenlignes med samvirkeprinsippene fra \citet{dsb2023samvirke}. Anbefalingene legges inn i gevinstplanen og porteføljestyringen i kapittel~7.
+\end{enumerate}
+
+Caset demonstrerer hvordan digitale tvillinger kan støtte både bevaring av kulturmiljøer og krav til samfunnssikkerhet. Når modellen integreres i dataspace-plattformen fra kapittel~3, kan brannvesenet dele sanntidsinformasjon med vann- og avløp, kulturminneforvaltning og nabokommuner. Dette understøtter også indikatorarbeidet i kapittel~6, der responstid, skadeomfang og læring følges opp i kvartalsrapportene for valideringspanelet.
+
 \subsection{Simuleringscase: Sirkulær avfallslogistikk i Oslo-regionen}
 Kommuner som Oslo har satt ambisiøse mål for ombruk, utslippskutt og materialgjenvinning. En digital tvilling som modellerer avfallsstrømmer, transport og sorteringskapasitet gjør det mulig å teste tiltak på tvers av renovasjonsetat, bygg- og anleggsaktører og gjenbruksnæringen \citep{oslo2023sirkularstrategi,ren2024ressursdataplattform}. Tvillingen kombinerer diskret hendelsessimulering for innsamlingsruter, agentbaserte modeller for brukeratferd og lineær programmering for å balansere kapasitet i sorterings- og materialstrømmer. Resultatene kobles til indikatorpanelet i kapittel~7 slik at effekter på klimaregnskap og ombruk kan vurderes helhetlig.
 
