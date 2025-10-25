@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-112 | Kapittel 8 | FERDIG – Utvidet transport- og logistikkseksjonen med gods- og terminaldataspace-case, tabell for artefakter og undervisningsopplegg som kobler caset til data-, validerings- og gevinstkapitlene, og oppdaterte plan-, tavle- og kildefiler. | `chapters/kapittel08-case.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-111 | Kapittel 8 | FERDIG – Fordypet transport- og logistikkseksjonen med mobilitetsdataspace-beskrivelse, tabell og læringsaktiviteter som kobler caset til data-, validerings- og gevinstkapitlene. | `chapters/kapittel08-case.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-110 | Kapittel 3 | FERDIG – Dokumenterte kommunal overvannsberedskap med datastrømstabell, arbeidsflyt for masterstudenter og koblinger til validerings- og gevinstkapitlene. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-109 | Kapittel 5 | FERDIG – Dokumenterte AI-basert tilstandsoppfølging for kommunale vann- og energinett med arbeidsflyt, indikatorpakke og koblinger til dataspace-, validerings- og gevinstkapitlene, og oppdaterte plan- og tavlefiler for koordinert pilotering. | `chapters/kapittel05-ai.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
