@@ -940,6 +940,40 @@ komponentene oppdaterte \citep{helseplattformen2023kontinuitet}. Et anbefalt lø
 Når denne prosessen er forankret i både teknologi- og klinikkmiljøene, kan helsesektoren bruke digitale tvillinger til å støtte
 koordinert respons ved neste krise samtidig som kontinuerlig drift ivaretas.
 
+\subsection{Case: Velferdsteknologisk dataspace for hjemmeoppfølging}
+Kommuner bygger nå responssentertjenester som kobler trygghetsalarmer, medisinsk avstandsoppfølging og digitale tvillinger av hjemmebaserte tjenester.\citep{helsedir2020dho} For å gi helse- og velferdsteam et felles situasjonsbilde må data fra sensorer, elektronisk pasientjournal og mobile omsorgsløsninger deles gjennom et dataspace som ivaretar både personvern og beredskap.\citep{ks2024responssenter} Tvillingen beregner risiko for forverring, prioriterer hjemmebesøk og dokumenterer tiltak slik at responsteam kan koordinere med fastlege, legevakt og sykehus uten å miste kontroll på tilgangen til sensitive opplysninger.\citep{nhn2024dataspace}
+
+\paragraph{Datastrømmer og styringspunkter.} En velferdsteknologisk dataspace består av flere dataprodukter som må ha klare kontrakter og kvalitetsindikatorer før de tas i bruk i drift. Tabell~\ref{tab:velferd-dataprodukter} viser et minimumssett som kommunale team kan bruke når de etablerer et felles kontrollrom for hjemmeoppfølging.
+
+\begin{table}[ht]
+    \centering
+    \caption{Dataprodukter for velferdsteknologisk dataspace i hjemmebaserte tjenester.}
+    \label{tab:velferd-dataprodukter}
+    \begin{tabular}{p{0.32\textwidth}p{0.38\textwidth}p{0.26\textwidth}}
+        \toprule
+        \textbf{Dataprodukt} & \textbf{Kjerneinnhold og datakilder} & \textbf{Styringskobling} \\
+        \midrule
+        Trygghetsalarm- og sensorstrømmer & Hendelser fra smarthus-sensorer, medisinske målinger og mobile trygghetsalarmer med kvalitetsflagg. & Hendelseslogg og kvalitetsjournal i kapittel~6, varsling til responssenter innen 2 minutter. \\
+        Pleieplan- og oppgavekart & Oppdatert pasientoversikt med vedtak, tiltak og planlagte besøk fra fagsystem og journal. & Gevinst- og porteføljeloggen i kapittel~7, koordinering med bemanningsplan. \\
+        Risiko- og prioriteringsmodell & Modellscore som rangerer pasienter etter klinisk risiko og sosialt støttebehov, bygget på kombinerte sensor- og journaldatasett. & Valideringsprotokoller for kliniske beslutningsstøtter i kapittel~6, sign-off fra ansvarlig lege. \\
+        Samhandlings- og eskaleringslogg & Tidsstempler fra meldingsutveksling med fastleger, legevakt og spesialisthelsetjenesten. & Dataspace-governance fra \autoref{tab:kap03-helse-dataspace}, rapportering til fagfellelogg og kapittel~7. \\
+        Bærekrafts- og gevinstpanel & Aggregert effekt på liggedøgn, hjemmeboende tid og frigjorte årsverk, med kobling til klima- og transportdata. & Gevinstmålingene i kapittel~7 og bærekraftsindikatorene i kapittel~4 og \autoref{tab:kap03-dashboard}. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Dataspace-operatøren må sikre at hvert dataprodukt har definerte eierroller, databehandlingsgrunnlag og terskler for når avvik skal varsles. Dette gjør det mulig å koble alarmstrømmene direkte til hendelsesresponsen i kapittel~6 uten å miste kontekst om vedtak eller planlagte tjenester. Når indikatorer for gevinst og arbeidsbelastning er tilgjengelige i samme tvilling, kan kommunene dokumentere effekten av hjemmeoppfølging i gevinstplanen fra kapittel~7.
+
+\paragraph{Implementering og kvalitetssikring.} Kommuner som tar i bruk digitale tvillinger for hjemmeoppfølging anbefales å jobbe i fire steg:
+\begin{enumerate}
+    \item \textbf{Forankre behandlingsgrunnlag og informasjonsmodeller:} Sikre at pasient- og tjenesteinformasjon følger Normen for informasjonssikkerhet og at datasett beskrives med felles informasjonsmodell for velferdsteknologi.\citep{helsedir2020dho}
+    \item \textbf{Synkroniser responssenter og hjemmebaserte tjenester:} Responssenteret bruker dataspace-konnektorer for å dele alarmdata og tiltakslister i sanntid, mens hjemmebaserte team bekrefter utførte oppgaver via mobile løsninger.\citep{ks2024responssenter}
+    \item \textbf{Valider risiko- og prioriteringsmodeller:} Modellscore testes mot historiske hendelser og kliniske vurderinger før de aktiveres i drift, og dokumenteres i kvalitetsjournalen fra kapittel~6.
+    \item \textbf{Følg opp gevinst og bærekraft:} Måleparametere for selvstendig boende tid, redusert transport og arbeidsbesparelser rapporteres i gevinstloggen. Resultatene deles med politisk nivå og fagfellelogg slik at videre skalering kan planlegges.
+\end{enumerate}
+
+Når dataspace, responssenter og hjemmebaserte tjenester deler samme tvillinggrunnlag, kan kommunene tilby mer helhetlig oppfølging samtidig som de dokumenterer gevinst og etterlevelse. Caset gir også masterstudentene en arena for å koble dataintegrasjon, helsefaglig vurdering og gevinststyring i én sammenhengende øvingsoppgave.
+
 \section{Bærekrafts-dashboard og indikatorstyring}
 For å gjøre bærekraft og klimaeffekter synlige i operative beslutninger bør digitale tvillinger levere dashboards som kombinerer
 miljøindikatorer, energieffektivitet og økonomiske nøkkeltall. Statnett og andre norske infrastruktureiere rapporterer at slike
