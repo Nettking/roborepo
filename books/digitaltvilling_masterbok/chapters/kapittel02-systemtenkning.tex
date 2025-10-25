@@ -318,6 +318,36 @@ Tabell~\ref{tab:kap02-mobilelab} kan brukes som sjekkliste for å holde orden p�
 
 Etter en feltkampanje bør resultatene deles i en felles læringsøkt der driftsorganisasjonen, laboratorieteamet og studentgrupper sammenligner modellprediksjoner med faktiske målinger. Oppfølgingen sikrer at funnene mates inn i valideringsjournalen i kapittel~6 og i gevinstplanene i kapittel~7, og den gjør det enklere å planlegge neste runde med mobile tester.
 
+\subsection{Geodata for kommunale digitale tvillinger}
+Digitale tvillinger i kommunal sektor bygger på et mangfold av geospatiale datakilder som beskriver terreng, bygg, infrastruktur og miljøstatus. Ved å kombinere åpne datasett fra Kartverket og Copernicus-programmet med lokale målinger fra sensornettverk, kan kommuner kontinuerlig kalibrere modellene som brukes til beredskap, eiendomsforvaltning og klimatilpasning.\citep{kartverket2023ndh,copernicus2024handbook}
+
+Før dataene integreres bør teamet avklare hvordan geodata skal harmoniseres mot eksisterende datastrømmer:
+\begin{itemize}
+    \item \textbf{Koordinatsystem og oppløsning}: Sikre at alle datasett reprojiseres til kommunens referansesystem (ofte UTM sone 32 eller 33) og at rutiner for resampling dokumenteres i modelljournalen.
+    \item \textbf{Tidsstempling og versjonskontroll}: Registrer dato for siste oppdatering av ortofoto, høydemodeller og temalag, og lenk revisjonene til endringsloggen i dataspace-plattformen.
+    \item \textbf{Tilgangs- og delingsavtaler}: Avklar hvilke datasett som kan deles åpent, og hvilke som krever avtaler med tekniske etater eller nasjonale myndigheter for å ivareta sikkerhet og personvern.\citep{kartverket2022lisens}
+\end{itemize}
+
+Tabellen under viser et utvalg geodataressurser som ofte brukes i norske kommuneprosjekter, og hvordan de kan kobles til modelleringen fra tidligere seksjoner.
+
+\begin{table}[ht]
+    \centering
+    \caption{Kobling mellom geodata og modelloppgaver i kommunale digitale tvillinger.}
+    \label{tab:kap02-geodata}
+    \begin{tabular}{p{0.23\textwidth}p{0.18\textwidth}p{0.24\textwidth}p{0.27\textwidth}}
+        \toprule
+        \textbf{Datasett} & \textbf{Typisk oppløsning} & \textbf{Bruksområde} & \textbf{Integrasjon i modellarbeidet} \\
+        \midrule
+        Nasjonal detaljert høydemodell (NDH) & 1 m raster & Flom- og overvannsberegninger, skredfare. & Danner grunnlag for mesh i flerfidelitetsmodeller og verifiseres mot feltmålinger fra mobile laboratorier. \\
+        Sentinel-2 multispektrale bilder & 10 m raster & Vegetasjonsanalyse, varmeøyer, overvåking av byggefelt. & Kombineres med datadrevne modeller for å oppdage endringer og trigge ny kalibrering i modelljournalen. \\
+        Kommunale lednings- og byggdatasett & Vektordata & Drift av vann- og avløpsnett, byggforvaltning, energiplanlegging. & Integreres i dataspace-katalogen og kobles til indikatorene i kapittel~6 for samsvars- og risikorapportering. \\
+        Miljøstatusrapporter fra Miljødirektoratet & Punkt- og områdedata & Luftkvalitet, støy, naturmangfold. & Gir grunnlag for scenariokjøringer i kapittel~4 og gevinstoppfølging i kapittel~7. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Ved å beskrive hvordan geodata flyter inn i den digitale tvillingen blir det enklere å samordne innsatsen mellom kommunens geodataforvaltere, tekniske etater og masterstudenter som gjennomfører prosjektoppgaver. Seksjonen kan kombineres med arbeidsarkene i appendiks for å standardisere tilgangskontroll og oppdateringsrytme, og den bør testes i pilotverksteder sammen med kapitlene om validering og gevinstrealisering.
+
 \subsection{Case: Digital tvilling for fjernvarme i Oslo}
 Fortum Oslo Varme har utviklet en digital tvilling for å optimalisere energiproduksjon og distribusjon i fjernvarmenettet.
 Modellen kombinerer hydrauliske ligninger for rørnettet med maskinlæringsmodeller som predikerer varmebehov basert på vær,
