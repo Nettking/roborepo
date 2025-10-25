@@ -56,6 +56,39 @@ Foundation-modeller og andre generative teknikker brukes til å lage scenarioer 
 \subsection{Edge-distribuerte tvillinger}
 Edge-intelligens er nødvendig der beslutninger må tas på millisekunder og nettverkstilkoblingen er begrenset, for eksempel i maritime operasjoner eller energimikrogrids.\citep{shi2016edge} En vanlig arkitektur er å la den sentrale plattformen håndtere langsiktig læring og flåtestyring, mens edge-noder kjører lette versjoner av modellene for lokal optimalisering og avviksdeteksjon. Fagfellepanelet anbefalte at vi beskriver hvordan modellversjoner og dataflyt synkroniseres mellom edge og sky: DevOps-teamet må definere hvilke signaler som trigges ved modellavvik, hvilke målinger som replikkeres tilbake til sentral datasjø, og hvordan sikkerhetsoppdateringer distribueres uten å stoppe produksjonen. Ved pilotering i norsk industri har det vært nyttig å kombinere container-orienterte orkestratorer (for eksempel K3s) med hendelseslogg i datasjøen slik at datagovernance og revisjon kan følge edge-endringene.
 
+\subsection{AI-basert tilstandsoppfølging for kommunale nett}
+Kommunale vann- og energinett opplever økende krav til beredskap, klimaresiliens og energieffektivitet. Digitale tvillinger brukes allerede til å samle geodata, SCADA-signaler og inspeksjonslogg, men fagfellepanelet etterlyste en eksplisitt beskrivelse av hvordan AI-komponentene følger opp tilstand og planlegger tiltak.\citep{norskvann2023digitaltvilling,oslo2023overvann} I praksis kombineres sanntidsmålinger fra sensornoder, historikk fra kontrolltårn og syntetiske scenarier fra overvannslaboratorier for å forutsi lekkasjer, energiavvik og kapasitetsutfordringer.\citep{asplan2023overvannslab} Læringssløyfen må holde tritt med både sesongvariasjoner og hendelser som påvirker forsyningssikkerheten, og derfor må modelljournalen fra Kapittel~3 synkroniseres med indikatorene i Kapittel~6 for å sikre etterprøvbarhet.
+
+AI-tilstandsoppfølgingen organiseres typisk i tre steg som gjør det enkelt å koble teknikk, styring og undervisningsopplegg:
+\begin{enumerate}
+    \item \textbf{Datainnsamling og berikelse}: Sensorstrømmer fra trykk- og temperaturmålere kombineres med værdata, vannstandsprognoser og manuelle inspeksjonsnotater. Datasettet merkes etter samme praksis som dataspace-avtalene i Kapittel~3, slik at kilde, kvalitet og eierskap alltid er dokumentert.
+    \item \textbf{Analyse og læring}: Edge-noder kjører lette anomali-detektorer for å flagge akutte avvik, mens sentrale modeller oppdateres ukentlig med ny data og scenarioresultater. Modellforvaltningsplanen bør følge Statnetts veikart for tvillingmodeller med klare kriterier for retrening og godkjenning.\citep{statnett2023modellforvaltning}
+    \item \textbf{Tiltak og evaluering}: Varsler sendes til beredskaps- og driftsteam, og AI-komponentene foreslår prioriterte tiltak med tilhørende effekt på vannbalanse, energiforbruk og CO\textsubscript{2}-besparelse. Etterarbeidet loggføres i tiltaksloggen i Kapittel~7 og deles i kvartalsmøtene til valideringspanelet.
+\end{enumerate}
+
+Tabell~\ref{tab:indikatorer-vann-energi} viser et indikatorutvalg som binder sammen overvåkingsbehovet fra kapittel~3, kvalitetssporingen i Kapittel~6 og gevinstoppfølgingen i Kapittel~7. Kolonnene er utformet som sjekkliste for studentgrupper som skal analysere datasett i laboratoriet eller forberede kommunale pilotverksteder.
+
+\begin{table}[htbp]
+    \centering
+    \caption{AI-indikatorer for kommunale vann- og energinett}
+    \label{tab:indikatorer-vann-energi}
+    \begin{tabular}{p{3.6cm}p{4.0cm}p{4.2cm}p{3.8cm}}
+        \toprule
+        \textbf{Indikatorområde} & \textbf{AI-støttet beregning} & \textbf{Tiltak og dokumentasjon} & \textbf{Kobling til kapitler} \\
+        \midrule
+        Lekkasjedeteksjon og vannkvalitet & Kombinerer trykkfall, forbruksmønster og værprognoser i forsterkende læring som estimerer sannsynlig lekkasjeplassering. & Hendelseslogg, kartlag og foto dokumenteres i modelljournalen og fagfelleloggen. & Kapittel~3 (datastrømmer), Kapittel~6 (hendelsesjournal). \\
+        \addlinespace
+        Energitap i fjernvarmenett & Edge-modeller estimerer varmetap og pumpeeffekt, mens sentral optimalisering vurderer tiltak for isolasjon og laststyring. & Tiltak registreres i kontrolltårnrapporter og gevinstplan. & Kapittel~4 (simuleringer), Kapittel~7 (gevinststyring). \\
+        \addlinespace
+        Klimatilpasning og kapasitet & Generative scenarier fra overvannslab simulerer ekstremnedbør og kombineres med sanntidsmålinger for å beregne risiko for oversvømmelse og kapasitetsbrudd. & Resultatene inngår i beredskapsplan og øvingslogg, med spor til scenarioark og kontrolltårnkonfigurasjon. & Kapittel~4 (scenarioarbeid), Kapittel~6 (beredskapsøvelser). \\
+        \addlinespace
+        Bærekraft og ressursutnyttelse & KPI-er for vannbalanse, energigjenbruk og CO\textsubscript{2}-reduksjon beregnes med kombinasjon av historiske målinger og syntetiske datasett. & Rapporteres i tiltaksloggen, bærekraftsdashboard og kvartalsrapport for valideringspanelet. & Kapittel~7 (indikatorpanel), Kapittel~9 (innovasjonsprogram). \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Ved å strukturere tilstandsoppfølgingen på denne måten blir det enklere å koble AI-analysene til styringslinjene i kommunen, samtidig som studentgrupper får et konkret rammeverk for å evaluere data, modeller og tiltak. Seksjonen kan brukes som mal for prosjektkontrakter eller fagfellepresentasjoner der vann- og energinett behandles samlet, og gjør det tydelig hvilke kilder som må oppdateres i dataspace, valideringsjournal og gevinstplan før neste revisjon.
+
 \subsection{Styringsramme for generativ dataflyt}
 For å unngå at generativt innhold og edge-modeller skaper uoversiktlige datastrømmer, må laboratorieteamene etablere en styringsramme som spenner fra datamerking til etterlevelsesrapportering. Erfaringer fra Kognitwin og Statnett viser at en delt kontrolltavle gir innsikt i hvilke datapakker som er syntetiske, hvilke som kommer fra edge og hvilke som er revisjonsgodkjent før utrulling.\citep{kongsberg2023kognitwin,statnett2023digital} I praksis organiseres styringen i tre kontrollnivåer:
 \begin{enumerate}
