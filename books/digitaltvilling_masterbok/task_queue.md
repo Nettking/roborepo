@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-110 | Kapittel 3 | FERDIG – Dokumenterte kommunal overvannsberedskap med datastrømstabell, arbeidsflyt for masterstudenter og koblinger til validerings- og gevinstkapitlene. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-109 | Kapittel 5 | FERDIG – Dokumenterte AI-basert tilstandsoppfølging for kommunale vann- og energinett med arbeidsflyt, indikatorpakke og koblinger til dataspace-, validerings- og gevinstkapitlene, og oppdaterte plan- og tavlefiler for koordinert pilotering. | `chapters/kapittel05-ai.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-108 | Kapittel 5 | FERDIG – Beskrev AI-støttede beredskapsverksteder med scenarioark, tabell for styring og indikatoroppfølging, og synkroniserte tavle- og loggfiler. | `chapters/kapittel05-ai.tex`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-107 | Kapittel 5 | FERDIG – Etablerte guardrail-sjekkliste for generative tvillinger med indikatorer og koblinger til valideringspanelet. | `chapters/kapittel05-ai.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
