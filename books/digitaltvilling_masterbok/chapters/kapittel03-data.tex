@@ -162,6 +162,39 @@ Tabell~\ref{tab:energideling-datakrav} viser et minimumssett av dataprodukter so
 
 Før energisamfunnet settes i drift bør prosjektteamet teste dataspace-løsningen i en sandkasse sammen med nettselskap og leverandører av energistyringssystemer. Det innebærer å verifisere at måleverdiene kan aggregeres og anonymiseres før deling, at algoritmene for fordeling kan revideres gjennom modelljournalen i kapittel~2, og at gevinstmålingen harmoniseres med klimamålene som beskrives i kapittel~8. Når kontrollene er dokumentert, kan energisamfunnet bruke tvillingen til å planlegge investeringer, rapportere klimaeffekt og identifisere nye fleksibilitetstjenester.
 
+\subsection{Case: Samvirke og beredskapsdataspace for nødetatene}
+Felles innsats mellom brann, politi, helse og frivillige redningsressurser krever at alle aktører deler sanntidsdata, historikk og beslutningslogger uten at sensitiv informasjon lekkes. Direktoratet for samfunnssikkerhet og beredskap (DSB) legger i sine samvirkeprinsipper til grunn at Nødnett, fagsystemer og situasjonssentre må knyttes sammen i et nasjonalt operativt konsept med tydelig styringssløyfe og journalføring.\citep{dsb2023samvirke} Politidirektoratet peker samtidig på behovet for å kombinere tale- og meldingslogg fra Nødnett med geodata, operasjonsplaner og dronefeeds i et felles beslutningsdashboard.\citep{politidirektoratet2022nodnett} Når helseforetakene kobler inn ambulanser, AMK-sentraler og sykehuslogistikk, stiller Helsedirektoratet krav om at personvern og tilgangsstyring følger beredskapsplanene som beskrives i kapittel~6.\citep{helsedir2022akutt}
+
+Et samvirkedataspace for nødetatene kan strukturere leveransene gjennom følgende komponenter:
+\begin{itemize}
+    \item \textbf{Operativ datadeling:} Hendelser, ressursstatus, posisjon og risikovurderinger fra politiets PO-logg, 110- og 113-sentralene synkroniseres via standardiserte hendelsesmodeller og publiseres til felles situasjonsbilde.
+    \item \textbf{Beslutningsjournal:} Alle beslutninger, varsler og prioriteringer loggføres med tidsstempel, ansvar og referanse til gjeldende planverk. Journalen speiler kontrolltårn-loggene fra kapittel~6 og styringspanelet i kapittel~7.
+    \item \textbf{Læring og øving:} Data fra øvelser og etterhåndsanalyser registreres i samme dataspace slik at indikatorer og tiltak kan måles på tvers av sektorer og bidra til kontinuerlig forbedring.
+\end{itemize}
+
+Tabell~\ref{tab:samvirke-dataspace} viser et minimumssett med datakilder og styringspunkter som må være på plass før pilotering. Tabellen kobler tydelig hvilke krav som må testes i dataspace-sandkassen i kapittel~6 og hvilke tiltak som må følges opp i gevinstplanen i kapittel~7.
+
+\begin{table}[ht]
+    \centering
+    \caption{Datakilder og styringspunkter for nødetatenes samvirkedataspace.}
+    \label{tab:samvirke-dataspace}
+    \begin{tabular}{p{3.6cm}p{5.0cm}p{3.4cm}}
+        \toprule
+        \textbf{Datakilde} & \textbf{Delingsformål} & \textbf{Styrings- og beredskapskobling} \\
+        \midrule
+        Nødnett logg og taleregistrering & Sanntidsinformasjon om talegrupper, sambandsutnyttelse og prioriteringer, inkludert nødmeldinger og statuskoder. & Eskalering og ressursstyring i kontrolltårnet fra kapittel~6; audittrail for etterhåndsanalyser og revisjoner. \\
+        \addlinespace
+        Geoposisjon og ressursstatus & GPS-sporing for kjøretøy, mannskap og droner, inkludert tilgjengelige spesialressurser og estimert ankomsttid. & Sanntidsdisponering og gevinstmåling knyttet til indikatorpanelet i kapittel~7; input til beslutningsstøtte i kapittel~4. \\
+        \addlinespace
+        Risikoprofil og felles situasjonsbilde & Aggregert oversikt over fareområder, vær, kritisk infrastruktur, evakueringssoner og pågående tiltak. & Samvirkeplaner, avvikshåndtering og kommunikasjonstiltak i kapittel~6; kobling til planens scenarioarbeid i kapittel~8. \\
+        \addlinespace
+        Helse- og pasientlogg for akuttjenester & Anonymiserte oversikter over pasientstrøm, triage og kapasitetsstatus i akuttmottak. & Personvern- og tilgangskontroller fra kapittel~6; gevinst- og forbedringslogg for helsesektorcaset i kapittel~8. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Ved å implementere tabellen i pilotprosjekter kan nødetatene dele et felles datasett for øvelser og reelle hendelser. Studentgrupper bør bruke caset til å øve på å modellere tilgangsstyring, logging og indikatorer slik at tekniske beslutninger henger sammen med beredskapsplaner, gevinstoppfølging og læring på tvers av kapitlene.
+
 \subsection{Case: Overvannsberedskap i urbane områder}
 Oslo, Bergen og flere andre kommuner bygger digitale tvillinger for overvannssystemer for å oppfylle kravene i egne strategier og NVE sine veiledere for klimatilpasning.\citep{oslo2022overvann,nve2021overvann} Tvillingen kombinerer sensordata fra kummer, vannføringsmålinger, radarbaserte nedbørprognoser og terrengmodeller for å identifisere flomsoner i sanntid. Ved å bruke dataspace-prinsipper kan kommunen dele aggregerte situasjonsrapporter med entreprenører, samvirke i interkommunale vannverk og koble hendelser direkte til beredskapsplanen.
 
