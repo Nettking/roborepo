@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-117: Utarbeidet kompetanse- og endringsprogram i Kapittel 7 med tredelt endringsløp, tabell for livssyklusbaserte kompetansetiltak og oppdaterte plan-, tavle- og kildefiler for koordinering mot gevinst- og tiltakslogg. (`chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-116: Etablerte seksjon om kontinuerlig risikomonitorering for autonome mobilitetsdataspace med overvåkingssløyfe, indikatorpanel og læringsaktiviteter, og oppdaterte plan-, tavle- og arbeidsfiler for koordinert pilotering mot mobilitetspartnere. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-115: Etablerte implementeringsverktøykasse i appendiks med tabell over styringsmoduler, anbefalt arbeidsflyt for dataspace- og gevinstoppfølging og oppdatert plan- og tavlestatus for pilotering mot kapittel 7 og lærerveiledningen. (`chapters/appendiks.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-114: Dokumenterte kraftberedskapsdataspace for ekstremvær med kapabilitetsliste, indikator- og tiltakstabell og oppdaterte plan-, tavle- og kildefiler for koordinert vinterberedskap med Statnett, nettselskaper, NVE og DSB. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
