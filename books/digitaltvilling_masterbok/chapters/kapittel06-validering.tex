@@ -421,6 +421,50 @@ For undervisning anbefales følgende opplegg:
     \item \textbf{Felles beslutningsmøte:} Resultatene presenteres for et simulerte porteføljestyre som vurderer hvilke tiltak som skal prioriteres før neste kvartal.
 \end{itemize}
 
+\section{Kontinuerlig risikomonitorering for autonome mobilitetstvillinger}
+Autonome ferger, busser og logistikkoperasjoner drives fra fjernoperasjonssentre som samler telemetri, værdata og hendelseslogg i sanntid.\citep{massterly2023operations} For å opprettholde tillit må dataspace-partnerne kombinere maritime og landbaserte standarder, slik \citet{sdir2023autonomefartoy} og \citet{emsa2024remote} beskriver for henholdsvis norske farvann og europeiske testarenaer. Når mobilitetstvillingen brukes til å styre fartøy og kjøretøy i ordinær drift må risiko og tiltak loggføres i samme kvalitetsjournal som kontrolltårnet i energisektoren.\citep{dnv2024autonomous} Det innebærer at hvert avvik, hver overstyring og hvert sikkerhetsrelatert datapunkt får en referanse til både dataspace-kontrakten og hendelsesprosedyrene i beredskapsplanen fra Kapittel~7.
+
+\subsection{Overvåkingssløyfe mellom operasjonssenter og dataspace}
+Mobilitetsoperatørene kan etablere en firetrinns sløyfe som binder fjernoperasjonssenteret til dataspace og kvalitetsjournal:
+\begin{enumerate}
+    \item \textbf{Innsamle og filtrere sanntidsdata:} Telemetri fra autonome fartøy, buss og bane pakkes i dataspace-produkter med enhetlige tidsstempler, signerte kontrollsummer og flagg for sikkerhetskritiske hendelser.\citep{emsa2024remote}
+    \item \textbf{Prediktiv risikomåling:} Mobilitetstvillingen analyserer spordata, vær og strømforhold for å beregne sannsynlighet for avvik, og knytter resultatene til risikoakseptnivåene som \citet{sdir2023autonomefartoy} anbefaler for norske piloter.
+    \item \textbf{Operativ respons:} Når indikatorer passerer terskler, aktiveres responsskript for fjernoperatører, lokale trafikksentraler og beredskapspartnere. Beslutninger loggføres i kvalitetsjournalen og deles i dataspace-portalen.
+    \item \textbf{Læring og revisjon:} Etter hver hendelse eller øvelse gjennomføres en felles debrief der tiltak evalueres, modellparametere oppdateres og funn kobles til plan- og tiltakslogg i Kapittel~7.
+\end{enumerate}
+
+\subsection{Indikatorpanel for autonome mobilitetsoperasjoner}
+Tabell~\ref{tab:autonom-risiko} viser et indikatorpanel som binder sammen dataspace, fjernoperasjon og lokale trafikkledelser. Panelet gjenbruker strukturen fra kontrolltårn-caset, men terskler og ansvar er tilpasset mobilitetsdomener.
+
+\begin{table}[ht]
+    \centering
+    \caption{Indikatorer for kontinuerlig risikomonitorering i autonome mobilitetsoperasjoner}
+    \label{tab:autonom-risiko}
+    \begin{tabular}{|p{3.3cm}|p{4.6cm}|p{4.4cm}|p{3.0cm}|}
+        \hline
+        \textbf{Indikator} & \textbf{Datagrunnlag} & \textbf{Terskel og tiltak} & \textbf{Ansvarlig} \\
+        \hline
+        Fjernstyringslatens & Telemetrilogg fra fjernoperasjonssenter, dataspace-metadata om nettverk & Varsel ved \textgreater{} 200 ms gjennomsnitt over 5 minutter; aktiver reserveforbindelse og dokumenter i hendelseslogg \citep{massterly2023operations} & Operasjonssenter + leverandør av kommunikasjon \\
+        \hline
+        Autonom navigasjonsmargin & Kombinasjon av tvillingens prediksjoner, AIS/CBTC-data og værstrømmer & Alarm ved reduksjon \textgreater{} 30\% i sikkerhetsmargin; overstyr til manuell kontroll og oppdater risikojournal \citep{sdir2023autonomefartoy} & Skipsfører eller trafikkleder på vakt \\
+        \hline
+        Passasjersikkerhet og evakuering & Sensorer for dører, nødkommunikasjon og passasjertelling i sanntid & Terskel når evakueringssimulering overstiger 6 minutter; utløser koordinering med kollektivtrafikkens beredskapsplan \citep{vegvesen2023beredskap,ruter2024mobilitetslab} & Beredskapsleder kollektivtransport \\
+        \hline
+        Infrastrukturtilgjengelighet & Tilstandsmeldinger fra bane, kai og lading i dataspace & Rød status ved to samtidige kritiske avvik; eskaler til porteføljestyre og loggfør tiltak i kvalitetsjournal \citep{banenor2024digitalspor} & Infrastrukturforvalter + dataspace-operatør \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Når indikatorene visualiseres i samme dashboard som hendelsesjournalen, kan operasjonssenteret se hvordan tekniske avvik påvirker passasjersikkerhet og transporttilbud. Eventuelle terskelbrudd gir direkte input til tiltaksloggen i Kapittel~7 og til oppdatering av dataspace-kontraktene i Kapittel~3.
+
+\subsection{Læringsaktiviteter for masterstudentene}
+For å gjøre indikatorpanelet operativt kan kurslaboratoriet gjennomføre et tretrinns opplegg:
+\begin{itemize}
+    \item \textbf{Dataharmonisering:} Studentgrupper kobler sanntidsstrømmer fra mobilitetslabben til dataspace-produkter og validerer latens og nøyaktighet i tråd med tabellen over.\citep{ruter2024mobilitetslab}
+    \item \textbf{Scenarioøvelse:} Gruppa simulerer en kombinasjon av værhendelse og teknisk svikt, bruker indikatorene til å utløse responsskript og dokumenterer tiltak i kvalitetsjournal og tiltakslogg.\citep{vegvesen2023beredskap}
+    \item \textbf{Refleksjonsnotat:} Leveransen inkluderer en vurdering av hvordan risikomonitoreringen møter kravene til maritime og kollektivtransport-tilsyn, og hvilke forbedringer som kreves før full drift.\citep{emsa2024remote,banenor2024digitalspor}
+\end{itemize}
+
 \section{Mobilitetsdataspace for kollektivtransport}
 Ruter, Entur og Bane NOR bygger nå en felles mobilitetsdataspace der sanntidsdata fra buss, bane, tog og delte mikromobilitetstjenester synkroniseres med digitale tvillinger for planlegging og beredskap.\citep{ruter2024mobilitetslab,entur2023dataplattform,banenor2024digitalspor} Dataspacet kombinerer reiseplanleggingsdata, billettinformasjon, tilstandsmålinger fra infrastruktur og trafikkinformasjon fra Statens vegvesen for å gi et samlet bilde av kapasitetsutnyttelse og flaskehalser.\citep{vegvesen2023beredskap} For å sikre tillit må valideringsregimet dekke datakvalitet, modellpresisjon og koordinering mellom etatene, samtidig som personvernkrav og sikkerhetsnivåer følges slik Kapittel~3 beskriver for mobilitetsdataspace og Kapittel~7 adresserer for porteføljestyring.
 
