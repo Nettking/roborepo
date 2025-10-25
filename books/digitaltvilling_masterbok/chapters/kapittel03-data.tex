@@ -260,6 +260,40 @@ Tabell~\ref{tab:kap03-overvann} viser hvordan de viktigste datastrømmene kan or
 
 \paragraph{Arbeidsflyt for masterstudentene.} Caset kan brukes til å la studentgrupper designe en ende-til-ende datastrøm der registrerte hendelser kobles til simuleringene fra kapittel~4 og rapporteringen i kapittel~6. Et anbefalt opplegg er å la teamene (1) beskrive datakvalitetskontroller for hver kilde, (2) modellere beslutningspunktene i tiltaksloggen og (3) definere hvilke indikatorer som skal publiseres til gevinst- og bærekraftspanelene i kapittel~7. Resultatene bør dokumenteres i både modelljournal og fagfellelogg slik at kommunen kan gjenbruke arbeidsflyten i faktiske øvelser.
 
+\subsection{Case: Naturfare-dataspace for skred og flom}
+Fjellkommuner og samvirkeorganer langs kysten må kombinere skred- og flomvarsling med sanntidsobservasjoner for å prioritere evakuering, infrastrukturtiltak og ressursdisponering. Norges vassdrags- og energidirektorat (NVE) beskriver i sin nasjonale skredfarestrategi hvordan sensornettverk, manuelle observasjoner og modellprognoser skal inngå i et felles situasjonsbilde.\citep{nve2024skredstrategi} Varsom-tjenesten samler flom- og skredvarsler fra MET Norge og NVE og stiller API-er til rådighet som kan integreres direkte i digitale tvillinger.\citep{varsom2024api} Kartverket og kommunene publiserer høyoppløselige terrengmodeller og planregister som gjør det mulig å modellere påvirkningssoner og kritiske objekter.\citep{kartverket2023ndh}
+
+Et naturfare-dataspace binder disse datakildene sammen med beredskapsjournalen fra kapittel~6 og gevinstarbeidet i kapittel~7 gjennom fire hovedkomponenter:
+\begin{itemize}
+    \item \textbf{Varslingsgrunnlag:} Varsom-API, meteorologiske prognoser og hydrologiske modeller strømmer inn i dataspace med kvalitetsscore og tidsstempler slik at avvik kan spores.
+    \item \textbf{Feltobservasjoner:} Skredsensorer, kameraer, droner og manuelle rapporter fra kommunale beredskapsgrupper lastes opp med geotaggede metadata og knyttes til tiltak i tiltaksloggen.
+    \item \textbf{Terreng og kritisk infrastruktur:} Høydedata, eiendomsregister, vegnettinformasjon og kritiske objekter (kraftlinjer, vannverk, fiber) kobles til scenarioene fra kapittel~4 slik at konsekvensanalyser kan kjøres i sanntid.
+    \item \textbf{Samvirke- og kommunikasjonslogg:} Beslutninger, varsler og ressursdisponering dokumenteres i samme struktur som samvirkedataspace-caset over, slik at rapportering til statsforvalter og DSB kan gjennomføres uten ekstra datavask.
+\end{itemize}
+
+Tabell~\ref{tab:kap03-naturfare} gir en oversikt som masterstudentene kan bruke når de beskriver roller, datasett og indikatorer for naturfarepilotene.
+
+\begin{table}[ht]
+    \centering
+    \caption{Datastrømmer og styringspunkter i naturfare-dataspace for skred og flom.}
+    \label{tab:kap03-naturfare}
+    \begin{tabular}{p{3.6cm}p{4.8cm}p{3.4cm}}
+        \toprule
+        \textbf{Datakilde} & \textbf{Innhold og frekvens} & \textbf{Styring og beslutning} \\
+        \midrule
+        Varsom- og MET-varsler & Flom- og skredfaregrad, usikkerhet og anbefalte tiltak oppdatert 6--24 ganger per døgn. & Oppdaterer scenario- og beredskapsplaner i kapittel~4 og kontrolltårnindikatorene i kapittel~6. \\
+        \addlinespace
+        In-situ sensornett & Radar, geofoner, poretrykksmålere, snødybdestaker og kamera med kontinuerlig strømming. & Varsler feltmannskap, initierer tiltakslogg i \autoref{tab:kap06-tilsynsplan} og dokumenterer beslutninger i fagfelleloggen. \\
+        \addlinespace
+        Terreng- og planregister & FKB-data, detaljreguleringer, kritisk infrastruktur og evakueringspunkter. & Knytter modellresultater til konsekvensklassifisering i kapittel~7 og rapportering til statsforvalter. \\
+        \addlinespace
+        Ressurs- og samvirkelogg & Beredskapsvaktlister, utstyr, frivillige ressurser og kommunikasjon via samvirkeplattformen. & Synkroniseres med dataspace-samvirket i \autoref{tab:samvirke-dataspace} og deler status med kapittel~8 sine caser. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\paragraph{Arbeidsopplegg.} Studentteam kan la caset fungere som en iterativ øvelse der (1) data fra Varsom og lokale sensorer hentes inn i sandkassen fra kapittel~6, (2) scenarioer for skredbaner og flomløp modelleres i samspill med kapittel~4 sine simuleringsverktøy, og (3) tiltak og læringspunkter dokumenteres i gevinst- og tiltaksloggene i kapittel~7. Resultatet bør være et delt dashboardskjema som viser hvilke indikatorer som må være grønne før normal drift kan gjenopptas etter en hendelse.
+
 \section{Integrasjonsmønstre og standarder}
 Et integrasjonslandskap for digitale tvillinger spenner fra enkle API-kall til kompleks hendelsesdrevet samhandling. God praksis er  å kartlegge datastrømmer, volum og krav til robusthet før man velger teknologier.
 
