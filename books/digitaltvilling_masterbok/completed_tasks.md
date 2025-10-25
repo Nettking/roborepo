@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-109: Dokumenterte AI-basert tilstandsoppfølging for kommunale vann- og energinett med arbeidsflyt i tre steg, indikator- og rapporteringstabell og oppdaterte plan- og tavlefiler for koordinert pilotering med kommunale partnere. (`chapters/kapittel05-ai.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-108: Beskrev AI-støttede beredskapsverksteder med scenarioark, tabell for styring og indikatoroppfølging, og synkroniserte status i tavle- og arbeidsfiler. (`chapters/kapittel05-ai.tex`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-107: Etablerte guardrail-sjekkliste for generative tvillinger og syntetiske datasett med indikatorer, rapporteringskoblinger og oppdaterte plan- og tavlefiler. (`chapters/kapittel05-ai.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-105: Dokumenterte dataspace-case for grønne industriparker med tabell over prioriterte dataprodukter, indikator- og beredskapskoblinger, og oppdaterte plan-, tavle- og statusfiler for pilotering mot industripartnere. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
