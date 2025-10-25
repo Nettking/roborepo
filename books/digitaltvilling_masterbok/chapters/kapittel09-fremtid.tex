@@ -51,6 +51,31 @@ Foundation-modeller og multimodale generative teknikker brukes nå til å foresl
 \subsection{Edge-native tvillinger}
 For prosesser som krever lav responstid kombineres digitale tvillinger med edge-komponenter der databehandling skjer tett på utstyret. Standarder for multi-access edge computing gjør det mulig å orkestrere containere og AI-modeller i fabrikkhaller, på fartøy eller i landbruksmaskiner, samtidig som policyer for dataspace-tilgang ivaretas.\citep{etsi2023mec} Edge-native mønstre utfordrer tradisjonell skyarkitektur og krever at DevOps- og MLOps-prosesser inkluderer distribuerte oppdateringer, overvåking og fallback-rutiner.
 
+\subsection{Autonome agentkollektiv og styringssløyfer}
+Neste generasjons digitale tvillinger orkestrerer flere beslutningsagenter som forhandler om tiltak, fordeler ressurser og dokumenterer avvik uten at mennesker må koordinere hvert steg. Forskning på multi-agent-arkitekturer viser hvordan planleggings- og læringsagenter kan kobles til den virtuelle representasjonen for å justere produksjonsplaner eller energiflyt i sanntid.\citep{xu2023multiagent} I energisystemer kombineres agentkollektiv med tvillingbaserte simuleringer for å balansere last, pris og bærekraftskriterier når rammevilkår endrer seg raskt.\citep{li2023multiagenttwins}
+
+Når slike løsninger skal tas i bruk i norske pilotmiljøer må agentene inngå i de samme styringssløyfene som beskrives i kapittel~5 og kapittel~7. I autonome havneoperasjoner brukes for eksempel samarbeidende agenter til å planlegge manøverrom for fartøy, mens kontrolltårnet godkjenner forslagene før de iverksettes.\citep{massterly2023operations} Statnetts arbeid med digitale kontrolltårn viser tilsvarende behov for å loggføre hvilke agentforslag som blir forkastet, slik at læringssløyfene og etterlevelsesloggene i kapittel~6 alltid er oppdatert.\citep{statnett2024kontrolltarn}
+
+For å holde oversikt over ansvar og dokumentasjon anbefales en strukturert registrering av agentroller, beslutningsgrenser og tilhørende artefakter. Tabell~\ref{tab:kap09-agentkollektiv} kan brukes som sjekkliste når masterstudenter skal beskrive hvordan autonome agenter spiller sammen med dataspace-policyer, kontrolltårn og gevinstplaner.
+
+\begin{table}[h]
+    \centering
+    \caption{Agentroller og styringsartefakter i tvillingdrevne økosystemer}
+    \label{tab:kap09-agentkollektiv}
+    \begin{tabular}{p{3.2cm}p{4.5cm}p{4.2cm}p{3.0cm}}
+        \toprule
+        \textbf{Agentrolle} & \textbf{Primærbeslutning} & \textbf{Styrings- og dokumentasjonsartefakter} & \textbf{Kobling til kapitler} \\
+        \midrule
+        Planleggingsagent & Foreslår produksjons- eller operasjonsplaner basert på tvillingens simuleringer og prognoser. & Sprintlogg, modelljournal og porteføljeoversikt oppdatert etter hver iterasjon. & Kapittel~4 (simulering), Kapittel~7 (porteføljestyring). \\
+        Koordineringsagent & Forhandler datatilgang og kapasitetsbruk mellom partnere i dataspace. & Dataspace-kontrakter, tilgangslogg og revisjonsrapporter fra kontrolltårnet. & Kapittel~3 (dataspace), Kapittel~6 (kvalitetsjournal). \\
+        Læringsagent & Justerer AI-modeller og parametere ut fra sanntidsavvik og feedback fra operatører. & Modelljournal, guardrail-sjekkliste og hendelsesrapportering. & Kapittel~5 (AI), Kapittel~6 (tiltakslogg). \\
+        Etikk- og compliance-agent & Overvåker at anbefalinger følger regulatoriske og etiske krav før de sendes til beslutningsport. & Etisk vurderingsprotokoll, DPIA og gevinstplan. & Kapittel~6 (etterlevelse), Kapittel~7 (gevinstoppfølging). \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Agentkollektiv krever også menneskesentrert design for å sikre at operatører forstår når automatiske forslag bør overstyres. Derfor bør hvert agentforslag presenteres med forklaringsdata, tilhørende indikatorer og referanse til hvem som sist godkjente endringen. Dette gir en transparent samhandling mellom mennesker og maskiner, og gjør det enklere å bruke agentene som treningselement i verkstedene som beskrives i kapittel~5.
+
 \subsection{Semantiske tvillinger og autonomi}
 De mest modne tvillingene bygger nå på semantiske modeller der kunnskapsgrafer og ontologier beskriver forholdet mellom komponenter, datastrømmer og forretningsregler. Kombinert med maskinlæring, probabilistiske modeller og formelle verifikasjonsmetoder gir dette grunnlag for beslutninger som kan automatiseres. Autonome tvillinger brukes til å orkestrere vedlikehold, balansere energinett og styre logistikksystemer, men krever transparens og sporbarhet slik at operatører kan forstå og overstyre kritiske valg.
 
