@@ -162,6 +162,37 @@ Tabell~\ref{tab:energideling-datakrav} viser et minimumssett av dataprodukter so
 
 Før energisamfunnet settes i drift bør prosjektteamet teste dataspace-løsningen i en sandkasse sammen med nettselskap og leverandører av energistyringssystemer. Det innebærer å verifisere at måleverdiene kan aggregeres og anonymiseres før deling, at algoritmene for fordeling kan revideres gjennom modelljournalen i kapittel~2, og at gevinstmålingen harmoniseres med klimamålene som beskrives i kapittel~8. Når kontrollene er dokumentert, kan energisamfunnet bruke tvillingen til å planlegge investeringer, rapportere klimaeffekt og identifisere nye fleksibilitetstjenester.
 
+\subsection{Case: Overvannsberedskap i urbane områder}
+Oslo, Bergen og flere andre kommuner bygger digitale tvillinger for overvannssystemer for å oppfylle kravene i egne strategier og NVE sine veiledere for klimatilpasning.\citep{oslo2022overvann,nve2021overvann} Tvillingen kombinerer sensordata fra kummer, vannføringsmålinger, radarbaserte nedbørprognoser og terrengmodeller for å identifisere flomsoner i sanntid. Ved å bruke dataspace-prinsipper kan kommunen dele aggregerte situasjonsrapporter med entreprenører, samvirke i interkommunale vannverk og koble hendelser direkte til beredskapsplanen.
+
+En robust løsning krever at dataene beskrives med felles semantikk og tydelige ansvarslinjer:
+\begin{itemize}
+    \item \textbf{Hydrologiske tidsserier:} Sensorer i spillvannskummer og bekkeinntak publiserer data hvert minutt. Aggregatene merkes med kvalitetsscore og knyttes til masterdata for ledningsnett.
+    \item \textbf{Digitale terrengmodeller:} LIDAR- og BIM-data danner grunnlaget for simulering av vannveier, og oppdateres når nye byggeprosjekter registreres i kommunens planportal.
+    \item \textbf{Eksterne prognoser:} Meteorologiske data og flomvarsler hentes via API-er fra MET Norge og NVE og brukes til å kalibrere scenarioer for de neste timene.
+    \item \textbf{Tiltakslogg og kommunikasjon:} Hendelser kobles til tiltakslogg, varslingsplaner og publikumsinformasjon slik at beredskapsleder raskt kan bestille tiltak og varsle innbyggere.
+\end{itemize}
+
+Tabell~\ref{tab:kap03-overvann} viser hvordan de viktigste datastrømmene kan organiseres for å støtte både operativ håndtering og oppfølging i styringsfora.
+
+\begin{table}[ht]
+    \centering
+    \caption{Datastrømmer og styringspunkter for kommunal overvannsberedskap.}
+    \label{tab:kap03-overvann}
+    \begin{tabular}{p{3.6cm}p{4.6cm}p{3.6cm}}
+        \toprule
+        \textbf{Datakilde} & \textbf{Innhold og oppdateringsfrekvens} & \textbf{Styring og beslutning} \\
+        \midrule
+        Sensorer i kritiske kummer & Nivå, temperatur og overvannsvolum hvert minutt med kvalitetsflagg. & Varsles i kontrolltårnet og utløser tiltak etter \autoref{tab:kap06-tilsynsplan}. \\
+        Radar- og varslingsdata & Nedbørintensitet, snøsmelting og flomprognoser fra NVE og MET Norge med 5--15 minutters intervall. & Oppdaterer scenariobiblioteket i kapittel~4 og prioriterer beredskapsressurser. \\
+        Terreng- og ledningsmodeller & Oppdatert geometri for vannveier, kapasitet og kritiske flaskehalser. & Beslutningsunderlag til investeringsplaner og tiltakslogg i \autoref{tab:tiltakslogg}. \\
+        Operatør- og entreprenørlogg & Feltobservasjoner, tiltak og bilder fra utrykning. & Dokumenteres i fagfelleloggen og gir læringspunkter til kapittel~7. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\paragraph{Arbeidsflyt for masterstudentene.} Caset kan brukes til å la studentgrupper designe en ende-til-ende datastrøm der registrerte hendelser kobles til simuleringene fra kapittel~4 og rapporteringen i kapittel~6. Et anbefalt opplegg er å la teamene (1) beskrive datakvalitetskontroller for hver kilde, (2) modellere beslutningspunktene i tiltaksloggen og (3) definere hvilke indikatorer som skal publiseres til gevinst- og bærekraftspanelene i kapittel~7. Resultatene bør dokumenteres i både modelljournal og fagfellelogg slik at kommunen kan gjenbruke arbeidsflyten i faktiske øvelser.
+
 \section{Integrasjonsmønstre og standarder}
 Et integrasjonslandskap for digitale tvillinger spenner fra enkle API-kall til kompleks hendelsesdrevet samhandling. God praksis er  å kartlegge datastrømmer, volum og krav til robusthet før man velger teknologier.
 
