@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-115 | Appendiks | FERDIG – Utarbeidet implementeringsverktøykasse i appendiks med tabell over styringsmoduler, anbefalt arbeidsflyt og oppdatert planstatus for pilotering. | `chapters/appendiks.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-114 | Kapittel 3 | FERDIG – Dokumenterte kraftberedskapsdataspace for ekstremvær med kapabilitetsbeskrivelse, indikator- og tiltakstabell og oppdatert plan- og tavlestatus for vinterberedskap. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-113 | Kapittel 3 | FERDIG – Dokumenterte samvirke- og beredskapscase for nødetatenes dataspace med seksjon, sjekkliste og tabell som kobler kapitlene 3, 6 og 7. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-112 | Kapittel 8 | FERDIG – Utvidet transport- og logistikkseksjonen med gods- og terminaldataspace-case, tabell for artefakter og undervisningsopplegg som kobler caset til data-, validerings- og gevinstkapitlene, og oppdaterte plan-, tavle- og kildefiler. | `chapters/kapittel08-case.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
