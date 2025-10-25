@@ -210,6 +210,32 @@ Oslo Havn, Bane NORs godsterminaler på Alnabru og Moss havn samarbeider om en f
 
 For å gjøre caset undervisningsklart bør studentgrupper definere hvordan gods- og passasjerdata skal avgrenses for å ivareta konkurransesensitiv informasjon og sikkerhet. Et anbefalt opplegg er å la gruppene analysere terminalens nullutslippsplaner og beregne klimaeffekter ved å flytte gods fra veg til sjø eller bane, før funnene loggføres i gevinstplanen og tiltaksloggen. Koble også scenarioarbeidet til \autoref{tab:klimacase-leveranser} slik at mobilitetslaben og logistikkaktørene kan planlegge felles milepæler. Når modellen oppdateres, bør planstatus synliggjøre hvordan tiltakene påvirker arbeidsstrømmer i kapittel 3 og 6, inkludert krav til dataeierskap og inspeksjonsrutiner.
 
+\paragraph{Arktisk vinterlogistikk-dataspace for Nord-Norge}
+Transportetatene i nord etablerer et felles dataspace for å koordinere vinterdrift på tvers av fylkesveg, jernbane, havn og lufthavn når polare lavtrykk og ising påvirker alle transportledd samtidig.\citep{tffk2023mobilitet,avinor2023nord,banenor2023vinter,svv2023vinter} Plattformen kombinerer meteorologiske varsler, telemetri fra maskinparker og trafikkdata slik at beredskapsledelse kan prioritere tiltak for kritiske strekninger og forsyningslinjer. Når casemalen fylles ut må studentgrupper beskrive hvordan dataspace-policy, servicevinduer og ressurslogistikk dokumenteres, og hvordan læring deles mellom aktørene i nordområdene.
+
+\begin{table}[h]
+    \centering
+    \caption{Koordineringsflater i arktisk vinterlogistikk-dataspace}
+    \label{tab:arktisk-logistikk}
+    \begin{tabular}{p{3.4cm}p{4.7cm}p{4.8cm}}
+        \toprule
+        Fokusområde & Datagrunnlag & Beslutninger og dokumentasjon \\
+        \midrule
+        Flyplass- og helikopteroperasjoner & Runway Monitoring System-data, avisingsjournaler og beredskapslogg fra Avinor & Planlegger ressursbruk for avisingskjøretøy, koordinerer helikopterberedskap og dokumenterer koordinering med helse- og redningstjenester.\\
+        Jernbane og havnetransport & Sensorer for sporfrost, havne- og fartøylogger, logistikkplaner fra havneselskapene & Prioriterer varme- og snøryddingskapasitet, flytter omlastingstidspunkter og synkroniserer beredskap mot forsyningskritiske leveranser.\\
+        Veg og beredskap & Værdata, friksjonsmålinger, telemetri fra brøyteflåten og innrapporterte hendelser fra Vegtrafikksentralen & Fastsetter standard for vinterdrift, beslutter kjørebegrensninger og aktiverer beredskapsressurser i samarbeid med fylkesberedskap og nødetater.\\
+        Dataspace-styring og læring & Policy-artefakter, tilgangslogger og hendelsesrapporter fra felles kvalitetsjournal & Oppdaterer dataspace-regler, dokumenterer etterlevelse i kontrolltårnet og fordeler forbedringstiltak til kapittel 6 sitt valideringspanel.\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item Kartlegg hvordan frost, vind og sjøis-data fra MET, Kystverket og Vegtrafikksentralen integreres i dataspace-arkitekturen, og dokumenter hvilke API-er som gjenbrukes fra Kapittel~3.\citep{svv2023vinter}
+    \item Beskriv hvordan beslutningsfora i fylkesberedskapsråd og transportetatene bruker indikatorer for regularitet, forsyningssikkerhet og sikkerhet, og koble dem til rapporteringssløyfene i Kapittel~6.\citep{tffk2023mobilitet,banenor2023vinter}
+    \item Utarbeid forslag til undervisningsopplegg der studentgrupper simulerer sammensatte værhendelser og dokumenterer tiltak i gevinstplanen og tiltaksjournalen fra Kapittel~7.\citep{avinor2023nord}
+    \item Registrer behov for syntetiske datasett eller ekstra tilgangsstyring før caset deles i undervisning, og loggfør beslutninger i fagfelleloggen slik at forbedringene spores.\citep{tffk2023mobilitet}
+\end{itemize}
+
 \subsection*{Kommunal klimaresiliens og beredskap}
 Oslo VAV har etablert en digital tvilling av vann- og avløpsnettet som kombinerer hydrologiske modeller, sensordata og sanntidsvarsling for å planlegge tiltak mot styrtregn og overvann.\citep{oslovav2023digital} Tvillingen brukes sammen med kommunens overvannsstrategi for å teste konsekvenser av utbygginger, dimensjonere blågrønne tiltak og prioritere investeringer i kulverter og magasiner.\citep{oslo2023overvann} Ved å dokumentere caset kan studentene vise hvordan data fra værstasjoner, trykksensorer og manuelle inspeksjoner gir grunnlag for beslutninger i beredskapsstaber og tekniske etater.
 
