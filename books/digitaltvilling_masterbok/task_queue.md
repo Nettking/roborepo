@@ -28,6 +28,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-118 | Kapittel 4 | FERDIG – Dokumenterte brannberedskaps-case for historiske trehusmiljøer med simuleringsmoduler, indikatorpanel og undervisningsopplegg som binder data-, validerings- og gevinstkapitlene. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-117 | Kapittel 7 | FERDIG – Etablerte kompetanse- og endringsprogramseksjon med tredelt læringsstruktur, tabell for livssyklusbaserte kompetansetiltak og oppdaterte plan-, tavle- og kildefiler. | `chapters/kapittel07-livssyklus.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-116 | Kapittel 6 | FERDIG – Dokumenterte kontinuerlig risikomonitorering for autonome mobilitetsdataspace med overvåkingssløyfe, indikatorpanel og læringsopplegg som kobler dataspace, kvalitetsjournal og mobilitetspartnere. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md` |
 | DT-115 | Appendiks | FERDIG – Utarbeidet implementeringsverktøykasse i appendiks med tabell over styringsmoduler, anbefalt arbeidsflyt og oppdatert planstatus for pilotering. | `chapters/appendiks.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
