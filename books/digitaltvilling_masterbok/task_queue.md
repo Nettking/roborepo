@@ -30,6 +30,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-123 | Kapittel 2 | FERDIG – Dokumenterte kommunal energihub for bydelssenter med systemlagstabell, arbeidsflyt og koblinger til klimabudsjett og dataspace-styring, og oppdaterte plan- og statusfiler. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-122 | Kapittel 6 | FERDIG – Etablerte samsvarsmonitoreringsseksjon for helsedataspace med kontrolltabell, arbeidsflyt og nye kilder, og synkroniserte plan-, referanse- og loggfiler for pilotering. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-121 | Kapittel 9 | FERDIG – La inn agentkollektiv-seksjon med tabell over roller og styringsartefakter, og oppdaterte plan-, tavle- og referansefiler slik at Kapittel 5, 6 og 7 kan pilotere opplegget samlet. | `chapters/kapittel09-fremtid.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-120 | Kapittel 4 | FERDIG – Beskrev co-design-sprint for immersive beslutningsrom med fasestruktur, leveransetabell og koblinger til kapittel 5–7, og oppdaterte plan-, tavle- og kildefiler for koordinert pilotering. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |

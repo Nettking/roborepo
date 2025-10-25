@@ -326,6 +326,55 @@ et skybasert kontrollrom. Kalibreringen utføres daglig ved å sammenlikne model
 parametere justeres automatisk når avvik overstiger definerte terskler. Caset viser hvordan samarbeid mellom energiselskap,
 teknologipartnere og kommune gir en robust modell som støtter både operativ drift og langsiktige investeringsbeslutninger.
 
+\subsection{Case: Kommunal energihub for bydelssenter}
+Oslo kommune har satt mål om at kommunale bygg skal være selvstendige energinoder som kombinerer varme, kjøling, solkraft og
+fleksible laster i én styringsplattform.\citep{osloeiendom2023strategi,oslo2024klimaeiendom} For å lykkes må kommunen og
+energiselskapene dele data om energibruk, inneklima og lokal produksjon i sanntid, samtidig som vedlikeholdsplaner,
+anskaffelsesstrategier og klimabudsjetter oppdateres løpende. KS anbefaler at kommunene etablerer digitale tvillinger som
+binder tekniske målinger til styringsdokumenter for energioppfølging, slik at krav og tiltak kan spores per bygg og bydel.
+\citep{ks2024eiendomsdrift} Når slike tvillinger kobles til lokale energilagre og fjernvarmesløyfer kan de prioritere tiltak som
+reduserer både kostnader og klimagassutslipp gjennom dynamisk lasthåndtering.\citep{norskfjernvarme2024fleksibilitet}
+
+Tabell~\ref{tab:kap02-energihub} viser et eksempel på hvordan systemet kan deles inn i lag som ivaretar dataflyt, ansvar og
+indikatorer. Strukturen brukes i masterkurset for å diskutere hvordan kommunen kombinerer eiendomsdata med energimarkedsinformasjon
+og mobilitetsbehov i samme modell. Studentene skal spesielt merke seg hvordan kapittel~3 sitt arbeid med dataspace-kontrakter og
+kapittel~6 sin kvalitetsjournal gir grunnlaget for styring av avvik og rapportering til klimabudsjettet.
+
+\begin{table}[ht]
+    \centering
+    \caption{Systemlag for kommunal energihub med digital tvilling.}
+    \label{tab:kap02-energihub}
+    \begin{tabular}{p{0.21\textwidth}p{0.31\textwidth}p{0.26\textwidth}p{0.18\textwidth}}
+        \toprule
+        \textbf{Systemlag} & \textbf{Hovedoppgaver} & \textbf{Data og indikatorer} & \textbf{Ansvarlige roller} \\
+        \midrule
+        Feltsystem og byggautomasjon & Samle måledata fra varmepumper, ventilasjon og energilagre, styre laster og registrere hendelser. & Energiflyt per sone, temperatur og CO$_2$-nivå, status for termiske lagre. & Driftsoperatør og energivaktmester. \\
+        \addlinespace
+        Energihub-kontroll & Optimalisere lastbalanse mellom solkraft, fjernvarme og batterier, samt planlegge fleksibilitet mot nettselskap. & Prognoser for forbruk og produksjon, fleksibilitetsbud, avtaler med nettselskap. & Energi- og klimakoordinator. \\
+        \addlinespace
+        Dataspace og delingsplattform & Sikre datakontrakter, maskere persondata og publisere API-er for samarbeidspartnere. & Metadata, tilgangslogger, hendelsesjournal og kvalitetsflagg fra kapittel~6. & Data steward og informasjonssikkerhetsrådgiver. \\
+        \addlinespace
+        Styring og portefølje & Koble tiltak til klimabudsjett, innkjøpsplaner og vedlikeholdsprogram. & Tiltakslogg, investeringsplaner, KPI-er for energi, utslipp og innemiljø. & Porteføljestyrer og økonomiteam. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Arbeidsprosessen følger fire steg som studentgrupper kan bruke når de modellerer egne kommunale energihuber:
+\begin{enumerate}
+    \item \textbf{Kartlegg datakilder:} Samle systemkart fra byggautomasjon, energisentral og mobilitetsinfrastruktur og plasser
+    dem i et felles dataspace-grensesnitt med tilgangsstyring fra kapittel~3.
+    \item \textbf{Prioriter tiltak:} Bruk klimabudsjettet og energiledelsesprogrammet til å rangere hvilke bygg eller laster som
+    skal inngå i første iterasjon.\citep{oslo2024klimaeiendom,enova2024energiledelse}
+    \item \textbf{Modeller fleksibilitet:} Kombiner førsteprinsippmodeller for varme- og kjølesløyfer med datadrevne prognoser for
+    brukeradferd, og dokumenter antagelser i modelljournalen som beskrevet i kapittel~6.
+    \item \textbf{Planlegg læringssløyfer:} Design kvartalsvise workshops der drift, energi og innkjøp evaluerer effektene og
+    oppdaterer tiltakslogg og gevinstkart sammen med kapittel~7.
+\end{enumerate}
+
+Resultatene fra energihuben bør kobles til mobilitets- og arealplanlegging i bydelene slik at elbillading, byggdrift og
+lokale energisamfunn ses i sammenheng. Når masterstudentene dokumenterer datastrømmer, indikatorer og beslutninger i tabellen
+over, får de samtidig et revisjonsspor som kan brukes i kvalitetsjournalen og i porteføljestyringen.
+
 \subsection{Case: Systemmodellering for autonome ferger}
 Trondheim havn og NTNU har etablert en digital tvilling for den autonome passasjerfergen Milliampere~2, som trafikkerer kanalene
 ved Brattøra.\citep{ntnu2023milliampere2} Tvillingen koordinerer navigasjon, fremdrift og fjernoperasjon i én modell slik at
