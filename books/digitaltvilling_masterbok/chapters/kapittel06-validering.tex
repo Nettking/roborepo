@@ -54,6 +54,40 @@ Tabell~\ref{tab:hendelsesroller} viser hvordan roller og responstid kan organise
 
 For masterstudentene kan tabellen brukes som sjekkliste når de utvikler hendelsesscenarier i laboratoriet. Kombineres oversikten med triageprosessen tidligere i kapitlet, får studentene trening i å dokumentere både tekniske og organisatoriske beslutninger på en måte som tåler revisjon fra eksterne fagfeller.
 
+\section{Samsvarsmonitorering for helsedataspace}
+Helsesektorens dataspace-initiativ setter spesielt strenge krav til dokumentasjon av tilgangsstyring, sporbarhet og pasientsikkerhet. Norm for informasjonssikkerhet beskriver hvilke styringssystemer og kontroller som må være på plass i alle virksomheter som behandler helseopplysninger, mens Helsedirektoratets beredskapsplaner og Helseplattformens kontinuitetsrutiner konkretiserer forventninger til journalføring, varslingslinjer og gjenoppretting.\citep{norm2023,helsedir2023beredskap,helseplattformen2023kontinuitet} For digitale tvillinger betyr dette at både modelloppdateringer, datastrømmer og beslutningshistorikk må overvåkes og revideres hyppigere enn i mange andre sektorer.
+
+Samsvarsmonitoreringen bygger på prinsippene fra dataspace-governance i Kapittel~3 og gevinststyringen i Kapittel~7, men legger til særskilte helsefaglige kontroller. Tabellen under viser et eksempel på hvordan kontrollpunktene kan struktureres som et dashboard for kvalitets- og etterlevelsesvurdering.
+
+\begin{table}[ht]
+    \centering
+    \caption{Kontrollpunkter for samsvarsmonitorering i helsedataspace}
+    \label{tab:helsesamsvar}
+    \begin{tabular}{|p{3.4cm}|p{5.0cm}|p{3.6cm}|p{3.0cm}|}
+        \hline
+        \textbf{Kontrollområde} & \textbf{Beskrivelse} & \textbf{Dokumentasjon} & \textbf{Indikator/krav} \\
+        \hline
+        Tilgangsstyring og samtykker & Oppfølging av rollebasert tilgang i journal- og analyseplattform samt sporing av nødåpninger & Samtykkeprotokoller, tilgangslogger og avviksmeldinger \citep{norm2023,datatilsynet2023dpia} & Alle nødåpninger etterkontrolleres innen 24 timer; kvartalsvis revisjon av tilgangslister \\
+        \hline
+        Dataflyt og anonymisering & Kontroll av pseudonymisering, dataminimering og filtrering før data deles i sandkasse eller forskning & Anonymiseringsrapporter, dataproduktbeskrivelser og DPIA-vedlegg \citep{datatilsynet2022anonymisering,nhn2024dataspace} & $<2\%$ av datasett får avvik på anonymiseringskrav per kvartal; alle DPIA-er oppdatert årlig \\
+        \hline
+        Klinisk sikkerhet og hendelser & Oppfølging av pasientsikkerhet, klinisk beslutningsstøtte og hendelser registrert i kvalitetsjournalen & Hendelsesjournal, kliniske kvalitetsindikatorer og læringsrapporter \citep{helsedir2023beredskap,hod2020beredskap} & Varsling til akuttfunksjon innen 10 minutter ved kritiske hendelser; læringsmøte gjennomført innen 7 dager \\
+        \hline
+        Leverandør- og tredjepartskontroll & Vurdering av leverandørenes etterlevelse av Normen og dataspace-kontrakter, inkludert oppfølging av underleverandører & Revisjonsrapporter, sikkerhetserklæringer og kontraktsvedlegg \citep{norm2023,helsecert2024trussel} & Årlig revisjon for alle kritiske leverandører; risikoreduserende tiltak lukket innen 30 dager \\
+        \hline
+    \end{tabular}
+\end{table}
+
+For å drifte dashboardet anbefales en firedelt arbeidsflyt som kan innarbeides i kvartalsrapportene fra valideringspanelet:
+\begin{enumerate}
+    \item \textbf{Oppdater kontrollgrunnlaget:} Data steward samler eksport fra samtykkeløsning, dataspace-portal og hendelsesjournal, og forsikrer seg om at alle kontroller er lenket til gjeldende versjoner av Normen og lokale styringsdokument.\citep{norm2023,nhn2024dataspace}
+    \item \textbf{Kjør samsvarssjekk:} Tvillingforvalter og personvernombud sammenligner indikatorverdier med terskler og gjennomfører stikkprøvekontroller i journal- og modellplattformen. Avvik loggføres i kvalitetsjournalen sammen med årsak og anbefalte tiltak.\citep{datatilsynet2023dpia,datatilsynet2022anonymisering}
+    \item \textbf{Planlegg korrigerende tiltak:} Beredskapsleder prioriterer hendelser som kan påvirke pasientsikkerheten, mens leverandørkontakt følger opp kontraktsbrudd og risikofunn i samspill med innkjøp og faglig ledelse.\citep{helseplattformen2023kontinuitet,helsecert2024trussel}
+    \item \textbf{Kommuniser status:} Resultatene deles i porteføljestyret og fagfelleloggen, og danner grunnlag for oppdatering av planfilen samt undervisningsopplegg i laboratoriet. Dette sørger for at kravbildet fra Kapittel~7 og dataflytreglene fra Kapittel~3 forblir synkronisert.\citep{dfo2024internkontroll,nhn2024dataspace}
+\end{enumerate}
+
+Ved å gjøre samsvarsmonitorering til en fast del av valideringsrutinene får studentene trening i å kombinere personvern, pasientsikkerhet og teknisk kvalitet. Arbeidsmåten sikrer samtidig at helsedataspace-pilotene kan skalere uten å bryte regulatoriske krav eller miste tillit hos kliniske partnere.
+
 \begin{table}[ht]
     \centering
     \caption{Eksempel på standardkart for kontrolltårn i energisektoren}
