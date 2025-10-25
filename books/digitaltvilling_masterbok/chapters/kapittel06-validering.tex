@@ -184,6 +184,40 @@ Tabell~\ref{tab:energideling-validering} gir studentteamet en sjekkliste for hve
 
 Når protokollen repeteres hver sprint blir det enklere å dokumentere progresjon og måle effekt av nye styringssignaler eller investeringsbeslutninger. Studentene kan gjenbruke resultatene i kapittel\,3 sitt energidelingscase, knytte gevinstene til porteføljeloggen i kapittel\,7 og sikre at kvartalsrapporten speiler både teknisk kvalitet og samfunnseffekt.
 
+\section{Klimarisiko-audit for kommunale dataspace-laboratorier}
+Kommunale digitale tvillinglaboratorier står i krysningspunktet mellom klimatilpasningsarbeid, tjenesteutvikling og regulatoriske krav. Miljødirektoratet anbefaler at kommuner etablerer faste klimarisikovurderinger med tydelig kobling til planverk, og at resultatene brukes til å prioritere tiltak i økonomiplaner og investeringsprogram.\citep{miljodir2023klimatilpasning} KS fremhever samtidig behovet for helhetlig styring der klimarisiko, digitalisering og internkontroll ses i sammenheng for å sikre robuste leveranser til innbyggere og næringsliv.\citep{ks2022klimarisiko} For dataspace-tilknyttede tvillinger må audit- og forbedringssløyfen også harmoniseres med kommunal beredskapsplikt, ROS-analyser og styringsmodellene fra kapitlene 3 og 7.\citep{dsb2022beredskap,dfo2024internkontroll}
+
+Audit-prosessen organiseres best som en gjentakende syklus på fire trinn som binder sammen klimatilpasningsdata, tvillingmodeller og styringssystemer:
+\begin{enumerate}
+    \item \textbf{Etabler klimarisikoprofil:} Kombiner klimafremskrivninger, lokalkunnskap og historiske hendelser for å identifisere kritiske prosesser i kommunale tjenester. Profilen dokumenteres i dataspace-katalogen med indikatorer fra bærekrafts- og gevinstarbeidet i kapittel\,7.\citep{miljodir2023klimatilpasning,efrag2023esrs}
+    \item \textbf{Kartlegg kontroller:} Koble tvillingens tekniske kontroller til kommunens internkontroll og beredskapsplaner. Dette inkluderer tilgangsstyring, modellforvaltning og hendelsesprosedyrer som beskrevet tidligere i kapitlet.\citep{dfo2024internkontroll,dsb2022beredskap}
+    \item \textbf{Test og revider:} Gjennomfør scenarioøvelser i dataspace-laben der klimarisiko kombineres med hendelsesrespons. Journalfør funn i kvalitetsjournal og ROS-logg, og oppdater tiltak for både tekniske og organisatoriske svakheter.\citep{ks2022klimarisiko,dsb2023ovelser}
+    \item \textbf{Rapporter og forbedre:} Presenter status for porteføljestyret og lokalpolitisk ledelse, og oppdater planfilen slik at prioriteringer og investeringsbeslutninger gjenspeiler siste audit. Resultatene brukes også i undervisningen som case for klimastyring i masterkurset.\citep{ks2022klimarisiko,dfo2024kontraktsoppfolging}
+\end{enumerate}
+
+Tabell~\ref{tab:klimarisiko-audit} viser et forslag til kontrollpunkter som kombinerer klimatilpasningskrav, dataspace-ansvar og dokumentasjon. Strukturen gjør det enkelt for studentgrupper å tilpasse auditpakken til ulike kommunale tjenester som vann, bygg eller mobilitet, samtidig som de følger kravene fra nasjonale myndigheter.
+
+\begin{table}[ht]
+    \centering
+    \caption{Kontrollpunkter for klimarisiko-audit i kommunale dataspace-laboratorier}
+    \label{tab:klimarisiko-audit}
+    \begin{tabular}{|p{3.4cm}|p{4.8cm}|p{4.2cm}|p{3.0cm}|}
+        \hline
+        \textbf{Kontrollområde} & \textbf{Formål} & \textbf{Dokumentasjon} & \textbf{Indikator og eier} \\
+        \hline
+        Klimarisikoscenarier & Oppdatere lokale klima- og sårbarhetsbilder med nye datasett og modellscenarioer & Klimarisikomatrise, modelljournal og dataspace-kontrakt & Årlig revisjon av prioriterte risikoscenarier (kommunedirektør) \citep{miljodir2023klimatilpasning} \\
+        \hline
+        Tjenestekontinuitet & Sikre at kritiske tjenester har alternative arbeidsprosesser og dataflyt ved hendelser & Beredskapsplan, tiltakslogg og kontinuitetsplan fra kapittel\,7 & Maks 4 timer nedetid per kritisk tjeneste (beredskapsleder) \citep{dsb2022beredskap,ks2022klimarisiko} \\
+        \hline
+        Datadeling og styring & Verifisere at dataspace-avtaler og tilgangsstyring reflekterer klimarisikoprofilen & Dataspace-policy, tilgangsregister og internkontrollrapport & 100\% signerte avtaler for kritiske datasett (data steward) \citep{dfo2024internkontroll,digdir2024datasamarbeid} \\
+        \hline
+        Læring og rapportering & Sikre at funn fra audit og øvelser omsettes til forbedringstiltak og budsjettbeslutninger & Fagfellelogg, årsrapport og politisk saksfremlegg & Alle funn behandles innen 90 dager i porteføljestyret (programleder) \citep{ks2022klimarisiko,dfo2024kontraktsoppfolging} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Ved å implementere klimarisiko-audit i dataspace-laboratoriet får masterstudentene trening i å kombinere klimatilpasning, teknisk kvalitet og styring. Oversikten kan brukes direkte i caseoppgaver og gir kommunale samarbeidspartnere dokumentasjon som tåler revisjon fra både tilsynsmyndigheter og lokalpolitisk nivå.
+
 \section{Kvartalsrapport for valideringspanelet}
 Kvalitetsteamet oppsummerer indikatorene i en kvartalsrapport slik at både dataspace-partnere og styringsgrupper ser utviklingen over tid. Rapporten kombinerer tall fra kontrolltårnet, modelljournalen og gevinstplanen, og brukes aktivt når Statsbygg, Bane NOR og Ruter vurderer om pilotene kan skalere videre.\citep{statsbygg2023digitalmodenhet,banenor2024leverandor,ruter2024mobilitetslab} Tallfestingen gjør det enklere for masterstudentene å argumentere for tiltak i tiltaksloggen fra Kapittel~7 og koble funnene til porteføljestyringen.
 
