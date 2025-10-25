@@ -164,6 +164,32 @@ Statsbygg, Oslo kommune og flere norske byer har tatt i bruk digitale modeller s
 \subsection*{Transport og logistikk}
 Bane NOR utvikler digitale tvillinger av jernbanenettet for å planlegge vedlikehold, simulere trafikkavvik og informere kundeservice. Avinor tester tilsvarende modeller på flyplasser for å koordinere bakketjenester. Når du analyserer slike case, må du kartlegge hvordan sanntidsdata fra sensorer, IoT-enheter og trafikkstyringssystemer flyter inn i tvillingen, og hvordan det støtter planlegging og krisehåndtering. Utforsk datakilder som Entur, Bane NOR og Avinor i \autoref{sec:transportressurser} for å sikre at caserapporter støttes av konkrete tidsserier, kapasitetsdata og hendelseslogger.
 
+\paragraph{Dataspace for kollektivtransport i Oslo-regionen}
+Mobilitetstvillingen som utvikles gjennom Ruters mobilitetslab viser hvordan kollektivtransport, delte mikromobilitetstilbud og bylogistikk kan kobles i et felles dataspace.\citep{ruter2024mobilitetslab,ruter2023dataplattform} Plattformen kombinerer sanntidsdata fra billett- og posisjonsstrømmer med planleggingsverktøy for rutetilbud, kapasitet og byromsbruk. Samtidig koordineres infrastrukturdata fra Bane NORs digitale dobbeltsporprogram og Avinors flyplassmodernisering slik at beslutninger om knutepunkter, vedlikehold og beredskap kan testes i samme modell.\citep{banenor2024digitalspor,banenor2023digital,avinor2022digital} Ved å dokumentere datastrømmer, tilgangskontroller og indikatorer får studentene et sammenhengende bilde av hvordan mobilitetstvillingen forankres i kapitlene om data, validering og gevinststyring.
+
+\begin{table}[h]
+    \centering
+    \caption{Datastrømmer og styringsfora i mobilitetstvillingen for Oslo-regionen}
+    \label{tab:mobilitet-dataspace}
+    \begin{tabular}{p{3.5cm}p{4.8cm}p{4.6cm}}
+        \toprule
+        Fokustema & Typiske datastrømmer & Styringsfora og beslutninger \\
+        \midrule
+        Kollektivtransport og bylogistikk & Sanntidsposisjon, billett- og kapasitetsdata fra Ruters plattformer og partner-API-er & Mobilitetslabens porteføljemøter som prioriterer rutetilpasninger, kapasitetsøkning og deling av åpne data. \\
+        Jernbaneinfrastruktur & Tilstandsmålinger, anleggsplaner og arbeidsordre fra Bane NORs digitale sporprogram & Planleggingsfora for dobbeltsporprosjekter og vedlikeholdsboard som koordinerer entreprenører og togoperatører. \\
+        Flyplassoperasjoner & Gate-planer, turnround-data og sikkerhetslogger fra Avinors digitale tvillingprogram & Operasjonelle kontrolltårn og beredskapsråd som synkroniserer tiltak mot værhendelser og kapasitetsavvik. \\
+        Dataspace-governance & Policy-artefakter, tilgangslogger og samtykkegrunnlag for delte mobilitetsdata & Tverrsektorielt dataspace-råd som vurderer endringsforslag, etikk og datasikkerhet på tvers av aktører. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item Kartlegg hvordan datastrømmer fra kollektiv, jernbane og flyplass harmoniseres i dataspace-arkitekturen og dokumenter hvilke API-er eller datakontrakter som gjenbrukes fra Kapittel~3.
+    \item Beskriv hvordan indikatorer for regularitet, kapasitetsutnyttelse og hendelseshåndtering følger rapporterings- og valideringssløyfene fra Kapittel~6.
+    \item Foreslå læringsaktiviteter der studentgrupper fyller ut casemalen i \autoref{sec:case-maler-prioriterte-sektorer} og analyserer hvordan gevinstplanen i Kapittel~7 kan støtte beslutninger om investeringer og samarbeid.
+    \item Vurder behovet for syntetiske datasett eller tilgangsstyring før mobilitetscaset deles i undervisning, og registrer tiltak i fagfelleloggen og kvalitetsjournalen.
+\end{itemize}
+
 \subsection*{Kommunal klimaresiliens og beredskap}
 Oslo VAV har etablert en digital tvilling av vann- og avløpsnettet som kombinerer hydrologiske modeller, sensordata og sanntidsvarsling for å planlegge tiltak mot styrtregn og overvann.\citep{oslovav2023digital} Tvillingen brukes sammen med kommunens overvannsstrategi for å teste konsekvenser av utbygginger, dimensjonere blågrønne tiltak og prioritere investeringer i kulverter og magasiner.\citep{oslo2023overvann} Ved å dokumentere caset kan studentene vise hvordan data fra værstasjoner, trykksensorer og manuelle inspeksjoner gir grunnlag for beslutninger i beredskapsstaber og tekniske etater.
 
