@@ -30,6 +30,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-131 | Kapittel 3 | FERDIG – Dokumenterte kulturarv-dataspace for historiske bymiljøer med datasettabell, arbeidssteg og undervisningsopplegg. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-130 | Kapittel 2 | FERDIG – Dokumenterte geodata-arbeidsflyt for kommunale digitale tvillinger med punkliste og tabell som knytter kartdata til modelljournal, indikatoroppfølging og scenarioplanlegging, og oppdaterte plan-, status- og kildefiler. | `chapters/kapittel02-systemtenkning.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-12 | Kapittel 3 | FERDIG – Etablerte dataspace-regelverksseksjon med tabell for Data Act-, Data Governance Act- og NIS2-oppfølging, og oppdaterte plan-, tavle- og kildefiler for koordinert pilotering. | `chapters/kapittel03-data.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-129 | Appendiks | FERDIG – Utvidet dataspace-regelverksoversikten med tabell for delingskrav, oppfølgingspunkter og veiledning for casearbeid. | `chapters/appendiks.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |

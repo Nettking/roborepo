@@ -621,6 +621,43 @@ I praksis samkjøres sandkassen med kommunens energi- og miljømål. Oslo kommun
 
 Sandkassen gjør det mulig å koble tekniske pilotprosjekter til ordinær tjenesteproduksjon. Når indikatorene og governance-elementene er testet i sandkassemiljøet, kan de samme artefaktene gjenbrukes i kapittel~6 (kvalitetsjournal og tilsyn) og kapittel~7 (porteføljestyring). Dette sikrer at kommunene bygger opp en dokumentert læringssløyfe fra eksperimentering til drift og kontinuerlig forbedring.
 
+\subsection{Case: Dataspace for kulturarv og historiske bymiljøer}
+Norske bykommuner kombinerer nå digitale tvillinger med kulturminnedata for å balansere bevaring og bærekraftig utvikling. Riksantikvaren har lansert en digital strategi som anbefaler at 3D-modeller, tilstandsanalyser og juridiske vernebestemmelser tilgjengeliggjøres gjennom et felles dataspace slik at planmyndigheter, utviklere og innbyggere kan vurdere konsekvenser tidlig i prosessen.\citep{riksantikvaren2023digitalarv} Bergen og Oslo har etablert pilotprosjekter der historiske bymiljøer visualiseres i sanntid, samtidig som energibruk og klimatilpasning testes i samarbeid med universiteter og lokale museer.\citep{bergen2024kulturminne,oslo2024bymiljolab} For masterstudentene gir caset en mulighet til å koble geodata, sensorer og samfunnsdialog til de styringsmodellene som beskrives i kapittel~6 og kapittel~7.
+
+Dataspace-designet må håndtere både faglige og juridiske hensyn:
+\begin{itemize}
+    \item \textbf{Kulturminnedata:} Vernesoner, reguleringsplaner og objekthistorikk fra Riksantikvarens Askeladden-register må versjonsstyres og deles med plan- og byggesak.
+    \item \textbf{Tilstands- og risikomålinger:} Sensorer for fukt, vibrasjon og luftkvalitet kompletterer manuelle inspeksjoner og gjør det mulig å overvåke effekten av tiltak i bygg og byrom.
+    \item \textbf{Medvirknings- og scenariodata:} Høringsinnspill, AR/VR-modeller og klimascenarioer brukes for å teste alternative utbyggingsplaner og dokumentere konsekvenser for bevaringsmål.
+\end{itemize}
+
+Tabell~\ref{tab:kap03-kulturarv-datasett} viser hvordan datasett kan organiseres for å støtte bevaringsarbeid, planprosesser og undervisning.
+
+\begin{table}[ht]
+    \centering
+    \caption{Datasett og styringstiltak i kulturarv-dataspace.}
+    \label{tab:kap03-kulturarv-datasett}
+    \begin{tabular}{p{0.28\textwidth}p{0.34\textwidth}p{0.26\textwidth}p{0.10\textwidth}}
+        \toprule
+        \textbf{Datasett} & \textbf{Kilde og oppdatering} & \textbf{Bruksområde} & \textbf{Kobling} \\
+        \midrule
+        Vernedata og reguleringsbestemmelser & Askeladden-register, kommunale planregister (kvartalsvis oppdatering) & Avklare juridiske rammer og varslingsplikt ved tiltak. & Kap.~7 governance \\
+        3D-modeller og BIM for historiske bygg & Kommunale laserskanninger, museumsarkiv, NTNU/Statsbygg-modeller (årlig revisjon) & Visualisere konsekvenser av endringer og planlegge rehabilitering. & Kap.~4 simulering \\
+        Tilstandssensorer og inspeksjonslogger & IoT-sensorer, dronefoto, feltinspeksjoner (sanntid/kvartal) & Overvåke fukt, vibrasjon og klimarisiko, trigge tiltak i kontrolltårn. & Kap.~6 kvalitetsjournal \\
+        Medvirkningsdata og scenarioresultater & Dialogportaler, AR/VR-lab, klimaberegninger (per prosjektfase) & Dokumentere alternativer og beslutninger i planprosesser. & Kap.~8 casebank \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+For å bruke caset i undervisning kan studentgrupper følge tre steg:
+\begin{enumerate}
+    \item \textbf{Kartlegg bevaringsmål og konflikter:} Kombiner verneregler med eiendomsdata for å identifisere hvilke tiltak som utløser krav til søknad, dispensasjon eller nye analyser. Resultatene dokumenteres i dataspace-katalogen og fagfelleloggen.
+    \item \textbf{Bygg et indikatorpanel:} Beregn nøkkeltall for energibruk, CO$_2$-utslipp, turisme og bylivsindikatorer, og koble dem til tiltaksloggen i kapittel~7. Panelet viser hvordan bevaring og bærekraft kan balanseres.
+    \item \textbf{Planlegg medvirkningsløp:} Lag en oppgave der AR/VR-modeller presenteres for innbyggere, og loggfør hvordan tilbakemeldinger påvirker valgte scenarier. Dokumentasjonen gjenbrukes i kapittel~5 for å evaluere AI-assistenter i planprosesser.
+\end{enumerate}
+
+Seksjonen knytter kulturminneforvaltning til dataspace-governance. Når datasett og indikatorer registreres i kvalitetsjournalen fra kapittel~6 kan kommunene vise etterlevelse av både plan- og bygningslov, kulturminnelov og NIS2-krav for datadeling. Erfaringene fra caset kan også kobles til brannberedskapscaset i kapittel~4 og porteføljestyringen i kapittel~9, slik at kulturarv inngår i helhetlige investerings- og beredskapsplaner.
+
 
 \subsection{Tverrsektorielt dataspace-samvirke for kritiske tjenester}
 Energi- og helsetjenester er gjensidig avhengige i krisesituasjoner: strømforsyningen må holdes stabil for å drive sykehus og
