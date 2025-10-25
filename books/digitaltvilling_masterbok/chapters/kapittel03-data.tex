@@ -162,6 +162,40 @@ Tabell~\ref{tab:energideling-datakrav} viser et minimumssett av dataprodukter so
 
 Før energisamfunnet settes i drift bør prosjektteamet teste dataspace-løsningen i en sandkasse sammen med nettselskap og leverandører av energistyringssystemer. Det innebærer å verifisere at måleverdiene kan aggregeres og anonymiseres før deling, at algoritmene for fordeling kan revideres gjennom modelljournalen i kapittel~2, og at gevinstmålingen harmoniseres med klimamålene som beskrives i kapittel~8. Når kontrollene er dokumentert, kan energisamfunnet bruke tvillingen til å planlegge investeringer, rapportere klimaeffekt og identifisere nye fleksibilitetstjenester.
 
+\subsection{Case: Kraftberedskapsdataspace ved ekstremvær}
+Statnett, nettselskap og beredskapsmyndigheter har de siste årene etablert nye mekanismer for å håndtere risikoen for samtidige feil i strømforsyningen under ekstremvær.\citep{statnett2023vinter,dsb2022kraft} Når ising, storm og høyt forbruk forekommer samtidig, må energiselskapene dele sanntidsdata om produksjon, belastning og avvik slik at rasjoneringstiltak og reserveplaner kan aktiveres i tide. Norges vassdrags- og energidirektorat (NVE) krever at kraftforsyningsvirksomheter dokumenterer både tekniske tiltak og informasjonsdeling i kraftberedskapsforskriften, og peker spesielt på behovet for felles situasjonsbilder som kan etterprøves i øvelser.\citep{nve2023kraftberedskap}
+
+Et kraftberedskapsdataspace bygger videre på prinsippene fra kontrolltårnet i kapittel~6 og gevinstoppfølgingen i kapittel~7. Følgende kapabiliteter bør være på plass før pilotering:
+\begin{itemize}
+    \item \textbf{Felles produksjons- og lastprognoser:} Statnett, regionalt nettselskap og større produksjonsaktører publiserer harmoniserte prognoser for produksjon, import, effektuttak og flaskehalser i nettet.
+    \item \textbf{Reservestatus og tiltakspakker:} Automatisk synkronisering av kraftverk, mobile aggregater og energilagre med tilgjengelig kapasitet, kostnad og aktiveringstid.
+    \item \textbf{Beslutningsjournal for rasjonering:} Alle beslutninger om redusert forbruk, tilgjengelig kraft og prioritering av samfunnskritiske kunder loggføres med begrunnelse og tidsstempel, slik at tiltakene kan evalueres i etterkant.
+    \item \textbf{Rapportering til tilsyn:} Standardiserte rapporter over hendelser, indikatorer og tiltak deles med NVE og Direktoratet for samfunnssikkerhet og beredskap (DSB) etter malene i \autoref{tab:dataspace-governance} og kontrolltårnstrukturen i kapittel~6.
+\end{itemize}
+
+Tabell~\ref{tab:kraftberedskap-dataspace} strukturerer de viktigste dataproduktene for studentgrupper som skal beskrive hvordan dataspace-løsningen brukes i praksis.
+
+\begin{table}[ht]
+    \centering
+    \caption{Dataprodukter og indikatorer i kraftberedskapsdataspace.}
+    \label{tab:kraftberedskap-dataspace}
+    \begin{tabular}{p{3.6cm}p{4.8cm}p{3.2cm}}
+        \toprule
+        \textbf{Dataprodukt} & \textbf{Innhold og delingsformål} & \textbf{Styringskobling} \\
+        \midrule
+        Sanntidslast og produksjonsmålinger & SCADA-verdier for linjer, transformatorer og produksjonsenheter, aggregert etter region og kritikalitet. & Kontrolltårnindikatorer og hendelsesjournal i kapittel~6; modelloppdatering i kapittel~4. \\
+        \addlinespace
+        Reservestatus og fleksibilitetsregister & Tilgjengelig effekt fra reservekraftverk, batterier og forbrukerfleksibilitet med aktiveringstid og pris. & Gevinst- og tiltakslogg i kapittel~7; samsvar med dataspace-policyer i \autoref{tab:dataspace-governance}. \\
+        \addlinespace
+        Ekstremvær- og risikoanalyse & Prognoser fra Meteorologisk institutt kombinert med nettmodell og historiske feil for å identifisere høyrisiko-soner. & Beredskapsplanen i kapittel~6 og scenarioarbeid i kapittel~8. \\
+        \addlinespace
+        Rasjoneringstiltak og prioriteringsjournal & Dokumentasjon av aktiverte tiltak, berørte kunder og forventet varighet, samt referanse til juridisk grunnlag. & Etterlevelseslogg i kapittel~6 og gevinstoppfølging i kapittel~7. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Før dataspace-løsningen tas i bruk i drift anbefales det å gjennomføre en tverrsektoriell øvelse der energisektoren kobler seg på samvirkeøvelsen i kapittel~6. Det innebærer å teste varsling og beslutningsjournal sammen med kommunal beredskap, helse og samferdselsaktører, og validere at indikatorene i tabellen over kan rapporteres både til interne kontrolltårn og tilsynsmyndigheter. Resultatene bør registreres i fagfelleloggen og brukes til å justere både risikoprioritering, kontrakter og gevinstplaner før neste vintersesong.
+
 \subsection{Case: Samvirke og beredskapsdataspace for nødetatene}
 Felles innsats mellom brann, politi, helse og frivillige redningsressurser krever at alle aktører deler sanntidsdata, historikk og beslutningslogger uten at sensitiv informasjon lekkes. Direktoratet for samfunnssikkerhet og beredskap (DSB) legger i sine samvirkeprinsipper til grunn at Nødnett, fagsystemer og situasjonssentre må knyttes sammen i et nasjonalt operativt konsept med tydelig styringssløyfe og journalføring.\citep{dsb2023samvirke} Politidirektoratet peker samtidig på behovet for å kombinere tale- og meldingslogg fra Nødnett med geodata, operasjonsplaner og dronefeeds i et felles beslutningsdashboard.\citep{politidirektoratet2022nodnett} Når helseforetakene kobler inn ambulanser, AMK-sentraler og sykehuslogistikk, stiller Helsedirektoratet krav om at personvern og tilgangsstyring følger beredskapsplanene som beskrives i kapittel~6.\citep{helsedir2022akutt}
 
