@@ -112,6 +112,40 @@ For fjernvarmecaset i dette kapitlet etableres et immersivt kontrollrom der sann
     \label{fig:kap04-immersiv-beslutning}
 \end{figure}
 
+\subsection{Samskapings-sprint for immersive beslutningsrom}
+For å gjøre immersive kontrollrom til et praktisk arbeidsverktøy må teknologer, operatører og beslutningstakere utvikle løsningene sammen. Samskapings- og co-design-metodikk gir struktur til dette samarbeidet og gjør det mulig å kombinere brukeropplevelser, tekniske krav og styringsbehov i samme løp \citep{doga2022samskaping,sanders2008cocreation}. Sprinten nedenfor er utviklet for å bygge bro mellom kapittel~3 sine datastrømmer, kapittel~5 sine AI-komponenter og kapittel~6 og~7 sine krav til validering og gevinstoppfølging.
+
+Erfaringer fra norske kontrollrom viser at samskapingen blir mest effektiv når beslutningslogg, indikatorer og modellartefakter synliggjøres samtidig som deltakerne opplever tvillingen i AR/VR \citep{kongsberg2023kognitwin,statnett2024kontrolltarn}. Sprintdesignet gjenbruker dataspace-prinsippene fra \citet{digitalnorway2024dataspace} og legger inn eksplisitte koblinger til tiltaksloggen og kvalitetsjournalen før løsningen slippes til produksjon.
+
+Samskapings-sprinten består av fire steg som kan gjennomføres over tre–fire arbeidsdager:
+\begin{enumerate}
+    \item \textbf{Forberedelse}: Kartlegg hvilke datasett, modeller og styringsartefakter som må være tilgjengelige i sprinten. Prioriter casebaserte mål sammen med dataeier og fagansvarlig, og oppdater bestillingen i dataspace-tavlen fra kapittel~3.
+    \item \textbf{Dag 1 – Innsikt og behov}: Deltakerne visualiserer operatørreiser og risikoer i AR/VR-panelet mens teknologene demonstrerer modelltilgangen. Resultatet er et felles problemkart og en liste over indikatorer som må spores videre til kapittel~6 sitt valideringspanel.
+    \item \textbf{Dag 2 – Prototyping og testing}: Teamet bygger raske mockuper av beslutningsflater, alarmvisninger og læringsopplegg. AI-ekspertene fra kapittel~5 verifiserer hvilke datakomponenter som kan kjøres på edge og hvilke som krever sentral orkestrering.
+    \item \textbf{Dag 3 – Implementeringsplan}: Sprinten avsluttes med å knytte tiltak til tiltaksloggen i kapittel~7, definere hvilke logger som skal inn i kvalitetsjournalen og planlegge pilotering i laboratoriet eller hos partnerne.
+\end{enumerate}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Leveranser fra samskapings-sprinten for immersive beslutningsrom}
+    \label{tab:kap04-codesign-sprint}
+    \begin{tabular}{p{3.2cm}p{4.2cm}p{4.0cm}p{4.0cm}}
+        \toprule
+        \textbf{Fase} & \textbf{Nøkkelspørsmål} & \textbf{Primære leveranser} & \textbf{Kobling til andre kapitler} \\
+        \midrule
+        Forberedelse & Hvilke datastrømmer, modeller og indikatorer må være tilgjengelige i sprinten? & Oppdatert dataspace-bestilling og tilgangsmatrise. & Kapittel~3 (dataspace-arkitektur) og kapittel~6 (kvalitetsjournal). \\
+        \addlinespace
+        Innsikt og behov & Hvilke operatørreiser, risikoer og læringsmål må tvillingen støtte? & Problem- og indikatorkart med spor til beslutningslogg. & Kapittel~5 (AI-flyt) og kapittel~7 (gevinstmål). \\
+        \addlinespace
+        Prototyping og testing & Hvordan skal AR/VR-flaten og kontrollpanelet visualisere scenarier og tiltak? & Interaktive mockuper, dataprototyper og edge/sentralkart. & Kapittel~4 (simuleringsscenarier) og kapittel~5 (edge-arkitektur). \\
+        \addlinespace
+        Implementeringsplan & Hvilke tiltak, logger og måleplaner må etableres før pilotering? & Tiltaks- og gevinstplan, pilotlogg og oppdatert fagfellelogg. & Kapittel~6 (valideringspanel) og kapittel~7 (porteføljestyring). \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Sprinten gir studentteam og partnere et konkret rammeverk for å validere at immersive beslutningsrom støtter både tekniske og organisatoriske krav. Når sprintens leveranser arkiveres i prosjektets modelljournal og tiltakslogg, kan de brukes direkte i fagfellepresentasjoner og videre piloteringer i kapittel~8.
+
 \subsection{Simuleringscase: Samordnet beredskapsøvelse}
 Som supplement til fjernvarmecaset beskrives en beredskapsøvelse for et norsk prosessanlegg der både operatører, driftsingeniører og eksterne beredskapsteam møtes i et immersivt kontrollrom. Tvillingen kombinerer kontinuerlige prosessmodeller, agentbaserte evakueringsscenarioer og diskret hendelsessimulering av vedlikeholdssituasjoner. Formålet er å teste koordinering og beslutningskvalitet når flere samtidige avvik oppstår.
 
