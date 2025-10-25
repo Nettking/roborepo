@@ -30,6 +30,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-125 | Kapittel 3 | FERDIG – Dokumenterte velferdsteknologisk dataspace-case for hjemmeoppfølging med dataprodukttabell, implementeringssteg og koblinger til kapittel 6 og 7. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-124 | Kapittel 6 | FERDIG – Etablerte valideringsprotokoll for energidelingsdataspace med stegvis arbeidsflyt, indikatorfaser og koblinger til kvartalsrapporten for valideringspanelet. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-123 | Kapittel 2 | FERDIG – Dokumenterte kommunal energihub for bydelssenter med systemlagstabell, arbeidsflyt og koblinger til klimabudsjett og dataspace-styring, og oppdaterte plan- og statusfiler. | `chapters/kapittel02-systemtenkning.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-122 | Kapittel 6 | FERDIG – Etablerte samsvarsmonitoreringsseksjon for helsedataspace med kontrolltabell, arbeidsflyt og nye kilder, og synkroniserte plan-, referanse- og loggfiler for pilotering. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |

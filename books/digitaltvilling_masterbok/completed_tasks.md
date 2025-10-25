@@ -4,6 +4,7 @@ Denne filen samler historikken over ferdige oppgaver som tidligere lå i `task_q
 
 ## Historikk
 
+- `FERDIG` – Leveranse for DT-125: Dokumenterte velferdsteknologisk dataspace for hjemmeoppfølging med dataprodukttabell, implementeringssteg og gevinst- og hendelseskoblinger, og oppdaterte plan-, tavle- og referansefiler for å støtte pilotering med responssenter. (`chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`)
 - `FERDIG` – Leveranse for DT-124: Utarbeidet valideringsprotokoll for energidelingsdataspace i Kapittel 6 med arbeidssteg og faseinndelt tabell, og oppdaterte plan-, tavle- og arbeidsfiler slik at energidelingspilotene kan kobles til kvartalsrapport og tiltakslogg. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-123: Dokumenterte kommunal energihub for bydelssenter i Kapittel 2 med systemlagstabell, arbeidsflyt for læringssløyfer og koblinger til klimabudsjett og dataspace-styring, og oppdaterte plan- og statusfiler. (`chapters/kapittel02-systemtenkning.tex`, `plan.md`, `task_queue.md`, `completed_tasks.md`)
 - `FERDIG` – Leveranse for DT-122: Skrev samsvarsmonitoreringsseksjon for helsedataspace i Kapittel 6 med kontrolltabell, arbeidsflyt og nye kilder, og oppdaterte plan-, tavle- og referansefiler slik at compliance-arbeidet kan testes i laboratoriet. (`chapters/kapittel06-validering.tex`, `plan.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md`)
