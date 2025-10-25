@@ -30,6 +30,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-133 | Kapittel 6 | FERDIG – Utviklet klimarisiko-audit for kommunale dataspace-laboratorier med syklisk arbeidsprosess, kontrolltabell og oppdaterte plan-, tavle- og kildefiler. | `chapters/kapittel06-validering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-132 | Kapittel 3 | FERDIG – Dokumenterte naturfare-dataspace for skred- og flomovervåking med datastrømstabell, arbeidsopplegg og oppdaterte plan-, tavle- og kildefiler. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md`, `task_queue.md` |
 | DT-131 | Kapittel 3 | FERDIG – Dokumenterte kulturarv-dataspace for historiske bymiljøer med datasettabell, arbeidssteg og undervisningsopplegg. | `chapters/kapittel03-data.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-130 | Kapittel 2 | FERDIG – Dokumenterte geodata-arbeidsflyt for kommunale digitale tvillinger med punkliste og tabell som knytter kartdata til modelljournal, indikatoroppfølging og scenarioplanlegging, og oppdaterte plan-, status- og kildefiler. | `chapters/kapittel02-systemtenkning.tex`, `support/referanser.bib`, `plan.md`, `task_queue.md`, `completed_tasks.md` |
