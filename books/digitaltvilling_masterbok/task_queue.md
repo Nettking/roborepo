@@ -30,6 +30,7 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-129 | Appendiks | FERDIG – Utvidet dataspace-regelverksoversikten med tabell for delingskrav, oppfølgingspunkter og veiledning for casearbeid. | `chapters/appendiks.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `task_queue.md`, `completed_tasks.md` |
 | DT-128 | Kapittel 8 | FERDIG – Beskrev fjellkommunal beredskap for kritiske tjenester med dataspace-roller, indikatorpakke og læringsopplegg som kobler kapitlene 3, 6 og 7, og oppdaterte plan-, tavle- og kildefiler for koordinert pilotering. | `chapters/kapittel08-case.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-127 | Kapittel 8 | FERDIG – Dokumenterte arktisk vinterlogistikk-dataspace for Nord-Norge med tabell over vinterdriftsdata, læringsaktiviteter og koblinger til data-, validerings- og gevinstkapitlene, og oppdaterte plan-, tavle- og referansefiler for koordinert pilotering. | `chapters/kapittel08-case.tex`, `support/referanser.bib`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
 | DT-126 | Appendiks | FERDIG – Opprettet DPIA-arbeidsark for helsedataspace med tabell, sjekkliste og koblinger til kapittel 3, 6 og 7, og oppdaterte plan-, tavle- og statusfiler. | `chapters/appendiks.tex`, `plan.md`, `support/oppgavetavle.md`, `completed_tasks.md`, `task_queue.md` |
