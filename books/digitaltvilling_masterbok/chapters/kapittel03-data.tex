@@ -328,6 +328,61 @@ forskningsinstitutt), mens domeneeier ofte er et konsortium av virksomheter som 
 simuleringsresultater kan skje via tjenestelag i dataspace-arkitekturen slik at partnerne får innsikt uten å kopiere hele
 datasett.
 
+\subsection{Regelverk og datakontrakter for dataspace}
+Data Act og Data Governance Act stiller nye krav til hvordan norske dataspace-piloter dokumenterer delingsplikt, avtalefrihet og
+tillitsmekanismer, samtidig som NIS2 skjerper sikkerhets- og hendelseshåndtering for kritiske tjenester.\citep{eu2023dataact,eu2022dga,eu2022nis2}
+Digitaliseringsdirektoratet anbefaler at kontrakter, policy og operativ drift beskrives i gjenbrukbare moduler slik at partnere
+raskt forstår hvilke rettigheter og plikter som følger hvert dataprodukt.\citep{digdir2024datasamarbeid} For masterstudentene betyr det at
+juridiske vurderinger må kobles til indikatorene, tiltaksloggene og kvalitetsjournalene i de øvrige kapitlene.
+
+\paragraph{Nøkkelprinsipper.}
+\begin{itemize}
+    \item \textbf{Rettferdig tilgang:} Data Act krever at dataspace-operatører dokumenterer hvilke vilkår som gjelder for viderebruk,
+    og at små og mellomstore virksomheter får rimelige kontraktsvilkår. Dette må reflekteres i datakatalogen og i kontrolltårnsløyfene
+    fra kapittel~6.\citep{eu2023dataact}
+    \item \textbf{Tillitsmekanismer:} Data Governance Act forutsetter transparente logg- og sertifiseringsprosesser for dataformidlere.
+    Alle delingshendelser og samtykker må derfor registreres i de samme journalene som brukes i \autoref{tab:kap03-dataspace-drift}
+    og kapittel~7.\citep{eu2022dga}
+    \item \textbf{Sikkerhet og hendelseshåndtering:} NIS2 utvider krav til risikovurdering, beredskapsplaner og rapporteringsfrister.
+    Tiltakene fra \autoref{tab:kap03-tilgangsstyring} og \autoref{tab:kap03-dataspace-drift} skal vise hvordan avvik følges opp i kontrolltårnet
+    og tiltaksjournalen.\citep{eu2022nis2}
+    \item \textbf{Kontraktsmoduler:} Digdirs veiledning anbefaler standardiserte kontraktsmaler med referanser til API-spesifikasjoner,
+    datakvalitetsregler og eskaleringsspor. Dette gjør det mulig å holde \autoref{tab:kap03-industripark} og de øvrige casene oppdaterte
+    når nye partnere kobles på.\citep{digdir2024datasamarbeid}
+\end{itemize}
+
+Tabell~\ref{tab:kap03-regelverk} gir en oversikt over hvordan de viktigste regelverkene omsettes til konkrete leveranser i dette
+kapittelet og hvordan de knyttes til styringen i kapitlene 6 og 7.
+
+\begin{table}[ht]
+    \centering
+    \caption{Regelverkskrav og oppfølging i dataspace-leveranser.}
+    \label{tab:kap03-regelverk}
+    \begin{tabular}{p{0.24\textwidth}p{0.44\textwidth}p{0.26\textwidth}}
+        \toprule
+        \textbf{Regelverk} & \textbf{Implikasjon for dataspace} & \textbf{Oppfølging i kapitlet} \\
+        \midrule
+        Data Act & Dokumenter delingsplikt, prisingsregler og rettferdige kontrakter for dataprodukter. & Referer til API-katalogen og \autoref{tab:kap03-dataspace-drift} når vilkår og varsling loggføres. \\
+        Data Governance Act & Etabler sertifiserte dataformidlere, logging og samtykkeprosesser. & Oppdater dataspace-katalogen og tiltaksloggen i kapittel~7 med henvisning til \autoref{tab:kap03-tilgangsstyring}. \\
+        NIS2 & Krev risikovurdering, beredskapsplan og rapportering innen 24 timer ved alvorlige avvik. & Bruk indikatorer fra \autoref{tab:kap03-dataspace-drift} og kontrolltårnstrukturen i kapittel~6. \\
+        Digdir datasamarbeid & Standardiser kontraktsmoduler, eskaleringspunkter og ansvarskart. & Synkroniser kontraktsmaler med \autoref{tab:kap03-industripark} og arbeidsflytene i kapittel~7. \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\paragraph{Arbeidsflyt for kontraktsforvaltning.} Når studentgrupper planlegger et dataspace skal de:
+\begin{enumerate}
+    \item Kartlegge hvilke datasett som omfattes av Data Act, hvilke som krever Data Governance Act-mekanismer og hvilke som klassifiseres
+    som essensielle tjenester under NIS2. Resultatet loggføres i katalogen sammen med kontaktpunkt og risikovurdering.
+    \item Utarbeide kontraktsmoduler som peker til datakvalitetsregler, API-spesifikasjoner og hendelsesrutiner, og plassere dem i samme
+    Git-repo som modelljournalen slik \autoref{tab:kap03-dataspace-drift} anbefaler.
+    \item Evaluere kontraktene kvartalsvis sammen med dataspace-operatøren, kontrolltårnet og gevinstpanelet fra kapittel~7, og registrere
+    avvik og forbedringer i `support/notater/datastyringsforum-di03.md`.
+\end{enumerate}
+
+Denne arbeidsflyten gjør at regelverkskrav og tekniske leveranser holdes samlet, samtidig som læringsaktivitetene i masterkurset viser
+hvordan dataspace kan skaleres uten å miste kontroll på etterlevelse og gevinst.
+
 \subsection{Tilgangsstyring og dataminimering i kommunale dataspace}
 Kommunal- og distriktsdepartementet anbefaler at kommunesektoren etablerer felles prinsipper for tilgangsstyring, logging og
 dataminimering før dataspace deles med eksterne aktører.\citep{kdd2023datadeling} KS har fulgt opp med veiledning for hvordan
