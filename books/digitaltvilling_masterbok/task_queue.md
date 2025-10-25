@@ -24,10 +24,12 @@ Bruk tabellen under for å se hvilke leveranser som står for tur, og slå opp i
 | ID | Prioritet | Tema | Oppgave | Hovedleveranse | Koblinger | Status |
 | --- | --- | --- | --- | --- | --- | --- |
 
+
 ## Ferdige oppgaver
 
 | ID | Tema | Oppsummering | Leveranser |
 | --- | --- | --- | --- |
+| DT-121 | Kapittel 9 | FERDIG – La inn agentkollektiv-seksjon med tabell over roller og styringsartefakter, og oppdaterte plan-, tavle- og referansefiler slik at Kapittel 5, 6 og 7 kan pilotere opplegget samlet. | `chapters/kapittel09-fremtid.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `completed_tasks.md` |
 | DT-120 | Kapittel 4 | FERDIG – Beskrev co-design-sprint for immersive beslutningsrom med fasestruktur, leveransetabell og koblinger til kapittel 5–7, og oppdaterte plan-, tavle- og kildefiler for koordinert pilotering. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-119 | Kapittel 9 | FERDIG – Etablerte porteføljestyringsseksjon med rapporteringssløyfe og artefakt-tabell som kobler finansiering, kvalitetsjournal og veikart for masterprosjekter. | `chapters/kapittel09-fremtid.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
 | DT-118 | Kapittel 4 | FERDIG – Dokumenterte brannberedskaps-case for historiske trehusmiljøer med simuleringsmoduler, indikatorpanel og undervisningsopplegg som binder data-, validerings- og gevinstkapitlene. | `chapters/kapittel04-simulering.tex`, `plan.md`, `support/oppgavetavle.md`, `support/referanser.bib`, `task_queue.md`, `completed_tasks.md` |
