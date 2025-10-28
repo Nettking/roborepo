@@ -203,8 +203,9 @@ Anslagene nedenfor tar utgangspunkt i 400 ord per side og supplerer statusoversi
    - Status: Helhetlig tekst med rammeverk, usikkerhetsanalyse, etikk og integrerte NIS2/IEC~62443-tiltak.
    - Læringsmål: Forstå prosesser for kvalitetssikring og usikkerhetsanalyse.
    - Forfatteroppgaver (neste steg):
-     1. Kvalitetssikre sjekklistene mot pilotcasene, verifisere at NIS2- og IEC~62443-referanser er dokumentert og koordinere videre fagfelleinnhenting med industripartnere.
-     2. Teste sikkerhetscase-øvingen (`support/notater/kap06-sikkerhetscase.md`), dokumentere standardkartet og samle revisjonsinnspill fra governance-teamet.
+    1. Kvalitetssikre sjekklistene mot pilotcasene, verifisere at NIS2- og IEC~62443-referanser er dokumentert og koordinere videre fagfelleinnhenting med industripartnere.
+    2. Teste sikkerhetscase-øvingen (`support/notater/kap06-sikkerhetscase.md`), dokumentere standardkartet og samle revisjonsinnspill fra governance-teamet.
+    3. Pilotere den nye klimarisiko-auditten sammen med kommunale dataspace-laboratorier og sikre at funn kobles til planfil, tiltakslogg og klimarisikorapporteringen i kapittel~7.
    - Studentaktivitet:
      1. Utarbeide en valideringsplan som viser samsvar med NIS2, IEC~62443 og DNV-RP-A204.
      2. Utarbeide en kombinert validerings- og etterlevelsesplan for en digital tvilling.
